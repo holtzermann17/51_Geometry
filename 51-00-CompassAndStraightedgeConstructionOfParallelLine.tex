@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompassAndStraightedgeConstructionOfParallelLine}
+\pmcreated{2013-03-22 17:11:18}
+\pmmodified{2013-03-22 17:11:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{compass and straightedge construction of parallel line}
+\pmrecord{24}{39506}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M15}
+\pmsynonym{construction of parallel}{CompassAndStraightedgeConstructionOfParallelLine}
+\pmsynonym{construction of parallel line}{CompassAndStraightedgeConstructionOfParallelLine}
+%\pmkeywords{Euclidean geometry}
+\pmrelated{ParallelPostulate}
+\pmrelated{NSectionOfLineSegmentWithCompassAndStraightedge}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{solution}
+\PMlinkescapeword{center}
+
+\textbf{Task.}\; Construct the line parallel to a given line $\ell$ and passing through a given point $P$ which is not on $\ell$.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(7,1)
+\rput[l](-3,-2){.}
+\psline{-}(-3,-2)(7,-2)
+\rput[a](7,-1.8){$\ell$}
+\psdot(0,0)
+\rput[a](0,0.25){$P$}
+\end{pspicture}
+\end{center}
+
+\textbf{Solution.}
+
+\begin{enumerate}
+\item Draw a circle $c_1$ with \PMlinkname{center}{Center8} $P$ and intersecting $\ell$ at two points, one of which is $A$.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(7,3)
+\rput[l](-3,-2){.}
+\rput[a](0,2.5){.}
+\rput[b](0,-2.5){.}
+\psline{-}(-3,-2)(7,-2)
+\rput[a](7,-1.8){$\ell$}
+\pscircle[linecolor=blue](0,0){2.5}
+\psdots(0,0)(1.5,-2)
+\rput[a](0,0.2){$P$}
+\rput[r](1.3,-1.8){$A$}
+\end{pspicture}
+\end{center}
+
+\item Draw a second circle $c_2$ with center $A$ and the same radius $r$ as $c_1$.  This circle also intersects $\ell$ at two points, one of which is $B$.
+
+\begin{center}
+\begin{pspicture}(-3,-5)(7,3)
+\rput[l](-3,-2){.}
+\rput[a](0,2.5){.}
+\rput[b](1.5,-4.5){.}
+\psline{-}(-3,-2)(7,-2)
+\rput[a](7,-1.8){$\ell$}
+\pscircle(0,0){2.5}
+\pscircle[linecolor=blue](1.5,-2){2.5}
+\psdots(0,0)(1.5,-2)(4,-2)
+\rput[a](0,0.2){$P$}
+\rput[a](1.3,-1.8){$A$}
+\rput[a](4.2,-2.2){$B$}
+\end{pspicture}
+\end{center}
+
+\item Draw a third circle $c_3$ with center $B$ and radius $r$.\, Let $C$ be the intersection point of $c_3$ (drawn below in red) with $c_1$ (drawn below in green) which lies on the same side of $\ell$ as $P$ does.\, The line $PC$ (drawn below in blue) is the required parallel to $\ell$.
+
+\begin{center}
+\begin{pspicture}(-3,-5)(7,3)
+\rput[l](-3,-2){.}
+\rput[a](0,2.5){.}
+\rput[b](1.5,-4.5){.}
+\psline{-}(-3,-2)(7,-2)
+\rput[a](7,-1.8){$\ell$}
+\pscircle[linecolor=green](0,0){2.5}
+\pscircle(1.5,-2){2.5}
+\pscircle[linecolor=red](4,-2){2.5}
+\psline[linecolor=blue]{-}(-3,0)(7,0)
+\psdots(0,0)(1.5,-2)(4,-2)(2.5,0)
+\rput[a](0,0.2){$P$}
+\rput[a](1.3,-1.8){$A$}
+\rput[a](4.2,-2.2){$B$}
+\rput[a](2.7,-0.2){$C$}
+\end{pspicture}
+\end{center}
+
+\end{enumerate}
+
+\textbf{Note 1.}\; The construction is based on the fact that the quadrilateral $PABC$ is a parallelogram.  In fact, $PABC$ is a rhombus.  The reasoning is as follows:
+\begin{itemize}
+\item The green circle shows that $\overline{PC}$ and $\overline{PA}$ are congruent.
+\item The black circle shows that $\overline{PA}$ and $\overline{AB}$ are congruent.
+\item The red circle shows that $\overline{AB}$ and $\overline{BC}$ are congruent.
+\item Since\, $PABC$\, is a quadrilateral with all sides congruent, it is a rhombus (and therefore a parallelogram).
+\end{itemize}
+\textbf{Note 2.}\; It is clear that the construction only needs the compass, not a straightedge:  In determining the point $C$, the straightedge is totally superfluous, and the points $P$ and $C$ determine the desired line (which thus is not necessary to actually draw!).  It may be proved that all constructions with compass and straightedge are possible using only the compass.
+
+\textbf{Note 3.}\; Another construction of the parallel uses the fact that the endpoints of two congruent chords (red) in a circle determine two parallel chords:
+
+\begin{center}
+\begin{pspicture}(-5,0)(5,5)
+\rput[l](-5.5,2){.}
+\rput[a](0,5){.}
+\rput[b](-0.05,0){.}
+\psdots(0,0)(-3,4)(4.58,2)
+\rput[l](-3.15,4.3){$P$}
+\psarc[linecolor=blue](-4.58,2){2.55}{40}{80}
+\psarc[linecolor=blue](4.58,2){2.55}{100}{150}
+\psline[linecolor=red](-3,4)(-4.58,2)
+\psline[linecolor=red](3,4)(4.58,2)
+\psline[linecolor=blue](-5,4)(5,4)
+\psline(-5.5,2)(5.5,2)
+\psline[linestyle=dashed](0,0)(4.89,1)
+\rput[r](5.8,2){$l$}
+\psarc(0,0){5}{5}{170}
+\end{pspicture}
+\end{center}
+
+If you are interested in seeing the rules for compass and straightedge constructions, click on the \PMlinkescapetext{link} provided.
+%%%%%
+%%%%%
+\end{document}

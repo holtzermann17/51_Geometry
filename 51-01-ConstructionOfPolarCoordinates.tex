@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructionOfPolarCoordinates}
+\pmcreated{2013-03-22 15:12:28}
+\pmmodified{2013-03-22 15:12:28}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{construction of polar coordinates}
+\pmrecord{10}{36968}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-01}
+\pmdefines{polar origin}
+\pmdefines{polar axis}
+
+\usepackage{pstricks}
+\usepackage{pst-plot}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+\section{Construction}
+When a Euclidean plane $E$ is equipped with the usual Cartesian
+coordinates, we can represent any point $P$ by a pair of real
+numbers $(x,y)$ in a unique fashion. The Cartesian coordinates also
+make $E$ into a vector space over the reals.
+
+Polar coordinates are an alternative way of describing points in
+$E$. Like the Cartesian coordinates, polar coordinates of a point
+are also expressed by a pair of real numbers $(r,\theta)$. But this
+is where the similarity ends.
+
+To set up the polar coordinates in $E$, we first pick a point of
+reference $O$ and call it the \emph{polar origin}. For any point $P$
+in $E$, we can measure the distance $r$ between $P$ and the polar
+origin $O$. In fact, along any ray emanating from $O$, we can
+uniquely identify any point on that ray by its distance $r$ from
+$O$. However, if more than one ray enters the picture, distance
+alone would not be enough to uniquely identify points in $E$. If we
+fix the distance $r$, we are looking at a collection of points
+called a circle, with radius $r$ and center $O$.
+\begin{center}
+\includegraphics{polar_1.eps}
+\end{center}
+To ``distinguish'' one point from another on the circle, a ``second
+coordinate'' is needed. To this end, we fix a ray, a ray of
+reference, say $x$ and call it the \emph{polar axis}. With the polar
+axis $x$, a point $P_x$ of distance $r$ to $O$ is located. Then any
+point on the circle of radius $r$ can now be located by a
+measurement of ``how far'' it is from $P_x$. This measurement
+corresponds to the angle $\theta$ between the polar axis $x$ and the
+ray in question. Furthermore, this angle uniquely identifies a ray.
+With $O$ and $x$, it is now enough to locate any point on $E$
+uniquely. Operationally, the construction can be broken down into
+the following sequence of steps:
+\begin{enumerate}
+\item pick a point $O$ and a ray $x$ emanating from $O$,
+\item for any given point $P$, draw a straight line segment connecting $O$ and $P$,
+\item measure the length $r$ of the line segment $\overline{OP}$,
+\item measure the angle $\theta$ between $x$ and $\overline{OP}$,
+by sweeping $x$ counterclockwise until it first reaches
+$\overline{OP}$,
+\item then $(r,\theta)$ are the polar coordinates of $P$.
+\end{enumerate}
+\begin{center}
+\includegraphics{polar_2.eps}
+\end{center}
+All of the above steps can be carried out in a Euclidean plane,
+which, in this case, is $E$. Careful readers will, however, see a
+potential problem in Step 2 above when $P=O$, since one point does
+not determine a unique line segment in $E$. The quick remedy is to
+set $(r,\theta)=(0,0)$ be the polar coordinates of the polar origin
+$O$. This is consistent with the way polar coordinates are defined
+for $P\neq O$.
+
+The construction establishes a one-to-one correspondence $f$ between
+$\lbrace (0,0)\rbrace \cup (0,\infty)\times[0,2\pi)$ and $E$. Later
+we will extend $f$ to $\mathbb{R}^2$ and see that every point $E$
+has infinitely many representations in polar coordinates, a property
+not shared by the Cartesian coordinates.
+
+Notice also that the choice for measuring angles using the
+counterclockwise sweep of the polar axis is arbitrary. We could have
+used the clockwise sweep instead. To switch from one choice of
+angular measurement to another, we simply perform a reflection
+$\rho$ about the polar axis (again, this is possible in a Euclidean
+plane):
+\begin{center}
+\includegraphics{polar_3.eps}
+\end{center}
+We will follow the standard method of measuring angles by using the
+counterclockwise sweep of the polar axis described above.
+
+\section{Relations with Cartesian coordinates}
+From the discussion above, we see that $E$ is now equipped with two
+coordinate systems. We can now superimpose the two coordinate
+systems to seek out any properties between the two systems. First,
+identify the polar origin with the rectangular origin of the
+Cartesian coordinates (by translation if necessary). Then, line up
+the polar axis with the positive ray of the horizontal axis of the
+Cartesian coordinates (by rotation if necessary).
+\begin{center}
+\includegraphics{polar_4.eps}
+\end{center}
+With this identification, the two sets of coordinates of a point $P$
+can be related by the following equations:
+\begin{eqnarray}
+x=r\cos\theta\qquad \mbox{ and}\qquad y=r\sin\theta,
+\end{eqnarray}
+where $(x,y)$ and $(r,\theta)$ are respectively the Cartesian and
+polar coordinates of $P$.
+
+With the pair of equations, we can now show how to extend the
+one-to-one correspondence $f$ (see Section 1) to a map
+$\widetilde{f}$ that is $\infty$-to-one. First, note that if $r=0$,
+then $x=y=0$ no matter what $\theta$ is. Since the Cartesian origin
+\emph{is} the polar origin, we identify $(0,\theta)$ with the polar
+origin, for any $\theta\in\mathbb{R}$. This means that the polar
+origin has uncountably many polar coordinate representations.
+
+Next, if $r>0$, we see that $$x=r\cos\theta=r\cos(\theta+2n\pi)\quad
+\mbox{ and} \quad y=r\sin\theta=r\sin(\theta+2n\pi),$$ for all
+$n\in\mathbb{Z}$. This suggests the identification of
+$(r,\theta+2n\pi)$ with $(r,\theta)$. The construction so far
+establishes a map from $[0,\infty)\times\mathbb{R}$ onto $E$, by
+extending $f$ in the domain of its second polar coordinate.
+
+To complete the rest of the construction, we need to extend the
+domain of the first coordinate from the non-negative reals to all of
+$\mathbb{R}$. Again using equations (1), we see that if $r<0$, then
+$$x=r\cos\theta=-r\cos(\theta+\pi)\qquad \mbox{ and}
+\qquad y=r\sin\theta=-r\sin(\theta+\pi).$$ So if we identify
+$(r,\theta)$ with $(-r,\theta+\pi)$, we have extended $f$ to
+$\widetilde{f}:\mathbb{R}^2\to E$, completing the construction. If
+the metric topology is added to $E$, then $\widetilde{f}$ is a
+covering map of $E$.
+
+It's possible to define additions via polar coordinates. The usual
+way to go about this is to convert the polar coordinates to
+Cartesian coordinates using equations (1), add, and then convert the
+result back to polar coordinates. The formula for additions in polar
+coordinates is messy and do not follow any algebraic expressions
+(involving transcendental functions).
+
+Multiplications by a real scalar can be defined similarly. This
+time, there is a simple formula: $t(r,\theta)=(tr,\theta)$.
+%%%%%
+%%%%%
+\end{document}

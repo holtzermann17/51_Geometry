@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{operatornamearcTanWithTwoArguments}
+\pmcreated{2013-03-22 15:18:19}
+\pmmodified{2013-03-22 15:18:19}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{$\operatorname{arc tan}$ with two arguments}
+\pmrecord{11}{37105}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51-01}
+\pmsynonym{angle function}{operatornamearcTanWithTwoArguments}
+%\pmkeywords{arc tan}
+%\pmkeywords{arctan}
+%\pmkeywords{$d \theta$}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+When inverting the polar coordinates, one needs the 
+\PMlinkname{arc tan function}{CyclometricFunctions} $\arctan$
+with two arguments.
+If $(x,y)\in \R^2\setminus\{0\}$, then 
+$
+  \arctan(x,y)
+$
+is defined as the angle $(x,y)$ makes with 
+the positive $x$-axis. 
+
+One usually sees expressions like $\arctan(y/x)$,
+which is equal to $\arctan(x,y)$ when $(x,y)$ is in the first quadrant.
+However, $\arctan(y/x)$ does not give the correct angle when $(x,y)$
+is in the third quadrant (since $y/x=(-y)/(-x)$).
+Also, the quotient $y/x$ involves a division by zero when $x=0$,
+which is damaging both numerically and mathematically.
+
+In most mathematical software and programming languages the two-argument $\arctan$
+is directly implemented.
+
+In Python language the functions \texttt{atan(x)} and \texttt{atan2(x,y)} are the respective one and two argument versions of $\arctan$. The point of having the two argument version is to determine the correct quadrant of the point. For instance, $1/1 = 1 = -1/-1$, so \texttt{atan(x)} cannot distinguish between $(1,1)$ and $(-1,-1)$, but \texttt{atan2(x,y)} can, as the following Python code illustrates:
+\begin{verbatim}
+\PMlinkescapetext{
+>>> from math import *
+>>> print atan(1)
+0.785398163397
+>>> print atan2(1,1)
+0.785398163397
+>>> print atan2(-1,-1)
+-2.3619449019
+}
+\end{verbatim}
+because $(1,1)$ has argument $\pi/4=0.7853\ldots$ but $(-1,-1)$ has argument $-3\pi/4=-2.3619\ldots$.
+
+\section*{Analytic properties}
+In mathematical works, $\arctan(x,y)$
+is simply denoted by $\theta(x, y)$.  The symbol $\theta$ obviously refers to the angle, but it is really
+the function $h_2$, where
+\[
+g(r, \theta) = (r \cos \theta, r \sin \theta)\,, \quad h(x,y) = g^{-1}(x, y) = (r, \theta)\,.
+\]
+The function $g \colon \R^2 \to \R^2$ is the polar-to-Cartesian coordinate transformation.
+By the inverse function theorem, the function $h$ (the Cartesian-to-polar coordinate transformation) exists and is smooth wherever it is defined. 
+Note that $h$ cannot be defined continuously everywhere, because of the multi-valued nature of $\theta$ --- $(r, \theta)$ and $(r, \theta + 2\pi n)$ always map to the same point under $g$.
+(Similarly, $\theta$ cannot defined when $r = \sqrt{x^2 + y^2} = 0$.)
+This means, if one chases a loop (say a circle) around the origin, $\theta$ would move
+from $0$ to $2\pi$, even though the image point $g(r, \theta)$ winds back to the starting point.
+
+Technically, a ``largest'' possible domain of $h$ (and $\theta$) can only be taken to be some simply connected open subset of $\R^2 \setminus \{0\}$. (Note: $\R^2 \setminus \{0\}$ itself is not  simply connected.)
+For example, such a domain might be $\R^2 \setminus \{ (x, y) : x \leq 0 \}$, i.e. delete the negative real axis from $\R^2$.
+
+The exterior derivative of $\theta$
+is
+\[
+d\theta = \frac{-y}{x^2 + y^2} \, dx + \frac{x}{x^2 + y^2} \, dy \,,
+\]
+(found by implicit differentiation),
+and hence
+\[
+\frac{\partial \theta}{\partial x} = \frac{-y}{x^2 + y^2}\,, \quad
+\frac{\partial \theta}{\partial y} = \frac{x}{x^2 + y^2}
+\]
+(which can also be found by differentiating $\arctan(y/x)$ directly
+and piecing the results for each quadrant).
+
+Of course, the formulas above are only valid wherever $\theta$ is defined,
+but the analytical expressions do not change no matter which domain of definition is taken for $\theta$.
+This allows for the following neat formula
+to find the total variation of angle of a smooth curve $\gamma \colon [a, b] \to \R^2 \setminus \{0 \}$:
+\[
+\int_{\gamma} d\theta = \int_a^b \gamma^* d\theta
+= \int_a^b \left( \frac{-y \dot{x} }{x^2 + y^2} + \frac{x \dot{y}}{x^2 + y^2} \right) \, dt\,.
+\]
+(This is related to the formula for the winding number
+and the argument principle in complex analysis.)
+
+For example, if $\gamma(t) = (r \cos t, r \sin t)$, for $t \in [0, 2\pi n]$,
+is the circle that winds around the origin $n$ times, then $\int_{\gamma} d\theta = 2\pi n$.
+%%%%%
+%%%%%
+\end{document}

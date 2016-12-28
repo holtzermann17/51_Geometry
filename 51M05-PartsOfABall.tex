@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartsOfABall}
+\pmcreated{2013-03-22 18:18:36}
+\pmmodified{2013-03-22 18:18:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{parts of a ball}
+\pmrecord{10}{40932}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmsynonym{parts of ball}{PartsOfABall}
+\pmsynonym{parts of sphere}{PartsOfABall}
+\pmrelated{CircularSegment}
+\pmdefines{spherical segment}
+\pmdefines{spherical frustum}
+\pmdefines{spherical cap}
+\pmdefines{spherical calotte}
+\pmdefines{spherical sector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{height}
+
+Let us consider in $\mathbb{R}^3$ a ball of radius $r$ and the sphere bounding the ball.
+\begin{itemize}
+
+\item Two parallel planes intersecting the ball separate between them from the ball a {\em spherical segment}, which can also be called a {\em spherical frustum} (see the frustum).\, The curved surface of the spherical segment is the {\em spherical zone}.
+
+\item In the special case that one of the planes is a tangent plane of the sphere, the spherical segment is a {\em spherical cap} and the spherical zone is a {\em spherical calotte}.
+
+\item The lateral surface of a circular cone with its apex in the \PMlinkname{centre}{Sphere} of the ball divides the ball into two {\em spherical sectors}.
+\end{itemize}
+
+The distance $h$ of the two planes intersecting the ball be is called the {\em height}.
+
+The volume of the spherical cap is obtained from
+$$V \,=\, \pi h^2\left(r\!-\!\frac{h}{3}\right)$$
+and the area of the corresponding spherical calotte and also a spherical zone from
+$$A \,=\, 2\pi rh.$$
+The volume of a spherical segment can be got as the difference of the volumes of two spherical caps.
+
+The volume of a spherical sector may be calculated from
+$$V \,=\, \frac{2}{3}\pi r^2h,$$
+where $h$ is the height of the spherical cap of the spherical sector.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,161 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoincareDiscModel}
+\pmcreated{2013-03-22 17:06:56}
+\pmmodified{2013-03-22 17:06:56}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{Poincar\'e disc model}
+\pmrecord{25}{39416}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M10}
+\pmclassification{msc}{51-00}
+\pmsynonym{conformal disc model}{PoincareDiscModel}
+\pmrelated{ConvertingBetweenTheBeltramiKleinModelAndThePoincareDiscModel}
+\pmrelated{ConvertingBetweenThePoincareDiscModelAndTheUpperHalfPlaneModel}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+The \emph{Poincar\'e disc model} for $\mathbb{H}^2$ is the disc $\{(x,y) \in \mathbb{R}^2 : x^2+y^2<1 \}$ in which a point is similar to the Euclidean point and a line must be one of the following:
+
+\begin{itemize}
+\item a diameter (excluding its endpoints) of the unit circle;
+\item an arc (excluding its endpoints) of a circle such that it intersects the unit circle at two distinct points and the two circles are perpendicular at both intersection points.
+\end{itemize}
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psarc{o-o}(-2,4.828){4.828}{270}{315}
+\end{pspicture}
+\end{center}
+
+The Poincar\'{e} disc model has the drawback that lines in the model do not \PMlinkescapetext{necessarily} resemble Euclidean lines; however, it has the advantage that it is angle preserving.  That is, the Euclidean \PMlinkescapetext{measure} of an angle within the model is the angle measure in hyperbolic geometry.  For this reason, this model is also referred to as the \emph{conformal disc model}.  (See the entry conformal for more details.)
+
+Some points outside of the Poincar\'{e} disc model are important for constructions within the model. The following is an example of such:
+
+Let $\ell$ be a line in the Poincar\'{e} disc model that is not a diameter of the circle. The \emph{pole} of $\ell$ is the intersection of the Euclidean lines that are \PMlinkname{tangent}{TangentLine} to the circle at the endpoints of $\ell$.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,5)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{<->}(-2,-2)(-2,5)
+\psline{<->}(-2.7172,5)(2.828,0.18)
+\psarc{o-o}(-2,4.828){4.828}{270}{315}
+\rput[a](0,0.7){$\ell$}
+\psdots(-2,4.4)
+\rput[l](-1.9,4.4){$P(\ell)$}
+\rput[b](-2,-2){.}
+\rput[b](-2.7172,5){.}
+\rput[b](2.828,0.18){.}
+\end{pspicture}
+\end{center}
+
+Note that this matches the definition of pole for the Beltrami-Klein model.  Also, poles are important for the same reason that they are important in the Beltrami-Klein model: Given a line $\ell$ that is not a diameter of the Poincar\'{e} disc model, one constructs a line perpendicular to $\ell$ by considering Euclidean lines passing through $P(\ell)$. Thus, two disjointly parallel lines $\ell$ and $m$ that are not diameters of the Poincar\'{e} disc model, one constructs their common perpendicular by connecting their poles.  It is actually much easier to do this construction by finding the poles of the two lines, finding the common perpendicular with respect to the Beltrami-Klein model, then converting the common perpendicular to the Poincar\'{e} disc model.  See the entry on converting between the Beltrami-Klein model and the Poincar\'e disc model for more details.
+
+In all pictures in this entry from this point on, blue segments are lines in the Beltrami-Klein model, and red arcs are lines in the Poincar\'{e} disc model.
+
+Below is a picture of two disjointly parallel lines $\ell$ and $m$ in the Poincar\'{e} disc model, neither of which is a diamter of the unit circle:
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psarc[linecolor=red]{o-o}(-2,4.828){4.828}{270}{315}
+\rput[a](0,0.7){$\ell$}
+\psarc[linecolor=red]{o-o}(0,-2.5){1.5}{36.87}{143.13}
+\rput[b](0.8,-1.6){$m$}
+\rput[l](-2,0){.}
+\rput[a](0,2){.}
+\rput[r](2,0){.}
+\rput[b](0,-2){.}
+\end{pspicture}
+\end{center}
+
+Their poles can be found:
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,5.1)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{<->}(-2,-3)(-2,5)
+\psline{<->}(-2.7172,5)(2.828,0.18)
+\psline{<->}(-2.4,-0.7)(0.4,-2.8)
+\psline{<->}(-0.4,-2.8)(2.4,-0.7)
+\psarc[linecolor=red]{o-o}(-2,4.828){4.828}{270}{315}
+\rput[a](0,0.7){$\ell$}
+\psarc[linecolor=red]{o-o}(0,-2.5){1.5}{36.87}{143.13}
+\rput[b](0.8,-1.6){$m$}
+\psdots(-2,4.4)(0,-2.5)
+\rput[l](-1.9,4.4){$P(\ell)$}
+\rput[l](0.2,-2.5){$P(m)$}
+\rput[b](-2,-3){.}
+\rput[b](-2.7172,5){.}
+\rput[b](2.828,0.18){.}
+\end{pspicture}
+\end{center}
+
+The common perpendicular with respect to the Beltrami-Klein model can be found:
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,5.1)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{<->}(-2,-3)(-2,5)
+\psline{<->}(-2.7172,5)(2.828,0.18)
+\psline{<->}(-2.4,-0.7)(0.4,-2.8)
+\psline{<->}(-0.4,-2.8)(2.4,-0.7)
+\psarc[linecolor=red]{o-o}(-2,4.828){4.828}{270}{315}
+\rput[a](0,0.7){$\ell$}
+\psarc[linecolor=red]{o-o}(0,-2.5){1.5}{36.87}{143.13}
+\rput[b](0.8,-1.6){$m$}
+\psdots(-2,4.4)(0,-2.5)
+\rput[l](-1.9,4.4){$P(\ell)$}
+\rput[l](0.2,-2.5){$P(m)$}
+\rput[b](-2,-3){.}
+\rput[b](-2.7172,5){.}
+\rput[b](2.828,0.18){.}
+\psline{<->}(-2.2,5.09)(0.1,-2.845)
+\psline[linecolor=blue]{o-o}(-1.19,1.6055)(-0.1465,-1.9946)
+\end{pspicture}
+\end{center}
+
+From this, the common perpendicular $n$ with respect to the Poincar\'{e} disc model can be found:
+
+\begin{center}
+\begin{pspicture}(-6,-3)(3,5.1)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{<->}(-2,-3)(-2,5)
+\psline{<->}(-2.7172,5)(2.828,0.18)
+\psline{<->}(-5.4,1.47)(0.4,-2.8)
+\psline{<->}(-0.4,-2.8)(2.4,-0.7)
+\psarc[linecolor=red]{o-o}(-2,4.828){4.828}{270}{315}
+\rput[a](0,0.7){$\ell$}
+\psarc[linecolor=red]{o-o}(0,-2.5){1.5}{36.87}{143.13}
+\rput[b](0.8,-1.6){$m$}
+\psdots(-2,4.4)(0,-2.5)(-5.265,-1.6187)
+\rput[l](-1.9,4.4){$P(\ell)$}
+\rput[l](0.2,-2.5){$P(m)$}
+\rput[b](-2,-3){.}
+\rput[b](-2.7172,5){.}
+\rput[b](2.828,0.18){.}
+\psline{<->}(-2.2,5.09)(0.1,-2.845)
+\psline[linecolor=blue]{o-o}(-1.19,1.6055)(-0.1465,-1.9946)
+\psline{<->}(-5.5,-1.8046)(2.9,4.84151)
+\rput[b](-5.5,-1.8046){.}
+\psline{<->}(-5.5,-1.6)(3,-2.226)
+\psarc[linecolor=red]{o-o}(-5.265,-1.6187){5.1963}{-4.2}{38.35}
+\rput[b](0,-0.3){$n$}
+\end{pspicture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

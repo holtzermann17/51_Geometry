@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EuclideanAxiomByHilbert}
+\pmcreated{2013-03-22 17:19:16}
+\pmmodified{2013-03-22 17:19:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Euclidean axiom by Hilbert}
+\pmrecord{9}{39672}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmclassification{msc}{51-01}
+\pmrelated{CorrespondingAnglesInTransversalCutting}
+\pmrelated{AxiomaticGeometry}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+In Hilbert's {\em Grundlagen der Geometrie} (`Foundations of Geometry'; the original edition in 1899) there is the following argumentation.
+
+{\em Let $\alpha$ be an arbitrary plane, $a$ a line in $\alpha$ and $A$ a point in $\alpha$ which lies outside $a$.  If we draw in $\alpha$ a line $c$ which passes through $A$ and intersects $a$ and then through $A$ a line $b$ such that the line $c$ intersects the lines $a$, $b$ with equal alternate interior angles} (``unter gleichen Gegenwinkeln''), {\em then it follows easily from the theorem on the outer angles, that the lines $a$, $b$ have no common point, i.e., in a plane $\alpha$ one can always draw otside a line $a$ another line which does not intersect the line $a$.
+
+The Parallel Axiom reads now:}
+
+\textbf{IV (\PMlinkescapetext{Euclidean Axiom}}).  {\em Let $a$ be an arbitrary line and $A$ be a point outside $a$:  then in the plane determined by $a$ and $A$ there exists at most one line which passes through $A$ and does not intersect $a$.}
+
+\textbf{Explanation}.  {\em According the the preceding text and on grounds of the Parallel Axiom we realize, that there is one and only one line which passes through $A$ and do not intersect $a$; that is called the parallel of $a$ through $A$.}
+
+{\em The Parallel Axiom means the same as the following requirement:}
+
+{\em When two lines $a$, $b$ in a plane do not meet a third line $c$ of the same plane, then also they do not meet each other.}
+
+The theorem on the outer angles is the following:  {\em An outer angle of a triangle is greater than both non-adjacent angles of the triangle.}  Using this one may indirectly justify the assertion in the first cited paragraph.
+
+
+{\em Introducing the Parallel Axiom simplifies the foundations and  facilitates the construction of geometry significantly.
+
+If we \PMlinkescapetext{associate the Parallel Axiom to the Congruence Axioms}, then we obtain easily the following well-known fact:}
+
+\textbf{Theorem 31}.  {\em If two parallels intersect a third line, then the  corresponding angles and the alternate interior angles are congruent, and conversely: the \PMlinkname{congruence}{GeometricCongruence} of the corresponding or alternate interior angles implies that the lines are parallel.} 
+
+
+\begin{thebibliography}{8}
+\bibitem{Grundlagen}{\sc D. Hilbert}: {\em Grundlagen der Geometrie}. Neunte Auflage, revidiert und erg\"anzt von Paul Bernays.\;  B. G. Teubner Verlagsgesellschaft, Stuttgart (1962).
+\end{thebibliography} 
+
+%%%%%
+%%%%%
+\end{document}

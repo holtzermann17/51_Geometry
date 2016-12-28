@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneratricesOfOnesheetedHyperboloid}
+\pmcreated{2013-03-22 17:31:41}
+\pmmodified{2013-03-22 17:31:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{generatrices of one-sheeted hyperboloid}
+\pmrecord{20}{39924}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51M04}
+\pmsynonym{rulings of one-sheeted hyperboloid}{GeneratricesOfOnesheetedHyperboloid}
+%\pmkeywords{ruled surface}
+\pmrelated{QuadraticSurfaces}
+\pmrelated{GeneratricesOfHyperbolicParaboloid}
+\pmrelated{AnalyticGeometry}
+\pmdefines{doubly ruled}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+The one-sheeted hyperboloid is a ruled surface, which is seen from its equation written in the form
+\begin{align}
+  \frac{y^2}{b^2}-\frac{z^2}{c^2} = 1-\frac{x^2}{a^2},
+\end{align}
+or
+\begin{align}
+  \left(\frac{y}{b}+\frac{z}{c}\right)\left(\frac{y}{b}-\frac{z}{c}\right) = 
+   \left(1+\frac{x}{a}\right)\left(1-\frac{x}{a}\right).
+\end{align}
+In fact, (2) may be thought to be formed by multiplying the equations in the pair
+\begin{align}
+\begin{cases}
+      \displaystyle{\frac{y}{b}+\frac{z}{c} = h\left(1-\frac{x}{a}\right)} \vspace{15pt} \\  
+      \displaystyle{\frac{y}{b}-\frac{z}{c} = \frac{1}{h}\left(1+\frac{x}{a}\right),}
+\end{cases}
+\end{align}
+which \PMlinkescapetext{represents} a \PMlinkname{line in the space}{LineInSpace}; $h$ is an arbitrary parameter.  For any\, $h \neq 0$,\, each point \,$(x,\,y,\,z)$\, on the line (3) satisfies also (2).  This means that the line (3) lies on the hyperboloid, i.e. it's a question of a generatrix (= ruling) of the one-sheeted hyperboloid.\\
+
+Giving distinct real values to the parameter $h$ we get an infinite family of the generatrices (3).  Further, one of these lines passes through every point of the hyperboloid.  Actually, if the point\, $P_1 = (x_1,\,y_1,\,z_1)$\, satisfies the equation (2) of the surface, we have the proportion equation
+ $$\frac{\frac{y_1}{b}+\frac{z_1}{c}}{1-\frac{x_1}{a}} = \frac{1+\frac{x_1}{a}}{\frac{y_1}{b}-\frac{z_1}{c}},$$ 
+and if we assign in (3) to $h$ the value of the left hand \PMlinkescapetext{side} of the \PMlinkescapetext{proportion}, then $P_1$ satisfies also the equations (3).\\
+
+But since the equation (2) may be splitted also as
+\begin{align}
+\begin{cases}
+      \displaystyle{\frac{y}{b}+\frac{z}{c} = k\left(1+\frac{x}{a}\right)} \vspace{15pt} \\  
+      \displaystyle{\frac{y}{b}-\frac{z}{c} = \frac{1}{k}\left(1-\frac{x}{a}\right),}
+\end{cases}
+\end{align}
+the hyperboloid has as well the other family (4) of generatrices, containing similarly one generatrix through every point of the surface.  The one-sheeted hyperboloid is {\em doubly ruled}\, ---\, having two distinct generatrices through every point.  And the families (3) and (4) have really no common members, since otherwise we had an equation
+$$h\left(1-\frac{x}{a}\right) = k\left(1+\frac{x}{a}\right)$$
+for all $x$'s; this would imply, by substituting\, $x = 0$,\, that\, $h = k$\, and then the impossibility\, 
+$\displaystyle{1-\frac{x}{a} \equiv 1+\frac{x}{a}}$.\\
+
+\textbf{Note 1.}  One can solve from the equations (3) and (4) the coordinates for points of the one-sheeted hyperboloid:
+$$x = a\frac{h-k}{h+k},\quad y = b\frac{hk+1}{h+k},\quad z = c\frac{hk-1}{h+k}$$
+This is a parametric presentation of the surface.\\
+
+\textbf{Note 2.}  Furthermore one may prove, that two lines of the same family (3) or (4) cannot lie in a same plane, but two lines of distinct families (3) and (4) lie always in a same plane.
+
+\begin{center}
+\begin{pspicture}(-5,-6)(5,2)
+\psplot[linecolor=blue]{-4}{4}{1 x x mul 16 div sub sqrt}
+\psplot[linecolor=blue]{-4}{4}{0 1 x x mul 16 div sub sqrt sub}
+\psplot[linestyle=dashed]{-4}{4}{1 x x mul 16 div sub sqrt 5 sub}
+\psplot[linecolor=blue]{-4}{4}{0 1 x x mul 16 div sub sqrt sub 5 sub}
+\psline(4,0)(1.236,-4.049)           %0
+\psline(3.804,0.309)(0,-4)           %18 
+\psline(3.236,0.588)(-1.236,-4.049)  %36
+\psline(2.351,0.809)(-2.351,-4.191)  %54 
+\psline(1.236,0.951)(-3.236,-4.412)  %72
+\psline(0,1)(-3.804,-4.691)          %90 
+\psline(-1.236,0.951)(-4,-5)         %108 
+\psline(-2.351,0.809)(-3.804,-5.309) %126 
+\psline(-3.236,0.588)(-3.236,-5.588) %144
+\psline(-3.804,0.304)(-2.351,-5.809) %162
+
+\psline[linecolor=blue](-4,0)(-1.236,-5.951)         %180
+\psline[linecolor=blue](-3.84,-0.309)(-0,-6)         %198
+\psline[linecolor=blue](-3.236,-0.588)(1.236,-5.951) %216. 
+\psline[linecolor=blue](-2.351,-0.809)(2.351,-5.809) %234.
+\psline[linecolor=blue](-1.236,-0.951)(3.236,-5.588) %252.
+\psline[linecolor=blue](0,-1)(3.804,-5.309)          %270.
+\psline[linecolor=blue](1.236,-0.951)(4,-5)          %288.
+\psline[linecolor=blue](2.351,-0.809)(3.804,-4.691)  %306.
+\psline[linecolor=blue](3.236,-0.588)(3.236,-4.412)  %324.
+\psline[linecolor=blue](3.804,-0.309)(2.351,-4.191)  %342.
+
+\psline[linecolor=blue](4,0)(1.236,-5.951)            %0.
+\psline(3.804,0.309)(2.351,-5.809)    %18. 
+\psline(3.236,0.588)(3.236,-5.588)    %36.
+\psline(2.351,0.809)(3.804,-5.309)    %54. 
+\psline(1.236,0.951)(4,-5)            %72.
+\psline(0,1)(3.804,-4.691)           %90. 
+\psline(-1.236,0.951)(3.236,-4.412)  %108. 
+\psline(-2.351,0.809)(2.351,-4.191)  %126. 
+\psline(-3.236,0.588)(1.236,-4.049)  %144.
+\psline(-3.804,0.304)(0,-4)          %162.
+\psline(-4,0)(-1.236,-4.049)         %180.
+\psline[linecolor=blue](-3.84,-0.309)(-2.351,-4.191) %198.
+\psline[linecolor=blue](-3.236,-0.588)(-3.236,-4.412) %216 
+\psline[linecolor=blue](-2.351,-0.809)(-3.804,-4.691) %234
+\psline[linecolor=blue](-1.236,-0.951)(-4,-5)         %252
+\psline[linecolor=blue](0,-1)(-3.804,-5.309)          %270
+\psline[linecolor=blue](1.236,-0.951)(-3.236,-5.588)  %288
+\psline[linecolor=blue](2.351,-0.809)(-2.351,-5.809)  %306
+\psline[linecolor=blue](3.236,-0.588)(-1.236,-5.951)  %324
+\psline[linecolor=blue](3.804,-0.309)(-0,-6)          %342
+\end{pspicture}
+\end{center}
+
+
+\begin{thebibliography}{8}
+\bibitem{LL}{\sc L. Lindel\"of}: {\em Analyyttisen geometrian oppikirja}.\, Kolmas painos.\, Suomalaisen Kirjallisuuden Seura, Helsinki (1924).
+\bibitem{LP}{\sc Lauri Pimi\"a}: {\em Analyyttinen geometria}.\, Werner S\"oderstr\"om Osakeyhti\"o, Porvoo and Helsinki (1958).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

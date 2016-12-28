@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompassAndStraightedgeConstructionOfPerpendicular}
+\pmcreated{2013-03-22 17:14:01}
+\pmmodified{2013-03-22 17:14:01}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{compass and straightedge construction of perpendicular}
+\pmrecord{5}{39562}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51-00}
+\pmrelated{ProjectionOfPoint}
+\pmdefines{drop the perpendicular}
+\pmdefines{dropping the perpendicular}
+\pmdefines{erect the perpendicular}
+\pmdefines{erecting the perpendicular}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{label}
+\PMlinkescapeword{right}
+
+Let $P$ be a point and $\ell$ be a line in the Euclidean plane.  One can construct a line $m$ perpendicular to $\ell$ and passing through $P$.  The construction given here yields $m$ in any circumstance:  Whether $P \in \ell$ or $P \notin \ell$ does not matter.  On the other hand, the construction looks quite different in these two cases.  Thus, the sequence of pictures on the left (in which $\ell$ is in red) is for the case that $P \notin \ell$, and the sequence of pictures on the right (in which $\ell$ is in green) is for the case that $P \in \ell$.
+
+\begin{enumerate}
+
+\item With one point of the compass on $P$, draw an arc that intersects $\ell$ at two points.  Label these as $Q$ and $R$.
+
+\begin{center}
+\begin{pspicture}(-8,-2)(8,3)
+\rput[l](-8,0){.}
+\rput[r](8,0){.}
+\rput[b](-5,-0.5){.}
+\rput[a](5,2.5){.}
+\psline[linecolor=red]{<->}(-8,0)(-2,0)
+\rput[a](-2.1,-0.3){$\ell$}
+\psarc[linecolor=blue](-5,2){2.5}{200}{340}
+\psdots(-5,2)(-6.5,0)(-3.5,0)
+\rput[l](-4.8,2){$P$}
+\rput[a](-6.5,-0.3){$Q$}
+\rput[a](-3.5,-0.3){$R$}
+\psline[linecolor=green]{<->}(2,0)(8,0)
+\rput[a](7.9,-0.3){$\ell$}
+\psarc[linecolor=blue](5,0){2.5}{-10}{190}
+\psdots(2.5,0)(5,0)(7.5,0)
+\rput[a](2.8,-0.3){$Q$}
+\rput[a](5,-0.3){$P$}
+\rput[a](7.2,-0.3){$R$}
+\end{pspicture}
+\end{center}
+
+\item Construct the perpendicular bisector of $\overline{QR}$.  This line is $m$.
+
+\begin{center}
+\begin{pspicture}(-8,-2)(8,3)
+\rput[l](-8,0){.}
+\rput[r](8,0){.}
+\rput[b](-5,-2){.}
+\rput[a](-5,3){.}
+\psline[linecolor=red]{<->}(-8,0)(-2,0)
+\rput[a](-2.1,-0.3){$\ell$}
+\psarc(-5,2){2.5}{200}{340}
+\psarc[linecolor=blue](-6.5,0){2}{-60}{60}
+\psarc[linecolor=blue](-3.5,0){2}{120}{240}
+\psline[linecolor=blue]{<->}(-5,-2)(-5,3)
+\psdots(-5,2)(-6.5,0)(-3.5,0)
+\rput[l](-4.8,2){$P$}
+\rput[a](-6.5,-0.3){$Q$}
+\rput[a](-3.5,-0.3){$R$}
+\psline[linecolor=green]{<->}(2,0)(8,0)
+\rput[a](7.9,-0.3){$\ell$}
+\psarc(5,0){2.5}{-10}{190}
+\psarc[linecolor=blue](2.5,0){3}{-45}{45}
+\psarc[linecolor=blue](7.5,0){3}{135}{225}
+\psline[linecolor=blue]{<->}(5,-2)(5,3)
+\psdots(2.5,0)(5,0)(7.5,0)
+\rput[a](2.8,-0.3){$Q$}
+\rput[a](5,-0.3){$P$}
+\rput[a](7.2,-0.3){$R$}
+\end{pspicture}
+\end{center}
+
+\end{enumerate}
+
+This construction is justified because $Q$ and $R$ are constructed so that $P$ is equidistant from them and thus lies on the perpendicular bisector of $\overline{QR}$.
+
+In the case that $P \notin \ell$, this construction is referred to as \emph{dropping the perpendicular} from $P$ to $\ell$.  In the case that $P \in \ell$, this construction is referred to as \emph{erecting the perpendicular} to $\ell$ at $P$.
+
+If you are interested in seeing the rules for compass and straightedge constructions, click on the \PMlinkescapetext{link} provided.
+%%%%%
+%%%%%
+\end{document}

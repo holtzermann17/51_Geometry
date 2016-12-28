@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeometricCongruence}
+\pmcreated{2013-03-22 12:11:21}
+\pmmodified{2013-03-22 12:11:21}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{geometric congruence}
+\pmrecord{22}{31467}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M99}
+\pmsynonym{Euclidean congruent}{GeometricCongruence}
+\pmsynonym{affine congruent}{GeometricCongruence}
+\pmsynonym{projective congruent}{GeometricCongruence}
+\pmsynonym{congruent}{GeometricCongruence}
+%\pmkeywords{Geometry}
+\pmrelated{TriangleSolving}
+\pmrelated{UsingPrimitiveRootsAndIndexToSolveCongruences}
+\pmrelated{NormalOfPlane}
+\pmrelated{CenterNormalAndCenterNormalPlaneAsLoci}
+\pmdefines{SSS}
+\pmdefines{SAS}
+\pmdefines{ASA}
+\pmdefines{SAA}
+\pmdefines{AAS}
+\pmdefines{Euclidean congruence}
+\pmdefines{affine congruence}
+\pmdefines{projective congruence}
+
+%\usepackage{graphicx}
+%%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\begin{document}
+\PMlinkescapeword{congruence}
+\PMlinkescapeword{congruences}
+\PMlinkescapeword{even}
+\PMlinkescapeword{objects}
+\PMlinkescapeword{sizes}
+\PMlinkescapeword{types}
+
+Two geometrical constructs are \emph{congruent} if there is a finite sequence of geometric transformations mapping each one into the other.  In this entry, we discuss three types of geometric congruences: \PMlinkescapetext{Euclidean} congruence (the usual congruence), affine congruence, and projective congruence.  After discussing \PMlinkescapetext{Euclidean} congruence, we will briefly discuss congruence in Non-Euclidean geometry before moving on to affine congruence.
+
+\subsubsection*{Euclidean Congruence}
+In the usual Euclidean space, these rigid motions are translations, rotations, and reflections (and of course compositions of them).
+
+In a less formal sense, saying two constructs are congruent amounts to saying that the two constructs are essentially ``the same'' under the geometry that is being used.
+
+The following are criteria that indicate that two given triangles are congruent:
+\begin{itemize}
+\item SSS. If two triangles have their corresponding sides equal, they are congruent.
+\item SAS. If two triangles have two corresponding sides equal as well as the angle between them, the triangles are congruent.
+\item ASA. If two triangles have 2 pairs of corresponding angles equal, as well as the side between them, the triangles are congruent.
+\item AAS. (Also known as SAA.) If two triangles have 2 pairs of corresponding angles equal, as well as a pair of corresponding sides which is not in between them, the triangles are congruent.
+\end{itemize}
+
+\subsubsection*{Congruence in Non-Euclidean Geometry}
+
+Note that the criteria listed above are also valid in hyperbolic geometry (and therefore in neutral geometry).  Also note that AAS is not valid in spherical geometry, but all of the other criteria are.  On the other hand, in both hyperbolic geometry and spherical geometry, AAA is a criterion that indicates that two given triangles are congruent.
+
+\subsubsection*{Affine Congruence}
+
+Two geometric figures in an affine space are \emph{affine congruent} if there is an affine transformation mapping one figure to another.
+Since lengths and angles are not preserved by affine transformations, the class of specific geometric configurations is wider
+than that of the class of the same geometric configuration under Euclidean congruence.  For example, all triangles are
+affine congruent, whereas Euclidean congruent triangles are confined only to those that are SSS, SAS, or ASA.  Another
+example is found in the class of ellipses, which contains ellipses of all sizes and shapes, including circles.  However, in
+Euclidean congruence, circles are only congruent to circles of the same radius.
+
+\subsubsection*{Projective Congruence}
+
+Two geometric figures in a projective space are \emph{projective congruent} if there is a projective transformation mapping one
+figure to another.  Here, we find the class of congruent objects of a geometric shape even wider than the class of
+congruent objects of the same geometric shape under affine congruence.  For example, the class of all conic sections are
+projectively congruent, so a circle is projectively the same as an ellipse, as a parabola, and as a hyperbola.  Of course,
+under affine congruence, parabola, hyperbola, and ellipse are three distinct geometric objects.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

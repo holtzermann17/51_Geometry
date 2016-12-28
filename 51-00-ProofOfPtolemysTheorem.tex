@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPtolemysTheorem}
+\pmcreated{2013-03-22 12:38:31}
+\pmmodified{2013-03-22 12:38:31}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of Ptolemy's theorem}
+\pmrecord{11}{32906}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{PtolemysTheorem}
+\pmrelated{CyclicQuadrilateral}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\begin{document}
+Let $ABCD$ be a cyclic quadrialteral. We will prove that 
+$$AC\cdot BD=AB\cdot CD + BC\cdot DA.$$
+
+\begin{center}
+\includegraphics{ptolomeo}
+\end{center}
+
+Find a point $E$ on $BD$ such that $\angle BCA=\angle ECD$. Since $\angle BAC=\angle BDC$ for opening the same arc, we have triangle similarity
+$\triangle ABC\sim \triangle DEC$ and so
+$$\frac{AB}{DE}=\frac{CA}{CD}$$
+which implies $AC\cdot ED = AB\cdot CD$.
+
+Also notice that $\triangle ADC \sim \triangle BEC$ since have two pairs of equal angles. The similarity implies 
+$$\frac{AC}{BC}=\frac{AD}{BE}$$
+which implies $AC\cdot BE = BC\cdot DA$.
+
+So we finally have $AC\cdot BD=AC(BE+ED)=AB\cdot CD+BC\cdot DA$.
+%%%%%
+%%%%%
+\end{document}

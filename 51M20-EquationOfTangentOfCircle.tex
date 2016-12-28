@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquationOfTangentOfCircle}
+\pmcreated{2013-03-22 18:32:16}
+\pmmodified{2013-03-22 18:32:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{equation of tangent of circle}
+\pmrecord{10}{41254}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M20}
+\pmclassification{msc}{51M04}
+\pmrelated{Polarising}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We derive the equation of tangent line for a circle with radius $r$.\, For simplicity, we chose for the origin the centre of the circle, when the points \,$(x,\,y)$\, of the circle satisfy the equation
+\begin{align}
+x^2+y^2 = r^2.
+\end{align}
+
+Let the point of tangency be\, $(x_0,\,y_0)$.\, Then the slope of radius with end point \,$(x_0,\,y_0)$\, is 
+$\frac{y_0}{x_0}$, whence, according to the \PMlinkname{parent entry}{TangentOfCircle}, its opposite inverse 
+$-\frac{x_0}{y_0}$ is the slope of the tangent, being perpendicular to the radius.\, Thus the equation of the tangent is written as
+$$y-y_0 \;=\; -\frac{x_0}{y_0}(x-x_0).$$
+Removing the denominator and the parentheses we obtain from this first\, $x_0x+y_0y = x_0^2+y_0^2$,\, and then
+\begin{align}
+x_0x+y_0y \;=\; r^2
+\end{align}
+since\, $(x_0,\,y_0)$\, satisfies (1).\\
+
+
+\textbf{Remark.}\, In the equation (2) of the tangent, $x_0$, $y_0$ are the coordinates of the point of tangency and 
+$x,\,y$ the coordinates of an arbitrary point of the tangent line.\, But one can of course swap those meanings; then  we interprete (2) such that $x_0$, $y_0$ are the coordinates of some \PMlinkescapetext{fixed} point $P$ outside the circle (1) and $x,\,y$ the coordinates of the point of tangency of either of the tangents which may be drawn from $P$ to the circle.\, If (2) now is again interpreted as an equation of a line (its \PMlinkname{degree}{AlgebraicEquation} is 1!), this line must pass through both the mentioned points of tangency $A$ and $B$ (they satisfy the equation!); in a \PMlinkescapetext{word}, (2) is now the equation of the tangent chord $AB$ of\, $P = (x_0,\,y_0)$.\, See also \PMlinkexternal{polar}{http://mathworld.wolfram.com/Polar.html}.
+
+\begin{center}
+\begin{pspicture}(-5.5,-3)(5.5,3)
+\rput(-2.85,-0.1){$O$}
+\rput[linecolor=blue](+2.85,-0.1){$P$}
+\psdot(-2.6,0)
+\psdot[linecolor=blue](+2.6,0)
+\psline(-2.6,0)(2.6,0)
+\pscircle[linecolor=blue](-2.6,0){2}
+
+\psdots(-1.8308,1.8462)(-1.8308,-1.8462)
+\psline[linestyle=dashed](-2.6,0)(-1.8308,+1.8462)
+\psline[linestyle=dashed](-2.6,0)(-1.8308,-1.8462)
+\psline[linecolor=blue](-1.8308,+1.8462)(-1.8308,-1.8462)
+\rput(-1.8308,+2.2){$A$}
+\rput(-1.8308,-2.2){$B$}
+\psline[linecolor=blue](2.6,0)(-3,+2.3335)
+\psline[linecolor=blue](2.6,0)(-3,-2.3335)
+\rput(-5.5,-3){.}
+\rput(5.5,3){.}
+\end{pspicture}
+\end{center}
+
+
+%%%%%
+%%%%%
+\end{document}

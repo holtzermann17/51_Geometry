@@ -1,0 +1,194 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Polygon}
+\pmcreated{2013-03-22 12:10:15}
+\pmmodified{2013-03-22 12:10:15}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{polygon}
+\pmrecord{43}{31384}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51G05}
+\pmrelated{RegularPolygon}
+\pmrelated{Semiperimeter}
+\pmrelated{EquilateralPolygon}
+\pmrelated{EquiangularPolygon}
+\pmrelated{Pentagon}
+\pmrelated{BasicPolygon}
+\pmrelated{Hexagon}
+\pmrelated{GeneralizedPythagoreanTheorem}
+\pmdefines{side}
+\pmdefines{vertex}
+\pmdefines{vertices}
+\pmdefines{simple polygon}
+\pmdefines{side-lines}
+\pmdefines{ray}
+\pmdefines{simple way}
+\pmdefines{way}
+\pmdefines{region}
+\pmdefines{convex region}
+\pmdefines{Jordan polygon}
+\pmdefines{angles of a polygon}
+\pmdefines{plane polygon}
+\pmdefines{broken line}
+
+\usepackage{graphicx}
+%%%%\usepackage{xypic} 
+\usepackage{amsthm}
+\usepackage{bbm}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+
+%\theoremstyle{definition}
+%\newtheorem{Definition}{Definition}
+\begin{document}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{angles}
+\PMlinkescapeword{join}
+
+\section{Definitions}
+We follow Forder \cite{forder} for most of this entry.
+The term polygon can be defined if  one has a definition of an interval. For this 
+entry we use betweenness geometry. A betweenness geometry
+is just one for which there is a set of points and a betweenness relation $B$ defined.
+Rather than write $(a,b,c) \in B$ we write $a*b*c$.
+
+\begin{enumerate}
+\item If $a$ and $b$ are distinct points, the \emph{line $ab$} is the set of
+all points $p$ such that $p*a*b$ or $a*p*b$ or $a*b*p$. It can be shown
+that the line $ab$ and the line $ba$ are the same set of points. 
+\item If $o$ and $a$ are distinct points, a \emph{ray $[oa$} is the set of all points $p$ such that 
+$p=o$ or $o*p*a$ or $o*a*p$. 
+\item If $a$ and $b$ are distinct points, the \emph{open interval} is the set of points
+$p$ such that $a*p*b$. It is denoted by $(a,b).$
+\item If $a$ and $b$ are distinct points, the \emph{closed interval} is 
+$(a,b) \cup \{a\} \cup \{b\}$, and denoted by $[a,b].$
+\item The \emph{way $a_1a_2\ldots a_n$} is the finite set of points $\{a_1, \ldots , a_n\}$
+along with the open intervals $(a_1, a_2), (a_2,a_3), \ldots, (a_{n-1}, a_n)$.
+The points $a_1, \ldots, a_n$ are called the \emph{vertices} of the way, and the
+open intervals are called the \emph{sides} of the way. 
+A way is also called a \emph{broken line}.
+The closed intervals $[a_1,a_2], \ldots, [a_{n-1},a_n]$ are called the \emph{side-intervals} of
+the way. The lines $a_1a_2, \ldots , a_{n-1}a_n$ are called the \emph{side-lines}
+of the way. 
+The way  $a_1a_2\ldots a_n$ is said to \emph{join} $a_1$ to $a_n$.
+It is assumed that $a_{i-1}, a_i, a_{i+1}$ are not collinear. 
+\item A way is said to be \emph{simple} if it does not meet itself. To be precise,
+(i) no two side-intervals meet in any point which is not a vertex, and (ii) no three side-intervals
+meet in any point. 
+\item A \emph{polygon} is a way $a_1 a_2 \ldots a_n$ for which $a_1 = a_n$. Notice that there is
+no assumption that the points are coplanar. 
+\item A \emph{simple polygon} is polygon for which the way is simple.
+\item A \emph{region} is a set of points not all collinear, any two of which can be joined by points of a way using
+only points of the region. 
+\item A region $R$ is \emph{convex} if for each pair of points $a,b \in R$  the open interval $(a,b)$ is 
+contained in $R.$
+\item Let $X$ and $Y$ be two sets of points. If there is a set of points $S$ such that every way 
+joining a point of $X$ to a point of $Y$ meets $S$ then $S$ is said to \emph{separate}
+$X$ from $Y$. 
+\item If $a_1 a_2 \ldots a_n$ is a polygon, then the \emph{angles of the polygon} are
+$\angle a_na_1a_2, \angle a_1a_2a_3$, and so on. 
+\end{enumerate}
+
+Now assume that all points of the geometry are in one plane. Let $P$ be a polygon. ($P$ is called
+a \emph{plane polygon}.)
+\begin{enumerate} 
+\item A ray or line which does not go through a vertex of $P$ will be called \emph{suitable}.
+\item An  \emph{inside point} $a$ of $P$ is one for which a  suitable ray from $a$
+meets $P$ an odd number of times. Points that are not on or inside $P$ are said to be \emph{outside} 
+$P$. 
+\item Let $\{P_i\}$ be a set of polygons. We say that $\{P_i\}$ \emph{dissect} $P$ if the following
+three conditions are satisfied: (i) $P_i$ and $P_j$ do not have a common inside point for $i \not = j$,
+(ii) each inside point of $P$ is inside or on some $P_i$ and (iii) each inside point of $P_i$ is
+inside $P$.
+\item A \emph{convex polygon} is one whose inside points are all on the same side of any side-line 
+of the polygon. 
+\end{enumerate}
+
+\section{Theorems}
+Assume that all points are in one plane. Let $P$ be a polygon.
+\begin{enumerate}
+\item It can be shown that $P$ separates the other points of the plane into at least two regions and that
+if $P$ is simple there are exactly two regions. Moise proves this directly in \cite{moise}, pp. 16-18.
+\item It can be shown that $P$ can be dissected into triangles $\{T_i\}$ such that 
+every vertex of a $T_i$ is a vertex of $P$. 
+\item The following theorem of Euler can be shown: Suppose  $P$ is dissected into $f>1$ polygons
+and that the total number of vertices of these polygons is $v$, and the number of open intervals
+which are sides is $e$. Then 
+$$
+v-e+f = 1
+$$.
+\end{enumerate}
+ 
+
+A plane simple polygon with $n$ sides is called an $n$-gon, although for small $n$
+there are more traditional names:
+
+\begin{center}
+\begin{tabular}{||c|c||} \hline
+Number of sides& Name of the polygon \\ \hline
+3 & triangle \\
+4 & quadrilateral \\
+5 & pentagon\\
+6 & hexagon \\
+7 & heptagon\\
+8 & octagon\\
+10 & decagon\\
+\hline 
+\end{tabular}
+\end{center}
+
+A plane simple polygon is also called a \emph{Jordan polygon}. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{borsuk-szmielew}
+K. Borsuk and W. Szmielew, \emph{Foundations of Geometry},
+North-Holland Publishing Company, 1960.
+\bibitem{forder}
+H.G. Forder, \emph{The Foundations of Euclidean Geometry},
+Dover Publications, 1958.
+\bibitem{moise}
+E.E. Moise, \emph{Geometric Topology in Dimensions 2 and 3}, 
+Springer-Verlag, 1977.
+ 
+\end{thebibliography}
+
+\PMlinkescapeword{segments}
+\PMlinkescapeword{maximal}
+\PMlinkescapeword{name}
+\PMlinkescapeword{names}
+\PMlinkescapeword{meet}
+\PMlinkescapeword{opens}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{divides}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{unbounded}
+\PMlinkescapeword{complex}
+
+%%%%%
+%%%%%
+%%%%%
+\end{document}

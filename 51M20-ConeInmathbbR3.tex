@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConeInmathbbR3}
+\pmcreated{2013-03-22 15:29:54}
+\pmmodified{2013-03-22 15:29:54}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{cone in $\mathbb{R}^3$}
+\pmrecord{22}{37357}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M20}
+\pmclassification{msc}{51M04}
+\pmsynonym{generalized cone}{ConeInmathbbR3}
+\pmsynonym{circular double cone}{ConeInmathbbR3}
+\pmsynonym{right circular double cone}{ConeInmathbbR3}
+\pmrelated{SurfaceOfRevolution2}
+\pmdefines{apex}
+\pmdefines{base}
+\pmdefines{circular cone}
+\pmdefines{cone}
+\pmdefines{conical surface}
+\pmdefines{mantle}
+\pmdefines{pyramid}
+\pmdefines{regular pyramid}
+\pmdefines{right circular cone}
+\pmdefines{solid cone}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+When a straight line moves in $\mathbb{R}^3$ passing constantly through a certain point $O$, the ruled surface it sweeps is called a {\em conical surface} or a {\em generalized cone}.\, Formally and more generally, a conical surface $S$ is a ruled surface with the given condition: 
+\begin{quote}
+there is a point $O$ on $S$, such that any ruling $\ell$ on $S$ passes through $O$.
+\end{quote}
+
+By definition, it is readily seen that this point $O$ is unique, for otherwise, all rulings of $S$ that pass through $O$ as well as another point $O^{\prime}$ must all coincide, concluding that $S$ must be nothing more than a straight line, contradicting the fact that $S$ is a surface.\, The point $O$ is commonly known as the \emph{apex} of the conical surface $S$.\\
+
+\begin{figure}
+\begin{center}
+\includegraphics{cone.eps}
+\end{center}
+\caption{A circular conical surface}
+\end{figure}
+
+\textbf{Remarks.}
+\begin{itemize}
+\item No plane can be a conical surface, because one can always find a line (ruling) on the plane not passing through $O$.
+\item A conical surface is, strictly speaking, not a (regular) surface in the sense of a differentiable manifold.\, This is because of the differentiability at the apex breaks down.\, In fact, no neighborhood of the apex is diffeomorphic to $\mathbb{R}^2$.\, Nevertheless, it is easy to see that any two points on a conical surface can be joined by a simple continuous curve.
+\item Any plane passing through the apex $O$ of a conical surface $S$ must contain at least two lines $\ell,m$ through the apex such that $\ell\cap S=m\cap S=\lbrace O\rbrace$.\, In fact, it can be shown that there is a plane with the above property such that $\ell\perp m$.
+\item Given a conical surface $S$, if there is a plane $\pi$ in $\mathbb{R}^3$ such that $\pi\cap S=\varnothing$, then it can be shown that $S$ is planar (that is, $S$ lies on a plane).\, This shows that if $S$ is a non-planar surface, it must have non-empty intersection with \emph{any} plane in $\mathbb{R}^3$!
+\end{itemize}
+
+Given a plane $\pi$ not passing through the apex $O$ of a non-planar conical surface $S$, the intersection of $\pi$ and $S$ is non-empty, as guaranteed by the previous remark.  Let $c$ be the intersection of $\pi$ and $S$.  It is not hard to see that $c$ is necessarily a curve.  The curve may be bounded or unbounded, and it may have disjoint components.  If there is a plane not passing
+through the apex of a conical surface $S$, such that its intersection with $S$ is a bounded, connected closed loop, then we call this surface $S$ a \emph{closed cone}, or \emph{cone} for short.  Intuitively, it can be pictured as a surface swept out by a moving straight line that returns to its starting position.  Any plane not passing through the apex of a closed cone $S$ intersects each ruling of $S$ at exactly one point.
+
+The solid bounded by a closed cone $S$, a plane $\pi$ not passing through the apex $O$ and the apex $O$ itself is called a \emph{solid cone}.\, The portion of the surface of the cone belonging to the conical surface is called the \PMlinkescapetext{{\em lateral surface}} or the \PMlinkescapetext{{\em mantle}} of the solid cone and the portion belonging to the plane is the {\em base} of the solid cone.\,
+
+The intersections of a solid cone and the planes parallel to the
+base plane are similar.\, The perpendicular
+\PMlinkescapetext{distance} of the apex and the base plane is the
+\PMlinkescapetext{{\em height}} of the cone.\, The volume ($V$) of
+the cone equals to the third of product of the base area ($A$) and
+the \PMlinkescapetext{height} ($h$):
+                              $$V = \frac{Ah}{3}.$$
+The formula can be derived directly by observing that, if we were to take another parallel slice of the solid cone, the area $A(x)$ of the base from the slice is directly proportional to the square of the corresponding height $x$.  Integrating $A(x)$ with respect to $x$, where $x$ is between $0$ and $h$ gives us the above formula.
+
+If the base of a cone is a polygon, the cone is called a {\em pyramid} (which is a polyhedron).\, The mantle of a pyramid consists of triangular {\em faces} having as common vertex the apex $O$.\,  A pyramid is \PMlinkescapetext{{\em regular}} if its base is a regular polygon and the \PMlinkescapetext{height line connects the apex and the centre} of its base.\,  A tetrahedron is an example of a regular pyramid.\, Note that, in a regular pyramid, all of the faces are isosceles.\, Colloquially, ``pyramid'' typically refers to a regular square pyramid.
+
+If the base is a circle, the cone is called {\em circular}.\, If its \PMlinkescapetext{height line connects the apex and the centre} of the base circle, the circular cone is \PMlinkescapetext{{\em right}}.\, Colloquially, ``cone'' typically refers to a right circular cone. 
+
+In any cone, the line segment of a ruling between the base plane and the apex is a \PMlinkescapetext{{\em side line}} of the cone.\, All \PMlinkescapetext{side lines} are equally long only in a right circular cone.\, If in this case, the \PMlinkescapetext{length} of the side line is $s$ and the radius of the base circle $r$, then the area of the mantle of the right circular cone equals $\pi{rs}$.
+%%%%%
+%%%%%
+\end{document}

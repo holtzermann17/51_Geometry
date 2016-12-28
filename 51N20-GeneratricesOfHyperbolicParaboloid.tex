@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneratricesOfHyperbolicParaboloid}
+\pmcreated{2013-03-22 17:31:56}
+\pmmodified{2013-03-22 17:31:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{generatrices of hyperbolic paraboloid}
+\pmrecord{10}{39929}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51M04}
+\pmsynonym{rulings of hyperbolic paraboloid}{GeneratricesOfHyperbolicParaboloid}
+%\pmkeywords{ruled surface}
+\pmrelated{QuadraticSurfaces}
+\pmrelated{GeneratricesOfOneSheetedHyperboloid}
+\pmdefines{director plane}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Since the equation
+$$\frac{x^2}{a^2}-\frac{y^2}{b^2} = 2z$$
+of hyperbolic paraboloid can be gotten by multiplying the equations in the pair 
+\begin{align}
+\begin{cases}
+      \displaystyle{\frac{x}{a}+\frac{y}{b} = \frac{2z}{h}} \vspace{15pt} \\ 
+      \displaystyle{\frac{x}{a}-\frac{y}{b} = h},
+\end{cases}
+\end{align}
+of equations of planes, the intersection line of these planes is contained in the surface of the hyperbolic paraboloid, for each value of the parameter $h$.  So the surface has the family of generatrices (= rulings) given by all real values of $h$.  The same concerns the other family 
+\begin{align}
+\begin{cases}
+      \displaystyle{\frac{x}{a}-\frac{y}{b} = \frac{2z}{k}} \vspace{15pt}\\  
+      \displaystyle{\frac{x}{a}+\frac{y}{b} = k,}
+\end{cases}
+\end{align}
+of lines.  It is easily seen that any point of the hyperbolic paraboloid is passed through by exactly two generatrices, one from the family (1) and the other from family (2).  Thus the surface is a doubly ruled surface.\\
+
+The latter of the equations (1) tells that all generatrices the first family are parallel to the vertical plane
+$$\frac{x}{a}-\frac{y}{b} = 0,$$
+the so-called {\em director plane} of the hyperbolic paraboloid; this plane is also a plane of symmetry of the surface.  According to the latter equation (2), one may say the corresponding things of the alternative director plane
+$$\frac{x}{a}+\frac{y}{b} = 0.$$
+
+\textbf{Note 1.}  We can solve from (1) and (2) the coordinates of a point lying on the surface:
+$$x = a\!\cdot\!\frac{h\!+\!k}{2},\quad y = b\!\cdot\!\frac{h\!-\!k}{2},\quad z = \frac{hk}{2}$$
+This is a parametric presentation of the hyperbolic paraboloid.\\
+
+\textbf{Note 2.}  One can check that two distinct lines of one family (1) resp. (2) are never in a same plane, but on the contrary, any line of one family intersects always all lines of the other family (in finity or in infinity).
+
+\begin{thebibliography}{8}
+\bibitem{LP}{\sc Lauri Pimi\"a}: {\em Analyyttinen geometria}.\, Werner S\"oderstr\"om Osakeyhti\"o, Porvoo and Helsinki (1958).
+\end{thebibliography}
+
+
+
+%%%%%
+%%%%%
+\end{document}

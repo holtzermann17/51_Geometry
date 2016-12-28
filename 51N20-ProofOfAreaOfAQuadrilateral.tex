@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAreaOfAQuadrilateral}
+\pmcreated{2013-03-22 16:59:16}
+\pmmodified{2013-03-22 16:59:16}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof of area of a quadrilateral}
+\pmrecord{10}{39266}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage[all]{xy}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+One should think of the following diagram as representing a general quadrilateral.
+\begin{displaymath}
+\xymatrix{
+  B \ar@{-}[r]^b\ar@{-}[d]_a & C\ar@{-}[d]^c\ar@{.}[dl] \\
+  A \ar@{-}[r]_d & D }
+\end{displaymath}
+
+
+\begin{equation}
+AC^2 = a^2 + b^2 -2ab\cos B = c^2 + d^2 - 2cd \cos D
+\end{equation}
+
+Hence,
+\begin{equation}
+a^2 + b^2 - c^2 -d^2 = 2ab \cos B -2cd \cos D
+\end{equation}
+
+Add $2ab + 2cd$ to each side of (2):
+\begin{equation}
+a^2 + 2ab + b^2 - (c^2 - 2cd+d^2) = 2ab ( 1 + \cos B ) - 2cd(-1 + \cos D)
+\end{equation}
+
+Now use
+$$
+\cos^2 \theta = \frac{1+\cos (2\theta)}{ 2}
+$$
+and
+$$
+\sin^2 \theta = \frac{1 - \cos(2\theta)} { 2}
+$$
+to get
+\begin{equation}
+(a+b)^2 - (c-d)^2 = 4ab \cos^2 \frac{B}{2} + 4 cd \sin^2 \frac{D}{2}
+\end{equation}
+ 
+Similarly
+\begin{equation}
+(c+d)^2 - (a-b)^2 = 4ab \sin^2 \frac{B}{2} + 4 cd \cos^2 \frac{D}{2}
+\end{equation}
+
+Let $s$ be the semiperimeter, so $s = \frac{a+b+c+d}{2}$.
+Then 
+\begin{equation}
+LHS(4) = (a+b-c+d)(a+b+c-d) = 4(s-c)(s-d)
+\end{equation}
+and
+\begin{equation}
+LHS(5) = (c+d-a+b)(c+d+a-b) = 4(s-a)(s-b)
+\end{equation}
+Let $R$ be the product of 
+the left hand side of (4) times the left hand side of (5). Then
+\begin{align}
+R &= 16(ab)^2\cos^2\frac{B}{2}\sin^2\frac{B}{2} + 16(cd)^2\sin^2\frac{D}{2}\cos^2\frac{D}{2} 
++ 16abcd(\cos^2\frac{B}{2} \cos^2\frac{D}{2} + \sin^2\frac{B}{2}\sin^2\frac{D}{2}) \\
+& = 4(ab)^2(2\sin\frac{B}{2}\cos\frac{B}{2})^2 + 4(cd)^2(2\sin\frac{D}{2}\cos\frac{D}{2})^2
++ 16abcd(\cos^2\frac{B}{2}\cos^2\frac{D}{2} + \sin^2\frac{B}{2}\sin^2\frac{D}{2}) \\
+& = 4(ab)^2\sin^2B + 4(cd)^2\sin^2D +16abcd(\cos^2\frac{B}{2}\cos^2\frac{D}{2} +
+ \sin^2\frac{B}{2}\sin^2\frac{D}{2}).
+\end{align}
+
+We have:
+$$
+8abcd\sin B \sin D= 32 abcd \sin \frac{B}{2} \cos \frac{B}{2} \sin \frac{D}{2} \cos \frac{D}{2}.
+$$
+which we can add and subtract to $R$:
+\begin{align}
+R & = (2ab\sin B + 2cd \sin D)^2 + 16abcd(\cos^2 \frac{B}{2}\cos^2\frac{D}{2} - 2\sin \frac{B}{2} \cos \frac{B}{2} \sin \frac{D}{2} \cos \frac{D}{2} + \sin^2 \frac{B}{2} \sin^2 \frac{D}{2}) \\
+ & = (2ab\sin B + 2cd \sin D)^2 + 16abcd( \cos \frac{B}{2} \cos \frac{D}{2} - \sin \frac{B}{2} \sin \frac{D}{2})^2 .
+\end{align}
+But 
+$$
+ (2ab \sin B + 2cd \sin D = 4K
+$$
+so we have:
+\begin{equation}
+R =16K^2 + 16abcd\cos^2 \left ( \frac{B+D}{2}\right).
+\end{equation}
+Hence by (6), (7) and (13)
+\begin{equation}
+K^2 = (s-a)(s-b)(s-c)(s-d) - abcd \cos^2 \left ( \frac{B+D}{2}\right).
+\end{equation}
+%%%%%
+%%%%%
+\end{document}

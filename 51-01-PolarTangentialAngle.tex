@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolarTangentialAngle}
+\pmcreated{2013-03-22 19:02:32}
+\pmmodified{2013-03-22 19:02:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{polar tangential angle}
+\pmrecord{8}{41919}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-01}
+\pmclassification{msc}{53A04}
+\pmrelated{LogarithmicSpiral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The angle, under which a polar curve is \PMlinkescapetext{cut} by a line through the origin, is called the \emph{polar tangential angle} belonging to the intersection point on the curve.\\
+
+Given a polar curve
+\begin{align}
+r = r(\varphi)
+\end{align}
+in polar coordinates $r,\,\varphi$,\, we derive an expression for the tangent of the polar tangential angle $\psi$, using the classical differential geometric method.
+
+\begin{center}
+\begin{pspicture}(-5.5,-1.5)(5.5,5)
+\psline{->}(0,0)(4,0)
+\rput(3.9,-0.2){$x$}
+\psdot(0,0)
+\rput(0,-0.22){$O$}
+\psplot[linecolor=blue]{0.6}{2.5}{3 x x x mul sub add}
+\psline(0,0)(1.1,2.89)
+\psline(0,0)(2.73,2.93)
+\psarc(0,0){3.09}{47}{69}
+\psarc(0,0){0.4}{0}{47}
+\psarc(0,0){0.7}{47}{69}
+\rput(0.55,0.2){$\varphi$}
+\rput(0.6,1.0){$d\varphi$}
+\rput(2.1,-0.22){$A$}
+\rput(2.1,2){$dr$}
+\rput(1.43,1.8){$P$}
+\rput(1.23,3.1){$P'$}
+\rput(2.05,2.55){$Q$}
+\rput(2.5,-0.9){$r = r(\varphi)$}
+\end{pspicture}
+\end{center}
+
+The point $P$ of the curve given by (1) corresponds to the polar angle \,$\varphi = \angle POA$\, and the polar radius $r = OP$.\, The ``near'' point $P'$ corresponds to the polar angle \,$\varphi\!+\!d\varphi = \angle P'OA$\, and the polar radius \,$r\!+\!dr = OP'$.\, In the diagram, $P'Q$ is the arc of the circle with $O$ as centre and $OP'$ as radius.\, Thus, in the triangle-like figure $PP'Q$ we have
+\begin{align}
+\frac{P'Q}{PQ} \;=\; \frac{(r\!+\!dr)d\varphi}{dr} \;=\; \frac{r\!+\!dr}{\frac{dr}{d\varphi}}.
+\end{align}
+This figure can be regarded as an infinitesimal right triangle with the catheti $P'Q$ and $PQ$.\, Accordingly, their ratio (2) is the tangent of the acute angle $P$ of the triangle.\, Because the addend $dr$ in the last numerator in negligible compared with the addend $r$, it can be omitted.\, Hence we get the tangent 
+$$\tan\psi \;=\; \frac{r}{\frac{dr}{d\varphi}}$$
+of the polar tangential angle, i.e.
+\begin{align}
+\tan\psi \;=\; \frac{r(\varphi)}{r'(\varphi)}.
+\end{align}
+
+%%%%%
+%%%%%
+\end{document}

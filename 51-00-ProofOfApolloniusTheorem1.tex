@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfApolloniusTheorem1}
+\pmcreated{2013-03-22 12:41:20}
+\pmmodified{2013-03-22 12:41:20}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of Apollonius theorem}
+\pmrecord{5}{32968}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{Median}
+\pmrelated{Cevian}
+\pmrelated{ApolloniusTheorem}
+\pmrelated{StewartsTheorem}
+\pmrelated{ProofOfStewartsTheorem}
+\pmrelated{ProofOfApolloniusTheorem}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+ Let $m$ be a median of the triangle, as shown in the figure.
+\figura{apollonius}
+
+By Stewart's theorem we have
+$$a\left(m^2+ \left(\frac{a}{2}\right)^2 \right)=b^2\left(\frac{a}{2}\right)+c^2\left(\frac{a}{2}\right)$$
+and thus
+$$m^2+\left(\frac{a}{2}\right)^2=\frac{b^2+c^2}{2}.$$
+
+Multiplying both sides by $2$ gives
+$$2m^2+\frac{a^2}{2}=b^2+c^2.$$
+
+QED
+%%%%%
+%%%%%
+\end{document}

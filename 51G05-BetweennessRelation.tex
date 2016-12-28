@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BetweennessRelation}
+\pmcreated{2013-03-22 17:18:44}
+\pmmodified{2013-03-22 17:18:44}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{betweenness relation}
+\pmrecord{6}{39661}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51G05}
+\pmsynonym{axioms of order}{BetweennessRelation}
+\pmrelated{SomeTheoremsOnTheAxiomsOfOrder}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section{Definition}
+ Let $A$ be a set.  A ternary relation $B$ on
+$A$ is said to be a \emph{betweenness relation} if it has the following properties:
+\begin{enumerate}
+\item[O1] if $(a,b,c)\in B$, then $(c,b,a)\in B$; in other words, the set $$B(b)=
+\lbrace (a,c)\mid (a,b,c)\in B\rbrace$$ is a \PMlinkname{symmetric relation}{Symmetric} for \emph{each}
+$b$;  thus, from now on, we may say, without any ambiguity, that $b$
+is \emph{between} $a$ and $c$ if $(a,b,c)\in B$;
+\item[O2] if $(a,b,a)\in B$, then $a=b$;
+\item[O3] for each $a,b\in A$, there is a $c\in A$ such that $(a,b,c)\in B$;
+\item[O4]for each $a,b\in A$, there is a $c\in A$ such that $(a,c,b)\in B$;
+\item[O5] if $(a,b,c)\in B$ and $(b,a,c)\in B$, then $a=b$;
+\item[O6] if $(a,b,c)\in B$ and $(b,c,d)\in B$, then $(a,b,d)\in B$;
+\item[O7] if $(a,b,d)\in B$ and $(b,c,d)\in B$, then $(a,b,c)\in B$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

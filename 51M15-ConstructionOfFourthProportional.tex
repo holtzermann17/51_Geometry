@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructionOfFourthProportional}
+\pmcreated{2013-03-22 18:49:59}
+\pmmodified{2013-03-22 18:49:59}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{construction of fourth proportional}
+\pmrecord{7}{41637}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51M04}
+\pmrelated{ConstructionOfCentralProportion}
+\pmrelated{ProportionEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{solution} \PMlinkescapeword{side}
+\textbf{Task.}\, Given three line segments $a$, $b$ and $c$.\, Using compass and straightedge, construct the fourth proportional of the line segments.\\
+
+\emph{Solution.}\, Draw an angle ($\alpha$) and denote its \PMlinkname{vertex}{Angle} by $P$.\, Separate from one \PMlinkname{side}{Angle} of the angle the line segments \,$PA = a$\, and\, $AB = b$, and from the other side of the angle the line segment \,$PC = c$.\, Draw the line $AC$ and another line parallel to it passing through $B$.\, If the last line intersects the other side of the angle in the point $D$, then the line segment \,$CD = x$\, is the required fourth proportional:
+$$a:b \;=\; c:x$$
+Justification: the intercept theorem.
+
+The below picture illustrates this solution:
+
+\begin{center}
+\begin{pspicture}(-1.5,-0.5)(5,4)
+\rput(-1.5,-0.5){.}
+\rput(5,4){.}
+\psline(4.2,2.5)(0,0)(4.7,0)
+\psline(2,0)(1.5,2)
+\psline(4.2,0)(3.43,3)
+\rput(0.6,0.15){$\alpha$}
+\rput(-0.3,0){$P$}
+\rput(2,-0.2){$A$}
+\rput(4.2,-0.2){$B$}
+\rput(2,0.95){$C$}
+\rput(4,2.1){$D$}
+\rput(1.1,-0.2){$a$}
+\rput(3.1,-0.2){$b$}
+\rput(1,0.8){$c$}
+\rput(2.7,1.85){$x$}
+\end{pspicture}
+\end{center}
+
+\textbf{Note.}\, The special case \,$c = b$\, gives the third proportional $x$ of $a$ and $b$:
+$$a:b \;=\; b:x$$
+%%%%%
+%%%%%
+\end{document}

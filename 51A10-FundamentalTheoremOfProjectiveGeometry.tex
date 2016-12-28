@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalTheoremOfProjectiveGeometry}
+\pmcreated{2013-03-22 15:51:14}
+\pmmodified{2013-03-22 15:51:14}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{fundamental theorem of projective geometry}
+\pmrecord{17}{37838}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{51A05}
+%\pmkeywords{Projective Geometry}
+%\pmkeywords{semilinear}
+%\pmkeywords{Gamma L}
+\pmrelated{Perspectivity}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+\DeclareMathOperator{\Aut}{Aut }
+\begin{document}
+\begin{thm}[Fundamental Theorem of Projective Geometry I]
+Every bijective order-preserving map (projectivity) $f:PG(V)\rightarrow PG(W)$, where $V$ and $W$ are vector spaces of finite dimension not equal to 2, is induced by a semilinear transformation $\hat{f}:V\rightarrow W$.
+\end{thm}
+(Refer to \cite[Theorem 3.5.5,Theorem 3.5.6]{GW}.)
+
+As an immediate corollary we notice that in fact $V$ and $W$ are vector spaces of the same dimension and over the isomorphic fields (or division rings).  The dimension aspect is easily seen in other ways, and if the fields are finite fields so too is the entire corollary.  However the true corollary to this theorem is
+
+\begin{coro}
+$P\Gamma L(V)$ is the automorphism group of the projective geometry, $PG(V)$, of $V$, when $\dim V>2$.
+\end{coro}
+
+\begin{remark}
+$P\Gamma L(V)$ is the group of invertible semi-linear transformations of a
+vector space $V$.
+(See \PMlinkname{classical groups}{Isometry2} for a full description of $P\Gamma L(V)$.)
+\end{remark}
+
+Notice that $\Aut PG(0,k)=1$ and $\Aut PG(1,k)=Sym(k\union\{\infty\})$.
+($Sym(X)$ is the symmetric group on the set $X$.  $\infty$ simply denotes a
+formal element outside of the field $k$ which in many concrete instances does
+capture a conceptual notion of infinity.  For example, when $k=\mathbb{R}$ this corresponds to the vertical line through the origin, and so it has slope $\infty$, while the other elements of $k$ are the slopes of the other lines.)
+
+The Fundamental Theorem of Projective Geometry is in many ways ``best possible.''  For if $\dim V=2$ then $PG(V)$ has only the two trivial subspace $0$ and $V$ -- which cannot be moved by order preserving maps -- and subspaces of dimension 1.  Thus any two proper subspaces can be interchanged, transposed.  So in this case all permutation of points in the projective line $PG(V)$ are order-preserving.  Not all permutations arrise as semilinear maps however.  
+
+\textbf{Example.}
+If $k=\mathbb{Z}_p$, then there are no field automorphisms as $k$ is a prime field.  Hence all semilinear transforms are simply linear transforms.  There are $p+1$ subspaces of dimension 1 in $V=k^2$ so $\Aut PG(V)$ is the symmetric group on $p+1$ points, $S_{p+1}$.  Yet the permutation $\pi$ mapping 
+\[\pi(1,0)=(0,1),\quad \pi(0,1)=(1,0),\quad \pi(x,y)=(x,y), \qquad (x,y)\notin\{(1,0),(0,1)\}\]
+is therefore order-preserving by clearly non-linear, unless $p=2$.
+$\Box$
+
+\begin{remark}
+There is a second form the fundamental theorem of projective geometry which appeals to the axiomatic construction of projective geometry.
+\end{remark}
+
+
+
+\bibliographystyle{amsplain}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+\href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+
+\bibitem{GW}
+Gruenberg, K. W. and Weir, A.J.
+\emph{Linear Geometry 2nd Ed.} (English)
+[B] Graduate Texts in Mathematics. 49. New York - Heidelberg - Berlin: Springer-Verlag. X, 198 p. DM 29.10; \$ 12.80 (1977).
+
+\bibitem{Ka}
+Kantor, W. M.
+\emph{Lectures notes on Classical Groups}.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

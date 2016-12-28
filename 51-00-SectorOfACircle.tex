@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SectorOfACircle}
+\pmcreated{2013-03-22 13:10:20}
+\pmmodified{2013-03-22 13:10:20}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{sector of  a circle}
+\pmrecord{6}{33617}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmsynonym{sector}{SectorOfACircle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{interior}
+\PMlinkescapeword{complete}
+
+A sector is a fraction of the interior of a circle, described by a central angle $\theta$.
+If $\theta = 2 \pi,$ the sector becomes a complete circle. 
+
+\begin{center}
+\includegraphics{sector.eps}
+\end{center}
+
+If the central angle is $\theta,$ and the radius of the circle is $r,$  then the area of the sector is given by
+$$\frac{1}{2}r^2\theta$$
+
+This is obvious from the fact that the area of a sector is $\frac{\theta}{2 \pi}$ times the area of the circle (which is $\pi r^2$).
+Note that, in the formula,  $\theta$ is in radians.
+
+\textbf{Remark}.  Since the length $a$ of the arc of the sector is $r\theta$, the area of the sector is $\frac{1}{2}ar$, which is equal to the area of a triangle with base $=a$ and the height $=r$.
+%%%%%
+%%%%%
+\end{document}

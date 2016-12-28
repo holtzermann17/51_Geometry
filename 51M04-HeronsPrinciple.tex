@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HeronsPrinciple}
+\pmcreated{2014-09-15 15:38:36}
+\pmmodified{2014-09-15 15:38:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Heron's principle}
+\pmrecord{13}{41619}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmrelated{Catacaustic}
+\pmrelated{PropertiesOfEllipse}
+\pmrelated{HeronianMeanIsBetweenGeometricAndArithmeticMean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{side} \PMlinkescapeword{sides}
+
+\textbf{Theorem.}\, In the Euclidean plane, let $l$ be a line 
+and $A$ and $B$ two points not on $l$.\, If $X$ is a point of 
+$l$ such that the sum $AX\!+\!XB$ is the least possible, 
+then the lines $AX$ and $BX$ form equal angles with the 
+line $l$.
+
+This {\em Heron's principle}, concerning the reflection of 
+light, is a special case of {\em Fermat's principle} in optics.\\
+
+{\em Proof.}\, If $A$ and $B$ are on different sides of $l$, then $X$ must be on the line $AB$, and the assertion is trivial since the vertical angles are equal.\, Thus, let the points $A$ and $B$ be on the same side of $l$.\, Denote by $P$ and $Q$ the points of the line $l$ where the normals of $l$ set through $A$ and $B$ intersect $l$, respectively.\, Let $C$ be the intersection point of the lines $AQ$ and $BP$.\, Then, $X$ is the point of $l$ where the normal line of $l$ set through $C$ intersects $l$.
+\begin{center}
+\begin{pspicture}(-3,-1)(3,3)
+\psline(-2.6,0)(2.6,0)
+\psdots[linecolor=blue](-2,2.5)(2,1.6)
+\psline[linestyle=dashed](-2,2.5)(-2,0)
+\psline[linestyle=dashed](2,1.6)(2,0)
+\psline(-2,2.5)(2,0)
+\psline(2,1.6)(-2,0)
+\psline(0.439,0.976)(0.439,0)
+\psdot[linecolor=red](0.439,0)
+\rput(-2.2,2.75){$A$}
+\rput(2,1.83){$B$}
+\rput(-2,-0.25){$P$}
+\rput(2,-0.25){$Q$}
+\rput(0.44,1.3){$C$}
+\rput(0.44,-0.25){$X$}
+\rput(2.8,0){$l$}
+\end{pspicture}
+\end{center}
+Justification:\, From two pairs of similar right triangles we get the proportion equations
+$$AP:CX \;=\; PQ:XQ, \qquad BQ:CX \;=\; PQ:PX,$$
+which imply the equation
+$$AP:PX \;=\; BQ:XQ.$$
+From this we can infer that also
+$$\Delta AXP \sim \Delta BXQ.$$
+Thus the corresponding angles $AXP$ and $BXQ$ are equal.
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\psline(-2.6,0)(2.6,0)
+\psdots[linecolor=blue](-2,2.5)(2,1.6)
+\psline[linestyle=dashed](-2,2.5)(-2,-2.5)(0.439,0)
+\psline[linecolor=blue](-2,2.5)(0.439,0)
+\psline[linecolor=blue](0.439,0)(2,1.6)
+\psdot[linecolor=red](0.439,0)
+\rput(-2,2.75){$A$}
+\rput(2,1.83){$B$}
+\rput(-2.2,-0.25){$P$}
+\rput(0.44,-0.27){$X$}
+\rput(2.8,0){$l$}
+\psline[linestyle=dotted](-2,2.5)(-0.7,0)(2,1.6)
+\psdots(-0.7,0)(-2,-2.5)
+\rput(-0.7,-0.29){$X_1$}
+\rput(-2.3,-2.5){$A'$}
+\psline(-2.15,1.15)(-1.85,1.15)
+\psline(-2.15,1.05)(-1.85,1.05)
+\psline(-2.15,-1.2)(-1.85,-1.2)
+\psline(-2.15,-1.1)(-1.85,-1.1)
+\end{pspicture}
+\end{center}
+We still state that the route $AXB$ is the shortest.\, If $X_1$ is another point of the line $l$, then\, $AX_1\,=\,A'X_1$,\, and thus we obtain
+$$AX_1B \;=\; A'X_1B \;=\; A'X_1+X_1B \;\geqq\; A'B \;=\; A'XB \;=\; AXB.$$
+
+\begin{thebibliography}{8}
+\bibitem{th}{\sc Tero Harju}: {\em Geometria. Lyhyt kurssi}.\, 
+Matematiikan laitos. Turun yliopisto (University of Turku), Turku (2007).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

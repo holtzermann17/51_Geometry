@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimplestCommonEquationOfConics}
+\pmcreated{2015-03-12 8:24:02}
+\pmmodified{2015-03-12 8:24:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{simplest common equation of conics}
+\pmrecord{11}{41724}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmsynonym{common equation of conics}{SimplestCommonEquationOfConics}
+%\pmkeywords{eccentricity}
+\pmrelated{ConicSection}
+\pmrelated{QuadraticCurves}
+\pmrelated{BodyInCentralForceField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+In the plane, the locus of the points having the ratio of their distances from a certain point (the focus) and from a certain line (the directrix) equal to a given constant $\varepsilon$, is a conic section, which is an ellipse, a \PMlinkname{parabola}{ConicSection} or a hyperbola depending on whether $\varepsilon$ is less than, equal to or greater than 1.\\
+
+For showing this, we choose the $y$-axis as the directrix and the point \,$(q,\,0)$\, as the focus.\, The locus condition reads then
+$$\sqrt{(x-q)^2+y^2} \;=\; \varepsilon x.$$
+This is simplified to
+\begin{align}
+(1-\varepsilon^2)x^2-2qx+y^2+q^2 \;=\; 0.
+\end{align}
+If\, $\varepsilon = 1$,\, we obtain the parabola
+$$y^2 \;=\; 2qx-q^2.$$
+In the following, we thus assume that\, $\varepsilon \neq 1$.
+
+Setting\, $y := 0$\, in (1) we see that the $x$-axis cuts the locus in two points with the midpoint of the segment connecting them having the abscissa
+$$x_0 \;=\; \frac{q}{1-\varepsilon^2}.$$
+We take this point as the new origin (replacing $x$ by $x+x_0$); then the equation (1) changes to
+\begin{align}
+(1-\varepsilon^2)x^2+y^2 \;=\; \frac{\varepsilon^2q^2}{1-\varepsilon^2}.
+\end{align}
+From this we infer that the locus is
+\begin{enumerate}
+\item in the case\, $\varepsilon < 1$\, an \PMlinkname{ellipse}{Ellipse2} with the semiaxes
+$$a \;=\; \frac{\varepsilon q}{1-\varepsilon^2}, \qquad b \;=\; \frac{\varepsilon q}{\sqrt{1-\varepsilon^2}}$$
+and with eccentricity $\varepsilon$;
+\item in the case\, $\varepsilon > 1$\, a \PMlinkname{hyperbola}{Hyperbola2} with semiaxes
+$$a \;=\; \frac{\varepsilon q}{\varepsilon^2-1}, \qquad b \;=\; \frac{\varepsilon q}{\sqrt{\varepsilon^2-1}}$$
+and also now with the eccentricity $\varepsilon$.\\
+\end{enumerate}
+
+\textbf{\PMlinkescapetext{Polar} equation}
+
+\PMlinkescapetext{Place} the origin into a focus of a conic section (and in the cases of ellipse and hyperbola, the abscissa axis through the other focus).\, As before, let $q$ be the distance of the focus from the corresponding directrix.\, Let $r$ and $\varphi$ be the polar coordinates of an arbitrary point of the conic.\, Then the locus condition may be expressed as
+$$\frac{r}{q\pm r\cos{\varphi}} \;=\; \varepsilon.$$
+Solving this equation for the \PMlinkid{polar radius}{6968} $r$ yields the form
+\begin{align}
+r \;=\; \frac{\varepsilon q}{1\mp \varepsilon\cos{\varphi}}
+\end{align}
+for the common polar equation of the conic.\, The sign alternative ($\mp$) depends on whether the polar axis ($\varphi = 0$) intersects the directrix or not.
+
+
+%%%%%
+%%%%%
+\end{document}

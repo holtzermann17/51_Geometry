@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompassAndStraightedgeConstructionOfDuplicatingAnAngle}
+\pmcreated{2013-03-22 17:13:20}
+\pmmodified{2013-03-22 17:13:20}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{compass and straightedge construction of duplicating an angle}
+\pmrecord{11}{39548}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51-00}
+\pmsynonym{compass and straightedge construction of copying an angle}{CompassAndStraightedgeConstructionOfDuplicatingAnAngle}
+\pmdefines{duplicating an angle}
+\pmdefines{copying an angle}
+\pmdefines{duplicate an angle}
+\pmdefines{copy an angle}
+\pmdefines{duplicate the angle}
+\pmdefines{copy the angle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{open}
+\PMlinkescapeword{vertex}
+
+In all of the pictures supplied, the angle in red is the one that is to be duplicated.
+
+One can duplicate an angle using compass and straightedge as follows:
+
+\begin{enumerate}
+
+\item Draw one of the rays of the new angle.
+
+\begin{center}
+\begin{pspicture}(-6,-3)(6,3)
+\psline[linecolor=red]{->}(-5,-2)(-2,-2)
+\psline[linecolor=red]{->}(-5,-2)(-2,2)
+\psline[linecolor=blue]{->}(4,-1)(5,3)
+\end{pspicture}
+\end{center}
+
+\item With one point of the compass at the \PMlinkname{vertex}{Vertex5} of the given angle, draw an arc that intersects both of its rays.
+
+\begin{center}
+\begin{pspicture}(-6,-3)(6,3)
+\psline[linecolor=red]{->}(-5,-2)(-2,-2)
+\psline[linecolor=red]{->}(-5,-2)(-2,2)
+\psline{->}(4,-1)(5,3)
+\psarc[linecolor=blue](-5,-2){1}{-20}{70}
+\psdots(-5,-2)
+\end{pspicture}
+\end{center}
+
+\item With one point of the compass at the point where the vertex of the new angle is supposed to be, draw an arc that intersects the ray of the new angle and extends far from the ray in one direction.  The compass needs to be open the same amount as it was in the previous step.
+
+\begin{center}
+\begin{pspicture}(-6,-3)(6,3)
+\psline[linecolor=red]{->}(-5,-2)(-2,-2)
+\psline[linecolor=red]{->}(-5,-2)(-2,2)
+\psline{->}(4,-1)(5,3)
+\psarc(-5,-2){1}{-20}{70}
+\psarc[linecolor=blue](4,-1){1}{65}{155}
+\psdots(-5,-2)(4,-1)
+\end{pspicture}
+\end{center}
+
+\item Use the compass to \PMlinkescapetext{measure} the distance between the two points of intersection of the given angle and its arc.  This length needs to be used in the next step.
+
+\begin{center}
+\begin{pspicture}(-6,-3)(6,3)
+\psline[linecolor=red]{->}(-5,-2)(-2,-2)
+\psline[linecolor=red]{->}(-5,-2)(-2,2)
+\psline{->}(4,-1)(5,3)
+\psarc(-5,-2){1}{-20}{70}
+\psarc(4,-1){1}{65}{155}
+\psdots(-5,-2)(4,-1)(-4,-2)(-4.4,-1.2)
+\end{pspicture}
+\end{center}
+
+\item With one point on the intersection of the ray of the new angle and its arc, draw an arc so that it intersects the other arc that was drawn for the new angle.
+
+\begin{center}
+\begin{pspicture}(-6,-3)(6,3)
+\psline[linecolor=red]{->}(-5,-2)(-2,-2)
+\psline[linecolor=red]{->}(-5,-2)(-2,2)
+\psline{->}(4,-1)(5,3)
+\psarc(-5,-2){1}{-20}{70}
+\psarc(4,-1){1}{65}{155}
+\psarc[linecolor=blue](4.245,-0.03){0.89443}{150}{210}
+\psdots(-5,-2)(4,-1)(-4,-2)(-4.4,-1.2)(4.245,-0.03)(3.37147,-0.2222)
+\end{pspicture}
+\end{center}
+
+\item Draw the ray from the vertex of the angle to the intersection of the two arcs.
+
+\begin{center}
+\begin{pspicture}(-6,-3)(6,3)
+\psline[linecolor=red]{->}(-5,-2)(-2,-2)
+\psline[linecolor=red]{->}(-5,-2)(-2,2)
+\psline{->}(4,-1)(5,3)
+\psarc(-5,-2){1}{-20}{70}
+\psarc(4,-1){1}{65}{155}
+\psarc(4.245,-0.03){0.89443}{150}{210}
+\psline[linecolor=blue]{->}(4,-1)(1,2.7125)
+\psdots(-5,-2)(4,-1)(-4,-2)(-4.4,-1.2)(4.245,-0.03)(3.37147,-0.2222)
+\end{pspicture}
+\end{center}
+
+\end{enumerate}
+
+If you are interested in seeing the rules for compass and straightedge constructions, click on the \PMlinkescapetext{link} provided.
+%%%%%
+%%%%%
+\end{document}

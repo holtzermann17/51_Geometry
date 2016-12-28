@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntersectionOfQuadraticSurfaceAndPlane}
+\pmcreated{2013-03-22 18:31:38}
+\pmmodified{2013-03-22 18:31:38}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{intersection of quadratic surface and plane}
+\pmrecord{7}{41231}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{QuadraticSurfaces}
+\pmrelated{QuadraticCurves}
+\pmrelated{Conic}
+\pmrelated{EquationOfPlane}
+\pmrelated{ConicSection}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The \PMlinkname{intersection of a sphere with a plane}{IntersectionOfSphereAndPlane} is a circle, similarly the intersection of any surface of revolution formed by the revolution of an ellipse or a hyperbola about its axis with a plane perpendicular to the axis of revolution is a circle of latitude.\\
+
+We can get as intersection curves of other quadratic surfaces and a plane also other quadratic curves (conics).\, If for example the ellipsoid
+\begin{align}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2} \;=\; 1
+\end{align}
+is cut with the plane\, $z = 0$ (i.e. the $xy$-plane), we substitute\, $z = 0$\, to the equation of the ellipsoid, and thus the intersection curve satisfies the equation 
+$$\frac{x^2}{a^2}+\frac{y^2}{b^2} \;=\; 1,$$
+which \PMlinkescapetext{represents} an ellipse.\, Actually, all plane intersections of the ellipsoid are ellipses, which may be in special cases circles.\\
+
+As another exaple of quadratic surface we take the hyperbolic paraboloid
+\begin{align}
+\frac{x^2}{a^2}-\frac{y^2}{b^2} \;=\; 2z.
+\end{align}
+Cutting it e.g. with the plane\, $y = b$,\, which is parallel to the $zx$-plane, the substitution yields the equation
+$$2z \;=\; \frac{x^2}{a^2}-1$$
+meaning that the intersection curve in the plane\, $y = b$\, has the \PMlinkname{projection}{ProjectionOfPoint} parabola in the $zx$-plane with such an equation, and accordingly is such a parabola.
+
+If we cut the surface (2) with the plane\, $z = \frac{1}{2}$, the result is the hyperbola
+having the projection
+$$\frac{x^2}{a^2}-\frac{y^2}{b^2} \;=\; 1$$
+in the $xy$-plane.\, But cutting with\, $z = 0$\, gives\, $\frac{x^2}{a^2}-\frac{y^2}{b^2} \;=\; 0$, i.e. the pair of 
+lines \,$y = \pm\frac{b}{a}x$\, which is a degenerate conic.\\
+
+Let us then consider the general equation 
+\begin{align}
+Ax^2+By^2+Cz^2+2A'yz+2B'zx+2C'xy+2A''x+2B''y+2C''z+D \;=\; 0
+\end{align}
+of quadratic surface and an arbitrary plane
+\begin{align}
+ax\!+\!by\!+\!cz\!+\!d \;=\; 0
+\end{align}
+where at least one of the coefficients $a$, $b$, $c$ is distinct from zero.\, Their intersection equation is obtained, supposing that e.g.\, $c \neq 0$, by substituting the solved form
+$$z \;=\; -\frac{ax\!+\!by\!+\!d}{c}$$
+of (4) to the equation (3).\, We then apparently have the equation of the form
+$$\alpha x^2+\beta y^2+2\gamma xy +2\delta x+2\varepsilon y+\zeta \;=\; 0,$$
+which \PMlinkescapetext{represents} a \PMlinkname{quadratic curve}{QuadraticCurves} or some of the degenerated cases of them.
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

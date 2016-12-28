@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SzemerediTrotterTheorem}
+\pmcreated{2013-03-22 13:21:30}
+\pmmodified{2013-03-22 13:21:30}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Szemer\'edi-Trotter theorem}
+\pmrecord{7}{33879}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A20}
+\pmclassification{msc}{05C10}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\DeclareMathOperator{\crn}{cr}
+\begin{document}
+The number of incidences of a set of $n$ points and a set of $m$ lines in the real plane $\mathbb{R}^2$ is
+\begin{equation*}
+I=O(n+m+(nm)^{\frac{2}{3}}).
+\end{equation*}
+
+\textbf{Proof}. Let's consider the points as vertices of a graph, and connect two vertices by an edge if they are adjacent on some line. Then the number of edges is $e=I-m$. If $e<4n$ then we are done. If $e \geq 4n$ then by crossing lemma
+\begin{equation*}
+m^2 \geq \crn(G) \geq \frac{1}{64}\frac{(I-m)^3}{n^2},
+\end{equation*}
+and the theorem follows.
+
+Recently, T\'oth\cite{cite:toth_szemtrotcomplex} extended the theorem to the complex plane $\mathbb{C}^2$. The proof is difficult.
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:toth_szemtrotcomplex}
+Csaba~D. T{\'o}th.
+\newblock The {Szemer\'edi}-{Trotter} theorem in the complex plane.
+\newblock \PMlinkexternal{arXiv:CO/0305283}{http://www.arxiv.org/abs/math.CO/0305283},
+  May 2003.
+
+\end{thebibliography}
+
+%@UNPUBLISHED{cite:toth_szemtrotcomplex,
+% author    = {Csaba D. T{\'o}th},
+% title     = {The {Szemer\'edi}-{Trotter} Theorem in the Complex Plane},
+% month     = may,
+% year      = 2003,
+% note      = {\href{arXiv:CO/0305283}{http://www.arxiv.org/abs/math.CO/0305283}}
+%}
+%%%%%
+%%%%%
+\end{document}

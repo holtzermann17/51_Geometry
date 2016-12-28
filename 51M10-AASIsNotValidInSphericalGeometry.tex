@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AASIsNotValidInSphericalGeometry}
+\pmcreated{2013-03-22 17:13:00}
+\pmmodified{2013-03-22 17:13:00}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{AAS is not valid in spherical geometry}
+\pmrecord{8}{39541}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M10}
+\pmsynonym{SAA is not valid in spherical geometry}{AASIsNotValidInSphericalGeometry}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkname{AAS}{AAS} is not valid in \PMlinkname{spherical geometry}{SphericalGeometry}.  This fact can be determined as follows:
+
+Let $\ell$ be a line on a sphere and $P$ be one of the two points that is furthest from $\ell$ on the sphere.  (It may be beneficial to think of $\ell$ as the equator and $P$ as the \PMlinkescapetext{north pole}.)  Let $A,B,C \in \ell$ such that
+
+\begin{itemize}
+\item $A$, $B$, and $C$ are distinct;
+\item the length of $\overline{AB}$ is strictly less than the length of $\overline{AC}$;
+\item $A$, $B$, and $P$ are not collinear;
+\item $A$, $C$, and $P$ are not collinear;
+\item $B$, $C$, and $P$ are not collinear.
+\end{itemize}
+
+Connect $P$ to each of the three points $A$, $B$, and $C$ with line segments.  (It may be beneficial to think of these line segments as longitudes.)
+
+\begin{center}
+\begin{pspicture}(-1,-2)(6,5)
+\psarc(2.5,5){5.59017}{243.435}{296.565}
+\psarc(-0.58,-0.335){5.59017}{3.4357}{56.566}
+\psarc(5.58,-0.335){5.59017}{123.434}{176.5643}
+\psarc(-6.25,0){9.7628}{-2.9357}{26.33}
+\rput[b](2.5,4.5){$P$}
+\rput[r](-0.2,0){$A$}
+\rput[a](1.5,-0.7){$\ell$}
+\rput[a](3.5,-0.8){$B$}
+\rput[l](5.2,0){$C$}
+\psdots(0,0)(3.5,-0.5)(5,0)(2.5,4.33)
+\end{pspicture}
+\end{center}
+
+Since $\ell$ is also a circle having $P$ as one of its \PMlinkname{centers}{Center8} with radii $\overline{AP}$, $\overline{BP}$, and $\overline{CP}$, we have that $\overline{AP} \cong \overline{BP} \cong \overline{CP}$ and that $\ell$ is perpendicular to each of these line segments.  Thus, the triangles $\triangle ABP$ and $\triangle ACP$ have two pairs of angles congruent and a pair of sides congruent that is not between the congruent angles (actually, two pairs of sides congruent, neither of which is in between the congruent angles).  On the other hand, $\triangle ABP \not\cong \triangle ACP$ because the length of $\overline{AB}$ is strictly less than the length of $\overline{AC}$.
+%%%%%
+%%%%%
+\end{document}

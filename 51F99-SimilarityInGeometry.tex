@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimilarityInGeometry}
+\pmcreated{2013-03-22 17:08:48}
+\pmmodified{2013-03-22 17:08:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{similarity in geometry}
+\pmrecord{19}{39455}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51F99}
+\pmclassification{msc}{51M05}
+\pmclassification{msc}{51-00}
+\pmsynonym{similarity}{SimilarityInGeometry}
+\pmsynonym{similitude}{SimilarityInGeometry}
+\pmrelated{Homothety}
+\pmrelated{ProportionEquation}
+\pmrelated{HarmonicMeanInTrapezoid}
+\pmdefines{similar}
+\pmdefines{ratio of similarity}
+\pmdefines{similitude ratio}
+\pmdefines{line ratio}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Two figures $K$ and $K'$ in a Euclidean plane or \PMlinkname{space}{EuclideanVectorSpace} are\, {\em similar}\, iff there exists a bijection $f$ from the set of points of $K$ onto the set of points of $K'$ such that, for any $P,Q \in K$, the ratio
+$$\frac{P'Q'}{PQ}$$
+of the lengths of the line segments $P'Q'$ and $PQ$ is always the same number $k$, where $P'=f(P)$ and $Q'=f(Q)$.
+
+The number $k$ is called the {\em ratio of similarity} or the {\em line ratio} of the figure $K'$ with respect to the figure $K$ (N.B. the \PMlinkescapetext{order} in which the figures are mentioned!).\, The similarity of $K$ and $K'$ is often denoted by
+$$K' \sim K\;\;\;(\mbox{or}\;\;K \sim K').$$\\
+
+\textbf{Examples}
+\begin{itemize}
+\item All squares are similar.
+\item All cubes are similar.
+\item All circles are similar.
+\item All parabolas are similar.
+\item All sectors of circle with equal central angle are similar.
+\item All spheres are similar.
+\item All equilateral triangles are similar.
+\end{itemize}
+
+\textbf{Nonexamples}
+\begin{itemize}
+\item Not all rectangles are similar.
+\item Not all rhombi are similar.
+\item Not all rectangular prisms are similar.
+\item Not all ellipses are similar.
+\item Not all ellipsoids are similar.
+\item Not all triangles are similar.
+\end{itemize}
+
+\textbf{Properties}
+\begin{itemize}
+\item The corresponding angles (consisting of corresponding points) of two similar figures are equal.
+\item The lengths of any corresponding arcs of two similar figures are proportional in the ratio $k$.
+\item The areas of two similar regions are proportional in the ratio $k^2$ when $k$ is the line ratio of the regions.
+\item The volumes of two similar solids are proportional in the ratio $k^3$ when $k$ is the line ratio of the solids.
+\end{itemize}
+
+\textbf{Remarks}
+\begin{itemize}
+\item In any Euclidean space $E$, the \PMlinkname{relation}{Relation} of similarity (denoted $\sim$) on the set of figures in $E$ is an equivalence relation.
+\item If one pair of corresponding line segments in the similar figures $K$ and $K'$ are equal, then all pairs of corresponding line segments are equal, i.e. the figures have also equal \PMlinkescapetext{sizes}: They are \PMlinkname{congruent}{Congruence} ($K' \cong K$).
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

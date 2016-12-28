@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParallelCurve}
+\pmcreated{2013-03-22 17:13:10}
+\pmmodified{2013-03-22 17:13:10}
+\pmowner{stitch}{17269}
+\pmmodifier{stitch}{17269}
+\pmtitle{parallel curve}
+\pmrecord{21}{39544}
+\pmprivacy{1}
+\pmauthor{stitch}{17269}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N05}
+\pmsynonym{offset curve}{ParallelCurve}
+\pmrelated{ParallellismInEuclideanPlane}
+\pmrelated{NormalLine}
+\pmrelated{HyperbolicFunctions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+% define commands here
+\DeclareMathOperator{\arcosh}{arcosh}
+\begin{document}
+Given two curves, one is a \emph{parallel curve} (also known as an \emph{offset curve}) of the other if the points on the first curve are equidistant to the corresponding points in the direction of the second curve's normal. Alternatively, a parallel of a curve can be defined as the envelope of congruent circles whose centers lie on the curve.
+
+\begin{center}
+\includegraphics[scale=0.5]{parallel}
+\end{center}
+
+For a parametric curve in the plane defined by\, $\vec{F}(u) := (x(u),\,y(u))$,\, its parallel curve\, 
+$\vec{G}(u) := (X(u),\,Y(u))$\, with offset $t$ is defined by
+
+\begin{eqnarray*}
+X(u)\,&=\, x(u)\!+\!\frac{t\,y'(u)}{\sqrt{x'(u)^2\!+y'(u)^2}}\\
+Y(u)\,&=\, y(u)\!-\!\frac{t\,x'(u)}{\sqrt{x'(u)^2\!+y'(u)^2}}
+\end{eqnarray*}
+
+\subsection{Examples}
+
+The most elementary example of parallel curves is given by the family of concentric circles
+
+\begin{eqnarray*}
+X(u) &=& t \cos u\\
+Y(u) &=& t \sin u
+\end{eqnarray*}
+
+\begin{center}
+\includegraphics[scale=0.5]{parallelc}
+\end{center}
+
+Except for trivial cases such as circles and lines, parallel curves may be quite different from the original curve as the offset gets larger. An example of this is given by the catenary
+
+\begin{eqnarray*}
+x(u) &=& u\\
+y(u) &=& \cosh{u}
+\end{eqnarray*}
+
+From the definition, the family of parallel curves is then
+
+\begin{eqnarray*}
+X &=& u+\frac{t\sinh{u}}{\sqrt{1+\sinh^2{u}}}\,=\, u+t\tanh{u}\\
+Y &=& \cosh{u}-\frac{t}{\sqrt{1+\sinh^2{u}}}\,=\, \cosh{u}-\frac{t}{\cosh{u}}
+\end{eqnarray*}
+
+where $t=0$ correspond to the catenary.
+
+\begin{center}
+\includegraphics[scale=0.5]{catenary}
+\end{center}
+
+Eliminating the parameter $u$ from these equations; the latter gives\, 
+$\cosh{u} = \frac{Y+\sqrt{Y^2+4t}}{2}$, i.e. $u = \arcosh\frac{Y+\sqrt{Y^2+4t}}{2}$. Thus we obtain the implicit representation
+
+\[\arcosh\frac{Y\!+\!\sqrt{Y^2\!+\!4t}}{2}+t\,\tanh\!\left(\!\arcosh\frac{Y\!+\!\sqrt{Y^2\!+\!4t}}{2}\right)-X\,=\,0\]
+%%%%%
+%%%%%
+\end{document}

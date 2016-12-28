@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructionOfTangent}
+\pmcreated{2013-03-22 17:36:04}
+\pmmodified{2013-03-22 17:36:04}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{construction of tangent}
+\pmrecord{15}{40015}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51-00}
+%\pmkeywords{tangent of circle}
+\pmrelated{Incircle}
+\pmrelated{AngleBisectorAsLocus}
+\pmdefines{tangent angle}
+\pmdefines{tangent-tangent angle}
+\pmdefines{tangent chord}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Task.}  Using the compass and straightedge, construct to a given circle the tangent lines through a given point outside the circle.
+
+\PMlinkescapetext{{\em Solution.}}  Let $O$ be the centre of the given circle and $P$ the given point.  With $OP$ as diameter, draw the circle (see midpoint).  If $A$ and $B$ are the points where this circle intersects the given circle, then by Thales' theorem, the angles $OAP$ and $OBP$ are right angles.  According to the definition of the tangent of circle, the lines $AP$ and $BP$ are required tangents.\\
+
+\begin{center}
+\begin{pspicture}(-5.5,-3)(5.5,3)
+\rput(-2.85,-0.1){$O$}
+\rput[linecolor=blue](+2.85,-0.1){$P$}
+\psdot(-2.6,0)
+\psdot(+2.6,0)
+\psline(-2.6,0)(2.6,0)
+\pscircle[linecolor=blue](-2.6,0){2}
+\psdot(0,0)
+\pscircle(0,0){2.6}
+\psdots(-1.8308,1.8462)(-1.8308,-1.8462)
+\psline[linestyle=dashed](-2.6,0)(-1.8308,+1.8462)
+\psline[linestyle=dashed](-2.6,0)(-1.8308,-1.8462)
+\psline[linestyle=dotted](-1.8308,+1.8462)(-1.8308,-1.8462)
+\rput(-1.8308,+2.2){$A$}
+\rput(-1.8308,-2.2){$B$}
+\psline[linecolor=blue](2.6,0)(-3,+2.3335)
+\psline[linecolor=blue](2.6,0)(-3,-2.3335)
+\rput(-5.5,-3){.}
+\rput(5.5,3){.}
+\end{pspicture}
+\end{center}
+
+The line segment $AB$ is 
+
+
+The convex angle $APB$ is called a {\em tangent angle} (or {\em tangent-tangent angle}) of the given circle and the convex angle $AOB$ the {\em corresponding central angle}.  It is apparent that a tangent angle and the corresponding central angle are supplementary.\, The chord $AB$ is the {\em tangent chord} corresponding the tangent angle and the point $P$ (see \PMlinkname{equation of tangent chord}{EquationOfTangentOfCircle}!).
+
+The tangent angle is the angle of view of the line segment $AB$ from the point $P$.
+
+Note that if a circle is inscribed in a polygon, then the angles of the polygon are tangent angles of the circle and the centre of the circle is the common intersection point of the angle bisectors.
+%%%%%
+%%%%%
+\end{document}

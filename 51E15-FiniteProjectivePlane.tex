@@ -1,0 +1,751 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiniteProjectivePlane}
+\pmcreated{2013-03-22 15:11:15}
+\pmmodified{2013-03-22 15:11:15}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{finite projective plane}
+\pmrecord{11}{36943}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51E15}
+\pmclassification{msc}{51A35}
+\pmclassification{msc}{05B25}
+%\pmkeywords{incidence}
+%\pmkeywords{design}
+%\pmkeywords{graph}
+%\pmkeywords{geometry}
+\pmrelated{ProjectivePlane2}
+\pmrelated{IncidenceStructures}
+\pmrelated{Geometry}
+\pmrelated{DeBruijnErdHosTheorem}
+\pmdefines{prime power conjecture}
+\pmdefines{planar ternary ring}
+\pmdefines{PTR}
+
+\usepackage{amssymb}
+% \usepackage{amsmath}
+% \usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% portions from
+% makra.sty 1989-2005 by Marijke van Gans %
+                                          %          ^ ^
+\catcode`\@=11                            %          o o
+                                          %         ->*<-
+                                          %           ~
+%%%% CHARS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        %    code    char  frees  for
+
+\let\Para\S             %    \Para     ÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃ‚Â§   \S \scriptstyle
+\let\Pilcrow\P          %    \Pilcrow  ÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃ‚Â¶   \P
+\mathchardef\pilcrow="227B
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+\let\bs\backslash       %    \bs       \
+\let\us\_               %    \us       _     \_  ...
+
+%%%% DIACRITICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\udot\d             % under-dot (text mode), frees \d
+\let\odot\.             % over-dot (text mode),  frees \.
+%let\hacek\v            % hacek (text mode),     frees \v
+%let\makron\=           % makron (text mode),    frees \=
+%let\tilda\~            % tilde (text mode),     frees \~
+\let\uml\"              % umlaut (text mode),    frees \"
+
+%def\ij/{i{\kern-.07em}j}
+\def\trema#1{\discretionary{-}{#1}{\uml #1}}
+
+%%%% amssymb %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\le\leqslant
+\let\ge\geqslant
+%let\prece\preceqslant
+%let\succe\succeqslant
+
+%%%% USEFUL MISC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\C++{C$^{_{++}}$}
+
+%let\writelog\wlog
+%def\wl@g/{{\sc wlog}}
+%def\wlog{\@ifnextchar/{\wl@g}{\writelog}}
+
+%def\org#1{\lower1.2pt\hbox{#1}} 
+% chem struct formulae: \bs, --- /  \org{C} etc. 
+
+%%%% USEFUL INTERNAL LaTeX STUFF %%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\Ifnextchar=\@ifnextchar
+%let\Ifstar=\@ifstar
+%def\currsize{\@currsize}
+
+%%%% KERNING, SPACING, BREAKING %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\comma{,\,\allowbreak}
+
+%def\qqquad{\hskip3em\relax}
+%def\qqqquad{\hskip4em\relax}
+%def\qqqqquad{\hskip5em\relax}
+%def\qqqqqquad{\hskip6em\relax}
+%def\qqqqqqquad{\hskip7em\relax}
+%def\qqqqqqqquad{\hskip8em\relax}
+
+%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% COUNTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\addtoreset\@addtoreset
+%{A}{B} adds A to list of counters reset to 0
+% when B is \refstepcounter'ed (see latex.tex)
+%
+%def\numbernext#1#2{\setcounter{#1}{#2}\addtocounter{#1}{\m@ne}}
+
+%%%% EQUATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% LEMMATA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% DISPLAY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% MATH LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\D\displaystyle
+\let\T\textstyle
+\let\S\scriptstyle
+\let\SS\scriptscriptstyle
+
+% array:
+%def\<#1:{\begin{array}{#1}}
+%def\>{\end{array}}
+
+% array using [ ] with rounded corners:
+%def\[#1:{\left\lgroup\begin{array}{#1}} 
+%def\]{\end{array}\right\rgroup}
+
+% array using ( ):
+%def\(#1:{\left(\begin{array}{#1}}
+%def\){\end{array}\right)}
+
+%def\hh{\noalign{\vskip\doublerulesep}}
+
+%%%% MATH SYMBOLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\d{\mathord{\rm d}}                      % d as in dx
+%def\e{{\rm e}}                              % e as in e^x
+
+%def\Ell{\hbox{\it\char`\$}}
+
+\def\sfmath#1{{\mathchoice%
+{{\sf #1}}{{\sf #1}}{{\S\sf #1}}{{\SS\sf #1}}}}
+\def\Stalkset#1{\sfmath{I\kern-.12em#1}}
+\def\Bset{\Stalkset B}
+\def\Nset{\Stalkset N}
+\def\Rset{\Stalkset R}
+\def\Hset{\Stalkset H}
+\def\Fset{\Stalkset F}
+\def\kset{\Stalkset k}
+\def\In@set{\raise.14ex\hbox{\i}\kern-.237em\raise.43ex\hbox{\i}}
+\def\Roundset#1{\sfmath{\kern.14em\In@set\kern-.4em#1}}
+\def\Qset{\Roundset Q}
+\def\Cset{\Roundset C}
+\def\Oset{\Roundset O}
+\def\Zset{\sfmath{Z\kern-.44emZ}}
+
+% \frac overwrites LaTeX's one (use TeX \over instead)
+%def\fraq#1#2{{}^{#1}\!/\!{}_{\,#2}}
+\def\frac#1#2{\mathord{\mathchoice%
+{\T{#1\over#2}}
+{\T{#1\over#2}}
+{\S{#1\over#2}}
+{\SS{#1\over#2}}}}
+%def\half{\frac12}
+
+\mathcode`\<="4268         % < now is \langle, \lt is <
+\mathcode`\>="5269         % > now is \rangle, \gt is >
+
+%def\biggg#1{{\hbox{$\left#1\vbox %to20.5\p@{}\right.\n@space$}}}
+%def\Biggg#1{{\hbox{$\left#1\vbox %to23.5\p@{}\right.\n@space$}}}
+
+\let\epsi=\varepsilon
+\def\omikron{o}
+
+\def\Alpha{{\rm A}}
+\def\Beta{{\rm B}}
+\def\Epsilon{{\rm E}}
+\def\Zeta{{\rm Z}}
+\def\Eta{{\rm H}}
+\def\Iota{{\rm I}}
+\def\Kappa{{\rm K}}
+\def\Mu{{\rm M}}
+\def\Nu{{\rm N}}
+\def\Omikron{{\rm O}}
+\def\Rho{{\rm P}}
+\def\Tau{{\rm T}}
+\def\Ypsilon{{\rm Y}} % differs from \Upsilon
+\def\Chi{{\rm X}}
+
+%def\dg{^{\circ}}                   % degrees
+
+%def\1{^{-1}}                       % inverse
+
+\def\*#1{{\bf #1}}                  % boldface e.g. vector
+%def\vi{\mathord{\hbox{\bf\i}}}     % boldface vector \i
+%def\vj{\mathord{\,\hbox{\bf\j}}}   % boldface vector \j
+
+%def\union{\mathbin\cup}
+%def\isect{\mathbin\cap}
+
+\let\so\Longrightarrow
+\let\oso\Longleftrightarrow
+\let\os\Longleftarrow
+
+% := and :<=>
+%def\isdef{\mathrel{\smash{\stackrel{\SS\rm def}{=}}}}
+%def\iffdef{\mathrel{\smash{stackrel{\SS\rm def}{\oso}}}}
+
+\def\isdef{\mathrel{\mathop{=}\limits^{\smash{\hbox{\tiny def}}}}}
+%def\iffdef{\mathrel{\mathop{\oso}\limits^{\smash{\hbox{\tiny %def}}}}}
+
+%def\tr{\mathop{\rm tr}}            % tr[ace]
+%def\ter#1{\mathop{^#1\rm ter}}     % k-ter[minant]
+
+%let\.=\cdot
+%let\x=\times                % ><Ãƒ (direct product)
+
+%def\qed{ ${\S\circ}\!{}^\circ\!{\S\circ}$}
+%def\qed{\vrule height 6pt width 6pt depth 0pt}
+
+%def\edots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}\mkern1mu   %  .shorter
+%   \raise4pt\hbox{.}\mkern1mu                  %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %        .
+%def\fdots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}            %   . ~45ÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃƒÃ‚Â°
+%   \raise4pt\hbox{.}                           %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %       .
+
+\def\mod#1{\allowbreak \mkern 10mu({\rm mod}\,\,#1)}
+% redefines TeX's one using less space
+
+%def\int{\intop\displaylimits}
+%def\oint{\ointop\displaylimits}
+
+%def\intoi{\int_0^1}
+%def\intall{\int_{-\infty}^\infty}
+
+%def\su#1{\mathop{\sum\raise0.7pt\hbox{$\S\!\!\!\!\!#1\,$}}}
+
+%let\frakR\Re
+%let\frakI\Im
+%def\Re{\mathop{\rm Re}\nolimits}
+%def\Im{\mathop{\rm Im}\nolimits}
+%def\conj#1{\overline{#1\vphantom1}}
+%def\cj#1{\overline{#1\vphantom+}}
+
+%def\forAll{\mathop\forall\limits}
+%def\Exists{\mathop\exists\limits}
+
+%%%% PICTURES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\cent{\makebox(0,0)}
+
+\def\node{\circle*4}
+\def\nOde{\circle4}
+
+%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\opcit{[{\it op.\,cit.}]}
+\def\bitem#1{\bibitem[#1]{#1}}
+\def\name#1{{\sc #1}}
+\def\book#1{{\sl #1\/}}
+\def\paper#1{``#1''}
+\def\mag#1{{\it #1\/}}
+\def\vol#1{{\bf #1}}
+\def\isbn#1{{\small\tt ISBN\,\,#1}}
+\def\seq#1{{\small\tt #1}}
+%def\url<{\verb>}
+%def\@cite#1#2{[{#1\if@tempswa\ #2\fi}]}
+
+%%%% VERBATIM CODE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\"{\verb"}
+
+%%%% AD HOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% WORDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \hyphenation{pre-sent pre-sents pre-sent-ed pre-sent-ing
+% re-pre-sent re-pre-sents re-pre-sent-ed re-pre-sent-ing
+% re-fer-ence re-fer-ences re-fer-enced re-fer-encing
+% ge-o-met-ry re-la-ti-vi-ty Gauss-ian Gauss-ians
+% Des-ar-gues-ian}
+
+%def\oord/{o{\trema o}rdin\-ate}
+% usage: C\oord/s, c\oord/.
+% output: co\"ord... except when linebreak at co-ord...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                                          %
+                                          %          ^ ^
+\catcode`\@=12                            %          ` '
+                                          %         ->*<-
+                                          %           ~
+\begin{document}
+\PMlinkescapeword{columns}
+\PMlinkescapeword{components}
+\PMlinkescapeword{entire}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{fixed}
+\PMlinkescapeword{index}
+\PMlinkescapeword{matching}
+\PMlinkescapeword{order}
+\PMlinkescapeword{place}
+\PMlinkescapeword{planar}
+\PMlinkescapeword{potential}
+\PMlinkescapeword{relation}
+\PMlinkescapeword{represent}
+\PMlinkescapeword{ring}
+\PMlinkescapeword{rows}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{states}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{structures}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{time}
+\PMlinkescapeword{line}
+\PMlinkescapeword{point}
+
+\subsection*{Finite projective planes from axioms}
+
+Let us start from the beginning and assume we are given a set of $n$ things called {\sc point}s and a set of $\nu$ things called {\sc line}s, with an
+incidence relation between them (a {\sc point} is incident with a {\sc line} iff the {\sc line} is incident with the {\sc point}) that satisfies only two {\bf axioms}, the two unique incidence properties:
+%
+\begin{itemize}
+
+\item For any two distinct {\sc point}s,
+      there is exactly one {\sc line} through both of them.
+
+\item For any two distinct {\sc line}s,
+      there is exactly one {\sc point} on both of them.
+
+\end{itemize}
+%
+Given these \PMlinkid{projective plane}{6940} axioms we can apply the De Bruijn--Erd\H{o}s theorem twice (once with the r\^ole of {\sc point}s and {\sc line}s swapped) which tells us we must have $n=\nu$, and one of two possible configurations:
+%
+\begin{itemize}
+
+\item[$\circ$] One ``degenerate'' solution has one special line
+               $\ell_0$ and $n-1$ ordinary lines $\ell_i$, and a special point
+               P$_0$ and $n-1$ ordinary points P$_i$. Each P$_i$ ($i\ne0$) is
+               incident with its own $\ell_i$ and with $\ell_0$; each $\ell_i$
+               ($i\ne0$) with its own P$_i$ and with P$_0$. Now $\ell_0$ is
+               incident with every point except $\ell_0$ while P$_0$ is
+               incident with every line except $\ell_0$.
+
+\item[$\circ$] The other solution is a projective plane:
+
+               \begin{itemize}
+
+               \item[$\bullet$] the number of {\sc point}s and the number of
+                    {\sc line}s are of the form $q^2+q+1$ for some integer $q$;
+
+               \item[$\bullet$] each {\sc point} is incident with $q+1$
+                    {\sc line}s and each {\sc line} with $q+1$ {\sc point}s.
+
+               \end{itemize}
+
+\end{itemize}
+%
+One usually avoids the degenerate case by demanding there is a {\bf quadrangle}
+in the plane: four {\sc point}s no three of which lie on the same {\sc line}. This, or a
+similar non-triviality clause, can then be adopted as a third axiom.
+Unfortunately it also has the effect of excluding projective planes of orders $q=0$ and $1$. The
+\PMlinkname{De Bruijn--Erd\"os}{DeBruijnErdHosTheorem}
+theorem actually makes an additional assumption: that
+no two lines are incident with the same set of points (and when applied dually
+that no two points are incident with the same set of lines). That is not a
+problem for a {\sc line} incident with more than one {\sc point} or vice versa, because
+then the axioms forbid it. We just get some more degenerate cases consisting
+of multiple lines intersecting one point or none, or vice versa; the insistence
+on a quadrangle catches these too.
+
+I will not prove the whole theorem here, but under the assumption
+that a quadrangle exists it is not hard show the interesting part,
+that those numbers $q+1$ and $q^2+q+1$ drop out by necessity.
+The same construction can also be used to give coordinates to the
+{\sc point}s and {\sc line}s of the plane (see below).
+
+\clearpage
+\subsection*{Projective planes as bipartite graphs}
+
+Projective planes are, apart from anything else, also {\bf bipartite graphs}: let the
+$q^2+q+1$ {\sc point}s be represented by ``black'' nodes (vertices) of the graph,
+and let the $q^2+q+1$ {\sc line}s {\em also\/} be nodes, ``white'' ones say.
+Edges will represent incidence between a ``black'' and a ``white'' node,
+so there are $(q^2+q+1)(q+1)=q^3+2q^2+2q+1$ edges in all.
+%
+\begin{itemize}
+
+\item In a bipartite graph, nodes of the same color have even distance.
+      This is 0 for any node and itself and {\bf must be 2} for any two
+      distinct nodes of the same color: for any two {\sc point}s there is a path
+      via the {\sc line} they share, and for any two {\sc line}s a path via the {\sc point}
+      they share. So distance 4 does not occur.
+
+      For nodes of opposite color we can have 1 (if the {\sc point} lies on the
+      {\sc line}) or 3 (otherwise); we can't have distance 5 which would imply
+      4 for some nodes. So the graph has {\bf diameter} (maximum distance) 3.
+
+\item In a bipartite graph, all cycles (if any) have even length. We
+      don't have 2-cycles (this is not a multigraph) but no 4-cycles
+      either, by the following argument: such a cycle P$\ell$Q$m$
+      would mean two {\sc line}s intersecting in two different {\sc point}s, and
+      vice versa. So the {\bf girth} (minimum cycle length) is 6
+      (showing there indeed are 6-cycles for $q\ge2$ is left as
+      exercise for the reader).
+
+\end{itemize}
+%
+These two conditions, diameter~3 and girth~6, are not only necessary for
+the graph to represent a projective plane, they are also sufficient, and therefore form
+an alternative formulation of what it means to be a projective plane.
+
+These graphs could be called the bipartite analogue of Moore graphs of
+diameter 2 and girth 5; many of the same arguments can be used~\cite{vG03}.
+
+\clearpage
+\subsection*{Co\uml{o}rdinates for finite projective planes}
+
+The details on how to impose coordinates on a projective plane can be found in \cite{Hal59,dRe96}, or in \PMlinkname{this entry}{IntroducingCoordinatesInAProjectivePlane}.  We summarize it for a finite projective plane below:
+
+Setup: Use a set $Q$ of $q$ different symbols for coordinate values, two of which are 0 and 1.  Start with four {\sc point}s O, I, X, Y forming a quadrangle.  XY is the ``{\sc line} at infinity'' $\ell$.
+
+Construction: O and I are given coordinates $(0,0)$ and $(1,1)$, and the other {\sc point}s on OI (except its intersection with $\ell$) arbitrarily $(c,c)$ with unique $c\in Q$.  For any {\sc point} P not on $\ell$, let YP
+intersect OI at $(a,a)$, and let XP intersect OI at $(b,b)$.  Then P will be given $(a,b)$.  For the coordinates of {\sc point}s on $\ell$, intersect the {\sc line}s joining $(0,0)$ with $(1,m)$, for all $m \in Q$, with $\ell$, calling the intersection $(m)$.  Finally, Y gets coordinate $(\,)$ (instead of $(\infty)$ in the literature).
+
+{\sc Lines} not through Y are given coordinates $[\,m,k\,]$ where $(m)$ and $(0,k)$ are their intersections with $\ell$ and with OY respectively; {\sc line}s through Y (other than $\ell$) get coordinates $[\,k\,]$ going by their
+intersection $(k,0)$ with OX.  The {\sc line} $\ell$ gets $[\;]$ (instead of $[\,\infty\,]$ in the literature).
+
+\clearpage
+\subsection*{Coordinates from bipartite graphs}
+
+The whole business with coordinates becomes a bit more transparent when we try
+to actually construct the thing as a bipartite graph, starting from one edge,
+Y$\ell$ say.
+
+There are $q$ more {\sc point}s (other than Y) incident to $\ell$, let's call
+them Y$_m$ where $m$ ranges over the $q$ different values of the set $Q$.
+Again, each Y$_m$ is incident to $q$ more {\sc line}s (apart from $\ell$), let's
+call those $\ell_{mb}$ where $b$ is another subscript from $Q$.
+Likewise there are $q$ more {\sc line}s (other than $\ell$) incident to Y, let's
+call them $\ell_x$ and to each of them are incident $q$ more {\sc point}s (apart
+from Y) which we can label Y$_{xy}$.
+
+This immediately produces the incidence list of the preceding section.
+Pictorially, for $q=2$ (with the ``to be assessed'' portion filled in
+as thinner lines):
+
+\begin{center}
+\begin{picture}(100,140)(-50,-70)
+
+\put(-40,-30){\circle{4}}
+\put(  0,-60){\circle*{4}}
+\put(+20,-60){\circle*{4}}
+\put(+20,-30){\circle{4}}
+\put(+30,-30){\circle{4}}
+\put(+40,-30){\circle{4}}
+\put(+50,-30){\circle{4}}
+\put(+20,+30){\circle*{4}}
+\put(+30,+30){\circle*{4}}
+\put(+40,+30){\circle*{4}}
+\put(+50,+30){\circle*{4}}
+\put(+20,+60){\circle{4}}
+\put(  0,+60){\circle{4}}
+\put(-40,+30){\circle*{4}}
+
+\put(+55,+30){\cent[l]{Y$_{xy}$}}
+\put( 10,+70){\cent[b]{$\ell_x$}}
+\put(-50,+30){\cent[r]{Y}}
+\put(-50,-30){\cent[r]{$\ell$}}
+\put( 10,-70){\cent[t]{Y$_m$}}
+\put(+55,-30){\cent[l]{$\ell_{mb}$}}
+
+\thicklines
+\put(-40,-30){\line( 0,+1){60}}
+\put(-40,+30){\line(+4,+3){40}}
+\put(-40,+30){\line(+2,+1){60}}
+\put(  0,+60){\line(+2,-3){20}}
+\put(  0,+60){\line(+4,-3){40}}
+\put(+20,+60){\line(+1,-3){10}}
+\put(+20,+60){\line(+1,-1){30}}
+\put(  0,-60){\line(+2,+3){20}}
+\put(  0,-60){\line(+4,+3){40}}
+\put(+20,-60){\line(+1,+3){10}}
+\put(+20,-60){\line(+1,+1){30}}
+\put(-40,-30){\line(+2,-1){60}}
+\put(-40,-30){\line(+4,-3){40}}
+
+\thinlines
+\put(+20,-30){\line( 0,+1){60}}
+\put(+30,-30){\line( 0,+1){60}}
+\put(+40,-30){\line( 0,+1){60}}
+\put(+50,-30){\line( 0,+1){60}}
+\put(+20,-30){\line(+1,+6){10}}
+\put(+30,-30){\line(+1,+6){10}}
+\put(+40,-30){\line(+1,+6){10}}
+\put(+50,-30){\line(-1,+2){30}}
+
+\end{picture}
+\end{center}
+
+We already have $\ell_0$ containing all points Y$_{0y}$, and in addition if we
+wanted we could easily arrange for $\ell_{00}$ to be incident with all the
+Y$_{x0}$ (just renumber the labels $y$ in the sets Y$_{x0}$ for every $x$),
+and for $\ell_{10}$ to be incident with all the Y$_{cc}$ (just look at which
+Y$_{xy}$ are incident with $\ell_{10}$, then exercise the freedom we still have
+to relabel all the $x$, matching each time the corresponding $y$ there). This
+reproduces the entire coordinatisation.
+
+\subsection*{Projective planes as permutation systems}
+
+Five sides of the hexagon are self-evident. On the left we have the
+single edge Y$\ell$, along the top we fan out in two stages to $q$ and $q^2$
+items, along the bottom we also fan out in two stages to $q$ and $q^2$ items,
+and the hard part is the right. We have by now accounted for $2q^2+2q+1$ edges
+so we know there must be exactly $q^3$ more edges, between {\em some\/} of
+those $q^2$ {\sc point}s and {\em some\/} of those $q^2$ {\sc line}s. But where?
+
+For $q=2$ it is simple enough to avoid 4-cycle clashes (and the diagram shows
+what is, up to isomorphism, the only solution). In general, it is an open
+problem to find all possible solutions.
+
+From the projective plane properties it is easy to see that any point Y$_{xy}$ must, for
+every value of $m$, be incident to no more than one of the $\ell_{mb}$ (because
+if it was incident to two they would intersect both in our Y$_{xy}$ and in
+their shared Y$_m$ at the bottom). On the other hand, Y$_{xy}$ needs $q$ more
+mates so it needs to choose exactly one $\ell_{mb}$ for every value of $m$.
+
+By exactly the same reasoning, any $\ell_{mb}$ needs to be incident with, for
+every value of $x$, at most one and then exactly one Y$_{xy}$. In other words,
+the projective plane structure takes the form of, for each pair of values $x$ and $m$,
+a {\bf bijection} $\psi_{xm}$ between the $y$ indices and the $b$ indices.
+
+This is not yet the only constraint. A closer analysis~\cite{vG03} shows
+that, in order to prevent any two {\sc line}s meeting in more than one {\sc point} or any
+two {\sc point}s in more than two {\sc line}s, all compound bijections of the form
+$$
+  \psi_{xm}^{\vphantom1} \psi_{x'm}^{-1}
+  \psi_{x'm'}^{\vphantom1} \psi_{xm'}^{-1}
+$$
+(for $m \ne m'$ and $x \ne x'$) must be {\bf derangements}, i.e.\
+permutations that do not leave any index in place. It is not hard to see
+this is just a device to prevent 4-cycles. And careful scrutiny of the graph
+shows that, after arranging 5 of 6 edges along trees fanning out as above, and
+after recognising there are those bijections along the sixth edge, these
+derangement shenanigans stop the only remaining gap for 4-cycles to lurk.
+
+This could be called the permutation group interpretation of projective plane structure.
+The algebraic version appears in the next section.
+
+\clearpage
+\subsection*{Planar ternary rings}
+
+We've been giving our {\sc point}s and {\sc line}s cooordinates from a set $Q$ of $q$ different labels.   We can give $Q$ the structure of a {\bf ternary ring}, that is, a set with a ternary operation $p\bullet q\circ r$, by defining
+%%
+\begin{equation}\label{x*mob}
+  y = x\bullet m\circ b \;\oso\; (x,y) \;\hbox{is on}\; [\,m,b\,]
+\end{equation}
+%%
+Thus, geometric properties of a projective plane may not be analyzed algebraically.  See \PMlinkname{this entry}{TernaryRingOfAProjectivePlane} for more detail.  Conversely, every ternary ring determines a projective plane with coordinates as above, so that algebraic properties of the ring can be interpreted geometrically.  For more detail on this, see \PMlinkname{this entry}{ProjectivePlaneOfATernaryRing}.
+
+Fields and division rings are examples of ternary rings.  But there are other classes of algebraic structures intermediate between fields and ternary rings.  See \cite{dRe96} for a survey. There are four different projective planes known of order 9, many more of order 16, and so on.
+
+Finding all PTRs in general remains of course just as hard as finding projective planes!
+
+\clearpage
+\subsection*{Finite projective planes as incidence structures}
+
+Finite projective planes can be defined as
+({\bf simple square}) 2-$(q^2+q+1\comma q+1\comma 1)$ {\bf designs},
+or what's the same thing, {\bf Steiner systems} $S(2\comma q+1\comma q^2+q+1)$.
+This way, we already {\em assume\/} in the definition that each ``block''
+({\sc line}) contains exactly $q+1$ {\sc point}s, from which it follows by calculation that
+the number of {\sc line}s that contain a given {\sc point} is also $q+1$, and that the
+total number of {\sc line}s equals the total number of {\sc point}s.
+
+Also, the unique incidence property that every two {\sc point}s lie together on
+exactly one {\sc line} is given, and the dual one that every two {\sc line}s meet in
+exactly one {\sc point} then follows from the numbers and the properties that define
+a design or Steiner system.
+
+We took a different route to projective planes above: we saw we only need to start with
+these two unique incidence properties, and can {\em prove\/} from them that
+the number of {\sc point}s on a {\sc line} and the number of {\sc line}s through a {\sc point} are both
+fixed (i.e.\ that the projective plane and its dual are both designs).
+
+\clearpage
+\subsection*{Finite projective planes as incidence matrices}
+
+Consider an arbitrary projective plane of order $q$.
+We know there are $n=q^2+q+1$ points and the same number of lines. Let $A$
+be an $n\times n$ matrix of which the rows and columns represent lines and
+points of the plane, and give the value 1 to entries at intersections where
+the point (represented by the column) lies on the line (represented by the
+row), and leave the other entries zeros. Such an $A$ is known as the
+{\bf incidence matrix} of the plane.
+
+$AA^\top$ has rows and columns both representing lines, and the entries
+here are the dot products of any two rows of $A$, i.e.\ the number of points
+any two lines $l$ and $m$ have in common, which is $q+1$ when $l=m$ and 1
+otherwise, by the projective plane properties.\vspace{-10pt}
+$$
+  AA^\top \;=\;
+  \left\lgroup
+  \begin{array}{cccc}
+          q+1& 1 & 1 &\cdots \\
+          1 &q+1& 1 &\cdots \\
+          1 & 1 &q+1&\cdots \\
+         \vdots&\vdots&\vdots&\ddots 
+  \end{array}
+  \right\rgroup
+  \;=\; J + qI
+$$
+where $I$ is the identity matrix (ones along the diagonal, zeros everywhere
+else) and $J$ is the matrix filled with ones in every entry. Note $AA^\top$
+has this same value for {\em every\/} projective plane with $n$ points and $n$ lines,
+while $A$ on its own of course varies if there is more than one plane of the
+same order, as the plane is fully determined by its incidence matrix. Also,
+$AA^\top$ having this value is the {\em only\/} thing needed to make the plane
+specified by $A$ satisfy the projective plane properties; it is a fully equivalent
+formulation of those properties.
+
+The {\bf determinant} of $A$ is best evaluated via that of $AA^\top$,
+because $(\det A)^2 = (\det A)(\det A^\top) = \det AA^\top$, and we know
+every entry of $AA^\top$. The {\bf eigenvalues} of any $n\times n$ matrix of
+the form $J + qI$ are easily seen to be
+%
+\begin{itemize}
+
+\item $q+n$ (once) with eigenvector ${\bf x}$ for which $x_0=x_1=x_2\dots$
+
+\item $q$ (multiplicity $n-1$) for the complementary eigenspace
+      $x_0+x_1+x_2\cdots=0$
+
+\end{itemize}
+%
+by letting the matrix act on these eigenvectors. This gives
+$$
+  \det AA^\top \;=\; q^{n-1}\,(q+n)
+$$
+which in our case ($n=q^2+q+1$) amounts to
+$$
+  \det AA^\top \;=\; q^{q^2+q}\,(q^2+2q+1)
+$$
+As $q^2+q$ is even and the other factor a square, we get an integer
+$$
+  \det A \;=\; \pm\;q^{\T{q^2+q\over2}}\,(q+1)
+         \;=\; \pm\;q^{\T{q+1\choose2}}\,(q+1)
+$$
+where the sign is moot, as $A$ has no correspondence between its columns and
+rows.
+
+\clearpage
+\subsection*{Existence}
+
+The {\bf Bruck--Ryser theorem}~\cite{BR49} states that
+
+{\em If $q$ is the order of a projective plane, and $q\equiv 1$ or $2\mod4$, then $q$ is
+the sum of two integer squares (one of which can be $0^2$).}
+
+It can be proven~\cite{BR49,Cam94} using the incidence matrix $A$, by a
+clever rearrangement of ${\bf x}AA^\top{\bf x}$ (plus one extra term) for an
+arbitrary vector ${\bf x}$, on which gradually constraints are imposed four
+components at a time using the fact that each integer is a sum of four
+squares. The argument only works when $q^2+q+1 = n \equiv -1 \mod4$, hence the
+constraint on $q$ (mod~4).
+
+Interestingly, there is a partial converse~\cite{HR54}: whenever $q$ is
+allowed by the theorem (either congruent 0 or 3 (mod~4), or congruent 1
+or 2 (mod~4) and a sum of two squares), there always is a {\bf rational}
+$n\times n$ matrix $A$ (where $n=q^2+q+1$) such that $AA^\top = M$. Of course,
+the matrix is only a proper incidence matrix if that rational matrix only has
+entries 0 and 1.
+
+The theorem doesn't rule out any potential projective plane orders $q\equiv 0$ or $3\mod4$,
+but does rule out a large number of $q\equiv 1$ or $2\mod4$, starting with
+$n=6, 14, 21, 22\dots$. Note in passing that it is easy to prove no prime
+power falls foul of Bruck--Ryser, which is just as well, as (classical)
+planes exist for all those orders.
+
+The only other order ruled out to date is 10, via an epic computer search
+by Lam, Swiercz and Thiel (read
+{\tt\PMlinkexternal{http://www.cecm.sfu.ca/organics/papers/lam/index.html}{http://www.cecm.sfu.ca/organics/papers/lam/index.html}}
+for Lam's account).
+
+All projective planes actually found to date, even the non-classical ones,
+have an order $q$ that is the power of a prime. The {\bf prime power conjecture}
+says this is the case for all projective planes. It is still open.
+
+\clearpage
+\raggedright
+\begin{thebibliography}{MST73}
+
+\bitem{BR49}  \name{R.\,H.\,Bruck} \& \name{H.\,J.\,Ryser},
+              \paper{The non-existence of certain finite projective planes}
+              \mag{Can.\,J.\,Math.}
+              \vol{12} (1949) pp~189--203
+
+\bitem{HR54}  \name{M.\,Hall, Jr.} \& \name{H.\,J.\,Ryser},
+              \paper{Normal completions of incidence matrices}
+              \mag{Amer.\,J.\,Math.} \vol{76} (1954) pp~581--9
+
+\bitem{Hal59} \name{Marshall Hall, Jr.}, \book{The Theory of Groups},
+              Macmillan~1959
+
+\bitem{Cam94} \name{Peter J.\,Cameron},
+              \book{Combinatorics: topics, techniques, algorithms},\\
+              Camb.~Univ.~Pr.~1994, \isbn{0\,521\,45761\,0}\\
+{\tt\PMlinkexternal{http://www.maths.qmul.ac.uk/~pjc/comb/}{http://www.maths.qmul.ac.uk/~pjc/comb/}}
+              (solutions, errata \&c.)
+
+\bitem{CD96}  \name{Charles J.\,Colbourn} and \name{Jeffrey H.\,Dinitz}, eds.\\
+              \book{The CRC Handbook of Combinatorial Designs},\\
+              CRC~Press~1996, \isbn{0\,8493\,8948\,8}\\
+{\tt\PMlinkexternal{http://www.emba.uvm.edu/~dinitz/hcd.html}{http://www.emba.uvm.edu/~dinitz/hcd.html}}
+(errata, new results)\\
+              {\em the reference work on designs incl.\ Steiner systems,
+               proj.~planes}
+
+\bitem{dRe96} \name{Marialuisa J.\,de~Resmini},
+              \paper{Projective Planes, Nondesarguesian},
+              pp~708--718 in the previous reference
+
+\bitem{vG03} \name{Marijke van Gans}, M.Phil.(Qual.) thesis,
+             Birmingham~2003
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

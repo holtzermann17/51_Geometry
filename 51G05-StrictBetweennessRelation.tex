@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StrictBetweennessRelation}
+\pmcreated{2013-03-22 17:18:56}
+\pmmodified{2013-03-22 17:18:56}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{strict betweenness relation}
+\pmrecord{7}{39665}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51G05}
+\pmrelated{SomeTheoremsOnStrictBetweennessRelations}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\section{Definition} A \emph{strict betweenness relation} is a betweenness relation that satisfies 
+the following axioms:
+\begin{itemize}
+\item[$O2^{\prime}$] $(p,q,p)\notin B)$ for \emph{each} pair of points $p$ and $q$. 
+\item[$O3^{\prime}$] for each $p,q\in A$ such that $p\ne q$, there is an $r\in A$ such that $(p,q,r)\in B$.
+\item[$O4^{\prime}$] for each $p,q\in A$ such that $p\ne q$, there is an $r\in A$ such that $(p,r,q)\in B$.
+\item[$O5^{\prime}$] if $(p,q,r)\in B$, then $(q,p,r)\notin B$.
+\end{itemize}
+\section{Remarks}
+\begin{itemize}
+\item A very simple  example of a strict betweenness relation is the empty set.  
+In $\varnothing$, all the conditions  are vacuously satisfied.  
+The empty set, in this context, is called the trivial strict betweenness relation.
+\item Any strict betweenness relation can be enlarged to a betweenness
+relation by including all triples of the forms $(p,p,q),(p,q,p),$ or
+$(p,q,q)$.
+\item Conversely, any betweenness relation can be reduced
+to a strict betweenness relation by removing all triples of the
+forms just listed.  However, it is possible that the ``derived''
+strict betweenness relation is trivial.
+\item From axiom $O2^{\prime}$ we have $(p,p,p) \notin B.$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDehnsTheorem}
+\pmcreated{2013-03-22 16:18:07}
+\pmmodified{2013-03-22 16:18:07}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of Dehn's theorem}
+\pmrecord{7}{38423}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmdefines{Dehn invariant}
+\pmdefines{Dehn's invariant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+We define the Dehn's invariant, which is a number given to any polyhedron which does not change under scissor-equivalence.
+
+Choose an additive function $f\colon \R\to \R$ 
+such that $f(\pi)=f(0)=0$
+and define for any polyhedron $P$ 
+the number (Dehn's invariant)
+\[
+  D(P) = \sum_{e \in \{\text{edges of $P$}\}} f(\theta_e) \ell(e)
+\]
+where $\theta_e$ is the angle between the two faces of $P$ joining in $e$, and $\ell(e)$ is the length of the edge $e$.
+
+We want to prove that if we decompose $P$ into smaller polyhedra $P_1,\ldots,P_N$ as in the definition of scissor-equivalence, we have 
+\begin{equation}\label{eq:sum}
+  D(P) = \sum_{k=1}^N D(P_k)
+\end{equation}
+which means that if $P$ is scissor equivalent to $Q$ then $D(P)=D(Q)$.
+
+Let $P_1,\ldots,P_N$ be such a decomposition of $P$. Given any edge $e$ of a piece $P_k$ the following cases arise:
+\begin{enumerate}
+\item $e$ is contained in the interior of $P$. Since an entire neighbourhood of $e$ is contained in $P$ the angles of the pieces which have $e$ as an edge (or part of an edge) must have sum $2\pi$. So in the right hand side of~\eqref{eq:sum} the edge $e$ gives a contribution of $f(2\pi)\ell(e)$ (recall
+that $f$ is additive).
+
+\item
+$e$ is contained in a facet of $P$. The same argument as before is valid, only we find that the total contribution is $f(\pi)\ell(e)$.
+
+\item
+$e$ is contained in an edge $e'$ of $P$. In this case the total contribution given by $e$ to the right hand side of~\eqref{eq:sum} is given by $f(\theta_{e'})\ell(e)$.
+\end{enumerate}
+
+Since we have choosen $f$ so that $f(\pi)=0$ and hence also $f(2\pi)=0$ (since $f$ is additive) we conclude that the equivalence~\eqref{eq:sum} is valid.
+
+Now we are able to prove Dehn's Theorem. Choose $T$ to be a regular tetrahedron with edges of length $1$. Then $D(T)=6 f(\theta)$ where $\theta$ is the angle between two faces of $T$. We know that $\theta/\pi$ is irrational, hence there exists an additive function $f$ such that $f(\theta)=1$ while $f(\pi/2)=0$ (as there exist additive functions which are not linear).
+
+So if $P$ is any parallelepiped we find that $D(P)=0$ (since each angle between facets of $P$ is $\pi/2$ and $f(\pi/2)=0$) while $D(T)=6$. This means that $P$ and $T$ cannot be scissor-equivalent.
+%%%%%
+%%%%%
+\end{document}

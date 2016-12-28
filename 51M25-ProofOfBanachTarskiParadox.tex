@@ -1,0 +1,275 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBanachTarskiParadox}
+\pmcreated{2013-03-22 15:19:03}
+\pmmodified{2013-03-22 15:19:03}
+\pmowner{GrafZahl}{9234}
+\pmmodifier{GrafZahl}{9234}
+\pmtitle{proof of Banach-Tarski paradox}
+\pmrecord{7}{37123}
+\pmprivacy{1}
+\pmauthor{GrafZahl}{9234}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M25}
+\pmclassification{msc}{03E25}
+%\pmkeywords{Banach}
+%\pmkeywords{Tarski}
+\pmrelated{HausdorffParadox}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[latin1]{inputenc}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Bigcup}{\bigcup\limits}
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mmm}[9]{\left(\begin{array}{rrr}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right)}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+
+% Math Operators/functions
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\cwe}{cwe}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\we}{we}
+\DeclareMathOperator{\wt}{wt}
+\begin{document}
+\PMlinkescapeword{decomposition}
+\PMlinkescapeword{decompositions}
+\newtheorem{thm}{Theorem}
+We deal with some technicalities first, mainly concerning the
+properties of equi-decomposability. We can then prove the paradox in a
+clear and unencumbered line of argument: we show that, given two unit
+balls $U$ and $U'$ with arbitrary origin, $U$ and $U\cup U'$ are
+equi-decomposable, regardless whether $U$ and $U'$ are disjoint or
+not. The original proof can be found in~\cite{BT}.
+
+\subsection*{Technicalities}
+\begin{thm}
+\label{theo3}
+Equi-decomposability gives rise to an equivalence relation on the
+subsets of Euclidean space.
+\end{thm}
+\smallskip
+
+\begin{proof}
+The only non-obvious part is transitivity. So let $A$, $B$, $C$ be
+sets such that $A$ and $B$ as well as $B$ and $C$ are
+equi-decomposable. Then there exist disjoint decompositions
+$A_1,\ldots A_n$ of $A$ and $B_1,\ldots B_n$ of $B$ such that $A_k$
+and $B_k$ are congruent for $1\leq k\leq n$. Furthermore, there exist
+disjoint decompositions $B_1',\ldots,B_m'$ of $B$ and $C_1,\ldots C_m$
+of $C$ such that $B_l'$ and $C_l$ are congruent for $1\leq l\leq
+m$. Define
+\begin{equation*}
+B_{k,l}:=B_k\cap B_l'\text{ for }1\leq k\leq n, 1\leq l\leq m.
+\end{equation*}
+Now if $A_k$ and $B_k$ are congruent via some isometry $\theta\colon
+A_k\to B_k$, we obtain a disjoint decomposition of $A_k$ by setting
+$A_{k,l}:=\theta^{-1}(B_{k,l})$. Likewise, if $B_l'$ and $C_l$ are
+congruent via some isometry $\theta'\colon B_l'\to C_l$, we obtain a
+disjoint decomposition of $C_l$ by setting
+$C_{k,l}:=\theta'(B_{k,l})$. Clearly, the $A_{k,l}$ and $C_{k,l}$
+define a disjoint decomposition of $A$ and $C$, respectively, into
+$nm$ parts. By transitivity of congruence, $A_{k,l}$ and $C_{k,l}$ are
+congruent for $1\leq k\leq n$ and $1\leq l\leq m$. Therefore, $A$ and
+$C$ are equi-decomposable.
+\end{proof}
+\medskip
+
+\begin{thm}
+\label{theo4}
+Given disjoint sets $A_1,,\ldots A_n$, $B_1,\ldots B_n$ such that
+$A_k$ and $B_k$ are equi-decomposable for $1\leq k\leq n$, their
+unions $A=\Bigcup_{k=1}^nA_k$ and $B=\Bigcup_{k=1}^nB_k$ are
+equi-decomposable as well.
+\end{thm}
+\smallskip
+
+\begin{proof}
+By definition, there exists for every $k$, $1\leq k\leq n$ an integer
+$l_k$ such that there are disjoint decompositions
+\begin{equation*}
+A_k=\Bigcup_{i=1}^{l_k}A_{k,i},\qquad B_k=\Bigcup_{i=1}^{l_k}B_{k,i}
+\end{equation*}
+such that $A_{k,i}$ and $B_{k,i}$ are congruent for $1\leq i\leq
+l_k$. Rewriting $A$ and $B$ in the form
+\begin{equation*}
+A=\Bigcup_{k=1}^n\Bigcup_{i=1}^{l_k}A_{k,i},\qquad B=\Bigcup_{k=1}^n\Bigcup_{i=1}^{l_k}B_{k,i}
+\end{equation*}
+gives the result.
+\end{proof}
+\medskip
+
+\begin{thm}
+\label{cor7}
+Let $A$, $B$, $C$ be sets such that $A$ and $B$ are equi-decomposable
+and $C\subsetneq A$, then there exists $D\subsetneq B$ such that $C$
+and $D$ are equi-decomposable.
+\end{thm}
+\smallskip
+
+\begin{proof}
+Let $A_1,\ldots,A_n$ and $B_1,\ldots B_n$ be disjoint decompositions of
+$A$ and $B$, respectively, such that $A_k$ and $B_k$ are congruent via
+an isometry $\theta_k\colon A_k\to B_k$ for all $1\leq k\leq n$. Let
+$\theta\colon A\to B$ a map such that $\theta(x)=\theta_k(x)$ if $x\in
+A_k$. Since the $A_k$ are disjoint, $\theta$ is well-defined
+everywhere. Furthermore, $\theta$ is obviously bijective. Now set
+$C_k:=C\cap A_k$ and define $D_k:=\theta_k(C_k)$, so that $C_k$ and
+$D_k$ are congruent for $1\leq k\leq n$, so the disjoint union
+$D:=D_1\cup\cdots\cup D_n$ and $C$ are equi-decomposable. By
+construction, $\theta(C)=D$. Since $C$ is a proper subset of $A$ and
+$\theta$ is bijective, $D$ is a proper subset of $B$.
+\end{proof}
+\medskip
+
+\begin{thm}
+\label{cor9}
+Let $A$, $B$ and $C$ be sets such that $A$ and $C$ are
+equi-decomposable and $A\subseteq B\subseteq C$. Then $B$ and $C$ are
+equi-decomposable.
+\end{thm}
+\smallskip
+
+\begin{proof}
+Let $A_1,\ldots,A_n$ and $C_1,\ldots C_n$ disjoint decompositions of
+$A$ and $C$, respectively, such that $A_k$ and $C_k$ are congruent via
+an isometry $\theta_k$ for $1\leq k\leq n$. Like in the proof of
+theorem~\ref{cor7}, let $\theta\colon A\to C$ be the well-defined,
+bijective map such that $\theta(x)=\theta_k(x)$ if $x\in A_k$. Now,
+for every $b\in B$, let $\mc{C}(b)$ be the intersection of all sets
+$X\subseteq B$ satisfying
+\begin{itemize}
+\item$b\in X$,
+\item for all $x\in X$, the preimage $\theta^{-1}(x)$ lies in $X$,
+\item for all $x\in X\cap A$, the image $\theta(x)$ lies in $X$.
+\end{itemize}
+Let $b_1,b_2\in B$ such that $\mc{C}(b_1)$ and $\mc{C}(b_2)$ are not
+disjoint. Then there is a $b\in\mc{C}(b_1)\cap\mc{C}(b_2)$ such that
+$b=\theta^r(b_1)=\theta^s(b_2)$ for suitable integers $s$ and
+$r$. Given $b'\in\mc{C}(b_1)$, we have
+$b'=\theta^t(b_1)=\theta^{t+s-r}(b_2)$ for a suitable integer $t$,
+that is $b'\in\mc{C}(b_2)$, so that
+$\mc{C}(b_1)\subseteq\mc{C}(b_2)$. The reverse inclusion follows
+likewise, and we see that for arbitrary $b_1,b_2\in B$ either
+$\mc{C}(b_1)=\mc{C}(b_2)$ or $\mc{C}(b_1)$ and $\mc{C}(b_2)$ are
+disjoint. Now set
+\begin{equation*}
+D:=\{b\in B\mid\mc{C}(b)\subseteq A\},
+\end{equation*}
+then obviously $D\subseteq A$. If for $b\in B$, $\mc{C}(b)$ consists
+of the sequence of elements
+$\ldots,\theta^{-1}(b),b,\theta(b),\ldots$ which is infinite in both
+directions, then $b\in D$. If the sequence is infinite in only one
+direction, but the final element lies in $A$, then $b\in D$ as well.
+Let $E:=\theta(D)$ and $F:=B\setminus D$, then clearly $E\cup F\subseteq
+C$.
+
+Now let $c\in C$. If $c\notin E$, then $\theta^{-1}(c)\notin D$, so
+$\mc{C}(\theta^{-1}(c))$ consists of a sequence
+$\ldots,\theta^{-2}(c),\theta^{-1}(c),\ldots$ which is infinite in
+only one direction and the final element does not lie in $A$. Now
+$\theta^{-1}(c)\in\mc{C}(\theta^{-1}(c))$, but since $\theta^{-1}(c)$
+\emph{does} lie in $A$, it is not the final element. Therefore the
+subsequent element $c$ lies in $\mc{C}(\theta^{-1}(c))$, in particular
+$c\in B$ and $\mc{C}(c)=\mc{C}(\theta^{-1}(c))\not\subseteq A$, so
+$c\in B\setminus D=F$. It follows that $C=E\cup F$, and furthermore $E$
+and $F$ are disjoint.
+
+It now follows similarly as in the preceding proofs that $D$ and
+$E=\theta(D)$ are equi-decomposable. By theorem~\ref{theo4}, $B=D\cup
+F$ and $C=E\cup F$ are equi-decomposable.
+\end{proof}
+\medskip
+
+\subsection*{The proof}
+We may assume that the unit ball $U$ is centered at the origin, that
+is $U=\mbb{B}_3$, while the other unit ball $U'$ has an arbitrary
+origin.
+Let $S$ be the surface of $U$, that is, the unit sphere. By the
+Hausdorff paradox, there exists a disjoint decomposition
+\begin{equation*}
+S=B'\cup C'\cup D'\cup E'
+\end{equation*}
+such that $B'$, $C'$, $D'$ and $C'\cup D'$ are congruent, and $E'$ is
+countable. For $r>0$ and $A\subseteq\mbb{R}^3$, let $rA$ be the set of
+all vectors of $A$ multiplied by $r$. Set
+\begin{equation*}
+B:=\Bigcup_{0<r<1}rB',\quad C:=\Bigcup_{0<r<1}rC',\quad D:=\Bigcup_{0<r<1}rD',\quad E:=\Bigcup_{0<r<1}rE'.
+\end{equation*}
+These sets give a disjoint decomposition of the unit ball with the
+origin deleted, and obviously $B$, $C$, $D$ and $C\cup D$
+are congruent (but $E$ is of course \emph{not} countable). Set
+\begin{equation*}
+A_1:=B\cup E\cup\{0\}
+\end{equation*}
+where $0$ is the origin. $B$ and $C\cup D$ are trivially
+equi-decomposable. Since $C$ and $B$ as well as $D$ and $C$ are
+congruent, $C\cup D$ and $B\cup C$ are equi-decomposable. Finally, $B$
+and $C\cup D$ as well as $C$ and $B$ are congruent, so $B\cup C$ and
+$B\cup C\cup D$ are equi-decomposable. In total, $B$ and $B\cup C\cup
+D$ are equi-decomposable by theorem~\ref{theo3}, so $A_1$ and $U$ are
+equi-decomposable by theorem~\ref{theo4}. Similarly, we conclude that
+$C$, $D$ and $B\cup C\cup D$ are equi-decomposable.
+
+Since $E'$ is only countable but there are uncountably many rotations
+of $S$, there exists a rotation $\theta$ such that
+$\theta(E')\subsetneq B'\cup C'\cup D'$, so $F:=\theta(E)$ is a proper
+subset of $B\cup C\cup D$. Since $C$ and $B\cup C\cup D$ are
+equi-decomposable, there exists by theorem~\ref{cor7} a proper subset
+$G\subsetneq C$ such that $G$ and $F$ (and thus $E$) are
+equi-decomposable. Finally, let $p\in C\setminus G$ an arbitrary point
+and set
+\begin{equation*}
+A_2:=D\cup G\cup\{p\},
+\end{equation*}
+a disjoint union by construction. Since $D$ and $B\cup C\cup D$, $G$
+and $E$ as well as $\{0\}$ and $\{p\}$ are equi-decomposable, $A_2$
+and $U$ are equi-decomposable by theorem~\ref{theo4}. $A_1$ and $A_2$
+are disjoint (but $A_1\cup A_2\neq U$!).
+
+Now $U$ and $U'$ are congruent, so $U'$ and $A_2$ are
+equi-decomposable by theorem~\ref{theo3}. If $U$ and $U'$ are
+disjoint, set $H:=A_2$. Otherwise we may use theorem~\ref{cor7} and
+choose $H\subsetneq A_2$ such that $H$ and $U'\setminus U$ are
+equi-decomposable. By theorem~\ref{theo4}, $A_1\cup H$ and $U\cup
+(U'\setminus U)=U\cup U'$ are equi-decomposable. Now we have
+\begin{equation*}
+A_1\cup H\subseteq U\subseteq U\cup U',
+\end{equation*}
+so by theorem~\ref{cor9}, $U$ and $U\cup U'$ are equi-decomposable.
+
+\begin{thebibliography}{BT}
+
+\bibitem[BT]{BT} \textsc{St.~Banach, A.~Tarski}, Sur la d\'{e}composition
+  des ensembles de points en parties respectivement congruentes,
+  \emph{Fund.\ math.}\ 6, 244--277, (1924).
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

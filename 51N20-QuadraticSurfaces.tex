@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticSurfaces}
+\pmcreated{2013-03-22 14:59:40}
+\pmmodified{2013-03-22 14:59:40}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{quadratic surfaces}
+\pmrecord{53}{36700}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmsynonym{surfaces of second degree}{QuadraticSurfaces}
+\pmrelated{TangentPlaneOfQuadraticSurface}
+\pmrelated{Ellipsoid}
+\pmrelated{SurfaceOfRevolution2}
+\pmrelated{GeneratricesOfOneSheetedHyperboloid}
+\pmrelated{GeneratricesOfHyperbolicParaboloid}
+\pmrelated{AnalyticGeometry}
+\pmrelated{IntersectionOfQuadraticSurfaceAndPlane}
+\pmdefines{elliptic paraboloid}
+\pmdefines{hyperbolic paraboloid}
+\pmdefines{parabolic cylinder}
+\pmdefines{ellipsoid}
+\pmdefines{one-sheeted hyperboloid}
+\pmdefines{two-sheeted hyperboloid}
+\pmdefines{cone surface}
+\pmdefines{hyperbolic cylinder}
+\pmdefines{elliptic cylinder}
+
+\usepackage{amsmath}
+% \usepackage{graphicx}
+\begin{document}
+\PMlinkescapeword{midpoints} \PMlinkescapeword{midpoint}
+The common equation of all quadratic surfaces is
+    \[Ax^2+By^2+Cz^2+2A'yz+2B'zx+2C'xy+2A''x+2B''y+2C''z+D = 0\]
+where $A,\,B,\,C,\,A',\,B',\,C',\,A'',\,B'',\,C'',\,D$ are constants and at least one of the six first does not vanish.\, The different non-degenerate kinds are as follows; we give also the simplest equation.
+
+This classification is based on examining the \PMlinkname{signature}{SylvestersLaw} of the quadratic form
+ \[Ax^2+By^2+Cz^2+2A'yz+2B'zx+2C'xy\]
+and the signature of the form
+ \[Ax^2+By^2+Cz^2+2A'yz+2B'zx+2C'xy+2A''xw+2B''yw+2C''zw+Dw^2\]
+Note that, because of the fact that the equation describes the same surface if we simultaneously change the signs of all the coefficients, we obtain the same type of surface if we change all the signs in both signatures. 
+
+\textbf{Surfaces without \PMlinkname{midpoints}{Midpoint3}:}
+
+\begin{center}
+\includegraphics{plotA.png}
+
+a) Elliptic paraboloid, \,$\frac{x^2}{a^2}+\frac{y^2}{b^2} = 2z$ \\
+Signatures: $[++0]$, $[+++-]$ (or $[--0]$, $[+---]$)
+\end{center}
+\bigskip
+
+\begin{center}
+\includegraphics{plotB.png}
+
+b) Hyperbolic paraboloid, \,$\frac{x^2}{a^2}-\frac{y^2}{b^2} = 2z$;\, it is a doubly ruled surface. \\
+Signatures: $[+-0]$, $[++--]$
+\end{center}
+\bigskip
+
+\begin{center}
+\includegraphics{plotC.png}
+
+c) Parabolic cylinder, \,$x^2 = 2pz$;\, it is a developable surface. \\
+Signatures:  $[+00]$, $[++-0]$ (or $[-00]$, $[+--0]$)
+\end{center}
+\bigskip
+
+\textbf{Surfaces with one midpoint:}
+
+\begin{center}
+\includegraphics{plotD}
+
+a) Ellipsoid, \,$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2} = 1$ \\
+Signature: $[+++]$, $[+++-]$ (or $[---]$, $[+---]$)
+\end{center}
+\bigskip
+
+\begin{center}
+\includegraphics{plotE}
+
+b) One-sheeted hyperboloid, 
+\,$\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2} = 1$;\, it is a doubly ruled  surface. \\
+Signatures: $[++-]$, $[++--]$ (or $[+--]$, $[++--]$)
+\end{center}
+\bigskip
+
+\begin{center}
+\includegraphics{plotF}
+
+c) Two-sheeted hyperboloid,
+ \,$\frac{x^2}{a^2}-\frac{y^2}{b^2}-\frac{z^2}{c^2} = 1$ \\
+Signature: $[++-]$, $[+++-]$ (or $[+--]$, $[+---]$) \\
+$\Delta < 0$
+\end{center}
+\bigskip
+
+\begin{center}
+\includegraphics{plotG}
+
+d) \PMlinkescapetext{Cone surface}, \,$\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2} = 0$;\, it is a developable surface. \\
+Signatures: $[++-]$, $[++-0]$ (or $[+--]$, $[+--0]$) 
+\end{center}
+\bigskip
+
+\textbf{Surfaces with infinitely many midpoints}
+
+\begin{center}
+\includegraphics{plotH}
+
+a) Hyperbolic cylinder, \,$\frac{x^2}{a^2}-\frac{y^2}{b^2} = 1$;\, it is a developable surface. \\
+Signatures: $[+-0]$, $[+--0]$ (or $[+-0]$, $[++-0]$) 
+\end{center}
+\bigskip
+
+\begin{center}
+\includegraphics{plotI}
+
+c) Elliptic cylinder, \,$\frac{x^2}{a^2}+\frac{y^2}{b^2} = 1$;\, it is a developable surface. \\
+Signatures: $[++0]$, $[++-0]$ (or $[--0]$, $[+--0]$)
+\end{center}
+\bigskip
+
+b) Two intersecting planes, \,$\frac{x^2}{a^2}-\frac{y^2}{b^2} = 0$ \\
+Signatures: $[+-0]$, $[+-00]$
+
+d) Two parallel planes, \,$x^2 = a^2$ \\
+Signatures: $[+00]$, $[+-00]$ (or $[-00]$, $[+-00]$)
+
+e) Double plane, \,$x^2 = 0$ \\
+Signatures: $[+00]$, $[+000]$ (or $[-00]$, $[-000]$)
+
+Algebraically, there are other possibilities for the signatures, such as $[+++]$ and $[++++]$.\, However, these give rise to equations which have no real solutions, hence they have been ignored.
+%%%%% 1234
+%%%%%
+\end{document}

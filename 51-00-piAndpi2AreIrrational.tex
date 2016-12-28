@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{piAndpi2AreIrrational}
+\pmcreated{2013-03-22 14:44:00}
+\pmmodified{2013-03-22 14:44:00}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{$\pi$ and $\pi^2$ are irrational}
+\pmrecord{15}{36365}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{11-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newtheorem{thm}{Theorem}
+\begin{thm}
+$\pi$ and $\pi^2$ are irrational.
+\end{thm}
+
+\begin{proof}
+For any strictly positive integer $n$ ,$x\in (0,1)$ we define:
+$$f=f(x)=\frac{x^n(1-x)^n}{n!}=\frac{1}{n!}\sum_{m=n}^{2n}c_mx^m$$
+where $c_m$ are integers. For $0<x<1$ we have
+
+\begin{equation}
+\label{firseq}
+0<f(x)<\frac{1}{n!}
+\end{equation}
+
+For a contradiction, suppose $\pi^2$ is rational, so that $\pi^2=\frac{a}{b}$, where $a,b$ are positive integers.
+
+For $x\in (0,1)$ let us define
+$$G(x)=b^n[\pi^{2n}f(x)-\pi^{2n-2}f''(x)+\pi^{2n-4}f^{(4)}(x)-...+(-1)^nf^{(2n)}(x)].$$
+We have that $f(0)=0$ and $f^{(m)}(0)=0$ if $m<n$ or $m>2n$. But, if $n \leq m \leq 2n$, then
+$$f^{(m)}(0)=\frac{m!}{n!}c_m,$$
+an integer. Hence $f(x)$ and all its derivates take integral values at $x=0$.Since $f(1-x)=f(x)$, the same is true at $x=1$
+
+so that $G(0)$ and $G(1)$ are integers. We have
+
+\begin{eqnarray*}
+\frac{d}{dx}[G'(x)\sin{\pi x}-\pi G(x)\cos{\pi x}]
+&=& [G''(x)+\pi^2G(x)]\sin{\pi x} \\
+&=& b^n\pi^{2n+2}f(x)\sin{\pi x} \\
+&=& \pi^2a^n \sin{\pi x}f(x).
+\end{eqnarray*}
+
+Hence
+$$\pi\int_0^1a^n \sin{\pi x}f(x)dx=[\frac{G'(x)\sin{\pi x}}{\pi}-G(x)\cos{\pi x}]_0^1$$
+$$=G(0)+G(1),$$
+witch is an integer. But by equation \ref{firseq},
+$$0<\pi\int_0^1a^n \sin{\pi x}f(x)dx<\frac{\pi a^n}{n!}<1.$$
+For a large enough $n$, we obtain a contradiction.
+
+For any integer $n$, if $a^n$ is irrational then a is irrational \PMlinkexternal{(proof)}{http://planetmath.org/?op=getobj&from=objects&id=5779}, 
+and since $\pi^2$ is irrational $\sqrt{\pi^2}=\pi$ is also irrational.
+\end{proof}
+
+The irrationality of $\pi$ was Proved by Lambert in 1761. The above proof is not the original proof due to Lambert.
+\begin{thebibliography}{99}
+\bibitem a G.H.Hardy and E.M.Wright \emph{An Introduction to the Theory of
+Numbers}, Oxford University Press, 1959
+\end{thebibliography}
+
+\subsection*{See also}
+\begin{itemize}
+\item The MacTutor History of Mathematics Archive,
+\PMlinkexternal{A history of
+Pi}{http://www-gap.dcs.st-and.ac.uk/~history/HistTopics/Pi_through_the_ages.html}
+\item The MacTutor History of Mathematics Archive,
+\PMlinkexternal{Johann Heinrich
+Lambert}{http://www-history.mcs.st-andrews.ac.uk/Mathematicians/Lambert.html}
+\item \PMlinkexternal{Irrationality proofs}{http://numbers.computation.free.fr/Constants/Miscellaneous/irrationality.html}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

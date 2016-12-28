@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InterceptTheorem}
+\pmcreated{2013-03-22 18:49:42}
+\pmmodified{2013-03-22 18:49:42}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{intercept theorem}
+\pmrecord{8}{41632}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-01}
+\pmclassification{msc}{51M04}
+%\pmkeywords{similar triangles}
+\pmrelated{AreaOfAPolygonalRegion}
+\pmrelated{SimilarTriangles}
+\pmrelated{MidSegmentTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If two intersecting lines are cut by parallel lines, the line segments cut by the parallel lines from one of the lines are proportional to the corresponding line segments cut by them from the other line.
+
+The theorem may be condensed to the following form:
+
+\begin{itemize}
+\item If a line parallel to a \PMlinkname{side}{Triangle} $BC$ of a triangle $ABC$ intersects the other sides in the points $D$ and $E$, then the proportion equation
+\begin{align}
+BD:DA \;=\; CE:EA
+\end{align}
+is true.
+\end{itemize}
+
+The intercept theorem has been known by the ancient Babylonians and Egyptians, but the first known proof is found in Euclid's \emph{Elements}.
+
+\emph{Proof.}\, The areas of triangles, which have equal heights, are proportional to the bases of the triangles; if the bases are equal, then also the areas are equal.\, These facts are used in the \PMlinkescapetext{chain} 
+$$BD:DA \;=\; \Delta BDE : \Delta DAE \;=\; \Delta CED : \Delta EAD \;=\; CE:EA$$
+of equalities. Q.E.D.
+\begin{center}
+\begin{pspicture}(-3,-0.5)(3,5.4)
+\rput(-3,-0.5){.}
+\rput(3,5.4){.}
+\pspolygon(-2,0)(2,0)(1,5)
+\psline(-1.1,1.5)(1.7,1.5)
+\psline(-2,0)(1.7,1.5)
+\psline(2,0)(-1.1,1.5)
+\rput(1,5.2){$A$}
+\rput(-2.2,-0.2){$B$}
+\rput(2.2,-0.2){$C$}
+\rput(-1.36,1.5){$D$}
+\rput(1.9,1.5){$E$}
+\end{pspicture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

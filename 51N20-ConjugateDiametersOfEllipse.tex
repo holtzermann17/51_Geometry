@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConjugateDiametersOfEllipse}
+\pmcreated{2013-03-22 17:30:58}
+\pmmodified{2013-03-22 17:30:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{conjugate diameters of ellipse}
+\pmrecord{18}{39907}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+%\pmkeywords{diameter}
+%\pmkeywords{tangent of ellipse}
+\pmrelated{CoordinatesOfMidpoint}
+\pmrelated{TangentOfConicSection}
+\pmrelated{TangentOfCircle}
+\pmrelated{TransitionToSkewAngledCoordinates}
+\pmdefines{diameter of ellipse}
+\pmdefines{conjugate diameter}
+\pmdefines{conjugate radii}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{centre} \PMlinkescapeword{cut}
+Let us cut the ellipse
+$$\frac{x^2}{a^2}+\frac{y^2}{b^2} \;=\; 1$$
+with the family of parallel lines
+\begin{align}
+y \;=\; mx\!+\!k
+\end{align}
+having the common slope $m$; the number $k$ being a parameter.\, Substituting the expression (1) of $y$ to the equation of the ellipse, we get the quadratic equation
+\begin{align}
+(a^2m^2\!+\!b^2)x^2+2a^2mkx+a^2(k^2\!-\!b^2) \;=\; 0
+\end{align}
+determining the abscissas of the intersection points $P_1$ and $P_2$.\, The midpoint of the chord $P_1P_2$ of the ellipse is determined by the abscissa $x_0$, which is the arithmetic mean of the abscissas of $P_1$ and $P_2$, i.e. the \PMlinkname{roots}{Equation} of (2).\, Using the well-known properties of quadratic equation, we get
+$$x_0 \;=\; -\frac{2a^2mk}{a^2m^2\!+\!b^2}\!:\!2 \;=\; -\frac{a^2mk}{a^2m^2+b^2}.$$
+The ordinate $y_0$ of the midpoint of the chord satisfies
+$$y_0 \;=\; mx_0\!+\!k.$$
+Eliminating the parameter $k$ from the two last equations gives us
+\begin{align}
+y_0 \;=\; -\frac{b^2}{a^2m}x_0.
+\end{align}
+This equation says that the point \,$(x_0,\,y_0)$\, is situated on the line \,$y = -\frac{b^2}{a^2m}x$,\, which passes through the origin, the centre of the ellipse.  So we have the\\
+
+\textbf{Theorem 1.}\, The {\em diameter of ellipse}, i.e. the bisector of the parallel chords of an ellipse, is a line passing through the centre of the ellipse.\\
+
+We see from the last equation, that the slope $m'$ of the diameter which bisects the chords with the slope $m$ is\, $m' = -\frac{b^2}{a^2m}$;\, accordingly one has the symmetric equation
+$$mm' \;=\; -\frac{b^2}{a^2}$$
+between $m$ and $m'$.\, From it one can infer that, conversely, the diameter with the slope $m$ bisects all chords which have the slope $m'$.\, If we have two diameters of the ellipse, each one bisecting the chords parallel to the other, then these chords are {\em conjugate diameters} of each other.\, Apparently, the major axis and the minor axis are a pair of conjugate diameters.
+
+If the line (1) especially is a \PMlinkname{tangent}{TangentLine} of the ellipse, then the points $P_1$ and $P_2$ and the midpoint\, $(x_0,\,y_0)$\, coincide, and thus the equation (3) gives the slope of the tangent:
+$$m_t \;=\; -\frac{b^2x_0}{a^2y_0}$$
+So we may write the equation of the tangent 
+$$y\!-\!y_0 \;=\; -\frac{b^2x_0}{a^2y_0}(x\!-\!x_0)$$
+of the ellipse.  This can be simplified to the well-memorable form
+$$\frac{x_0x}{a^2}+\frac{y_0y}{b^2} \;=\; 1$$
+where\, $(x_0,\,y_0)$\, is the tangency point on the ellipse.  One has also the\\
+
+\textbf{Theorem 2.}\, The tangent of ellipse passing through an endpoint of a diameter is parallel to the conjugate diameter.\\
+
+\begin{center}
+\begin{pspicture}(-4.2,-2.5)(4.5,2.5)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-4.2,-2.4)(4.5,2.4)
+\rput[b](4.6,-0.3){$x$}
+\rput[r](0,2.35){$y$}
+\psellipse(0,0)(3.2,1.5)
+\psdot(1.83,1.22)
+\psline(0.3,1.7)(3.5,0.7)
+\psline(-1.23,1.385)(3.2,0)
+\psline[linecolor=red](-1.83,-1.22)(1.83,1.22)
+\psline[linecolor=blue](-2.663,0.832)(2.663,-0.832)
+\psline(-3,0.522)(2.182,-1.097)
+\rput(0,-2.5){A pair of conjugate diameters (blue and red)}
+\end{pspicture}
+\end{center}
+
+\textbf{Notes.}\, The sum of squares of any pair of {\em conjugate radii} is equal to $a^2+b^2$.\, The ellipse has only one pair of equally long conjugate diameters, viz. the ones lying on the diagonals of the rectangle \,$x = \pm{a},\; y = \pm{b}$.\, In the coordinate system \,$(\xi,\,\eta)$\, with coordinate axes along a pair of conjugate radii $\alpha,\,\beta$, the equation of the ellipse reads\, $\frac{\xi^2}{\alpha^2}+\frac{\eta^2}{\beta^2} = 1$.
+
+
+\begin{thebibliography}{8}
+\bibitem{LP}{\sc Lauri Pimi\"a}: {\em Analyyttinen geometria}.\, Werner S\"oderstr\"om Osakeyhti\"o, Porvoo and Helsinki (1958).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

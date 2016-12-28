@@ -1,0 +1,230 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Angle}
+\pmcreated{2013-03-22 15:32:36}
+\pmmodified{2013-03-22 15:32:36}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{angle}
+\pmrecord{22}{37440}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51F20}
+\pmclassification{msc}{51G05}
+\pmsynonym{supplement}{Angle}
+\pmrelated{PaschsTheorem}
+\pmrelated{BetweennessInRays}
+\pmrelated{SupplementaryAngles}
+\pmdefines{supplementary}
+\pmdefines{right angle}
+\pmdefines{between rays}
+\pmdefines{crossbar theorem}
+\pmdefines{free angle}
+\pmdefines{acute angle}
+\pmdefines{obtuse angle}
+\pmdefines{angle measure}
+\pmdefines{side}
+\pmdefines{vertex}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\renewcommand{\line}[1]{\overleftrightarrow{#1}}
+\newcommand{\ray}[1]{\overrightarrow{#1}}
+\begin{document}
+\section{Definition}
+In an ordered geometry $S$, given a point $p$ let $\Pi(p)$ be the family of
+all rays emanating from it.  Let $\alpha,\beta\in\Pi(p)$ such that
+$\alpha\neq\beta$ and $\alpha\neq-\beta$.  The \emph{angle} \PMlinkname{between rays}{BetweennessInRays} 
+$\alpha$ and $\beta$ at $p$ is
+$$\lbrace \rho\in\Pi(p)\mid
+\rho\mbox{ is between }\alpha\mbox{ and }\beta\rbrace.$$  This angle
+is denoted by $\angle \alpha p\beta$.  The two rays $\alpha$ and
+$\beta$ are the \emph{sides} of the angle, and $p$ the \emph{vertex} of the 
+angle.  Since any point (other
+than the source $p$) on a ray uniquely determines the ray, we may
+also write the angle by $\angle apb$, whenever we have points
+$a\in\alpha$ and $b\in\beta$.  
+
+The notational device given for the angle suggests 
+the possibility of defining an angle between two line segments satisfying certain conditions:
+let $\overline{pq}$ and $\overline{qr}$ be two open line segments with a common endpoint 
+$q$.  The angle between the two open line segments is the angle between the 
+rays $\ray{qp}$ and $\ray{qr}$.  In this case, we may denote the angle by $\angle pqr$.
+
+Suppose $\ell$ is a line and $p$ a point lying on $\ell$.  We have
+two opposite rays emanating from $p$ that lie on $\ell$.  Call them
+$\sigma$ and $-\sigma$.  Any ray $\rho$ emanating from a point $p$
+that does not lie on $\ell$ produces two angles at $p$, one between
+$\rho$ and $\sigma$ and the other between $\rho$ and $-\sigma$.
+These two angles are said to be \emph{supplement} of one another, or
+that $\angle \sigma p \rho$ is \emph{supplementary} of $\angle
+(-\sigma) p \rho$.  Every angle has exactly two supplements.
+
+\section{Ordering of Angles}
+Let $S$ be an ordered geometry and $\rho$ a ray in $S$ with source
+point $p$.  Consider the set $E$ of all angles whose one side is
+$\rho$.  Define an ordering on $E$ by the following rule: for
+$\angle \alpha p\rho,\angle \beta p\rho\in E$,
+\begin{enumerate}
+\item $\angle\alpha p\rho=\angle\beta p\rho$ if $\alpha=\beta$,
+\item $\angle\alpha p\rho<\angle\beta p\rho$ if $\alpha\in\angle\beta p\rho$, and
+\item $\angle\alpha p\rho>\angle\beta p\rho$ if $\beta\in\angle\alpha p\rho$.
+\end{enumerate}
+The ordering relation above is well-defined.  However, it is quite
+limited, because there is no way to compare angles if the pair (of
+angles) do not share a common side.  This can be remedied with an
+additional set of axioms on the geometry: the axioms of congruence.
+\\\\
+In an ordered geometry satisfying the congruence axioms, we have the
+concept of angle congruence. This binary relation turns out to be an
+equivalence relation, so we can form the set of equivalence classes
+on angles. Each equivalence class of angles is called a \emph{free
+angle}.  Any member of a free angle $\mathfrak{a}$ is called a
+representative of $\mathfrak{a}$, which is simply an angle of form
+$\angle abc$, where $b$ is the source of two rays $\ray{ba}$ and
+$\ray{bc}$.  We write $\mathfrak{a}=[\angle abc]$.  It is easy to
+see that given a point $p$ and a ray $\rho$ emanating from $p$, we
+can find, in each free angle, a representative whose one side is
+$\rho$. In other words, for any free angle $\mathfrak{a}$, it is
+possible to write $\mathfrak{a}=[\angle \alpha p\rho]$ for some ray
+$\alpha$.
+\\\\
+Now we are ready to define orderings on angles in general.  In fact,
+this this done via free angles.  Let $\mathfrak{A}$ be the set of
+all free angles in an ordered geometry satisfying the congruence
+axioms, and $\mathfrak{a},\mathfrak{b}\in\mathfrak{A}$.  Write
+$\mathfrak{a}=[\angle \alpha p\rho]$ and $\mathfrak{b}=[\angle \beta
+p\rho]$. We say that $\mathfrak{a}<\mathfrak{b}$ if ray $\alpha$ is
+between $\beta$ and $\rho$.  The other inequality is dually defined.
+This is a well-defined binary relation.  Given the ordering on free
+angles, we define $\angle \alpha p\beta<\angle \gamma q\delta$ if
+$[\angle \alpha p\beta]<[\angle \gamma q\delta]$.
+\\\\
+Let $\ell$ be a line and $p$ a point lying on $\ell$.  The point $p$
+determines two opposite rays $\rho$ and $-\rho$ lying on $\ell$. Any
+ray $\sigma$ emanating from $p$ that is distinct from either $\rho$
+and $-\rho$ determines exactly two angles: $\angle \rho p\sigma$ and
+$\angle (-\rho)p\sigma$.  These two angles are said to be
+supplements of one another, or that one is supplementary of the
+other.
+\\\\
+In an ordered geometry satisfying the congruence axioms,
+supplementary free angles are defined if each contains a
+representative that is supplementary to one another.  Given two
+supplementary free angles $\mathfrak{a},\mathfrak{b}$, we may make
+comparisons of the two:
+\begin{itemize}
+\item if $\mathfrak{a}=\mathfrak{b}$, then we say that $\mathfrak{a}$ is a
+\emph{right free angle}, or simple a \emph{right angle}.  Clearly
+$\mathfrak{b}$ is a right angle if $\mathfrak{a}$ is;
+\item if $\mathfrak{a}>\mathfrak{b}$, then $\mathfrak{a}$ is called
+an \emph{obtuse free angle}, or an \emph{obtuse angle}.  The
+supplement of an obtuse angle is called an \emph{acute free angle},
+or an \emph{acute angle}.  Thus, $\mathfrak{b}$ is acute if
+$\mathfrak{a}$ is obtuse.
+\end{itemize}
+Given any two free angles, we can always compare them.  In other
+words, the law of trichotomy is satisfied by the ordering of free
+angles: for any $\mathfrak{a}$ and $\mathfrak{b}$, exactly one of
+$$\mathfrak{a}>\mathfrak{b}\qquad\qquad\mathfrak{a}=\mathfrak{b}
+\qquad\qquad\mathfrak{a}<\mathfrak{b}$$ is true.
+
+\section{Operations on Angles}
+Let $S$ be an ordered geometry satisfying the congruence axioms and
+$\mathfrak{a}$ and $\mathfrak{b}$ are two free angles.  Write
+$\mathfrak{a}=[\angle\alpha p\beta]$ and $\mathfrak{b}=[\angle\beta
+p\gamma]$.  If $\beta$ is between $\alpha$ and $\gamma$, we define
+an ``addition'' of $\mathfrak{a}$ and $\mathfrak{b}$, written
+$\mathfrak{a}+\mathfrak{b}$ as the free angle $\mathfrak{c}$ with
+representative $\angle\alpha p\gamma$.  In symbol, this says that if
+$\beta$ is between $\alpha$ and $\gamma$, then $$[\angle \alpha
+p\beta]+[\angle \beta p\gamma]=[\angle \alpha p\gamma].$$ This is a
+well-defined binary operation, provided that \emph{one free angle is
+between the other two}.  Therefore, the sum of a pair of
+supplementary angles is not defined!  In addition, if $\mathfrak{a}$
+and $\mathfrak{c}$ are two free angles, such that there exists a
+free angle $\mathfrak{b}$ with
+$\mathfrak{a}+\mathfrak{b}=\mathfrak{c}$, then $\mathfrak{b}$ is
+unique and we denote it by $\mathfrak{c}-\mathfrak{a}$.  It is also
+possible to define the multiplication of a free angle by a positive
+integer, provided that the resulting angle is a well-defined free
+angle. Finally, division of a free angle by positive integral powers
+of 2 can also be defined.
+
+\section{Angle Measurement}
+An angle measure $\mathcal{A}$ is a function defined on free angles
+of an ordered geometry $S$ with the congruence axioms, such that
+\begin{enumerate}
+\item $\mathcal{A}$ is real-valued and positive,
+\item $\mathcal{A}$ is additive; in other words,
+$\mathcal{A}(\mathfrak{a}+\mathfrak{b})=
+\mathcal{A}(\mathfrak{a})+\mathcal{A}(\mathfrak{b})$, if
+$\mathfrak{a}+\mathfrak{b}$ is defined;
+\end{enumerate}
+Here are some properties:
+\begin{itemize}
+\item if $\mathcal{A}(\mathfrak{a})=\mathcal{A}(\mathfrak{b})$, then
+$\mathfrak{a}=\mathfrak{b}$.
+\item $\mathfrak{a}>\mathfrak{b}$ iff $\mathcal{A}(\mathfrak{a})>
+\mathcal{A}(\mathfrak{b})$.
+\item for any free angle $\mathfrak{a}$, denote its supplement by
+$\mathfrak{a}^s$.  Then $\mathcal{A}(\mathfrak{a})+
+\mathcal{A}(\mathfrak{a}^s)$ is a positive constant
+$r_{\mathcal{A}}$ that does not depend on $\mathfrak{a}$.
+\item $\mathcal{A}$ is bounded above by $r_{\mathcal{A}}$.
+\item if $\mathcal{A}$ and $\mathcal{B}$ are angle measures, then
+$\mathcal{A+B}$ defined by $(\mathcal{A+B})(\mathfrak{a})=
+\mathcal{A}(\mathfrak{a})+\mathcal{B}(\mathfrak{a})$ is an angle
+measure too.
+\item if $\mathcal{A}$ is an angle measure, then for any positive
+real number $r$, $r\mathcal{A}$ defined by
+$(r\mathcal{A})(\mathfrak{a})=r(\mathcal{A}(\mathfrak{a}))$ is also
+an angle measure.  In the event that $r$ is an integer such that
+$r\mathfrak{a}$ makes sense, we also have
+$r(\mathcal{A}(\mathfrak{a}))=\mathcal{A}(r\mathfrak{a})$.
+\end{itemize}
+If $S$ is a neutral geometry, then we impose a third requirement for
+a function to be an angle measure:
+\begin{enumerate}
+\item[3.] for any real number $r$ with $0<r<r_{\mathcal{A}}$, there is a
+free angle $\mathfrak{a}$ such that
+$\mathcal{A}(\mathfrak{a})=r$.
+\end{enumerate}
+Once the measure of a free angle is defined, one can next define the
+measure of an angle: let $\mathcal{A}$ be a measure of the free
+angles, define $\mathcal{A}^{\prime}$ on angles by
+$\mathcal{A}^{\prime}(\angle \alpha p\beta)=\mathcal{A}([\angle
+\alpha p\beta])$.  This is a well-defined function.  It is easy to
+see that $\mathcal{A}^{\prime}(\angle \alpha p\beta)=
+\mathcal{A}^{\prime}(\angle \gamma q\delta)$ iff $\angle \alpha
+p\beta\cong\angle \gamma q\delta$, and $\mathcal{A}^{\prime}(\angle
+\alpha p\beta)>\mathcal{A}^{\prime}(\angle \gamma q\delta)$ iff
+$\angle \alpha p\beta>\angle \gamma q\delta$.
+\\\\
+Two popular angle measures are the degree measure and the radian
+measure.  In the degree measure, $r_\mathcal{A}=180^{\circ}$.  In
+the radian measure, $r_\mathcal{A}=\pi$.
+
+\begin{thebibliography}{6}
+\bibitem{dh} D. Hilbert, {\it Foundations of Geometry}, Open Court Publishing Co. (1971)
+\bibitem{bs} K. Borsuk and W. Szmielew, {\it Foundations of Geometry}, North-Holland Publishing Co. Amsterdam (1960)
+\bibitem{mg} M. J. Greenberg, {\it Euclidean and Non-Euclidean Geometries, Development and History}, W. H. Freeman and Company, San Francisco (1974)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

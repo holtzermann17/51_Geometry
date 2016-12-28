@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularPolygon}
+\pmcreated{2013-03-22 12:24:21}
+\pmmodified{2013-03-22 12:24:21}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{regular polygon}
+\pmrecord{48}{32256}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmsynonym{regular n-gon}{RegularPolygon}
+\pmsynonym{regular}{RegularPolygon}
+\pmrelated{BasicPolygon}
+\pmrelated{Polyhedron}
+\pmrelated{RegularPolyhedron}
+\pmrelated{Pi}
+\pmrelated{CompassAndStraightedgeConstructionOfRegularPentagon}
+\pmrelated{RegularTriangle}
+\pmrelated{Square}
+\pmrelated{CriterionForConstructibilityOfRegularPolygon}
+\pmdefines{apothem}
+\pmdefines{center}
+
+\usepackage{pstricks}
+%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\begin{document}
+\PMlinkescapeword{join}
+\PMlinkescapeword{jump}
+\PMlinkescapeword{basis}
+\PMlinkescapeword{prefix}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{types}
+
+A \emph{regular polygon} is a polygon such that all of its sides are congruent and all of its interior angles are congruent; that is, a polygon which is both equilateral and equiangular.  Note that all regular polygons are convex.
+
+There is a regular polygon with $n$ sides for every $n>2$.  As $n$ increases, they resemble a circle ever more closely, and in fact were the basis for some early attempts to approximate the value of $\pi$.  The existence of many types of regular polygons is in contrast with the case for regular polyhedra, of which only five distinct types in Euclidean geometry.
+
+Some regular polygons have special names.  For example, in many geometries, a regular triangle is also known as an equilateral triangle and (less commonly) an equiangular triangle.  Also, in Euclidean geometry, a regular quadrilateral is also known as a square.  For larger numbers of sides, one uses a Greek number prefix, as in ``regular pentagon'' and ``regular hexagon''.  For numbers of sides so large that this becomes unwieldy, one uses a number, as in ``regular $11$-gon'' (as opposed to ``hendecagon''), ``regular $512$-gon'' (as opposed to ``pentacosiododecagon'') or ``regular $n$-gon''. Below is a picture of some regular $n$-gons for $n$ from $3$ to~$7$:
+
+\begin{center}
+\parbox[b]{5.19615pc}{\begin{center}\begin{xy} 
+0;<3pc,0pc>:<0pc,3pc>::
+\ar@{-}c+(0.866025,1.5);c+(1.73205,0.)
+\ar@{-}c+(1.73205,0.);c+(0.,0.) 
+\ar@{-}c+(0.,0.);c+(0.866025,1.5)
+\end{xy}triangle\end{center}}\hspace{1em}
+\parbox[b]{4.24264pc}{\begin{center}\begin{xy}
+0;<3pc,0pc>:<0pc,3pc>:: \ar@{-}c+(0,1.41421);c+(1.41421,1.41421)
+\ar@{-}c+(1.41421,1.41421);c+(1.41421,0.)
+\ar@{-}c+(1.41421,0.);c+(0.,0.) \ar@{-}c+(0.,0.);c+(0.,1.41421)
+\end{xy}square\end{center}}\hspace{1em}
+\parbox[b]{5.70633pc}{\begin{center}\begin{xy}
+0;<3pc,0pc>:<0pc,3pc>::
+\ar@{-}c+(0.951057,1.80902);c+(1.90211,1.11803)
+\ar@{-}c+(1.90211,1.11803);c+(1.53884,0.)
+\ar@{-}c+(1.53884,0.);c+(0.363271,0.)
+\ar@{-}c+(0.363271,0.);c+(0.,1.11803)
+\ar@{-}c+(0.,1.11803);c+(0.951057,1.80902)
+\end{xy}pentagon\end{center}}\hspace{1em}
+\parbox[b]{6pc}{\begin{center}\begin{xy}
+0;<3pc,0pc>:<0pc,3pc>:: \ar@{-}c+(0.5,1.73205);c+(1.5,1.73205)
+\ar@{-}c+(1.5,1.73205);c+(2.,0.866025)
+\ar@{-}c+(2.,0.866025);c+(1.5,0.) \ar@{-}c+(1.5,0.);c+(0.5,0.)
+\ar@{-}c+(0.5,0.);c+(0.,0.866025)
+\ar@{-}c+(0.,0.866025);c+(0.5,1.73205)
+\end{xy}hexagon\end{center}}\hspace{1em}
+\parbox[b]{5.84958pc}{\begin{center}\begin{xy}
+0;<3pc,0pc>:<0pc,3pc>::
+\ar@{-}c+(0.974928,1.90097);c+(1.75676,1.52446)
+\ar@{-}c+(1.75676,1.52446);c+(1.94986,0.678448)
+\ar@{-}c+(1.94986,0.678448);c+(1.40881,0)
+\ar@{-}c+(1.40881,0);c+(0.541044,0.)
+\ar@{-}c+(0.541044,0.);c+(0.,0.678448)
+\ar@{-}c+(0.,0.678448);c+(0.193096,1.52446)
+\ar@{-}c+(0.193096,1.52446);c+(0.974928,1.90097)
+\end{xy}heptagon\end{center}}
+\end{center}
+
+If $n$ is an integer with $n \ge 3$, then the symmetry group of a regular $n$-gon is the $n^{\text{th}}$ dihedral group (written $D_n$).  Unfortunately, since it has $2n$ elements, it is also sometimes called the dihedral group of \PMlinkname{order}{OrderGroup} $2n$ and written $D_{2n}$.
+
+In spherical geometry, every biangle is regular.  Its symmetry group is the Klein 4-group.
+
+The \emph{center} of a regular polygon is the point that is equidistant from each of its vertices.  (In spherical geometry, in \PMlinkescapetext{order} to obtain uniqueness, we use the convention that the center is inside the polygon.  Similarly, for biangles, we also use the convention that the center is equidistant from the midpoints of the sides.)  An \emph{apothem} of a regular polygon is a line segment such that all of the following occur:
+
+\begin{itemize}
+\item one of its endpoints is the center of the regular polygon;
+\item one of its endpoints is on one of the sides of the regular polygon;
+\item it is perpendicular to the side of the regular polygon that it intersects.
+\end{itemize}
+
+For any regular polygon, all of its apothems are congruent, and the point at which an apothem and a side of the regular polygon intersect is the midpoint of that side.
+
+Below is an example of a regular pentagon with all apothems drawn in blue.
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\psline[linecolor=blue](0,0)(-0.951,1.309)
+\psline[linecolor=blue](0,0)(-1.5385,-0.5)
+\psline[linecolor=blue](0,0)(0,-1.618)
+\psline[linecolor=blue](0,0)(1.5385,-0.5)
+\psline[linecolor=blue](0,0)(0.951,1.309)
+\psdot(0,0)
+\pspolygon(0,2)(-1.902,0.618)(-1.175,-1.618)(1.175,-1.618)(1.902,0.618)
+\end{pspicture}
+\end{center}
+
+From here on in the entry, only Euclidean geometry is considered.
+
+Given a regular polygon with apothem of length $a$ and \PMlinkname{perimeter}{Perimeter2} $P$, its area is
+\[
+A=\frac{1}{2}aP.
+\]
+A proof of this statement is supplied in the entry area of regular polygon.
+
+Any regular polygon can be inscribed into a circle and a circle can be inscribed within it.  Note that both of these circles have the same \PMlinkname{center}{Center8} as the regular polygon.  Below is a square with its inscribed circle drawn in green and its circumscribed circle drawn in cyan.
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\pscircle[linecolor=cyan](0,0){2.13}
+\pspolygon(1.5,1.5)(-1.5,1.5)(-1.5,-1.5)(1.5,-1.5)
+\pscircle[linecolor=green](0,0){1.5}
+\psdot(0,0)
+\end{pspicture}
+\end{center}
+
+Given a regular polygon with $n$ sides whose side has length $t$, the radius of the circumscribed circle is
+\[
+R=\frac{t}{\displaystyle 2\sin\left(\frac{180^\circ}{n}\right)}
+\]
+and the radius of the inscribed circle is
+\[
+r=2t\tan\left(\frac{180^\circ}{n}\right).
+\]
+
+The area of the regular polygon can also be calculated using the formula 
+\[
+A=\frac{nt^2}{\displaystyle 4\tan\left(\frac{180^\circ}{n}\right)}.
+\]
+
+In a more general setting, one might wish to allow figures which are not usually considered as polygons to be called ``regular polygons''.  In this sense, a regular $n$-gon is constructed from $n$ line segments of the same length, each joined to the preceding one by the same angle on the same side, and the last joined to the first in the same way.  It is not obvious, but any such figure can be made by choosing $n$ points evenly spaced around a circle and joining them in some way.  To get the ordinary convex $n$-gon, join each point to the next point.  To obtain a more complicated $n$-gon, fix an integer $m$ relatively prime to $n$ with $1<m<n-1$ and jump by $m$ points each time.  For any valid $k$, this procedure yields the same figure for $m=k$ and $m=n-k$.  Thus, there are $\displaystyle \frac{\varphi(n)}{2}$ of these generalized regular polygons (where $\varphi$ denotes the Euler totient function) having $n$ sides, including the ordinary convex $n$-gon.  Since the line segments that form more complicated $n$-gons cross each other, there is no obvious definition of ``area'' to apply.
+
+An example of a more complicated $n$-gon is a pentagram, which is obtained from the above procedure by letting $n=5$ and either $m=2$ or $m=3$.  In the picture below, a pentagram is drawn in blue.
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\pscircle(0,0){3}
+\pspolygon[linecolor=blue](0,3)(-1.763,-2.427)(2.853,0.927)(-2.853,0.927)(1.763,-2.427)
+\psdots(0,3)(-1.763,-2.427)(2.853,0.927)(-2.853,0.927)(1.763,-2.427)
+\end{pspicture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

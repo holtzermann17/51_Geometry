@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConicSection}
+\pmcreated{2013-03-22 13:08:45}
+\pmmodified{2013-03-22 13:08:45}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{conic section}
+\pmrecord{18}{33584}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmsynonym{conic}{ConicSection}
+\pmrelated{Hyperbola2}
+\pmrelated{Parabola2}
+\pmrelated{SqueezingMathbbRn}
+\pmrelated{AnalyticGeometry}
+\pmrelated{AsymptoteOfLamesCubic}
+\pmrelated{QuadraticCurves}
+\pmrelated{IntersectionOfQuadraticSurfaceAndPlane}
+\pmrelated{SimplestCommonEquationOfConics}
+\pmrelated{PropertiesOfEllipse}
+\pmdefines{ellipse}
+\pmdefines{parabola}
+\pmdefines{hyperbola}
+\pmdefines{focus}
+\pmdefines{eccentricity}
+\pmdefines{directrix}
+\pmdefines{latus rectum}
+\pmdefines{Dandelin sphere}
+\pmdefines{degenerate conic}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{ball}
+\PMlinkescapeword{source}
+\PMlinkescapeword{definable}
+\PMlinkescapeword{difference}
+\PMlinkescapeword{interpretation}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{forces}
+\PMlinkescapeword{measure}
+\textbf{Definitions}
+
+In Euclidean 3-space, a conic section, or simply a conic, is the
+intersection of a plane with a right circular double cone. 
+
+But a conic can also defined, in several equivalent ways,
+without using an enveloping 3-space.
+
+In the Euclidean plane, let $d$ be a line and $F$ a point not on
+$d$. Let $\epsilon$ be a positive real number.
+For an arbitrary point $P$, write $|Pd|$ for the perpendicular
+(or shortest) distance from $P$ to the line $d$.
+The set of all points $P$ such that $|PF|=\epsilon|Pd|$ is a conic
+with \emph{eccentricity} $\epsilon$, \emph{focus} $F$, and
+\emph{directrix} $d$.
+
+An ellipse, parabola, or hyperbola has eccentricity $<1$, $=1$, or
+$>1$ respectively.
+For a parabola, the focus and directrix are unique.
+Any ellipse other than a circle, or any hyperbola, may be defined by
+either of two focus-directrix pairs; the eccentricity is the same for both.
+
+The definition in terms of a focus and a directrix leaves out the case
+of a circle; still, the circle can be thought of as a limiting case:
+eccentricity zero, directrix at infinity, and two coincident foci.
+
+The chord through the given focus, parallel to the directrix,
+is called the \emph{latus rectum}; its length is traditionally
+denoted by $2l$.
+
+Given a conic $\sigma$ which is the intersection of
+a circular cone $C$ with a plane $\pi$, and given a focus $F$ of $\sigma$,
+there is a unique sphere tangent to $\pi$ at $F$ and tangent also to $C$
+at all points of a circle.
+That sphere is called the \emph{Dandelin sphere} for $F$.
+(Consider a spherical ball resting on a table.
+Suppose that a point source of light, at some point above the table
+and outside the ball, shines on the ball.
+The margin of the shadow of the ball is a conic,
+the ball is one of the Dandelin spheres of that conic,
+and the ball meets the table at the focus corresponding to that sphere.)
+
+\textbf{Degenerate conics; coordinates in 2 or 3 dimensions}
+
+The intersection of a plane with a cone may consist of a
+single point, or a line, or a pair of lines.
+Whether we should regard these sets as conics is a matter
+of convention, but in general they are not so regarded.
+
+In the Euclidean plane with the usual Cartesian coordinates,
+a conic is the set of solutions of an equation of the form
+$$P(x,y)=0$$
+where $P$ is a polynomial of the second degree over $\R$.
+For a degenerate conic, $P$ has discriminant zero.
+
+In three dimensions, if a conic is defined as the intersection
+of the cone
+$$z^2=x^2+y^2$$
+with a plane
+$$\alpha x + \beta y + \gamma z = \delta$$
+then, assuming $\gamma\ne 0$, we can eliminate $z$ to get a
+polynomial for the curve in terms of $x$ and $y$ only; a
+linear change of variables will then give Cartesian coordinates,
+within the plane, for the given conic.
+If $\gamma=0$ we can eliminate $x$ or $y$ instead, with the same
+result.
+
+\textbf{Conics and physics}
+
+Kepler revolutionized astronomy by describing simple mathematical laws for planetary motion, which Newton then derived from his laws of motion using calculus, which he invented for the purpose (although several other people invented calculus at more or less the same time).  One of Kepler's laws was that planets move on ellipses with the Sun at one focus. More generally, objects under the influence of the Sun's gravity (and no other forces) move in conic sections with the Sun at one focus. Comets moving on parabolae or hyperbolae do not return; comets moving on elongated ellipses return. 
+
+To work with conic sections in such an astronomical context, it is very useful to have a description in terms of polar coordinates centered at one focus. Measuring the angle $\theta$ from the closest approach to the focus, an ellipse with semi-major axis $a$ can be described by
+\[
+r(\theta) = \frac{a(1-\epsilon^2)}{1-\epsilon\cos\theta}.
+\]
+A parabola or hyperbola can also be described in an essentially similar way, although they do not have a semi-major axis.  If we call the length of the latus rectum $2l$, then any conic can be described as
+\[
+r(\theta) = \frac{l}{1-\epsilon\cos\theta}.
+\]
+Observe that as $\epsilon$ goes to zero we approach a circle; as $\epsilon$ goes to $1$ we approach a parabola; and for $\epsilon>1$ we obtain a hyperbola. (Normally one does not consider the case $\epsilon<0$, as this simply amounts to choosing a different place to measure angle).
+
+\textbf{Conics in a projective plane}
+
+Conic sections can be defined in a projective plane, even though,
+in such a plane, there is no notion of angle nor any notion of distance.
+In fact there are several equivalent ways to define it.
+The following elegant definition
+was discovered by von Staudt:
+A conic is the set of self-conjugate points of a hyperbolic polarity.
+In a little more detail, the polarity is a pair of bijections
+$$f:P\to L\qquad g:L\to P$$
+where $P$ is the set of points of the plane, $L$ is the set of lines,
+$f$ maps collinear points to concurrent lines, and $g$ maps concurrent lines
+to collinear points.
+The set of fixed points of $g\circ f$ is a conic, and $f(x)$ is the tangent
+to the given conic at the given point $x$.
+
+A projective conic has no focus, directrix, or eccentricity, for in a
+projective plane there is no notion of distance (nor angle).
+Indeed all projective conics are alike; there is no distinction between a parabola and a hyperbola, for example.
+
+If we visualize the projective plane as the set of all lines in three-space, then a conic is precisely a cone. An embedding of the plane into the projective plane, in this context, is just the selection of a plane not passing through the origin.  Then we identify a projective ``point'' (a line through the origin) with its intersection with this plane. Points whose line does not intersect this plane are considered points at infinity. With this interpretation, it is clear why all conic sections are essentially the same in the projective plane: if we choose a plane cutting the cone perpendicularly, we obtain a circle; if we tip the plane, we get an ellipse; as we tip it further, at a certain point there is exactly one point at infinity on the cone, giving a parabola; finally we get two branches, connected by two points at infinity, that is, a hyperbola. The only difference is how we choose to embed the plane in the projective plane.
+%%%%%
+%%%%%
+\end{document}

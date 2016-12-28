@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LazyCaterersSequence}
+\pmcreated{2013-03-22 16:16:54}
+\pmmodified{2013-03-22 16:16:54}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{lazy caterer's sequence}
+\pmrecord{6}{38394}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51D20}
+\pmsynonym{lazy caterers sequence}{LazyCaterersSequence}
+\pmsynonym{circle cutting problem}{LazyCaterersSequence}
+\pmsynonym{pancake cutting problem}{LazyCaterersSequence}
+\pmdefines{central polygonal number}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Given a pancake (or a circle), how can one cut $n$ pieces (not necessarily of the same size) with the minimum number of cuts? For example, to cut a pancake into four pieces, four cuts could be made, each starting at the center and going to the edge. But it would be much simpler to make just two cuts to cut it into four pieces.
+
+The maximum number of pieces that can be created with a given number of cuts $n$ is given by the formula $$\frac{n^2 + n + 2}{2}$$ which gives the \emph{lazy caterer's sequence}: 1, 2, 4, 7, 11, 16, 22, 29, 37, 46, 56, 67, 79, 92, ... (listed in A000124 of Sloane's OEIS).
+
+The numbers of this sequence are also called \emph{central polygonal numbers}, and have applications in various other mathematical problems. Each of these numbers is 1 plus a triangular number.
+
+Shel Kaphan, in a remark to the OEIS writes that "when constructing a zonohedron, one zone at a time, out of (up to) 3-D non-intersecting parallelepipeds, the $n$th element of this sequence is the number of edges in the $n$th zone added with the $n$th layer of parallelepipeds."
+%%%%%
+%%%%%
+\end{document}

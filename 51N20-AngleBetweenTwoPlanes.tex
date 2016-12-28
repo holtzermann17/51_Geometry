@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AngleBetweenTwoPlanes}
+\pmcreated{2013-03-22 16:19:41}
+\pmmodified{2013-03-22 16:19:41}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{angle between two planes}
+\pmrecord{9}{38457}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmsynonym{angle between planes}{AngleBetweenTwoPlanes}
+\pmrelated{AngleBetweenTwoLines}
+\pmrelated{AngleBetweenLineAndPlane}
+\pmdefines{angle between differentiable surfaces}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+%\usepackage{pst-plot}
+%\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $\pi_1$ and $\pi_2$ be two planes in the three-dimensional Euclidean space $\mathbb{R}^3$.\, The angle $\theta$ between these planes is defined by means of the normal vectors $\boldsymbol{n}_1$ and $\boldsymbol{n}_2$ of $\pi_1$ and $\pi_2$ through the relationship
+$$\cos\theta = \Big| \frac{\langle \boldsymbol{n}_1,\boldsymbol{n}_2\rangle }{\| \boldsymbol{n}_1 \| \| \boldsymbol{n}_2 \|}\Big|,$$
+where the numerator is the inner product of $\boldsymbol{n}_1$ and $\boldsymbol{n}_2$ and the denominator is product of the lengths of $\boldsymbol{n}_1$ and $\boldsymbol{n}_2$.\, The formula implies that the angle $\theta$ satisfies
+$$0 \le \theta \le \frac{\pi}{2}.$$
+
+The quotient in the formula remains unchanged as one multiplies the normal vectors by some non-zero real numbers, so that the cosine is independent of the lengths of the chosen vectors.\, Therefore, there is no ambiguity in this definition.
+
+\begin{figure}
+\begin{center}
+\includegraphics{angle.eps}
+\caption{Angle between two planes}
+\end{center}
+\end{figure}
+
+\textbf{Generalization}.\, The above definition can be generalized, at least locally, to a pair of intersecting differentiable surfaces in $\mathbb{R}^3$.\, Given two differentiable surfaces $S_1$ and $S_2$ and a point $p\in S_1\cap S_2$, the angle between $S_1$ and $S_2$ at $p$ is defined to be the angle between the tangent planes $T_p(S_1)$ and $T_p(S_2)$.
+
+%%%%%
+%%%%%
+\end{document}

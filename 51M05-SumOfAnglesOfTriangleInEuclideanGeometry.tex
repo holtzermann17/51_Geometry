@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SumOfAnglesOfTriangleInEuclideanGeometry}
+\pmcreated{2013-09-26 10:00:16}
+\pmmodified{2013-09-26 10:00:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{sum of angles of triangle in Euclidean geometry}
+\pmrecord{4}{87388}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{Intuitive proof}
+\pmclassification{msc}{51M05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The parallel postulate (in the form given in the \PMlinkname{parent entry}{ParallelPostulate}) allows to prove the important fact about the triangles in the Euclidean geometry:
+
+\textbf{Theorem.}\, The sum of the interior angles of any triangle equals the straight angle.
+
+{\it Proof.}\, Let $ABC$ be an arbitrary triangle with the interior angles $\alpha$, $\beta$, $\gamma$.\, In the plane of the triangle we set the lines $AD$ and $AE$ such that\, $\wedge BAD = \beta$\, and\, $\wedge CAE = \gamma$.\, Then the lines do not intersect the line $BC$.\, In fact, if e.g. $AD$ would intersect $BC$ in a point $P$, then there would exist a triangle $ABP$ where an \PMlinkname{exterior angle}{ExteriorAnglesOfTriangle} of an angle would equal to an interior angle of another angle which is impossible.\, Thus $AD$ and $AE$ are both parallel to $BC$.\, By the parallel postulate, these lines have to coincide.\, This means that the addition of the triangle angles $\alpha$, $\beta$, $\gamma$ gives a straight angle.
+
+See also \PMlinkexternal{this intuitive proof}{http://www.cs.bham.ac.uk/research/projects/cogaff/misc/triangle-sum.html#pardoe-proof}!
+
+\begin{thebibliography}{8}
+\bibitem{ariva}{\sc Karl Ariva}: {\it Lobatsevski geomeetria}.\, Kirjastus ``Valgus'', Tallinn (1992).
+\end{thebibliography} 
+\end{document}

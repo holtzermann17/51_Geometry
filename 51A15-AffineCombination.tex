@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AffineCombination}
+\pmcreated{2013-03-22 16:00:13}
+\pmmodified{2013-03-22 16:00:13}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{affine combination}
+\pmrecord{19}{38033}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A15}
+\pmsynonym{affine independent}{AffineCombination}
+\pmrelated{AffineGeometry}
+\pmrelated{AffineTransformation}
+\pmrelated{ConvexCombination}
+\pmdefines{affine independence}
+\pmdefines{affinely independent}
+\pmdefines{affine hull}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\begin{document}
+\subsection*{Definition}
+Let $V$ be a vector space over a division ring $D$.  An \emph{affine combination} of a finite set of vectors $v_1,\ldots,v_n\in V$ is a linear combination of the vectors $$k_1v_1+\cdots+k_nv_n$$ such that $k_i\in D$ subject to the condition $k_1+\cdots+k_n=1$.  In effect, an affine combination is a weighted average of the vectors in question.
+
+For example, $v=\frac{1}{2}v_1+\frac{1}{2}v_2$ is an affine combination of $v_1$ and $v_2$ provided that the characteristic of $D$ is not $2$.  $v$ is known as the midpoint of $v_1$ and $v_2$.  More generally, if $\operatorname{char}(D)$ does not divide  $m$, then $$v=\frac{1}{m}(v_1+\cdots+v_m)$$
+is an affine combination of the $v_i$'s.  $v$ is the barycenter of $v_1,\ldots,v_n$.
+
+\subsection*{Relations with Affine Subspaces}
+Assume now $\operatorname{char}(D)=0$.  Given $v_1,\ldots,v_n\in V$, we can form the set $A$ of all affine combinations of the $v_i$'s.  We have the following
+\begin{quote}
+$A$ is a finite dimensional affine subspace.  Conversely, a finite dimensional affine subspace $A$ is the set of all affine combinations of a finite set of vectors in $A$.
+\end{quote} 
+
+\begin{proof}
+Suppose $A$ is the set of affine combinations of $v_1,\ldots,v_n$.  If $n=1$, then $A$ is a singleton $\lbrace v\rbrace$, so $A=0+v$, where 0 is the null subspace of $V$.  If $n>1$, we may pick a non-zero vector $v\in A$.  Define $S=\lbrace a-v\mid a\in A\rbrace$.  Then for any $s\in S$ and $d\in D$, $ds=d(a-v)=da+(1-d)v-v$.  Since $da+(1-d)v\in A$, $ds\in S$.  If $s_1,s_2\in S$, then $\frac{1}{2}(s_1+s_2)=\frac{1}{2}((a_1-v)+(a_2-v))=\frac{1}{2} (a_1+a_2)-v\in S$, since $\frac{1}{2}(a_1+a_2)\in A$.  So $\frac{1}{2}(s_1+s_2)\in S$.  Therefore, $s_1+s_2= 2(\frac{1}{2}(s_1+s_2))\in S$.  This shows that $S$ is a vector subspace of $V$ and that $A=S+v$ is an affine subspace.
+
+Conversely, let $A$ be a finite dimensional affine subspace.  Write $A=S+v$, where $S$ is a subspace of $V$.  Since $\operatorname{dim}(S)= \operatorname{dim}(A)=n$, $S$ has a basis $\lbrace s_1,\ldots,s_n\rbrace$.  For 
+each $i=1,\ldots, n$, define $v_i=ns_i+v$.  Given $a\in A$, we have 
+\begin{eqnarray*}
+a &=& s+v=k_1s_1+\cdots+k_ns_n+v \\ 
+&=& \frac{k_1}{n}(v_1-v)+\cdots+\frac{k_n}{n}(v_n-v)+v \\ 
+&=& \frac{k_1}{n}v_1+\cdots+\frac{k_n}{n}v_n+(1-\frac{k_1}{n}-\cdots- \frac{k_n}{n})v.
+\end{eqnarray*}
+From this calculation, it is evident that $a$ is an affine combination of $v_1,\ldots,v_n$, and $v$.
+\end{proof}
+
+When $A$ is the set of affine combinations of two distinct vectors $v,w$, we see that $A$ is a line, in the sense that $A=S+v$, a translate of a one-dimensional subspace $S$ (a line through 0).  Every element in $A$ has the form $dv+(1-d)w$, $d\in D$.  Inspecting the first part of the proof in the previous proposition, we see that the argument involves no more than two vectors at a time, so the following useful corollary is apparant:
+
+\begin{quote}
+$A$ is an affine subspace iff for every pair of vectors in $A$, the line formed by the pair is also in $A$.
+\end{quote}
+
+Note, however, that the $A$ in the above corollary is not assumed to be finite dimensional.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+If one of $v_1,\ldots,v_n$ is the zero vector, then $A$ coincides with $S$.  In other words, an affine subspace is a vector subspace if it contains the zero vector.
+\item
+Given $A=\lbrace k_1v_1+\cdots +k_nv_n \mid v_i\in V, k_i\in D, \sum k_i=1 \rbrace$, the subset $$\lbrace k_1v_1+\cdots+ k_nv_n\in A\mid k_i=0\rbrace$$ is also an affine subspace.
+\end{itemize}
+
+\subsection*{Affine Independence}
+
+Since every element in a finite dimensional affine subspace $A$ is an affine combination of a finite set of vectors in $A$, we have the similar concept of a spanning set of an affine subspace.  A minimal spanning set $M$ of an affine subspace is said to be \emph{affinely independent}.  We have the following three equivalent characterization of an affinely independent subset $M$ of a finite dimensional affine subspace:
+\begin{enumerate}
+\item $M=\lbrace v_1,\ldots,v_n\rbrace$ is affinely independent.
+\item every element in $A$ can be written as an affine combination of elements in $M$ in a \emph{unique} fashion.
+\item for every $v\in M$, $N=\lbrace v_i-v\mid v\neq v_i\rbrace$ is linearly independent.
+\end{enumerate}
+
+\begin{proof}
+We will proceed as follows: (1) implies (2) implies (3) implies (1).
+
+(1) implies (2).  If $a\in A$ has two distinct representations $k_1v_1+\cdots+k_nv_n=a= r_1v_1+\cdots+r_nv_n$, we may assume, say $k_1\neq r_1$.  So $k_1-r_1$ is invertible with inverse $t\in D$.  Then 
+$$v_1=t(r_2-k_2)v_2+\cdots+t(r_n-k_n)v_n.$$  
+Furthermore, 
+$$\sum_{i=2}^n t(r_i-k_i)=t(\sum_{i=2}^n r_i-\sum_{i=2}^n k_i)=t(1-r_1-1+k_1)=1.$$  So for any $b\in A$, we have 
+$$b=s_1v_1+\cdots+s_nv_n=s_1(t(r_2-k_2)v_2+\cdots+t(r_n-k_n)v_n)+\cdots+s_nv_n.$$  The sum of the coefficients is easily seen to be 1, which implies that $\lbrace v_2,\ldots,v_n\rbrace$ is a spanning set of $A$ that is smaller than $M$, a contradiction.
+
+(2) implies (3).  Pick $v=v_1$.  Suppose $0=s_2(v_2-v_1)+\cdots+s_n(v_n-v_1)$.  Expand and we have $0=(-s_2-\cdots-s_n)v_1+s_2v_2+\cdots+s_nv_n$.  So $(1-s_2-\cdots-s_n)v_1+s_2v_2+\cdots+s_nv_n=v_1\in A$.  By assumption, there is exactly one way to express $v_1$, so we conclude that $s_2=\cdots=s_n=0$.
+
+(3) implies (1).  If $M$ were not minimal, then some $v\in M$ could be expressed as an affine combination of the remaining vectors in $M$.  So suppose $v_1=k_2v_2+\cdots+k_nv_n$.  Since $\sum k_i=1$, we can rewrite this as $0=k_2(v_2-v_1)+\cdots+k_n(v_n-v_1)$.  Since not all $k_i=0$, $N=\lbrace v_2-v_1,\ldots, v_n-v_1\rbrace$ is not linearly independent.
+\end{proof}
+
+\textbf{Remarks}.
+\begin{itemize}
+\item
+If $\lbrace v_1,\ldots,v_n\rbrace$ is affinely independent set spanning $A$, then $\operatorname{dim}(A)=n-1$.
+\item
+More generally, a set $M$ (not necessarily finite) of vectors is said to be affinely independent if there is a vector $v\in M$, such that $N=\lbrace w-v\mid v\neq w\in M\rbrace$ is linearly independent (every finite subset of $N$ is linearly independent).  The above three characterizations are still valid in this general setting.  However, one must be careful that an affine combination is a finitary operation so that when we take the sum of an infinite number of vectors, we have to realize that only a finite number of them are non-zero.
+\item 
+Given any set $S$ of vectors, the \emph{affine hull} of $S$ is the smallest affine subspace $A$ that contains every vector of $S$, denoted by $\operatorname{Aff}(S)$.  Every vector in $\operatorname{Aff}(S)$ can be written as an affine combination of vectors in $S$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

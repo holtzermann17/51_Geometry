@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AffineTransformation}
+\pmcreated{2013-03-22 14:46:08}
+\pmmodified{2013-03-22 14:46:08}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{affine transformation}
+\pmrecord{37}{36413}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{51A15}
+\pmclassification{msc}{15A04}
+\pmsynonym{scaling}{AffineTransformation}
+\pmrelated{LinearTransformation}
+\pmrelated{AffineSpace}
+\pmrelated{ComplexLine}
+\pmrelated{AffineCombination}
+\pmrelated{AffineGeometry}
+\pmrelated{Collineation}
+\pmdefines{IGL}
+\pmdefines{translation}
+\pmdefines{dilation}
+\pmdefines{dilation map}
+\pmdefines{homothetic transformation}
+\pmdefines{affine property}
+\pmdefines{affine isomorphism}
+\pmdefines{associated linear transformation}
+\pmdefines{affinely isomorphic}
+\pmdefines{affinity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{defn} Let $(A_i,f_i)$ be affine spaces associated with a left (right) vector spaces $V_i$ (over some division ring $D$), where $i=1,2$.  An \emph{affine transformation} from $A_1$ to $A_2$ is a function $\alpha:A_1\to A_2$ such that there is a linear transformation $T:V_1\to V_2$ such that $$T(f_1(P,Q))=f_2(\alpha(P),\alpha(Q))$$
+for any $P,Q\in A$.
+\end{defn}
+Note that $T$ is uniquely determined by $\alpha$, since $f_1$ is a function onto $V_1$.  $T$ and is called the \emph{associated linear transformation} of $\alpha$.  Let us write $[\alpha]$ the associated linear transformation of $\alpha$.  Then the definition above can be illustrated by the following commutative diagram:
+$$\xymatrix@+=2cm{A_1\times A_1 \ar[r]^-{f_1} \ar[d]_{(\alpha,\alpha)} & V_1 \ar[d]^{[\alpha]} \\ A_2\times A_2 \ar[r]_-{f_2} & V_2}$$
+
+Here's an example of an affine transformation.  Let $(A,f)$ be an affine space with $V$ the associated vector space.  Fix $v\in V$.  For each $P\in A$, let $\alpha(P)$ be the unique point in $A$ such that $f(P,\alpha(P))=v$.  Then $\alpha:A\to A$ is a well-defined function.  Furthermore, $f(\alpha(P),\alpha(Q))=v+f(\alpha(P),\alpha(Q))-v = f(P,\alpha(P))+f(\alpha(P),\alpha(Q))+f(\alpha(Q),Q)= f(P,Q)=1_V(f(P,Q))$.  Thus $\alpha$ is affine, with $[\alpha]=1_V$.
+
+An affine transformation $\alpha:A_1\to A_2$ is an \emph{affine isomorphism} if there is an affine transformation $\beta:A_2\to A_1$ such that $\beta\circ \alpha=1_{A_1}$ and $\alpha\circ \beta = 1_{A_2}$.  Two affine spaces $A_1$ and $A_2$ are \emph{affinely isomorphic}, or simply, isomorphic, if there are affine isomorphism $\alpha:A_1\to A_2$.
+
+Below are some basic properties of an affine transformation (see \PMlinkname{proofs here}{PropertiesOfAnAffineTransformation}):
+\begin{enumerate}
+\item $\alpha$ is onto iff $[\alpha]$ is.
+\item $\alpha$ is one-to-one iff $[\alpha]$ is.
+\item A bijective affine transformation $\alpha$ is an affine isomorphism.  In fact, $[\alpha^{-1}]=[\alpha]^{-1}$.
+\item Two affine spaces associated with the same vector space are isomorphic.
+\end{enumerate}
+
+Because of the last property, it is often enough, in practice, to identify $V$ itself as \emph{the} affine space associated with $V$, up to affine isomorphism, with the direction given by $f(v,w)=w-v$.  With this in mind, we may reformulate the definition of an affine transformation as a mapping $\alpha$ from one vector space $V$ to another, $W$, such that there is a linear transformation $T:V\to W$ such that $$T(w-v)=\alpha(w)-\alpha(v).$$  By fixing $w\in V$, we get the following equation $$\alpha(v)=T(v)+(\alpha(w)-T(w)).$$
+
+\begin{defn} Let $V$ and $W$ be left vector spaces over the same division ring $D$. An \emph{affine transformation} is a mapping 
+$\alpha:\colon V \to W$ such that 
+$$\alpha(v)=T(v)+w, \quad v\in V$$
+for some linear transformation $T\colon V\to W$ and some vector $w\in W$. 
+\end{defn}
+
+An \emph{affine property} is a geometry property that is preserved by an affine transformation.  The following are affine properties of an affine transformation Let $A:V\to W$:
+
+\begin{itemize}
+\item linearity.  Given an affine subspace $S+v$ of $V$, then $A(S+v)=L(S+v)+w=L(S)+(L(v)+w)$ is an affine subspace of $W$.
+\item incidence.  Suppose $S+v\subseteq T+u$.  Pick $x\in A(S+v)=L(S)+L(v)+w$, so $x=y+L(v)+w$ where $y\in L(S)$.  Since $L$ is bijective, there is $z\in S$ such that $L(z)=y$.  So $A(z+v)=L(z)+L(v)+w=x$.  Since $z+v\in S+v$, $z+v=t+u$ for some $t\in T$, $x=A(z+v)=A(t+u)\in A(T+u)$.  Therefore, $A(S+v)\subseteq A(T+u)$.
+\item parallelism.  Given two parallel affine subspaces $S+a$ and $S+b$, then $A(S+a)=L(S)+(L(a)+w)$ and $A(S+b)=L(S)+(L(b)+w)$ are parallel.
+\item coefficients of an affine combination.  Given that $v$ is an affine combination of $v_1,\ldots,v_n$: $$v=k_1v_1+\cdots +k_nv_n,$$ where $k_i\in F\mbox{ and }k_1+\cdots+k_n=1$ are the corresponding coefficients.  Then 
+\begin{eqnarray*}
+A(v) &=& k_1L(v_1)+\cdots+k_nL(v_n)+w \\
+&=& k_1(L(v_1)+w)+\cdots+k_n(L(v_n)+w) \\
+&=& k_1A(v_1)+\cdots+k_nA(v_n)
+\end{eqnarray*} is the affine combination of $A(v_1),\ldots,A(v_n)$ with the same set of coefficients.
+\end{itemize}
+
+\subsubsection*{Special Affine Transformations}  
+\begin{enumerate}
+\item \textbf{translation}.  
+An affine transformation of the form $A(v)=v+w$ is called a \emph{translation}.   Every affine transformation can be decomposed as a product of a linear transformation and a translation: $A(v)=L(v)+w=BC(v)$ where $C(v)=L(v)$ and $B(v)=v+w$.  The order of composition is important, since $BC\neq CB$.  Geometrically, a translation moves a geometric figure along a straight line.
+\item \textbf{dilation (map)}.  
+If $L$ has a unique eigenvalue $d\neq 0$ (that is, $L$ may be diagonalized as $dI$, the diagonal matrix with non-zero diagonal entries $=d\in F$), then the affine transformation $A(v)=L(v)$ is called a \emph{dilation}.  Note that a dilation may be written as the product of a vector with a scalar: $A(v)=dv$, which is why a dilation is also called a \emph{scaling}.  A dilation can be visualized as magnifying or shrinking a geometric figure.
+\item \textbf{homothetic transformation}.  
+The composition of a dilation followed by a translation is called a \emph{homothetic transformation}.  It has the form $A(v)=dv+w$, $0\neq d\in F$.
+\item Euclidean transformation.  In the case when both $V$ and $W$ are Euclidean vector spaces, if the associated linear transformation is orthogonal, then the affine transformation is called a \emph{Euclidean transformation}.
+\end{enumerate}
+
+\subsubsection*{Remarks}
+\begin{enumerate}
+\item When $V=W$, the set of affine maps $V\to V$, with function composition as the product, becomes a group, and is denoted by ${\rm IGL}(V)$.  The multiplicative identity is the identity map.  If $A(v)=L(v)+w$, then $A^{-1}(v)=L^{-1}(v)-L^{-1}(w)$.  IGL is short for \emph{\PMlinkescapetext{Inhomogenous General Linear group}} of $V$.  Translations, dilations, and homothetic transformations all form subgroups of ${\rm IGL}(V)$.  If $T$ is the group of translations, $D$ the group of dilations, and $H$ the group of homothetic transformations, then $T$ is a normal subgroup of $T$.  Also, $\operatorname{Aut}(T)$ and $\operatorname{Aut}(D)$ are abelian groups (remember: $F$ is assumed to be a field).
+\item One can more generally define an affine transformation to be an order-preserving bijection between two affine geometries.  It can be shown that this definition coincides with the above one if the underlying field admits no non-trivial automorphisms.  When the two affine geometries are the same, the bijective affine transformation is called an \emph{affinity}.
+\item Another way to generalize an affine transformation is to remove the restriction on the invertibility of the linear transformation $L$.  In this respect, the set $A(V,W)$ of affine transformations from $V$ to $W$ has a natural vector space structure.  It is easy to see that the set $L(V,W)$ of linear transformations from $V$ to $W$ forms a subspace of $A(V,W)$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

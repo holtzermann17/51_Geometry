@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeProofOfNecessityDirectionOfEquivalentConditionsForTriangleshyperbolicAndSpherical}
+\pmcreated{2013-03-22 17:12:55}
+\pmmodified{2013-03-22 17:12:55}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{alternative proof of necessity direction of equivalent conditions for triangles (hyperbolic and spherical)}
+\pmrecord{5}{39539}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{equiangular}
+\PMlinkescapeword{equilateral}
+
+The following is a proof that, in hyperbolic geometry and spherical geometry, an equiangular triangle $\triangle ABC$ is automatically \PMlinkname{equilateral}{EquilateralTriangle} (and therefore \PMlinkname{regular}{RegularTriangle}).  It better \PMlinkescapetext{parallels} the proof of sufficiency supplied in the entry equivalent conditions for triangles and is slightly shorter than the proof of necessity supplied in the same entry.
+
+\begin{proof}
+
+Assume that $\triangle ABC$ is equiangular.
+
+\begin{center}
+\begin{pspicture}(-0.2,-0.2)(5.2,5.2)
+\pspolygon(0,0)(5,0)(2.5,4.33)
+\rput[b](2.5,4.5){$A$}
+\rput[a](0,-0.2){$B$}
+\rput[a](5,-0.2){$C$}
+\psarc(0,0){0.5}{0}{60}
+\psarc(5,0){0.5}{120}{180}
+\psarc(2.5,4.33){0.5}{240}{300}
+\end{pspicture}
+\end{center}
+
+Since $\angle A \cong \angle B \cong \angle C$, AAA yields that $\triangle ABC \cong \triangle BCA$.  By CPCTC, $\overline{AB} \cong \overline{AC} \cong \overline{BC}$.  Hence, $\triangle ABC$ is equilateral.
+
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

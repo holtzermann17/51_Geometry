@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Prismatoid}
+\pmcreated{2013-03-22 17:12:03}
+\pmmodified{2013-03-22 17:12:03}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{prismatoid}
+\pmrecord{10}{39520}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{SimpsonsRule}
+\pmrelated{Volume2}
+\pmrelated{TruncatedCone}
+\pmdefines{altitude}
+\pmdefines{bases}
+\pmdefines{prismoidal formula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A \emph{prismatoid} is a polyhedron, possibly not convex, whose vertices all lie in one or the other 
+of two parallel planes.
+The perpendicular distance between the two planes is called the \emph{altitude}
+of the prismatoid.
+The faces that lie in the parallel planes are called the \emph{bases}
+of the prismatoid.
+The \emph{midsection} is the polygon formed by cutting the prismatoid by
+ a plane parallel to the bases halfway between them.
+
+The volume of a prismatoid is given by the \emph{prismoidal formula}:
+
+$$
+V = \frac{1}{6} h(B_1 + B_2 + 4M)
+$$
+where $h$ is the altitude, $B_1$ and $B_2$ are the areas of the bases and $M$
+is the area of the midsection. 
+
+An alternate formula is :
+
+$$
+V = \frac{1}{4}h ( B_1 + 3S)
+$$ 
+where $S$ is the area of the polygon that is formed by cutting the prismatoid
+by a plane parallel to the bases but 2/3 of the distance from $B_1$ to $B_2$.
+
+A proof of the prismoidal formula for the case where
+the prismatoid is convex is in \cite{Br}. It is also proved in \cite{Ha} for any prismatoid.
+The alternate formula is proved in \cite{Ha}.
+
+Some authors impose the condition that the lateral faces must be triangles
+or trapezoids. However, this condition is unnecessary since it is easily shown
+to hold. 
+
+\begin{thebibliography}{99}
+\bibitem{Br}
+A. Day Bradley, Prismatoid, Prismoid, Generalized Prismoid, \emph{The American Math. Monthly,}
+\textbf{86}, (1979), 486-490.
+\bibitem{Ha}
+G.B. Halsted, \emph{Rational Geometry: A textbook for the Science of Space. Based on
+Hilbert's Foundations}, second edition, John Wiley and Sons, New York, 1907
+\end{thebibliography}
+
+
+
+%%%%%
+%%%%%
+\end{document}

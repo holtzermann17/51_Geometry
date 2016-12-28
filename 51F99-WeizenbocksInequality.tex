@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeizenbocksInequality}
+\pmcreated{2013-03-22 13:19:33}
+\pmmodified{2013-03-22 13:19:33}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Weizenbock's inequality}
+\pmrecord{9}{33837}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51F99}
+\pmrelated{HadwigerFinslerInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In a triangle with sides $a$, $b$, $c$, and with area $A$, the following inequality holds:
+
+$$ a^2 + b^2 + c^2 \geq 4A \sqrt{3}$$
+The proof goes like this: if $s=\frac{a+b+c}{2}$ is the semiperimeter of the
+triangle, then from Heron's formula we have:
+$$ A = \sqrt{s(s-a)(s-b)(s-c)} $$
+But by squaring the latter and expanding the parentheses we obtain:
+$$ 16A^2 = 2(a^2 b^2 + a^2 c^2 + b^2 c^2) - (a^4 + b^4 + c^4) $$
+Thus, we only have to prove that:
+$$ (a^2 + b^2 + c^2)^2 \geq 3[2(a^2 b^2 + a^2 c^2 + b^2 c^2) - (a^4 + b^4 +
+c^4)] $$ or equivalently:
+$$ 4(a^4 + b^4 + c^4) \geq 4(a^2 b^2 + a^2 c^2 + b^2 c^2)$$
+which is trivially equivalent to:
+$$ (a^2 - b^2)^2 + (a^2 - c^2)^2 + (b^2 - c^2)^2 \geq 0$$
+Equality is achieved if and only if $a=b=c$ (i.e. when the triangle is equilateral) .
+
+See also the Hadwiger-Finsler inequality, from which this result follows as a corollary.
+%%%%%
+%%%%%
+\end{document}

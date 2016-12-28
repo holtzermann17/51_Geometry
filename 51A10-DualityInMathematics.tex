@@ -1,0 +1,251 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DualityInMathematics}
+\pmcreated{2013-03-22 18:24:50}
+\pmmodified{2013-03-22 18:24:50}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{duality in mathematics}
+\pmrecord{51}{41063}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{14F25}
+\pmclassification{msc}{55M05}
+\pmclassification{msc}{18-00}
+\pmsynonym{categorical duality}{DualityInMathematics}
+\pmsynonym{Poincar\'e duality}{DualityInMathematics}
+\pmsynonym{polarity}{DualityInMathematics}
+%\pmkeywords{duality in mathematics}
+%\pmkeywords{duality functors}
+%\pmkeywords{Serre duality}
+%\pmkeywords{dualizing sheaf}
+%\pmkeywords{duality of the projective geometry}
+\pmrelated{IndexOfCategoryTheory}
+\pmrelated{SerreDuality}
+\pmrelated{StoneSpace}
+\pmrelated{CompactQuantumGroup}
+\pmrelated{PoincareDuality}
+\pmrelated{Polarity2}
+\pmrelated{DualOfACoalgebraIsAnAlgebra}
+\pmrelated{GrassmanHopfAlgebrasAndTheirDualCoAlgebras}
+\pmrelated{PontryaginDuality}
+\pmrelated{LinearProgrammingProblem}
+\pmrelated{IdealInvertingInPruferRing}
+\pmrelated{IndexOfCategories}
+
+% this is the default PlanetMath preamble. 
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\subsection{Duality in mathematics}
+  The following is a mathematical topic entry on different
+types of \emph{duality} encountered in different areas of mathematics; accordingly there is
+a string of distinct definitions associated with this topic rather than a single, general definition,
+although some of the linked definitions, that is, categorical duality, are more general than others.
+
+\subsubsection{Duality definitions in mathematics:}
+\begin{enumerate}
+
+\item \PMlinkname{Categorical duality and Dual category}{IndexOfCategoryTheory}: reversing arrows
+\item \PMlinkname{Duality principle}{DualityPrinciple}
+\item Double duality
+\item Triality
+\item Self-duality
+\item Duality functors, (for example the duality functor $Hom_k(--,k)$ )  
+\item \PMlinkname{Poincar\'e duality/Poincar\'e isomorphism}{PoincareDuality}
+\item Poincar\'e-Lefschetz duality, and  Alexander-Lefschetz duality
+\item Alexander duality: J. W. Alexander's duality theory (cca. 1915)
+\item Serre duality : 
+\PMlinkname{example- in the proof of the Riemann-Roch theorem for curves}{ProofOfRiemannRochTheorem}.
+\item Dualities in logic, example: \PMlinkname{De Morgan dual}{IdealInvertingInPruferRing}, Boolean algebra 
+\item Stone duality: Boolean algebras and Stone spaces
+\item Dual numbers- as in an associative algebra; (almost synonymous with double) 
+\item Geometric dualities: dual polyhedron, dual of a planar graph, duality in order theory,
+the Legendre transformation -an application of the duality between points and lines; generalized Legendre, that is, the Legendre-Fenchel transformation.
+\item Hamilton--Lagrange duality in theoretical mechanics and optics   
+\item \PMlinkname{Dual space}{DualSpace}
+\item \PMlinkname{Dual space example}{DoubleDualEmbedding}
+\item \PMlinkname{Dual homomorphisms}{DualHomomorphism}
+\item \PMlinkname{Duality of Projective Geometry}{Polarity2}
+\item Analytic dualities 
+\item \PMlinkname{Duals of an algebra/algebraic duality}{DualOfACoalgebraIsAnAlgebra},
+for example, dual pairs of Hopf *-algebras and duality of cross products of C*-algebras
+\item \PMlinkname{Tangled, or Mirror, duality}{GrassmanHopfAlgebrasAndTheirDualCoAlgebras}:
+interchanging morphisms and objects
+\item Duality as a homological mirror symmetry
+\item Cohomology theory duals: de Rham cohomology $\leftarrow \rightarrow$ Alexander-Spanier cohomology
+\item Hodge dual 
+\item \PMlinkname{Duality of locally compact groups}{CompactQuantumGroup}
+\item \PMlinkname{Pontryagin duality}{PontryaginDuality}, for locally compact commutative topological groups and their linear representations
+\item \PMlinkname{Tannaka-Krein duality}{CompactQuantumGroup}: for compact matrix pseudogroups and non-commutative topological groups; its generalization leads to quantum groups in Quantum theories; Tannaka's theorem provides the means to reconstruct a compact group $G$ from its category of representations $\Pi(G)$; Krein's theorem shows which categories arise as a dual object to a compact group; the finite-dimensional representations of Drinfel'd 's quantum
+groups form a braided monoidal category, whereas $\Pi(G)$ is a symmetric monoidal category.
+\item Tannaka duality: an extension of Tannakian duality by 
+Alexander \PMlinkname{Grothendieck}{AlexanderGrothendieckABiographyOf} to algebraic groups and
+Tannakian categories.
+\item Contravariant dualities 
+\item Weak duality, \PMlinkname{example : weak duality theorem in linear programming}{LinearProgrammingProblem};
+dual problems in optimization theory 
+\item Dual codes
+\item Duality in Electrical Engineering 
+\end{enumerate}
+
+\subsubsection{Examples of duals:}
+
+\begin{enumerate}
+\item a category $\mathcal{C}$ and its dual $\mathcal{C}^{op}$
+\item the category of Hopf algebras over a field  is (equivalent to) the opposite category of affine group schemes over
+ $\operatorname{spec} k$
+\item Dual Abelian variety
+\item Example of \PMlinkname{a dual space theorem}{DualSpaceSeparatesPoints}
+\item \PMlinkname{Example of Pontryagin duality}{DualGroupOfGIsHomeomorphicToTheCharacterSpaceOfL1G}
+\item initial and final object
+\item kernel and cokernel
+\item limit and colimit
+\item direct sum and product
+\end{enumerate}
+
+
+\begin{thebibliography}{99}
+\bibitem{SD-JR1989}
+S. Doplicher and J. Roberts. A new duality theory for compact groups. 
+{\em Inventiones Mathematicae}, 98:157--218, 1989.
+
+\bibitem{AJ-RS1991}
+Andr\'e Joyal and Ross Street, An introduction to Tannaka duality and quantum groups, in Part II of Category Theory, Proceedings, Como 1990, eds. A. Carboni, M. C. Pedicchio and G. Rosolini, Lectures Notes in Mathematics No.1488, Springer, Berlin, 1991, 411-492. 
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

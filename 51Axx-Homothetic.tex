@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Homothetic}
+\pmcreated{2013-03-22 15:04:06}
+\pmmodified{2013-03-22 15:04:06}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{homothetic}
+\pmrecord{5}{36789}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51Axx}
+\pmsynonym{homothety}{Homothetic}
+\pmrelated{SimilarityInGeometry}
+\pmrelated{SimilitudeOfParabolas}
+\pmdefines{homothety center}
+\pmdefines{homothety ratio}
+\pmdefines{direct homothety}
+\pmdefines{reverse homothety}
+
+\usepackage{graphicx}
+\begin{document}
+Let $\mathcal{P}$ and $\mathcal{Q}$ be similar polygons, $(P_1,P_2,\ldots,P_n)$ and $(Q_1,Q_2,\ldots,Q_n)$ the respective vertices, so that corresponding vertices under similarity are listed in the same order.
+
+We say that $\mathcal{P}$ and $\mathcal{Q}$ are homothetic if all the lines $P_jQ_j$ are concurrent.
+\begin{center}
+\includegraphics{homot}\\
+$ABCD$ is homothetic to $A'B'C'D'$.
+\end{center}
+The concurrence point of all lines is called the \emph{homothety center}
+Notice that a necessary and sufficient condition for two similar polygons to be homothetic is that corresponding sides be parallel.
+
+If $O$ is the homothety center of two polygons $\mathcal{A}$ and $\mathcal{B}$, then for any pair $P, Q$  of corresponding points under  the homothety (that is, $AB$ passes through $O$), the ratio 
+\[
+k=\frac{OP}{OQ}
+\]
+is known as \emph{homothety ratio}, and it coincides with the similarity ratio. It is customary to work with directed segments when talking of homothety, so the  homothety ratio is a signed number. 
+
+When $k$ is positive we speak of \emph{direct homothety} and not only similarity is preserved, but pictures also have the same orientation (corresponding points to the upper part of one figure are on the upper part of the other). 
+However, if $k$ is negative we have \emph{reverse homothety}, and corresponding lines remain parallel but all orientations are reversed, so it looks like one picture is upside-down when compared to the other. 
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics{dirhomot} & 
+\includegraphics{invhomot} \\
+Direct homothety & Reverse homothethy
+\end{tabular}
+\end{center}
+There is a special case where we have two congruent figures with the same orientation, in this case all the dashed lines are parallel, and we say that the homothety center is the point at infinity.
+
+
+An alternate way of defining homothety is requiring the existence of some point $O$ such that all the lines $PO$ where $P$ is a point on a figure, intersect the other figure on a point $Q$ in such way that all the ratios $OP/OQ$ are the same.
+
+Although both definitions are equivalent for polygons, the later has the benefit that it can be applied to arbitrary figures, and so we can talk about homothethy between arbitrary figures. For instance, it can be proved that any two circles are homotopic, in both direct and inverse ways, and the homothety centers can be  located intersecting appropiated circle tangents when they exist.
+%%%%%
+%%%%%
+\end{document}

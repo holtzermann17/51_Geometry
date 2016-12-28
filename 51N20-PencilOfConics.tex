@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PencilOfConics}
+\pmcreated{2013-03-22 18:51:07}
+\pmmodified{2013-03-22 18:51:07}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{pencil of conics}
+\pmrecord{21}{41661}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51A99}
+\pmrelated{QuadraticCurves}
+\pmrelated{LineInThePlane}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Two \PMlinkname{conics}{TangentOfConicSection}
+\begin{align}
+U \;=\; 0 \quad \mbox{and} \quad V \;=\; 0
+\end{align}
+can intersect in four points, some of which may coincide or be ``imaginary''.
+
+The equation
+\begin{align}
+pU+qV \;=\; 0,
+\end{align}
+where $p$ and $q$ are freely chooseable parametres, not both 0, represents the \emph{pencil} of all the conics which pass through the four intersection points of the conics (1); see quadratic curves. 
+
+The same pencil is gotten by replacing one of the conics (1) by two lines \,$L_1 = 0$\, and\, $L_2 = 0$,\, such that the first line passes through two of the intersection points and the second line through the other two of those points; then the equation of the pencil reads
+\begin{align}
+pL_1L_2+qV \;=\; 0.
+\end{align}
+One can also replace similarly the other ($V$) of the conics (1) by two lines\, $L_3 = 0$\, and\, $L_4 = 0$; then the pencil of conics is
+\begin{align}
+pL_1L_2+qL_3L_4 \;=\; 0.
+\end{align}
+For any pair \,$(p,\,q)$\, of values, one conic section (4) passes through the four points determined by the equation pairs
+$$L_1 = 0\;\land\;L_3 = 0, \quad L_1 = 0\;\land\;L_4 = 0, \quad L_2 = 0\;\land\;L_3 = 0,\quad L_2 = 0\;\land\,L_4 = 0.$$\\
+
+The pencils given by the equations (2), (3) and (4) can be obtained also by fixing either of the parametres $p$ and $q$ for example to $-1$, when e.g. the pencil (4) may be expressed by
+\begin{align}
+pL_1L_2 \;=\; L_3L_4.
+\end{align}
+\textbf{Application.}\, Using (5), we can easily find the equation of a conics which passes through five given points; we may first form the equations of the sides\, $L_1 = 0$,\, $L_2 = 0$,\, $L_3 = 0$\, and\, $L_4 = 0$\, of the quadrilateral determined by four of the given points.\, The equation of the searched conic is then (5), where the value of $p$ is gotten by substituting the coordinates of the fifth point to (5) and by solving $p$.
+
+\textbf{Example.}\, Find the equation of the conic section passing through the points
+$$(-1,\,0), \quad (1,\,0), \quad (0,\,1), \quad (0,\,2), \quad (2,\,2).$$
+We can take the lines
+$$2x+y-2 = 0, \quad x-y+1 = 0, \quad 2x-y+2 = 0, \quad x+y-1 = 0$$
+passing through pairs of the four first points.\, The equation of the pencil of the conics passing through these points is thus of the form
+\begin{align}
+p(2x+y-2)(x-y+1) \;=\; (2x-y+2)(x+y-1).
+\end{align}
+The conics passes through\, $(2,\,2)$, if we substitute\, $x := 2$,\, $y := 2$;\, it follows that\, $p = 3$.\, 
+Using this value in (6) results the equation of the searched conics:
+\begin{align}
+2x^2-y^2-2xy+3y-2 \;=\; 0
+\end{align}
+The coefficients $2$, $-1$, $-2$ of the second degree terms let infer, that this curve is a hyperbola with axes not parallel to the coordinate axes (see \PMlinkname{quadratic curves}{QuadraticCurves}).
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

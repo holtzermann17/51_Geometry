@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDesarguesTheorem}
+\pmcreated{2013-03-22 13:47:51}
+\pmmodified{2013-03-22 13:47:51}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of Desargues' theorem}
+\pmrecord{5}{34514}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A30}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+The claim is that if triangles $ABC$ and $XYZ$ are perspective from
+a point $P$, then they are perspective from a line (meaning that
+the three points
+$$AB\cdot XY\qquad BC\cdot YZ\qquad CA\cdot ZX$$
+are collinear) and conversely.
+
+Since no three of $A,B,C,P$ are collinear, we can lay down
+homogeneous coordinates such that
+$$A=(1,0,0)\qquad B=(0,1,0)\qquad C=(0,0,1)\qquad P=(1,1,1)$$
+By hypothesis, there are scalars $p,q,r$ such that
+$$X=(1,p,p)\qquad Y=(q,1,q)\qquad Z=(r,r,1)$$
+The equation for a line through $(x_1,y_1,z_1)$ and
+$(x_2,y_2,z_2)$ is
+$$(y_1z_2-z_1y_2)x+(z_1x_2-x_1z_2)y+(x_1y_2-y_1x_2)z=0\;,$$
+giving us equations for six lines:
+\begin{eqnarray*}
+AB&:&z=0 \\ BC&:&x=0 \\ CA&:&y=0 \\
+XY&:&(pq-p)x+(pq-q)y+(1-pq)z=0 \\
+YZ&:&(1-qr)x+(qr-q)y+(qr-r)z=0 \\
+ZX&:&(rp-p)x+(1-rp)y+(rp-r)z=0
+\end{eqnarray*}
+whence
+\begin{eqnarray*}
+AB\cdot XY&=&(pq-q,-pq+p,0)\\
+BC\cdot YZ&=&(0,qr-r,-qr+q)\\
+CA\cdot ZX&=&(-rp+r,0,rp-p).
+\end{eqnarray*}
+As claimed, these three points are collinear, since the
+determinant
+$$ \left| \begin{array}{ccc}
+pq-q & -pq+p & 0 \\
+0 & qr-r & -qr+q \\
+-rp+r & 0 & rp-p
+\end{array}\right| $$
+is zero. (More precisely, all three points are on the line
+$$p(q-1)(r-1)x+(p-1)q(r-1)y+(p-1)(q-1)rz=0\;.)$$
+
+Since the hypotheses are self-dual, the converse is true also, by
+the principle of duality.
+%%%%%
+%%%%%
+\end{document}

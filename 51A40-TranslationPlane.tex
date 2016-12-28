@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TranslationPlane}
+\pmcreated{2013-03-22 19:15:15}
+\pmmodified{2013-03-22 19:15:15}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{translation plane}
+\pmrecord{10}{42180}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A40}
+\pmclassification{msc}{51A35}
+\pmrelated{MoufangPlane}
+\pmdefines{translation line}
+\pmdefines{dual translation plane}
+\pmdefines{translation point}
+\pmdefines{affine translation plane}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\pi$ be a projective plane.  Recall that a central collineation on $\pi$ is a collineation $\rho$ with a center $C$ and an axis $\ell$.  It is well-known that $C$ and $\ell$ are uniquely determined.  We also call $\rho$ a $(C,\ell)$-collineation.
+
+\textbf{Definition}.  Let $\pi$ be a projective plane.  We say that $\pi$ is \emph{$(C,\ell)$-transitive} if there is a point $C$ and a line $\ell$, such that for any points $P,Q$ where
+\begin{itemize}
+\item $P,Q$ and $C$ are collinear and pairwise distinct,
+\item $P,Q\notin \ell$,
+\end{itemize}
+there is a $(C,\ell)$-collineation $\rho$ such that $\rho(P)=Q$.
+
+It can be shown that $\pi$ if $(C,\ell)$-transitive iff it is $(C,\ell)$-Desarguesian; that is, if two triangles are perspective from point $C$, then they are perspective from line $\ell$.  From this, it is easy to see that $\pi$ is a Desarguesian plane iff it is $(C,\ell)$-transitive for any point $C$ and any line $\ell$, of $\pi$.
+
+Now, suppose that $C$ lies on $\ell$.  Then one can show that $\pi$ is $(C,\ell)$-transitive iff it can be coordinatized by a linear ternary ring $R$ such that $R$ is a group with respect to the derived operation $+$ (addition).  When $\pi$ is so coordinatized, $\ell$ is the line at infinity, and $C$ is the point whose coordinate is $(\infty)$.
+
+This group is not necessarily abelian.  So what condition(s) must be imposed on $\pi$ so that $(R,+)$ is an abelian group?  The answer lies in the next definition:
+
+\textbf{Definition}.  Let $\pi$ be a projective plane.  $\pi$ is said to be $(m,\ell)$-transitive if there are lines $m,\ell$ such that $\pi$ is $(C,\ell)$-transitive for all $C\in m$.
+
+\textbf{Definition}.  A projective plane $\pi$ is a \emph{translation plane} if there is a line $\ell$ such that $\pi$ is $(\ell,\ell)$-transitive.  We also say that $\pi$ is a translation plane with respect to $\ell$.  The line $\ell$ is called a \emph{translation line} of $\pi$.
+
+It can be shown that $\pi$ is a translation plane with respect to $\ell$ iff it can be coordinatized by a Veblen-Wedderburn system (thus implying that $(R,+)$ is abelian).
+
+When $\pi$ is a translation plane with respect to two distinct lines $\ell$ and $m$, then it is not hard to see that it is a translation plane with respect to every line passing through $\ell\cap m$.
+
+When $\pi$ is a translation plane with respect to three non-concurrent lines, then it is a translation plane with respect to every line.  A projective plane which is a translation plane with respect to every line is called a Moufang plane.  An example of a translation plane that is not Moufang is the Hall plane, coordinatized by the Hall quasifield.  An example of a projective plane that is not a translation plane is the Hughes plane.
+
+\textbf{Remark}.  There are also duals to the notions above: a projective plane $\pi$ is
+\begin{enumerate}
+\item
+\emph{$(P,Q)$-transitive} if there are points $P,Q$ such that $\pi$ is $(P,m)$-transitive for any line $m$ passing through $Q$.  
+\item
+a \emph{dual translation plane} if there is a point $P$ such that $\pi$ is $(P,P)$-transitive.  We also say that $\pi$ is a dual translation plane with respect to $P$, and that $P$ is a \emph{translation point} of $\pi$.
+\end{enumerate}
+
+If $\pi$ is a projective plane, then the following are true:
+\begin{itemize}
+\item
+$\pi$ is translation plane with respect to some line $\ell$ and a dual translation plane with respect to some $P\in \ell$ iff $\pi$ can be coordinatized by a semifield.  In this coordinatization, $\ell$ is the line at infinity and $P$ is the point with coordinate $(\infty)$.
+\item
+$\pi$ is translation plane with respect to some line $PQ$ and $(P,Q)$- and $(Q,P)$-transitive iff $\pi$ can be coordinatized by a nearfield.  In this coordinatization, $PQ$ is the line at infinity where $P$ and $Q$ have coordinates $(0)$ and $(\infty)$ (or vice versa).
+\end{itemize}
+
+\textbf{Remark}.  By removing the line at infinity from a translation plane, we obtain an \emph{affine translation plane}.  By the definition of a translation plane, an affine translation plane can be characterized as an affine plane where the minor affine Desarguesian property holds.
+
+\begin{thebibliography}{7}
+\bibitem{RC} R. Casse, {\it Projective Geometry, An Introduction}, Oxford University Press (2006)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentConditionsForTriangles}
+\pmcreated{2013-03-22 17:12:46}
+\pmmodified{2013-03-22 17:12:46}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{equivalent conditions for triangles}
+\pmrecord{10}{39536}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{Triangle}
+\pmrelated{IsoscelesTriangle}
+\pmrelated{EquilateralTriangle}
+\pmrelated{EquiangularTriangle}
+\pmrelated{RegularTriangle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{equilateral}
+\PMlinkescapeword{equiangular}
+
+The following theorem holds in Euclidean geometry, hyperbolic geometry, and spherical geometry:
+
+\begin{thm*}
+Let $\triangle ABC$ be a triangle.  Then the following are equivalent:
+
+\begin{itemize}
+\item $\triangle ABC$ is \PMlinkname{equilateral}{EquilateralTriangle};
+\item $\triangle ABC$ is \PMlinkname{equiangular}{EquiangularTriangle};
+\item $\triangle ABC$ is \PMlinkname{regular}{RegularTriangle}.
+\end{itemize}
+
+\end{thm*}
+
+Note that this statement does not generalize to any polygon with more than three sides in any of the indicated geometries.
+
+\begin{proof}
+It suffices to show that $\triangle ABC$ is equilateral if and only if it is equiangular.
+
+Sufficiency:  Assume that $\triangle ABC$ is equilateral.
+
+\begin{center}
+\begin{pspicture}(-0.2,-0.2)(5.2,5.2)
+\pspolygon(0,0)(5,0)(2.5,4.33)
+\rput[b](2.5,4.5){$A$}
+\rput[a](0,-0.2){$B$}
+\rput[a](5,-0.2){$C$}
+\psline(2.5,-0.2)(2.5,0.2)
+\psline(1.15,2.2)(1.35,2.1)
+\psline(3.65,2.1)(3.85,2.2)
+\end{pspicture}
+\end{center}
+
+Since $\overline{AB} \cong \overline{AC} \cong \overline{BC}$, SSS yields that $\triangle ABC \cong \triangle BCA$.  By CPCTC, $\angle A \cong \angle B \cong \angle C$.  Hence, $\triangle ABC$ is equiangular.
+
+Necessity:  Assume that $\triangle ABC$ is equiangular.
+
+\begin{center}
+\begin{pspicture}(-0.2,-0.2)(5.2,5.2)
+\pspolygon(0,0)(5,0)(2.5,4.33)
+\rput[b](2.5,4.5){$A$}
+\rput[a](0,-0.2){$B$}
+\rput[a](5,-0.2){$C$}
+\psarc(0,0){0.5}{0}{60}
+\psarc(5,0){0.5}{120}{180}
+\psarc(2.5,4.33){0.5}{240}{300}
+\end{pspicture}
+\end{center}
+
+By the theorem on determining from angles that a triangle is isosceles, we conclude that $\triangle ABC$ is isosceles with legs $\overline{AB} \cong \overline{AC}$ and that $\triangle BCA$ is isosceles with legs $\overline{AC} \cong \overline{BC}$.  Thus, $\overline{AB} \cong \overline{AC} \cong \overline{BC}$.  Hence, $\triangle ABC$ is equilateral.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

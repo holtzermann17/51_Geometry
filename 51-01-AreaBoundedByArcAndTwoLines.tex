@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaBoundedByArcAndTwoLines}
+\pmcreated{2013-03-22 19:05:15}
+\pmmodified{2013-03-22 19:05:15}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{area bounded by arc and two lines}
+\pmrecord{15}{41976}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-01}
+\pmclassification{msc}{53A04}
+\pmsynonym{area in polar coordinates}{AreaBoundedByArcAndTwoLines}
+%\pmkeywords{polar coordinates}
+\pmrelated{SectorOfACircle}
+\pmrelated{AreaOfPlaneRegion}
+\pmrelated{SubstitutionNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let\, $r = r(\varphi)$\, be the equation of a continuous curve in polar coordinates and $A$ be the area of the planar region \PMlinkescapetext{bounded} by the curve and the line segments from the origin to two points of the curve corresponding the polar angles $\alpha$ and $\beta$ ($> \alpha$).\, Then the area can be calculated from
+\begin{align}
+A \;=\; \frac{1}{2}\int_\alpha^\beta\![r(\varphi)]^2\,d\varphi.
+\end{align}
+
+\emph{Proof.}\, We fit between $\alpha$ and $\beta$ a set of values
+\begin{align}
+\varphi_1 < \varphi_2 < \ldots < \varphi_{n-1}
+\end{align}
+and denote\, $\alpha = \varphi_0$,\; $\beta = \varphi_n$\, and think the line segments from the origin to each point of the curve corresponding the values $\varphi_i$.\, Then the region is divided into $n$ parts.\, For every part we form inscribed and circumscribed circular sector with the common tip in the origin and the radii along the lines 
+\,$\varphi = \varphi_i$.\, The union of the inscribed sectors is contained in the region and the union of the circumscribed sectors contains the region.\, The unions have the areas
+$$\sum_{i=1}^n\frac{1}{2}r_i^2(\varphi_i\!-\!\varphi_{i-1}) \quad \mbox{and} 
+\quad \sum_{i=1}^n\frac{1}{2}R_i^2(\varphi_i\!-\!\varphi_{i-1}),$$
+where $r_i$ means the least and $R_i$ the greatest value of $r(\varphi)$ on the interval \,$[\varphi_{i-1},\,\varphi_i]$.\, Hence the area $A$ is between these sums for any division of the interval\, $[\alpha,\,\beta]$\, with the values of (2).\, But by the definition of the Riemann integral we know that there is only one real number having this property for any division and that also the definite integral
+$$\int_\alpha^\beta\frac{1}{2}[r(\varphi)]^2\,d\varphi \;=\; \frac{1}{2}\int_\alpha^\beta\![r(\varphi)]^2\,d\varphi$$
+is between those sums.\, Q.E.D.\\
+
+
+\textbf{Example 1.}\, Determine the area $A$ enclosed by the lemniscate of Bernoulli \,$r = \sqrt{\cos{2\varphi}}$.\\
+\begin{center}
+\begin{pspicture}(-3,-1.5)(3,1.5)
+\psset{unit=2cm}
+\psline[arrows=->](0,0)(2,0)
+\psline(0,0)(1.1,1.1)
+\psplot[linecolor=blue,linewidth=0.02]{-1.414}{1.414}{4 x mul x mul 1 add sqrt x x mul sub 1 sub sqrt}
+\psplot[linecolor=blue,linewidth=0.02]{-1.414}{1.414}{0 4 x mul x mul 1 add sqrt x x mul sub 1 sub sqrt sub}
+\psdot[linecolor=blue](0,0)
+\rput(-3,-1.1){.}
+\rput(3,1.1){.}
+\end{pspicture}
+\end{center}
+
+The portion of the lemniscate situated in the first quadrant is gotten when $\varphi$ gets the values from 0 to $\frac{\pi}{4}$, whence we have
+$$\frac{A}{4} \;=\; \frac{1}{2}\int_0^{\frac{\pi}{4}}(a\sqrt{\cos{2\varphi}})^2\,d\varphi 
+\;=\; \frac{a^2}{2}\int_0^{\frac{\pi}{4}}\cos{2\varphi}\;d\varphi 
+\;=\; \frac{a^2}{2}\!\sijoitus{0}{\quad\frac{\pi}{4}}\!\frac{\sin{2\varphi}}{2}  \;=\; \frac{a^2}{4}$$
+and therefore the whole area in question is $a^2$.\\
+
+\textbf{Example 2.}\, Determine the area $A$ enclosed by the logarithmic spiral \,$r = Ce^{k\varphi}$\, and two \PMlinkescapetext{polar} radii \,$r_1 := Ce^{k\varphi_1}$\, and\, $r_2 := Ce^{k\varphi_2}$\, ($k > 0$,\; $\varphi_1 < \varphi_2$).
+
+The \PMlinkescapetext{formula} (1) directly yields
+$$A \;=\; \frac{C^2}{2}\!\int_{\varphi_1}^{\varphi_2}e^{2k\varphi}\,d\varphi 
+\;=\; \frac{C^2}{2}\!\sijoitus{\varphi=\varphi_1}{\quad{\varphi_2}}\!\frac{e^{2k\varphi}}{2k} 
+\;=\; \frac{C^2}{4k}(e^{2k\varphi_2}-e^{2k\varphi_1}) \;=\;\frac{r_2^2-r_1^2}{4k}.$$
+
+
+\begin{thebibliography}{9}
+\bibitem{J} {\sc Ernst Lindel\"of}: {\em Johdatus korkeampaan analyysiin}. Fourth edition. Werner S\"oderstr\"om Osakeyhti\"o, Porvoo ja Helsinki (1956).
+\bibitem{NP}{\sc N. Piskunov:} {\em Diferentsiaal- ja integraalarvutus k\~{o}rgematele tehnilistele \~{o}ppeasutustele}.\, Kirjastus Valgus, Tallinn  (1966).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

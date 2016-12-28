@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvertingBetweenTheBeltramiKleinModelAndThePoincareDiscModel}
+\pmcreated{2013-03-22 17:07:40}
+\pmmodified{2013-03-22 17:07:40}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{converting between the Beltrami-Klein model and the Poincar\'{e} disc model}
+\pmrecord{7}{39431}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M10}
+\pmrelated{BeltramiKleinModel2}
+\pmrelated{PoincareDiscModel}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+The Beltrami-Klein model and the Poincar\'e disc model are closely related in that they both use the unit disc excluding the boundary and that poles can be defined for both models.  In converting from one model to the other, it is easiest to use one unit disc for both models simultaneously.  Lines of the two models can be put into correspondence as follows:  Given a line $\ell$ in one model, its corresponding line $\ell'$ in the other model is such that it has the same endpoints as $\ell$.
+
+If $\ell$ is a diameter, this means that $\ell'=\ell$.  Otherwise, $\ell'$ will have the same pole as $\ell$.
+
+In all pictures in this entry, blue segments are lines in the Beltrami-Klein model, and red arcs are lines in the Poincar\'e disc model.
+
+In the picture below, these two lines correspond to each other:
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psline[linecolor=blue]{o-o}(-2,0)(1.414,1.414)
+\psarc[linecolor=red]{o-o}(-2,4.828){4.828}{270}{315}
+\end{pspicture}
+\end{center}
+
+Given a line in the Poincar\'e disc model, it is easy to construct the corresponding line in the Beltrami-Klein model:  Simply connect the endpoints by using a straightedge.
+
+Given a line in the Beltrami-Klein model that is not a diameter of the unit circle, its pole must be found in \PMlinkescapetext{order} to construct the corresponding line in the Poincar\'e disc model.
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,3)
+\pscircle[linestyle=dashed](0,0){2}
+\psline[linecolor=blue]{o-o}(-1.414,1.414)(1.2,1.6)
+\psline{<->}(-2,0.828)(0.047,2.875)
+\psline{<->}(-0.5,2.875)(2,1)
+\psdots(-0.18743,2.64057)
+\end{pspicture}
+\end{center}
+
+The pole serves as the \PMlinkname{center}{Center8} of the circle to which the corresponding line in the Poincar\'e disc model belongs.
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,3)
+\pscircle[linestyle=dashed](0,0){2}
+\psline[linecolor=blue]{o-o}(-1.414,1.414)(1.2,1.6)
+\psline{<->}(-2,0.828)(0.047,2.875)
+\psline{<->}(-0.5,2.875)(2,1)
+\psdots(-0.18743,2.64057)
+\psarc[linecolor=red]{o-o}(-0.18743,2.64057){1.7347}{225}{323.13}
+\end{pspicture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PencilOfLines}
+\pmcreated{2013-03-22 18:09:03}
+\pmmodified{2013-03-22 18:09:03}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{pencil of lines}
+\pmrecord{8}{40707}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{LineInThePlane}
+\pmrelated{Determinant2}
+\pmrelated{HomogeneousLinearProblem}
+\pmrelated{Pencil2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let 
+\begin{align}
+A_ix+B_iy+C_i = 0
+\end{align}
+be equations of some lines.\, Use the short notations\, $A_ix+B_iy+C_i \,:=\, L_i$.
+
+If the lines\, $L_1 = 0$\, and\, $L_2 = 0$\, have an intersection point $P$, then, by the \PMlinkname{parent entry}{LineThroughAnIntersectionPoint}, the equation
+\begin{align}
+k_1L_1+k_2L_2 = 0
+\end{align}
+with various real values of $k_1$ and $k_2$ can \PMlinkescapetext{represent} any line passing through the point $P$; this set of lines is called a {\em pencil of lines}.\\
+ 
+
+\textbf{Theorem.}\, A necessary and sufficient condition in \PMlinkescapetext{order} to three lines
+$$L_1 = 0, \quad L_2 = 0, \quad L_3 = 0$$
+pass through a same point, is that the determinant formed by the coefficients of their equations (1) vanishes:
+$$
+\left|\begin{matrix}
+A_1 & B_1 & C_1\\
+A_2 & B_2 & C_2\\
+A_3 & B_3 & C_3
+\end{matrix}\right| = 
+\left|\begin{matrix}
+A_1 & A_2 & A_3\\
+B_1 & B_2 & B_3\\
+C_1 & C_2 & C_3
+\end{matrix}\right| = 0.
+$$
+
+{\em Proof.}\, If the line\, $L_3 = 0$\, belongs to the fan of lines determined by the lines\, $L_1 = 0$\, and\, $L_2 = 0$,\, i.e. all the three lines have a common point, there must be the identity
+$$L_3 \equiv L_1+L_2,$$
+i.e. there exist three real numbers $k_1$, $k_2$, $k_3$, which are not all zeroes, such that the equation
+\begin{align}
+k_1L_1+k_2L_2+k_3L_3 \equiv 0
+\end{align}
+is satisfied identically by all real values of $x$ and $y$.
+This means that the group of homogeneous linear equations
+\begin{align*}
+\begin{cases}
+k_1A_1+k_2A_2+k_3A_3 = 0,\\
+k_1B_1+k_2B_2+k_3B_3 = 0,\\  
+k_1C_1+k_2C_2+k_3C_3 = 0
+\end{cases}
+\end{align*}
+has nontrivial solutions $k_1,\,k_2,\,k_3$.
+By linear algebra, it follows that the determinant of this group of equations has to vanish.
+
+Suppose conversely that the determinant vanishes.\, This implies that the above group of equations has a nontrivial solution $k_1,\,k_2,\,k_3$.\, Thus we can write the identic equation (3).\, Let e.g.\, $k_1 \neq 0$.\, Solving (3) for $L_1$ yields
+$$L_1 \equiv -\frac{k_2L_2+k_3L_3}{k_1},$$
+which shows that the line\, $L_1 = 0$\, belongs to the fan determined by the lines\, $L_2 = 0$\, and\, $L_3 = 0$; so the lines pass through a common point.
+
+\begin{thebibliography}{8}
+\bibitem{LP}{\sc Lauri Pimi\"a}: {\em Analyyttinen geometria}.\, Werner S\"oderstr\"om Osakeyhti\"o, Porvoo and Helsinki (1958).
+\end{thebibliography} 
+
+%%%%%
+%%%%%
+\end{document}

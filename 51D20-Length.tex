@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Length}
+\pmcreated{2013-03-22 16:31:45}
+\pmmodified{2013-03-22 16:31:45}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{length}
+\pmrecord{17}{38709}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51D20}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M25}
+\pmrelated{Area2}
+\pmrelated{Volume2}
+\pmrelated{BasicPolygon}
+\pmdefines{length of a polygon}
+\pmdefines{length of a set}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+% as suggested by Wkbj79
+\usepackage{pstricks}
+\begin{document}
+The \emph{length} of a line segment is the distance between its endpoints. Length may be measured in meters, yards, abstract units, etc. For example, in the following diagram
+
+\begin{center}
+\begin{pspicture}(-1,-0.3)(13,0.3)
+\psline{<->}(-1,0)(13,0)
+\psdots(0,0)(3,0)(9,0)(9.6,0)(12,0)
+\rput[a](0,-0.3){0}
+\rput[a](3,-0.3){1}
+\rput[a](9,-0.3){3}
+\rput[a](9.6,-0.3){3.2}
+\rput[a](12,-0.3){4}
+\rput[b](0,0.2){$A$}
+\rput[b](3,0.2){$B$}
+\rput[b](9,0.2){$C$}
+\rput[b](9.6,0.2){$D$}
+\rput[b](12,0.2){$E$}
+\rput[l](-1,0){.}
+\rput[r](13,0){.}
+\end{pspicture}
+\end{center}
+
+$AB$ is one unit long, $BC$ is two units long, $CD$ is a fifth of a unit, $DE$ is four fifths of a unit, $AC$ is three units, etc.
+
+The concept of length as defined above is a special case of a general concept called measure.
+
+In two-dimensional space, length usually goes along the $x$ axis while height goes along the $y$ axis. The same holds in three-dimensional space.
+
+For triangles, pentagons, and higher \PMlinkname{$n$-gons}{BasicPolygon}, it is customary to refer to the length of any of its sides as the \emph{length of the \PMlinkescapetext{polygon}}. The length of a circle's side is called its circumference.
+
+In set theory, \emph{length} refers to the number of elements a set (or one-dimensional array) has. This is also known as cardinality. For example, $\{2, 5, 11, 23, 47\}$ has length $5$.
+%%%%%
+%%%%%
+\end{document}

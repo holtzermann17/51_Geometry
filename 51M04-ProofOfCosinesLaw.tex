@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCosinesLaw}
+\pmcreated{2013-03-22 18:27:13}
+\pmmodified{2013-03-22 18:27:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{proof of cosines law}
+\pmrecord{4}{41116}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmrelated{DerivationOfCosinesLaw}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $a$, $b$, $c$ be the sides of a triangle and $\alpha$, $\beta$, $\gamma$ its angles, respectively.\, By the projection formula, one may write the equalities
+\begin{align*}
+\begin{cases}
+a = b\cos\gamma+c\cos\beta\\
+b = c\cos\alpha+a\cos\gamma\\
+c = a\cos\beta+b\cos\alpha.
+\end{cases}
+\end{align*}
+Multiplying the equalities by $a$, $-b$ and $-c$, respectively, they read
+\begin{align*}
+\begin{cases}
+a^2 \;=\; ab\cos\gamma+ca\cos\beta\\
+-b^2 = -bc\cos\alpha-ab\cos\gamma\\
+-c^2 = -ca\cos\beta -bc\cos\alpha.
+\end{cases}
+\end{align*}
+Addition of these yields the sum equation
+$$a^2-b^2-c^2 = -2bc\cos\alpha,$$
+i.e. 
+$$a^2 \;=\; b^2+c^2-2bc\cos\alpha,$$
+which is the cosines law.
+
+%%%%%
+%%%%%
+\end{document}

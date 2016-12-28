@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompassAndStraightedgeConstructionOfCenterOfGivenCircle}
+\pmcreated{2013-03-22 17:13:44}
+\pmmodified{2013-03-22 17:13:44}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{compass and straightedge construction of center of given circle}
+\pmrecord{10}{39556}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51-00}
+\pmrelated{ConstructTheCenterOfAGivenCircle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{center}
+\PMlinkescapeword{label}
+\PMlinkescapeword{order}
+
+Given a circle in the Euclidean plane, one can construct its \PMlinkname{center}{Center8} using compass and straightedge as follows:
+
+\begin{enumerate}
+
+\item Draw a chord.  Label its endpoints as $A$ and $B$.
+
+\begin{center}
+\begin{pspicture}(-4,-4)(4,4)
+\rput[r](3,0){.}
+\rput[a](0,3){.}
+\rput[l](-3,0){.}
+\rput[b](0,-3){.}
+\pscircle(0,0){3}
+\psline[linecolor=blue](-2.5981,-1.5)(2.5981,-1.5)
+\rput[a](-2.5981,-1.8){$A$}
+\rput[a](2.5981,-1.8){$B$}
+\psdots(-2.5981,-1.5)(2.5981,-1.5)
+\end{pspicture}
+\end{center}
+
+\item Construct the perpendicular bisector of $\overline{AB}$ in order to find the two points $C$ and $D$ where it intersects the circle.
+
+\begin{center}
+\begin{pspicture}(-4,-4)(4,4)
+\rput[r](3,0){.}
+\rput[a](0,4){.}
+\rput[l](-3,0){.}
+\rput[b](0,-4){.}
+\pscircle(0,0){3}
+\psline(-2.5981,-1.5)(2.5981,-1.5)
+\rput[a](-2.5981,-1.8){$A$}
+\rput[a](2.5981,-1.8){$B$}
+\psarc[linecolor=blue](-2.5981,-1.5){2.8}{-45}{45}
+\psarc[linecolor=blue](2.5981,-1.5){2.8}{135}{225}
+\psline[linecolor=blue]{<->}(0,-4)(0,4)
+\rput[r](-0.1,-3.4){$C$}
+\rput[r](-0.1,3.2){$D$}
+\psdots(-2.5981,-1.5)(2.5981,-1.5)(0,-3)(0,3)
+\end{pspicture}
+\end{center}
+
+\item Construct the perpendicular bisector of $\overline{CD}$ to determine the midpoint $O$ of $\overline{CD}$.  $O$ is the center of the circle.
+
+\begin{center}
+\begin{pspicture}(-4,-4)(4,4)
+\rput[r](4,0){.}
+\rput[a](0,4){.}
+\rput[l](-4,0){.}
+\rput[b](0,-4){.}
+\pscircle(0,0){3}
+\psline(-2.5981,-1.5)(2.5981,-1.5)
+\rput[a](-2.5981,-1.8){$A$}
+\rput[a](2.5981,-1.8){$B$}
+\psarc(-2.5981,-1.5){2.8}{-45}{45}
+\psarc(2.5981,-1.5){2.8}{135}{225}
+\psline{<->}(0,-4)(0,4)
+\rput[r](-0.1,-3.4){$C$}
+\rput[r](-0.1,3.2){$D$}
+\psarc[linecolor=blue](0,-3){3.2}{60}{120}
+\psarc[linecolor=blue](0,3){3.2}{240}{300}
+\psline[linecolor=blue]{<->}(-4,0)(4,0)
+\rput[r](-0.1,0){$O$}
+\psdots(-2.5981,-1.5)(2.5981,-1.5)(0,-3)(0,3)(0,0)
+\end{pspicture}
+\end{center}
+
+\end{enumerate}
+
+A justification for these constructions is supplied in the entry construct the center of a given circle.
+
+If you are interested in seeing the rules for compass and straightedge constructions, click on the \PMlinkescapetext{link} provided.
+%%%%%
+%%%%%
+\end{document}

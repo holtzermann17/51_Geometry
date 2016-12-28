@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NeutralGeometry}
+\pmcreated{2013-03-22 15:33:49}
+\pmmodified{2013-03-22 15:33:49}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{neutral geometry}
+\pmrecord{9}{37467}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51F10}
+\pmclassification{msc}{51F05}
+\pmsynonym{absolute geometry}{NeutralGeometry}
+\pmsynonym{Dedekind axiom}{NeutralGeometry}
+\pmdefines{hyperbolic axiom}
+\pmdefines{Bolyai-Lobachevsky geometry}
+\pmdefines{continuity axiom}
+\pmdefines{categorical}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\renewcommand{\line}[1]{\overleftrightarrow{#1}}
+\newcommand{\ray}[1]{\overrightarrow{#1}}
+\begin{document}
+\textbf{Dedekind Cuts.}  Let $\ell$ be a line in a linear ordered
+geometry $S$ and let $A,B$ be two subsets on $\ell$.  A point $p$ is
+said to be between $A$ and $B$ if for any pair of points $q\in A$
+and $r\in B$, $p$ is between $q$ and $r$.  Note that $p$ necessarily
+lies on $\ell$.
+\\\\
+For example, given a ray $\rho$ on a line $\ell$.  If $p$ is the
+source of $\rho$, then $p$ is a point between $\rho$ and its
+opposite ray $-\rho$, regardless whether the ray is defined to be
+open or closed.  It is easy to see that $p$ is the unique point
+between $\rho$ and $-\rho$.
+\\\\
+Given a line $\ell$, a Dedekind cut on $\ell$ is a pair of subsets
+$A,B\subseteq\ell$ such that $A\cup B=\ell$ and there is a unique
+point $p$ between $A$ and $B$.  A ray $\rho$ on a line $\ell$ and
+its compliment $\overline{\rho}$ constitute a Dedekind cut on
+$\ell$.
+\\\\
+If $A,B$ form a Dedekind cut on $\ell$, then $A$ and $B$ have two additional properties:
+\begin{enumerate}
+\item no point on $A$ is strictly between two points on $B$, and
+\item no point on $B$ is strictly between two points on $A$.
+\end{enumerate}
+
+Conversely, if $A,B$ satisfy the above two conditions, can we say that $A$ and $B$ constitute a Dedekind cut?  In a neutral geometry, the answer is yes.
+
+\textbf{Neutral Geometry.} A neutral geometry is a linear ordered
+geometry satisfying
+\begin{enumerate}
+\item the congruence axioms, and
+\item the continuity axiom:
+given any line $\ell$ with $\ell=A\cup B$ such that
+\begin{enumerate}
+\item no point on $A$ is (strictly) between two points on $B$, and
+\item no point on $B$ is (strictly) between two points on $A$.
+\end{enumerate}
+then $A$ and $B$ constitute a Dedekind cut on $\ell$.  In other
+words, there is a unique point $o$ between $A$ and $B$.
+\end{enumerate}
+Clearly,
+$A\cap B$ contains at most one point.  The continuity axiom is also known as Dedekind's Axiom.
+
+\textbf{Properties.}
+\begin{enumerate}
+\item Let $\ell=A\cup B$ be a line, satisfying (a) and (b)
+above and let $p\in A$.  Suppose $\rho$ lying on $\ell$ is a ray
+emanating from $p$.  Then either $\rho\subseteq A$ or $B\subseteq
+\rho$.
+\item Let $\ell=A\cup B$ be a line, satisfying (a) and (b)
+above and let $o$ be the unique point as mentioned above.  Then a
+closed ray emanating from $o$ is either $A$ or $B$.
+This implies that every Dedekind cut on a line
+$\ell$ consists of at least one ray.
+\item We can similarly propose a continuity axiom on a ray as follows: given any ray $\rho$ with $\rho=A\cup B$ such that
+\begin{itemize}
+\item no point on $A$ is strictly between two points on $B$, and
+\item no point on $B$ is strictly between two points on $A$.
+\end{itemize}
+then there is a unique point $o$ on $\rho$ between $A$ and $B$.
+It turns out that the two continuity axioms are equivalent.
+\item \textbf{Archimedean Property}  Given two line segments $\overline{pq}$ and $\overline{rs}$, then there is a unique natural number $n$ and a unique point $t$, such that
+\begin{enumerate}
+\item $t$ lies on the line segment $n\cdot\overline{rs}\subseteq\ray{rs}$,
+\item $t$ does not lie on the line segment
+$(n-1)\cdot\overline{rs}$, and
+\item $\overline{pq}\cong\overline{rt}$.
+\end{enumerate}
+This property usually appears in the study of ordered fields.
+\item For any given line $\ell$ and any point $p$, there exists a line $m$ passing through $p$ that is perpendicular to $\ell$.
+\item Consequently, for any given line $\ell$ and any point $p$ not lying on $\ell$, there exists at leaast one line passing through $p$ that is parallel to $\ell$.  If there is more than one line passing through $p$ parallel to $\ell$, then there are infinitely many of these lines.
+\end{enumerate}
+
+
+\textbf{Examples}.
+\begin{itemize}
+\item A Euclidean geometry is a neutral geometry satisfying the Euclid's
+parallel axiom: for any given line and any given point not lying on
+the line, there is a unique line passing through the point and
+parallel to the given line.
+\item A hyperbolic geometry (or Bolyai-Lobachevsky geometry) is a neutral
+geometry satisfying the hyperbolic axiom: for any given line and any
+given point not lying on the line, there are at least two distinct (hence infinitely many) 
+lines passing through the point and parallel to the given line.
+\item In fact, one can replace the \emph{indefinite article} ``a'' in the
+first letter of each of the above examples by the \emph{definite
+article} ``the''.  It can be shown that any two Euclidean geometries
+are geometrically isomorphic (preserving incidence, order,
+congruence, and continuity).  Similarly, any two hyperbolic
+geometries are isomorphic.  Such geometries are said to be
+\emph{categorical}.
+\item An elliptic geometry is not a neutral geometry, because pairwise distinct parallel lines do not exist.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfAnAffineTransformation}
+\pmcreated{2013-03-22 18:31:53}
+\pmmodified{2013-03-22 18:31:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of an affine transformation}
+\pmrecord{7}{41239}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{15A04}
+\pmclassification{msc}{51A15}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In this entry, we prove some of the basic properties of affine transformations.  Let $\alpha:A_1\to A_2$ be an affine transformation and $[\alpha]:V_1\to V_2$ its associated linear transformation.
+
+\begin{prop} $\alpha$ is one-to-one iff $[\alpha]$ is.\end{prop}
+\begin{proof}
+Next, suppose $\alpha$ is one-to-one, and $T(v)=0$ for some $v\in V_1$.  Let $P,Q\in A_1$ with $f_1(P,Q)=v$.  Then $0=[\alpha](v) = [\alpha](f_1(P,Q))=f_1(\alpha(P),\alpha(Q))$, which implies that $\alpha(P)=\alpha(Q)$, and therefore $P=Q$ by assumption.  Conversely, suppose $[\alpha]$ is one-to-one, and $\alpha(P)=\alpha(Q)$.  Then $[\alpha](f_1(P,Q))=f_2(\alpha(P),\alpha(Q))=0$, so that $f_1(P,Q)=0$, and consequently $P=Q$, showing that $\alpha$ is one-to-one.
+\end{proof}
+
+\begin{prop} $\alpha$ is onto iff $[\alpha]$ is.\end{prop}
+\begin{proof}  Suppose $\alpha$ is onto.  Let $w\in V_2$, so there are $X,Y\in A_2$ such that $f_2(X,Y)=w$.  Since $\alpha$ is onto, there are $P,Q\in A_1$ with $\alpha(P)=X$ and $\alpha(Q)=Y$.  So $w=f_2(X,Y)=f_2(\alpha(P),\alpha(Q)) = [\alpha](f_1(P,Q))$.  Hence $[\alpha]$ is onto.  Conversely, assume $[\alpha]$ be onto, and pick $Y\in A_2$.  Take an arbitrary point $P\in A_1$ and set $X=\alpha(P)$.  There is $v\in V_1$ such that $[\alpha](v)=f_2(X,Y)$, since $[\alpha]$ is onto.  Let $Q\in A_1$ such that $f_1(P,Q)=v$.  Then $f_2(X,\alpha(Q)) = f_2(\alpha(P),\alpha(Q))= [\alpha](f_1(P,Q))=[\alpha](v)=f_2(X,Y)$.  But $f_2(X,-)$ is a bijection, we must have $Y=\alpha(Q)$, showing that $\alpha$ is onto.
+\end{proof}
+
+\begin{cor} $\alpha$ is a bijection iff $[\alpha]$ is. \end{cor}
+
+\begin{prop} A bijective affine transformation $\alpha:A_1\to A_2$ is an affine isomorphism. \end{prop}
+\begin{proof}
+Suppose an affine transformation $\alpha: A_1\to A_2$ is a bijection.  We want to show that $\alpha^{-1}:A_2\to A_1$ is an affine transformation.  Pick any $X,Y\in A_2$, then $$[\alpha](f_1(\alpha^{-1}(X),\alpha^{-1}(Y))) = f_2(X,Y).$$  By the corollary above, $[\alpha]$ is bijective, and hence a linear isomorphism.  So $$f_1(\alpha^{-1}(X),\alpha^{-1}(Y))=[\alpha]^{-1}(f_2(X,Y)).$$  This shows that $\alpha^{-1}$ is an affine transformation whose assoicated linear transformation is $[\alpha]^{-1}$.
+\end{proof}
+
+\begin{prop} Two affine spaces associated with the same vector space $V$ are affinely isomorphic. \end{prop}
+\begin{proof}
+In fact, all we need to do is to show that $(A,f)$ is isomorphic to $(V,g)$, where $g$ is given by $g(v,w)=w-v$.  Pick any $P\in A$, then $\alpha:=f(P,-):A\to V$ is a bijection.  For any $v\in V$, there is a unique $Q\in A$ such that $v=f(P,Q)$.  Then $1_V(f(X,Y))=f(X,Y)=f(P,Y)-f(P,X)=\alpha(Y)-\alpha(X)=g(\alpha(X),\alpha(Y))$, showing that $1_V$ is the associated linear transformation of $\alpha$.
+\end{proof}
+
+\begin{prop} Any affine transformation is a linear transformation between the corresponding induced vector spaces.  In other words, if $\alpha: A \to B$ is affine, then $\alpha: A_P \to B_{\alpha(P)}$ is linear.  \end{prop}
+\begin{proof}  Suppose $Q,R,S\in A$ are such that $Q+R=S$, or $f_1(P,Q)+f_1(P,R)=f_1(P,S)$.  Then 
+\begin{eqnarray*}
+f_2(\alpha(P),\alpha(S)) &=& [\alpha](f_1(P,S)) \\ 
+&=& [\alpha](f_1(P,Q)+f_1(P,R)) \\ 
+&=& [\alpha](f_1(P,Q))+[\alpha](f_1(P,R)) \\
+&=& f_2(\alpha(P),\alpha(Q))+f_2(\alpha(P),\alpha(R)),
+\end{eqnarray*} 
+which is equivalent to $\alpha(Q) + \alpha(R) = \alpha(S)= \alpha(Q+R)$.
+
+Next, suppose $dQ=R$, or $df_1(P,Q)=f_1(P,R)$, where $d\in D$.  Then 
+\begin{eqnarray*}
+f_2(\alpha(P),\alpha(R)) &=& [\alpha](f_1(P,R)) \\ 
+&=& [\alpha](df_1(P,Q)) \\ 
+&=& d[\alpha](f_1(P,Q)) \\
+&=& df_2(\alpha(P),\alpha(Q)),
+\end{eqnarray*} 
+which is equivalent to $d\alpha(Q)=\alpha(R)=\alpha(dQ)$.
+\end{proof}
+
+\begin{prop} If $(V,f)$ is an affine space associated with the vector space $V$, then the direction $f$ is given by $f(v,w)=T(w-v)$ for some linear isomorphism (invertible linear transformation) $T$. \end{prop}
+\begin{proof}  By proposition 4, $(V,f)$ is affinely isomorphic to $(V,g)$ with $g(v,w)=w-v$.  Suppose $\alpha:(V,f) \to (V,g)$ is the affine isomorphism.  Then $[\alpha](f(v,w))=g(\alpha(v),\alpha(w))=\alpha(w)-\alpha(v)$.  Since $[\alpha]$ is a linear isomorphism, $f(v,w)=[\alpha]^{-1}(\alpha(w))-[\alpha]^{-1}(\alpha(v))$.  By proposition 5, $\alpha$ itself is linear, so $f(v,w)=([\alpha]^{-1}\circ \alpha)(w-v)$.  Set $T=[\alpha]^{-1}\circ \alpha$.  Then $T$ is linear and invertible since $\alpha$ is, our assertion is proved.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

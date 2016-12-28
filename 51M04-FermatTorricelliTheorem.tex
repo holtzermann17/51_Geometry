@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FermatTorricelliTheorem}
+\pmcreated{2013-03-22 19:36:39}
+\pmmodified{2013-03-22 19:36:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Fermat$-$Torricelli theorem}
+\pmrecord{16}{42604}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51F20}
+\pmrelated{CenterOfATriangle}
+\pmdefines{Fermat point}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{pstricks}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem (Fermat$-$Torricelli).}\, Let all angles of a triangle $ABC$ be at most $120^\circ$.\, Then the inner point $F$ of the triangle which makes the sum $AF\!+\!BF\!+\!CF$ as little as possible, is the point from which the angle of view of every side is $120^\circ$.
+
+{\it Proof.}\, Let's perform the rotation of $60^\circ$ about the point $A$.\, When $P$ is the image of the point $C$, the triangle $ACP$ is equilateral and its angles are $60^\circ$.\, Let $F$ be any inner point of the triangle $ABC$ and $Q$ its image in the rotation.\, We infer that if the sides of the triangle $ABC$ are all seen from $F$ in the angle $120^\circ$, then the points $B$, $F$, $Q$, $P$ lie on the same line.
+\begin{center}
+\begin{pspicture}(-1,-0.5)(4,3.5)
+\pspolygon[linecolor=blue](0,0)(0,3)(3,1)
+\rput(0,-0.25){$A$}
+\rput(3,0.75){$B$}
+\rput(0,3.25){$C$}
+\psline(0,0)(-2.5,1.35)(0,3)
+\psline(-2.5,1.35)(3,1)
+\rput(-2.8,1.3){$P$}
+\rput(0.75,0.85){$F$}
+\psline(0,3)(0.7,1.15)(0,0)
+\psdot(-0.7,1.23)
+\rput(-0.55,1.5){$Q$}
+\psline(0,0)(-0.7,1.2)
+\psdot[linecolor=red](0.7,1.15)
+\end{pspicture}
+\end{center}
+Generally, the triangles $APQ$ and $ACF$ are congruent, whence\, $CF = QP$.\, From the equilateral triangles we obtain:
+$$AF\!+\!BF\!+\!CF \;=\; FQ\!+\!BF\!+\!QP \;=\; BFQP$$
+Here, the right hand side is minimal when the points $B$, $F$, $Q$, $P$ are collinear, in which case 
+\begin{align*}
+&\angle CFA \;=\; \angle PQA \;=\; 180^\circ\!-\!\angle AQF \;=\; 120^\circ,\\
+&\angle AFB \;=\; 180^\circ\!-\!\angle QFA \;=\; 120^\circ,\\
+&\angle BFC \;=\; 360^\circ\!-\!240^\circ \;=\; 120^\circ.
+\end{align*}
+\begin{center}
+\begin{pspicture}(-1,-0.5)(4,3.5)
+\pspolygon[linecolor=blue](0,0)(0,3)(3,1)
+\rput(0,-0.25){$A$}
+\rput(3,0.75){$B$}
+\rput(0,3.25){$C$}
+\psline(0,0)(-2.5,1.35)(0,3)
+\rput(-2.8,1.3){$P$}
+\rput(1.05,1.65){$F$}
+\psline(0,3)(0.8,1.45)(0,0)
+\psline(-2.5,1.35)(-0.7,1.45)(0.8,1.45)(3,1)
+\psdot(-0.7,1.45)
+\rput(-0.5,1.75){$Q$}
+\psline(0,0)(-0.7,1.45)
+\psdot[linecolor=red](0.8,1.45)
+\end{pspicture}
+\end{center}
+
+\textbf{Remark.}\, The point $F$ is called the {\it Fermat point} of the triangle $ABC$.
+
+\begin{thebibliography}{8}
+\bibitem{th}{\sc Tero Harju}: {\em Geometria. Lyhyt kurssi}.\, Matematiikan laitos. Turun yliopisto, Turku (2007).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

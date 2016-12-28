@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntersectionOfSphereAndPlane}
+\pmcreated{2013-03-22 18:18:39}
+\pmmodified{2013-03-22 18:18:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{intersection of sphere and plane}
+\pmrecord{22}{40934}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmrelated{ConformalityOfStereographicProjection}
+\pmdefines{zero circle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\textbf{Theorem.}\, The intersection curve of a sphere and a plane is a circle.
+
+{\em Proof.}\, We prove the theorem without the equation of the sphere.\, Let $c$ be the intersection curve, $r$ the radius of the sphere and $OQ$ be the distance of the centre $O$ of the sphere and the plane.\, If $P$ is an arbitrary point of $c$, then $OPQ$ is a right triangle.\, By the Pythagorean theorem,
+$$PQ = \varrho = \sqrt{r^2\!-\!OQ^2} = \mbox{\;constant}.$$
+
+\begin{center}
+\begin{pspicture}(-3.5,-3.5)(3.5,3.5)
+\psdots(0,0)(0,1.23)
+\psdot[linecolor=blue](-2.41,0.95)
+
+\rput(0.3,0){$O$}
+\rput(2,0.68){$c$}
+\rput(-2.45,0.68){$P$}
+\rput(0.3,1.23){$Q$}
+\rput(-1.1,0.22){$r$}
+\rput(-1.1,1.28){$\varrho$}
+\psline[linestyle=dashed](0,0)(0,0.6)
+\psline[linestyle=dotted](0,0.75)(0,1.23)
+\psline[linestyle=dashed](0,1.23)(-2.41,0.95)
+\psline[linestyle=dashed](0,0)(-2.41,0.95)
+\psline(0,1.09)(-0.12,1.07)
+\psline(-0.12,1.07)(-0.12,1.22)
+\psellipse[linecolor=blue](0,1.23)(2.7,0.6)
+\pscircle[linecolor=blue](0,0){3}
+\rput(-3.5,-3.5){.}
+\rput(3.5,3.5){.}
+\end{pspicture}
+\end{center}
+
+Thus any point of the curve $c$ is in the plane at a \PMlinkescapetext{constant} distance $\varrho$ from the point $Q$, whence $c$ is a circle.\\
+
+\textbf{Remark.}\, There are two special cases of the intersection of a sphere and a plane:\, the empty set of points ($OQ > r$) and a single point ($OQ = r$); these of course are not curves.\, In the former case one usually says that the sphere does not intersect the plane, in the latter one sometimes calls the common point a {\em zero circle} (it can be thought a circle with radius 0).
+%%%%%
+%%%%%
+\end{document}

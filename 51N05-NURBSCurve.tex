@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NURBSCurve}
+\pmcreated{2013-03-22 17:10:59}
+\pmmodified{2013-03-22 17:10:59}
+\pmowner{stitch}{17269}
+\pmmodifier{stitch}{17269}
+\pmtitle{NURBS curve}
+\pmrecord{12}{39499}
+\pmprivacy{1}
+\pmauthor{stitch}{17269}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N05}
+\pmsynonym{nonuniform rational B-spline curve}{NURBSCurve}
+\pmrelated{BezierCurve}
+\pmrelated{BSpline}
+\pmrelated{NURBSSurface}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section{Introduction}
+A \emph{NURBS curve}, which is an acronym for \emph{Non-Uniform Rational B-Spline curve}, is a generalization of both \PMlinkname{B\'ezier}{BezierCurve} and \PMlinkname{BSpline}{B-splines} curves. NURBS are commonly used in computer graphics, computer-aided design (CAD), engineering (CAE), and manufacturing (CAM).
+
+\section{Definition}
+A NURBS curve is a parametric curve defined by its \PMlinkescapetext{degree}, a set of weighted control points, and a knot vector. It is defined as
+
+\[
+c(u) = \frac { \sum_{i=0}^{n} N_{i,p}(u) w_i P_i} {\sum_{i=0}^{n} N_{i,p}(u) w_i} \quad\quad 0 \leq u \leq 1
+\]
+
+where $u$ is the parameter, $p$ is the \PMlinkescapetext{degree}, $N_{i,p}$ are the B-spline basis functions, $P_i$ are the control points and $w_i$ are the weights.
+%%%%%
+%%%%%
+\end{document}

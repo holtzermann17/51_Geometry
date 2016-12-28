@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BetweennessInRays}
+\pmcreated{2013-03-22 15:33:05}
+\pmmodified{2013-03-22 15:33:05}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{betweenness in rays}
+\pmrecord{6}{37449}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51F20}
+\pmclassification{msc}{51G05}
+\pmrelated{Angle}
+\pmrelated{Ray}
+\pmrelated{Midpoint4}
+\pmdefines{interior point}
+\pmdefines{between rays}
+\pmdefines{between two rays}
+\pmdefines{crossbar theorem}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\renewcommand{\line}[1]{\overleftrightarrow{#1}}
+\newcommand{\ray}[1]{\overrightarrow{#1}}
+\begin{document}
+Let $S$ be a linear ordered geometry.
+Fix a point $p$ and consider the pencil $\Pi(p)$ of all rays
+emanating from it.  Let $\alpha\neq\beta \in\Pi(p)$.  A point $q$ is
+said to be an \emph{interior point} of $\alpha$ and $\beta$ if there
+are points $s\in\alpha$ and $t\in\beta$ such that
+\begin{enumerate}
+\item $q$ and $s$ are on the same side of line $\line{pt}$, and
+\item $q$ and $t$ are on the same side of line $\line{ps}$.
+\end{enumerate}
+A point $q$ is said to be \emph{between} $\alpha$ and $\beta$ if
+there are points $s\in\alpha$ and $t\in\beta$ such that $q$ is
+between $s$ and $t$.  A point that is between two rays is an
+interior point of these rays, but not vice versa in general.  A ray
+$\rho\in\Pi(p)$ is said to be \emph{between} rays $\alpha$ and
+$\beta$ if there is an interior point of $\alpha$ and $\beta$ lying
+on $\rho$.
+\\\\
+\textbf{Properties}
+\begin{enumerate}
+\item Suppose $\alpha,\beta,\rho\in\Pi(p)$ and $\rho$ is between
+$\alpha$ and $\beta$.  Then
+\begin{enumerate}
+\item any point on $\rho$ is an interior point of $\alpha$ and
+$\beta$;
+\item any point on the line containing $\rho$ that is an interior
+point of $\alpha$ and $\beta$ must be a point on $\rho$;
+\item there is a point $q$ on $\rho$ that is between $\alpha$ and
+$\beta$.  This is known as the \textbf{Crossbar Theorem}, the two ``crossbars'' being $\rho$ and a line segment joining a point on $\alpha$ and a point on $\beta$;
+\item if $q$ is defined as above, then any point between $p$ and
+$q$ is between $\alpha$ and $\beta$.
+\end{enumerate}
+\item There are no rays between two opposite rays.
+\item If $\rho$ is between $\alpha$ and $\beta$, then $\beta$ is not
+between $\alpha$ and $\rho$.
+\item If $\alpha,\beta\in\Pi(p)$ has a ray $\rho$ between them, then
+$\alpha$ and $\beta$ must lie on the same half plane of some line.
+\item The converse of the above statement is true too: if
+$\alpha,\beta\in\Pi(p)$ are distinct rays that are not opposite of
+one another, then there exist a ray $\rho\in\Pi(p)$ such that $\rho$
+is between $\alpha$ and $\beta$.
+\item Given $\alpha,\beta\in\Pi(p)$ with $\alpha\neq\beta$ and
+$\alpha\neq-\beta$.  We can write $\Pi(p)$ as a disjoint union of
+two subsets:
+\begin{enumerate}
+\item $A =\lbrace \rho\in\Pi(p)\mid
+\rho\mbox{ is between }\alpha\mbox{ and }\beta\rbrace$,
+\item $B=\Pi(p)-A$.
+\end{enumerate}
+Let $\rho,\sigma\in\Pi(p)$ be two rays distinct from both $\alpha$
+and $\beta$.  Suppose $x\in\rho$ and $y\in\sigma$.  Then
+$\rho,\sigma$ belong to the same subset if and only if
+$\overline{xy}$ does not intersect either $\alpha$ or $\beta$.
+\end{enumerate}
+
+\begin{thebibliography}{6}
+\bibitem{dh} D. Hilbert, {\it Foundations of Geometry}, Open Court Publishing Co. (1971)
+\bibitem{bs} K. Borsuk and W. Szmielew, {\it Foundations of Geometry}, North-Holland Publishing Co. Amsterdam (1960)
+\bibitem{mg} M. J. Greenberg, {\it Euclidean and Non-Euclidean Geometries, Development and History}, W. H. Freeman and Company, San Francisco (1974)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

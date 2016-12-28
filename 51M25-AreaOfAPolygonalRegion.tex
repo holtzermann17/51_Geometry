@@ -1,0 +1,173 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaOfAPolygonalRegion}
+\pmcreated{2013-03-22 17:00:29}
+\pmmodified{2013-03-22 17:00:29}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{area of a polygonal region}
+\pmrecord{12}{39290}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M25}
+\pmrelated{Area2}
+\pmrelated{InterceptTheorem}
+\pmrelated{BaseAndHeightOfTriangle}
+\pmdefines{triangular region}
+\pmdefines{polygonal region}
+\pmdefines{area of a triangle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{mathrsfs}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+We consider only Euclidean geometry.
+
+A \emph{triangular region} is a triangle together with its interior.
+The sides of the triangle are called the \emph{edges} of the region and the vertices of the
+triangle are called the \emph{vertices} of the region.
+
+A \emph{polygonal region} is a plane figure that can be written as a union of a finite 
+number of triangular regions, subject to a constraint. The constraint is that
+the triangular regions are nonoverlapping. That means that if two triangular regions
+intersect, then their intersection is either a vertex or edge of each of the triangular regions.
+
+A given polygonal region can of course be written as such a union in infinitely many ways.
+
+We wish to assign a number to each polygonal region that corresponds to our intuitive idea of
+"area". To do that we first write down a set of postulates that "area" should satisfy and then
+show that the postulates  can be satisfied. We let $\mathscr{R}$ denote the set of polygonal regions.
+\begin{enumerate}
+\item There is a function $\alpha: \mathscr{R} \to \mathbb{R}$. 
+\item $\alpha > 0$.
+\item If two triangular regions are congruent, then they have the same area.
+\item If two polygonal regions $R_1$ and $R_2$ are nonoverlapping then 
+$\alpha ( R_1 \cup R_2) = \alpha (R_1) + \alpha (R_2)$. 
+\item If a square  has edges of length 1, then its area is 1.
+\end{enumerate}
+
+The fifth postulate is needed because if $\alpha$ satisfies the first 4 postulates, then so does 
+$2\alpha$. So, this postulate serves to make $\alpha$ a unique function. 
+
+\begin{thm}
+If a square has sides of length $s$ then its area is $s^2$.
+\end{thm}
+\textbf{Proof.} We first show that if a square has sides of length $\frac{1}{q}$ then its area is
+$\frac{1}{q^2}$. A unit square can be decomposed into $q^2$ squares, each having side of length
+$\frac{1}{q}$. Each of the smaller squares has the same area, $A$,  by postulates 3 and 4. 
+Hence,
+$$
+1 = q^2 A,
+$$
+so that $A = \frac{1}{q^2}$. Next, if a square has sides of length $\frac{p}{q}$ then its area
+is $\frac{p^2}{q^2}$. This is because the square can be written as $p^2$ squares each having a side of length
+$\frac{1}{q}$.  If $A$ is the area then
+$$
+A = p^2 \frac{1}{q^2} = \frac{p^2}{q^2}.
+$$
+Finally, let $T$ be a square of side $s$ and $T_{p/q}$ denote a square of side $\frac{p}{q}$ having
+one angle in common with $T$. In the following sequence of statements, each statement 
+is equivalent to the next one:
+\begin{enumerate}
+\item $\frac{p}{q} < s.$
+\item $T_{p/q} \subset T.$ 
+\item $\alpha(T_{p/q}) < \alpha(T).$
+\item $\frac{p^2}{q^2} < \alpha(T).$
+\item $\frac{p}{q} < \sqrt{\alpha(T)}.$
+\end{enumerate}
+ 
+Hence, statements 1 and 5 are equivalent so that 
+$$
+s = \sqrt{\alpha(T)},
+$$
+so that $s^2 = \alpha(T)$.
+This proves the theorem.
+
+One can then proceed on the basis of the postulates to show the following sequence of results.
+\begin{thm}
+The area of a rectangular region is the product of its base and its altitude.
+\end{thm}
+
+Rather than speak of the area of a triangular region or the area of a rectangle region,
+we shall refer to the area of a triangle, or area of a rectangle, or other polygonal
+region, as is usually done. 
+
+\begin{thm} The area of a right triangle is 1/2 product of the lengths of its legs.
+\end{thm}
+\begin{thm}
+The area of a triangle is 1/2 the product of any base and the corresponding altitude.
+\end{thm}
+\begin{thm}
+The area of a parallelogram is the product of a base and the corresponding altitude.
+\end{thm}
+\begin{thm}
+The area of a trapezoid is 1/2 the product of the altitude and the sum of the bases.
+\end{thm}
+\begin{thm}
+If two triangles are similar then the ratio of their areas is the square of the ratio
+of any two corresponding sides. 
+\end{thm}
+
+What remains to do is to show that there is a function $\alpha$ that satisfies postulates
+1 to 5. 
+It might seem reasonable to just define the area of a rectangle, but rectangles are not 
+useful for dissecting polygonal regions. The easier way to use triangles.
+So one \emph{defines} the area of a triangle to be 
+1/2 the product of the base and its corresponding altitude. For this to be well-defined
+one has to show first that the product of a base and altitude (for a given triangle)
+does not depend on which base is chosen.  Next, one defines the \emph{area of a polygonal region}
+as the sum of the areas of the triangular regions in some decomposition. Of course one has to 
+show that this sum does not depend on  the particular decomposition that is used.
+Given this definition for $\alpha$, it is then a simple matter to show that
+postulates 1 to 5 are satisfied.
+
+The function $\alpha$ can be defined on a larger domain, which includes circular sectors and disks.
+But to do this rigorously ones needs the concept of a limit.
+In the hyperbolic geometry case, one can show the following theorem.
+
+\begin{thm}
+If $\alpha$ is a function that satisfies postulates 1 to 4 then there is a $k>0$ such
+that 
+$$
+\alpha(R) = k \delta(R)
+$$
+for every polygonal region, where $\delta(R)$ is the defect of $R$.
+\end{thm}
+
+
+\begin{thebibliography}{99}
+\bibitem{EEM} Edwin E. Moise, \emph{Elementary Geometry from an Advanced Standpoint, Third edition}, 
+Addison-Wesley, 1990
+\end{thebibliography}
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

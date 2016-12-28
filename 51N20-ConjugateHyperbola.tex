@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConjugateHyperbola}
+\pmcreated{2013-03-22 14:39:01}
+\pmmodified{2013-03-22 14:39:01}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{conjugate hyperbola}
+\pmrecord{17}{36241}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{UnitHyperbola}
+\pmrelated{TangentOfConicSection}
+\pmdefines{transverse axis}
+\pmdefines{conjugate axis}
+\pmdefines{mixed term}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The simplest form of the equation presenting a \PMlinkname{hyperbola}{Hyperbola2} (without the \PMlinkescapetext{{\em mixed $xy$-term}}) in a rectangular coordinate system is got when the coordinate axes coincide with the \PMlinkescapetext{principal} axes of the hyperbola, and it has the form
+\begin{align}
+\frac{x^2}{a^2}-\frac{y^2}{b^2} = 1.
+\end{align}
+Here, $a\, (>0)$ is the \PMlinkescapetext{length of the {\em transverse semiaxis}} and $b\, (>0)$ the \PMlinkescapetext{length of the {\em conjugate semiaxis}} of the hyperbola.
+
+The equation
+\begin{align}
+\frac{y^2}{b^2}-\frac{x^2}{a^2} = 1
+\end{align}
+or
+$$\frac{x^2}{a^2}-\frac{y^2}{b^2} = -1.$$
+presents the {\em conjugate hyperbola} of (1).\, Its transverse axis is the conjugate axis of (1) and its conjugate axis the transverse axis of (1).\, Both hyperbolas are conjugate hyperbolas of each other.\, They have the common asymptotes
+ $$\frac{x^2}{a^2}-\frac{y^2}{b^2} = 0$$
+and their foci are on the circle \,$x^2\!+\!y^2 = a^2\!+\!b^2$.
+
+\begin{center}
+\begin{pspicture}(-5.5,-4.5)(5.5,4)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-4.5,-3.5)(4.5,3.5)
+\rput(-0.3,3.5){$y$}
+\rput(4.55,-0.3){$x$}
+\psline(-4.5,-3)(4.5,3)
+\psline(-4.5,3)(4.5,-3)
+\pspolygon(-1.5,-1)(1.5,-1)(1.5,1)(-1.5,1)
+\rput(0.87,-0.17){$a$}
+\rput(-0.14,0.59){$b$}
+\pscircle[linecolor=cyan](0,0){1.803}
+\psdots[linecolor=blue](1.803,0)(-1.803,0)
+\psdots[linecolor=red](0,1.803)(0,-1.803)
+\psplot[linecolor=blue]{1.5}{4.5}{x 2 exp -2.25 add 0.5 exp 1.5 div}
+\psplot[linecolor=blue]{-1.5}{-4.5}{x 2 exp -2.25 add 0.5 exp 1.5 div}
+\psplot[linecolor=blue]{1.5}{4.5}{x 2 exp -2.25 add 0.5 exp -1.5 div}
+\psplot[linecolor=blue]{-1.5}{-4.5}{x 2 exp -2.25 add 0.5 exp -1.5 div}
+\psplot[linecolor=red]{-4.5}{4.5}{x 2 exp +2.25 add 0.5 exp +1.5 div}
+\psplot[linecolor=red]{-4.5}{4.5}{x 2 exp +2.25 add 0.5 exp -1.5 div}
+\rput(0,-4.5){Both hyperbolas with their common asymptotes\, $y = \pm\frac{b}{a}x$}
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

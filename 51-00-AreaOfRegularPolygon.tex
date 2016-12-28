@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaOfRegularPolygon}
+\pmcreated{2013-03-22 17:11:06}
+\pmmodified{2013-03-22 17:11:06}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{area of regular polygon}
+\pmrecord{6}{39501}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{perimeter}
+\PMlinkescapeword{regular}
+\PMlinkescapeword{divides}
+
+\begin{thm*}
+Given a \PMlinkname{regular $n$-gon}{RegularPolygon} with apothem of length $a$ and \PMlinkname{perimeter}{Perimeter2} $P$, its area is
+
+$$A=\frac{1}{2}aP.$$
+\end{thm*}
+
+\begin{proof}
+Given a regular $n$-gon $R$, line segments can be drawn from its center to each of its vertices.  This divides $R$ into $n$ congruent triangles.  The area of each of these triangles is $\displaystyle \frac{1}{2}as$, where $s$ is the length of one of the sides of the triangle.  Also note that the perimeter of $R$ is $P=ns$.  Thus, the area $A$ of $R$ is
+
+\begin{center}
+$\begin{array}{rl}
+A & \displaystyle =n\left( \frac{1}{2}as \right) \\
+& \\
+& \displaystyle =\frac{1}{2}a(ns) \\
+& \\
+& \displaystyle =\frac{1}{2}aP. \end{array}$
+\end{center}
+\end{proof}
+
+To illustrate what is going on in the proof, a regular hexagon appears below with each line segment from its center to one of its vertices drawn in red and one of its apothems drawn in blue.
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\psline[linecolor=blue](0,0)(0,-1.732)
+\psline[linecolor=red](-2,0)(2,0)
+\psline[linecolor=red](-1,-1.732)(1,1.732)
+\psline[linecolor=red](1,-1.732)(-1,1.732)
+\pspolygon(2,0)(1,1.732)(-1,1.732)(-2,0)(-1,-1.732)(1,-1.732)
+\end{pspicture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

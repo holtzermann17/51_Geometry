@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDoubleAngleIdentity}
+\pmcreated{2013-03-22 12:50:30}
+\pmmodified{2013-03-22 12:50:30}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of double angle identity}
+\pmrecord{4}{33168}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+\textbf{Sine:}\\
+\begin{eqnarray*}
+\sin(2a)&=&\sin(a+a)\\
+&=&\sin(a)\cos(a)+\cos(a)\sin(a)\\
+&=&2\sin(a)\cos(a).
+\end{eqnarray*}
+
+\textbf{Cosine:}
+\begin{eqnarray*}
+\cos(2a)&=&\cos(a+a)\\
+&=&\cos(a)\cos(a)+\sin(a)\sin(a)\\
+&=&\cos^2(a)-\sin^2(a).
+\end{eqnarray*}
+
+By using the identity $$\sin^2(a)+\cos^2(a)=1$$ we can change the expression above into the alternate forms
+$$\cos(2a)=2\cos^2(a)-1 = 1-2\sin^2(a).$$
+
+\textbf{Tangent:}
+\begin{eqnarray*}
+\tan(2a)&=&\tan(a+a)\\
+&=&\frac{\tan(a)+\tan(a)}{1-\tan(a)\tan(a)}\\
+&=&\frac{2\tan(a)}{1-\tan^2(a)}.
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

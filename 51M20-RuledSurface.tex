@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RuledSurface}
+\pmcreated{2016-03-03 17:28:55}
+\pmmodified{2016-03-03 17:28:55}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{ruled surface}
+\pmrecord{19}{37347}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M20}
+\pmclassification{msc}{51M04}
+%\pmkeywords{surface}
+%\pmkeywords{ruled}
+\pmrelated{EquationOfPlane}
+\pmrelated{GraphOfEquationXyConstant}
+\pmdefines{directrix}
+\pmdefines{base curve}
+\pmdefines{director curve}
+\pmdefines{generatrix}
+\pmdefines{generatrices}
+\pmdefines{ruling}
+\pmdefines{helicoid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+A straight line $g$ moving continuously in space sweeps a {\em ruled surface}.\,  Formally:\, A surface $S$ in $\mathbb{R}^3$ is a ruled surface if it is connected and if for any point $p$ of $S$, there is a line $g$ such that\, $p\in g\subset S$. 
+
+ Such a surface may be formed by using two auxiliary curves given e.g. in the parametric forms
+$$\vec{r} \;=\; \vec{a}(t), \qquad \vec{r} \;=\; \vec{b}(t).$$
+ Using two parameters $s$ and $t$ we express the 
+ \PMlinkname{position vector}{PositionVector} of  an arbitrary point of the ruled surface as
+$$\vec{r} \;=\; \vec{a}(t)+ s\,\vec{b}(t).$$
+Here\, $\vec{r} = \vec{a}(t)$\, is a curve on the ruled surface and is called \PMlinkescapetext{{\em directrix}} or the 
+\PMlinkescapetext{{\em base curve}} of the surface, while\, $\vec{r} = \vec{b}(t)$\, is the {\em director curve} of the surface.\, Every position of $g$ is a {\em generatrix} or {\em ruling} of the ruled surface.
+
+\textbf{Examples}
+
+1.\, Choosing the $z$-axis ($\vec{r} = ct\vec{k}$,\, $c \neq 0$) as the \PMlinkescapetext{directrix} and the unit circle ($\vec{r} = \vec{i}\cos{t}+\vec{j}\sin{t}$) 
+as the director curve we get the {\em helicoid} (``screw surface''; cf. the circular helix)
+$$\vec{r} \;=\; ct\vec{k}+ s\,(\vec{i}\cos{t}+\vec{j}\sin{t}) \;=\;
+   \left(\!\begin{array}{c}s\,\cos{t}\\ s\,\sin{t}\\ ct\end{array}\!\right)\!.$$
+
+%\begin{figure}[!htb]
+%\begin{center}
+%\includegraphics{helicoid.eps}
+%\end{center}
+%\caption{The helicoid as a ruled surface}
+%\end{figure}
+
+2.\, The equation\,
+$$z \;=\; xy$$
+presents a hyperbolic paraboloid (if we \PMlinkname{rotate the coordinate system}{RotationMatrix} 45 \PMlinkescapetext{degrees} about the $z$-axis using the formulae\, $x = (x'-y')/\sqrt{2}$,\, 
+$y = (x'+y')/\sqrt{2}$,\, the equation gets the form\, $x'^2-y'^2 = 2z$).\, Since the position vector of any point of the surface may be written using the parameters $s$ and $t$ as
+$$\vec{r} \;=\; \left(\!\begin{array}{c}0\\ t\\ 0\end{array}\!\right)\!
++s\left(\!\begin{array}{c}1\\ 0\\ t\end{array}\!\right)\!,$$
+we see that it's a question of a ruled surface with rectilinear directrix and director curve.
+
+3.\, Other ruled surfaces are for example all cylindrical 
+surfaces (plane included), conical surfaces, 
+\PMlinkname{one-sheeted hyperboloid}{QuadraticSurfaces}.
+%%%%%
+%%%%%
+\end{document}

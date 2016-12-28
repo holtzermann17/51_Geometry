@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalOfPlane}
+\pmcreated{2013-04-19 15:03:42}
+\pmmodified{2013-04-19 15:03:42}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{normal of plane}
+\pmrecord{17}{41595}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmsynonym{plane normal}{NormalOfPlane}
+\pmrelated{AngleBetweenLineAndPlane}
+\pmrelated{NormalLine}
+\pmrelated{NormalVector}
+\pmrelated{Congruence}
+\pmrelated{ParallelAndPerpendicularPlanes}
+\pmrelated{ParallelismOfTwoPlanes}
+\pmdefines{normal plane}
+\pmdefines{center normal plane}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{normal}
+
+The perpendicular or normal line of a plane is a special case of the surface normal, but may be defined separately as follows:
+
+A line $l$ is a {\em normal of a plane} $\pi$, if it intersects the plane and is perpendicular to all lines passing through the intersection point in the plane.\, Then the plane $\pi$ is a {\em normal plane} of the line $l$.\, The normal plane passing through the \PMlinkname{midpoint}{Midpoint3} of a line segment is the {\em center normal plane} of the segment.\\
+
+There is the
+
+\textbf{Theorem.}\, If a line ($l$) \PMlinkescapetext{cuts} a plane ($\pi$) and is perpendicular to two distinct lines ($m$ and $n$) passing through the cutting point ($L$) in the plane, then the line is a normal of the plane.
+\begin{center}
+\begin{pspicture}(-3,-3.5)(3,4.1)
+\rput(-3,-3.5){.}
+\rput(3,4){.}
+\psline(-1.5,1)(-2.5,-1)
+\psline(-1.5,1)(1.43,1)
+\psline(1.55,1)(3,1)
+\psline[linewidth=0.06](-2.5,-1)(2,-1)
+\psline[linewidth=0.05](2,-1)(3,1)
+\psline(1.5,3.8)(1.5,0.3)
+\psdot(1.5,0.3)
+\psline(1.5,-1)(1.5,-3)
+\psline(-1.5,1)(2,-1)
+\psline(1.5,0.3)(-1.8,0.4)
+\psline(1.5,0.3)(-2.5,-1)
+\psline(1.5,0.3)(0.5,-1)
+\rput(1.35,3.8){$l$}
+\rput(2.7,0.8){$\pi$}
+\rput(1.75,0.37){$L$}
+\rput(-0.43,0.15){$M$}
+\rput(0.30,-0.35){$N$}
+\rput(1.15,-0.35){$A$}
+\psdot(-0.37,0.35)
+\psdot(0.36,-0.08)
+\psdot(0.95,-0.4)
+\psdots(1.5,3.3)(1.5,-2.7)
+\psline(1.5,3.3)(-0.37,0.35)
+\psline(1.5,3.3)(0.36,-0.08)
+\psline(1.5,3.3)(0.95,-0.40)
+\rput(1.75,3.3){$P$}
+\rput(1.76,-2.7){$Q$}
+\rput(-1.45,0.21){$m$}
+\rput(-1.7,-0.60){$n$}
+\rput(0.45,-0.77){$a$}
+\end{pspicture}
+\end{center}
+{\em Proof.}\, Let $a$ be an arbitrary line passing through the point $L$ in the plane $\pi$.\, We need to show that\, $a \perp l$.\; Set another line of the plane cutting the lines $m$, $n$ and $a$ at the points $M$, $N$ and $A$, respectively.\, Separate from $l$ the equally \PMlinkescapetext{long line} segments $LP$ and $LQ$.\, Then
+$$PM \;=\; QM \quad \mbox{and} \quad PN \;=\; QN,$$
+since any point of the center normal of a line segment ($PQ$) is equidistant from the end points of the segment.\, Consequently, 
+$$\Delta MNP \cong \Delta MNQ \quad(\mbox{SSS}).$$
+Thus the segments $PA$ and $QA$, being corresponding parts of two congruent triangles, are equally long.\, I.e., the point $A$ is equidistant from the end points of the segment $PQ$, and it must be on the \PMlinkname{perpendicular bisector}{CenterNormal} of $PQ$.\, Therefore\, $AL \bot PQ$, i.e.\, $a \bot l$.\\
+
+
+\textbf{Proposition 1.}\, All \PMlinkescapetext{normals} of a plane are parallel.\, If a line is parallel to a normal of a plane, then it is a normal of the plane, too.
+
+
+\textbf{Proposition 2.}\, All normal planes of a line are parallel.\, If a plane is parallel to a normal plane of a line, then also it is a normal plane of the line.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminingFromAnglesThatATriangleIsIsosceles}
+\pmcreated{2013-03-22 17:12:23}
+\pmmodified{2013-03-22 17:12:23}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{determining from angles that a triangle is isosceles}
+\pmrecord{7}{39528}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51-00}
+\pmrelated{AnglesOfAnIsoscelesTriangle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+The following theorem holds in any geometry in which ASA is valid.  Specifically, it holds in both Euclidean geometry and hyperbolic geometry (and therefore in neutral geometry) as well as in spherical geometry.
+
+\begin{thm*}
+If a triangle has two congruent angles, then it is isosceles.
+\end{thm*}
+
+\begin{proof}
+Let triangle $\triangle ABC$ have angles $\angle B$ and $\angle C$ congruent.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\pspolygon(-2,-2)(0,2)(2,-2)
+\psarc(-2,-2){0.4}{0}{63.435}
+\psarc(2,-2){0.4}{116.565}{180}
+\rput[b](0,2.2){$A$}
+\rput[r](-2.2,-2){$B$}
+\rput[l](2.2,-2){$C$}
+\end{pspicture}
+\end{center}
+
+Since we have
+
+\begin{itemize}
+\item $\angle B \cong \angle C$
+\item $\overline{BC} \cong \overline{CB}$ by the \PMlinkname{reflexive property}{Reflexive} of $\cong$ (note that $\overline{BC}$ and $\overline{CB}$ denote the same line segment)
+\item $\angle C \cong \angle B$ by the \PMlinkname{symmetric property}{Symmetric} of $\cong$
+\end{itemize}
+
+we can use ASA to conclude that $\triangle ABC \cong \triangle ACB$. Since corresponding parts of congruent triangles are congruent, we have that $\overline{AB} \cong \overline{AC}$. It follows that $\triangle ABC$ is isosceles.
+\end{proof}
+
+In geometries in which ASA and SAS are both valid, the converse theorem of this theorem is also true. This theorem is stated and proven in the entry angles of an isosceles triangle.
+%%%%%
+%%%%%
+\end{document}

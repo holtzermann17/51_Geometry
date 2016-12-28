@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClassificationOfPlatonicSolids}
+\pmcreated{2013-03-22 15:53:07}
+\pmmodified{2013-03-22 15:53:07}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{classification of Platonic solids}
+\pmrecord{5}{37885}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{proposition*}{Proposition.}
+\begin{document}
+\PMlinkescapeword{incident}
+\PMlinkescapeword{flat}
+\PMlinkescapeword{bounds}
+\PMlinkescapeword{meet}
+\PMlinkescapeword{measure}
+\begin{proposition*}
+The regular tetrahedron, regular octahedron, regular icosahedron, cube, and regular dodecahedron
+are the only Platonic solids.
+\end{proposition*}
+
+\begin{proof}
+Each vertex of a Platonic solid is incident with at least three 
+faces.  The interior angles incident with that vertex must sum to
+less than $2\pi$, for otherwise the solid would be flat at that 
+vertex.  Since all faces of the solid have the same number of sides,
+this implies bounds on the number of faces which could meet at a 
+vertex.
+
+The interior angle of an equilateral triangle has measure $\frac{\pi}{3}$,
+so a Platonic solid could only have three, four, or five triangles
+meeting at each vertex.  By similar reasoning, a Platonic solid could
+only have three squares or three pentagons meeting at each vertex.  But 
+the interior angle of a regular hexagon has measure $\frac{2\pi}{3}$.  
+To avoid flatness a solid with hexagons as faces would thus have
+to have only two faces meeting at each vertex, which is impossible.  For
+polygons with more sides it only gets worse.  
+
+Since a Platonic solid is uniquely determined by the number and kind of 
+faces meeting at each vertex, there are at most five Platonic solids, 
+with the numbers and kinds of faces listed above.  But
+these correspond to the five known Platonic solids.  Hence there are
+exactly five Platonic solids.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

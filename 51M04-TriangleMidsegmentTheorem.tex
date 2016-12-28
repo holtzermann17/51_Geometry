@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TriangleMidsegmentTheorem}
+\pmcreated{2013-03-22 17:46:35}
+\pmmodified{2013-03-22 17:46:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{triangle mid-segment theorem}
+\pmrecord{12}{40234}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51M25}
+\pmsynonym{mid-segment theorem}{TriangleMidsegmentTheorem}
+\pmrelated{MutualPositionsOfVectors}
+\pmrelated{ParallelogramTheorems}
+\pmrelated{MedianOfTrapezoid}
+\pmrelated{CommonPointOfTriangleMedians}
+\pmrelated{Grafix}
+\pmrelated{SimonStevin}
+\pmrelated{InterceptTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, The segment connecting the midpoints of any two sides of a triangle is parallel to the third side and is half as long.
+
+\begin{center}
+\begin{pspicture}(-1,-0.5)(5,5.5)
+\psline(0,0)(4,0)
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](3,5)(4,0)
+\rput[a](-0.3,-0.1){$A$}
+\rput[a](4.2,-0.1){$B$}
+\rput[a](2.9,5.24){$C$}
+\rput[a](1.3,2.7){$A'$}
+\rput[a](3.8,2.69){$B'$}
+\psdot[linecolor=blue](1.5,2.5)
+\psdot[linecolor=blue](3.5,2.5)
+\psline[arrows=->,arrowsize=5pt,linecolor=red](1.5,2.5)(3.5,2.5)
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](0,0)(3,5)
+\end{pspicture}
+\end{center}
+
+{\em Proof.}\, In the triangle $ABC$, let $A'$ be the midpoint of $AC$ and $B'$ the midpoint of $BC$.\, Using the side-vectors $\overrightarrow{AC}$ and $\overrightarrow{CB}$ as a \PMlinkname{basis}{Basis} of the plane, we calculate the mid-segment $A'B'$ as a vector:
+$$\overrightarrow{A'B'} \,=\, \overrightarrow{A'C}+\overrightarrow{CB'} \,=\, 
+\frac{1}{2}\overrightarrow{AC}+\frac{1}{2}\overrightarrow{CB} \,=\, \frac{1}{2}(\overrightarrow{AC}+\overrightarrow{CB}) 
+\,=\, \frac{1}{2}\overrightarrow{AB}$$
+The last expression indicates that the segment $A'B'$ is such as asserted.\\
+
+\textbf{Corollary (Varignon's theorem).}\, If one connects the midpoints of the \PMlinkescapetext{adjacent sides} of a quadrilateral, one obtains a parallelogram.
+
+%%%%%
+%%%%%
+\end{document}

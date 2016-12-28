@@ -1,0 +1,161 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolarCoordinates}
+\pmcreated{2013-03-22 15:12:16}
+\pmmodified{2013-03-22 15:12:16}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{polar coordinates}
+\pmrecord{14}{36963}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-01}
+\pmrelated{DerivationOfRotationMatrixUsingPolarCoordinates}
+\pmrelated{CylindricalCoordinates}
+\pmrelated{ArgumentOfProductAndQuotient}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{relations}
+
+Let $x,y$ be Cartesian coordinates for $\R^2$. 
+
+Then $r\ge 0$, $\theta\in [0,2\pi)$ related to $(x,y)$ by
+\begin{eqnarray*}
+  x(r,\theta) &=& r \cos \theta, \\
+  y(r,\theta) &=& r \sin \theta, 
+\end{eqnarray*}
+are the \emph{polar coordinates} for $(x,y)$.  It is simply written $(r,\theta)$. 
+
+\begin{center}
+\includegraphics{polar_4.eps}
+\end{center}
+
+The polar coordinates of Cartesian coordinates 
+$(x,y) \in \R^2\setminus\{0\}$ are
+\begin{eqnarray*}
+   r(x,y) &=& \sqrt{x^2+ y^2}, \\
+   \theta(x,y) &=& \arctan (x,y),
+\end{eqnarray*}
+where $\arctan$ is defined \PMlinkname{here}{OperatornamearcTanWithTwoArguments}.
+
+\textbf{Polar basis.}
+Polar coordinates are equipped with an orthonormal base $\{\mathbf{e_r,e_\theta}\}$, which can be defined in terms of the standard cartesian base $\{\mathbf{i,j}\}$ in $\mathbbmss{R}^2$ as follows.
+\begin{align*}
+\begin{bmatrix}\mathbf{e_r}\\ \mathbf{e_\theta}\end{bmatrix}=
+\begin{bmatrix}\hphantom{-}\cos\theta\mathbf{i}+\sin\theta\mathbf{j}\\ 
+-\sin\theta\mathbf{i}+\cos\theta\mathbf{j}\end{bmatrix},
+\end{align*}
+where $\mathbf{e_r,e_\theta}$ are so-called {\em radial} and {\em traverse} or {\em angular} vector, respectively. Since these vectors are variable in direction, they are differentiable. In fact,
+\begin{align*}
+\begin{bmatrix}\frac{d\mathbf{e_r}}{d\theta}\\ \frac{d\mathbf{e_\theta}}{d\theta}\end{bmatrix}=
+\begin{bmatrix}\hphantom{-}\mathbf{e_\theta}\\ -\mathbf{e_r}\end{bmatrix}.
+\end{align*}
+The geometrical action of the derivative operator $d/d\theta$ is like a rotation operator that rotates each base vector a counter-clockwise angle equals to $\pi/2$. 
+
+\textbf{Position vector.} For an arbitrary point of polar coordinates $(r,\theta)$, its position vector comes given by the single equation
+\begin{align*}
+\mathbf{r}=r\mathbf{e_r}.
+\end{align*}
+
+\textbf{Relations with complex numbers.}
+When the Euclidean plane $\R^2$ is identified with $\C$ by
+$$(x,y)\leftrightarrow x+yi,$$ it is possible to define multiplications on $\R^2$.\, Via polar coordinates, the formula for this multiplication becomes very simple, thanks to \PMlinkname{Euler's formula}{EulerRelation}
+$$\cos{\theta}+i\sin{\theta}=e^{i\theta}.$$
+Thus, we have the following identification:
+$$(r,\theta)\leftrightarrow(x,y)\leftrightarrow x+yi=
+r\cos{\theta}+(r\sin{\theta})i=re^{i\theta}.$$ If $P=(r_1,\theta_1)$
+and $Q=(r_2,\theta_2)$, the product of $P$ and $Q$ works out to be
+$(r_1r_2,\theta_1+\theta_2)$.
+(Even if one is not familiar with the complex exponential, this assertion may be checked 
+directly using the angle sum identities for $\cos$ and $\sin$.)
+
+Multiplications of polar coordinates have some simple geometric
+interpretations. For example, if $R=(1,\alpha)$ and $Q=(r,\beta)$,
+then $Q\rightarrow RQ$ given by
+$(1,\alpha)(r,\beta)=(r,\alpha+\beta)$ is the rotation of $Q$ by
+angle $\alpha$. If $S=(t,0)$, then $(t,0)(r,\beta)=(tr,\beta)$ can
+be viewed as the scaling of $Q$ along the ray $\overrightarrow{OQ}$
+by $t$. Note also that multiplication by $(t,0)$ has the same effect
+as multiplication by the scalar $t$.
+\begin{center}
+\includegraphics{polar_5.eps}
+\end{center}
+For more on polar coordinates, including their construction and extensions on domain of polar coordinates $r$ and $\theta$, see \PMlinkname{here}{ConstructionOfPolarCoordinates}.
+
+\textbf{Calculus in polar coordiantes.}
+For reference, here are some formulae for computing integrals and derivatives
+in polar coordinates.  The Jacobian for transforming from rectangular to
+polar cordinates is
+\[
+ {\partial (x, y) \over \partial (r, \theta)} = r 
+\]
+so we may compute the integral of a scalar field $f$ as
+\[
+ \int f (r, \theta) r \, dr \, d\theta .
+\]
+
+Partial derivative operators transform as follows:
+\begin{align*}
+ {\partial \over \partial x} &= \cos \theta {\partial \over \partial r} -
+                                {1 \over r} \sin \theta {\partial \over \partial \theta} \\
+ {\partial \over \partial y} &= \sin \theta {\partial \over \partial r} + 
+                                {1 \over r} \cos \theta {\partial \over \partial \theta} \\
+ {\partial \over \partial r} &= \cos \theta {\partial \over \partial x} +
+                                \sin \theta {\partial \over \partial y} \\
+ {\partial \over \partial \theta} &= - r \sin \theta {\partial \over \partial x} +
+                                     r \cos \theta {\partial \over \partial y}
+\end{align*}
+ 
+%%%%%
+%%%%%
+\end{document}

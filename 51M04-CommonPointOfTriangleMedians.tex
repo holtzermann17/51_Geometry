@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommonPointOfTriangleMedians}
+\pmcreated{2013-03-22 17:46:54}
+\pmmodified{2013-03-22 17:46:54}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{common point of triangle medians}
+\pmrecord{8}{40241}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmrelated{MutualPositionsOfVectors}
+\pmrelated{ParallelogramPrinciple}
+\pmrelated{DifferenceOfVectors}
+\pmrelated{TriangleMidSegmentTheorem}
+\pmrelated{LengthsOfTriangleMedians}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{length} \PMlinkescapeword{median} \PMlinkescapeword{medians}
+
+\textbf{Theorem.}\, The three \PMlinkname{medians}{Median} of a triangle intersect one another in one point, which divides each median in the ratio $2\!:\!1$.
+
+\begin{center}
+\begin{pspicture}(-1,-0.5)(5,5.5)
+\psline(4,0)(3,5)
+\psdot[linecolor=blue](0,0)
+\rput[a](-0.3,-0.1){$A$}
+\rput[a](4.2,-0.1){$B$}
+\rput[a](2.9,5.24){$C$}
+\rput[a](3.7,2.6){$D$}
+\rput[a](1.34,2.6){$E$}
+\rput[a](1.9,-0.25){$F$}
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](0,0)(2.33,1.67)
+\psline[linestyle=dotted](2.33,1.67)(3.5,2.5)
+\psline[arrows=->,arrowsize=5pt,linecolor=green](0,0)(4,0)
+\psline[arrows=->,arrowsize=5pt,linecolor=green](4,0)(2.33,1.67)
+\psline[linestyle=dotted](2.33,1.67)(1.5,2.5)
+\psline[arrows=->,arrowsize=5pt,linecolor=red](0,0)(3,5)
+\psline[arrows=->,arrowsize=5pt,linecolor=red](3,5)(2.33,1.67)
+\psline[linestyle=dotted](2.33,1.67)(2,0)
+\end{pspicture}
+\end{center}
+{\em Proof.}\, Let the medians of a triangle\, $ABC$\, be $AD$, $BE$ and $CF$.\, Any median vector is the arithmetic mean of the side vectors emanating from the same vertex.\, Using vectors, let us form three ways all beginning from the vertex $A$, the first going simply $2/3$ of the median vector $\overrightarrow{AD}$ (\PMlinkescapetext{blue} in the picture):
+\begin{align}
+\frac{2}{3}\overrightarrow{AD} = \frac{2}{3}\cdot\frac{1}{2}(\overrightarrow{AB}+\overrightarrow{AC}) = \frac{1}{3}(\overrightarrow{AB}+\overrightarrow{AC})
+\end{align}
+The second way goes first the side vector $\overrightarrow{AB}$ and then $2/3$ of the median vector $\overrightarrow{BE}$ (green in the picture):
+\begin{align}
+\overrightarrow{AB}+\frac{2}{3}\overrightarrow{BE} = 
+\overrightarrow{AB}+\frac{2}{3}\!\cdot\!\frac{1}{2}\!\left[-\overrightarrow{AB}+(\overrightarrow{AC}-\overrightarrow{AB})\right]
+= \frac{1}{3}(\overrightarrow{AB}+\overrightarrow{AC})
+\end{align}
+Similarly, the third way goes first the side vector $\overrightarrow{AC}$ and then $2/3$ of the median vector $\overrightarrow{CF}$ (red in the picture):
+\begin{align}
+\overrightarrow{AC}+\frac{2}{3}\overrightarrow{CF} = 
+\overrightarrow{AC}+\frac{2}{3}\!\cdot\!\frac{1}{2}\!\left[-\overrightarrow{AC}+(\overrightarrow{AB}-\overrightarrow{AC})\right]
+= \frac{1}{3}(\overrightarrow{AB}+\overrightarrow{AC})
+\end{align}
+Thus the ways (2) and (3), where one goes from $A$ to another vertex and continues along the corresponding median $2/3$ of its length, lead to the point $M$ which is attained directly along $AD$.\, This means that all medians intersect in $M$.\, The distance of $M$ from any vertex is $2/3$ of the corresponding median, and so the rest of the median is $1/3$ of its length, i.e. the ratio of the parts of any median is $2\!:\!1$.
+
+
+%%%%%
+%%%%%
+\end{document}

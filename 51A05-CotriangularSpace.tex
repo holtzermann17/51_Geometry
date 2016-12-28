@@ -1,0 +1,220 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CotriangularSpace}
+\pmcreated{2013-03-22 17:15:34}
+\pmmodified{2013-03-22 17:15:34}
+\pmowner{pan}{17366}
+\pmmodifier{pan}{17366}
+\pmtitle{cotriangular space}
+\pmrecord{9}{39597}
+\pmprivacy{1}
+\pmauthor{pan}{17366}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+
+\usepackage{amssymb,amsmath,amsthm}
+
+%Theorems
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lm}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{prb}[thm]{Problem}
+\newtheorem{que}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{de}[thm]{Definition}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{cl}[thm]{Claim}
+\newtheorem{re}[thm]{Remark}
+\newtheorem{no}[thm]{Notation}
+\newtheorem{exo}[thm]{Exercise}
+\newtheorem{nota}[thm]{Notation}
+\newtheorem{goal}[thm]{Goal}
+
+% Index
+\newcommand{\Index}[1]{\index{#1}#1}
+
+% Getallen
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\ZZ}{{\mathbb Z}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\FF}{{\mathbb F}}
+\newcommand{\PP}{{\mathbb P}}
+\renewcommand{\AA}{{\mathbb A}}
+\newcommand{\Rb}{\overline{\RR}}
+\newcommand{\GF}{\operatorname{GF}\nolimits}
+
+%Polynomen
+\newcommand{\lmon}{\mathrm{lm}}
+\newcommand{\lc}{\mathrm{lc}}
+\newcommand{\lt}{\mathrm{lt}}
+\newcommand{\nf}{\mathrm{nf}}
+
+%Functies
+\newcommand{\An}{\mathrm{An}}
+
+% Derivaties en andere
+\newcommand{\pafg}[2][]{\frac{\partial #1}{\partial #2}}
+\newcommand{\tafg}[2][]{\frac{\dd #1}{\dd #2}}
+\newcommand{\grad}{\operatorname{grad}}
+
+%Image and domain
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\fix}{\operatorname{fix}}
+
+%figures
+\newenvironment{centerfigure}%
+    {\begin{figure} \begin{center}}%
+    {\end{center} \end{figure}}
+\newcommand{\includefig}[1]{\includegraphics[width=.7\textwidth]{#1}}
+\newcommand{\sourcecaption}[2]{\caption{#1 From: #2}}
+
+%further macros
+\def\AO{{\rm AO}}
+\def\lhd{\times|}
+\def\sgn{{\rm sgn}\,}
+\def\Ker{{\rm Ker}\,}
+\newcommand{\KK}{{\mathbb K}}
+\newcommand{\hh}{{\mathcal H}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\cat}{\operatornamewithlimits{\! +\!\!\! +}}
+\newcommand{\cha}{\operatorname{char}}
+\newcommand{\ch}{\operatorname{ch}}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\norm}[1]{\|#1\|}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\std}{e}
+\newcommand{\tdeg}[1]{{|#1|}}
+\newcommand{\val}[1]{{\left|#1\right|}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\diag}{\operatorname{diag}\nolimits}
+\newcommand{\Gr}{\operatorname{Gr}\nolimits}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\bff}{\mathbf{f}}
+\newcommand{\bh}{\mathbf{h}}
+\newcommand{\bm}{\mathbf{m}}
+\newcommand{\bn}{\mathbf{n}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bt}{\mathbf{t}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\Pfaff}{\operatorname{Pfaff}}
+\newcommand{\norma}{\operatorname{norm}\nolimits}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\ol}{\overline}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\phm}{\phantom{-}}
+\newcommand{\reg}{\text{reg}}
+\newcommand{\Wedge}{\bigwedge\nolimits}
+\newcommand{\wt}{\mathrm{wt}}
+\newcommand{\ini}{\mathrm{in}}
+\newcommand{\lx}{{\bar{x}}}
+\newcommand{\ly}{{\bar{y}}}
+\newcommand{\lqq}{{\bar{q}}}
+
+%liedef:
+\newcommand{\fvf}{\hat{\liea{D}}}
+\newcommand{\pvf}{\liea{D}}
+\newcommand{\AD}{{\EuScript Ad}}
+\newcommand{\Ad}{\operatorname{Ad}\nolimits}
+\newcommand{\Ann}{\operatorname{Ann}\nolimits}
+\newcommand{\Aut}{\operatorname{Aut}\nolimits}
+\newcommand{\Inn}{\operatorname{Inn}\nolimits}
+\newcommand{\Der}{\operatorname{Der}\nolimits}
+\newcommand{\D}{\operatorname{D}\nolimits}
+\newcommand{\End}{\operatorname{End}\nolimits}
+\newcommand{\GL}{\operatorname{GL}\nolimits}
+\newcommand{\Hom}{\operatorname{Hom}\nolimits}
+\newcommand{\Id}{\operatorname{Id}\nolimits}
+\newcommand{\Iso}{\operatorname{Iso}\nolimits}
+\newcommand{\Lie}{\operatorname{Lie}\nolimits}
+\newcommand{\OO}{\operatorname{O}\nolimits}
+\newcommand{\OOO}{\mathbb{O}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\Rad}{\operatorname{Rad}\nolimits}
+\newcommand{\SL}{\operatorname{SL}\nolimits}
+\newcommand{\SO}{\operatorname{SO}\nolimits}
+\newcommand{\SU}{\operatorname{SU}\nolimits}
+\newcommand{\T}{\text{T}}
+\newcommand{\U}{\operatorname{U}\nolimits}
+\newcommand{\ad}{\operatorname{ad}\nolimits}
+\newcommand{\app}{\operatorname{app}\nolimits}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\graph}{\operatorname{Graph}\nolimits}
+\newcommand{\gr}{\operatorname{gr}\nolimits}
+\newcommand{\liea}[1]{\mathfrak{#1}}
+\newcommand{\lieg}[1]{\mathrm{#1}}
+\newcommand{\mat}{\operatorname{mat}\nolimits}
+\newcommand{\one}{{\mathbf 1}}
+\newcommand{\pr}{\operatorname{pr}\nolimits}
+\newcommand{\ran}{\operatorname{ran}\nolimits}
+\newcommand{\tr}{\operatorname{tr}\nolimits}
+\newcommand{\stalk}{\mathcal{O}}
+\newcommand{\eval}{\mathrm{eval}}
+\newcommand{\NNN}{\mathcal{N}}
+\newcommand{\Stab}{\mathrm{Stab}}
+\newcommand{\Aff}{\operatorname{Aff}\nolimits}
+%10 mei 2006
+
+\newcommand{\Seg}{\operatorname{Seg}\nolimits}
+\newcommand{\Vor}{\operatorname{Vor}\nolimits}
+\newcommand{\down}{\downarrow}
+\newcommand{\TT}{\mathcal{T}}
+
+\newcommand{\cP}{\ensuremath{\mathcal{P}} }
+\newcommand{\cQ}{\ensuremath{\mathcal{Q}} }
+\newcommand{\cO}{\ensuremath{\mathcal{O}} }
+\newcommand{\cL}{\ensuremath{\mathcal{L}} }
+\newcommand{\cT}{\ensuremath{\mathcal{T}} }
+\newcommand{\cE}{\ensuremath{\mathcal{E}} }
+\newcommand{\cN}{\ensuremath{\mathcal{N}} }
+\newcommand{\cS}{\ensuremath{\mathcal{S}p} }
+\newcommand{\cV}{\ensuremath{\mathcal{V}} }
+\newcommand{\cF}{\ensuremath{\mathcal{F}} }
+\newcommand{\tx}[1]{\textrm{#1}}
+\newcommand{\ti}[1]{\emph{#1}}
+\newcommand{\bul}{\ensuremath{\hspace*{-.5cm}\ \bullet\ }}
+\newcommand{\Emb}{\operatorname{Emb}}
+\newcommand{\Ext}{\operatorname{Ext}}
+%april 2007 
+\begin{document}
+A \ti{cotriangular space} is a \PMlinkid{partial linear space}{PartialLinearSpace} $(P,L)$ in which 
+\begin{itemize}
+\item each line contains exactly three points, and
+\item given a point not
+on a line, the point is collinear with zero or two points of the line.
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

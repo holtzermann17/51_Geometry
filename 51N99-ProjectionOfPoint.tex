@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectionOfPoint}
+\pmcreated{2013-03-22 17:09:50}
+\pmmodified{2013-03-22 17:09:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{projection of point}
+\pmrecord{21}{39475}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N99}
+\pmsynonym{orthogonal projection}{ProjectionOfPoint}
+%\pmkeywords{orthogonal projection}
+\pmrelated{Projection}
+\pmrelated{CompassAndStraightedgeConstructionOfPerpendicular}
+\pmrelated{MeusniersTheorem}
+\pmdefines{project}
+\pmdefines{projection of line segment}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{onto} \PMlinkescapeword{projection}
+
+Let a \PMlinkescapetext{straight} line $l$ be given in a Euclidean plane or space.  The ({\em orthogonal}) {\em projection of a \PMlinkescapetext{point}} $P$ onto the line $l$ is the point $P'$ of $l$ at which the normal line of $l$ passing through $P$ intersects $l$.  One says that $P$ has been ({\em orthogonally}) {\em projected} onto the line $l$.
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\rput[b](-3,-3){.}
+\rput[a](3,3){.}
+\psline(-3,-3)(3,3)
+\psline[linestyle=dashed](-2,2)(0,0)
+\psline(-0.3,0.3)(0,0.6)
+\psline(0,0.6)(0.3,0.3)
+\psdots(-2,2)(0,0)
+\rput[r](-2.2,2){$P$}
+\rput[l](0.1,-0.1){$P'$}
+\rput[r](2.8,3){$l$}
+\end{pspicture}
+\end{center}
+
+The {\em projection of a set} $S$ of points onto the line $l$ is defined to be the set of projection points of all points of $S$ on $l$.
+
+Especially, the {\em projection of a \PMlinkescapetext{line segment}} $PQ$ onto $l$ is the line segment $P'Q'$ determined by the projection points $P'$ and $Q'$ of $P$ and $Q$.  If the length of $PQ$ is $a$ and the \PMlinkname{angle between the lines}{AngleBetweenTwoLines} $PQ$ and $l$ is $\alpha$, then the length $p$ of its projection is
+\begin{align}
+p \;=\; a\,\cos\alpha.
+\end{align}
+
+
+\begin{center}
+\begin{pspicture}(-7,-7)(3,3)
+\rput[b](-7,-7){.}
+\rput[a](3,3){.}
+\psline(-7,-7)(3,3)
+\psline[linestyle=dashed](-3,3)(0,0)
+\psline(-0.3,0.3)(0,0.6)
+\psline(0,0.6)(0.3,0.3)
+\psline[linestyle=dashed](-4,0)(-2,-2)
+\psline(-2.3,-1.7)(-2,-1.4)
+\psline(-2,-1.4)(-1.7,-1.7)
+\psline[linecolor=red](-3,3)(-4,0)
+\psline[linecolor=red,linestyle=dashed](-4,0)(-6,-6)
+\psarc(-6,-6){0.5}{45}{71.565}
+\rput[b](-5.5,-5.4){$\alpha$}
+\psline[linecolor=blue](0,0)(-2,-2)
+\psdots(-3,3)(0,0)(-4,0)(-2,-2)
+\rput[r](-3.2,3){$P$}
+\rput[l](0.1,-0.1){$P'$}
+\rput[r](-4.2,0){$Q$}
+\rput[l](-1.9,-2.1){$Q'$}
+\rput[r](2.8,3){$l$}
+\end{pspicture}
+\end{center}
+
+\textbf{Remark.}\, As one speaks of the projections onto a line $l$, one can speak in the Euclidean space also of {\em projections onto a plane} $\tau$.
+%%%%%
+%%%%%
+\end{document}

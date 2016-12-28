@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TruncatedCone}
+\pmcreated{2013-03-22 17:48:01}
+\pmmodified{2013-03-22 17:48:01}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{truncated cone}
+\pmrecord{11}{40262}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{01A20}
+\pmclassification{msc}{51M20}
+\pmsynonym{frustum}{TruncatedCone}
+\pmsynonym{frusta}{TruncatedCone}
+\pmsynonym{frustrum}{TruncatedCone}
+\pmrelated{Prismatoid}
+\pmrelated{KalleVaisala}
+\pmdefines{height of frustum}
+\pmdefines{bases of frustum}
+\pmdefines{Heronian mean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{height} \PMlinkescapeword{mean} \PMlinkescapeword{term} \PMlinkescapeword{sides}
+\PMlinkescapeword{formula}
+
+Think a general cone (not necessarily a circular one).  If a plane intersects the lateral surface of the cone, but not the base of this cone, then the solid remaining from the cone between the intersecting plane and the plane of the base $A$ is called a {\it truncated cone}.  Also the name {\it frustum} (the Latin {\it frustum} = `piece, fragment') is used, althouh this may mean the portion of any solid which lies between two parallel planes cutting the solid.  Sometimes one sees the (wrong) variant name {\it frustrum}.  As the plural form of {\em frustum} both {\em frustums} and {\em frusta} are used.
+
+We restrict our to the frustum of cone with the cutting plane parallel to the plane of the base.  The part of its surface contained in the intersecting plane is the other {\em base} $A'$ of the frustum.  Since the bases $A$ and $A'$ are homothetic with respect to the apex of the whole cone, they are similar planar figures.  The {\it height} $h$ of the frustum is the part of the height $H$ of the whole cone between the both base planes.  Denote\, $h' := H\!-\!h$.
+
+The volume of the frustum is obtained as the difference of the volumes of two cones:
+\begin{align}
+V \;=\; \frac{1}{3}AH-\frac{1}{3}A'h' \;=\; \frac{1}{3}\left[Ah\!+\!(A\!-\!A')h'\right]
+\end{align}
+One needs the term $(A\!-\!A')h'$.\, The ratio of the similar areas $A$ and $A'$ equals the square of the line ratio:
+$$\frac{A}{A'} \;=\; \left(\frac{h\!+\!h'}{h'}\right)^2$$
+Thus we have the proportion equation
+$$\frac{\sqrt{A}}{\sqrt{A'}} \;=\; \frac{h\!+\!h'}{h'};$$
+subtracting 1 from both sides, it may be written
+$$\frac{\sqrt{A}-\sqrt{A'}}{\sqrt{A'}} \;=\; \frac{h}{h'},$$
+or
+$$\frac{A\!-\!A'}{\sqrt{AA'}\!+\!A'} \;=\; \frac{h}{h'},$$
+whence
+$$(A\!-\!A')h' \;=\; (\sqrt{AA'}\!+\!A')h.$$
+Considering this in (1) we arrive to the volume formula of the frustum:
+\begin{align}
+V \;=\; \frac{A\!+\!\sqrt{AA'}\!+\!A'}{3} \cdot h
+\end{align}
+The quotient in front of $h$ is called the {\it Heronian mean} of the positive numbers $A$ and $A'$.
+
+\begin{thebibliography}{8}
+\bibitem{VG}{\sc K. V\"ais\"al\"a}: {\it Geometria}.\, Reprint of the tenth edition.\, Werner S\"oderstr\"om Osakeyhti\"o, Porvoo \& Helsinki (1971).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

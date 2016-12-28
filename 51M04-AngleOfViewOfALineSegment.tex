@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AngleOfViewOfALineSegment}
+\pmcreated{2013-03-22 17:34:11}
+\pmmodified{2013-03-22 17:34:11}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{angle of view of a line segment}
+\pmrecord{14}{39980}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51F20}
+\pmrelated{CircumferentialAngleIsHalfCorrespondingCentralAngle}
+\pmrelated{ThalesTheorem}
+\pmrelated{CalculatingTheSolidAngleOfDisc}
+\pmrelated{ExampleOfCalculusOfVariations}
+\pmrelated{ProjectionOfRightAngle}
+\pmdefines{angle of view}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $PQ$ be a line segment and $A$ a point not belonging to $PQ$.\, Let the magnitude of the angle $PAQ$ be $\alpha$.\,  One says that the line segment $PQ$ {\em is seen from the point $A$ in an angle of $\alpha$}; one may also speak of the {\em angle of view} of $PQ$.
+
+The locus of the points from which a given line segment $PQ$ is seen in an angle of $\alpha$ (with\, $0 < \alpha < 180^\circ$) consists of two congruent circular arcs having the line segment as the common chord and containing the circumferential angles equal to $\alpha$.  
+
+Especially, the locus of the points from which the line segment is seen in an angle of $90^\circ$ is the circle having the line segment as its diameter.
+
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\psline[linecolor=blue](-1.73,0)(1.73,0)
+\rput[a](-2.1,-0.1){$P$}
+\rput[a](2.1,-0.1){$Q$}
+\psarc[linecolor=red](0,1){2}{-30}{210}
+\psarc[linecolor=red](0,-1){2}{-210}{30}
+\psline(-1.73,0)(-1.2,2.6)
+\psline(1.73,0)(-1.2,2.6)
+\psline(-1.73,0)(2,1)
+\psline(1.73,0)(2,1)
+\rput[a](-1.08,2.25){$\alpha$}
+\rput[a](1.72,0.75){$\alpha$}
+\psdots[linecolor=blue linewidth=0.5](-1.73,0)(1.73,0)
+\psdots[linecolor=red](-1.2,2.6)(2,1)
+\rput(-3,-3){.}
+\rput(3,3){.}
+\end{pspicture}
+\end{center}
+
+\textbf{Note.}  The explementary arcs of the above mentioned two arcs form the locus of the points from which the segment $PQ$ is seen in the angle $180^\circ\!-\!\alpha$.
+
+%%%%%
+%%%%%
+\end{document}

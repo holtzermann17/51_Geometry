@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMorleysTheorem}
+\pmcreated{2013-03-22 13:45:44}
+\pmmodified{2013-03-22 13:45:44}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Morley's theorem}
+\pmrecord{6}{34465}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\begin{document}
+\PMlinkescapeword{vertices} \PMlinkescapeword{scheme}
+\PMlinkescapeword{symmetric} \PMlinkescapeword{symmetry}
+\PMlinkescapeword{segments} \PMlinkescapeword{identity}
+\begin{center}
+\includegraphics{morley}
+\end{center}
+The scheme of this proof, due to A. Letac,
+is to use the sines law to get formulas for the segments
+$AR$, $AQ$, $BP$, $BR$, $CQ$, and $CP$,
+and then to apply the cosines law to the triangles $ARQ$, $BPR$, and $CQP$,
+getting $RQ$, $PR$, and $QP$.
+
+To simplify some formulas, let us denote the angle $\pi/3$, or 60 degrees,
+by $\sigma$.
+Denote the angles at $A$, $B$, and $C$ by $3a$, $3b$, and $3c$ respectively,
+and let $R$ be the circumradius of $ABC$. We have
+$BC = 2R \sin(3a)$. Applying the sines law to the triangle $BPC$,
+\begin{eqnarray}
+BP/\sin(c) &=& BC/\sin(\pi - b - c) = 2R \sin(3a)/\sin(b + c) \\
+           &=& 2R\sin(3a)/\sin(\sigma - a)
+\end{eqnarray}
+so
+$$BP = 2R\sin(3a)\sin(c)/\sin(\sigma - a)\;.$$
+Combining that with the identity
+$$\sin(3a) = 4\sin(a)\sin(\sigma + a)\sin(\sigma -a)$$
+we get
+$$BP = 8R\sin(a)\sin(c)\sin(\sigma + a)\;.$$
+Similarly,
+$$BR = 8R\sin(c)\sin(a)\sin(\sigma + c)\;.$$
+
+Using the cosines law now,
+$$PR^2 = BP^2 + BR^2 - 2 BP\cdot BR\cos(b)$$
+$$= 64 \sin^2(a)\sin^2(c)[
+\sin^2(\sigma + a) + \sin^2(\sigma+ c) -
+ 2\sin(\sigma + a)\sin(\sigma + c)\cos(b)]\;.$$
+But we have
+$$(\sigma + a) + (\sigma + c) + b = \pi\;.$$
+whence the cosines law can be applied to those three angles, getting
+$$\sin^2(b) = \sin^2(\sigma + a) + \sin^2(\sigma + c) -
+2\sin(\sigma + a)\sin(\sigma + c)\cos(b)$$
+whence
+$$PR = 8R\sin(a)\sin(b)\sin(c)\;.$$
+Since this expression is symmetric in $a$, $b$, and $c$, we deduce
+$$PR = RQ = QP$$
+as claimed.
+
+\noindent
+\textbf{Remarks: }It is not hard to show that the triangles $RYP$, $PZQ$,
+and $QXR$ are isoscoles.
+
+By the sines law we have
+$$\frac{AR}{\sin b}=\frac{BR}{\sin a}\qquad
+\frac{BP}{\sin c}=\frac{CP}{\sin b}\qquad
+\frac{CQ}{\sin a}=\frac{AQ}{\sin c}$$
+whence
+$$AR\cdot BP\cdot CQ = AQ\cdot BR\cdot CP\;.$$
+This implies that if we identify the various vertices
+with complex numbers, then
+$$(P-C)(Q-A)(R-B)=\frac{-1+i\sqrt{3}}{2}(P-B)(Q-C)(R-A)$$
+provided that the triangle $ABC$ has positive orientation, i.e.
+$$\Re\left(\frac{C-A}{B-A}\right)>0\;.$$
+
+I found Letac's proof at
+\PMlinkexternal{cut-the-knot.org}{http://www.cut-the-knot.org/triangle/Morley/index.shtml},
+with the reference \emph{Sphinx}, \textbf{9} (1939) 46.
+Several shorter and prettier proofs of Morley's theorem can also be
+seen at cut-the-knot.
+%%%%%
+%%%%%
+\end{document}

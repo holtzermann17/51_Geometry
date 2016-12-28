@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GarfieldsProofOfPythagoreanTheorem}
+\pmcreated{2013-03-22 17:09:33}
+\pmmodified{2013-03-22 17:09:33}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{Garfield's proof of Pythagorean theorem}
+\pmrecord{10}{39470}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newrgbcolor{LightYellow}{1 1 0.7}
+\newrgbcolor{LightBlue}{0.7 1 1}
+\newrgbcolor{LightRed}{1 0.7 0.7}
+
+\begin{document}
+James Garfield, the $20^{\mathrm{th}}$ president of the United States, gave the following proof of the Pythagorean Theorem in 1876. Consider the following trapezoid (note that this picture is half of the diagram used in \PMlinkname{Bhaskara's proof of the Pythagorean theorem}{ProofOfPythagoreasTheorem}).
+
+\begin{center}
+\begin{pspicture}(-.5,-.5)(7.5,4.5)
+\rput(0,4){.}
+\psset{fillstyle=solid}%
+\pspolygon[fillcolor=LightYellow](0,0)(3,0)(0,4)
+\pspolygon[fillcolor=LightBlue](3,0)(7,0)(7,3)
+\pspolygon[fillcolor=LightRed](3,0)(7,3)(0,4)
+\rput(-0.25,2){b}
+\rput(1.5,-0.25){a}
+\rput(5,-0.25){b}
+\rput(7.25,1.6){a}
+\rput(1.75,2){c}
+\rput(4.75,1.5){c}
+\qline(0,0.25)(.25,.25)
+\qline(.25,.25)(.25,0)
+\qline(6.75,0)(6.75,.25)
+\qline(6.75,.25)(7,.25)
+\qline(3.2,.15)(3.05,.35)
+\qline(3.05,.35)(2.85,.2)
+\end{pspicture}
+\end{center}
+
+Recall that the area of a trapezoid with two parallel sides (in this case, the left and right sides) $s_1$ and $s_2$ and height $h$ is
+\[h\frac{s_1+s_2}{2}\]
+So the area of the trapezoid above is
+\[(a+b)\frac{a+b}{2}=\frac{(a+b)^2}{2}\]
+
+The area of the yellow triangle (and that of the blue triangle) is
+\[\frac{ab}{2}\]
+while the area of the red triangle (also a right triangle) is
+\[\frac{c^2}{2}\]
+
+The two areas must be equal, so
+\begin{align*}
+\frac{(a+b)^2}{2}&=2\frac{ab}{2}+\frac{c^2}{2}\\
+\frac{a^2+2ab+b^2}{2}&=ab + \frac{c^2}{2}\\
+a^2+2ab+b^2&=2ab+c^2\\
+a^2+b^2&=c^2
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

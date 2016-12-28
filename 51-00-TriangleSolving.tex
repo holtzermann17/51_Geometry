@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TriangleSolving}
+\pmcreated{2013-03-22 15:44:02}
+\pmmodified{2013-03-22 15:44:02}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{triangle solving}
+\pmrecord{11}{37684}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{Congruence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%\usepackage{xypic}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let us consider skew-angled triangles.\, If one knows three parts of a triangle, among which at least one side, then the other parts may be calculated by using the law of sines and the law of cosines.\, We distinguish four cases:
+\begin{enumerate}
+
+\item \textbf{ASA.}\, Known two angles and one side, e.g. $\alpha$, $\beta$, $c$.\, Other parts:
+$$\gamma = 180\sp\circ\!-\!(\alpha\!+\!\beta), \quad
+a = \frac{c\sin\alpha}{\sin\gamma},\quad b = \frac{c\sin\beta}{\sin\gamma}$$
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{triangle.1.eps}
+\end{center}
+\caption{ASA (angle-side-angle)}
+\end{figure}
+
+\item \textbf{SSS.}\, Known all sides $a$, $b$, $c$.\, The angles are obtained from
+$$\cos\alpha = \frac{b^2\!+\!c^2\!-\!a^2}{2bc},
+ \quad\cos\beta = \frac{c^2\!+\!a^2\!-\!b^2}{2ca}, 
+ \quad\cos\gamma = \frac{a^2\!+\!b^2\!-\!c^2}{2ab}.$$
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{triangle.2.eps}
+\end{center}
+\caption{SSS (side-side-side)}
+\end{figure}
+
+\item \textbf{SAS.}\, Known two sides and the angle between them, e.g. $b$, $c$, $\alpha$.\, Other parts from
+$$a^2 = b^2\!+\!c^2\!-\!2bc\cos\alpha, \quad \sin\beta = \frac{b\sin\alpha}{a}, 
+\quad \sin\gamma = \frac{c\sin\alpha}{a}$$
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{triangle.3.eps}
+\end{center}
+\caption{SAS (side-angle-side)}
+\end{figure}
+
+
+\item \textbf{SSA.}\, Known two sides and the angle \PMlinkescapetext{opposite} of one of them, e.g. $a$, $b$, $\alpha$.\, Other parts are gotten from
+$$\sin\beta = \frac{b\sin\alpha}{a},
+ \quad \gamma = 180\sp\circ\!-\!(\alpha\!+\!\beta), 
+ \quad c = \frac{a\sin\gamma}{\sin\alpha}.$$
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{triangle.4.eps}
+\end{center}
+\caption{SSA (side-side-angle)}
+\end{figure}
+
+Since the SSA criterion alone does not prove congruence,
+it is not surprising that there may not always be a single solution 
+for $\beta$ here.
+In fact, if the first equation gives\, $\sin\beta > 1$,\, then the situation is impossible and the triangle does not exist.\, If the equation gives\, $\sin\beta < 1$,\, one gets two distinct values of $\beta$; an acute $\beta_1$ and an obtuse\, $\beta_2 = 180\sp\circ-\beta_1$.\, If in this case\, $\beta_1 > \alpha$,\, then there are two different triangles as \PMlinkescapetext{solutions}, but if\, 
+$\beta_1 \le \alpha$,\, then there is only one triangle.
+
+\end{enumerate}
+
+\begin{itemize}
+\item
+\PMlinkexternal{MetaPost source code for the above diagrams}{http://svn.gold-saucer.org/repos/PlanetMath/TriangleSolving/triangle.mp}
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

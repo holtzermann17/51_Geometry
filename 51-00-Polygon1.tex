@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Polygon1}
+\pmcreated{2013-03-22 17:35:35}
+\pmmodified{2013-03-22 17:35:35}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{polygon}
+\pmrecord{20}{40006}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{Polygon}
+\pmrelated{BasicLength}
+\pmrelated{Diagonal}
+\pmrelated{RegularPolygon}
+\pmrelated{Semiperimeter}
+\pmrelated{EquilateralPolygon}
+\pmrelated{EquiangularPolygon}
+\pmdefines{side}
+\pmdefines{vertex}
+\pmdefines{$n$-gon}
+\pmdefines{n-gon}
+\pmdefines{perimeter}
+\pmdefines{interior angle}
+\pmdefines{angle sum}
+\pmdefines{exterior angle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+
+\newtheorem*{thm*}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{adjacent sides}
+\PMlinkescapeword{measure}
+\PMlinkescapeword{measures}
+\PMlinkescapeword{path}
+\PMlinkescapeword{walk}
+\PMlinkescapeword{walks}
+
+A \emph{polygon} is a \PMlinkname{simple}{SimpleCurve}, closed path that lies on a plane and is composed entirely of line segments.  In other words, if someone were to walk on a polygon, then the person would end up back where he started; moreover, if a person walks on a polygon so that he travels exactly once around the polygon, then the \PMlinkname{path}{Path} never crosses itself, and the person is either walking along a line or turning.
+
+Below are some examples of polygons:
+
+\begin{center}
+\begin{pspicture}(0,0)(11,5)
+\pspolygon(0,0)(3,0)(2,5)
+\pspolygon(4,0)(7,0)(6,2)(7,3)(5,5)
+\pspolygon(8,0)(8.4,5)(9.5,4)(11,2)(10,1)
+\end{pspicture}
+\end{center}
+
+A \emph{side} of a polygon is a line segment on the polygon that is of maximal length.  In other words, any line segment that contains a side of a polygon and has a greater length than that side is not entirely on that polygon.  A \emph{vertex} of a polygon is an endpoint of a side of the polygon.  Note that each vertex of a polygon is simultaneously the endpoint of exactly two adjacent sides of the polygon.
+
+A polygon with $n$ sides is called an \emph{$n$-gon}.  For small $n$, there are more traditional names:
+
+\begin{center}
+\begin{tabular}{||c|c||}
+\hline
+number of sides & name of polygon \\
+\hline \hline
+3  & triangle      \\
+\hline
+4  & quadrilateral \\
+\hline
+5  & pentagon      \\
+\hline
+6  & hexagon       \\
+\hline
+7  & heptagon      \\
+\hline
+8  & octagon       \\
+\hline
+10 & decagon       \\
+\hline
+\end{tabular}
+\end{center}
+
+In spherical geometry, polygons with only two sides exist.  They are called biangles.
+
+The \emph{perimeter} of a polygon is the sum of the lengths of its sides.
+
+An \emph{interior angle} of a polygon is the measure of an angle formed by two adjacent sides such that the angle is measured with respect to the interior of the polygon.  For each polygon in the picture below, the interior angles are marked in blue:
+
+\begin{center}
+\begin{pspicture}(0,0)(10,5)
+\pspolygon(0,0)(4.5,0)(1.8,4)
+\psarc[linecolor=blue](0,0){0.5}{0}{65.77}
+\psarc[linecolor=blue](4.5,0){0.5}{124.02}{180}
+\psarc[linecolor=blue](1.8,4){0.5}{245.77}{304.02}
+\pspolygon(5,5)(7.5,0)(10,5)(7.5,3)
+\psarc[linecolor=blue](5,5){0.5}{296.565}{321.34}
+\psarc[linecolor=blue](7.5,0){0.5}{63.435}{116.565}
+\psarc[linecolor=blue](10,5){0.5}{218.66}{243.435}
+\psarc[linecolor=blue](7.5,3){0.5}{141.34}{398.66}
+\end{pspicture}
+\end{center}
+
+Note that the \PMlinkname{measure}{AngleMeasure} of any interior angle of a polygon is strictly between $0^{\circ}$ and $360^{\circ}$ and is not equal to $180^{\circ}$.
+
+We have the following criterion for a polygon to be convex:
+
+\begin{thm*}
+A polygon is convex if and only if each of its interior angles has a measure that is strictly less than $180^{\circ}$.
+\end{thm*}
+
+The \emph{angle sum} of a polygon is the sum of the measures of its interior angles.  In Euclidean geometry, the angle sum of an $n$-gon is exactly $180(n-2)^{\circ}$.
+
+An \emph{exterior angle} of a polygon is any angle that forms a linear pair with an interior angle of a polygon.  In the picture below, all exterior angles of the triangle are marked in blue:
+
+\begin{center}
+\begin{pspicture}(0,0)(5,6)
+\psline{<->}(0,1)(5,1)
+\psline{<->}(0,0)(3,6)
+\psline{<->}(0,6)(5,0)
+\psarc[linecolor=blue](0.5,1){0.3}{63.435}{180}
+\psarc[linecolor=blue](0.5,1){0.3}{243.435}{360}
+\psarc[linecolor=blue](4.167,1){0.3}{0}{129.81}
+\psarc[linecolor=blue](4.167,1){0.3}{180}{309.81}
+\psarc[linecolor=blue](1.875,3.75){0.3}{129.81}{243.435}
+\psarc[linecolor=blue](1.875,3.75){0.3}{309.81}{423.435}
+\end{pspicture}
+\end{center}
+
+For a more rigorous treatment of polygons, see \PMlinkname{this entry}{Polygon}.
+%%%%%
+%%%%%
+\end{document}

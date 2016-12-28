@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BregmanDivergence}
+\pmcreated{2013-03-22 19:11:38}
+\pmmodified{2013-03-22 19:11:38}
+\pmowner{FrankTokyo}{25936}
+\pmmodifier{FrankTokyo}{25936}
+\pmtitle{Bregman divergence}
+\pmrecord{6}{42106}
+\pmprivacy{1}
+\pmauthor{FrankTokyo}{25936}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51K05}
+\pmsynonym{Bregman distance}{BregmanDivergence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\Innerproduct#1#2{ \left\langle {#1},{#2} \right\rangle }
+\def\innerproduct#1#2{ {\langle #1,#2 \rangle} }
+\begin{document}
+A \emph{Bregman divergence}, or \emph{Bregman distance}, $B_F$ on a space $\mathcal{X}\subseteq \mathbb{R}^d$ is defined for a strictly convex and differentiable function $F: \mathcal{X} \to \mathbb{R}$ as
+
+\begin{equation}
+B_F(p,q)=F(p)-F(q)-\innerproduct{p-q}{\nabla F(q)},
+\end{equation} 
+
+where $$\innerproduct{p}{q}=p^T q$$ denotes the inner product, and $$\nabla F(x)=[\frac{\partial F}{\partial x_1}, \cdots , \frac{\partial F}{\partial x_d}]^T$$ the partial derivatives.
+
+Choosing $F(x)=\sum_{i=1}^d x_i^2$ yields the squared Euclidean distance $B_{x^2}(p,q)=||p-q||^2$, and choosing $F(x)=\sum_{i=1}^d x_i\log x_i$ yields the relative entropy, called the Kullback-Leibler divergence.
+%%%%%
+%%%%%
+\end{document}

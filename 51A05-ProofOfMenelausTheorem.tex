@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMenelausTheorem}
+\pmcreated{2013-03-22 12:46:46}
+\pmmodified{2013-03-22 12:46:46}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of Menelaus' theorem}
+\pmrecord{4}{33092}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+First we note that there are two different cases: Either the line connecting $X$, $Y$ and $Z$ intersects two sides of the triangle or none of them. So in the first case that it intersects two of the triangle's sides we get the following picture:
+\begin{center}
+\includegraphics{menelaus.eps}
+\end{center}
+From this we follow ($h_1$, $h_2$ and $h_3$ being undircted):
+\begin{eqnarray*}
+\frac{AZ}{ZB}& = &-\frac{h_1}{h_2}\\
+\frac{BY}{YC} & = & \frac{h_2}{h_3}\\
+\frac{CX}{XA} & = & \frac{h_3}{h_1}.
+\end{eqnarray*}
+Mulitplying all this we get:
+$$\frac{AZ}{ZB}\cdot\frac{BY}{YC}\cdot\frac{CX}{XA} = -\frac{h_1h_2h_3}{h_2h_3h_1} = -1.$$
+
+The second case is that the line connecting $X$, $Y$ and $Z$ does not intersect any of the triangle's sides:
+\begin{center}
+\includegraphics{menelaus2.eps}
+\end{center}
+In this case we get:
+\begin{eqnarray*}
+\frac{AZ}{ZB}&=&-\frac{h_1}{h_2}\\
+\frac{BY}{YC}&=&-\frac{h_2}{h_3}\\
+\frac{CX}{XA}&=&-\frac{h_3}{h_1}.
+\end{eqnarray*}
+So multiplication again yields Menelaus' theorem.
+%%%%%
+%%%%%
+\end{document}

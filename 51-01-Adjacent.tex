@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Adjacent}
+\pmcreated{2013-03-22 15:59:26}
+\pmmodified{2013-03-22 15:59:26}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{adjacent}
+\pmrecord{17}{38011}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-01}
+\pmsynonym{adjacent side}{Adjacent}
+\pmrelated{Sohcahtoa}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{amsthm}
+\usepackage{pstricks}
+
+\begin{document}
+Given a right triangle with an acute angle $\theta$, the side of the triangle that is \emph{adjacent} to $\theta$ is the side of the triangle that is also a \PMlinkname{side}{Angle} of $\theta$ and is not the hypotenuse.
+
+\begin{center}
+\begin{pspicture}(0,-2)(4,4)
+\pspolygon(0,0)(4,4)(4,0)
+\rput[b](2,0){adjacent}
+\psline(3.8,0)(3.8,0.2)
+\psline(3.8,0.2)(4,0.2)
+\psarc(0,0){0.3}{0}{45}
+\rput[b](0.5,0.15){$\theta$}
+\rput[l](0,0){.}
+\rput[a](4,4){.}
+\rput[b](4,0){.}
+\end{pspicture}
+\end{center}
+
+When a phrase such as ``adjacent of an angle'' is used, one must determine from context whether it refers to this definition of adjacent or the other definition of \PMlinkname{adjacent}{Adjacent3}.  Note that the definition supplied above is specifically for right triangles.
+%%%%%
+%%%%%
+\end{document}

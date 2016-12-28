@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularPolygonAndCircles}
+\pmcreated{2013-03-22 17:17:06}
+\pmmodified{2013-03-22 17:17:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{regular polygon and circles}
+\pmrecord{15}{39626}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51-00}
+\pmrelated{Circumscribe}
+\pmrelated{Inscribe}
+\pmrelated{CircleHasOneCenter}
+\pmrelated{RegularDecagonInscribedInCircle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{pstricks}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{right}
+
+\textbf{Theorem.}\, Every regular polygon has a circumscribed circle and an inscribed circle.
+
+\begin{proof}Given a regular $n$-gon, draw the angle bisectors of its interior angles.  Since the interior angles of a regular $n$-gon are congruent, one gets $n$ isosceles triangles.  (See determining from angles that a triangle is isosceles for more details.)  Moreover, since the sides of the regular $n$-gon are congruent, these isosceles triangles have congruent bases.  Thus, these triangles are congruent (ASA).  Therefore, the sides adjacent to the vertex angles are congruent.  Hence, the vertices of two adjacent triangles and thus of all triangles coincide.  This common vertex point is equidistant from all vertices of the polygon and also from all sides of the polygon, whence it is simultaneously the \PMlinkname{center}{Center8} of the circumscribed circle and the inscribed circle.
+\end{proof}
+
+To illustrate what is going on in the proof, the procedure explained in the proof will be demonstrated for a regular pentagon and a regular hexagon.  In the pictures below, the regular pentagon is on the left, and the regular hexagon is on the right.
+
+In the first picture, the $n$ angle bisectors are drawn in blue.  Note how they all intersect at one point.  This point is the center of the regular polygon.
+
+\begin{center}
+\begin{pspicture}(-5,-2)(5,2)
+\psline[linecolor=blue](-3,1.702)(-3,-1.377)
+\psline[linecolor=blue](-4.619,0.526)(-1.6905,-0.4255)
+\psline[linecolor=blue](-4,-1.377)(-2.1905,1.114)
+\psline[linecolor=blue](-2,-1.377)(-3.8095,1.114)
+\psline[linecolor=blue](-1.381,0.526)(-4.3095,-0.4255)
+\pspolygon(-3,1.702)(-4.619,0.526)(-4,-1.377)(-2,-1.377)(-1.381,0.526)
+\psline[linecolor=blue](5,0)(1,0)
+\psline[linecolor=blue](4,1.732)(2,-1.732)
+\psline[linecolor=blue](2,1.732)(4,-1.732)
+\pspolygon(5,0)(4,1.732)(2,1.732)(1,0)(2,-1.732)(4,-1.732)
+\psdots(-3,0)(3,0)
+\end{pspicture}
+\end{center}
+
+In the second picture, the $n$ angle bisectors are only drawn to the center.  Note that the resulting picture for the regular hexagon is no different than the previous picture.
+
+\begin{center}
+\begin{pspicture}(-5,-2)(5,2)
+\psline[linecolor=blue](-3,1.702)(-3,0)
+\psline[linecolor=blue](-4.619,0.526)(-3,0)
+\psline[linecolor=blue](-4,-1.377)(-3,0)
+\psline[linecolor=blue](-2,-1.377)(-3,0)
+\psline[linecolor=blue](-1.381,0.526)(-3,0)
+\pspolygon(-3,1.702)(-4.619,0.526)(-4,-1.377)(-2,-1.377)(-1.381,0.526)
+\psline[linecolor=blue](5,0)(1,0)
+\psline[linecolor=blue](4,1.732)(2,-1.732)
+\psline[linecolor=blue](2,1.732)(4,-1.732)
+\pspolygon(5,0)(4,1.732)(2,1.732)(1,0)(2,-1.732)(4,-1.732)
+\psdots(-3,0)(3,0)
+\end{pspicture}
+\end{center}
+
+In the last picture, the inscribed circle is drawn in green, and the circumscribed circle is drawn in cyan.
+
+\begin{center}
+\begin{pspicture}(-5,-2)(5,2)
+\psline[linecolor=blue](-3,1.702)(-3,0)
+\psline[linecolor=blue](-4.619,0.526)(-3,0)
+\psline[linecolor=blue](-4,-1.377)(-3,0)
+\psline[linecolor=blue](-2,-1.377)(-3,0)
+\psline[linecolor=blue](-1.381,0.526)(-3,0)
+\pscircle[linecolor=green](-3,0){1.377}
+\pscircle[linecolor=cyan](-3,0){1.702}
+\pspolygon(-3,1.702)(-4.619,0.526)(-4,-1.377)(-2,-1.377)(-1.381,0.526)
+\psline[linecolor=blue](5,0)(1,0)
+\psline[linecolor=blue](4,1.732)(2,-1.732)
+\psline[linecolor=blue](2,1.732)(4,-1.732)
+\pscircle[linecolor=green](3,0){1.732}
+\pscircle[linecolor=cyan](3,0){2}
+\pspolygon(5,0)(4,1.732)(2,1.732)(1,0)(2,-1.732)(4,-1.732)
+\psdots(-3,0)(3,0)
+\end{pspicture}
+\end{center}
+
+\begin{thebibliography}{8}
+\bibitem{KV}{\sc K. V\"ais\"al\"a }: {\em Geometria}. Tenth edition.\, Werner S\"oderstr\"om Osakeyhti\"o, Porvoo and Helsinki (1971).
+\end{thebibliography} 
+
+%%%%%
+%%%%%
+\end{document}

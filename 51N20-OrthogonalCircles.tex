@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthogonalCircles}
+\pmcreated{2013-03-22 17:41:32}
+\pmmodified{2013-03-22 17:41:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{orthogonal circles}
+\pmrecord{7}{40133}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{PerpendicularityInEuclideanPlane}
+\pmdefines{orthogonal circle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Two circles \PMlinkname{intersecting orthogonally}{ConvexAngle} are orthogonal curves and called {\em orthogonal circles} of each other. 
+\begin{center}
+\begin{pspicture}(-4,-2.5)(5,2.5)
+\psdot[linecolor=blue](0,0)
+\psdot[linecolor=blue](3,0)
+\pscircle[linecolor=blue](0,0){1.5}
+\pscircle[linecolor=blue](3,0){2.598}
+\psline[linecolor=red](0,0)(3,0)
+\psline[linecolor=red](0,0)(0.75,1.299)
+\psline[linecolor=red](3,0)(0.75,1.299)
+\psline(0.65,1.15)(0.85,1.05)
+\psline(0.85,1.05)(0.95,1.2)
+\end{pspicture}
+\end{center}
+Since the tangent of circle is perpendicular to the radius drawn to the tangency point, the both radii of two orthogonal circles drawn to the point of intersection and the line segment connecting the centres form a right triangle.  If\, $(x-a_1)^2+(y-b_1)^2 = r_1^2$\, and\, $(x-a_2)^2+(y-b_2)^2 = r_2^2$\, are the equations of the circles, then, by Pythagorean theorem,
+\begin{align}
+r_1^2+r_2^2 = (a_2-a_1)^2+(b_2-b_1)^2
+\end{align}
+is the condition of the \PMlinkname{orthogonality}{OrthogonalCurves} of those circles.
+
+The equation (1) tells that the centre of one circle is always outside its orthogonal circle.\, If\, $(x_0,\,y_0)$\, is an arbitrary point outside the circle\, $(x-a)^2+(y-b)^2 = r^2$,\, one can always draw with that point as centre the orthogonal circle of this circle:\, its radius is the limited tangent from\, $(x_0,\,y_0)$\, to the given circle.  The \PMlinkname{square}{SquareOfANumber} of the limited tangent is equal to the power of the point with respect to the circle and thus\, $(x_0-a)^2+(y_0-b)^2-r^2$.\, Accordingly, the equation of the orthogonal circle is
+$$(x-x_0)^2+(y-y_0)^2 = (x_0-a)^2+(y_0-b)^2-r^2.$$
+
+One of two \PMlinkname{orthogonal}{Orthogonal} circles \PMlinkescapetext{divides} harmonically any diameter of the other circle.
+
+
+%%%%%
+%%%%%
+\end{document}

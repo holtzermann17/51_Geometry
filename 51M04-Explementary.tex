@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Explementary}
+\pmcreated{2013-03-22 17:34:35}
+\pmmodified{2013-03-22 17:34:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{explementary}
+\pmrecord{8}{39988}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51F20}
+\pmrelated{ComplementaryAngles}
+\pmdefines{explementary angle}
+\pmdefines{explementary arc}
+\pmdefines{full angle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\em explementary arc} of an arc $a$ of a circle is the arc forming together with $a$ the full circle.
+
+Two angles are called {\em explementary angles} of each other, if their sum is the {\em full angle} $2\pi$, i.e. $360^\circ$.  In the below picture, the \PMlinkescapetext{interior angle} \,$\alpha = 60^\circ$\, of an equilateral triangle and its explementary angle\, $\beta = 300^\circ$\, (which is an \PMlinkescapetext{exterior angle} of the triangle) are seen.
+
+\begin{center}
+\begin{pspicture}(-2,-1)(2,3)
+\pspolygon(-1.5,0)(1.5,0)(0,2.6)
+\psarc(0,2.6){0.2}{-60}{240}
+\rput[a](0,2.2){$\alpha$}
+\rput[a](-0.2,2.9){$\beta$}
+\rput(-2,-0.5){.}
+\rput(2,3){.}
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

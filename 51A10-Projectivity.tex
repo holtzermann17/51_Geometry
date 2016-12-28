@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Projectivity}
+\pmcreated{2013-03-22 15:58:00}
+\pmmodified{2013-03-22 15:58:00}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{projectivity}
+\pmrecord{11}{37982}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{51A05}
+\pmrelated{PolaritiesAndForms}
+\pmrelated{SesquilinearFormsOverGeneralFields}
+\pmrelated{Perspectivity}
+\pmrelated{ProjectiveSpace}
+\pmrelated{LinearFunction}
+\pmrelated{Collineation}
+\pmdefines{projective transformation}
+\pmdefines{projective property}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\begin{document}
+Let $PG(V)$ and $PG(W)$ be projective geometries, with $V,W$ vector spaces over a field $K$.  A function $p$ from $PG(V)$ to $PG(W)$ is called a \emph{projective transformation}, or simply a \emph{projectivity} if
+\begin{enumerate}
+\item $p$ is a bijection, and
+\item $p$ is order preserving.
+\end{enumerate}
+
+A \emph{projective property} is any geometric property, such as incidence, linearity, etc... that is preserved under a projectivity.
+
+From the definition, we see that a projectivity $p$ carries 0 to 0, $V$ to $W$.  Furthermore, it carries points to points, lines to lines, planes to planes, etc.. In short, $p$ preserves linearity.  Because $p$ is a bijection, $p$ also preserves dimensions, that is $\dim(S)=\dim(p(S))$, for any subspace $S$ of $V$.  In particular, $\dim(V)=\dim(W)$.  Other properties preserved by $p$ are incidence: if $S\cap T\ne\varnothing$, then $p(S)\cap p(T)\neq \varnothing$; and \PMlinkname{cross ratios}{CrossRatio}.
+
+Every bijective semilinear transformation defines a projectiviity.  To see this, let $f:V\to W$ be a semilinear transformation.  If $S$ is a subspace of $V$, then $f(S)$ is a subspace of $W$, as $x,y\in f(S)$, then $x+y=f(a)+f(b)=f(a+b)\in f(S)$, and $\alpha x={\beta}^{\theta}x={\beta}^{\theta}f(a)=f(\beta a)\in f(S)$, where $\theta$ is an automorphism of the common underlying field $K$.  Also, if $S$ is a subspace of a subspace $T$ of $V$, then $f(S)$ is a subspace of $f(T)$.  Now if we define $f^*:PG(V)\to PG(W)$ by $f^*(S)=f(S)$, it is easy to see that $f^*$ is a projectivity.
+
+Conversely, if $V$ and $W$ are of finite dimension greater than $2$, then a projectivity $p:PG(V)\to PG(W)$ induces a semilinear transformation $\hat{p}:V\to W$.  This highly non-trivial fact is the (first) fundamental theorem of projective geometry.
+
+If the semilinear transformation induced by the projectivity $p$ is in fact a linear transformation, then $p$ is a {\it collineation}: three distinct collinear points are mapped to three distinct collinear points.
+
+\textbf{Remark}.  The definition given in this entry is a generalization of the definition typically given for a projective transformation.  In the more restictive definition, a projectivity $p$ is defined merely as a bijection between two projective spaces that is induced by a linear isomorphism.  More precisely, if $P(V)$ and $P(W)$ are projective spaces induced by the vector spaces $V$ and $W$, if $L:V\to W$ is a bijective linear transformation, then $p=P(L):P(V)\to P(W)$ defined by $$P(L)[v]=[Lv]$$ is the corresponding projective transformation.  $[v]$ is the homogeneous coordinate representation of $v$.  In this definition, a projectiity is always a collineation.  In the case where the vector spaces are finite dimensional with specified bases, $p$ is expressible in terms of an invertible matrix ($Lv=Av$ where $A$ is an invertible matrix).
+%%%%%
+%%%%%
+\end{document}

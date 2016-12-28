@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Collineation}
+\pmcreated{2013-03-22 19:14:50}
+\pmmodified{2013-03-22 19:14:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{collineation}
+\pmrecord{11}{42172}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A45}
+\pmclassification{msc}{51A05}
+\pmclassification{msc}{05C65}
+\pmsynonym{central}{Collineation}
+\pmsynonym{axial}{Collineation}
+\pmrelated{Affinity}
+\pmrelated{Projectivity}
+\pmrelated{CentralCollineation}
+\pmdefines{fixed line}
+\pmdefines{center}
+\pmdefines{axis}
+\pmdefines{central collineation}
+\pmdefines{axial collineation}
+\pmdefines{elation}
+\pmdefines{homology}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In Euclidean geometry, translations and dilations are both examples of one-to-one onto functions that map straight lines to straight lines.  Collineation is a generalization of this notion to more abstract geometric structures.
+
+\textbf{Definition}.  Let $\mathscr{S}=(\mathcal{P},\mathcal{L})$ be a near-linear space.  A \emph{collineation} on $\mathscr{S}$ is an one-to-one onto linear function on $\mathscr{S}$ such that its inverse is also linear.  A collineation on $\mathscr{S}$ is also called an automorphism on $\mathscr{S}$.
+
+It is easy to see that a collineation preserves collinearity: if three points are collinear, so are their images under a collineation.
+
+\textbf{Example 1}. let $\mathscr{S}$ be the near-linear space consisting of four points $P,Q,R,S$, and four lines $PQ,QR,RS$, and $SP$.
+\begin{center}
+\begin{pspicture}(0,0)(2,2)
+\psset{unit=2cm}
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](1,1)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\pspolygon(0,0)(0,1)(1,1)(1,0)
+\rput[r](-0.125,0){$S$}
+\rput[r](-0.125,1){$P$}
+\rput[l](1.125,1){$Q$}
+\rput[l](1.125,0){$R$}
+\end{pspicture}
+\end{center}
+There are six collineations of $\mathscr{S}$:
+\begin{itemize}
+\item $\sigma_1$ is the identity function,
+\item $\sigma_2=(PQRS)$,
+\item $\sigma_3=\sigma_2^2=(PR)(QS)$,
+\item $\sigma_4=(PSRQ)=\sigma_2^{-1}$,
+\item $\sigma_5=(PR)$,
+\item $\sigma_6=(QS)$.
+\end{itemize}
+It is easy to see that this is the alternating group on four letters $A_4$.
+
+If $PR$ is added as another line of $\mathscr{S}$,
+\begin{center}
+\begin{pspicture}(0,0)(2,2)
+\psset{unit=2cm}
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](1,1)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\pspolygon(0,0)(0,1)(1,1)(1,0)
+\psline(0,1)(1,0)
+\rput[r](-0.125,0){$S$}
+\rput[r](-0.125,1){$P$}
+\rput[l](1.125,1){$Q$}
+\rput[l](1.125,0){$R$}
+\end{pspicture}
+\end{center}
+then $\sigma_2$ and $\sigma_4$ above are no longer collineations of $\mathscr{S}$.  The resulting set is the Klein 4-group.
+
+What we have seen is true in general: the set of all collineation on a near-linear space $\mathscr{S}$ is a group under functional composition.  This group is sometimes written $\operatorname{Aut}(\mathscr{S})$.
+
+\textbf{Example 2}.  Let $V$ be an $n$-dimensional vector space over some division ring $D$, with $n\ge 3$.  One may form the affine space $A(V)$ over $V$.  The points and lines of $A(V)$ are respectively cosets of zero and one dimensional subspaces of $V$, and $A(V)$ is a linear space.  Collineations of $A(V)$ are called affinities.  Common examples of affinities are translations, dilations, and reflections (with respect to lines).
+
+\textbf{Example 3}.  Again let $V$ and $k$ be as in the last example.  One may form the projective space $P(V)$ over $V$.  The points and lines of $P(V)$ are one and two dimensional subspaces of $V$, and $P(V)$ is a linear space.  Collineations of $P(V)$ are called projectivities.
+
+A point $P\in \mathcal{P}$ is called a fixed point of $\sigma$ if $\sigma(P)=P$.  A line $\ell \in \mathcal{L}$ is a fixed line of $\sigma$ if $\sigma(\ell)=\ell$.  Note that $\sigma$ fixes line $\ell$ merely means that $\sigma$ permutes the points on $\ell$, and does not necessarily fix them.
+
+\textbf{Definition}.  Given a collineation $\sigma$ on $\mathscr{S}$, a \emph{center} of $\sigma$ is a point $P$ of $\mathscr{S}$ such that $\sigma$ fixes all lines passing through $P$.  An \emph{axis} of $\sigma$ is a hyperplane $\pi$ of $\mathscr{S}$ such that $\sigma$ fixes all points in $\pi$.  A collineation is said to be \emph{central} if it has a center, and \emph{axial} if it has an axis.
+
+It can be shown that, in a projective space, central collineations are precisely the same as axial collineations.  Furthermore, if the (central) collineation is not the identity, then it has a unique center and a unique axis.  Given a projective space, non-identity central collineations can further be classified: those with centers lying in their axes are called \emph{elations}, and \emph{homologies} otherwise.
+
+\begin{thebibliography}{7}
+\bibitem{LB} L. M. Batten, {\it Combinatorics of Finite Geometries}, 2nd edition, Cambridge University Press (1997)
+\bibitem{br} A. Beutelspacher, U. Rosenbaum {\it Projective Geometry, From Foundations to Applications}, Cambridge University Press (2000)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

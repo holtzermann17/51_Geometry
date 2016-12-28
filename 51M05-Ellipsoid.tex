@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Ellipsoid}
+\pmcreated{2013-03-22 14:56:45}
+\pmmodified{2013-03-22 14:56:45}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{ellipsoid}
+\pmrecord{6}{36637}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmrelated{Sphere}
+\pmrelated{QuadraticSurfaces}
+\pmrelated{Ellipse2}
+\pmrelated{VolumeOfEllipsoid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+An \emph{ellipsoid} is a subset of $\R^3$ consisting of points
+$(x,y,z)\in \R^3$ such that 
+$$
+   \left(\frac{x}{a}\right)^2+   \left(\frac{y}{b}\right)^2+   \left(\frac{z}{c}\right)^2=1
+$$
+for some $a,b,c>0$.
+
+\subsubsection*{Properties}
+\begin{enumerate}
+\item If $a=b=c$, the ellipsoid reduces to a sphere.
+\item If we fix the value of any of $x,y,z$ to some constant, say $x=C$, 
+   we obtain an ellipse in the plane $(C,y,z)$. 
+\item The ellipse determined by $a,b,c$ is the unit sphere of the 
+   norm
+$$
+    \Vert v \Vert = v^T \operatorname{diag} (\frac{1}{a}, \frac{1}{b}, \frac{1}{c}) v, \quad v=(x,y,z)^T.
+$$
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

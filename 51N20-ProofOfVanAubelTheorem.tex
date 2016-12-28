@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfVanAubelTheorem}
+\pmcreated{2013-03-22 14:03:28}
+\pmmodified{2013-03-22 14:03:28}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of Van Aubel theorem}
+\pmrecord{6}{35413}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmsynonym{Van Aubel's theorem}{ProofOfVanAubelTheorem}
+\pmrelated{ProofOfVanAubelsTheorem}
+\pmrelated{CevasTheorem}
+\pmrelated{VanAubelTheorem}
+\pmrelated{TrigonometricVersionOfCevasTheorem}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\usepackage{amsmath}
+\begin{document}
+We want to prove
+\[\frac{CP}{PF} =\frac{CD}{DB} +\frac{CE}{EA}\]
+\figura{aubel}
+
+On the picture, let us call $\phi$ to the angle $\angle ABE$ and $\psi$ to the angle $\angle EBC$.
+
+A generalization of bisector's theorem states
+\[\frac{CE}{EA} = \frac{CB \sin \psi}{AB\sin\phi} \quad\mbox{on }\triangle ABC\]
+and
+\[\frac{CP}{PF} = \frac{CB \sin \psi}{FB\sin\phi} \quad\mbox{on }\triangle FBC.
+\]
+From the two equalities we can get
+\[\frac{CE\cdot AB}{EA}=\frac{CP\cdot FB}{PF}\]
+and thus
+\[\frac{CP}{PF}=\frac{CE\cdot AB}{EA\cdot FB}.\]
+Since $AB=AF+FB$, substituting leads to
+\begin{align*}
+\frac{CE\cdot AB}{EA\cdot FB}&=\frac{CE(AF+FB)}{EA\cdot FB}\\
+&=\frac{CE\cdot AF}{EA\cdot FB}+\frac{CE\cdot FB}{EA\cdot FB}\\
+&=\frac{CE\cdot AF}{EA\cdot FB}+\frac{CE}{EA}
+\end{align*}
+
+But Ceva's theorem states 
+\[\frac{CE}{EA}\cdot\frac{AF}{FB}\cdot\frac{BD}{DC}=1\]
+and so 
+\[\frac{CE\cdot AF}{EA\cdot FB}=\frac{CD}{DB}\]
+Subsituting the last equality gives the desired result.
+%%%%%
+%%%%%
+\end{document}

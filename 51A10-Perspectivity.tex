@@ -1,0 +1,147 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Perspectivity}
+\pmcreated{2013-03-22 16:02:08}
+\pmmodified{2013-03-22 16:02:08}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{perspectivity}
+\pmrecord{10}{38082}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{51A05}
+%\pmkeywords{perspective}
+\pmrelated{ProjectiveGeometry}
+\pmrelated{Projectivity}
+\pmrelated{ProjectiveAutomorphism}
+\pmrelated{FundamentalTheoremOfProjectiveGeometry}
+\pmrelated{CentralCollineations}
+\pmrelated{PerspectiveElements}
+\pmrelated{ComplementedLattice}
+\pmrelated{ProjectiveGeometry3}
+\pmdefines{perspective points}
+\pmdefines{Second Fundamental Theorem of Projective Geometry}
+\pmdefines{projective figure}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+\subsubsection*{Background}
+Imagine two lines $\ell_1$ and $\ell_2$ lying in a projective plane $\pi$.
+Pick any point $P$ not on either of the lines.  For any point $Q\in\ell_1$, we
+may form a line $m$ joining $P$ and $Q$.  Then $m$ intersects $\ell_2$ at some
+point $R\in\ell_2$.  This establishes a one-to-one correspondence $\rho$ from
+points lying on $\ell_1$ to points lying on $\ell_2$.  Furthermore, if $O$ is the point of intersection of $\ell_1$ and $\ell_2$, then it is a fixed point of $\rho$.  Now, we can repeat this procedure by picking another point $S$ not lying on either $\ell_1$ or $\ell_2$, and forming a bijection $\sigma$ from $\ell_2$ to $\ell_1$ where again $\sigma(O)=O$.  If we take the composition $\phi=\sigma\circ\rho$, what we get is a bijection from $\ell_1$ onto itself such that $O\in\ell_1$ is fixed by $\phi$.
+\begin{center}
+\begin{pspicture}(-5,-1)(5,4)
+    \psframe(-4.75,0)(4.75,3)
+    \rput[r](-4.35,2.7){$\pi$}
+
+    \psline(1.5,0)(-0.5,3)
+    \rput[b](-0.5,3.1){$\ell_1$}
+    \psline(0.5,0)(2.5,3)
+    \rput[b](2.5,3.1){$\ell_2$}
+    \psdots(1,0.75)
+    \rput[b](2.9,0.5){$O=\rho(O)=\phi(O)$}
+
+    \psdots(-3,2)
+    \rput[b](-3.2,2.2){$P$}
+    \psdots(0,2.25)
+    \rput[b](-0.5,2.25){$Q$}
+    \psline[linestyle=dashed](-4.75,1.854167)(4.75,2.645833)
+    \rput[b](5,2.6){$m$}
+    \psdots(2.117647,2.426471)
+    \rput[t](3,2.25){$R=\rho(Q)$}
+
+    \psdots(-2.5,0.5)
+    \rput[b](-2.6,0.7){$S$}
+    \psdots(0.368771,1.696844)
+    \rput[b](0.1,0.9){$\phi(Q)$}
+    \psline[linestyle=dashed](-3.69847,0)(3.492366,3)
+\end{pspicture}
+\end{center}
+We call this bijection $\phi$ a perspectivity on $\ell_1$ (via point $P$).  $P$ 
+is called the center of the perspectivity and a any bijection of coplanar
+lines in a projective space that arrises in the manner just described is a 
+perspectivity.  Two points $Q$ and $T$ lying on $\ell_1$ are said to be 
+perspective if there is a perspectivity $\phi$ such that $T=\phi(Q)$.  
+It is easy to deduce that if $\phi$ is a perspectivity on a line $\ell$, then 
+$\phi^{-1}$ is also a perspectivity.  So the relation of two points being perspective is a symmetric one.  In addition, any point is always perspective to itself (so the relation is reflexive), since we can take the identity function as the required perspectivity.  (Indeed the relation is trivial, see the closing remarks.)
+
+Moving one dimension up, we consider two planes $\pi_1$ and $\pi_2$ sitting in a
+three-dimensional projective space $V$.  Then there are two bijections, one from
+$\pi_1$ to $\pi_2$, and the other from $\pi_2$ to $\pi_1$, such that their product is a bijection $\phi$ of, say $\pi_1$ onto itself, such that $\phi$ sends points to points, lines to lines, and fixes a line (the line of intersection of $\pi_1$ and $\pi_2$).
+
+\subsubsection*{Definition}
+Given a projective geometry $PG(V)$ ($V$ a vector space over some field $k$), a
+projectivity $\phi$ from $PG(V)$ onto itself (or an projective automorphism) is
+called a \emph{perspectivity} if it there exists a hyperplane $\Pi\in PG(V)$ such that $\phi$ fixes every subspace $S$ of $\Pi$, that is, $\phi(S)=S$ for every $S\le \Pi$.  A pair of points are said to be \emph{perspective} if there is a perspectivity that maps one point to the other.
+
+Certainly any linear transformation that is the identity when restricted to a subspace of codimension 1 induces a perspectivity.  Conversely, a perspectivity induces a linear transformation, if the underlying vector space $V$ is at least three dimensional.
+\begin{proof}
+Assume $\operatorname{dim}(V)\ge 3$.  By the fundamental theorem of projective geometry, a perspectivity $\phi$ on $PG(V)$ induces a semi-linear transformation $f$ on $V$.  Now, by assumption, there is a two dimensional plane $\Pi$, such that $\phi(S)=S$ for all $S\le \Pi$.  Let $kv$ and $kw$ be two points that span $\Pi$ (so $v$ and $w$ are linearly independent).  So, $\phi(kv)=kv$ and $\phi(kw)=kw$.  This means $f(v)=av$ and $f(w)=bw$, where $a,b\in k$.  Since $k(v+w)$ is also a point in $\Pi$, $\phi(k(v+w))=k(v+w)$ and so $f(v+w)=c(v+w)$.  By \PMlinkname{additivity}{SemilinearTransformation} of $f$, $a=c=b$.  Next, for an arbitrary non-zero element $d\in k$, $k(dv+w)$ is a point in $\Pi$ and hence fixed by $\phi$.  Translating this to $f$, we have $f(dv+w)=r(dv+w)$.  By semi-linearity of $f$, we get $rdv+rw=d^{\alpha}f(v)+f(w)=d^{\alpha}cv+cw$.  So $rd=d^{\alpha}c$ and $r=c$.  Solving this we get $cd=d^{\alpha}c$ or $d^{\alpha}=cdc^{-1}$.  This shows that $\alpha$ is an inner-automorphism of $k$.  But $k$ is a field, $\alpha$ is the identity on $k$.  As a result, $f$ is a linear transformation.  
+\end{proof}
+In other words, every perspectivity is a collineation if the dimension of $V$ is at least 3 (in particular, $PG(V)$ is at least a projective plane).
+
+\textbf{Remarks}.
+\begin{itemize}
+\item In the literature, the maps $\rho$ and $\sigma$ (see Background above) are also known as perspectivies.  To make a distinction between this and the formal definition given earlier, we will call, say $\rho$, a perspectivity \emph{between two projective figures} $\ell_1$ and $\ell_2$ with \emph{center} $P$.  A \emph{projective figure} is just a collection of points (one-dimensional subspaces) in a projective geometry.  In this way, we can define a \emph{projectivity between two projective figures $X$ and $Y$} as a bijection $\rho:X\to Y$ such that there exists a point $P$ with the property that \begin{center} \emph{for any $x\in X$, points $P,x,$ and $\rho(x)$ are collinear.}\end{center}  Two projective figures are perspective if there is a perspectivity between them.
+\item In a projective geometry, every pair of points are perpective.
+\item If $V$ is finite dimensional, then every collineation is a product of a finite number of perspectivities.  The number of perspectivities required is at most $\operatorname{dim}(V)$.  In particular, the picture becomes apparant when the collineation can be diagonalized.  For if a collineation $p$ can be represented by a diagonal matrix whose diagonal entries are $d_1,\ldots, d_n$ from the top left to the bottom right, then 
+
+\begin{center}
+$\begin{pmatrix}
+d_1 & 0 & \cdots & 0 \\
+0 & d_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & d_n
+\end{pmatrix}$=
+$\begin{pmatrix}
+d_1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+0 & d_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 1
+\end{pmatrix}
+\cdots
+\begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & d_n
+\end{pmatrix}$
+\end{center}
+where each of the matrices on the right represents a perspectivity.  This is only an idealized situation where the linear transformation can be diagonalized.  There are perspectivities that induce non-diagonalizable linear transformations; see central collineations for detail.
+\item \textbf{(Second Fundamental Theorem of Projective Geometry)}.  From the two assertions above, one can show that 
+\begin{quote}
+if $\operatorname{dim}(V)=n < \infty$, and if $\lbrace v_1,\ldots,v_n
+\rbrace$ and $\lbrace w_1,\ldots, w_n\rbrace$ are two sets of points in general position, then there is a unique projectivity $p$ such that $p(v_i)=w_i$.
+\end{quote}
+\item Since a projective geometry is a bounded lattice, the concept of two points being perspective with one another can be generalized to elements found in a bounded lattice: two elements $a,b$ in a bounded lattice $L$ are in perspective if they have a common complement $c$, that is, $a\vee c=b\vee c=1$ and $a\wedge c=b\wedge c=0$.  If we apply this back to the case when $L$ is a projective geometry, we see that $a$ and $b$ are in perspective precisely when there is a perspectivity taking $a$ to $b$.  If $a\ne b$, then $c$ is the
+hyperplane that is fixed by the perspectivity.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

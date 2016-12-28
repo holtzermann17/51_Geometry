@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralRepresentationOfLengthOfSmoothCurve}
+\pmcreated{2013-03-22 15:39:39}
+\pmmodified{2013-03-22 15:39:39}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{integral representation of length of smooth curve}
+\pmrecord{11}{37594}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N05}
+\pmrelated{ArcLength}
+\pmrelated{Rectifiable}
+\pmrelated{TotalVariation}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\begin{document}
+Suppose $\gamma\colon [0,1] \to \real^m$ 
+is a continuously differentiable
+ curve.  Then the definition of its length
+as a rectifiable curve
+\[
+L = \sup \Bigl\{ \sum_{i=1}^n \norm{\gamma(t_i) - \gamma(t_{i-1})} 
+\colon 0 = t_0 < t_1 < \dotsb < t_n = 1 \,, \thickspace n \in \nat \Bigr\} 
+\]
+is equal to its length as computed in differential geometry:
+\[
+\int_0^1 \norm{\gamma'(t)} \, dt\,.
+\]
+
+\begin{proof}
+Let the partition $\{ t_i \}$ of $[0,1]$ be arbitrary.  Then
+\begin{align*}
+\sum_{i=1}^n \norm{\gamma(t_i) - \gamma(t_{i-1})} &= \sum_{i=1}^n \normB{\int_{t_{i -1}}^{t_i} \gamma'(t) \, dt } &  \text{(fundamental theorem of calculus)} \\
+&\leq \sum_{i=1}^n \int_{t_{i -1}}^{t_i} \norm{\gamma'(t)} \, dt 
+&\text{(triangle inequality for integrals)} \\
+&= \int_0^1 \norm{\gamma'(t)} \, dt\,.
+\end{align*}
+Hence $L \leq \int_0^1 \norm{\gamma'(t)} \, dt$.
+(By the way, this also shows that $\gamma$ is rectifiable in the first place.)
+
+The inequality in the other direction is more tricky.
+Given $\epsilon > 0$, we know that
+$\int_0^1 \norm{\gamma'(t)} \, dt$ can be approximated up to $\epsilon$
+by a Riemann sum of the form
+\[
+\sum_{i=1}^n \norm{ \gamma'(t_{i-1}) } (t_i - t_{i-1})
+\]
+provided the partition $\{ t_i \}$ is fine enough,
+i.e. has mesh width $\leq \Delta$ for some small $\Delta > 0$.
+We want to approximate $\gamma'(t_{i-1})$ with 
+$[\gamma(t_i) - \gamma(t_{i-1})]/(t_i - t_{i-1})$, but this only works 
+if $t_i - t_{i-1}$ is small.  
+
+To get the precise estimates, use uniform continuity 
+of $\gamma'$ on $[0,1]$ to obtain a $\delta > 0$ such that 
+$\norm{\gamma'(\tau) - \gamma'(t)} \leq \epsilon$ 
+whenever $\abs{\tau - t} \leq \delta$.  
+Then for all $0 < h \leq \delta$ and $t \in [0,1]$,
+\[
+\normW{ \frac{\gamma(t+h) - \gamma(t)}{h} - \gamma'(t) }
+\leq \frac{1}{h} \int_t^{t+h} \norm{\gamma'(\tau) - \gamma'(t)} \, d\tau
+\leq \frac{h}{h} \, \epsilon = \epsilon\,.
+\]
+
+Let the partition $\{t_i\}$ have a mesh width less than both $\delta$
+and $\Delta$.  Then
+setting $h = t_i - t_{i-1}$ successively in each summand,
+we have
+\begin{align*}
+\int_0^1 \norm{\gamma'(t)} \, dt &\leq 
+\sum_{i=1}^n \norm{\gamma'(t_{i-1})} (t_i - t_{i-1}) + \epsilon \\
+&\leq \sum_{i=1}^n \frac{\norm{\gamma(t_i) - \gamma(t_{i-1})}}{t_i - t_{i-1}}
+\, (t_i - t_{i-1}) + \sum_{i=1}^n \epsilon (t_i - t_{i-1}) + \epsilon \\
+&= \sum_{i=1}^n \norm{\gamma(t_i) - \gamma(t_{i-1})} + 2\epsilon \\
+&\leq L + 2\epsilon\,.
+\end{align*}
+Taking $\epsilon \to 0$ yields  $\int_0^1 \norm{\gamma'(t)} \, dt \leq L$.
+\end{proof}
+
+We remark that $L = \int_0^1 \norm{\gamma'(t)} \, dt$ is true  for piecewise smooth curves $\gamma$
+also, simply by adding together the results for each smooth segment of $\gamma$.
+%%%%%
+%%%%%
+\end{document}

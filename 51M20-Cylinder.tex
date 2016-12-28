@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Cylinder}
+\pmcreated{2013-03-22 15:29:21}
+\pmmodified{2013-03-22 15:29:21}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{cylinder}
+\pmrecord{12}{37345}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M20}
+\pmclassification{msc}{51M04}
+\pmrelated{Parallelotope}
+\pmdefines{cylindrical surface}
+\pmdefines{lateral surface}
+\pmdefines{mantle}
+\pmdefines{base}
+\pmdefines{side line}
+\pmdefines{right cylinder}
+\pmdefines{skew cylinder}
+\pmdefines{prism}
+\pmdefines{parallelepiped}
+\pmdefines{right prism}
+\pmdefines{skew prism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\PMlinkescapeword{words}
+
+When a straight line moves in the space without changing its direction, the ruled surface it sweeps is called a {\em cylindrical surface} (or, in some special cases, simply a cylinder).\, Formally, a cylindrical surface $S$ is a ruled surface with the given condition: 
+\begin{quote}
+If $p,\,q$ are two distinct points in $S$, and $l$ and $m$ are the rulings passing through $p$ and $q$ respectively, then\, $l \parallel m$ (this includes the case when\, $l = m$).
+\end{quote}
+If the moving line returns to its starting point, the cylindrical surface $S$ is said to be \PMlinkescapetext{{\em closed}}.\, In other words, if we take any plane $\pi$ perpendicular to any of its rulings, and observe the curve $c$ of intersection of $\pi$ and $S$, then $S$ is \PMlinkescapetext{closed} if $c$ is a closed curve.
+
+% This is a picture of a circular cylinder.
+% (I know, not very creative, but if someone can come up with a nice 
+% parameterized curve to use, I can change that. Look at the Python 
+% source file cylinder.py if you are curious.) // SteveCheng
+\begin{figure}
+\begin{center}
+\includegraphics{cylinder.eps}
+\end{center}
+\caption{A closed cylindrical surface}
+\end{figure}
+
+The solid \PMlinkescapetext{bounded by a closed} cylindrical surface and two parallel planes is a {\em cylinder}.\, The portion of the surface of the cylinder belonging to the cylindrical surface is called the {\em lateral surface} or the {\em mantle} of the cylinder and the portions belonging to the planes are the {\em bases} of the cylinder.
+
+The bases of any cylinder are congruent.\, The line segment of a generatrix between the planes is a \PMlinkescapetext{{\em side line}} of the cylinder.\, All side lines are equally long.\, If the side lines are perpendicular to the planes of the bases, one speaks of a {\em right cylinder}, otherwise of a {\em skew cylinder}.
+
+The perpendicular distance of the planes of the bases is the \PMlinkescapetext{{\em height}} of the cylinder.\, The volume ($V$) of the cylinder equals the product of the base area ($A$) and the height ($h$):
+                              $$V = Ah$$
+If the base is a polygon, the cylinder is called a {\em prism} (which is a polyhedron).\, The faces of the mantle of a prism are parallelograms.\, If also the bases of a prism are parallelograms, the prism is a {\em parallelepiped}.\, If the faces of the mantle of a prism are rectangles, one speaks of a {\em right prism}, otherwise of a {\em skew prism}.\, 
+
+For any integer $n \ge 3$, the following are equivalent statements about a prism $P$:
+
+\begin{enumerate}
+\item $P$ has a base that is an $n$-gon;
+\item $P$ has $n+2$ faces;
+\item $P$ has $2n$ vertices;
+\item $P$ has $3n$ edges.
+\end{enumerate}
+
+\textbf{Note.}\, The notion of the prism (or cylinder) of a polygon in $\mathbb{R}^3$ has a higher-dimensional analogue.\, Given any polytope $P$, the
+prism of P is the polytope\, $\mbox{Prism}(P) := P\!\times\![0,\,1]$.\, The
+vertices of $\mbox{Prism}(P)$ are the points\, $(x,\,0)$ and\, $(x,\,1)$, where
+$x$ \PMlinkescapetext{ranges} over the vertices of $P$.\, In other words, we drag
+$P$ a short distance through a vector orthogonal to everything
+in $P$, just as we would to obtain the prism of a polygon.
+%%%%%
+%%%%%
+\end{document}

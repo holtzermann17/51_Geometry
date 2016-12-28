@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Polarity}
+\pmcreated{2013-03-22 15:57:58}
+\pmmodified{2013-03-22 15:57:58}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{polarity}
+\pmrecord{12}{37981}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{51A05}
+\pmsynonym{order reversing}{Polarity}
+%\pmkeywords{projective geometry}
+%\pmkeywords{projective point}
+%\pmkeywords{hyperplane}
+%\pmkeywords{order preserving}
+%\pmkeywords{order reversing}
+\pmrelated{SesquilinearFormsOverGeneralFields}
+\pmrelated{PolaritiesAndForms}
+\pmdefines{polarity}
+\pmdefines{duality}
+\pmdefines{correlation}
+\pmdefines{pole}
+\pmdefines{polar}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\begin{defn}
+\begin{itemize}
+\item Given finite dimensional vector spaces $V$ and $W$, a \emph{duality} of the projective geometry $PG(V)$ to $PG(W)$ is an order-reversing bijection 
+$f:PG(V)\rightarrow PG(W)$.  If $W=V$ then we can refer to $f$ as a correlation.
+
+\item A correlation of order $2$ is called a \emph{polarity}.
+
+\item The set of correlations and collineations $f:PG(V)\rightarrow PG(V)$ form a group denoted $P\Gamma L^*(V)$ with the operation of composition.
+\end{itemize}
+\end{defn}
+
+\begin{remark}
+Dualities are determined by where they map collinear triples.   Given a map
+define on the points of $PG(V)$ to the hyperplanes of $PG(W)$ which maps collinear triples to triples of hyperplanes which intersect in a codimension 2 subspace, this specifies a unique duality.
+\end{remark}
+
+\begin{remark}
+A polarity/duality necessarily interchanges points with hyperplanes.  In this context points are called ``poles'' and hyperplanes ``polars.''
+
+An alternative definition of a duality is a projectivity (order-preserving map) $f:PG(V)\rightarrow PG(V^*)$.  
+\end{remark}
+
+Through the use of the fundamental theorem of projective geometry, dualities and polarities can be identified with non-degenerate sesquilinear forms.  (See \PMlinkname{Polarities and forms}{PolaritiesAndForms}.)
+
+%%%%%
+%%%%%
+\end{document}

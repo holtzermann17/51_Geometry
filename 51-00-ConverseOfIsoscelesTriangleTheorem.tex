@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConverseOfIsoscelesTriangleTheorem}
+\pmcreated{2013-03-22 17:12:20}
+\pmmodified{2013-03-22 17:12:20}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{converse of isosceles triangle theorem}
+\pmrecord{7}{39526}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M04}
+\pmrelated{IsoscelesTriangleTheorem}
+\pmrelated{AngleBisectorAsLocus}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{reflexive}
+\PMlinkescapeword{property}
+
+The following theorem holds in geometries in which isosceles triangle can be defined and in which SAS, ASA, and AAS are all valid. Specifically, it holds in Euclidean geometry and hyperbolic geometry (and therefore in neutral geometry).
+
+\begin{thm*}[\PMlinkescapetext{Converse of Isosceles Triangle Theorem}]
+If $\triangle ABC$ is a triangle with $D \in \overline{BC}$ such that any two of the following three statements are true:
+
+\begin{enumerate}
+\item $\overline{AD}$ is a median
+\item $\overline{AD}$ is an altitude
+\item $\overline{AD}$ is the angle bisector of $\angle BAC$
+\end{enumerate}
+
+then $\triangle ABC$ is isosceles.
+\end{thm*}
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\pspolygon(-2,-2)(0,2)(2,-2)
+\psline(0,-2)(0,2)
+\rput[b](0,2.2){$A$}
+\rput[r](-2.2,-2){$B$}
+\rput[a](0,-2.3){$D$}
+\rput[l](2.2,-2){$C$}
+\end{pspicture}
+\end{center}
+
+\begin{proof}
+First, assume 1 and 2 are true.  Since $\overline{AD}$ is a median, $\overline{BD} \cong \overline{CD}$.  Since $\overline{AD}$ is an altitude, $\overline{AD}$ and $\overline{BC}$ are perpendicular.  Thus, $\angle ADB$ and $\angle ADC$ are right angles and therefore congruent.  Since we have
+
+\begin{itemize}
+\item $\overline{AD} \cong \overline{AD}$ by the \PMlinkname{reflexive property}{Reflexive} of $\cong$
+\item $\angle ADB \cong \angle ADC$
+\item $\overline{BD} \cong \overline{CD}$
+\end{itemize}
+
+we can use SAS to conclude that $\triangle ABD \cong \triangle ACD$.  By CPCTC, $\overline{AB} \cong \overline{AC}$.
+
+Next, assume 2 and 3 are true.  Since $\overline{AD}$ is an altitude, $\overline{AD}$ and $\overline{BC}$ are perpendicular. Thus, $\angle ADB$ and $\angle ADC$ are right angles and therefore congruent.  Since $\overline{AD}$ is an angle bisector, $\angle BAD \cong \angle CAD$.  Since we have
+
+\begin{itemize}
+\item $\angle ADB \cong ADC$
+\item $\overline{AD} \cong \overline{AD}$ by the reflexive property of $\cong$
+\item $\angle BAD \cong \angle CAD$
+\end{itemize}
+
+we can use ASA to conclude that $\triangle ABD \cong \triangle ACD$.  By CPCTC, $\overline{AB} \cong \overline{AC}$.
+
+Finally, assume 1 and 3 are true.  Since $\overline{AD}$ is an angle bisector, $\angle BAD \cong \angle CAD$.  Drop perpendiculars from $D$ to the rays $\overrightarrow{AB}$ and $\overrightarrow{CD}$.  \PMlinkescapetext{Label} the intersections as $E$ and $F$, respectively.  Since the length of $\overline{DE}$ is at most $\overline{BD}$, we have that $E \in \overline{AB}$.    (Note that $E \neq A$ and $E \neq B$ are \emph{not} assumed.)  Similarly $F \in \overline{AC}$.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\pspolygon(-2,-2)(0,2)(2,-2)
+\psline(-1.6,-1.2)(0,-2)
+\psline(0,-2)(1.6,-1.2)
+\psline(0,-2)(0,2)
+\rput[b](0,2.2){$A$}
+\rput[r](-2.2,-2){$B$}
+\rput[a](0,-2.3){$D$}
+\rput[l](2.2,-2){$C$}
+\rput[r](-1.8,-1.2){$E$}
+\rput[l](1.8,-1.2){$F$}
+\psline(-1.52,-1.04)(-1.36,-1.12)
+\psline(-1.44,-1.28)(-1.36,-1.12)
+\psline(1.52,-1.04)(1.36,-1.12)
+\psline(1.44,-1.28)(1.36,-1.12)
+\end{pspicture}
+\end{center}
+
+Since we have
+
+\begin{itemize}
+\item $\angle AED \cong \angle AFD$
+\item $\angle BAD \cong \angle CAD$
+\item $\overline{AD} \cong \overline{AD}$ by the reflexive property of $\cong$
+\end{itemize}
+
+we can use AAS to conclude that $\triangle ADE \cong \triangle ADF$.  By CPCTC, $\overline{DE} \cong \overline{DF}$ and $\angle ADE \cong \angle ADF$.
+
+Since $\overline{AD}$ is a median, $\overline{BD} \cong \overline{CD}$.  Recall that SSA holds when the angles are right angles.  Since we have
+
+\begin{itemize}
+\item $\overline{BD} \cong \overline{CD}$
+\item $\overline{DE} \cong \overline{DF}$
+\item $\angle BED$ and $\angle CFD$ are right angles
+\end{itemize}
+
+we can use SSA to conclude that $\triangle BDE \cong \triangle CDF$.  By CPCTC, $\angle BDE \cong \angle CDF$.
+
+Recall that $\angle ADE \cong \angle ADF$ and $\angle BDE \cong \angle CDF$.  Thus, $\angle ADB \cong \angle ADC$.  Since we have
+
+\begin{itemize}
+\item $\overline{AD} \cong \overline{AD}$ by the reflexive property of $\cong$
+\item $\angle ADB \cong \angle ADC$
+\item $\overline{BD} \cong \overline{CD}$
+\end{itemize}
+
+we can use SAS to conclude that $\triangle ABD \cong \triangle ACD$.  By CPCTC, $\overline{AB} \cong \overline{AC}$.
+
+In any case, $\overline{AB} \cong \overline{AC}$.  It follows that $\triangle ABC$ is isosceles.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

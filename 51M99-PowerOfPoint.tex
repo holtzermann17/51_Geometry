@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PowerOfPoint}
+\pmcreated{2013-03-22 15:07:02}
+\pmmodified{2013-03-22 15:07:02}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{power of point}
+\pmrecord{15}{36854}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M99}
+\pmsynonym{power of the point}{PowerOfPoint}
+\pmsynonym{power of a point}{PowerOfPoint}
+\pmrelated{InversionOfPlane}
+\pmrelated{VolumeOfSphericalCapAndSphericalSector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\begin{thmplain}
+ \,If a secant of the circle is drawn through a point ($P$), then the product of the line segments on the secant between the point and the perimeter of the circle is \PMlinkescapetext{independent} on the direction of the secant. \,The product is called {\em the power of the point with respect to the circle}.
+\end{thmplain}
+
+{\em Proof.} \,Let $PA$ and $PB$ be the segments of a secant and $PA'$ and $PB'$ the segments of another secant. \,Then the triangles $PAB'$ and $PA'B$ are similar since they have equal angles, namely the central angles $\angle APB'$ and $\angle BPA'$ and the inscribed angles $\angle PAB'$ and $\angle PA'B$. \,Thus we have the \PMlinkname{proportion}{ProportionEquation}
+$$\frac{PA}{PA'} = \frac{PB'}{PB},$$
+which implies the asserted equation
+$$PA\cdot PB = PA'\cdot PB'.$$
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\psline{-}(-3,-2)(2.6,3)
+\psline{-}(-3,-2)(2.8,-1.2)
+\rput[b](-3,-2){.}
+\rput[a](2.6,3){.}
+\rput[r](2.8,-1.2){.}
+\rput[b](0,-2.5){.}
+\pscircle[linecolor=blue](0,0){2.5}
+\psdots(0,0)(-3,-2)
+\rput[a](-3.4,-2){$P$}
+\rput[r](-1.6,-1.6){$A$}
+\rput[r](-1.8,-0.9){$A'$}
+\rput[a](2,-1.1){$B$}
+\rput[a](1.9,2){$B'$}
+\end{pspicture}
+\end{center}
+
+\textbf{Notes.} \,If the point $P$ is outside a circle, then value of the power of the point with respect to the circle is equal to the square of the limited tangent of the circle from $P$; this \PMlinkname{square}{SquareOfANumber} may be considered as the limit case of the power of point where the both intersection points of the secant with the circle coincide. \,Another \PMlinkescapetext{extension} of the notion power of point is got when the line through $P$ does not intersect the circle; we can think that then the intersecting points are imaginary; also now the product of the ``imaginary line segments'' is the same.
+
+Denote by $p^2$ the power of the point \,$P := (a,\,b)$\, with respect to circle
+$$K(x,\,y) := (x-x_0)^2+(y-y_0)^2-r^2 = 0.$$
+Then, by the Pythagorean theorem, we obtain
+\begin{align}
+p^2 = (a-x_0)^2+(b-y_0)^2-r^2
+\end{align}
+if $P$ is outside the circle and
+\begin{align}
+p^2 = r^2-((a-x_0)^2+(b-y_0)^2)
+\end{align}
+if $P$ is inside of the circle. \,If in the latter case, we change the definition of the power of point to be the negative value $-p^2$ for a point inside the circle, then in both cases the power of the point $(a,\,b)$ is equal to
+$$K(a,\,b) \equiv (a-x_0)^2+(b-y_0)^2-r^2.$$
+%%%%%
+%%%%%
+\end{document}

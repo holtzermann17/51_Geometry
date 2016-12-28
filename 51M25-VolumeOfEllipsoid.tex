@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VolumeOfEllipsoid}
+\pmcreated{2013-03-22 17:20:41}
+\pmmodified{2013-03-22 17:20:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{volume of ellipsoid}
+\pmrecord{11}{39700}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M25}
+\pmsynonym{ellipsoid volume}{VolumeOfEllipsoid}
+\pmrelated{Ellipsoid}
+\pmrelated{SubstitutionNotation}
+\pmrelated{SqueezingMathbbRn}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+\PMlinkescapeword{formula} \PMlinkescapeword{cut}
+Let us determine the volume of the ellipsoid
+$$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2} \;=\; 1.$$
+
+Suppose\, $-a \leqq x \leqq a$.  When we cut the ellipsoid with a plane parallel to the $yz$-plane, that is, let $x$ be \PMlinkescapetext{constant}, we get the ellipse
+$$\frac{y^2}{b^2}+\frac{z^2}{c^2} \;=\; 1\!-\!\frac{x^2}{a^2},$$
+i.e. 
+$$\frac{y^2}{b^2\left(1\!-\!\frac{x^2}{a^2}\right)}+\frac{z^2}{c^2\left(1\!-\!\frac{x^2}{a^2}\right)} \;=\; 1,$$
+with the semiaxes
+$$b_1 := b\sqrt{1\!-\!\frac{x^2}{a^2}},\quad c_1 \;:=\; c\sqrt{1\!-\!\frac{x^2}{a^2}}.$$
+The area of this ellipse is $\pi b_1 c_1$ (see area of plane region), and thus we have the function
+$$A(x) \;:=\; \pi b c \left(1-\frac{x^2}{a^2}\right)$$
+expressing the area cut of the ellipsoid by parallel planes.  By the volume formula of the \PMlinkname{parent entry}{VolumeAsIntegral} we can calculate the volume of the ellipsoid as
+$$V \;=\; \int_{-a}^a\!A(x)\,dx = \pi b c \int_{-a}^a\!\left(1\!-\!\frac{x^2}{a^2}\right)\,dx 
+ \;=\; \pi b c\! \sijoitus{x\,=-a}{\quad a}\left(x-\frac{x^3}{3a^2}\right) \;=\; \frac{4}{3}\pi a b c.$$
+The special case\, $a = b = c = r$\, of a sphere is the well-known expression $\frac{4}{3}\pi r^3.$
+%%%%%
+%%%%%
+\end{document}

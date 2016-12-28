@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RodriguesRotationFormula}
+\pmcreated{2013-03-22 15:20:04}
+\pmmodified{2013-03-22 15:20:04}
+\pmowner{acastaldo}{8031}
+\pmmodifier{acastaldo}{8031}
+\pmtitle{Rodrigues' rotation formula}
+\pmrecord{7}{37150}
+\pmprivacy{1}
+\pmauthor{acastaldo}{8031}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{15-00}
+\pmrelated{DecompositionOfOrthogonalOperatorsAsRotationsAndReflections}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Rodrigues' rotation formula gives a convenient way to write the general rotation matrix in $R^3$.
+
+If $[v_1, v_2, v_3]$ is a unit vector on the rotation axis, and $\theta$ is the rotation angle about that axis, then the rotation matrix is given by 
+$$ I + \sin(\theta) A +(1-\cos(\theta))A^2 $$
+
+where $I$ is the identity matrix and 
+$$ A =
+\begin{pmatrix}
+0 & -v_3 & v_2 \\
+v_3 & 0 & -v_1 \\
+-v_2 & v_1 & 0
+\end{pmatrix}
+$$.
+%%%%%
+%%%%%
+\end{document}

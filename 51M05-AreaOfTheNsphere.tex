@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaOfTheNsphere}
+\pmcreated{2013-03-22 13:47:06}
+\pmmodified{2013-03-22 13:47:06}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{area of the $n$-sphere}
+\pmrecord{14}{34495}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmrelated{VolumeOfTheNSphere}
+\pmrelated{AreaOfASphericalTriangle}
+\pmrelated{AreaOfSphericalZone}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\def\R{\mathbb{R}}
+\begin{document}
+The area of $S^n$ the unit $n$-sphere (or hypersphere) is the same as the total
+solid angle it subtends at the origin. To calculate it, consider the following
+integral
+\[
+  I(n) = \int_{\R^{n+1}} e^{-\sum_{i=1}^{n+1} x_i^2}\, d^{n+1} x.
+\]
+Switching to polar coordinates we let $r^2=\sum_{i=1}^{n+1} x_i^2$ and the
+integral becomes
+\[
+  I(n) = \int_{S^n} d\Omega \int_{0}^{\infty} r^{n} e^{-r^2}\, dr.
+\]
+The first integral is the integral over all solid angles and is exactly what we
+want to evaluate. Let us denote it by $A(n)$. With the change of variable
+$t=r^2$, the second integral can be evaluated in terms of the gamma function
+$\Gamma(x)$:
+\[
+  I(n)/A(n) = \frac{1}{2}\int_0^\infty t^{\frac{n-1}{2}} e^{-t}\, dt
+    = \frac{1}{2}\Gamma\left(\frac{n+1}{2}\right).
+\]
+We can also evaluate $I(n)$ directly in Cartesian coordinates:
+\[
+  I(n) = \left[ \int_{-\infty}^\infty e^{-x^2}\, dx \right]^{n+1}
+    = \pi^{\frac{n+1}{2}},
+\]
+where we have used the standard Gaussian integral $\int_{-\infty}^\infty
+e^{-x^2}\, dx = \sqrt{\pi}$.
+
+Finally, we can solve for the area
+\[ A(n) = \frac{2\pi^{\frac{n+1}{2}}}{\Gamma\left(\frac{n+1}{2}\right)}. \]
+If the radius of the sphere is $R$ and not $1$, the correct area is
+$A(n)R^{n}$.
+
+Note that this formula works only for $n\ge0$. The first few special cases
+are
+\begin{itemize}
+  \item[$n=0$] $\Gamma(1/2)=\sqrt{\pi}$, hence $A(0)=2$ (in this case, the
+    area just counts the number of points in $S^0=\{+1,-1\}$);
+  \item[$n=1$] $\Gamma(1)=1$, hence $A(1)=2\pi$ (this is the familiar result
+    for the circumference of the unit circle);
+  \item[$n=2$] $\Gamma(3/2)=\sqrt{\pi}/2$, hence $A(2)=4\pi$ (this is the
+    familiar result for the area of the unit sphere);
+  \item[$n=3$] $\Gamma(2)=1$, hence $A(3)=2\pi^2$;
+  \item[$n=4$] $\Gamma(5/2)=3\sqrt{\pi}/4$, hence $A(4)=8\pi^2/3$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

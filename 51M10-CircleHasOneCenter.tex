@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CircleHasOneCenter}
+\pmcreated{2013-03-22 17:15:20}
+\pmmodified{2013-03-22 17:15:20}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{circle has one center}
+\pmrecord{23}{39591}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M10}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51A05}
+\pmrelated{RegularPolygonAndCircles}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+\newtheorem{lemma*}{Lemma}
+
+\begin{document}
+\PMlinkescapeword{exterior}
+\PMlinkescapeword{interior}
+
+\begin{thm*}
+Every circle has exactly one center.
+\end{thm*}
+
+Before proving this, we state and prove a lemma.
+
+\begin{lemma*}
+A center of a circle must lie in its interior.
+\end{lemma*}
+
+\begin{proof}
+Suppose not.  Let a circle have a center $O$ not lying in its interior.  If $O$ lies on the circle, then the circle is degenerate (just a point).  Suppose that $O$ lies in its exterior.  Choose a point $A$ on the circle such that a line that contains $A$ and $O$ passes through the interior of the circle (\PMlinkname{i.e.}{Ie}, the line is not \PMlinkname{tangent}{TangentLine} to the circle).  Such a line intersects the circle at another point $B$.  It cannot be the case that $O$ is in between $A$ and $B$, lest $O$ be in the interior of the circle.  Without loss of generality, let $B$ be between $A$ and $O$.
+
+\begin{center}
+\begin{pspicture}(-3,-3)(5,3)
+\rput[a](0,3){.}
+\rput[a](0,-3){.}
+\pscircle(0,0){3}
+\psline(-3,0)(4,0)
+\psdots(-3,0)(3,0)(4,0)
+\rput[r](-3.2,0){$A$}
+\rput[l](3.1,-0.3){$B$}
+\rput[l](4.2,0){$O$}
+\end{pspicture}
+\end{center}
+
+Then $BO<AO$, a contradiction, since $O$ is supposed to be the center of the circle.
+\end{proof}
+
+Now to prove the theorem.
+
+\begin{proof}
+By definition, every circle has at least one center.  Suppose that a circle has more than one center.  Let $O$ and $O'$ be two distinct centers of this circle.  By the previous lemma, $O$ and $O'$ must lie in the interior of the circle.  Draw a chord of the circle which contains both $O$ and $O'$.  Let $A$ and $B$ be the intersections of this chord with the circle such that $O$ is \PMlinkname{between}{Betweenness} $A$ and $O'$.  Since $O$ and $O'$ are in the interior of the circle, it must be the case that $O'$ is between $O$ and $B$.
+
+\begin{center}
+\begin{pspicture}(-4,-3)(4,3)
+\rput[b](0,-3){.}
+\rput[a](0,3){.}
+\pscircle(0,0){3}
+\psline(-3,0)(3,0)
+\psdots(-3,0)(-0.7,0)(0.7,0)(3,0)
+\rput[r](-3.2,0){$A$}
+\rput[a](-0.7,-0.3){$O$}
+\rput[a](0.7,-0.3){$O'$}
+\rput[l](3.2,0){$B$}
+\end{pspicture}
+\end{center}
+
+Note that we must have $A \neq O$, $A \neq O'$, $B \neq O$, and $B \neq O'$ as pictured.  Otherwise, the circle is degenerate, yielding that $O=O'$.  Because of these four inequalities, we also have that $AO>0$, $AO'>0$, $BO>0$, and $BO'>0$.
+
+Since $O$ is a center of the circle, $AO=BO$.  Since $O'$ is a center of the circle, $AO'=BO'$.  Thus, $AO<AO'=BO'<BO$, a contradiction.  It follows that a circle has exactly one center.
+\end{proof}
+
+\section{Generality}
+
+Looking at the proof of the main theorem and the lemma, we see that they hold in any geometry in which any two points lie on a common line and in which the notion of betweenness is well-defined.  Examples of such geometries include Euclidean geometry, hyperbolic geometry, and neutral geometry.  In fact, the uniqueness of center of a circle holds in any ordered geometry satisfying the congruence axioms (see \PMlinkname{here}{ProofOfUniquenessOfCenterOfACircle} for a proof).  By contrast, in spherical geometry, where the notion of betweenness is not well-defined and a pair of antipodal points determines an infinity of lines, we also have that every circle has exactly two centers which are antipodal points.  However, in projective geometry, it is again valid because we identify antipodal points to construct the projective plane from the sphere.
+
+More generally, in Riemannian spaces (and generalizations such as Finsler spaces), this theorem will hold provided that geodesics emanating at a point do not focus at some other point, although they can focus at the same point at which they started.  This generalizes what we saw in the case of the sphere and the the projective plane.  In both those cases, geodesics focussed but, in the former case, they focussed at the antipodal point but, in the latter case, they only focussed back at their starting point.  While on spheres, circles have two centers, we can have Riemannian spaces in which geodesics refocus any number of times, even infinitely often, in which cases a circle could have any number of centers, even infinitely many of them.  Because, by geodesic deviation, focussing requires positive curvature, we can assert that circles in spaces of non-positive curvature will have unique centers; for instance, this explains why the result holds in hyperbolic geometry (which has constant negative curvature).
+%%%%%
+%%%%%
+\end{document}

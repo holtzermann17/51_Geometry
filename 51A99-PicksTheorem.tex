@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PicksTheorem}
+\pmcreated{2013-03-22 12:46:58}
+\pmmodified{2013-03-22 12:46:58}
+\pmowner{ariels}{338}
+\pmmodifier{ariels}{338}
+\pmtitle{Pick's theorem}
+\pmrecord{4}{33096}
+\pmprivacy{1}
+\pmauthor{ariels}{338}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A99}
+\pmclassification{msc}{05B99}
+\pmclassification{msc}{68U05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\begin{document}
+Let $P\subset\Reals^2$ be a polygon with all vertices on lattice points on the grid $\Ints^2$.  Let $I$ be the number of lattice points that lie \emph{inside} $P$, and let $O$ be the number of lattice points that lie on the boundary of $P$.  Then the area of $P$ is
+$$
+A(P) = I + \frac{1}{2}O - 1.
+$$
+
+\begin{center}
+\includegraphics{pick}
+\end{center}
+In the above example, we have $I=5$ and $O=13$, so the area is $A=10\frac{1}{2}$; inspection shows this is true.
+%%%%%
+%%%%%
+\end{document}

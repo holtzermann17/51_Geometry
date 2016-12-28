@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LegendresTheoremOnAnglesOfTriangle}
+\pmcreated{2013-05-11 13:55:53}
+\pmmodified{2013-05-11 13:55:53}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Legendre's theorem on angles of triangle}
+\pmrecord{5}{87401}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmclassification{msc}{51M05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Adrien-Marie Legendre has proved some theorems concerning the sum of the angles of triangle.\, Here we give one of them, being the inverse of the theorem in the entry ``sum of angles of triangle in Euclidean geometry''.
+
+
+\textbf{Theorem.}\, If the sum of the interior angles of every triangle equals straight angle, then the parallel postulate is true, i.e., in the plane determined by a line and a point outwards it there is exactly one line through the point which does not intersect the line.
+
+{\it Proof.}\, We consider a line $a$ and a point $B$ not belonging to $a$.\, Let $BA$ be the normal line of $a$
+(with $A \in a$) and $b$ be the normal line of $BA$ through the point $B$.\, By the supposition of the theorem, $b$ does not intersect $a$.
+
+We will show that in the plane determined by the line $a$ and the point $B$, there are through $B$ no other lines than $b$ not intersecting the line $a$.\, For this purpose, we choose through $B$ a line $b'$ which differs from $b$; let the line $b'$ form with $BA$ an acute angle $\beta$.
+
+We determine on the line $a$ a point $A_1$ such that\, $AA_1 = AB$.\, By the supposition of the theorem, in the isosceles right triangle $BAA_1$ we have
+$$\alpha_1 \;\,=:\;\, \angle AA_1B \;=\;\, \frac{\pi}{4} \;=\;\, \frac{\pi}{2^2}.$$
+
+Next we determine on $a$ a second point $A_2$ such that\, 
+$A_1A_2 = A_1B$.\, By the supposition of the theorem, in the isosceles triangle $BA_1A_2$ we have
+$$\alpha_2 \;\,=:\;\, \angle AA_2B \;=\;\, \frac{\alpha_1}{2} \;=\;\, \frac{\pi}{2^3}.$$
+
+We continue similarly by forming isosceles triangles using the points $A_3$, $A_3$, $\ldots$, $A_n$ of the line $a$ such that
+$$A_2A_3 \,=\;\, BA_2,\;\; A_3A_4 \,=\;\, BA_3,\;\;\ldots,\;\; 
+A_{n-1}A_n \,=\;\, BA_{n-1}.$$
+
+Then the acute angles being formed beside the points are
+$$\alpha_3 \;=\;\, \frac{\pi}{2^4},\;\; 
+\alpha_4 \;=\;\, \frac{\pi}{2^5},\;\; \ldots, \;\;
+\alpha_n \;=\;\, \frac{\pi}{2^{n+1}}.$$
+They form a geometric sequence with the common ratio\, 
+$r = \frac{1}{2}$.\, When $n$ is sufficiently great, the member $\alpha_n$ is less than any given positive angle.\, As we have so much triangles $BA_{n-1}A_n$ that\; 
+$\alpha_n < \frac{\pi}{2}\!-\!\beta$,\, then
+$$\angle ABA_n \;=\;\, 
+\frac{\pi}{2}\!-\!\alpha_n \;>\;\, \beta.$$
+Then the line $b'$ falls after penetrating $B$ into the inner territory of the triangle $ABA_n$.\, Thereafter it must leave from there and thus intersect the side $AA_n$ of this triangle.\, Accordingly, $b'$ intersects the line $a$.\, 
+
+The above reasoning is possible for each line\, $b' \neq b$\, through $B$.\, Consequently, the parallel axiom is in force.
+
+\begin{thebibliography}{8}
+\bibitem{ariva}{\sc Karl Ariva}: {\it Lobatsevski geomeetria}.\, Kirjastus ``Valgus'', Tallinn (1992).
+\end{thebibliography} 
+\end{document}

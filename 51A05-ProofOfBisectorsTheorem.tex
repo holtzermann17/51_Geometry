@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBisectorsTheorem}
+\pmcreated{2013-03-22 14:49:25}
+\pmmodified{2013-03-22 14:49:25}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of bisectors theorem}
+\pmrecord{6}{36487}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+Notice that the triangles $\triangle BAP$ and $\triangle CAP$ have the same common height $h$, and if $(BAP)$  and $(CAP)$ denote their respective areas, we have
+\[
+\frac{(BAP)}{(CAP)} = \frac{BP\cdot h/2}{PC\cdot h/2} = \frac{BP}{PC}.
+\]
+\figuraex{genbisector}{scale=0.75}
+On the other hand 
+\[(BAP) = \frac{BA\cdot AP \sin BAP}{2},\qquad (CAP)=\frac{CA\cdot AP\sin CAP}{2}\]
+and so
+\[
+\frac{(BAP)}{(CAP)} = \frac{BA\cdot AP \sin BAP/2}{CA\cdot AP\sin CAP/2} =\frac{ BA\sin BAP}{CA\sin CAP}.
+\]
+
+We have obtained
+\[ \frac{BP}{PC} =\frac{ BA\sin BAP}{CA\sin CAP},\]
+which is the generalization to the theorem. In the particular case when $AP$ is the bisector, $\angle BAP = \angle CAP$, and thus $\sin BAP=\sin CAP$. Cancelling out the sines proves the bisector theorem.
+%%%%%
+%%%%%
+\end{document}

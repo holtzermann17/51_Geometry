@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompassAndStraightedgeConstructionOfGeometricMean}
+\pmcreated{2013-03-22 17:14:55}
+\pmmodified{2013-03-22 17:14:55}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{compass and straightedge construction of geometric mean}
+\pmrecord{10}{39581}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51-00}
+\pmrelated{ConstructionOfCentralProportion}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{label}
+\PMlinkescapeword{order}
+
+Given line segments of lengths $a$ and $b$, one can construct a line segment of length $\sqrt{ab}$ using compass and straightedge as follows:
+
+\begin{enumerate}
+\item Draw a line segment of length $a$.  Label its endpoints $A$ and $C$.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\rput[r](-0.4,0){.}
+\psline[linecolor=blue](-2.5,0)(-0.5,0)
+\psdots(-2.5,0)(-0.5,0)
+\rput[a](-2.5,-0.3){$A$}
+\rput[a](-0.8,0.2){$C$}
+\end{pspicture}
+\end{center}
+
+\item Extend the line segment past $C$.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\rput[r](3,0){.}
+\psline(-2.5,0)(-0.5,0)
+\psline[linecolor=blue]{->}(-0.5,0)(3,0)
+\psdots(-2.5,0)(-0.5,0)
+\rput[a](-2.5,-0.3){$A$}
+\rput[a](-0.8,0.2){$C$}
+\end{pspicture}
+\end{center}
+
+\item Mark off a line segment of length $b$ such that one of its endpoints is $C$.  Label its other endpoint as $B$.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\rput[r](3,0){.}
+\psline(-2.5,0)(-0.5,0)
+\psline{->}(2.5,0)(3,0)
+\psline[linecolor=blue](-0.5,0)(2.5,0)
+\psdots(-2.5,0)(-0.5,0)(2.5,0)
+\rput[a](-2.5,-0.3){$A$}
+\rput[a](-0.8,0.2){$C$}
+\rput[a](2.5,-0.3){$B$}
+\end{pspicture}
+\end{center}
+
+\item Construct the perpendicular bisector of $\overline{AB}$ in order to find its midpoint $M$.
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\rput[r](3,0){.}
+\rput[a](0,3){.}
+\rput[b](0,-3){.}
+\psline{->}(-2.5,0)(3,0)
+\psarc[linecolor=blue](-2.5,0){3}{-45}{45}
+\psarc[linecolor=blue](2.5,0){3}{135}{225}
+\psline[linecolor=blue]{<->}(0,-3)(0,3)
+\psdots(-2.5,0)(-0.5,0)(0,0)(2.5,0)
+\rput[a](-2.5,-0.3){$A$}
+\rput[a](-0.8,0.2){$C$}
+\rput[a](0.3,-0.3){$M$}
+\rput[a](2.5,-0.3){$B$}
+\end{pspicture}
+\end{center}
+
+\item Construct a semicircle with center $M$ and radii $\overline{AM}$ and $\overline{BM}$.
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\rput[r](3,0){.}
+\rput[a](0,3){.}
+\rput[b](0,-3){.}
+\psline{->}(-2.5,0)(3,0)
+\psarc(-2.5,0){3}{-45}{45}
+\psarc(2.5,0){3}{135}{225}
+\psline{<->}(0,-3)(0,3)
+\psarc[linecolor=blue](0,0){2.5}{0}{180}
+\psdots(-2.5,0)(-0.5,0)(0,0)(2.5,0)
+\rput[a](-2.5,-0.3){$A$}
+\rput[a](-0.8,0.2){$C$}
+\rput[a](0.3,-0.3){$M$}
+\rput[a](2.5,-0.3){$B$}
+\end{pspicture}
+\end{center}
+
+\item Erect the perpendicular to $\overline{AB}$ at $C$ to find the point $D$ where it intersects the semicircle.  The line segment $\overline{DC}$ is of the desired length.
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\rput[r](3,0){.}
+\rput[a](0,3){.}
+\rput[b](0,-3){.}
+\psline{->}(-2.5,0)(3,0)
+\psarc(-2.5,0){3}{-45}{45}
+\psarc(2.5,0){3}{135}{225}
+\psline{<->}(0,-3)(0,3)
+\psarc(0,0){2.5}{0}{180}
+\psarc[linecolor=blue](-0.5,0){0.5}{160}{380}
+\psarc[linecolor=blue](-1,0){0.7}{-60}{60}
+\psarc[linecolor=blue](0,0){0.7}{120}{240}
+\psline[linecolor=blue]{<-}(-0.5,-1)(-0.5,2.45)
+\psdots(-2.5,0)(-0.5,0)(0,0)(2.5,0)(-0.5,2.45)
+\rput[a](-2.5,-0.3){$A$}
+\rput[a](-0.8,0.2){$C$}
+\rput[a](0.3,-0.3){$M$}
+\rput[a](2.5,-0.3){$B$}
+\rput[b](-0.5,2.65){$D$}
+\end{pspicture}
+\end{center}
+
+This construction is justified because, if $\overline{AD}$ and $\overline{BD}$ were drawn, then the two smaller triangles would be similar, yielding
+
+$$\frac{AC}{DC}=\frac{DC}{BC}.$$
+
+Plugging in $AC=a$ and $BC=b$ gives that $DC=\sqrt{ab}$ as desired.
+
+If you are interested in seeing the rules for compass and straightedge constructions, click on the \PMlinkescapetext{link} provided.
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

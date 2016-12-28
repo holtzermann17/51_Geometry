@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SaccheriQuadrilateral}
+\pmcreated{2013-03-22 17:08:20}
+\pmmodified{2013-03-22 17:08:20}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{Saccheri quadrilateral}
+\pmrecord{16}{39445}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M10}
+\pmclassification{msc}{51-00}
+\pmsynonym{Saccheri's quadrilateral}{SaccheriQuadrilateral}
+\pmrelated{IsoscelesTrapezoid}
+\pmrelated{RightTrapezoid}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{base}
+\PMlinkescapeword{bases}
+\PMlinkescapeword{legs}
+
+In hyperbolic geometry, a \emph{Saccheri quadrilateral} is a quadrilateral such that one set of opposite sides (called the \PMlinkname{legs}{Leg}) congruent, the other set of opposite sides (called the \PMlinkname{bases}{Base9}) disjointly parallel, and, at one of the bases, both angles are right angles.  Since the angle sum of a triangle in hyperbolic geometry is strictly less than $\pi$ radians, the angle sum of a quadrilateral in hyperbolic geometry is strictly less than $2\pi$ radians. Thus, in any Saccheri quadrilateral, the angles that are not right angles must be acute.
+
+The discovery of Saccheri quadrilaterals is attributed to Giovanni Saccheri.
+
+The common perpendicular to the bases of a Saccheri quadrilateral always \PMlinkescapetext{divides} the quadrilateral into two congruent Lambert quadrilaterals.  In other \PMlinkescapetext{words}, every Saccheri quadrilateral is symmetric about the common perpendicular to its bases.  Thus, the two acute angles of a Saccheri quadrilateral are also congruent.
+
+The legs of a Saccheri quadrilateral are disjointly parallel since one of the bases is a common perpendicular.  Therefore, Saccheri quadrilaterals are parallelograms.  Note also that Saccheri quadrilaterals are right trapezoids as well as isosceles trapezoids.
+
+Below are some examples of Saccheri quadrilaterals in various models.  In each example, the Saccheri quadrilateral is labelled as $ABCD$, and the common perpendicular to the bases is drawn in cyan.
+
+\begin{itemize}
+
+\item The Beltrami-Klein model:
+
+In the following example, green lines indicate verification of acute angles by using the poles. (Recall that most other models of hyperbolic geometry are angle preserving. Thus, verification of angle measures is unnecessary in those models.)
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,4)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{o-o}(-2,0)(2,0)
+\psline{o-o}(-1.2,-1.6)(-1.2,1.6)
+\psline{o-o}(1.2,-1.6)(1.2,1.6)
+\psline{o-o}(-1.6,1.2)(1.6,1.2)
+\psline{<->}(-2.5,0)(0.5,4)
+\psline{<->}(2.5,0)(-0.5,4)
+\psline[linecolor=green]{<->}(-1.5375,0.6)(0.375,4)
+\psline[linecolor=green]{<->}(1.5375,0.6)(-0.375,4)
+\psdots(-1.2,0)(-1.2,1.2)(1.2,1.2)(1.2,0)(0,3.3333)
+\rput[l](-1.1,0.2){$A$}
+\rput[l](-1.1,1){$B$}
+\rput[r](1.1,1){$C$}
+\rput[r](1.1,0.2){$D$}
+\rput[b](-2.5,0){.}
+\rput[b](2.5,0){.}
+\rput[b](0,-2){.}
+\rput[a](0.5,4){.}
+\psline[linecolor=cyan]{o-o}(0,-2)(0,2)
+\end{pspicture}
+\end{center}
+
+\item The Poincar\'e disc model:
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{o-o}(-2,0)(2,0)
+\psarc{o-o}(0,3.3333){2.6667}{233.13}{306.87}
+\psarc{o-o}(-3.3333,0){2.6667}{-36.87}{36.87}
+\psarc{o-o}(3.3333,0){2.6667}{143.13}{216.87}
+\psdots(-0.6667,0)(-0.78475,0.78475)(0.78475,0.78475)(0.6667,0)
+\rput[r](-0.8,-0.2){$A$}
+\rput[r](-0.9,0.6){$B$}
+\rput[l](0.9,0.6){$C$}
+\rput[l](0.8,-0.2){$D$}
+\rput[r](-2,0){.}
+\rput[l](2,0){.}
+\rput[b](0,2){.}
+\rput[a](0,-2){.}
+\psline[linecolor=cyan]{o-o}(0,-2)(0,2)
+\end{pspicture}
+\end{center}
+
+\item The upper half plane model:
+
+\begin{center}
+\begin{pspicture}(-4,-0.1)(4,3.6)
+\psline[linestyle=dashed]{<->}(-4,0)(4,0)
+\psarc{o-o}(-2,0){1.5}{0}{180}
+\psarc{o-o}(0,0){1.5}{0}{180}
+\psarc{o-o}(2,0){1.5}{0}{180}
+\psarc{o-o}(0,0){3}{0}{180}
+\psdots(-2.6875,1.33317)(-1,1.118)(1,1.118)(2.6875,1.33317)
+\rput[a](-1,0.8){$A$}
+\rput[a](-2.6,1.1){$B$}
+\rput[a](2.6,1.1){$C$}
+\rput[a](1,0.8){$D$}
+\rput[l](-4,-0.01){.}
+\rput[a](0,3.57){.}
+\rput[r](4,-0.01){.}
+\psline[linecolor=cyan]{o->}(0,0)(0,3.6)
+\end{pspicture}
+\end{center}
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

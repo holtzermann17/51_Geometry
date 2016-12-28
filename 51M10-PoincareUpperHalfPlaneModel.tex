@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoincareUpperHalfPlaneModel}
+\pmcreated{2013-03-22 17:07:01}
+\pmmodified{2013-03-22 17:07:01}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{Poincar\'e upper half plane model}
+\pmrecord{11}{39418}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M10}
+\pmclassification{msc}{51-00}
+\pmsynonym{upper half plane model}{PoincareUpperHalfPlaneModel}
+\pmrelated{ConvertingBetweenThePoincareDiscModelAndTheUpperHalfPlaneModel}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem{pr*}{Problem}
+\begin{document}
+\PMlinkescapeword{solution}
+\PMlinkescapeword{center}
+
+The \emph{Poincar\'e upper half plane model} for $\mathbb{H}^2$ is the upper half plane $\{(x,y) \in \mathbb{R}^2 : y>0 \}$ in which a point is similar to the Euclidean point and a line must be one of the following:
+
+\begin{itemize}
+\item a vertical ray (excluding its endpoint) extending from the boundary;
+\item an semicircle (excluding its endpoints) whose \PMlinkname{center}{Center8} lies on the boundary.
+\end{itemize}
+
+\begin{center}
+\begin{pspicture}(-5,-0.1)(5,5)
+\psline[linestyle=dashed]{<->}(-5,0)(5,0)
+\psline{o->}(-4,0)(-4,5)
+\psarc{o-o}(0.5,0){2.5}{0}{180}
+\end{pspicture}
+\end{center}
+
+The Poincar\'{e} upper half plane model has the drawback that lines in the model do not \PMlinkescapetext{necessarily} resemble Euclidean lines; however, it has the advantage that it is angle preserving. That is, the Euclidean \PMlinkescapetext{measure} of an angle within the model is the angle measure in hyperbolic geometry.  This model has the added bonus that \PMlinkescapetext{analytic geometry} is a useful tool for performing constructions.  For example, consider the following:
+
+\begin{pr*}
+In the upper half plane model, determine and construct the common perpendicular to the lines $x=-4$ and $y=\sqrt{6+x-x^2}$.
+\end{pr*}
+
+\begin{center}
+\begin{pspicture}(-5.3,-0.1)(5.5,5.5)
+\psset{unit=0.8cm}
+\psaxes{<->}(0,0)(-5.3,-0.1)(5.5,5.5)
+\rput[b](5.5,-0.5){$x$}
+\rput[r](0,5.5){$y$}
+\psline{o->}(-4,0)(-4,5)
+\rput[l](-3.8,4){$x=-4$}
+\psarc{o-o}(0.5,0){2.5}{0}{180}
+\rput[l](1,3){$y=\sqrt{6+x-x^2}$}
+\end{pspicture}
+\end{center}
+
+\emph{Solution:}  The common perpendicular cannot be a vertical ray, so it must be a semicircle.  Also, if a semicircle is to be perpendicular to $x=-4$, it must have a center at $(-4,0)$.  Thus, the common perpendicular is of the form $y=\sqrt{r^2-(x+4)^2}$ for some $r>0$.
+
+Since $y=\sqrt{r^2-(x+4)^2}$ must also be perpendicular to $y=\sqrt{6+x-x^2}$, their tangent lines at their point of intersection must be perpendicular.  Let $(x_0,y_0)$ denote this point of intersection.  Thus, the line tangent to $y=\sqrt{6+x-x^2}$ at $(x_0,y_0)$ must pass through $(-4,0)$.  Let $m$ denote the slope of this line.  Then $\displaystyle m=\frac{y_0}{x_0+4}=\frac{\sqrt{6+x_0-(x_0)^2}}{x_0+4}$.
+
+For $y=\sqrt{6+x-x^2}$, $\displaystyle \frac{dy}{dx}=\frac{1-2x}{2\sqrt{6+x-x^2}}$.  Thus, $\displaystyle \frac{\sqrt{6+x_0-(x_0)^2}}{x_0+4}=\frac{1-2x_0}{2\sqrt{6+x_0-(x_0)^2}}$.  Solving for $x_0$ yields:
+
+\begin{center}
+$\begin{array}{rl}
+2(6+x_0-(x_0)^2) & =(x_0+4)(1-2x_0) \\
+& \\
+12+2x_0-2(x_0)^2 & =4-7x_0-2(x_0)^2 \\
+& \\
+9x_0 & =-8 \\
+& \\
+x_0 & \displaystyle =\frac{-8}{9} \end{array}$
+\end{center}
+
+Now $y_0$ can be found:
+
+\begin{center}
+$\begin{array}{rl}
+y_0 & \displaystyle =\sqrt{6+\left( \frac{-8}{9} \right)-\left( \frac{-8}{9} \right)^2} \\
+& \\
+& \displaystyle =\sqrt{\frac{486}{81}-\frac{72}{81}-\frac{64}{81}} \\
+& \\
+& \displaystyle =\sqrt{\frac{333}{81}} \\
+& \\
+& \displaystyle =\sqrt{\frac{37}{9}} \\
+& \\
+& \displaystyle =\frac{\sqrt{37}}{3} \end{array}$
+\end{center}
+
+Finally, $r^2$ can be found:
+
+\begin{center}
+$\begin{array}{rl}
+r^2 & =(x+4)^2+y^2 \\
+& \\
+& \displaystyle =\left(\frac{-8}{9}+4\right)^2+\left(\frac{\sqrt{37}}{3}\right)^2 \\
+& \\
+& \displaystyle =\left(\frac{28}{9}\right)^2+\frac{37}{9} \\
+& \\
+& \displaystyle =\frac{784}{81}+\frac{333}{81} \\
+& \\
+& \displaystyle =\frac{1117}{81} \end{array}$
+\end{center}
+
+Hence, the common perpendicular is $\displaystyle y=\sqrt{\frac{1117}{81}-(x+4)^2}$.
+
+\begin{center}
+\begin{pspicture}(-8.3,-0.1)(5.5,5.5)
+\psset{unit=0.8cm}
+\psaxes{<->}(0,0)(-8.3,-0.1)(5.5,5.5)
+\rput[b](5.5,-0.5){$x$}
+\rput[r](0,5.5){$y$}
+\psline{o->}(-4,0)(-4,5)
+\rput[l](-3.8,4.5){$x=-4$}
+\psarc{o-o}(0.5,0){2.5}{0}{180}
+\rput[l](1,3){$y=\sqrt{6+x-x^2}$}
+\psarc{o-o}(-4,0){3.7135}{0}{180}
+\rput[r](-8,1){$\displaystyle y=\sqrt{\frac{1117}{81}-(x+4)^2}$}
+\end{pspicture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

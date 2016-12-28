@@ -1,0 +1,612 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectivePlane}
+\pmcreated{2013-03-22 15:11:05}
+\pmmodified{2013-03-22 15:11:05}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{projective plane}
+\pmrecord{13}{36940}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51E15}
+\pmclassification{msc}{51N15}
+\pmclassification{msc}{05B25}
+%\pmkeywords{incidence}
+%\pmkeywords{design}
+%\pmkeywords{geometry}
+\pmrelated{FiniteProjectivePlane4}
+\pmrelated{IncidenceStructures}
+\pmrelated{Geometry}
+\pmrelated{LinearSpace2}
+\pmrelated{AxiomaticProjectiveGeometry}
+\pmrelated{LinearSpace3}
+
+\usepackage{amssymb}
+
+% portions from
+% makra.sty 1989-2005 by Marijke van Gans
+
+%%%% CHARS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        %    code    char  frees  for
+
+\let\Para\S             %    \Para     Ãƒ?Ãƒ?Ãƒ?ÃƒÃƒÃ‚Â§   \S \scriptstyle
+\let\Pilcrow\P          %    \Pilcrow  Ãƒ?Ãƒ?Ãƒ?ÃƒÃƒÃ‚Â¶   \P
+\mathchardef\pilcrow="227B
+
+\mathchardef\lt="313C   %    \lt       <   <     bra
+\mathchardef\gt="313E   %    \gt       >   >     ket
+
+\let\bs\backslash       %    \bs       \
+\let\us\_               %    \us       _     \_  ...
+
+%%%% DIACRITICS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\udot\d             % under-dot (text mode), frees \d
+\let\odot\.             % over-dot (text mode),  frees \.
+%let\hacek\v            % hacek (text mode),     frees \v
+%let\makron\=           % makron (text mode),    frees \=
+%let\tilda\~            % tilde (text mode),     frees \~
+\let\uml\"              % umlaut (text mode),    frees \"
+
+%def\ij/{i{\kern-.07em}j}
+\def\trema#1{\discretionary{-}{#1}{\uml #1}}
+
+%%%% amssymb %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\le\leqslant
+\let\ge\geqslant
+%let\prece\preceqslant
+%let\succe\succeqslant
+
+%%%% USEFUL MISC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\C++{C$^{_{++}}$}
+
+%let\writelog\wlog
+%def\wl@g/{{\sc wlog}}
+%def\wlog{\@ifnextchar/{\wl@g}{\writelog}}
+
+%def\org#1{\lower1.2pt\hbox{#1}} 
+% chem struct formulae: \bs, --- /  \org{C} etc. 
+
+%%%% USEFUL INTERNAL LaTeX STUFF %%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\Ifnextchar=\@ifnextchar
+%let\Ifstar=\@ifstar
+%def\currsize{\@currsize}
+
+%%%% KERNING, SPACING, BREAKING %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\comma{,\,\allowbreak}
+
+%def\qqquad{\hskip3em\relax}
+%def\qqqquad{\hskip4em\relax}
+%def\qqqqquad{\hskip5em\relax}
+%def\qqqqqquad{\hskip6em\relax}
+%def\qqqqqqquad{\hskip7em\relax}
+%def\qqqqqqqquad{\hskip8em\relax}
+
+%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% COUNTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%let\addtoreset\@addtoreset
+%{A}{B} adds A to list of counters reset to 0
+% when B is \refstepcounter'ed (see latex.tex)
+%
+%def\numbernext#1#2{\setcounter{#1}{#2}\addtocounter{#1}{\m@ne}}
+
+%%%% MATH LAYOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\D\displaystyle
+\let\T\textstyle
+\let\S\scriptstyle
+\let\SS\scriptscriptstyle
+
+\def\Bset{\mathbb{B}}
+\def\Nset{\mathbb{N}}
+\def\Rset{\mathbb{R}}
+\def\Hset{\mathbb{H}}
+\def\Fset{\mathbb{F}}
+\def\kset{\mathbb{k}}
+
+% \frac overwrites LaTeX's one (use TeX \over instead)
+%def\fraq#1#2{{}^{#1}\!/\!{}_{\,#2}}
+\def\frac#1#2{\mathord{\mathchoice%
+{\T{#1\over#2}}
+{\T{#1\over#2}}
+{\S{#1\over#2}}
+{\SS{#1\over#2}}}}
+%def\half{\frac12}
+
+\mathcode`\<="4268         % < now is \langle, \lt is <
+\mathcode`\>="5269         % > now is \rangle, \gt is >
+
+%def\biggg#1{{\hbox{$\left#1\vbox %to20.5\p@{}\right.\n@space$}}}
+%def\Biggg#1{{\hbox{$\left#1\vbox %to23.5\p@{}\right.\n@space$}}}
+
+\let\epsi=\varepsilon
+\def\omikron{o}
+
+\def\Alpha{{\rm A}}
+\def\Beta{{\rm B}}
+\def\Epsilon{{\rm E}}
+\def\Zeta{{\rm Z}}
+\def\Eta{{\rm H}}
+\def\Iota{{\rm I}}
+\def\Kappa{{\rm K}}
+\def\Mu{{\rm M}}
+\def\Nu{{\rm N}}
+\def\Omikron{{\rm O}}
+\def\Rho{{\rm P}}
+\def\Tau{{\rm T}}
+\def\Ypsilon{{\rm Y}} % differs from \Upsilon
+\def\Chi{{\rm X}}
+
+%def\dg{^{\circ}}                   % degrees
+
+%def\1{^{-1}}                       % inverse
+
+\def\*#1{{\bf #1}}                  % boldface e.g. vector
+%def\vi{\mathord{\hbox{\bf\i}}}     % boldface vector \i
+%def\vj{\mathord{\,\hbox{\bf\j}}}   % boldface vector \j
+
+%def\union{\mathbin\cup}
+%def\isect{\mathbin\cap}
+
+\let\so\Longrightarrow
+\let\oso\Longleftrightarrow
+\let\os\Longleftarrow
+
+% := and :<=>
+%def\isdef{\mathrel{\smash{\stackrel{\SS\rm def}{=}}}}
+%def\iffdef{\mathrel{\smash{stackrel{\SS\rm def}{\oso}}}}
+
+\def\isdef{\mathrel{\mathop{=}\limits^{\smash{\hbox{\tiny def}}}}}
+%def\iffdef{\mathrel{\mathop{\oso}\limits^{\smash{\hbox{\tiny %def}}}}}
+
+%def\tr{\mathop{\rm tr}}            % tr[ace]
+%def\ter#1{\mathop{^#1\rm ter}}     % k-ter[minant]
+
+%let\.=\cdot
+%let\x=\times                % ><Ãƒ? (direct product)
+
+%def\qed{ ${\S\circ}\!{}^\circ\!{\S\circ}$}
+%def\qed{\vrule height 6pt width 6pt depth 0pt}
+
+%def\edots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}\mkern1mu   %  .shorter
+%   \raise4pt\hbox{.}\mkern1mu                  %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %        .
+%def\fdots{\mathinner{\mkern1mu
+%   \raise7pt\vbox{\kern7pt\hbox{.}}            %   . ~45ÃƒÃƒÃ‚Â°
+%   \raise4pt\hbox{.}                           %     .
+%   \raise1pt\hbox{.}\mkern1mu}}                %       .
+
+\def\mod#1{\allowbreak \mkern 10mu({\rm mod}\,\,#1)}
+% redefines TeX's one using less space
+
+%def\int{\intop\displaylimits}
+%def\oint{\ointop\displaylimits}
+
+%def\intoi{\int_0^1}
+%def\intall{\int_{-\infty}^\infty}
+
+%def\su#1{\mathop{\sum\raise0.7pt\hbox{$\S\!\!\!\!\!#1\,$}}}
+
+%let\frakR\Re
+%let\frakI\Im
+%def\Re{\mathop{\rm Re}\nolimits}
+%def\Im{\mathop{\rm Im}\nolimits}
+%def\conj#1{\overline{#1\vphantom1}}
+%def\cj#1{\overline{#1\vphantom+}}
+
+%def\forAll{\mathop\forall\limits}
+%def\Exists{\mathop\exists\limits}
+
+%%%% PICTURES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\cent{\makebox(0,0)}
+
+%def\node{\circle*4}
+%def\nOde{\circle4}
+
+%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%def\opcit{[{\it op.\,cit.}]}
+\def\bitem#1{\bibitem[#1]{#1}}
+\def\name#1{{\sc #1}}
+\def\book#1{{\sl #1\/}}
+\def\paper#1{``#1''}
+\def\mag#1{{\it #1\/}}
+\def\vol#1{{\bf #1}}
+\def\isbn#1{{\small\tt ISBN\,\,#1}}
+\def\seq#1{{\small\tt #1}}
+%def\url<{\verb>}
+%def\@cite#1#2{[{#1\if@tempswa\ #2\fi}]}
+
+%%%% AD HOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\p/{rojective plane}
+\def\pt/{{\sc point}}
+\def\ln/{{\sc line}}
+
+\begin{document}
+\PMlinkescapeword{class}
+\PMlinkescapeword{difference}
+\PMlinkescapeword{extension}
+\PMlinkescapeword{grid}
+\PMlinkescapeword{homogenous}
+\PMlinkescapeword{incident}
+\PMlinkescapeword{line}
+\PMlinkescapeword{lines}
+\PMlinkescapeword{opposite}
+\PMlinkescapeword{parallel}
+\PMlinkescapeword{point}
+\PMlinkescapeword{points}
+\PMlinkescapeword{represent}
+\PMlinkescapeword{variety}
+\PMlinkescapeword{word}
+\PMlinkescapeword{words}
+
+\subsection*{Projective planes}
+
+A {\bf projective plane} is a plane (in various senses) where not only
+%
+\begin{itemize}
+
+\item for any two distinct {\sc point}s,
+      there is exactly one {\sc line} through both of them
+
+\end{itemize}
+%
+(as usual, in things we call a ``plane''), but also
+%
+\begin{itemize}
+
+\item for any two distinct {\sc line}s,
+      there is exactly one {\sc point} on both of them
+
+\end{itemize}
+%
+(in other words, no parallel {\sc line}s). This gives {\bf duality} between
+{\sc point}s and {\sc line}s: for any statement there is a corresponding statement
+that swaps the words {\sc point} and {\sc line}, and swaps the phrases {\em lies on\/}
+and {\em passes through\/} (for which we can use the neutral
+{\em is incident with\/}).
+
+A third axiom is commonly added to avoid degenerate cases:
+%
+\begin{itemize}
+
+\item there exist four points no three of which are collinear.
+
+\end{itemize}
+%
+
+Both finite and infinite projective planes exist.
+
+Here's an example, just to show that such things exist: let $S$ be the unit
+sphere (the 2-dimensional surface $x^2+y^2+z^2=1$ embedded in $\Rset^3$). Call
+every great circle (circle with radius 1 whose centre coincides with that of
+the sphere) a {\sc line}, and call every {\em pair of opposite points\/} on
+the sphere a {\sc point}. The notion of a {\sc point} lying on a {\sc line} is
+well defined here, because each great circle (one of our {\sc line}s) passing
+through some point on the sphere also passes through its opposite point
+(which together form one of our {\sc point}s). Such a situation where different
+flavors of ``point'' are discussed will arise again, and it is the reason
+why the entities that act as {\sc point} and {\sc line} of a projective plane are typeset in their
+own distinctive way in this entry.
+
+And here's a finite example, the Fano plane: the seven {\sc point}s are labeled
+with the residue classes (mod~7) and the seven {\sc line}s are numbered likewise.
+A {\sc point} $p$ and a {\sc line} $q$ are incident if and only if the equation $x^2=q-p$ does not
+have a solution. Line $q$ is incident with {\sc point}s $q+1$, $q+2$, $q+4$ and
+{\sc point} $p$ is incident with {\sc line}s $p-1$, $p-2$, $p-4$. Another way to get the
+same plane (but with a quite different numbering): let $\Fset_2$ be the finite
+field of order~2 and $\Fset_2^3$ the 3-dimensional vector space over $\Fset$.
+The seven non-null vectors label our {\sc point}s, and the {\sc line}s are numbered
+likewise. A {\sc point} is incident with a {\sc line} if and only if their dot product is zero
+(for example: {\sc point} (0,1,1) lies on {\sc line} (1,1,1) because $0\cdot1
++1\cdot1 + 1\cdot1 = 2 = 0$).
+
+\clearpage
+\subsection*{Homogeneous coordinates}
+
+Historically, projective planes were formed by extending ordinary planes.
+
+Let $\mit\Pi^*$ be a plane, a two-dimensional vector space over a field
+$\Fset$, where a point can be represented by its Cartesian coordinates $(X,Y)$
+with $X$ and $Y\in\Fset$ (when $\Fset=\Rset$, this is the usual
+Euclidean plane). To specify a line $\ell$, we can give a linear equation
+%%
+\begin{equation}\label{px+qy+r}
+  pX + qY + r = 0
+\end{equation}
+%%
+satisfied by all the points on $\ell$. The slope of the line is given by
+$-p/q$ (if $q\ne0$) which is a single field element. Writing it as a
+{\bf ratio} $-p:q$ allows us to define slope for vertical lines as well,
+where the ratio is $1:0$. This kind of extension of the field to include
+some kind of infinity will be a recurrent theme.
+
+There are many asymmetries between points and lines here. First of all, the
+line is thought of as {\em being\/} a set of points (the points on the line)
+while a point is not the same thing as the set of lines through that
+point. This means we're really interpreting equation~(\ref{px+qy+r}) as
+$$
+  \ell \;\isdef\; \{ (X,Y) \mid pX+qY+r=0 \}
+$$
+where $X$ and $Y$ are variables (coordinates of any point $\in\ell$) and $p$,
+$q$ and $r$ parameters specifying which line. We can redress this conceptual
+imbalance by giving the line a kind of coordinates $[\,p,q,r\,]$. The linear
+equation~(\ref{px+qy+r}) now takes on a different interpretation: it is the
+statement {\em that\/} the point $(X,Y)$ and the line $[\,p,q,r\,]$ are
+incident, with both sets of coordinates on an equal footing.
+
+Secondly, there are three coordinates for the line but only two for the point.
+This is caused by the fact that line coordinate triples are not unique; only
+the {\em ratio\/} of the coordinates matters. We can define equivalence classes
+$$
+  [\,p : q : r\,] \;\isdef\; \{ [fp,fq,fr] \mid f\in\Fset,\; f\ne0 \}
+$$
+of coordinate triples that represent the same line. The $p$, $q$ and $r$ used
+to label a $[\,p : q : r\,]$ are of course still just as non-unique (this
+is in the same spirit as labeling a residue class or other coset by one of
+its elements). One possible convention (for lines with $r\ne0$ at least)
+is to choose the representative with $r=1$.
+
+To find more symmetry between points and lines we could first define coordinate
+triples for points with that same behaviour, so-called {\bf homogeneous coordinates}
+$$
+  (x\comma y\comma z) \;\isdef\; (x/z\comma y/z)
+$$
+which means $(X,Y,1)$ and more generally $(fX,fY,f)$ for $f\ne0$ are new
+names for the point $(X,Y)$, and then define the equivalence classes
+$$
+  (x : y : z) \;\isdef\; \{ (fx,fy,fz) \mid f\in\Fset,\; f\ne0 \}
+$$
+to formally put all those different names for the same point back into a
+single box. This exercise gives the statement
+%%
+\begin{equation}\label{px+qy+rz}
+  px + qy + rz = 0
+\end{equation}
+%%
+that $(x:y:z)$ and $[\,p:q:r\,]$ are incident a pleasing symmetry.
+
+\clearpage
+\subsection*{The line and points at infinity}
+
+Thus far, we cannot have any point $(x:y:z)$ where $z=0$ (it does not
+correspond to any point $(X,Y)$ in the plane). By contrast, $[\,p:q:r\,]$
+can have $r=0$ (for a line through the arbitrary origin of the $XY$ coordinate
+frame). For lines only the case $p=q=0$ is missing, whereas $x=y=0$ is
+fine for a point. Thus, by trying to make points and lines as similar as
+possible we have unearthed their essential difference algebraically.
+
+The geometric difference is that lines can be parallel, and it is easy to
+see this is the same difference. For any two points $(x,y,z)$ and
+$(x',y',z')$ we can find a line $[\,yz'-zy'\comma zx'-xz'\comma xy'-yx'\,]$
+that passes through both, and it is a valid line (first two coordinates not
+both zero) if the points are valid ($z$ and $z'$ nonzero) and distinct,
+but attempting the dual construction reveals pairs of valid lines that do
+not intersect in a valid point.
+
+We now extend the plane $\mit\Pi^*$ to a new kind of plane $\mit\Pi$,
+inheriting all the points and lines of $\mit\Pi^*$ as {\sc point}s and {\sc line}s of
+$\mit\Pi$ and co-opting additionally
+%
+\begin{itemize}
+
+\item the new {\sc line} $[\,0 : 0 : 1\,]$ --- note only one new {\sc line} is
+      needed as all triples $[\,0\comma 0\comma f]$ (with $f\ne0$)
+      fall in this equivalence class, and
+
+\item the new {\sc point}s $(1 : f : 0)$ (comprising all $(x,y,0)$ with nonzero $x$,
+      using $f=y/x$), as well as $(0 : 1 : 0)$ (this class has those $(x,y,0)$
+      where $x=0$).
+
+\end{itemize}
+%
+The only ratio excluded for a {\sc point} is $(0:0:0)$ and for a {\sc line} $[\,0:0:0\,]$,
+making the situation symmetric. Note all the new {\sc point}s ``lie on'' the new
+{\sc line} and none of the old ones do, which can be seen by applying~(\ref{px+qy+rz}).
+Any of the old {\sc line}s acquires one of the new {\sc point}s, {\sc line}s that were parallel
+get the same new {\sc point} and {\sc line}s that weren't get different new {\sc point}s. This
+prevents any pair of {\sc line}s already intersecting in an old {\sc point} intersecting in
+a new one as well, and provides any pair that didn't yet intersect a ``place''
+where to do so.
+
+The new {\sc point}s are what is shared by parallel lines, so correspond to
+{\em directions\/} (pairs of opposite directions, in fact). They are
+called {\bf points at infinity} and the new {\sc line} comprising them the
+{\bf line at infinity}.
+
+\clearpage
+\subsection*{The embedding in $\Fset^3$}
+
+The extension of $\mit\Pi^*$ to $\mit\Pi$ in the previous section has an
+immediate geometric interpretation. Interpret every $(x,y,z)$ as a distinct
+point in $\Fset^3 \setminus (0,0,0)$. The equivalence classes $(x:y:z)$, or
+strictly speaking $(x:y:z)\cup\{(0,0,0)\}$, are now lines through the origin:
+%
+\begin{itemize}
+
+\item the {\sc point}s of $\mit\Pi$ can be regarded as 1-dimensional subspaces of
+      $\Fset^3$.
+
+\end{itemize}
+%
+We could equate the $[\,p:q:r\,]$ with lines through the origin as well, but it
+will turn out to be more convenient to identify them with the planes through
+the origin $\perp$ those lines. Those planes consist of precisely those vectors
+$(x,y,z) \in \Fset^3$ that are $\perp$ the vector $(p,q,r) \in \Fset^3$.
+In this way
+%
+\begin{itemize}
+
+\item the {\sc line}s of $\mit\Pi$ can be regarded as 2-dimensional subspaces of
+      $\Fset^3$.
+
+\end{itemize}
+%
+The reason this is more convenient is that now, by construction, all the
+points (vectors) in the 1-d subspace corresponding to a {\sc point} $(x,y,z)$ are
+$\perp$ the vector $(p,q,r)$ if and only if equation~(\ref{px+qy+rz}) holds. In other
+words, those points lie inside the 2-d subspace corresponding to the {\sc line}
+$[\,p:q:r\,]$ if and only if the {\sc point} is incident with this {\sc line}:
+%
+\begin{itemize}
+
+\item {\sc point} P is incident with {\sc line} $\ell$ if and only if the line corresponding
+      to P $\subset$ the plane corresponding to $\ell$.
+
+\end{itemize}
+%
+We can collapse back from 3 dimensions to 2 dimensions in various ways.
+
+First, intersect the 1- and 2-dimensional subspaces representing {\sc point}s and
+{\sc line}s with the plane in $\Fset^3$ with $z=1$; call this plane $\mit\Pi^*_1$.
+%
+\begin{itemize}
+
+\item[$\circ$] The {\sc point}s (lines) $(x:y:z)$ with $z\ne 0$ each contain one
+               point $(x/z\comma y/z\comma 1)$ in $\mit\Pi^*_1$. The {\sc point}s
+               with $z=0$ (lines in $\Fset^3$ parallel to $\mit\Pi^*_1$)
+               don't have any point in $\mit\Pi^*_1$.
+
+\item[$\circ$] The {\sc line}s (planes) $[\,p:q:r\,]$ with $p$ and $q$ not both zero
+               intersect $\mit\Pi^*_1$ in a line with equation~(\ref{px+qy+r}).
+               The only missing {\sc line} (plane) is the one through the origin
+               parallel to $\mit\Pi^*_1$, which contains all the missing {\sc point}s.
+
+\end{itemize}
+%
+So the plane $\mit\Pi^*_1$ is exactly the plane $\mit\Pi^*$ we started off
+with, with an extra third coordinate 1 tacked on at the end.
+
+Alternatively, intersect the 1- and 2-dimensional subspaces representing
+{\sc point}s and {\sc line}s with the sphere $x^2+y^2+z^2=1$.
+%
+\begin{itemize}
+
+\item[$\circ$] The intersection of a {\sc point} (line through the origin) with this
+               sphere is two opposite points.
+
+\item[$\circ$] The intersection of a {\sc line} (plane through the origin) with the
+               sphere is a great circle.
+
+\end{itemize}
+%
+When $\Fset=\Rset$, this is exactly the first example in this article.
+
+The second example there (the finite one, the Fano plane) can be seen as
+the embedding in $\Fset^3$ when $\Fset=\Fset_2$. Its other representation
+showed it also has a cyclic symmetry modulo 7 (many more than one, in fact
+--- its automorphism group has order 168).
+
+A health warning is in order: the coordinatisation here gives the
+spurious idea there is some special relation between the {\sc point} $(a:b:c)$
+and the {\sc line} $[\,a:b:c\,]$. In the sphere in $\Rset^3$ for example, such
+a {\sc point} plays the r\^ole of poles relative to the {\sc line} as equator. The whole
+point of projective geometry however, which we will not pursue further in
+this entry, is that only incidence between {\sc point}s and {\sc line}s is considered
+meaningful, and metric considerations (distances and angles) are ignored.
+If we redo the $\Rset^3$ example with any arbitrary set of three independent
+vectors as basis, we get projective planes all isomorphic with each other as far as
+incidence is concerned, but the pairs $(a:b:c)$ and $[\,a:b:c\,]$ that
+end up with the ``same'' coordinates are different in each version.
+
+In the finite example too, if we choose a basis different from (1,0,0),
+(0,1,0), (0,0,1) we can find the same plane in many different guises:
+there are 7 ways to choose the first basis vector, 6 ways to find a
+second distinct from the first, and 4 ways for a third not in the plane
+of the first two, and $7\cdot6\cdot4=168$.
+
+\clearpage
+\subsection*{Classical finite planes}
+
+The constructions above can be carried out for $\Fset^2=\Rset^2$ where they
+extend the usual Euclidean plane to ``the'' projective plane, but equally
+well for any other field, such as {\bf finite fields} (aka Galois fields).
+Such fields have $q=p^d$ elements for $p$ any prime and $d$ any positive
+integer.
+
+The $\mit\Pi^*$ that takes the place of the Euclidean plane is now called a
+(finite) {\bf affine plane}. For $d=1$ i.e.\ $q=p$ it is still fairly easy
+to visualise. Now the field is arithmetic (mod~$p$) and the affine plane
+is a grid of $q\times q$ points, with lines connecting them at all possible
+integer ratio slopes (you need to wrap top to bottom and left to right,
+in modulo fashion, if you attempt to draw it). There are $q$ slopes $f:1$
+(in a field, every nonzero element has a multiplicative inverse so every $a:b$
+is some $ab^{-1}:1$), and one slope $1:0$ for vertical lines. For each of the
+$q+1$ slopes there are $q$ parallel lines, making $q^2+q$ lines in all.
+
+The (finite) {\bf projective plane} $\mit\Pi$ adds $q+1$ {\sc point}s at infinity
+(one for each slope, each direction shared by a bunch of parallel lines)
+to the $q^2$ points of the grid, $q^2+q+1$ {\sc point}s in all. And it adds one
+{\sc line} at infinity to the $q^2+q$ lines we had, making $q^2+q+1$ {\sc line}s as well.
+So
+%
+\begin{itemize}
+
+\item the plane has $q^2+q+1$ {\sc point}s and $q^2+q+1$ {\sc line}s.
+
+\end{itemize}
+%
+This is also evident from the embedding in $\Fset^3 \setminus \{(0,0,0)\}$
+where each time $q-1$ non-(0,0,0) points lie on the same {\sc point} (line through
+the origin), and $(q^3-1)/(q-1) = q^2+q+1$. Each {\sc line} (plane through the
+origin) is $\perp$ such a line through the origin, so the numbers are the
+same. We also have that
+%
+\begin{itemize}
+
+\item every {\sc line} is incident with $q+1$ {\sc point}s; every {\sc point} with $q+1$ {\sc line}s
+
+\end{itemize}
+%
+because each {\sc line} (plane through the origin) contains $q^2-1$ non-(0,0,0)
+points, and $(q^2-1)/(q-1) = q+1$. The simplest way to see the number the
+other way round is also $q+1$ is calling {\sc point}s {\sc line}s and vice versa and
+embedding the thing in another $\Fset^3$; the incidence relation
+(\ref{px+qy+rz}) is unchanged under this swap.
+
+The field-based planes constructed here are the {\bf classical} planes,
+also called {\bf Desarguesian} because Desargues's theorem holds in them,
+and {\bf Pappian} because Pappus's theorem holds.
+$\Pi\acute\alpha\pi\pi\omikron\varsigma$ (Pappus) was a 4th century Alexandrine
+mathematician and Desargues a 17th century French one.
+
+It can be shown that Pappus's theorem holds in precisely those planes
+constructed in this way with $\Fset$ a field (commutative division ring),
+whereas Desargues's theorem holds whenever $\Fset$ is a skew field (division
+ring). For finite planes both conditions are the same by Wedderburn's theorem,
+so Desarguesian and Pappian are synonyms. For infinite planes you can have
+Desarguesian non-Pappian ones, for instance if $\Fset$ is taken to be the
+quaternions.
+
+The question arises what other algebraic structures other than
+(skew) fields can produce projective planes. See also the 
+{\bf\PMlinkid{finite projective planes entry}{6943}}.
+
+\clearpage
+\subsection*{Projective spaces}
+
+The same construction with homogeneous coordinates can be carried out in different
+numbers of dimensions. This extends $\Fset^1$ to the {\bf projective line} with
+for a finite field $q+1$ elements, labeled by $\Fset\cup\{\infty\}$ where
+$\infty$ is any item not in $\Fset$. It likewise extends $\Fset^n$ for
+$n\gt2$ to higher {\bf projective spaces} with $(q^{n+1}-1)/(q-1)$ elements.
+
+For $n\ne2$ however these classical constructions give the only possible
+projective spaces; there is nothing corresponding to the wild variety of
+non-classical projective planes we find for $n=2$.
+%%%%%
+%%%%%
+\end{document}

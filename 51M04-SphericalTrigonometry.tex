@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SphericalTrigonometry}
+\pmcreated{2013-03-22 17:08:13}
+\pmmodified{2013-03-22 17:08:13}
+\pmowner{fernsanz}{8869}
+\pmmodifier{fernsanz}{8869}
+\pmtitle{spherical trigonometry}
+\pmrecord{12}{39443}
+\pmprivacy{1}
+\pmauthor{fernsanz}{8869}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+%\pmkeywords{Spherical Trigonometry}
+\pmrelated{AreaOfASphericalTriangle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{psfrag}
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\bd}[1]{\mathbf{#1}}
+\begin{document}
+% we don't sign articles -- attribution is generated automatically by PlanetMath
+%\title{Spherical Trigonometry}%
+%\author{Fernando Sanz Gamiz}%
+{\bf Cosine law.}
+
+\medskip
+In the following we deduce the cosine law for a spherical trihedron.
+
+Let $\mathbf {e_1, e_2, e_3}$ be the vertex unitary vectors as shown
+in the figure. \bigskip
+
+\begin{figure}[h]
+\begin{center}
+\scalebox{.7}{\includegraphics{TrigonometriaEsferica.epsi}}
+\caption{Spherical Trihedron used to deduce trigonometric relations}
+\label{fig1}
+\end{center}
+\end{figure}
+
+\noindent The cosine of the angle $\alpha$ formed by the plane
+defined by $\mathbf {e_1, e_2}$ and the plane defined by $\mathbf
+{e_1, e_3}$ is:
+
+$$\cos \alpha=\frac{( \bd{e_1} \times \bd{e_3}) \cdot (\bd{e_1} \times \bd{e_2})}{\norm{\bd{e_1} \times
+\bd{e_3}}\norm{\bd{e_1} \times \bd{e_2}}} = \frac{( \bd{e_1} \times
+\bd{e_3}) \cdot (\bd{e_1} \times \bd{e_2})}{\sin b \sin c}$$ 
+
+\noindent Now, using the cyclic property of the triple vector product and \PMlinkname{Lagrange's formula}{TripleCrossProduct}, we can write:
+
+\medskip
+
+$$\cos \alpha=\frac{ \bd{e_1} \cdot (\bd{e_3} \times (\bd{e_1}
+\times \bd{e_2}))}{\sin b \sin c} = \frac{ \bd{e_1} \cdot
+((\bd{e_3}\cdot\bd{e_2})\bd{e_1}-(\bd{e_3}\cdot\bd{e_1})\bd{e_2})
+}{\sin b \sin c}=\frac{\cos a -\cos b \cos c}{\sin b \sin c}$$
+
+Hence: $$\cos a=\cos b \cos c + \sin b \sin c \cos \alpha$$
+%%%%%
+%%%%%
+\end{document}

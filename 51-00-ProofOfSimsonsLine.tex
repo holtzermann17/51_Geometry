@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSimsonsLine}
+\pmcreated{2013-03-22 13:08:26}
+\pmmodified{2013-03-22 13:08:26}
+\pmowner{giri}{919}
+\pmmodifier{giri}{919}
+\pmtitle{proof of Simson's line}
+\pmrecord{9}{33578}
+\pmprivacy{1}
+\pmauthor{giri}{919}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a  $\triangle ABC$ with a point $P$ on its circumcircle (other than $A,B,C$),                          
+we will prove that the feet of the perpendiculars drawn from P to the sides $AB,BC,CA$                
+(or their prolongations) are collinear.
+
+\begin{center}
+\includegraphics{simson.eps}
+\end{center}
+
+Since $PW$ is perpendicular to $BW$ and $PU$ is perpendicular to $BU$
+the point $P$ lies on the circumcircle of $\triangle BUW $.                              
+
+By similar arguments, $P$ also lies on the circumcircle of  $\triangle AWV$ and $\triangle CUV$.
+
+This implies that  $PUBW$ ,  $PUCV$ and $PVWA$ are all cyclic quadrilaterals.
+
+Since  $PUBW$ is a cyclic quadrilateral,
+
+$$\angle UPW = 180^\circ -\angle UBW$$
+
+implies  $$\angle UPW = 180^\circ -\angle CBA$$
+
+Also $CPAB$ is a cyclic quadrilateral, therefore
+
+$$\angle CPA = 180^\circ -\angle CBA$$
+
+(opposite angles in a cyclic quarilateral are supplementary).
+
+From these two, we get
+
+$$\angle UPW =\angle CPA$$
+                   
+Subracting $\angle CPW$, we have
+
+$$\angle UPC =\angle WPA$$
+
+Now, since $PVWA$ is a cyclic quadrilateral,
+$$\angle WPA = \angle WVA$$
+
+also, since  $UPVC$  is a cyclic quadrilateral,
+$$\angle UPC = \angle UVC$$
+
+Combining these two results with the previous one, we have
+
+$$\angle WVA =\angle UVC$$
+
+This implies that the points $U, V, W$ are collinear.
+%%%%%
+%%%%%
+\end{document}

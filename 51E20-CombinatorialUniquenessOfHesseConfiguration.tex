@@ -1,0 +1,197 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CombinatorialUniquenessOfHesseConfiguration}
+\pmcreated{2014-02-28 16:18:25}
+\pmmodified{2014-02-28 16:18:25}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{combinatorial uniqueness of Hesse Configuration}
+\pmrecord{22}{88021}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmclassification{msc}{51E20}
+\pmclassification{msc}{51A45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{def}{Definition}
+\newtheorem{thm}{Theorem}
+\begin{document}
+In this article, we will show that a collection 
+of objects which has the incidence structure of
+a Hesse configuration is unique up to relabeling.
+
+\begin{def}
+An \emph{abstract Hesse configuration} is a pair of
+sets $(P,L)$ which satisfies the following conditions:
+\begin{enumerate}
+\item $P$ has nine elements
+\item Every element of $L$ is a subset of $P$ with three elements.
+\item For any two distinct elements $x,y$ of $P$, there
+exists exactly one element of $L$ which contains both $x$ and $y$.
+\end{enumerate}
+\end{def}
+
+\begin{thm}
+If $(P,L)$ is an abstract Hesse configuration,
+then $L$ has 12 elements.
+\end{thm}
+
+\begin{proof}
+Let $D$ be the set of all two-element subsets of $P$.
+Then $D$ has ${9 \choose 2} = 36$ elements.  Each
+element of $L$ is a subset of $P$ with three elements,
+hence has ${3 \choose 2} = 3$ subsets of cardinality 2.
+By the definition above, every element of $D$ must
+be a subset of exactly one element of $L$.  For this
+to be possible, $L$ must have cardinality $36/3 = 12$.
+\end{proof}
+
+\begin{thm}
+If $(P,L)$ is an abstract Hesse configuration then, for
+every $p \in P$, there exist exactly four elements
+$\ell \in L$ such that $p \in \ell$.
+\end{thm}
+
+\begin{proof}
+To every $q \in P$ such that $q \neq p$, there exists
+exactly one $\ell \in L$ such that $p \in \ell$ and 
+$q \in \ell$.  Furthermore, for every $\ell \in L$ such
+that $p \in \ell$, there will be exactly two elements
+of $\ell$ other than $p$.  Hence, there exist $(9-1)/2 = 4$
+elements $\ell \in L$ such that $p \in \ell$.
+\end{proof}
+
+\begin{thm}
+If $(P,L)$ is an abstract Hesse configuration and $\ell \in L$,
+then there exist $m,n \in L$ such that $\ell \cap m =
+\ell \cap n = m \cap n = \emptyset$.
+\end{thm}
+
+\begin{proof}
+By the foregoing result, given $p \in \ell$, there are four
+elements of $L$ to which $p$ belongs.  One of these, of course,
+is $\ell$ itself, and the other three are distinct from $\ell$.
+Since $\ell$ has three elements, this means that there are at
+most $3 \cdot 3 + 1 = 10$ elements $k \in L$ such that 
+$P \cap L \neq \emptyset$.  Because $L$ has 12 elements. there
+must exist $m,n \in L$ such that $\ell \cap m = \ell \cap n = 
+\emptyset$.
+
+It remains to show that $m \cap n = \emptyset$.  Suppose to the
+contrary that there exists a $p$ such that $p \in m$ and 
+$p \in n$.  Since $m \cap \ell = \emptyset$, it follows that 
+$p \notin \ell$, hence there will exist three distinct elements
+of $L$ containing $p$ and an element of $\ell$.  Because 
+$\ell \cap m = \ell \cap n = \emptyset$, these three elements 
+are distinct from $m$ and $n$.  That makes for a total of
+five distinct elements of $L$ containing $p$, which
+contradicts the previous theorem, hence $m \cap n = \emptyset$.
+\end{proof}
+
+\begin{thm}
+If $m,n,k$ are elements of $L$ such that $m \cap n = n \cap k 
+= k \cap m = \emptyset$ and $\ell \in L \setminus \{m,n,k\}$, 
+then $\ell$ has exactly one element in common with each of $m,n,k$.
+\end{thm}
+
+\begin{proof}
+Since each element of $L$ is a subset of $P$ with three elements
+and $m,n,k$ are pairwise disjoint but $P$ only has nine
+elements, it follows that every element of $P$ must belong
+to exactly one of $m,n,k$.  In particular, this means that 
+every element of $\ell$ must belong to one of $m,n,k$.  Were
+two elements of $\ell$ to belong to the same element of 
+$\{m,n,k\}$ then, by the third defining property, that element
+would have to equal $\ell$, contrary to its definition.  Hence,
+each element of $\ell$ must belong to a distinct element of 
+$\{m,n,k\}$.
+\end{proof}
+
+\begin{thm}
+If $(P,L)$ is an abstract Hesse configuration, then we can
+label the elements of $P$ as A,B,C,D,E,F,G,H,I in such a way
+that the elements of $L$ are 
+\[\{A,B,C\}, \{D,E,F\}, \{G,H,I\}, \]
+\[\{A,D,G\}, \{B,E,H\}, \{C,F,I\}, \]
+\[\{D,H,C\}, \{A,E,I\}, \{B,F,G\}, \]
+\[\{B,D,I\}, \{C,E,G\}, \{A,F,H\}. \]
+\end{thm}
+
+\begin{proof}
+By theorem 3, there exist $a,b,c \in L$ such that
+$a \cap b = b \cap c = c \cap a = \emptyset$.  Since $L$ has
+twelve elements, there must exist an a elemetn of $L$ distinct
+from $a,b,c$.  Pick such an element and call it $d$.  By 
+another application of theorem 3, there must exist $e,f \in L$ 
+such that $d \cap e = e \cap f = f \cap d = \emptyset$.
+
+By theorem 4, $a$ must have exactly one element in common with 
+each of $d,e,f$; let $A$ the element it has in common with $d$,
+$B$ be the element it has in common with $e$ and $C$ be the 
+element it has in common with $f$.  Likewise, $b$ must have 
+exactly one element in common with each of $d,e,f$, as must $c$.
+Let $D$ be the element $b$ has in common with $d$, $E$ be the
+element $b$ has in common with $e$, $F$ be the element $b$
+has in common with $f$, $G$ be the element $c$ has in common 
+with $d$, $H$ be the element $c$ has in common with $e$ and $I$
+be the element $c$ has in common with $f$.
+
+Summarizing what we just said another way, we have assigned
+labels $A,B,C,D,E,F,G,H,I$ to the elements of $P$ in such
+a way that 
+\[ a = \{A,B,C\}, ~ b = \{D,E,F\}, ~ c = \{G,H,I\}, \]
+\[ d = \{A,D,G\}, ~ e = \{B,E,H\}, ~ f = \{C,F,I\}. \]
+That is half of what we set out to do; we must still label
+the remaining six elements of $L$.
+
+By theorem 4, if $\ell \in L \setminus \{a,b,c,d,e,f\}$, then
+$\ell$ must have exactly one element in common with each of 
+$a,b,c$ and exactly one element in common with each of $d,e,f$.
+
+Suppose that $A \in \ell$.  It could not be the case that 
+$D \in \ell$ because then $\ell$ would have two elements in 
+common with $d$.  Since $\ell$ must have one element in common
+with $b$, that means that either $E \in \ell$ or $F \in \ell$.
+If $A,E \in \ell$, then the element $\ell$ has in common with 
+$c$ cannot be $G$ because $\ell$ would have both $A$ and $G$
+in common with $c$ and it cannot be $H$ because $\ell$ and
+$e$ would have both $E$ and $H$ in common, hence the only
+possibility is to have $I \in \ell$, i.e. $\ell = \{A,E,I\}$.
+Likewise, if $A,F \in \ell$, it follows that $H \in \ell$.
+
+Summarrizing the last few sentences, if $A \in \ell$, then
+either $\ell = \{A,E,I\}$ or $\ell = \{A,F,H\}$.  By a similar
+line of reasoning, if $B \in \ell$, then either $\ell = 
+\{B,D,I\}$ or $\ell = \{B,F,G\}$ and, if $B \in \ell$, then 
+either $\ell = \{C,D,H\}$ or $\ell = \{C,E,G\}$.  Since $\ell$
+must contain one of $A,B,C$, it follows that there are omnly
+the following six possibilities for $\ell$:
+\[\{D,H,C\}, \{A,E,I\}, \{B,F,G\}, \]
+\[\{B,D,I\}, \{C,E,G\}, \{A,F,H\}. \]
+However, since $L \setminus \{a,b,c,d,e,f\}$ has cardinality
+six, all these possibilities must be actual members of the set.
+\end{proof}
+
+\end{document}

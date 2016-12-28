@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HappyEndingProblem}
+\pmcreated{2013-03-22 16:16:21}
+\pmmodified{2013-03-22 16:16:21}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{happy ending problem}
+\pmrecord{13}{38383}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51D20}
+\pmsynonym{happy end problem}{HappyEndingProblem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\em happy ending problem} asks, for a given integer $n > 2$, to find the smallest number $g(n)$ of points laid on a plane in general position such that a subset of $n$ points can be made the vertices of a convex $n$-agon.
+
+\begin{figure}
+\includegraphics[width=3in]{happy_end_4}
+\caption{Examples showing that $g(4)\le 5$.}
+\end{figure}
+
+It is obvious that for $n = 3$, just three points in general position
+are sufficient to create a triangle. For $n = 4$, Paul Erd\H{o}s and
+Esther Klein (later Szekeres) determined that at least five points are
+necessary, and Kalbfleisch later determined $g(5) = 9$.  Much later,
+George Szekeres (posthumously) and Lindsay Peters published a computer
+proof~\cite{cite:PS2006} that $g(6) = 17$.
+
+For higher $n$, Erd\H{o}s and George Szekeres in 1935 gave the upper bound $$g(n) \le \binom{2n - 4}{n - 2} + 1.$$ Later, in 1961 they gave the lower bound $g(n) \geq 1 + 2^{n - 2}$. 
+
+New ideas for the upper bound were in the air in the late 1990s, with Chung and Graham showing that if $n \ge 4$, then $$g(n) \le \binom{2n - 4}{n - 2},$$ while Kleitman and Pachter showed that then $$g(n) \le \binom{2n - 4}{n - 2} + 7 - 2n.$$ And G\'eza T\'oth and Pavel Valtr in 1998 gave the upper bound $$g(n) \leq {2n - 5 \choose n - 3} + 2,$$ which in 2005 they refined to $$g(n) \le \binom{2n-5}{n-3} + 1.$$
+
+\begin{thebibliography}{9}
+\bibitem{cite:CG1998}
+F.~R.~K.~Chung and R.~L.~Graham, Forced convex $n$-gons in the plane, {\it Discrete Comput. Geom.} {\bf 19} (1996), 229--233.
+
+\bibitem{cite:ES1935}
+P.~Erd\H{o}s and G.~Szekeres, A combinatorial problem in geometry, {\it Compositio Math.} {\bf 2} (1935), 463--470.
+
+\bibitem{cite:ES1961}
+P.~Erd\H{o}s and G.~Szekeres, On some extremum problems in elementary geometry, {\it Ann. Univ. Sci. Budapest E\"otv\"os Sect. Math.} {\bf 3--4} (1961), 53--62.
+
+\bibitem{cite:KP1998}
+D.~Kleitman and L.~Pachter, Finding convex sets among points in the plane, {\it Discrete Comput. Geom.} {\bf 19} (1998), 405--410.
+
+\bibitem{cite:MS2000}
+W.~Morris and V.~Soltan, The Erd\H{o}s-Szekeres problem on points in convex position -- a survey, {\it Bull. Amer. Math. Soc.} {\bf 37} (2000), 437--458.
+
+\bibitem{cite:PS2006}
+L.~Peters and G.~Szekeres, Computer solution to the 17-point Erd\H{o}s-Szekeres problem, {\it ANZIAM J.} {\bf 48} (2006), 151--164.
+
+\bibitem{cite:TV1998}
+G.~T\'{o}th and P.~Valtr, Note on the Erd\H{o}s-Szekeres theorem, {\it Discrete Comput. Geom.} {\bf 19} (1998), 457--459.
+
+\bibitem{cite:TV2005}
+G.~T\'{o}th and P.~Valtr, The Erd\H{o}s-Szekeres theorem: upper bounds and related results. Appearing in J.~E.~Goodman, J.~Pach, and E.~Welzl, eds., {\it Combinatorial and computational geometry}, Mathematical Sciences Research Institute Publications {\bf 52} (2005) 557--568.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

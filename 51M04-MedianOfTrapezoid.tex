@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MedianOfTrapezoid}
+\pmcreated{2013-03-22 17:46:44}
+\pmmodified{2013-03-22 17:46:44}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{median of trapezoid}
+\pmrecord{6}{40237}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51M25}
+\pmrelated{MutualPositionsOfVectors}
+\pmrelated{MidSegmentTheorem}
+\pmrelated{TriangleMidSegmentTheorem}
+\pmrelated{HarmonicMeanInTrapezoid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{legs}
+The segment connecting the midpoints of the \PMlinkname{legs}{Trapezoid} of a trapezoid, i.e. the median of the trapezoid, is parallel to the bases and its length equals the arithmetic mean of the legs.\\
+
+{\em Proof.}\, Let $AB$ and $CD$ be the bases of a trapezoid $ABCD$ and $E$ the midpoint of the leg $AD$ and $F$ the midpoint of the leg $BC$.\, Then the median $EF$ may be determined as vector as follows:
+\begin{align*}
+\overrightarrow{EF} &= \overrightarrow{ED}+\overrightarrow{DC}+\overrightarrow{CF}\\ 
+& = \frac{1}{2}\overrightarrow{AD}+\overrightarrow{DC}+\frac{1}{2}\overrightarrow{CB}\\ 
+& = \frac{1}{2}(\overrightarrow{AD}+\overrightarrow{DC}+\overrightarrow{CB})+\frac{1}{2}\overrightarrow{DC}\\
+& = \frac{1}{2}\overrightarrow{AB}+\frac{1}{2}\overrightarrow{DC}\\
+& = \frac{1}{2}(\overrightarrow{AB}+\overrightarrow{DC})
+\end{align*}
+The last expression tells that\; 
+$\overrightarrow{EF} \parallel \overrightarrow{AB}+\overrightarrow{DC} \parallel \overrightarrow{AB}$\; and\; 
+$\displaystyle|\overrightarrow{EF}| = \frac{|\overrightarrow{AB}\!+\!\overrightarrow{DC}|}{2} = 
+\frac{|\overrightarrow{AB}|\!+\!|\overrightarrow{DC}|}{2}$.\; Q.E.D.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(7,4)
+\psline[linecolor=blue](0,0)(6,0)
+\psline(6,0)(5,4)
+\psline[linecolor=blue](2,4)(5,4)
+\psline(2,4)(0,0)
+\psline[linecolor=red](1,2)(5.5,2)
+\psdot[linecolor=red](1,2)
+\psdot[linecolor=red](5.5,2)
+\rput[a](0,-0.3){$A$}
+\rput[a](6,-0.3){$B$}
+\rput[a](5,4.3){$C$}
+\rput[a](2,4.3){$D$}
+\rput[a](0.74,2){$E$}
+\rput[a](5.7,2){$F$}
+\rput[a](0.75,1){$p$}
+\rput[a](1.74,3){$p$}
+\rput[a](5.55,1){$q$}
+\rput[a](5.05,3){$q$}
+\end{pspicture}
+\end{center}
+
+
+%%%%%
+%%%%%
+\end{document}

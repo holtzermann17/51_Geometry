@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Heptahedron}
+\pmcreated{2013-03-22 14:26:24}
+\pmmodified{2013-03-22 14:26:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{heptahedron}
+\pmrecord{9}{35953}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51E99}
+\pmsynonym{septahedron}{Heptahedron}
+%\pmkeywords{polyhedron}
+\pmrelated{Grafix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+\usepackage{pstricks}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{heptahedron} is a polyhedron with seven faces.
+
+According to the Steinitz classification of f-vectors of 3-polytopes and the Euler polyhedron formula together imply that a convex heptahedron will have one of the followng f-vectors:
+
+\begin{itemize}
+\item $(6,11,7)$
+\begin{center}
+\begin{pspicture}(-7,-1)(7,1.3)
+\psset{unit=0.8cm}
+\pspolygon[linestyle=dashed, dash=2pt 2pt](-5,-1)(-3,-1)(-2,0)(-4,0)
+\pspolygon(-4.3,1)(-3.1,1.2)(-3,-1)
+\pspolygon(-5,-1)(-3,-1)(-4.3,1)
+\pspolygon(-3,-1)(-2,0)(-3.1,1.2)
+\pspolygon[linestyle=dashed, dash=2pt 2pt](-4.3,1)(-3.1,1.2)(-4,0)
+\end{pspicture}
+\end{center}
+\item $(7,12,7)$
+\begin{center}
+\begin{pspicture}(-8,-1)(7,1.4)
+\psset{unit=0.8cm}
+\pspolygon[linestyle=dashed, dash=2pt 2pt](-5,-1)(-3.6,-1)(-2.6,-0.5)(-3.6,0)(-5,0)(-6,-0.5)
+\pspolygon(-4.3,1.4)(-5,-1)(-6,-0.5)
+\pspolygon(-4.3,1.4)(-2.6,-0.5)(-3.6,-1)
+\psline(-5,-1)(-3.6,-1)
+\pspolygon[linestyle=dashed, dash=2pt 2pt](-4.3,1.4)(-5,0)(-3.6,0)
+\end{pspicture}
+\end{center}
+\item $(8,13,7)$
+\begin{center}
+\begin{pspicture}(-8,-1)(7,1.4)
+\psset{unit=0.8cm}
+\pspolygon[linestyle=dashed, dash=2pt 2pt](-5,-1)(-4,-1)(-2.5,-0.5)(-4,0)(-5,0)(-6.5,-0.5)
+\pspolygon(-6,1.2)(-3,1.2)(-4,-1)(-5,-1)
+\pspolygon(-6,1.2)(-6.5,-0.5)(-5,-1)
+\pspolygon(-3,1.2)(-4,-1)(-2.5,-0.5)
+\pspolygon[linestyle=dashed, dash=2pt 2pt](-6,1.2)(-3,1.2)(-4,0)(-5,0)
+\end{pspicture}
+\end{center}
+\item $(9,14,7)$
+\begin{center}
+\begin{pspicture}(-8,-1)(7,1.4)
+\psset{unit=0.8cm}
+\pspolygon[linestyle=dashed, dash=2pt 2pt](-6,-0.5)(-4,-0.5)(-4,1.5)(-6,1.5)
+\pspolygon[linestyle=dashed, dash=2pt 2pt](-4,-0.5)(-4,1.5)(-3,1)(-3,-1)
+\pspolygon(-5,-1)(-3,-1)(-3,1)(-4.5,1)(-5,0.5)
+\pspolygon(-4.5,1)(-5,0.5)(-6,1.5)
+\pspolygon(-4.5,1)(-6,1.5)(-4,1.5)(-3,1)
+\pspolygon(-5,0.5)(-6,1.5)(-6,-0.5)(-5,-1)
+\end{pspicture}
+\end{center}
+\item $(10,15,7)$
+\begin{center}
+\begin{pspicture}(-8,-1)(7,1.4)
+\psset{unit=0.8cm}
+\pspolygon[linestyle=dashed, dash=2pt 2pt](-5,-1)(-3,-1)(-2,-0.5)(-4,0)(-6,-0.5)
+\pspolygon(-5,0.5)(-3,0.5)(-2,1)(-4,1.5)(-6,1)
+\psline(-5,-1)(-5,0.5)
+\psline(-3,-1)(-3,0.5)
+\psline(-2,-0.5)(-2,1)
+\psline(-6,-0.5)(-5,-1)(-3,-1)(-2,-0.5)
+\psline[linestyle=dashed, dash=2pt 2pt](-4,0)(-4,1.5)
+\psline(-6,-0.5)(-6,1)
+\end{pspicture}
+\end{center}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,242 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NearlinearSpace}
+\pmcreated{2013-03-22 13:05:32}
+\pmmodified{2013-03-22 13:05:32}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{near-linear space}
+\pmrecord{29}{33509}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A45}
+\pmclassification{msc}{51A05}
+\pmclassification{msc}{05C65}
+\pmsynonym{partial plane}{NearlinearSpace}
+\pmrelated{FinitePlane}
+\pmrelated{ProjectivePlane2}
+\pmrelated{DeBruijnErdHosTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{pst-plot}
+
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\begin{document}
+A {\em near-linear space} $\mathscr{S}=(\mathcal{P},\mathcal{L},\mathcal{I})$ is an incidence structure, where blocks (elements of $\mathcal{L}$) are called lines, that satisfies the following conditions:
+\begin{enumerate}
+\item any line is incident with at least two points, and
+\item any two points are incident with at most one line.
+\end{enumerate}
+A near-linear space is also called a partial plane.
+
+Given points $P,Q$, by condition 2, we may write $PQ$ to mean the unique line (if it exists) incident with both $P$ and $Q$.  Note that $PQ=QP$.
+
+It is easy to see that a near-linear space is a simple incidence structure, so that lines can be identified with the set of points incident with it, which we shall do from now on, and we will write $(\mathcal{P},\mathcal{L})$ for the near-linear space whose point set and line set are $\mathcal{P}$ and $\mathcal{L}$ respectively.
+
+\paragraph{Examples:}
+\begin{enumerate}
+\item If we take all the vertices in a graph as points, and edges as lines, it is then a near-linear space in which every line contains two points.
+
+\item
+A linear space is a near-linear space where any two points lie on exactly one line.
+
+\item Let us enumerate all (non-isomorphic) near-linear spaces with four points:
+\begin{itemize}
+\item no lines
+\begin{center}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,1)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\end{pspicture}
+\end{center}
+\item one line
+\begin{center}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,1)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psline(-1,0)(-1,1)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psline(-1,0)(1,0)
+\end{pspicture}
+\begin{pspicture}(-2,0)(2,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psdots[linecolor=blue,dotsize=5pt](2,0)
+\psline(-1,0)(2,0)
+\end{pspicture}
+\end{center}
+\item two lines
+\begin{center}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,1)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psline(-1,0)(-1,1)
+\psline(-1,1)(0,1)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,1)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psline(-1,0)(-1,1)
+\psline(0,0)(0,1)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psline(-1,0)(1,0)
+\psline(0,1)(1,0)
+\end{pspicture}
+\end{center}
+\item three lines
+\begin{center}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,1)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psline(-1,0)(-1,1)
+\psline(-1,1)(0,1)
+\psline(0,1)(0,0)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,1)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psline(-1,0)(-1,1)
+\psline(-1,1)(0,1)
+\psline(0,1)(-1,0)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psline(-1,0)(1,0)
+\psline(0,1)(1,0)
+\psline(0,1)(-1,0)
+\end{pspicture}
+\end{center}
+\item four lines
+\begin{center}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,1)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psline(-1,0)(-1,1)
+\psline(-1,1)(0,1)
+\psline(0,1)(0,0)
+\psline(0,0)(-1,0)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,1)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psline(-1,0)(-1,1)
+\psline(-1,1)(0,1)
+\psline(0,1)(0,0)
+\psline(0,1)(-1,0)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psline(-1,0)(1,0)
+\psline(0,1)(1,0)
+\psline(0,1)(0,0)
+\psline(0,1)(-1,0)
+\end{pspicture}
+\end{center}
+\item five lines
+\begin{center}
+\begin{pspicture}(-1,-1)(1,1)
+\psset{unit=10pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,-1)
+\psdots[linecolor=blue,dotsize=5pt](1,-1)
+\psdots[linecolor=blue,dotsize=5pt](-1,1)
+\psdots[linecolor=blue,dotsize=5pt](1,1)
+\psline(-1,-1)(-1,1)
+\psline(-1,1)(1,1)
+\psline(1,1)(1,-1)
+\psline(1,-1)(-1,-1)
+\psline(-1,-1)(1,1)
+\end{pspicture}
+\end{center}
+\item six lines
+\begin{center}
+\begin{pspicture}(-1,-1)(1,1)
+\psset{unit=10pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,-1)
+\psdots[linecolor=blue,dotsize=5pt](1,-1)
+\psdots[linecolor=blue,dotsize=5pt](-1,1)
+\psdots[linecolor=blue,dotsize=5pt](1,1)
+\psline(-1,-1)(-1,1)
+\psline(-1,1)(1,1)
+\psline(1,1)(1,-1)
+\psline(1,-1)(-1,-1)
+\psline(-1,-1)(1,1)
+\psline(-1,1)(1,-1)
+\end{pspicture}
+\end{center}
+\end{itemize}
+Out of these, the linear spaces are the last ones of the one-line and four-line spaces, as well as the six-line space, which also happens to be the smallest affine plane.
+\item Examples of near-linear spaces may be constructed from existing ones.  For more detail, see here.
+\end{enumerate}
+
+\paragraph{Some properties:}
+\begin{enumerate}
+\item In a near-linear space, if two distinct lines intersect, they intersect in one point.
+
+\item There is no proper inclusion of lines in a near-linear space, i.e., if $\ell_1$ and $\ell_2$ are two lines such that $\ell_1\subseteq \ell_2$, then $\ell_1=\ell_2$.
+
+\item In a near-linear space $\mathscr{S}=(\mathcal{P},\mathcal{L})$, 
+$$\sum_{\ell \in \mathcal{L}} \binom{|\ell|}{2} \leq \binom{|\mathcal{P}|}{2}$$
+with equality holds if and only if $\mathscr{S}$ is a linear space.
+\end{enumerate}
+
+\begin{thebibliography}{7}
+\bibitem{LB} L. M. Batten, {\it Combinatorics of Finite Geometries}, 2nd edition, Cambridge University Press (1997)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

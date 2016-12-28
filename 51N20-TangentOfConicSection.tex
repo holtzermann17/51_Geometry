@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TangentOfConicSection}
+\pmcreated{2013-03-22 14:28:40}
+\pmmodified{2013-03-22 14:28:40}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{tangent of conic section}
+\pmrecord{16}{36008}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmsynonym{tangent of quadratic curve}{TangentOfConicSection}
+\pmrelated{TangentLine}
+\pmrelated{TangentOfCircle}
+\pmrelated{TangentPlaneOfQuadraticSurface}
+\pmrelated{QuadraticInequality}
+\pmrelated{ConjugateDiametersOfEllipse}
+\pmrelated{ConjugateHyperbola}
+\pmrelated{QuadraticCurves}
+\pmrelated{EquationOfTangentOfCircle}
+\pmrelated{TangentOfHyperbola}
+\pmdefines{polarising}
+\pmdefines{polarizing}
+\pmdefines{polarize}
+\pmdefines{mixed term}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The equation of every conic section (and the degenerate cases) in the rectangular 
+$(x,\,y)$-coordinate system may be written in the form
+            $$Ax^2+By^2 +2Cxy+2Dx+2Ey+F = 0,$$
+where $A$, $B$, $C$, $D$, $E$ and $F$ are constants and \,$A^2+B^2+C^2 > 0.$\footnote{This is true also in any skew-angled coordinate system.} \, (The \PMlinkescapetext{{\em mixed term}} $2Cxy$ is present only if the \PMlinkescapetext{principal} axes are not parallel to the coordinate axes.)
+
+The equation of the {\em tangent line} of an ordinary conic section (i.e., circle, ellipse, hyperbola and parabola) in the point $(x_0,\,y_0)$ of the curve is
+  $$Ax_0x+By_0y+C(y_0x+x_0y)+D(x+x_0)+E(y+y_0)+F = 0.$$
+Thus, the equation of the tangent line can be obtained from the equation of the curve by {\em polarizing} it, i.e. by replacing 
+
+\qquad $x^2$ with $x_0x$, \,$y^2$ with $y_0y$, \,$2xy$ with $y_0x+x_0y$, \,$2x$ with $x+x_0$, \,$2y$ with $y+y_0$.
+
+\textbf{Examples:} \,The \PMlinkescapetext{tangent} of the ellipse \,$\frac{x^2}{a^2}+\frac{y^2}{b^2} = 1$ \, is \,$\frac{x_0x}{a^2}+\frac{y_0y}{b^2} = 1$, the \PMlinkescapetext{tangent} of the hyperbola \,$xy = \frac{1}{2}$ \, is \,$y_0x+x_0y = 1$.
+%%%%%
+%%%%%
+\end{document}

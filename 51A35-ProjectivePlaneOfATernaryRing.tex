@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectivePlaneOfATernaryRing}
+\pmcreated{2013-03-22 19:14:35}
+\pmmodified{2013-03-22 19:14:35}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{projective plane of a ternary ring}
+\pmrecord{11}{42168}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A35}
+\pmclassification{msc}{51E15}
+\pmclassification{msc}{51A25}
+\pmrelated{TernaryRingOfAProjectivePlane}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Given a ternary ring $(R,0,1,*)$, one can construct a projective plane $\pi$ such that $R$ coordinatizes $\pi$:
+
+\begin{enumerate}
+\item points of $\pi$ are of the forms $(x,y)$ or $(m)$, where $x,y\in R$, and $m\in R\cup \lbrace \infty\rbrace$.  We assume that the symbol $\infty$ is not a member of $R$.
+\item lines of $\pi$ are sets of points, of the following forms
+\begin{itemize}
+\item $[\,m,b\,]:=\lbrace (x,y)\mid y=x*m*b, x,y,m,b\in R\rbrace \cup \lbrace (m)\rbrace$;
+\item $[\,a\,]:=\lbrace (x,y)\mid x=a, x,y,a\in R\rbrace \cup \lbrace (\infty)\rbrace$;
+\item $[\,\infty\,]:=\lbrace (m)\mid m\in R\cup \lbrace \infty\rbrace \rbrace$.
+\end{itemize}
+\item incidence relation is the same as set membership $\in$.
+\end{enumerate}
+
+The line $[\,\infty\,]$ is called the line at infinity of $R$, and points $(m)$ are the points at infinity (or slope points) of $R$.
+
+\begin{prop}  $[\,m,b\,]\ne [\,a\,]$ for any $m,b\in R$ and $a\in R\cup\lbrace \infty\rbrace$.  If $(m_1,b_1)\ne (m_2,b_2)$, then $[\,m_1,b_1\,]\ne [\,m_2,b_2\,]$, for any $m_1,m_2,b_1,b_2\in R$.  Also, if $a\ne b$, then $[\,a\,]\ne [\,b\,]$, for any $a,b\in R\cup\lbrace \infty\rbrace$.
+\end{prop}
+\begin{proof}  The first assertion is true, since $(\infty)\in [\,a\,]-[\,m,b\,]$, $(m)\in [\,m,b\,]-[\,a\,]$ for any $a\in R$, and $(0,b)\in [\,m,b\,]-[\,\infty\,]$.
+
+If $m_1\ne m_2$, then $(m_1)\in [\,m_1,b_1\,]- [\,m_2,b_2\,]$, while $(m_2)\in [\,m_2,b_2\,]- [\,m_1,b_1\,]$.  If $b_1\ne b_2$, then $(0,0*m_1*b_1)=(0,b_1)\ne (0,b_2)=(0,0*m_2*b_2)$, so that $(0,b_1)\in  [\,m_1,b_1\,]- [\,m_2,b_2\,]$, while $(0,b_2)\in [\,m_2,b_2\,]- [\,m_1,b_1\,]$.  
+
+Next, if $a\ne \infty$, then $(a,0)\in [\,a\,]-[\,\infty\,]$, while $(a)\in [\,\infty\,]-[\,a\,]$.  
+
+Finally, if $a,b\in R$ with $a\ne b$, then $(a,0)\in [\,a\,]-[\,b\,]$, while $(b,0)\in [\,b\,]-[\,a\,]$.\end{proof}
+
+This shows that no two lines have the same ``coordinates''.  In fact, more is true:
+
+\begin{prop} $\pi$, with points and lines defined above, is indeed a projective plane. \end{prop}
+\begin{proof}  We need to verify that points and lines satisfy the axioms of projective plane.
+\begin{enumerate}
+\item Axiom 1: two distinct points are incident with exactly one line.  There are four cases:
+\begin{itemize}
+\item Given $a,b\in R\cup \lbrace \infty \rbrace$, with $a\ne b$, points $(a),(b)$ lie on line $[\,\infty\,]$.
+\item Given $x,y \in R$ with $x\ne y$, points $(x,y),(\infty)$ lie on line $[\,x\,]$.
+\item Given $x,y, m\in R$ with $x\ne y$, there is a unique $b\in R$ such that $y=x*m*b$.  Then points $(x,y),(m)$ lie on line $[\,m,b\,]$.
+\item Given $x_1,y_1,x_2,y_2\in R$, with $(x_1,y_1)\ne (x_2,y_2)$.  If $x_1=x_2=x$, then points $(x_1,y_1),(x_2,y_2)$ lie on line $[\,x\,]$.  Otherwise, there is a unique pair $(m,b)$ such that $y_1=x_1*m*b$ and $y_2=x_2*m*b$, so that both points lie on line $[\,m,b\,]$.
+\end{itemize}
+All lines above are unique by proposition 1.  From this, let us write $PQ$ for the line where points $P,Q$ lie on.
+\item Axiom 2: two distinct lines are incident with exactly one point.  In light of the previous axiom, all we need to show is that two distinct lines contain at least one point.  There are three cases:
+\begin{itemize}
+\item Given lines $[\,a\,],[\,c\,]$ with $a,c\in R\cup \lbrace \infty \rbrace$ and $a\ne c$, they both contain point $(\infty)$.
+\item Given lines $[\,m,b\,],[\,a\,]$, if $a=\infty$, then both contain point $(m)$, and if $a\ne \infty$, then both contain point $(a,a*m*b)$.
+\item Given lines $[\,m_1,b_1\,],[\,m_2,b_2\,]$, with $(m_1,b_1)\ne (m_2,b_2)$.  If $m_1=m_2=m$, then both lines contain point $(m)$.  Otherwise, the equation $x*m_1*b_1=x*m_2*b_2$ has a unique solution for $x$.  Say the solution is $a$.  Then both lines contain point $(a,a*m_1*b_1)=(a,a*m_2*b_2)$.
+\end{itemize}
+\item Axiom 3: there exists a quadrangle.  The four points are $(0,0),(1,1),(0),(\infty)$, and all six lines $(0,0)(1,1)=[\,1,0\,]$, $(0,0)(0)=[\,0,0\,]$, $(0,0)(\infty)=[\,0\,]$, $(1,1)(0)=[\,0,1\,]$, $(1,1)(\infty)=[\,1\,]$, and $(0)(\infty)=[\,\infty\,]$ are all distinct.  Hence they form a quadrangle.
+\end{enumerate}
+Therefore, $\pi$ is a projective plane.
+\end{proof}
+
+If one removes the line $[\,\infty\,]$ and all the points on it, then the resulting plane is an affine plane.  In this regard, $R$ can be used to coordinatize an affine plane.  It is possible to construct the affine plane from $R$ without the use of the line at infinity.
+
+Given a projective plane, one can also construct a ternary ring that coordinatizes the plane.  See \PMlinkname{this entry}{TernaryRingOfAProjectivePlane} for more detail.
+
+\begin{thebibliography}{7}
+\bibitem{RA} R. Artzy, {\it Linear Geometry}, Addison-Wesley (1965)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

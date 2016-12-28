@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BarycentricCoordinates}
+\pmcreated{2013-03-22 16:08:26}
+\pmmodified{2013-03-22 16:08:26}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{barycentric coordinates}
+\pmrecord{10}{38216}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N10}
+\pmsynonym{affine coordinates}{BarycentricCoordinates}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $A$ be an affine space (over a field $F$).  It is known if a set $S=\lbrace v_1,\ldots,v_n\rbrace$ of elements in $A$ is affinely independent, then every element $v$ in the affine subspace spanned by $S$ can be uniquely written as a affine combination of $v_1,\ldots,v_n$:
+$$v=k_1v_1+\cdots+k_nv_n\qquad (k_1+\cdots+k_n=1)$$
+It is also not hard to see that there is a subset $S$ of $A$ such that $S$ is affinely independent and the span of $S$ is $A$.  If $A$ is finite dimensional, then $S$ is finite, and that every element of $A$ can then be expressed uniquely as a finite affine combination of elements of $S$.  Because of the existence and uniquess of this expression, we can write every element $v\in A$ as $$(k_1,\ldots,k_n)\mbox{ iff }v=k_1v_1+\cdots+k_nv_n.$$  The expression $(k_1,\ldots,k_n)$ is called the \emph{barycentric coordinates} of $v$ (given $S$).  Each $k_i$ is called a component of the barycentric coordinates of $v$.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item Unlike the Euclidean space, $v+w$ and $kv$ with $1\neq k\in F$ defined by coordinate-wise addition and scalar multiplication do not make sense in an affine space.  If $v=(k_1,\ldots,k_n)$ and $w=(m_1,\ldots,m_n)$, then $(k_1+m_1)+\cdots+(k_n+m_n)=2$ and $v+w:=(k_1+m_1,\ldots,k_n+m_n)$ would be meaningless.
+\item Similarly, $\boldsymbol{0}:=(0,\ldots,0)$ does not exist in an affine space for the simple reason that $\boldsymbol{0}$ is not an affine combination of any subset of an affine space $A$ ($0\neq 1$).  The notion of an origin has no place in an affine space.
+\item However, any finite affine combination of any set of points in an affine space is always a point in the space.  This can be easily illustrated by the use of barycentric coordinates.  For example, take $v=(k_1,\ldots,k_n)$ and $w=(m_1,\ldots,m_n)$.  Let $$u=kv+mw\mbox{ with }1=k+m.$$  A direct calculation shows that $u$ has barycentric coordinates $$(kk_1+mm_1,\ldots,kk_n+mm_n),$$ which means it lies in the affine space. 
+\item If $F$ is ordered, then we can form sets in an affine space consisting of points with non-negative barycentric coordinates.  Given a set $S$ of affinely independent points, a set $G$ is called the \emph{affine polytope} spanned by $S$ if $G$ consists of all points that are in the span of $S$ and have non-negative barycentric coordinates via $S$.  A point in $G$ is said to lie on the surface of the polytope if it has at least one zero component, otherwise it is an interior point (having all positive components).  In the language of algebraic topology, this is also known as a simplex.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HyperbolasOrthogonalToEllipses}
+\pmcreated{2013-03-22 18:08:53}
+\pmmodified{2013-03-22 18:08:53}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{hyperbolas orthogonal to ellipses}
+\pmrecord{11}{40704}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmsynonym{ellipses orthogonal to hyperbolas}{HyperbolasOrthogonalToEllipses}
+%\pmkeywords{confocal ellipses}
+%\pmkeywords{confocal hyperbolas}
+\pmrelated{OrthogonalCurves}
+\pmrelated{ZeroRuleOfProduct}
+\pmrelated{Pencil2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let\, $a^2 > b^2$,\; $s > -b^2$\, and\, $a^2 > t > b^2$.\, Show that each of the \PMlinkname{ellipses}{Ellipse2}
+\begin{align}
+\frac{x^2}{a^2+s}+\frac{y^2}{b^2+s} = 1
+\end{align}
+is an orthogonal curve of every \PMlinkname{hyperbola}{Hyperbola2}
+\begin{align}
+\frac{x^2}{a^2-t}-\frac{y^2}{t-b^2} = 1.
+\end{align}
+
+
+Let\, $(x_0,\,y_0)$\, be an intersection point of an ellipse (1) and a hyperbola (2).\, By polarizing both equations in the point \,$(x_0,\,y_0)$\, we get the equations of the tangents of the curves in this point:
+$$\frac{x_0x}{a^2+s}+\frac{y_0y}{b^2+s} = 1, \quad \frac{x_0x}{a^2-t}-\frac{y_0y}{t-b^2} = 1$$
+Solving these equations for $y$ shows that the slopes of the tangents are
+$$m_1 = -\frac{b^2+s}{a^2+s}\!\cdot\!\frac{x_0}{y_0}, \quad m_2 = -\frac{t-b^2}{a^2-t}\!\cdot\!\frac{x_0}{y_0},$$
+and thus their product is
+\begin{align}
+m_1m_2 = -\frac{(b^2+s)(t-b^2)}{(a^2+s)(a^2-t)}\!\cdot\!\frac{x_0^2}{y_0^2}.
+\end{align}
+On the other hand, the point\, $(x_0,\,y_0)$\, satisfies the equation gotten from (1) and (2) via subtraction:
+$$0 = \left(\frac{1}{a^2+s}-\frac{1}{a^2-t}\right)x_0^2+\left(\frac{1}{b^2+s}-\frac{1}{t-b^2}\right)y_0^2
+= (s+t)\left(\frac{-x_0^2}{(a^2+s)(a^2-t)}+\frac{y_0^2}{(b^2+s)(t-b^2)}\right)$$
+Since $s\!+\!t$ cannot be 0, the second \PMlinkname{factor}{Product} of the abobe product must vanish, which implies the proportion equation
+$$\frac{x_0^2}{(a^2+s)(a^2-t)} = \frac{y_0^2}{(b^2+s)(t-b^2)}.$$
+Utilising this in the equation (3) yields the condition of orthogonality
+$$m_1m_2 = -1,$$ 
+for the tangents, which means that the ellipse and the hyperbola intersect orthogonally.\\
+
+\begin{center}
+\begin{pspicture}(-5,-4)(5,4)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-4.5,-3.5)(4.5,3.5)
+\rput(0.3,3.3){$y$}
+\rput(4.4,-0.3){$x$}
+\rput(-5,-4){.}
+\rput(5,4){.}
+\psplot[linecolor=blue]{1}{4}{x x mul 1 sub sqrt 2 div}
+\psplot[linecolor=blue]{-4}{-1}{x x mul 1 sub sqrt 2 div}
+\psplot[linecolor=blue]{1}{4}{0 x x mul 1 sub sqrt 2 div sub}
+\psplot[linecolor=blue]{-4}{-1}{0 x x mul 1 sub sqrt 2 div sub}
+
+\psplot[linecolor=blue]{0.86603}{4}{x x mul 2 mul 3 div 0.5 sub sqrt}
+\psplot[linecolor=blue]{-4}{-0.86603}{x x mul 2 mul 3 div 0.5 sub sqrt}
+\psplot[linecolor=blue]{0.86603}{4}{0 x x mul 2 mul 3 div 0.5 sub sqrt sub}
+\psplot[linecolor=blue]{-4}{-0.86603}{0 x x mul 2 mul 3 div 0.5 sub sqrt sub}
+
+\psplot[linecolor=cyan]{-1.5}{1.5}{1 -4 x mul x mul 9 div add sqrt}
+\psplot[linecolor=cyan]{-1.5}{1.5}{0 1 -4 x mul x mul 9 div add sqrt sub}
+
+\psplot[linecolor=cyan]{-1.80277}{1.80277}{1 -4 x mul x mul 13 div add 2 mul sqrt}
+\psplot[linecolor=cyan]{-1.80277}{1.80277}{0 1 -4 x mul x mul 13 div add 2 mul sqrt sub}
+
+\psdots[linecolor=red](+1.118,0)(-1.118,0)
+
+\rput(0,-4.5){$ $}
+\end{pspicture}
+\end{center}
+
+\textbf{Note.}\, Both the ellipses (1) and the hyperbolas (2) have the common foci  \,$(\pm\sqrt{a^2\!-\!b^2},\,0)$,\, being thus confocal.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnglesOfAnIsoscelesTriangle}
+\pmcreated{2013-03-22 17:12:06}
+\pmmodified{2013-03-22 17:12:06}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{angles of an isosceles triangle}
+\pmrecord{10}{39521}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M04}
+\pmrelated{DeterminingFromAnglesThatATriangleIsIsosceles}
+\pmrelated{PonsAsinorum}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{opposite}
+
+The following theorem holds in any geometry in which SAS is valid. Specifically, it holds in both Euclidean geometry and hyperbolic geometry (and therefore in neutral geometry) as well as in spherical geometry.
+
+\begin{thm*}
+The angles opposite to the congruent sides of an isosceles triangle are congruent.
+\end{thm*}
+
+\begin{proof}
+Let triangle $\triangle ABC$ be isosceles such that the legs $\overline{AB}$ and $\overline{AC}$ are congruent.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\pspolygon(-2,-2)(0,2)(2,-2)
+\psline(-1.2,0.1)(-0.8,-0.1)
+\psline(0.8,-0.1)(1.2,0.1)
+\rput[b](0,2.2){$A$}
+\rput[r](-2.2,-2){$B$}
+\rput[l](2.2,-2){$C$}
+\end{pspicture}
+\end{center}
+
+Since we have
+
+\begin{itemize}
+\item $\overline{AB} \cong \overline{AC}$
+\item $\angle A \cong \angle A$ by the \PMlinkname{reflexive property}{Reflexive} of $\cong$
+\item $\overline{AC} \cong \overline{AB}$ by the \PMlinkname{symmetric property}{Symmetric} of $\cong$
+\end{itemize}
+
+we can use SAS to conclude that $\triangle ABC \cong \triangle ACB$.  Since corresponding parts of congruent triangles are congruent, it follows that $\angle B \cong \angle C$.
+\end{proof}
+
+In geometries in which SAS and ASA are both valid, the converse theorem of this theorem is also true.  This theorem is stated and proven in the entry determining from angles that a triangle is isosceles.
+%%%%%
+%%%%%
+\end{document}

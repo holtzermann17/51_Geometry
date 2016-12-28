@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SomeProofsForTriangleTheorems}
+\pmcreated{2013-03-22 14:03:55}
+\pmmodified{2013-03-22 14:03:55}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{some proofs for triangle theorems}
+\pmrecord{13}{35422}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In the following, only Euclidean geometry is considered.
+
+The sum of three angles $A$, $B$, and $C$ of a triangle is $A+B+C=180^\circ$.
+
+The following triangle shows how the angles can be found to make a half revolution, which equals $180^\circ$.
+
+\begin{center}
+\includegraphics{triangleangles.eps}
+\end{center}
+
+$\Box$
+
+The area \PMlinkescapetext{formula} $A=rs$ where $s$ is the semiperimeter $\displaystyle s=\frac{a+b+c}{2}$ and $r$ is the radius of the inscribed circle can be proven by creating the triangles $\triangle BAO$, $\triangle BCO$, and $\triangle ACO$ from the original triangle $\triangle ABC$, where $O$ is the center of the inscribed circle.
+
+\begin{center}
+\includegraphics{trianglearea1.eps}
+\end{center}
+
+\vspace{5mm}
+
+\begin{center}
+$\begin{array}{rl}
+A_{\triangle ABC} & =A_{\triangle ABO}+A_{\triangle BCO}+A_{\triangle ACO} \\
+& \\
+& \displaystyle =\frac{rc}{2}+\frac{ra}{2}+\frac{rb}{2} \\
+& \\
+& \displaystyle =\frac{r(a+b+c)}{2} \\
+& \\
+& =rs \end{array}$
+\end{center}
+
+$\Box$
+%%%%%
+%%%%%
+\end{document}

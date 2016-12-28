@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VeblenWedderburnSystem}
+\pmcreated{2013-03-22 19:15:06}
+\pmmodified{2013-03-22 19:15:06}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Veblen-Wedderburn system}
+\pmrecord{9}{42177}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A35}
+\pmclassification{msc}{51A40}
+\pmclassification{msc}{51E15}
+\pmclassification{msc}{51A25}
+\pmsynonym{Veblen-Wedderburn ring}{VeblenWedderburnSystem}
+\pmsynonym{quasifield}{VeblenWedderburnSystem}
+\pmsynonym{VW system}{VeblenWedderburnSystem}
+\pmsynonym{V-W system}{VeblenWedderburnSystem}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A \emph{Veblen-Wedderburn system} is an algebraic system over a set $R$ with two binary operations $+$ (called addition) and $\cdot$ (called multiplication) on $R$ such that
+\begin{enumerate}
+\item there is a $0\in R$, and that $R$ is an abelian group under $+$, with $0$ the additive identity
+\item $R-\lbrace 0\rbrace$, together with $\cdot$, is a loop (we denote $1$ as its identity element)
+\item $\cdot$ is right distributive over $+$; that is, $(a+b)\cdot c=a\cdot c+ b\cdot c$
+\item if $a\ne b$, then the equation $x\cdot a=x\cdot b+c$ has a unique solution in $x$
+\end{enumerate}
+
+A Veblen-Wedderburn system is also called a \emph{quasifield}.
+
+Usually, we write $ab$ instead of $a\cdot b$.
+
+For any $a,b,c\in R$, by defining a ternary operation $*$ on $R$, given by $$a*b*c:=a b+c,$$ it is not hard to see that $(R,*,0,1)$ is a ternary ring.  In fact, it is a linear ternary ring because $ab=a*b*0$ and $a+c=a*1*c$.
+
+For example, any field, or more generally, any division ring, associative or not, is Veblen-Wedderburn.  An example of a Veblen-Wedderburn system that is not a division ring is the Hall quasifield.
+
+A well-known fact about Veblen-Wedderburn systems is that, the projective plane of a Veblen-Wedderburn system is a translation plane, and, conversely, every translation plane can be coordinatized by a Veblen-Wedderburn system.  This is the reason why a translation plane is also called a Veblen-Wedderburn plane.
+
+\textbf{Remark}.  Let $R$ be a Veblen-Wedderburn system.  If the multiplication $\cdot$, in addition to be right distributive over $+$, is also left distributive over $+$, then $R$ is a semifield.  If $\cdot$, on the other hand, is associative, then $R$ is an abelian nearfield (a nearfield such that $+$ is commutative).
+
+\begin{thebibliography}{7}
+\bibitem{RC} R. Casse, {\it Projective Geometry, An Introduction}, Oxford University Press (2006)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

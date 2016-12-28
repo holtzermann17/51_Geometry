@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AngleBisectorAsLocus}
+\pmcreated{2013-03-22 17:10:41}
+\pmmodified{2013-03-22 17:10:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{angle bisector as locus}
+\pmrecord{11}{39492}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{DistanceFromPointToALine}
+\pmrelated{ConverseOfIsoscelesTriangleTheorem}
+\pmrelated{ConstructionOfTangent}
+\pmrelated{LengthsOfAngleBisectors}
+\pmrelated{Incenter}
+\pmrelated{CenterNormalAndCenterNormalPlaneAsLoci}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If\, $0 < \alpha < 180^{\mathrm{o}}$,\, then the angle bisector of $\alpha$ is the locus of all such points which are equidistant from both sides of the angle (it is proved by using the AAS and SSA theorems).
+
+The equation of the angle bisectors of all four angles formed by two intersecting lines
+\begin{align}
+a_1x\!+\!b_1y\!+\!c_1 \;=\; 0,\qquad a_2x\!+\!b_2y\!+\!c_2 \;=\; 0
+\end{align}
+is
+\begin{align}
+\frac{a_1x\!+\!b_1y\!+\!c_1}{\sqrt{a_1^2\!+\!b_1^2}} \;=\; \pm\frac{a_2x\!+\!b_2y\!+\!c_2}{\sqrt{a_2^2\!+\!b_2^2}},
+\end{align}
+which may be written in the form
+\begin{align}
+x\sin\alpha_1-y\cos\alpha_1+h_1 \;=\; \pm(x\sin\alpha_2-y\cos\alpha_2+h_2)
+\end{align}
+after performing the divisions in (2) termwise; the angles $\alpha_1$ and $\alpha_2$ \PMlinkescapetext{mean} then the slope angles of the lines.
+
+\textbf{Note.}\, The two lines in (2) are perpendicular, since their slopes
+$\displaystyle\frac{\sin\alpha_1\pm\sin\alpha_2}{\cos\alpha_1\pm\cos\alpha_2}$ are opposite inverses of each other.
+
+%%%%%
+%%%%%
+\end{document}

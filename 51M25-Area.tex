@@ -1,0 +1,171 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Area}
+\pmcreated{2013-03-22 16:57:34}
+\pmmodified{2013-03-22 16:57:34}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{area}
+\pmrecord{36}{39230}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M25}
+\pmclassification{msc}{51-00}
+\pmrelated{AreaOfAPolygonalRegion}
+\pmrelated{DevelopableSurface}
+\pmrelated{AreaOfPlaneRegion}
+\pmrelated{Volume2}
+\pmrelated{BasicLength}
+\pmrelated{BaseAndHeightOfTriangle}
+\pmdefines{surface area}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{formulas}
+\PMlinkescapeword{base}
+\PMlinkescapeword{height}
+\PMlinkescapeword{cut}
+\PMlinkescapeword{flat}
+\PMlinkescapeword{width}
+
+The \emph{area} of a two-dimensional figure is the amount of space contained within the figure.  Area is typically measured in \PMlinkescapetext{square units}; \PMlinkname{i.e.}{Ie}, if the area of a figure is 5 $\text{in}^2$, this means that, if five 1 inch by 1 inch squares are cut appropriately, they can be arranged so that they exactly cover the space contained in the figure without any overlapping.  In formulas, area is almost always denoted using the letter $A$.
+
+All examples provided within this entry are in Euclidean geometry.
+
+For certain figures, area is quite commonly found by multiplying the lengths of two line segments which are related to the figure as well as perpendicular to each other.  Below are some examples:
+
+\begin{itemize}
+\item triangle: $\displaystyle A=\frac{1}{2}bh$, where $b$ is its \PMlinkname{base}{BaseAndHeightOfTriangle} and $h$ is its \PMlinkname{height}{BaseAndHeightOfTriangle}
+
+\begin{center}
+\begin{pspicture}(-1,-2)(5,4)
+\psline(0,0)(2,4)(5,0)(0,0)
+\rput[b](0,0){.}
+\rput[a](2,4){.}
+\rput[b](5,0){.}
+\rput[b](2.5,-0.3){$b$}
+\psline(2,0)(2,4)
+\rput[r](2,2){$h$}
+\psline(2,0.3)(2.3,0.3)
+\psline(2.3,0.3)(2.3,0)
+\end{pspicture}
+\end{center}
+
+\item parallelogram: $A=bh$, where $b$ is its base and $h$ is its height
+
+\begin{center}
+\begin{pspicture}(-1,-2)(6,5)
+\psline(0,0)(1,4)(5,4)(4,0)(0,0)
+\rput[b](0,0){.}
+\rput[a](1,4){.}
+\rput[a](5,4){.}
+\rput[b](4,0){.}
+\rput[b](2.5,-0.3){$b$}
+\psline(2,0)(2,4)
+\rput[r](2,2){$h$}
+\psline(2,0.3)(2.3,0.3)
+\psline(2.3,0.3)(2.3,0)
+\psline(2,3.7)(2.3,3.7)
+\psline(2.3,3.7)(2.3,4)
+\end{pspicture}
+\end{center}
+
+\item \PMlinkname{ellipse}{Ellipse2}: $A=\pi ab$, where $a$ and $b$ are the major semi-axis and \PMlinkescapetext{minor} semi-axis (not necessarily respectively)
+
+\begin{center}
+\begin{pspicture}(0,0)(6,4)
+\psellipse(3,2)(3,2)
+\psline(0,2)(6,2)
+\rput[l](0,2){.}
+\rput[r](6,2){.}
+\rput[b](2,2.2){$a$}
+\psline(3,0)(3,4)
+\rput[b](3,0){.}
+\rput[a](3,4){.}
+\rput[r](2.8,3){$b$}
+\psline(2.7,2)(2.7,2.3)
+\psline(2.7,2.3)(3,2.3)
+\end{pspicture}
+\end{center}
+
+\end{itemize}
+
+Also, in a \PMlinkname{regular $n$-gon}{RegularPolygon}, each apothem is perpendicular to a side of the polygon.  Thus, the formula $\displaystyle A=\frac{1}{2}aP$, where $a$ is the length of its apothem and $P$ is its \PMlinkname{perimeter}{Perimeter2}, may be considered as another example.
+
+Any three-dimensional figure has a surface which is two-dimensional.  For certain figures, such as cubes and cylinders, this fact can easily be verified by \PMlinkescapetext{cutting} the surface and \PMlinkescapetext{forcing} it to lie flat.  The \emph{surface area} of a three-dimensional figure is the area of its surface.
+
+One method of determining the surface area of any three-dimensional figure is by investigating how much paint would be required to cover its surface with exactly one coat of paint.  (This works best if the paint is considered to have no thickness.)
+
+There is another method of determining the surface area of a three-dimensional figure.  It works best on figures whose surfaces can easily be cut and forced to lie flat.  Once this is done, the surface area can be obtained by determining the area of the resulting two-dimensional figure.
+
+For example, a cube is made up of six \PMlinkname{congruent}{Congruence} squares.  If each square has a side of length $s$, then the surface area of the cube is $6s^2$.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(15,7)
+\psline(2,1.5)(0,1.5)(0,3.5)(1.6,4.2)(3.6,4.2)(3.6,2.2)(2,1.5)(2,3.5)(3.6,4.2)
+\psline(0,3.5)(2,3.5)
+\rput[l](-0.3,2.5){$s$}
+\rput[b](1,1){cube}
+\psline(4,3)(5.5,3)
+\psline(5.3,3.1)(5.5,3)(5.3,2.9)
+\pspolygon(6,2)(6,4)(14,4)(14,2)
+\pspolygon(8,0)(8,6)(10,6)(10,0)
+\psline(12,2)(12,4)
+\rput[a](9,6.2){$s$}
+\rput[r](14.3,3){$s$}
+\rput[b](9,-0.5){flattened cube}
+\end{pspicture}
+\end{center}
+
+As another example, for a cylinder with radius $r$ and height $h$, its top and bottom, which are circles, can be cut off, and the remaining portion can be unrolled as a rectangle.  The radius of each circle is $r$, so they each have area of $\pi r^2$.  The rectangle has a width that is equal to the circumference of the circular faces, and its height is $h$.  Thus, the area of the rectangle is $2\pi rh$.  Therefore, the surface area of the cylinder is $2\pi r^2+2 \pi rh$.
+
+\begin{center}
+\begin{pspicture}(-1,0)(15,11)
+\psline(0,4)(0,8)
+\psline(3,4)(3,8)
+\psellipse(1.5,8)(1.5,0.5)
+\pscurve(0,4)(0.15,3.782)(0.3,3.7)(0.45,3.643)(0.6,3.6)(0.75,3.567)(0.9,3.542)(1.05,3.523)(1.2,3.51)(1.35,3.5025)
+    (1.5,3.5)(1.65,3.5025)(1.8,3.51)(1.95,3.523)(2.1,3.542)(2.25,3.567)(2.4,3.6)(2.55,3.643)(2.7,3.7)(2.85,3.782)(3,4)
+\rput[l](-0.3,6){$h$}
+\psdot(1.5,8)
+\psline(0,8)(1.5,8)
+\rput[b](0.75,8.1){$r$}
+\rput[b](1.5,3){cylinder}
+\psline(3.3,6)(4.8,6)
+\psline(4.6,6.1)(4.8,6)(4.6,5.9)
+\pspolygon(5,4)(5,8)(14.425,8)(14.425,4)
+\rput[r](14.725,6){$h$}
+\pscircle(7,2.5){1.5}
+\psline(7,2.5)(5.5,2.5)
+\rput[a](6.25,2.7){$r$}
+\psdots(7,2.5)(7,9.5)
+\pscircle(7,9.5){1.5}
+\psline(7,9.5)(5.5,9.5)
+\rput[a](6.25,9.7){$r$}
+\rput[a](7,11){.}
+\rput[b](7,0.5){flattened cylinder}
+\end{pspicture}
+\end{center}
+
+For some three-dimensional figures, determining its surface area in this manner may not be very straightforward.  For example, to determine the surface area of a sphere, one could try peeling an orange and making the portions of orange peel lie flat, but it would be very difficult to come up with the correct formula of $4\pi r^2$ from this procedure.  The method of painting as described earlier works much better for spheres.
+
+\textbf{Remarks}
+\begin{itemize}
+\item When the shape of the geometric figure is complicated, the area can be computed using techniques from calculus.  The idea is to break up the geometric figure into tiny squares.  The area of the figure may be approximated by the total area occupied by these squares.  The interesting thing is whether it is possible to get an exact answer if the squares are tiny enough.  For all of the examples given above, using the tiny squares will give the exact answer.
+\item The concept of area is a special case of a general concept called measure, or more appropriately, product measure.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CenterNormalAndCenterNormalPlaneAsLoci}
+\pmcreated{2013-03-22 18:48:51}
+\pmmodified{2013-03-22 18:48:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{center normal and center normal plane as loci}
+\pmrecord{12}{41616}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51N05}
+\pmclassification{msc}{51N20}
+\pmsynonym{center normal as locus}{CenterNormalAndCenterNormalPlaneAsLoci}
+\pmsynonym{center normal plane as locus}{CenterNormalAndCenterNormalPlaneAsLoci}
+\pmrelated{SAS}
+\pmrelated{CircumCircle}
+\pmrelated{AngleBisectorAsLocus}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem 1.}\, In the Euclidean plane, the center normal of a line segment is the locus of the points which are equidistant from the both end points of the segment.\\
+
+{\em Proof.}\, Let $A$ and $B$ be arbitrary given distinct points.
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\pspolygon(-2,-2)(0,2)(2,-2)
+\psline(-1.15,0.1)(-0.85,-0.1)
+\psline(1.15,0.1)(0.85,-0.1)
+\psline(-1.15,0)(-0.85,-0.2)
+\psline(1.15,0)(0.85,-0.2)
+\psline(0,-2)(0,2)
+\rput[r](-2.2,-2){$A$}
+\rput[l](2.2,-2){$B$}
+\rput[b](0,2.2){$P$}
+\rput[a](0,-2.3){$D$}
+\psarc(0,2){0.35}{270}{300}
+\psarc(0,2){0.42}{270}{300}
+\psarc(0,2){0.47}{240}{270}
+\psarc(0,2){0.54}{240}{270}
+\psarc(0,-0.2){0.1}{270}{480}
+\psarc(0,-0.4){0.1}{90}{300}
+\end{pspicture}
+\end{center}
+ $1^\circ.$\; Let $P$ be a point equidistant from $A$ and $B$.\, If\, $P \in AB$,\, then $P$ is trivially on the center normal of $AB$.\, Thus suppose that\, $P \not\in AB$.\, In the triangle $PAB$, let the angle bisector of $\angle P$ intersect the \PMlinkname{side}{Triangle} $AB$ in the point $D$.\, Then we have
+$$\Delta PDA \;\cong\; \Delta PDB \quad \mbox{(SAS)},$$
+whence
+$$\angle PDA \;=\; \angle PDB \;=\; 90^\circ, \quad DA \;=\; DB.$$
+Consequently, the point $P$ is always on the center normal of $AB$.
+
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\pspolygon(-2,-2)(0,2)(2,-2)
+\psline(-1,-1.85)(-1,-2.15)
+\psline(+1,-1.85)(+1,-2.15)
+\psline(-1.07,-1.85)(-1.07,-2.15)
+\psline(+1.07,-1.85)(+1.07,-2.15)
+\psline(0,-2)(0,2)
+
+\psline(-0.22,-1.8)(0.22,-1.8)
+\psline(-0.22,-2)(-0.22,-1.8)
+\psline(+0.22,-2)(+0.22,-1.8)
+\rput[r](-2.2,-2){$A$}
+\rput[l](2.2,-2){$B$}
+\rput[b](0,2.2){$Q$}
+\rput[a](0,-2.3){$D$}
+\psarc(0,-0.2){0.1}{270}{480}
+\psarc(0,-0.4){0.1}{90}{300}
+\end{pspicture}
+\end{center}
+
+
+$2^\circ.$\; Let $Q$ be any point on the center normal and $D$ the midpoint of the line segment $AB$.\, We can assume that\, $Q \neq D$.\, Then we have
+$$\Delta QDA \;\cong\; \Delta QDB \quad \mbox{(SAS)},$$
+implying that
+$$QA \;=\; QB.$$
+Thus $Q$ is equidistant from $A$ and $B$.\\
+
+
+\textbf{Theorem 2.}\, In the Euclidean space, the center normal plane of a line segment is the locus of the points which are equidistant from the both end points of the segment.\\
+
+{\em Proof.}\, Change ``center normal'' in the preceding proof to ``center normal plane''.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Rectangle}
+\pmcreated{2013-03-22 12:02:29}
+\pmmodified{2013-03-22 12:02:29}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{rectangle}
+\pmrecord{6}{31084}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{Quadrilateral}
+\pmrelated{Parallelogram}
+\pmrelated{Rhombus}
+\pmrelated{ParallelogramLaw}
+\pmrelated{Square}
+
+\usepackage{graphicx}
+%%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+\textbf{Rectangle}.
+A quadrilateral whose four angles are equal, that is, whose 4 angles are equal to $90^\circ$.
+
+\figura{rectangulo}
+
+
+\emph{\bf Any rectangle is a parallelogram.}\\
+This follows from angles $\angle BAD $ and $\angle ADC$ adding up $180^\circ$.
+
+Since parallelograms have their opposite sides equal, so do rectangles. In the picture, $AB=CD$ and $BC=DA$.
+
+Rectangles are the only parallelograms to be also cyclic (since opposite angles add up $180^\circ$.
+
+Notice that every square is also a rectangle, but there are rectangles that are not squares
+
+Rectangles have their two diagonals equal (since triangles $ABC$ and $ABD$ are congruent), A nice result following from this is that the quadrilateral obtained by joining the midpoints of the sides is a rhombus.
+
+\figura{rectangulo2}
+
+Since $PQ$ joins midpoints of sides in triangle $ABC$, we have $PQ=CA/2$. Similarly we have $RS=CA/2$, $QR=BD/2$ and $SP=BD/2$ and thus the sides of quadrilateral $PQRS$ are all equal, in other words, $PQRS$ is a rhombus.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BisectorsTheorem}
+\pmcreated{2013-03-22 14:49:23}
+\pmmodified{2013-03-22 14:49:23}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{bisectors theorem}
+\pmrecord{9}{36485}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+\pmsynonym{angle bisector theorem}{BisectorsTheorem}
+\pmsynonym{generalization of bisectors theorem}{BisectorsTheorem}
+\pmrelated{CevasTheorem}
+\pmrelated{HarmonicDivision}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+\textbf{Bisectors theorem}.\\
+Let $ABC$ a triangle, and $AP$ the angle bisector of $\angle CAB$. Then
+\[
+\frac{BP}{PC}=\frac{BA}{CA}.
+\]
+\figuraex{bisector}{scale=0.75}
+\bigskip
+
+\textbf{Generalization of bisectors theorem}.\\
+Let $ABC$ a triangle, and $P$ any point on the side $BC$. Then
+\[
+\frac{BP}{PC} = \frac{BA \sin BAP}{CA \sin PAC}.
+\]
+\figuraex{genbisector}{scale=0.75}
+
+The latest theorem even holds when $P$ is not on the segment $BC$ but anywhere on the line (possibly at the infnity), but in this case, the ratio $BP/PC$ must be done with directed segments and the angles considered as directed angles.
+%%%%%
+%%%%%
+\end{document}

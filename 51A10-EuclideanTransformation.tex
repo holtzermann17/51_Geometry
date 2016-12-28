@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EuclideanTransformation}
+\pmcreated{2013-03-22 15:59:46}
+\pmmodified{2013-03-22 15:59:46}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Euclidean transformation}
+\pmrecord{17}{38021}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{15A04}
+\pmclassification{msc}{51A15}
+\pmsynonym{rigid motion}{EuclideanTransformation}
+\pmdefines{translation}
+\pmdefines{translate}
+\pmdefines{rotation}
+\pmdefines{rotate}
+\pmdefines{reflection}
+\pmdefines{reflect}
+\pmdefines{reflexion}
+\pmdefines{glide reflection}
+\pmdefines{angle of rotation}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{addition}
+\PMlinkescapeword{conjugate}
+\PMlinkescapeword{expressible}
+\PMlinkescapeword{term}
+\PMlinkescapeword{types}
+
+Let $V$ and $W$ be Euclidean vector spaces.  A \emph{Euclidean
+transformation} is an affine transformation $E:V\to W$, given by
+$$E(v)=L(v)+w$$ such that $L$ is an \PMlinkname{orthogonal linear
+transformation}{OrthogonalTransformation}.
+
+As an affine transformation, all affine properties, such as
+incidence and parallelism are preserved by $E$.  In addition, since
+$E(u-v)=L(u-v)$ and $L$ is an \PMlinkescapetext{orthogonal linear transformation}, $E$
+preserves lengths of line segments and \PMlinkname{angles between two line
+segments}{AngleBetweenTwoLines}. Because of this, a Euclidean transformation is also called
+a \emph{rigid motion}, which is a popular term used in mechanics.
+
+\subsubsection*{Types of Euclidean transformations} There are three main
+types of Euclidean transformations:
+
+\begin{enumerate}
+\item
+\textbf{translation}. If $L=I$, then $E$ is just a translation.  Any
+Euclidean transformation can be decomposed into a product of an
+orthogonal transformation $L(v)$, followed by a
+translation $T(v)=v+w$.
+\item
+\textbf{rotation}.  If $w=0$, then $E$ is just an orthogonal transformation.  If $\operatorname{det}(E)=1$, then $E$ is called a \emph{rotation}.  The
+orientation of any basis (of $V$) is preserved under a rotation.  In the
+case where $V$ is two-dimensional, a rotation is conjugate to a matrix of the form
+\begin{eqnarray}
+\begin{pmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{pmatrix},
+\end{eqnarray}
+where $\theta\in \mathbb{R}$. Via this particular (unconjugated) map, any vector emanating from the origin is rotated
+in the counterclockwise direction by an angle of $\theta$ to another vector emanating from the origin.  Thus, if $E$ is conjugate to the matrix given above, then $\theta$ is the \emph{angle of rotation} for $E$.
+\item
+\textbf{reflection}. If $w=0$ but $\operatorname{det}(E)=-1$ instead, then $E$ is a called
+\emph{reflection}.  Again, in the two-dimensional case, a reflection is
+\PMlinkescapetext{conjugate} to a matrix of the form
+\begin{eqnarray}
+\begin{pmatrix}
+\cos \theta & \sin \theta \\
+\sin \theta & -\cos \theta
+\end{pmatrix},
+\end{eqnarray}
+where $\theta\in \mathbb{R}$.  Any vector is reflected by this particular (unconjugated) map to another
+by a ``mirror'', a line of the form $y=x\tan(\frac{\theta}{2})$.
+\end{enumerate}
+
+\textbf{Remarks}.
+\begin{itemize}
+\item
+In general, an orthogonal transformation can be represented by a matrix of the
+form
+$$
+\begin{pmatrix}
+A_1 & O & \cdots & O \\
+O & A_2 & \cdots & O \\
+\vdots & \vdots & \ddots & \vdots \\
+O & O & \cdots & A_n
+\end{pmatrix},
+$$
+where each $A_i$ is either $\pm 1$ or a rotation matrix (1) (or reflection
+matrix (2)) given above.  When its determinant is -1 (a reflection), it has an invariant subspace of $V$ of codimension 1.  One can think of this hyperplane as the mirror.
+\item  Another common rigid motion is the \emph{glide reflection}.  It is a Euclidean transformation that is expressible as a product of a reflection, followed by a translation.
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorProjection}
+\pmcreated{2013-03-22 19:05:40}
+\pmmodified{2013-03-22 19:05:40}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{vector projection}
+\pmrecord{13}{41985}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N99}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51F20}
+\pmrelated{Projection}
+\pmrelated{GramSchmidtOrthogonalization}
+\pmdefines{vector component}
+\pmdefines{scalar projection}
+\pmdefines{scalar component}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{component} \PMlinkescapeword{components}
+
+The principle used in the projection of line segment \PMlinkescapetext{onto} a line, which results a line segment, may be extended to concern the projection of a vector $\vec{u}$ on another non-zero vector $\vec{v}$, resulting a vector.
+
+This projection vector, the so-called \emph{vector projection}\, $\vec{u}_{\vec{v}}$\, will be \PMlinkid{parallel to}{6178} $\vec{v}$.\, It could have the \PMlinkname{length}{Vector} equal to $|\vec{u}|$ multiplied by the cosine of the inclination angle between the lines of $\vec{u}$ and $\vec{v}$, as in the case of line segment.
+
+But better than that ``inclination angle'' is to take the \PMlinkid{angle between the both vectors}{6178} $\vec{u}$ and $\vec{v}$ which may also be obtuse or straight; in these cases the cosine is negative which is suitable to cause the projection vector $\vec{u}_{\vec{v}}$ to have the \PMlinkescapetext{opposite} direction to $\vec{v}$\, ($\vec{u}_{\vec{v}} \downarrow\!\uparrow \vec{v}$).\, In all cases we define the \emph{vector projection} or the \emph{vector component} of $\vec{u}$ along $\vec{v}$ as
+\begin{align}   
+\vec{u}_{\vec{v}} \,\;:=\; |\vec{u}|\cos(\vec{u},\vec{v})\,\vec{v}^{\,\circ}
+\end{align}
+where $\vec{v}^{\,\circ}$ is the unit vector having the \PMlinkid{same direction}{6178} as $\vec{v}$\, 
+(i.e., $\vec{v}^{\,\circ} \upuparrows \vec{v}$).\, For the \PMlinkescapetext{formula (1) we can fix} that if\, $\vec{u} = \vec{0}$\, and the angle is \PMlinkescapetext{indefinite}, then also the vector projection is the zero vector.
+
+Using the expression for the \PMlinkid{cosine of the angle}{6178} between vectors and for the unit vector we thus have
+$$\vec{u}_{\vec{v}} \,\;=\; |\vec{u}|\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|}\frac{\vec{v}}{|\vec{v}|}.$$
+This is \PMlinkescapetext{reduced} to
+\begin{align}   
+\vec{u}_{\vec{v}} \,\;=\; \frac{\vec{u}\cdot\vec{v}}{|\vec{v}||\vec{v}|}\,\vec{v},
+\end{align}
+where the denominator is the scalar square of $\vec{v}$:
+\begin{align}   
+\vec{u}_{\vec{v}} \,\;=\; \frac{\vec{u}\cdot\vec{v}}{\vec{v}\cdot\vec{v}}\,\vec{v}
+\end{align}
+One can also write from (1) the alternative form
+\begin{align}   
+\vec{u}_{\vec{v}} \,\;=\; (\vec{u}\cdot\vec{v}^{\,\circ})\,\vec{v}^{\,\circ},
+\end{align}
+where the ``coefficient'' $\vec{u}\cdot\vec{v}^{\,\circ}$ of the unit vector $\vec{v}^{\,\circ}$ is called the \emph{scalar projection} or the \emph{scalar component} of $\vec{u}$ along $\vec{v}$.\\
+
+\textbf{Remark 1.}\, The vector projection\, $\vec{u}_{\vec{v}}$\, of $\vec{u}$ along $\vec{v}$ is sometimes denoted by\, $\mbox{proj}_{\vec{v}}\,\vec{u}$.\\
+
+\textbf{Remark 2.}\, If one \PMlinkname{subtracts}{DifferenceOfVectors} from $\vec{u}$ the vector component $\vec{u}_{\vec{v}}$, then one has another component of $\vec{u}$ such that the both components are orthogonal to each other (and their \PMlinkname{sum}{SumVector} is $\vec{u}$); the orthogonality of the components follows from
+$$(\vec{u}-\vec{u}_{\vec{v}})\cdot\vec{u}_{\vec{v}} \;=\; 
+\frac{\vec{u}\cdot\vec{v}}{\vec{v}\cdot\vec{v}}\,\vec{u}\cdot\vec{v}
+-\left(\frac{\vec{u}\cdot\vec{v}}{\vec{v}\cdot\vec{v}}\right)^2\,\vec{v}\cdot\vec{v} \;=\; 0.$$
+
+\textbf{Remark 3.}\, The usual ``component form'' 
+$$\vec{u} \;=\; x\vec{i}+y\vec{j}+z\vec{k}$$
+of vectors in the cartesian coordinate system of $\mathbb{R}^3$ \PMlinkescapetext{contains} that the \PMlinkname{orthogonal}{OrthogonalVectors} vector components of $\vec{u}$ along the unit vectors $\vec{i}$, $\vec{j}$, $\vec{k}$ are 
+$$\vec{u}_{\vec{i}} \;=\; x\vec{i}, \quad \vec{u}_{\vec{j}} \;=\; y\vec{j}, \quad \vec{u}_{\vec{k}} \;=\; z\vec{k}$$
+and the scalar components are $x$, $y$, $z$, respectively.
+
+%%%%%
+%%%%%
+\end{document}

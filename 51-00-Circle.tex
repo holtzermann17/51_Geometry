@@ -1,0 +1,207 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Circle}
+\pmcreated{2013-03-22 13:36:23}
+\pmmodified{2013-03-22 13:36:23}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{circle}
+\pmrecord{14}{34236}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmsynonym{circular}{Circle}
+\pmrelated{SqueezingMathbbRn}
+\pmrelated{CurvatureOfACircle}
+\pmdefines{unit circle}
+\pmdefines{radius}
+\pmdefines{radii}
+\pmdefines{perimeter}
+\pmdefines{circumference}
+\pmdefines{three point formula for the circle}
+\pmdefines{center}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\sR}[0]{\mathbb{R}}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+A \emph{circle} is the locus of points which are equidistant from some fixed point. It is in the plane is determined by a \emph{center} and a \emph{radius}. The center is a point in the plane,
+and the length of the radius is a positive real number, the radius being a line segment from the center to the circumference. The circle consists of all points whose distance from the center equals the radius.
+
+Another way of defining the circle is thus: Given $A$ and $P$ as two points and $O$ as another point, the circle with center $O$ is the locus of points $X$ with $OX$ congruent to $AP$. (Hilbert, 1927)
+
+Notice there is no definition of distance needed to make that definition
+and so it works in many geometries, even ones with no distance function.
+Hilbert uses it in his Foundations of Geometry book
+Also used by Forder in his Foundations of Euclidean geometry book, c 1927
+
+In this entry, we only work with the  standard Euclidean 
+norm in the plane. A circle has one center only.
+
+A circle determines a closed curve in the plane, and this curve is called the \emph{perimeter} or \emph{circumference}
+of the circle. If the radius of a circle is $r$, then the length of the 
+perimeter  is $2\pi r$. Also, the area of the  circle is $\pi r^2$. More precisely, the interior of the perimeter has 
+area $\pi r^2$. The \emph{diameter} of a circle is defined as $d = 2r$. 
+
+The circle is a special case of an ellipse. Also, in three dimensions, the analogous geometric object to a circle 
+is a sphere. 
+
+\section{\PMlinkescapetext{The circle in analytic geometry}} 
+
+Let us next derive an analytic equation for a circle in Cartesian coordinates $(x,y)$. If the circle has center $(a,b)$ and radius $r > 0$, we obtain the following condition for the points of the sphere, 
+\begin{equation}
+\label{firsteq}
+(x - a)^2 + (y - b)^2 = r^2.
+\end{equation}
+In other words, the circle is the set of all points $(x,y)$ that satisfy the above equation. In the special case that 
+$a = b = 0$, the equation is simply $x^2 + y^2 = r^2$. The \emph{unit circle} is the circle $x^2 + y^2 = 1$. 
+
+It is clear that equation \ref{firsteq} can always be reduced to the form
+\begin{equation}
+\label{secondeq}
+x^2 + y^2 + Dx + Ey + F = 0,
+\end{equation}
+where $D,E,F$ are real numbers. Conversely, suppose that we are given an equation of the above form where $D,E,F$ are
+arbitrary real numbers. Next we derive conditions for these constants, so that equation~\eqref{secondeq} determines 
+a circle \cite{kindle}. Completing the squares yields
+\begin{equation*}
+x^2 + Dx + \frac{D^2}{4} + y^2 + Ey + \frac{E^2}{4} =  - F + \frac{D^2}{4} +  \frac{E^2}{4},
+\end{equation*}
+whence
+\begin{equation*}
+\left(x + \frac{D}{2}\right)^2 + \left(y + \frac{E}{2}\right)^2 =  \frac{D^2 - 4F + E^2}{4}.
+\end{equation*}
+There are three cases:
+\begin{enumerate}
+\item If $D^2 - 4F + E^2 > 0$, then equation~\eqref{secondeq} determines
+a circle with center $( - \frac{D}{2}, - \frac{E}{2})$ and radius 
+$\frac{1}{2}\sqrt{D^2 - 4F + E^2}$.
+\item If $D^2 - 4F + E^2 = 0$, then equation~\eqref{secondeq} determines
+the point $( - \frac{D}{2}, - \frac{E}{2})$.
+\item If $D^2 - 4F + E^2<0$, then equation~\eqref{secondeq} has no (real)
+solution in the $(x,y)$ - plane.
+\end{enumerate}
+
+\section{The circle in polar coordinates}
+
+Using polar coordinates for the plane, we can parameterize the circle. Consider the circle with center $(a,b)$ and radius $r > 0$ in the plane $\sR^2$. It is then natural to introduce polar coordinates $(\rho, \phi)$ for $\sR^2\setminus\{(a,b)\}$ by 
+\begin{align*}
+x(\rho, \phi) & =  a + \rho \cos \phi, \\
+y(\rho, \phi) & =  b + \rho \sin \phi,
+\end{align*}
+with $\rho > 0$ and $\phi\in [0,2\pi)$. Since we wish to parameterize the circle, the point $(a,b)$ does not pose a problem; it is not part of the circle. Plugging these expressions for $x,y$ into 
+equation~\eqref{firsteq} yields the condition $\rho = r$. 
+The given circle is thus parameterization by $\phi\mapsto (a + \rho \cos \phi, b + \rho \sin \phi)$, $\phi\in[0,2\pi)$. It follows that a circle is a closed curve in the plane. 
+
+\section{Three point formula for the circle}
+
+Suppose we are given three points on a circle, say $(x_1, y_1)$, $(x_2, y_2)$, $(x_3, y_3)$. 
+We next derive expressions for the parameters $D,E,F$ in terms of these points. 
+We also derive equation~\eqref{determ}, which gives an equation for a circle in terms 
+of a determinant. 
+
+First, from equation~\eqref{secondeq}, we have
+\begin{align*}
+x_1^2 + y_1^2 + Dx_1 + Ey_1 + F & =  0, \\
+x_2^2 + y_2^2 + Dx_2 + Ey_2 + F & =  0, \\
+x_3^2 + y_3^2 + Dx_3 + Ey_3 + F & =  0.
+\end{align*} 
+These equations form a linear set of equations for $D,E,F$, i.e., 
+\begin{equation*}
+\begin{pmatrix}
+ x_1 & y_1 & 1 \\
+ x_2 & y_2 & 1 \\
+ x_3 & y_3 & 1 
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+ D  \\E \\F 
+\end{pmatrix} 
+ =  
+ - \begin{pmatrix}
+x_1^2 + y_1^2   \\
+x_2^2 + y_2^2  \\
+x_3^2 + y_3^2  \\
+ \end{pmatrix}.
+\end{equation*}
+Let us denote the matrix on the left hand side by $\Lambda$. Also, let us assume 
+that $\det \Lambda \neq 0$. Then, using Cramer's rule, we obtain
+\begin{align*}
+D & =   - \frac{1}{\det \Lambda} \det \begin{pmatrix}
+ x_1^2 + y_1^2  & y_1 & 1 \\
+ x_2^2 + y_2^2  & y_2 & 1 \\
+ x_3^2 + y_3^2 & y_3 & 1 \\
+ \end{pmatrix}, \\
+E & =   - \frac{1}{\det \Lambda} \det \begin{pmatrix}
+ x_1 & x_1^2 + y_1^2  & 1 \\
+ x_2 & x_2^2 + y_2^2  & 1 \\
+ x_3 & x_3^2 + y_3^2  & 1 \\
+ \end{pmatrix}, \\
+F & =   - \frac{1}{\det \Lambda} \det \begin{pmatrix}
+ x_1 & y_1 & x_1^2 + y_1^2 \\
+ x_2 & y_2 & x_2^2 + y_2^2 \\
+ x_3 & y_3 & x_3^2 + y_3^2 \\
+ \end{pmatrix}.
+\end{align*}
+These equations give the parameters $D,E,F$ as functions of the 
+three given points. 
+Substituting these equations into equation~\eqref{secondeq} yields
+\begin{align*}
+(x^2 + y^2)\det \begin{pmatrix}
+ x_1 & y_1 & 1 \\
+ x_2 & y_2 & 1 \\
+ x_3 & y_3 & 1 \\
+ \end{pmatrix}  &\mathbin{ - } x\det \begin{pmatrix}
+ x_1^2 + y_1^2  & y_1 & 1 \\
+ x_2^2 + y_2^2  & y_2 & 1 \\
+ x_3^2 + y_3^2 & y_3 & 1 \\
+ \end{pmatrix} \\
+&\mathbin{ - } y\det \begin{pmatrix}
+ x_1 & x_1^2 + y_1^2  & 1 \\
+ x_2 & x_2^2 + y_2^2  & 1 \\
+ x_3 & x_3^2 + y_3^2  & 1 \\
+ \end{pmatrix} \\
+ &\mathbin{ - } \det \begin{pmatrix}
+ x_1 & y_1 & x_1^2 + y_1^2 \\
+ x_2 & y_2 & x_2^2 + y_2^2 \\
+ x_3 & y_3 & x_3^2 + y_3^2 \\
+ \end{pmatrix} = 0.
+\end{align*}
+Using the cofactor expansion, we can now write the equation for the circle passing through $(x_1,y_1), (x_2,y_2), (x_3,y_3)$ as \cite{weissteincirc, beta}
+\begin{equation}
+\label{determ}
+\det \begin{pmatrix}
+ x^2 + y^2 & x & y & 1 \\
+ x_1^2 + y_1^2 & x_1 & y_1 & 1 \\
+ x_2^2 + y_2^2 & x_2 & y_2 & 1 \\
+ x_3^2 + y_3^2 & x_3 & y_3 & 1 \\
+ \end{pmatrix} = 0.
+\end{equation}
+
+\begin{thebibliography}{9}
+\bibitem{hilbert} D. Hilbert, {\it Foundations of Geometry} Chicago: The Open Court Publishing Co. (1921): 163
+\bibitem {kindle} J. H. Kindle,
+        \emph{Schaum's Outline Series: Theory and problems of plane of Solid Analytic Geometry},
+        Schaum Publishing Co., 1950.
+\bibitem{weissteincirc} E. Weisstein, Eric W. Weisstein's world of mathematics, 
+\PMlinkexternal{entry on the circle}{http://mathworld.wolfram.com/Circle.html}.
+\bibitem{beta} L. R\r{a}de, B. Westergren,
+ \emph{Mathematics Handbook for Science and Engineering},
+ Studentlitteratur, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

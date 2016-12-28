@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SinesLawProof1}
+\pmcreated{2013-03-22 11:57:41}
+\pmmodified{2013-03-22 11:57:41}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{sines law proof}
+\pmrecord{9}{30763}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{CosinesLaw}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+The goal is to prove the sine law:
+\[
+\frac{\sin A}{a} = \frac{\sin B}{b}=\frac{\sin C}{c}=\frac{1}{2R}
+\]
+where the variables are defined by the triangle
+\[
+\begin{xy}
+,(0,0)
+;(40,0)**@{-}
+;(60,30)**@{-}
+;(0,0)**@{-}
+,(50,12)*{a}
+,(30,18)*{b}
+,(20,-3)*{c}
+,(9,2)*{A}
+,(39,3)*{B}
+,(54,25)*{C}
+\end{xy}
+\]
+and where $R$ is the radius of the circumcircle that encloses our triangle.
+
+Let's add a couple of lines and define more variables.  
+\[
+\begin{xy}
+,(0,0)
+;(40,0)**@{-}
+;(60,30)**@{-}
+;(0,0)**@{-}
+,(50,12)*{a}
+,(30,18)*{b}
+,(20,-3)*{c}
+,(9,2)*{A}
+,(39,3)*{B}
+,(54,25)*{C}
+,(40,0)
+;(60,0)**@{--}
+;(60,30)**@{--}
+,(50,-3)*{x}
+,(63,15)*{y}
+\end{xy}
+\]
+
+So, we now know that
+\[
+\sin A = \frac{y}{b}
+\]
+and, therefore, we need to prove
+\[
+\frac{\sin B}{b} = \frac{y}{ba}
+\]
+or
+\[
+\sin B = \frac{y}{a}
+\]
+
+From geometry, we can see that
+\[
+\sin\left(\pi-B\right) = \frac{y}{a}
+\]
+
+So the proof is reduced to proving that
+\[
+\sin\left(\pi-B\right) = \sin B
+\]
+
+This is easily seen as
+true after examining the top half of the unit circle.  So, putting all
+of our results together, we get
+\begin{eqnarray}
+\frac{\sin A}{a} & = & \frac{y}{ba}\nonumber\\
+\frac{\sin A}{a} & = &
+\frac{\sin\left(\pi-B\right)}{b}\nonumber\\
+\frac{\sin A}{a} & = & \frac{\sin B}{b}
+\end{eqnarray}
+
+The same logic may be followed to show that each of these fractions is
+also equal to $\frac{\sin C}{c}$.
+
+For the final step of the proof, we must show that 
+\[
+2R = \frac{a}{\sin A}
+\]
+
+We begin by defining our coordinate system.  For this, it is
+convenient to find one side that is not shorter than the others and
+label it with length $b$.  (The concept of a ``longest'' side is not
+well defined in equilateral and some isoceles triangles, but there is
+always at least one side that is not shorter than the others.)  We
+then define our coordinate system such that the corners of the
+triangle that mark the ends of side $b$ are at the coordinates
+$\left(0,0\right)$ and $\left(b,0\right)$.  Our third corner (with
+sides labelled alphbetically clockwise) is at the point $\left(c\cos
+  A,c\sin A\right)$.  Let the center of our circumcircle be at
+$\left(x_0,y_0\right)$.  We now have 
+\begin{eqnarray}
+x_0^2 + y_0^2 &=& R^2 \label{pointA}\\
+\left(b-x_0\right)^2 + y_0^2 &=& R^2 \label{pointC}\\
+\left(c\cos A - x_0\right)^2 + \left(c\sin A-y_0\right)^2 &=& R^2
+\label{pointB} 
+\end{eqnarray}
+as each corner of our triangle is, by definition of the circumcircle,
+a distance $R$ from the circle's center.
+
+Combining equations (3) and (2), we find
+\begin{eqnarray*}
+\left(b-x_0\right)^2 + y_0^2 &=& x_0^2 + y_0^2\\
+b^2 - 2bx_0 &=& 0\\
+\frac{b}{2} &=& x_0
+\end{eqnarray*}
+
+Substituting this into equation (2) we find that 
+\begin{equation}
+y_0^2 = R^2 - \frac{b^2}{4}\label{y_0}
+\end{equation}
+
+Combining equations (4) and (5) leaves us with
+\begin{eqnarray*}
+\left(c\cos A-x_0\right)^2 + \left(c \sin A - y_0\right)^2 &=& x_0^2 +
+y_0^2\\
+c^2\cos^2A-2x_0c\cos A + c^2\sin^2A-2y_0c\sin A &=& 0\\
+c-2x_0\cos A - 2y_0 \sin A &=&0\\
+\frac{c-b\cos A}{2\sin A} &=& y_0\\
+\frac{\left(c-b\cos A\right)^2}{4\sin^2A} &=& R^2 - \frac{b^2}{4}\\
+\left(c-b\cos A\right)^2 + b^2 \sin^2 A &=& 4R^2\sin^2 A\\
+c^2 - 2bc\cos A +b^2 &=& 4R^2\sin^2A\\
+a^2 &=& 4R^2\sin^2A\\
+\frac{a}{\sin A} &=& 2R
+\end{eqnarray*}
+where we have applied the cosines law in the second to last step.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

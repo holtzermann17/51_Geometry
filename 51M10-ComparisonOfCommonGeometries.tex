@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComparisonOfCommonGeometries}
+\pmcreated{2013-03-22 17:13:06}
+\pmmodified{2013-03-22 17:13:06}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{comparison of common geometries}
+\pmrecord{17}{39543}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M10}
+\pmclassification{msc}{51M05}
+\pmclassification{msc}{51-01}
+\pmclassification{msc}{51-00}
+\pmrelated{EuclideanGeometry}
+\pmrelated{NonEuclideanGeometry}
+\pmrelated{Geometry}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapetext{This entry is best viewed in page images mode, but should look somewhat decent in html mode.}
+
+In this entry, the most common models of the three most common two-dimensional geometries (\PMlinkname{Euclidean}{EuclideanGeometry}, \PMlinkname{hyperbolic}{HyperbolicGeometry}, and \PMlinkname{spherical}{SphericalGeometry}) will be considered.
+
+The following abbreviations will be used in this entry:
+
+\begin{itemize}
+\item $E^2$ for the Euclidean plane (the most common model for two-dimensional Euclidean geometry);
+\item $\mathbb{H}^2$ for two-dimensional hyperbolic geometry;
+\item $BK$ for the Beltrami-Klein model of $\mathbb{H}^2$;
+\item $PD$ for the Poincar\'e disc model of $\mathbb{H}^2$;
+\item $UHP$ for the upper half plane model of $\mathbb{H}^2$;
+\item $S^2$ for the unit sphere (the most common model for two-dimensional spherical geometry).
+\end{itemize}
+
+\section{Comparison of Properties of the Models}
+
+\begin{center}
+\begin{tabular}{|l||c|c|c|c|c|}
+\hline
+property & $E^2$ & $BK$ & $PD$ & $UHP$ & $S^2$ \\
+\hline \hline
+& & & & & \\
+model has \PMlinkescapetext{finite} area when & no & yes & yes & no & yes \\
+considered as a subset of a & & & & & \\
+Euclidean space & & & & & \\
+& & & & & \\
+\hline
+& & & & & \\
+lines in model look like & lines & line segments & some line segments, & some vertical rays, & circles \\
+& & & some arcs of circles & some semicircles & \\
+& & & & & \\
+\hline
+& & & & & \\
+lines have \PMlinkescapetext{finite} length when & no & yes & yes & yes for semicircles, & yes \\
+considered as a subset of a & & & & no for vertical rays & \\
+Euclidean space & & & & & \\
+& & & & & \\
+\hline
+& & & & & \\
+angles are preserved in & yes & no & yes & yes & yes \\
+model & & & & & \\
+& & & & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Comparison of Properties of the Geometries}
+
+\begin{center}
+\begin{tabular}{|l||c|c|c|}
+\hline
+property & $E^2$ & $\mathbb{H}^2$ & $S^2$ \\
+\hline \hline
+& & & \\
+two distinct points determine a unique line & yes & yes & no \\
+& & & (yes if points are not antipodal) \\
+& & & \\
+\hline
+& & & \\
+parallel lines exist & yes & yes & no \\
+& & & \\
+\hline
+& & & \\
+number of lines parallel to a given line and & 1 & $\infty$ & 0 \\
+passing through a point not on the given line & & & \\
+& & & \\
+\hline
+& & & \\
+\PMlinkescapetext{entire} space has infinite area with respect & yes & yes & no \\
+to its own geometry & & & \\
+& & & \\
+\hline
+& & & \\
+lines have infinite length & yes & yes & no \\
+& & & \\
+\hline
+& & & \\
+number of \PMlinkname{centers}{Center8} of a circle & 1 & 1 & 2 \\
+& & & \\
+\hline
+& & & \\
+angle sum $\Sigma$ of triangles (in radians) & $\Sigma=\pi$ & $0<\Sigma<\pi$ & $\pi<\Sigma<3\pi$ \\
+& & & \\
+\hline
+& & & \\
+ASA holds & yes & yes & yes \\
+& & & \\
+\hline
+& & & \\
+SAS holds & yes & yes & yes \\
+& & & \\
+\hline
+& & & \\
+SSS holds & yes & yes & yes \\
+& & & \\
+\hline
+& & & \\
+AAS holds & yes & yes & \PMlinkname{no}{AASIsNotValidInSphericalGeometry} \\
+& & & \\
+\hline
+& & & \\
+AAA holds & no & yes & yes \\
+& & & \\
+\hline
+\end{tabular}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

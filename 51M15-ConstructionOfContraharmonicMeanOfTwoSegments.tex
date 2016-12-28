@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructionOfContraharmonicMeanOfTwoSegments}
+\pmcreated{2013-03-22 19:12:34}
+\pmmodified{2013-03-22 19:12:34}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{construction of contraharmonic mean of two segments}
+\pmrecord{8}{42125}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51-00}
+\pmrelated{ContraharmonicProportion}
+\pmrelated{HarmonicMeanInTrapezoid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $a$ and $b$ \PMlinkescapetext{mean} two line segments (and their \PMlinkescapetext{lengths}).\, The contraharmonic mean
+$$x \;:=\; \frac{a^2\!+\!b^2}{a\!+\!b} \;=\; \frac{\left(\sqrt{a^2\!+\!b^2}\,\right)^2}{a\!+\!b},$$
+satisfying the proportion equation
+$$\frac{a\!+\!b}{\sqrt{a^2\!+\!b^2}} \;=\; \frac{\sqrt{a^2\!+\!b^2}}{x},$$
+can be \PMlinkname{constructed geometrically}{GeometricConstruction} as the third proportional of the segments
+$a\!+\!b$ and $\sqrt{a^2\!+\!b^2}$, the latter of which is gotten as the hypotenuse of the right triangle with catheti 
+$a$ and $b$.\, See the construction of fourth proportional.\\
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(9.5,4)
+\psline(0,0)(9,0)
+\psline(0,0)(6,4)
+\psline(3,0)(3,2)
+\psline[linestyle=dotted](5,0)(3,2)
+\psline[linestyle=dotted](8.61,0)(5.17,3.44)
+\rput(1.6,-0.25){$b$}
+\rput(3.17,0.9){$a$}
+\rput(4,-0.2){$a$}
+\rput(1,1.2){$\sqrt{a^2\!+\!b^2}$}
+\rput(6.6,-0.3){$\sqrt{a^2\!+\!b^2}$}
+\rput(4.1,3){$x$}
+\psline(2.8,0)(2.8,0.2)(3,0.2)
+\psdots(5,0)(8.61,0)(3,2)(5.17,3.44)
+\rput(-0.5,-0.5){.}
+\rput(9.5,4){.}
+\end{pspicture}
+\end{center}
+(The dotted lines are parallel, with declivity $45^\circ$.)
+%%%%%
+%%%%%
+\end{document}

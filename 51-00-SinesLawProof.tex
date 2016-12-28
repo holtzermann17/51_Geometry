@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SinesLawProof}
+\pmcreated{2013-03-22 11:57:36}
+\pmmodified{2013-03-22 11:57:36}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{sines law proof}
+\pmrecord{9}{30757}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+%\pmkeywords{Sine}
+%\pmkeywords{Trigonometry}
+%\pmkeywords{Triangle}
+%\pmkeywords{Geometry}
+%\pmkeywords{Angles}
+\pmrelated{CosinesLaw}
+\pmrelated{Triangle}
+\pmrelated{SinesLaw}
+
+\usepackage{graphicx}
+%%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Let $ABC$ a triangle. Let $T$ a point in the circumcircle such that $BT$ is a diameter. 
+\figura{sineslawproof}
+
+So $\angle A=\angle CAB$ is equal to $\angle CTB$ (they subtend the same arc). Since $\triangle CBT$ is a right triangle, from the definition of sine we get
+$$\sin \angle CTB =\frac{BC}{BT}=\frac{a}{2R}.$$
+
+On the other hand $\angle CAB=\angle CTB$ implies their sines are the same and so
+$$\sin \angle CAB=\frac{a}{2R}$$
+and therefore
+$$\frac{a}{\sin A}=2R.$$
+
+Drawing diameters passing by $C$ and $A$ will let us prove in a similar way the relations
+$$\frac{b}{\sin B}=2R\quad\mbox{and}\quad\frac{c}{\sin C}=2R$$
+and we conclude that $$\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R.$$
+
+Q.E.D.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

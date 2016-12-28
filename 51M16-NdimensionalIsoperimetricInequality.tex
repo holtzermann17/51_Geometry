@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NdimensionalIsoperimetricInequality}
+\pmcreated{2013-03-22 19:20:01}
+\pmmodified{2013-03-22 19:20:01}
+\pmowner{dh2718}{16929}
+\pmmodifier{dh2718}{16929}
+\pmtitle{n-dimensional isoperimetric inequality}
+\pmrecord{4}{42280}
+\pmprivacy{1}
+\pmauthor{dh2718}{16929}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M16}
+\pmclassification{msc}{51M25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Isoperimetric inequalities for 2 and 3 dimensions are generalized here to n dimensions. First, the n-dimensional ball is shown to have the greatest volume for a given (n-1)-surface area. Then, the volume and area of the n-ball are used to establish the n-dimensional isoperimetric inequality.
+
+\section{THE GREATEST N-VOLUME}
+
+$~~~~$ We shall use cartesian coordinates based on the ortho-normal vector system ${\overline {B}_1, \overline{B}_2,}$ etc... An (n-1) surface S is defined by a function of n coordinates equated to zero. On this surface, any coordinate can be considered as a function of all the others. Let us take the last one $x_n$, as a function of $x_1, x_2...x_{n-1},$ and call it z for brevity. This surface is the envelope of an n-dimensional solid of volume V:
+$$V = \int_{V}dx_1dx_2...dz = \int_{S}zdx_1dx_2...dx_{n-1}$$
+$~~~~$ We are going to maximize V, subject to the condition that the surface S has a given area A:
+$$S = \int_{S}ds = A$$
+$~~~~$The infinitesimal surface element $ds$ is (see the annex):
+$$S = \int_{S}\sqrt{1+Z_1^2+...+Z_{n-1}^2}dx_1...dx_{n-1}$$
+$~~~~$$Z_i$ are the partial derivatives of z with respect to $x_i$. This surface constraint is handled with the help of a Lagrange multiplier R which allows us to maximize a single function F:
+$$I = \int_{S}Fdx_1...dx_{n-1} = \int_{S}\left(z+R\sqrt{1+Z_1^2+...+Z_{n-1}^2}\right)dx_1...dx_{n-1}$$
+$~~~~$The solution to this variational problem is given by the n-1 Euler-Lagrange equations:
+$$\frac{\partial{F}}{\partial{z}}-\frac{\partial}{\partial{x_i}}
+\left(\frac{\partial{F}}{\partial{Z_i}}\right)=0$$
+$~~~~$In our case, they turn to be:
+$$\frac{\partial}{\partial{x_i}}\left(\frac{Z_i}
+{\sqrt{1+Z_1^2+...+Z_{n-1}^2}}\right)=\frac{1}{R}$$
+$~~~~$After a first integration, and squaring, we have:
+$$\frac{Z_i^2}{1+Z_1^2+...+Z_{n-1}^2}=\frac{(x_i-a_i)^2}{R^2}$$
+$~~~~$Summing all these equations together, after some algebra, we get:
+$$Z_i=\frac{\partial{z}}{\partial{x_i}}=
+\frac{x_i-a_i}{\sqrt{R^2-(x_1-a_1)^2-...-(x_{n-1}-a_{n-1})^2}}$$
+$~~~~$This system is easily integrated and gives exactly the equation on an n-ball, which is therefore a stationary point of the functional I. Since the minimum volume is obviously zero for a flat solid, the n-ball has necessarily the maximum volume.
+
+\section{THE ISOPERIMETRIC INEQUALITY}
+
+$~~~~$The volume $BV_n$ of an n-ball of radius R is (ref 1):
+$$BV_n=\frac{\pi^{\frac{n}{2}}}{\Gamma\left(\frac{n}{2}+1\right)}R^n$$
+$~~~~\Gamma$ is Euler's gamma function. Since this volume is obviously the integral of the surface from 0 to R, the surface is the derivative of the volume with respect to R:
+$$BA_n=\frac{2\pi^{\frac{n}{2}}}{\Gamma\left(\frac{n}{2}\right)}R^{n-1}$$
+$~~~~~$Eliminating the radius R between these two equations, we get:
+$$\frac{\left(BV_n\right)^{n-1}}{\left(BA_n\right)^n}=
+\frac{\pi^{-\frac{n}{2}}\left[\Gamma\left(\frac{n}{2}\right)\right]^n}
+{2^n\left[\frac{n}{2}\Gamma\left(\frac{n}{2}\right)\right]^{n-1}}=
+\frac{\Gamma\left(\frac{n}{2}+1\right)}{\left(n\sqrt{\pi}\right)^n}$$
+$~~~~$This equality holds for an n-ball. The volume $V_n$ of an arbitrary solid of area $A_n$ cannot be greater than the volume $BV_n$ of an n-ball with the same area; therefore the following inequality holds:
+$$\frac{\left(V_n\right)^{n-1}}{\left(A_n\right)^n}\leq
+{\frac{\Gamma\left(\frac{n}{2}+1\right)}{\left(n\sqrt{\pi}\right)^n}}$$
+$~~~~$This is the so-called isoperimetric inequality for n dimensions.
+
+\section{ANNEX: N-DIMENSIONAL PARALLELEPIPED}
+
+$~~~~$The infinitesimal surface element of an n-dimensional solid is in fact the volume of an infinitesimal (n-1)-parallelepiped. This volume (ref 2) is the square root of the Gram determinant of the edge vectors $\overline{U}_1, \overline{U}_2...\overline{U}_{n-1}$. The elements of this determinant are the dot products of the edge vectors:
+$$G_{ij}=\overline{U}_i\cdotp\overline{U}_j$$
+$~~~~~$Let P be the position vector of a point in the (n-1) dimensional enveloppe of the solid. $\overline{\delta}_i$ is the infinitesimal displacement we get by varying the coordinate $x_i$ by $dx_i$ and keeping all the other (n-2) independent variables fixed. Only the last coordinate z varies  to maintain the new position into the envelope:
+$$\overline{\delta}_i=dx_i\overline{B}_i+dz\overline{B}_n
+=dx_i(\overline{B}_i+ \frac{\partial{z}}{\partial{x_i}}\overline{B}_n)
+=dx_i(\overline{B}_i+ Z_i\overline{B}_n)$$
+$~~~~~$$Z_i$ is a  shortcut for the partial derivative of z with respect to $x_i$. The (n-1) infinitesimal vectors  $\overline{\delta}_i$ define an (n-1)-parallelepiped and its Gram determinant is:
+$$G_{ij}=\overline{\delta}_i\cdotp\overline{\delta}_j
+=(\delta_{ij}+Z_iZ_j)dx_idx_j$$
+$~~~~~$$\delta_{ij}$ is the Kronecker symbol. In the determinant, $dx_i$ appears in one row and one column, so that it can be factored out twice. Therefore, the volume of the (n-1)-parallelepiped $\overline{\delta}_i$, or the surface element ds is:
+$$ds=\sqrt{\|\delta_{ij}+Z_iZ_j\|}dx_1dx_2...dx_{n-1}$$
+$~~~~~$The determinant of the matrix H defined by $H_{ij}=\delta_{ij}+Z_iZ_j$ is the product of its eigenvalues. For any (n-1)-vector $\overline{W}$ we have:
+$$H\overline{W}=\overline{W}+(\overline{Z}\cdotp\overline{W})\overline{Z}$$
+$~~~~~$$\overline{Z}$ being the (n-1)-vector $(Z_1, Z_2...Z_{n-1})$. If $\overline{W}$ is orthogonal to $\overline{Z}$, $H\overline{W}=\overline{W}$ and its eigenvalue is 1. But there are (n-2) such vectors, so the determiant is the last eignevalue for $\overline{W}=\overline{Z}$: $H\overline{Z}=(1+|Z|^2)\overline{Z}$. Finally:
+$$ds=\sqrt{Z_1^2+Z_2^2+...+Z_{n-1}^2}dx_1dx_2...dx_{n-1}$$
+
+\begin{thebibliography}{1}
+\bibitem {A} Eric Weinstein - {\it Hypersphere}\newline
+http://mathworld.wolfram.com/Hypersphere.html\newline
+An elegant proof of the hypersphere volume formula.
+\bibitem {B} Nils Barth - {\it The Gramian and K-Volume in N-Space}\newline 
+http://www.jyi.org/volumes/volume2/issue1/articles/barth.html\newline
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternateProofOfParallelogramLaw}
+\pmcreated{2013-03-22 12:43:52}
+\pmmodified{2013-03-22 12:43:52}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{alternate proof of parallelogram law}
+\pmrecord{5}{33031}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{ProofOfParallelogramLaw2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Proof of this is simple, given the cosine law:
+\[
+c^2 = a^2 + b^2 - 2ab\cos\phi
+\]
+where $a$, $b$, and $c$ are the lengths of the sides of the triangle, and angle $\phi$ is the corner angle opposite the side of length $c$.
+
+
+Let us define the largest interior angles as angle $\theta$.
+Applying this to the parallelogram, we find that
+\begin{eqnarray*}
+d_1^2 &=& u^2 + v^2 - 2uv\cos\theta\\
+d_2^2 &=& u^2+v^2 - 2uv\cos\left(\pi-\theta\right)
+\end{eqnarray*}
+ 
+
+
+Knowing that
+\[
+\cos\left(\pi-\theta\right) = - \cos\theta
+\]
+we can add the two expressions together, and find ourselves with
+\begin{eqnarray*}
+d_1^2+d_2^2 &=& 2u^2 + 2v^2 - 2uv\cos\theta + 2uv\cos\theta\\
+d_1^2+d_2^2 &=& 2u^2 + 2v^2
+\end{eqnarray*}
+which is the theorem we set out to prove.
+%%%%%
+%%%%%
+\end{document}

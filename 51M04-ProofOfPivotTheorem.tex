@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPivotTheorem}
+\pmcreated{2013-03-22 13:12:37}
+\pmmodified{2013-03-22 13:12:37}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of pivot theorem}
+\pmrecord{4}{33674}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\triangle ABC$ be a triangle, and let $D$, $E$, and $F$ be points
+on $BC$, $CA$, and $AB$, respectively.  The circumcircles of
+$\triangle AEF$ and $\triangle BFD$ intersect in $F$ and in another
+point, which we call $P$.  Then $AEPF$ and $BFPD$ are cyclic
+quadrilaterals, so
+$$
+\angle A+\angle EPF=\pi
+$$
+and
+$$
+\angle B+\angle FPD=\pi
+$$
+Combining this with $\angle A+\angle B+\angle C=\pi$ and $\angle
+EPF+\angle FPD+\angle DPE=2\pi$, we get
+$$
+\angle C+\angle DPE=\pi.
+$$
+This implies that $CDPE$ is a cyclic quadrilateral as well, so that
+$P$ lies on the circumcircle of $\triangle CDE$.  Therefore, the
+circumcircles of the triangles $AEF$, $BFD$, and $CDE$ have a common
+point, $P$.
+\begin{center}
+\includegraphics{pivot.eps}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

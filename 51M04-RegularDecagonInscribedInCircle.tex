@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularDecagonInscribedInCircle}
+\pmcreated{2013-03-22 17:34:26}
+\pmmodified{2013-03-22 17:34:26}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{regular decagon inscribed in circle}
+\pmrecord{10}{39985}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmsynonym{regular decagon}{RegularDecagonInscribedInCircle}
+\pmrelated{RegularPolygonAndCircles}
+\pmrelated{HomogeneousEquation}
+\pmrelated{Pentagon}
+\pmdefines{golden section}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If a line segment has been divided into two parts such that the greater part is the central proportional of the whole segment and the smaller part, then one has performed the {\em golden section} (Latin {\em sectio aurea}) of the line segment.\\
+
+
+\textbf{Theorem.}  The side of the \PMlinkname{regular}{RegularPolygon} \PMlinkname{decagon}{Polygon}, inscribed in a circle, is equal to the greater part of the radius divided with the \PMlinkescapetext{golden section}.
+
+{\em Proof.}  A \PMlinkname{regular polygon can be inscribed in a circle}{RegularPolygonAndCircles}.  In the picture below, there is seen an isosceles central triangle $OAB$ of a regular decagon with the central angle \,$O = 360^\circ\!:\!10 = 36^\circ$; the base angles are\, $(180^\circ\!-\!36^\circ)\!:\!2 = 72^\circ$.  One of the base angles is halved with the line $AC$, when one gets a smaller isosceles triangle $ABC$ with equal angles as in the triangle $OAB$.  From these similar triangles we obtain the proportion equation
+\begin{align}                    
+               r:s \,=\, s:(r\!-\!s),
+\end{align}
+which shows that the side $s$ of the regular decagon is the central proportional of the radius $r$ of the circle and the difference $r\!-\!s$.  
+
+\begin{center}
+\begin{pspicture}(0,0)(8,5)
+\psarc(0,0){7}{-4}{40}
+\pspolygon[linecolor=blue](0,0)(7,0)(5.663,4.114)
+\psline[linecolor=red]{-}(4.326,0)(5.663,4.114)
+\psdots(0,0)(7,0)(5.663,4.114)(4.326,0)
+\rput[a](0,-0.3){$O$}
+\rput[a](7.2,-0.2){$B$}
+\rput[a](5.9,4.14){$A$}
+\rput[a](4.3,-0.3){$C$}
+\rput[a](2.35,1.9){$r$}
+\rput[a](2.4,-0.2){$s$}
+\rput[a](4.65,1.8){$s$}
+\rput[a](6.17,1.8){$s$}
+\rput[a](5.6,-0.2){$r\!-\!s$}
+\rput[a](0.67,0.22){$36^\circ$}
+\rput[a](6.6,0.22){$72^\circ$}
+\rput[a](5.1,3.3){$36^\circ$}
+\rput[a](5.65,3.1){$36^\circ$}
+\rput[a](4.8,0.22){$72^\circ$}
+\end{pspicture}
+\end{center}
+
+
+\textbf{Note.}  (1) can be simplified to the \PMlinkname{quadratic equation}{QuadraticFormula}
+                   $$s^2\!+\!rs\!-\!r^2 = 0$$
+which yields the positive solution
+      $$s\; =\; \frac{-1\!+\!\sqrt{5}}{2}\,r\; \approx\; 0.618\,r.$$
+Cf. also the golden ratio.
+%%%%%
+%%%%%
+\end{document}

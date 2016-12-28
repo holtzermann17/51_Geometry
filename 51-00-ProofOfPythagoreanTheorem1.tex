@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPythagoreanTheorem1}
+\pmcreated{2013-03-22 12:48:39}
+\pmmodified{2013-03-22 12:48:39}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of Pythagorean theorem}
+\pmrecord{8}{33130}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Let $ABC$ be a right triangle with hypotenuse $BC$. Draw the height $AT$.
+\figura{pythaproof}
+
+Using the right angles $\angle BAC$ and $\angle ATB$ and the fact that the sum of angles on any triangle is $180^\circ$, it can be shown that
+\begin{eqnarray*}
+\angle BAT &=& \angle ACT\\
+\angle TAC &=& \angle CBA
+\end{eqnarray*}
+and therefore we have the following triangle similarities:
+$$\triangle ABC \sim \triangle TBA \sim \triangle TAC.$$
+
+From those similarities, we have
+$\frac{AB}{BC}=\frac{TB}{BA}$ and thus $AB^2 = BC\cdot TB$. Also
+$\frac{AC}{BC}=\frac{TC}{AC}$ and thus $AC^2= BC \cdot TC$. We have then
+$$AB^2 + AC^2 = BC(BT+TC) = BC\cdot BC = BC^2$$
+which concludes the proof.
+%%%%%
+%%%%%
+\end{document}

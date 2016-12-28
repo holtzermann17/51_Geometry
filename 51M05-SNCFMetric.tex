@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SNCFMetric}
+\pmcreated{2013-03-22 15:17:25}
+\pmmodified{2013-03-22 15:17:25}
+\pmowner{GrafZahl}{9234}
+\pmmodifier{GrafZahl}{9234}
+\pmtitle{SNCF metric}
+\pmrecord{5}{37083}
+\pmprivacy{1}
+\pmauthor{GrafZahl}{9234}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmclassification{msc}{97A20}
+\pmclassification{msc}{54E35}
+%\pmkeywords{French railway}
+\pmrelated{RealTree}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[latin1]{inputenc}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Bigcup}{\bigcup\limits}
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mmm}[9]{\left(\begin{array}{rrr}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right)}
+\newcommand{\ol}{\overline}
+
+% Math Operators/functions
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\cwe}{cwe}
+\DeclareMathOperator{\we}{we}
+\DeclareMathOperator{\wt}{wt}
+\begin{document}
+The following two examples of a metric space (one of which is a real
+tree) obtained their name from the \PMlinkescapetext{operator} of the French railway
+system. Especially \emph{malicious} rumour has it that if you want to
+go by train from $x$ to $y$ in France, the most efficient solution is
+to reduce the problem to going from $x$ to Paris and then from Paris
+to $y$.
+
+Since their discovery, the intrinsic laws of the French way of going
+by train have made it around the world and reached the late-afternoon
+tutorials of first-term mathematics courses in an effort to lighten the
+moods in the guise of the following definition:
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\begin{defn}[SNCF metric]
+Let $P$ be a point in a metric space $(F,d)$. Then the \emph{SNCF
+metric} $d_P$ with respect to $P$ is defined by
+\begin{equation*}
+d_P(x,y):=\begin{cases}
+0&\text{if }x=y\\
+d(x,P)+d(P,y)&\text{otherwise.}
+\end{cases}
+\end{equation*}
+\end{defn}
+It is easy to see that $d_P$ is a metric.
+
+Now, what if the train from $x$ to Paris stops over in $y$ during the
+ride (or the other way round)? Sure, Paris is a beautiful city, but
+you wouldn't \emph{always} want to go there and back again. To
+implement this, the geometric notion of ``$y$ lies on the straight
+line defined by $x$ and $P$'' is required, so the definition becomes
+more specialised:
+\begin{defn}[SNCF metric, enhanced version]
+Let $P$ be the origin in the space $\mbb{R}^n$ with Euclidean norm
+$\|\cdot\|_2$. Then the \emph{SNCF metric} $d_P$ is defined by
+\begin{equation*}
+d_P(x,y):=\begin{cases}
+\|x-y\|_2&\text{if }x\text{ and }y\text{ lie on the same ray from the origin}\\
+\|x\|_2+\|y\|_2&\text{otherwise}
+\end{cases}.
+\end{equation*}
+\end{defn}
+The metric space $(\mbb{R}^n,d_P)$ is, in addition, a real tree since
+if $x$ and $y$ do not lie on the same \PMlinkid{ray}{6962} from $P$, the only arc in
+$(\mbb{R}^n,d_P)$ joining $x$ and $y$ consists of the two ray \PMlinkid{segments}{5783}
+$xP$ and $yP$. Other injections which are arcs in Euclidean
+$\mbb{R}^n$ do not remain continuous in $(\mbb{R}^n,d_P)$.
+%%%%%
+%%%%%
+\end{document}

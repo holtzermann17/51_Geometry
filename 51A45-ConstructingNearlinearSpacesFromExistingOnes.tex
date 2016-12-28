@@ -1,0 +1,172 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructingNearlinearSpacesFromExistingOnes}
+\pmcreated{2013-03-22 19:14:53}
+\pmmodified{2013-03-22 19:14:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{constructing near-linear spaces from existing ones}
+\pmrecord{10}{42173}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A45}
+\pmclassification{msc}{51A05}
+\pmclassification{msc}{05C65}
+\pmdefines{restriction}
+\pmdefines{subspace}
+\pmdefines{subplane}
+\pmdefines{subline}
+\pmdefines{hyperplane}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+One can construct new near-linear spaces from old.  We name a few of the constructions in this entry.
+
+Let $\mathscr{S}=(\mathcal{P},\mathcal{L})$ be a near-linear space.
+
+\textbf{Restrictions}.  A pair $\mathscr{S}':=(\mathcal{P}',\mathcal{L}')$, where $\mathcal{P}'\subseteq \mathcal{P}$, and $\mathcal{L}':= \lbrace \mathcal{P}'\cap \ell \mid \ell \in \mathcal{L}\rbrace$, is called a \emph{restriction} of $\mathscr{S}$.
+
+It is easy to verify that a restriction of a near-linear space is near-linear, and a restriction of a linear space is linear.
+
+For example, let $\mathscr{S}$ be a near-linear space given by the diagram below:
+\begin{center}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psline(-1,0)(1,0)
+\psline(0,1)(1,0)
+\psline(0,1)(-1,0)
+\end{pspicture}
+\end{center}
+Then $\mathscr{S}$ has 7 restrictions, no two of which are isomorphic.  Besides the empty space $\varnothing$ and $\mathscr{S}$ itself, the following diagram shows the other five, with increasing number of lines:
+\begin{center}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psline(0,1)(-1,0)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psline(-1,0)(1,0)
+\end{pspicture}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psline(-1,0)(0,0)
+\psline(0,1)(-1,0)
+\end{pspicture}
+\end{center}
+
+Here is another example.  The (affine) Euclidean plane $\mathbb{E}^2$ is a linear space.  The rational plane, formed by all points with rational coordinates, and lines with rational coefficients, is a restriction of $\mathbb{E}^2$.  More generally, let $A(V)$ be an affine space over some vector space over some field $K$.  If $k$ is a subfield of $K$, then $A(V')$ is a restriction of $A(V)$, where $V'$ is the restriction of $V$ to $k$, consisting of vectors in $V$ whose components are elements of $k$.
+
+In the study of projective planes, restrictions of finite projective planes play an important role.  A restriction of a projective plane is called a \emph{subplane} if the restriction itself is a projective plane.  \emph{Sublines} are defined similarly.  Bruck showed that if a projective plane has order $n$ and a subplane has order $m$, then $n=m^2$ or $n\ge m^2+m$.
+
+\textbf{Subspaces}.  Call a subset $\mathcal{P}'$ of $\mathcal{P}$ \emph{linear} if for any distinct $P, Q\in \mathcal{P}'$, $PQ\in \mathcal{L}$ implies $PQ \subseteq \mathcal{P}'$.  In other words, if two points on a line are in $\mathcal{P}'$, all of the points on the line are in $\mathcal{P}'$.
+
+A \emph{subspace} of $\mathscr{S}$ is a pair $\mathscr{S}':=(\mathcal{P}',\mathcal{L}')$, where $\mathcal{P}'\subseteq \mathcal{P}$ is linear, and $\mathcal{L}':= \lbrace \ell \in \mathcal{L} \mid \ell\subseteq \mathcal{P}'\rbrace$.
+
+Subspace are restrictions.  Thus, subspaces of near-linear and linear spaces are near-linear and linear, respectively.
+
+In the first example above, all of the restrictions of $\mathscr{S}$, except the last one with two lines, are subspaces of $\mathscr{S}$.  The last restriction is not a subspace because one of its lines is not a line of $\mathscr{S}$.
+
+In the second example above, the affine space $A(V')$, while a restriction of $A(V)$, is not a subspace of $A(V)$.
+
+The subspaces of affine (projective) spaces coincide with the usual definitions of subspaces of affine (projective) spaces.  If a restriction $A'$ of an affine space $A$ is a subspace of $A$ with the same dimension, then $A'=A$.
+
+In the set $\mathbf{S}$ of all subspaces of $\mathscr{S}$, we write $\mathscr{U}\le \mathscr{V}$ if $\mathscr{U}$ is a subspace of $\mathscr{V}$.  Then $\le$ is a partial order on $\mathbf{S}$.  A maximal element in $\mathbf{S}$ is called a \emph{hyperplane}.
+
+\textbf{Dual Spaces}.  Another way of constructing a new space out of the existing one is that of a dual space.  Let $\mathscr{S}=(\mathcal{P},\mathcal{L})$ be a near-linear space.  The dual space $\mathscr{S}^*$ of $\mathscr{S}$ is a pair $(\mathcal{P}^*,\mathcal{L}^*)$ such that
+\begin{itemize}
+\item $\mathcal{P}^*=\mathcal{L}$, and
+\item $\mathcal{L}^*=\lbrace P^* \mid P\in \mathcal{P}\mbox{ and }|P^*|\ge 2\rbrace$, where $P^*$ is the set of all lines passing through $P$.
+\end{itemize}
+The incidence relation on $\mathscr{S}^*$ is the usual set membership $\in$.  One easily checks that $\mathscr{S}^*$ is a near-linear space.
+
+Below are diagrams of the example $\mathscr{S}$ above, now with labels, and its dual space $\mathscr{S}^*$ (on the right):
+\begin{center}
+\begin{pspicture}(-1,0)(1,2)
+\psset{unit=2cm}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psline(-1,0)(1,0)
+\psline(0,1)(1,0)
+\psline(0,1)(-1,0)
+\rput[l](0.1,1){$P$}
+\rput[r](-1.1,0){$Q$}
+\rput[u](0,0.15){$R$}
+\rput[l](1.1,0){$S$}
+\rput[r](-0.65,0.5){$\ell_1$}
+\rput[l](0.65,0.5){$\ell_2$}
+\rput[d](-0.5,-0.15){$\ell_3$}
+\end{pspicture}
+\hspace{5cm}
+\begin{pspicture}(-1,0)(1,2)
+\psset{unit=2cm}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+%\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psline(-1,0)(1,0)
+\psline(0,1)(1,0)
+\psline(0,1)(-1,0)
+\rput[l](0.1,1){$\ell_1$}
+\rput[r](-1.1,0){$\ell_2$}
+%\rput[u](0,0.15){$$}
+\rput[l](1.1,0){$\ell_3$}
+\rput[r](-0.65,0.5){$P^*$}
+\rput[l](0.65,0.5){$Q^*$}
+\rput[d](0,-0.15){$S^*$}
+\end{pspicture}
+\end{center}
+Note that the dual space $\mathscr{S}^{**}$ of $\mathscr{S}^*$ is isomorphic to $\mathscr{S}^*$.  This example shows that, in general, the double dual of a near-linear space is not isomorphic to itself.
+
+\begin{thebibliography}{7}
+\bibitem{LB} L. M. Batten, {\it Combinatorics of Finite Geometries}, 2nd edition, Cambridge University Press (1997)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

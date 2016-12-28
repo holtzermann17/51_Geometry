@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CoordinateWay}
+\pmcreated{2013-03-22 17:28:45}
+\pmmodified{2013-03-22 17:28:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{coordinate way}
+\pmrecord{11}{39865}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51G05}
+\pmclassification{msc}{51-00}
+\pmsynonym{coordinate broken line}{CoordinateWay}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let\, $P = (x,\,y,\,z)$\, be a point in $\mathbb{R}^3$.  If $N$ is the \PMlinkname{projection}{ProjectionOfPoint} of $P$ on the $xy$-plane, $A$ the projection of $N$ on the $x$-axis and $O$ the origin, then the broken line \,$PNAO$\, is the {\em coordinate way} of the point $P$.  The lengths of the line segments forming the coordinate way are
+        $$AO = |x|,\quad NA = |y|,\quad PN = |z|.$$
+\begin{center}
+\begin{pspicture}(-5.5,-4.5)(5.5,4)
+\rput(-0.3,3.5){$z$}
+\rput(4.55,-0.3){$y$}
+\rput(-2.9,-2.3){$x$}
+\psline{<-}(-3,-2)(-1.5,-1)
+\psline{-}(0,0)(1.43,0)
+\psline{->}(1.56,0)(4.5,0)
+\psline{->}(0,0)(0,3.5)
+\psline[linecolor=red](-1.5,-1)(0,0)
+\psline[linecolor=red](-1.5,-1)(1.5,-1)
+\psline[linecolor=red](1.5,-1)(1.5,2.5)
+\psdot[linecolor=red](1.5,2.5)
+\psdot[linecolor=red](1.5,-1)
+\psdot[linecolor=red](-1.5,-1)
+\psdot[linecolor=red](0,0)
+\rput(1.8,2.6){$P$}
+\rput(1.8,-1){$N$}
+\rput(-1.74,-0.9){$A$}
+\rput(-0.3,0.1){$O$}
+\rput(0.5,-4){\mbox{The coordinate way of}\;\;$P$\;\;\mbox{(red)}}
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdealTriangle}
+\pmcreated{2013-03-22 17:08:26}
+\pmmodified{2013-03-22 17:08:26}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{ideal triangle}
+\pmrecord{5}{39447}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M10}
+\pmclassification{msc}{51-00}
+\pmrelated{LimitingTriangle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+In hyperbolic geometry, an \emph{ideal triangle} is a set of three lines which connect three distinct points on the boundary of the model of hyperbolic geometry.
+
+Below is an example of an ideal triangle in the Beltrami-Klein model:
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{o-o}(-1.732,-1)(0,2)
+\psline{o-o}(0,2)(1.732,-1)
+\psline{o-o}(-1.732,-1)(1.732,-1)
+\end{pspicture}
+\end{center}
+
+Below is an example of an ideal triangle in the Poincar\'e disc model:
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psarc{o-o}(0,-4){3.4641}{60}{120}
+\psarc{o-o}(-3.4641,2){3.4641}{300}{360}
+\psarc{o-o}(3.4641,2){3.4641}{180}{240}
+\end{pspicture}
+\end{center}
+
+Below are some examples of ideal triangles in the upper half plane model:
+
+\begin{center}
+\begin{pspicture}(-2,-0.1)(4,4)
+\psline[linestyle=dashed]{<->}(-2,0)(4,0)
+\psline{o->}(-1,0)(-1,4)
+\psline{o->}(3,0)(3,4)
+\psarc{o-o}(1,0){2}{0}{180}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{pspicture}(-5,-0.1)(5,4)
+\psline[linestyle=dashed]{<->}(-5,0)(5,0)
+\psarc{o-o}(-2,0){2}{0}{180}
+\psarc{o-o}(2,0){2}{0}{180}
+\psarc{o-o}(0,0){4}{0}{180}
+\end{pspicture}
+\end{center}
+
+\PMlinkescapetext{Strictly} speaking, none of these figures are triangles in hyperbolic geometry; however, ideal triangles are useful for proving that, given $r \in \mathbb{R}$ with $0<r<\pi$, there is a triangle in hyperbolic geometry whose angle sum in radians is equal to $r$.
+%%%%%
+%%%%%
+\end{document}

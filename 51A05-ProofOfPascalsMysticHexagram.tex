@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPascalsMysticHexagram}
+\pmcreated{2013-03-22 13:53:02}
+\pmmodified{2013-03-22 13:53:02}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Pascal's mystic hexagram}
+\pmrecord{5}{34627}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{restricted}
+\PMlinkescapeword{vertices}
+\PMlinkescapeword{opposite}
+We can choose homogeneous coordinates $(x,y,z)$ such that the equation
+of the given nonsingular conic is $yz+zx+xy=0$, or equivalently
+\begin{equation} \label{eq:conic}
+z(x+y)=-xy
+\end{equation}
+and the vertices of the given hexagram $A_1A_5A_3A_4A_2A_6$ are
+\begin{center}\begin{tabular}{rr}
+$A_1=(x_1,y_1,z_1)$ & $A_4=(1,0,0)$ \\
+$A_2=(x_2,y_2,z_2)$ & $A_5=(0,1,0)$ \\
+$A_3=(x_3,y_3,z_3)$ & $A_6=(0,0,1)$
+\end{tabular}\end{center}
+(see Remarks below).
+The equations of the six sides, arranged in opposite pairs, are then
+\begin{center}\begin{tabular}{rr}
+$A_1A_5: x_1z=z_1x$ & $A_4A_2: y_2z=z_2y$ \\
+$A_5A_3: x_3z=z_3x$ & $A_2A_6: y_2x=x_2y$ \\
+$A_3A_4: z_3y=y_3z$ & $A_6A_1: y_1x=x_1y$
+\end{tabular}\end{center}
+and the three points of intersection of pairs of opposite sides are
+$$A_1A_5\cdot A_4A_2 = (x_1z_2,z_1y_2,z_1z_2)$$
+$$A_5A_3\cdot A_2A_6 = (x_2x_3,y_2x_3,x_2z_3)$$
+$$A_3A_4\cdot A_6A_1 = (y_3x_1,y_3y_1,z_3y_1)$$
+To say that these are collinear is to say that the determinant
+$$ D=\left| \begin{array}{ccc}
+x_1z_2 & z_1y_2 & z_1z_2 \\
+x_2x_3 & y_2x_3 & x_2z_3 \\
+y_3x_1 & y_3y_1 & z_3y_1
+\end{array}\right| $$
+is zero. We have
+\begin{center}\begin{tabular}{rr}
+$D=$ & $x_1y_1y_2z_2z_3x_3-x_1y_1z_2x_2y_3z_3$ \\
+     & $+z_1x_1x_2y_2y_3z_3-y_1z_1x_2y_2z_3x_3$ \\
+     & $+y_1z_1z_2x_2x_3y_3-z_1x_1y_2z_2x_3y_3$
+\end{tabular}\end{center}
+Using (\ref{eq:conic}) we get
+$$(x_1+y_1)(x_2+y_2)(x_3+y_3)D=x_1y_1x_2y_2x_3y_3S$$
+where $(x_1+y_1)(x_2+y_2)(x_3+y_3)\ne 0$ and
+\begin{eqnarray*}
+S&= &(x_1+y_1)(y_2x_3-x_2y_3) \\
+ & +&(x_2+y_2)(y_3x_1-x_3y_1) \\
+ & +&(x_3+y_3)(y_1x_2-x_1y_2) \\
+ &= &0
+\end{eqnarray*}
+QED.
+
+\textbf{Remarks: }For more on the use of coordinates in a projective
+plane, see e.g. \PMlinkexternal{Hirst}{http://www.maths.soton.ac.uk/staff/AEHirst/ ma208/notes/project.pdf}
+(an 11-page PDF).
+
+A synthetic proof (without coordinates) of Pascal's theorem
+is possible with the aid of cross ratios or the related notion
+of harmonic sets (of four collinear points).
+
+Pascal's proof is lost; presumably he had only the real affine plane
+in mind. A proof restricted to that case, based on Menelaus's theorem,
+can be seen at
+\PMlinkexternal{cut-the-knot.org}{http://www.cut-the-knot.org/Curriculum/Geometry/Pascal.shtml#words}.
+%%%%%
+%%%%%
+\end{document}

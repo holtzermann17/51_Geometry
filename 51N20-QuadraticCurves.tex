@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticCurves}
+\pmcreated{2013-03-22 17:56:26}
+\pmmodified{2013-03-22 17:56:26}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{quadratic curves}
+\pmrecord{13}{40437}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmsynonym{graph of quadratic equation}{QuadraticCurves}
+\pmrelated{ConicSection}
+\pmrelated{TangentOfConicSection}
+\pmrelated{OsculatingCurve}
+\pmrelated{IntersectionOfQuadraticSurfaceAndPlane}
+\pmrelated{PencilOfConics}
+\pmrelated{SimplestCommonEquationOfConics}
+\pmdefines{double line}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We want to determine the graphical representant of the general bivariate quadratic equation
+\begin{align}
+Ax^2+By^2+2Cxy+2Dx+2Ey+F = 0,
+\end{align}
+where $A,\,B,\,C,\,D,\,E,\,F$ are known real numbers and\, $A^2+B^2+C^2 > 0$.\\
+
+If\, $C \neq 0$, we will rotate the coordinate system, getting new coordinate axes $x'$ and $y'$, such that the equation (1) transforms into a new one having no more the mixed term $x'y'$.\, Let the rotation angle be $\alpha$ to the anticlockwise (positive) direction so that the $x'$- and $y'$-axes form the angles $\alpha$ and $\alpha+90^\circ$ with the original $x$-axis, respectively.\, Then there is the \PMlinkescapetext{connection}
+\begin{align*}
+x = x'\cos\alpha-y'\sin\alpha \\
+y = x'\sin\alpha+y'\cos\alpha
+\end{align*}
+between the new and old coordinates (see rotation matrix).\, Substituting these expressions into (1) it becomes
+\begin{align}
+Mx'^2+Ny'^2+2Px'y'+2Gx'+2Hy'+F = 0,
+\end{align}
+where
+\begin{align}
+\begin{cases}
+M = A\cos^2\alpha+B\sin^2\alpha+C\sin2\alpha,\\
+N = A\sin^2\alpha+B\cos^2\alpha-C\sin2\alpha,\\
+2P = (B-A)\sin2\alpha+2C\cos2\alpha.
+\end{cases}
+\end{align}
+It's always possible to determine $\alpha$ such that\, $(B-A)\sin2\alpha = -2C\cos2\alpha$,\, i.e. that
+$$\tan2\alpha = \frac{2C}{A-B}$$
+for\, $A \neq B$\, and\, $\alpha = 45^\circ$\, for the case\, $A = B$.\, Then the term $2Px'y'$ vanishes in (2), which becomes, dropping out the apostrophes,
+\begin{align}
+Mx^2+Ny^2+2Gx+2Hy+F = 0.
+\end{align}
+
+\begin{itemize}
+\item If none of the coefficients $M$ and $M$ equal zero, one can remove the first degree terms of (4) by first writing it as
+$$M\left(x+\frac{G}{M}\right)^2+N\left(y+\frac{H}{N}\right)^2 = \frac{G^2}{M}+\frac{H^2}{N}-F$$
+and then translating the origin to the point \,$\left(-\frac{G}{M},\,-\frac{H}{N}\right)$ ,\, when we obtain the equation of the form
+\begin{align}
+Mx^2+Ny^2 = K.
+\end{align}
+If $M$ and $M$ have the same \PMlinkname{sign}{SignumFunction}, then in \PMlinkescapetext{order} that (5) could have a counterpart in the plane, the sign must be the same as the sign of $K$; then the counterpart is the \PMlinkname{ellipse}{Ellipse2}
+$$\frac{x^2}{\left(\sqrt{|K/M|}\right)^2}+\frac{y^2}{\left(\sqrt{|K/N|}\right)^2} = 1.$$
+If $M$ and $N$ have opposite signs and\, $K \neq 0$,\, then the curve (5) correspondingly is one of the \PMlinkname{hyperbolas}{Hyperbola2}
+$$\frac{x^2}{\left(\sqrt{|K/M|}\right)^2}-\frac{y^2}{\left(\sqrt{|K/N|}\right)^2} = \pm1,$$
+which for\, $K = 0$\, is reduced to a pair of intersecting lines.\\
+
+\item If one of $M$ and $N$, e.g. the latter, is zero, the equation (4) may be written
+\begin{align*}
+M\left(x+\frac{G}{M}\right)^2+2Hy+F-\frac{G^2}{M} = 0
+\end{align*}
+i.e.
+\begin{align*}
+M\left(x+\frac{G}{M}\right)^2+2H\left(y+\frac{MF-G^2}{2HM}\right) = 0.
+\end{align*}
+Translating now the origin to the point\, $\left(-\frac{G}{M},\,\frac{G^2-MF}{2HM}\right)$\, the equation changes to
+\begin{align}
+Mx^2+2Hy = 0.
+\end{align}
+For\, $H \neq 0$,\, this is the equation\, $y = -\frac{M}{2H}x^2$\, of a parabola, but for\, $H = 0$,\, of a {\em double line}\, $x^2 = 0$.\\
+\end{itemize}
+
+
+
+The kind of the quadratic curve (1) can also be found out directly from this original form of the equation.  Namely, from the formulae (3) between the old and the new coefficients one may derive the connection
+\begin{align}
+MN-P^2 = AB-C^2
+\end{align}
+when one first adds and subtracts them obtaining
+$$M+N = A+B,$$
+$$M-N = (A-B)\cos2\alpha+2C\sin2\alpha,$$
+$$2P = (A-B)\sin2\alpha+2C\cos2\alpha.$$
+Two latter of these give
+$$(M-N)^2+4P^2 = (A-B)^2+4C^2,$$
+and when one subtracts this from the equation\, $(M+N)^2 = (A+B)^2$,\, 
+the result is (7), which due to the choice of $\alpha$ is simply
+\begin{align}
+MN = AB-C^2.
+\end{align}
+Thus the curve\; $Ax^2+By^2+2Cxy+2Dx+2Ey+F = 0$\; is, when it is real, 
+\begin{enumerate}
+\item for\, $AB-C^2 > 0$\, an \PMlinkname{ellipse}{Ellipse2},
+\item for\, $AB-C^2 < 0$\, a \PMlinkname{hyperbola}{Hyperbola2} or two intersecting lines,
+\item for\, $AB-C^2 = 0$\, a \PMlinkname{parabola}{Parabola2} or a double line.
+\end{enumerate}
+
+\begin{thebibliography}{8}
+\bibitem{LL}{\sc L. Lindel\"of}: {\em Analyyttisen geometrian oppikirja}.\, Kolmas painos.\, Suomalaisen Kirjallisuuden Seura, Helsinki (1924).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

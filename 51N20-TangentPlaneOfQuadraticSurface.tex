@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TangentPlaneOfQuadraticSurface}
+\pmcreated{2013-03-22 14:58:48}
+\pmmodified{2013-03-22 14:58:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{tangent plane of quadratic surface}
+\pmrecord{7}{36681}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{TangentOfConicSection}
+\pmrelated{QuadraticSurfaces}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The common equation of all quadratic surfaces in the rectangular $(x,\,y,\,z)$-coordinate system is
+\begin{align}
+ Ax^2+By^2+Cz^2+2A'yz+2B'zx+2C'xy+2A''x+2B''y+2C''z+D = 0
+\end{align}
+where $A,\,B,\,C,\,A',\,B',\,C',\,A'',\,B'',\,C'',\,D$ are constants and at least one of the six first is distinct from zero.\, The equation of the tangent plane of the surface, with $(x_0,\,y_0,\,z_0)$ as the point of tangency, is
+$$Ax_0x+By_0y+Cz_0z+A'(z_0y+y_0z)+B'(x_0z+z_0x)+C'(y_0x+x_0y)+
+  A''(x+x_0)+B''(y+y_0)+C''(z+z_0)+D = 0.$$
+This is said to be obtained from (1) by polarizing it.
+
+\textbf{Example.} \,The tangent plane of the {\em elliptic paraboloid}\, $4x^2+9y^2 = 2z$\, set in the point\, $(x_0,\,y_0,\,z_0)$\, of the surface is\, $4x_0x+9y_0y = z+z_0$,\, and especially in the point\, $(\frac{1}{2},\,\frac{1}{3},\,1)$\, it is\, $2x+3y -z-1 = 0$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LengthsOfAngleBisectors}
+\pmcreated{2013-03-22 18:26:50}
+\pmmodified{2013-03-22 18:26:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{lengths of angle bisectors}
+\pmrecord{9}{41108}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmrelated{Incenter}
+\pmrelated{AngleBisectorAsLocus}
+\pmrelated{LengthsOfMedians}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+In any triangle, the \PMlinkescapetext{lengths} $w_a$, $w_b$, $w_c$ of the angle bisectors opposing the sides $a$, $b$, $c$, respectively, are
+\begin{align}
+w_a = \frac{\sqrt{bc\,[(b\!+\!c)^2\!-\!a^2]\,}}{b\!+\!c},
+\end{align}
+\begin{align}
+w_b = \frac{\sqrt{ca\,[(c\!+\!a)^2\!-\!b^2]\,}}{c\!+\!a},
+\end{align}
+\begin{align}
+w_c = \frac{\sqrt{ab\,[(a\!+\!b)^2\!-\!c^2]\,}}{a\!+\!b}.
+\end{align}
+
+{\em Proof.}\; By the symmetry, it suffices to prove only (1).
+
+According the angle bisector theorem, the bisector $w_a$ divides the side $a$ into the portions 
+$$\frac{b}{b\!+\!c}\cdot a \;=\; \frac{ab}{b\!+\!c}, \qquad \frac{c}{b\!+\!c}\cdot a \;=\; \frac{ca}{b\!+\!c}.$$
+If the angle opposite to $a$ is $\alpha$, we apply the law of cosines to the half-triangles \PMlinkescapetext{separated} by $w_a$:
+\begin{align}
+\begin{cases}
+2w_ab\cos\frac{\alpha}{2} \;=\; w_a^2\!+\!b^2\!-\!\left(\frac{ab}{b+c}\right)^2\\
+2w_ac\cos\frac{\alpha}{2} \;=\; w_a^2\!+\!c^2\!-\!\left(\frac{ca}{b+c}\right)^2
+\end{cases}
+\end{align}
+For eliminating the angle $\alpha$, the equations (4) are divided sidewise, when one gets
+$$\frac{b}{c} \;=\; \frac{w_a^2\!+\!b^2\!-\!\left(\frac{ab}{b+c}\right)^2}{w_a^2\!+\!c^2\!-\!\left(\frac{ca}{b+c}\right)^2},$$
+from which one can after some routine manipulations solve $w_a$, and this can be simplified to the form (1).
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Endpoint}
+\pmcreated{2013-03-22 16:06:05}
+\pmmodified{2013-03-22 16:06:05}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{endpoint}
+\pmrecord{12}{38165}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{03-00}
+\pmsynonym{end point}{Endpoint}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+An \emph{endpoint} of a line segment $L$ is a point that belongs to the boundary of $L$.  Note that every line segment has two distinct endpoints.  For example, if $V$ is a vector space and $a,b \in V$ with $b \neq 0$, then the endpoints of the line segment $\displaystyle L = \{ a+tb : t\in[0,1]\}$ are $a$ and $a+b$.
+
+\begin{center}
+\begin{pspicture}(0,-0.5)(4,0.1)
+\rput[a](0,0.06){.}
+\psline(0,0)(4,0)
+\psdots(0,0)(4,0)
+\rput[a](0,-0.3){$a$}
+\rput[a](4,-0.3){$a+b$}
+\end{pspicture}
+\end{center}
+
+Note that the endpoints of the open line segment $\displaystyle L=\{a+tb:t\in(0,1)\}$ are also $a$ and $a+b$.
+
+\begin{center}
+\begin{pspicture}(0,-0.5)(4,0.1)
+\rput[a](0,0.06){.}
+\psline{o-o}(0,0)(4,0)
+\rput[a](0,-0.3){$a$}
+\rput[a](4,-0.3){$a+b$}
+\end{pspicture}
+\end{center}
+
+Endpoints can be defined in a \PMlinkescapetext{similar} manner for other geometric \PMlinkescapetext{objects}.  These include rays, \PMlinkname{arcs}{PathConnected}, and \PMlinkname{intervals}{Interval}.
+
+\begin{itemize}
+\item Rays have one endpoint.
+
+\begin{center}
+\begin{pspicture}(0,-0.1)(4,0.1)
+\psline{->}(0,0)(4,0)
+\psdot(0,0)
+\end{pspicture}
+\end{center}
+
+\item \PMlinkescapetext{Arcs} have two endpoints.
+
+\begin{center}
+\begin{pspicture}(0,0)(4,2)
+\psarc(2,0){2}{0}{180}
+\psdots(0,0)(4,0)
+\end{pspicture}
+\end{center}
+
+\item \PMlinkescapetext{Intervals} can have zero, one, or two endpoints, depending on whether they are bounded above and/or below.  See the entry on \PMlinkname{intervals}{Interval} for more details.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

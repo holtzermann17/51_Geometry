@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminingSignsOfTrigonometricFunctions}
+\pmcreated{2013-03-22 16:06:08}
+\pmmodified{2013-03-22 16:06:08}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{determining signs of trigonometric functions}
+\pmrecord{11}{38166}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-01}
+\pmclassification{msc}{97D40}
+\pmsynonym{all snow tastes cold}{DeterminingSignsOfTrigonometricFunctions}
+\pmsynonym{all students take calculus}{DeterminingSignsOfTrigonometricFunctions}
+\pmrelated{Trigonometry}
+\pmrelated{CalculatorTrigonometricFunctions}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\begin{document}
+There are at least two mnemonic devices for determining the sign \PMlinkescapetext{of} a trigonometric function at a given angle.  They are ``all snow tastes cold'' and (the more mathematical version) ``all students take calculus''.
+
+The first \PMlinkescapetext{word} in both of these, ``all'', indicates that, if an angle lies in the first quadrant, then, when any trigonometric function is applied to it, the result is positive.
+
+The second \PMlinkescapetext{word} in both of these starts with the letter ``s'', which indicates that, if the terminal ray of an angle lies in the second quadrant, then the only trigonometric functions that can be applied to it that yield a positive result are $\sin$ and its reciprocal $\csc$.
+
+The third \PMlinkescapetext{word} in both of these starts with the letter ``t'', which indicates that, if the terminal ray of an angle lies in the third quadrant, then the only trigonometric functions that can be applied to it that yield a positive result are $\tan$ and its reciprocal $\cot$.
+
+The fourth \PMlinkescapetext{word} in both of these starts with the letter ``c'', which indicates that, if the terminal ray of an angle lies in the fourth quadrant, then the only trigonometric functions that can be applied to it that yield a positive result are $\cos$ and its reciprocal $\sec$.
+
+Because of how these mnemonic devices work, it is clear that they are in \PMlinkescapetext{terms} of the calculator trigonometric functions.
+
+Below is a picture that illustrates how the mnemonic device ``all students take calculus'' works:
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\psline{<->}(-3,0)(3,0)
+\psline{<->}(0,-3)(0,3)
+\rput[l](0.5,2.5){all are}
+\rput[l](0.5,2){positive}
+\rput[l](0.5,1.5){here}
+\rput[l](0.3,0.3){I ``all''}
+\rput[r](-0.5,2.5){$\sin$ and $\csc$}
+\rput[r](-0.5,2){are positive}
+\rput[r](-0.5,1.5){here}
+\rput[r](-0.3,0.3){``students'' II}
+\rput[r](-0.3,-0.3){``take'' III}
+\rput[r](-0.5,-1.5){$\tan$ and $\cot$}
+\rput[r](-0.5,-2){are positive}
+\rput[r](-0.5,-2.5){here}
+\rput[l](0.3,-0.3){IV ``calculus''}
+\rput[l](0.5,-1.5){$\cos$ and $\sec$}
+\rput[l](0.5,-2){are positive}
+\rput[l](0.5,-2.5){here}
+\rput[a](3,-0.2){$x$}
+\rput[r](-0.2,3){$y$}
+\rput[l](-3,0){.}
+\rput[b](0,-3){.}
+\end{pspicture}
+\end{center}
+
+For angles whose terminal ray lies on the boundary of two quadrants, the matter of determining sign is not as \PMlinkescapetext{simple}, but it is still possible to do so through use of the mnemonic device.  If, for both of the boundary quadrants, the sign \PMlinkescapetext{of} the trigonometric function is positive, then the value of the trigonometric function applied to the angle is $1$.  If, for both of the boundary quadrants, the sign \PMlinkescapetext{of} the trigonometric function is negative, then the value of the trigonometric function applied to the angle is $-1$.  If the sign \PMlinkescapetext{of} the trigonometric function is different in the two boundary quadrants, then the value of the trigonometric function applied to the angle is either $0$ or undefined.
+
+{\sl Example:\/}  Since the terminal ray of $\displaystyle \frac{2\pi}{3}$ lies in the second quadrant, we have that $\displaystyle \sin \left( \frac{2\pi}{3} \right)>0$, and $\displaystyle \cos \left( \frac{2\pi}{3} \right)<0$.
+
+$\bigg($ In fact, $\displaystyle \sin \left( \frac{2\pi}{3} \right)=\frac{\sqrt{3}}{2}$ and $\displaystyle \cos \left( \frac{2\pi}{3} \right)=\frac{-1}{2}$. $\bigg)$
+
+{\sl Example:\/} Since the terminal ray of $\displaystyle \frac{7\pi}{2}$ lies on the boundary of the third and fourth quadrants and, when $\csc$ is applied to any angle whose terminal ray lies in either the third or fourth quadrant, the result is negative, we have that $\displaystyle \csc \left( \frac{7\pi}{2} \right)=-1$.
+%%%%%
+%%%%%
+\end{document}

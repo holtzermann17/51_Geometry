@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CissoidOfDiocles}
+\pmcreated{2013-03-22 17:17:22}
+\pmmodified{2013-03-22 17:17:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{cissoid of Diocles}
+\pmrecord{16}{39632}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51-00}
+\pmsynonym{cissoid}{CissoidOfDiocles}
+\pmsynonym{ivy curve}{CissoidOfDiocles}
+\pmrelated{Parameter}
+\pmrelated{AnalyticGeometry}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{type}
+Let $c$ be a circle with diameter \,$OA = a$.  Set a tangent line $t$ of the circle at the point $A$.  For any point $C$ of $c$ let $P$ be the intersection point of the secant line $OC$ and the tangent line $t$.  Determine on the secant line between $O$ and $P$ the point $Q$ such that
+$$PQ \;=\; OC.$$
+Then the locus of the point $Q$ is the {\em cissoid of Diocles}.  The name is derived from Greek $\varkappa\iota\sigma\sigma\acute{o}\varsigma$ (kissos) `ivy', $\varepsilon\iota\delta{o}\varsigma$ (eidos) `form, kind, type'.
+
+The cissoid is symmetric with regard to the line $OA$, having at $O$ a cusp.  The line $t$ is the asymptote of the curve.
+
+For deriving the equation of the cissoid, chose the ray $OA$ for the positive $x$-axis.  Let $\varphi$ be the slope angle (polar angle) of any $C$ on $c$.  From the triangle $OAP$ we see that\, $\displaystyle OP = \frac{a}{\cos\varphi}$.  Since $\angle ACO$ is a right angle, we have\, $OC = a\cos\varphi$.  It follows that\, 
+$\displaystyle OQ = r = \frac{a}{\cos\varphi}-a\cos\varphi$,\, that is,
+\begin{align}              
+r \;=\; a\sin\varphi\tan\varphi.
+\end{align}
+For obtaining the equation in rectangular coordinates, we may write (1) as\, $r^2 = (r\sin\varphi)\,a\tan\varphi$, i.e.\, $\displaystyle x^2\!+\!y^2 = ya\cdot\frac{y}{x}$,\, whence\, $(x^2\!+\!y^2)x = ay^2$,\, or
+\begin{align}
+y \;=\; \pm{x}\,\sqrt{\frac{x}{a\!-\!x}}.
+\end{align}
+Thus it's a question of an algebraic curve.\, The cissoid has also the parametric presentation
+\begin{align}
+x \;=\; \frac{au^2}{1\!+\!u^2}, \quad y \;=\; \frac{au^3}{1\!+\!u^2}.
+\end{align}
+
+\textbf{Note.}\, If we apply the inversion formulae
+$$x \;\mapsto\; \frac{x}{x^2\!+\!y^2}, \quad y \;\mapsto\; \frac{y}{x^2\!+\!y^2}$$
+(where\, $r = 1$) to the parabola \,$y = \pm\sqrt{x}$,\, we get as the image of the parabola the cissoid\, 
+$\displaystyle{y} = \pm{x}\,\sqrt{\frac{x}{1-x}}$;\, correspondingly the image of this cissoid is that parabola.
+
+\begin{center}
+\begin{pspicture}(-5.5,-6.5)(5.5,5)
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-1.5,-5.5)(3.5,5.5)
+\rput(3.6,-0.2){$x$}
+\rput(0.2,5.45){$y$}
+\rput(2.2,4.51){$t$}
+\psline[linestyle=dashed](2,-5)(2,5)
+\psplot[linecolor=blue]{0.0}{1.8}{x 1 mul 2 x sub div sqrt x mul}
+\psplot[linecolor=blue]{0.0}{1.8}{x 1 mul 2 x sub div sqrt 0 x sub mul}
+\rput(1,-6){$\mbox{The cissoid\,\,}y = \pm x\sqrt{\frac{x}{2-x}}$}
+\end{pspicture}
+\end{center}
+The form of the cissoid of Diocles resembles the tractrix.
+
+%%%%%
+%%%%%
+\end{document}

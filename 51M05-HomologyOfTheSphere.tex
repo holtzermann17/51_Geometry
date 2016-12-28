@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomologyOfTheSphere}
+\pmcreated{2013-03-22 13:46:49}
+\pmmodified{2013-03-22 13:46:49}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{homology of the sphere}
+\pmrecord{14}{34490}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+%\pmkeywords{cohomology}
+%\pmkeywords{sphere}
+\pmrelated{sphere}
+\pmrelated{HomologyTopologicalSpace}
+\pmrelated{Sphere}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+Every loop on the sphere $S^2$ is contractible to a point, so its fundamental group, $\pi_1(S^2)$, is trivial.
+
+Let $H_n(S^2,\Z)$ denote the $n$-th homology group of $S^2$.  We can compute all of these groups using the basic results from algebraic topology:
+\begin{itemize} 
+\item $S^2$ is a compact orientable smooth manifold, so $H_2(S^2,\Z)=\Z$;
+\item $S^2$ is connected, so $H_0(S^2,\Z)=\Z$;
+\item $H_1(S^2,\Z)$ is the abelianization of $\pi_1(S^2)$, so it is also trivial;
+\item $S^2$ is two-dimensional, so for $k>2$, we have $H_k(S^2,\Z)=0$
+\end{itemize}
+
+In fact, this pattern generalizes nicely to higher-dimensional spheres:
+
+\begin{align*}
+H_k(S^n, \Z)=
+\begin{cases}
+\Z&k=0,n\\
+0&{\rm else}
+\end{cases}
+\end{align*}
+
+This also provides the proof that the hyperspheres $S^n$ and $S^m$ are non-homotopic for $n\neq m$, for this would imply an isomorphism between their homologies.
+%%%%%
+%%%%%
+\end{document}

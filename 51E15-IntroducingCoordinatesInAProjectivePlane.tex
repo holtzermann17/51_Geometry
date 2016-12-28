@@ -1,0 +1,196 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntroducingCoordinatesInAProjectivePlane}
+\pmcreated{2013-03-22 19:14:22}
+\pmmodified{2013-03-22 19:14:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{introducing coordinates in a projective plane}
+\pmrecord{19}{42164}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51E15}
+\pmclassification{msc}{51N15}
+\pmclassification{msc}{05B25}
+\pmsynonym{slope point}{IntroducingCoordinatesInAProjectivePlane}
+\pmdefines{line at infninity}
+\pmdefines{point at infinity}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+It is well-known that if one starts out with a field (or a division ring) $k$, one can construct a projective space by taking sets of the form $\lbrace r(a_1,\ldots,a_n)\mid r,a_i\in k, \mbox{ not all }a_i=0\rbrace$ as points of the space, which also serve as ``coordinates'' of the points.  With the algebraic properties of $k$, one can easily show that all of the axioms of projective geometry are satisfied.
+
+Can we reverse the process, starting with the geometric axioms, and then constructing a coordinate system for the points of the geometry, and at the same time deriving an algebraic system supporting the coordinate system?  If so, what will this algebraic system be, a field, a division ring, or something else?
+
+The answer to the first question is yes!  In fact, the construction is not too dissimilar to how the Cartesian coordinate system is constructed for Euclidean geometry.  In this entry, we confine ourselves to the construction of a coordinate system for a projective plane.
+
+Before proceeding to the construction, recall that a projective plane consists a set of points, a set of lines, and an incidence relation between the points and the lines, such that every two distinct points are incident with a unique line, two distinct lines are incident with a unique point, and, to avoid non-degenerate cases, the plane contains a quandrangle (four pairwise distinct points, no three of which are collinear).  Also, for any two distinct points $P,Q$, we write $PQ$ the line incident with $P$ and $Q$, and for any two distinct lines $\ell_1,\ell_2$, we write $\ell_1\cap \ell_2$ their intersection (the point incident with both lines).
+
+There are at least two ways of doing this.  Both methods start with a quandrangle, say, points $O,I,X,Y$.  We call $O$ the origin, lines $OX$ and $OY$ are the $X$ and $Y$ axes, while line $\ell:=XY$ is the ``line at infinity'', and $\iota:=OI$ the ``identity line'' (think of the slope 1 line on the Euclidean plane).  
+\begin{center}
+\begin{pspicture}(-4,-3)(4,3)
+%\psset{unit=2pt}
+\psline{<->}(-4,-3)(-1,3)
+\psline{<->}(-4.5,-2.5)(3.5,-2.5)
+\psline{<->}(3,-3)(-1.5,3)
+\psline{<->}(-4.5,-2.835)(2.5,0)
+\psdots[linecolor=black,dotsize=5pt](-2.5,-2.025)
+\psdots[linecolor=black,dotsize=5pt](-3.75,-2.5)
+\psdots[linecolor=black,dotsize=5pt](-1.2,2.6)
+\psdots[linecolor=black,dotsize=5pt](2.625,-2.5)
+\uput[u](-2.5,-2){$I$}
+\uput[l](-3.7,-2.25){$O$}
+\uput[r](-1,2.55){$Y$}
+\uput[r](2.5,-2.1){$X$}
+\uput[r](0.05,1.155){$\ell$}
+\uput[u](-0.75,-1.3163){$\iota$}
+\uput[d](-0.6,-2.5){$X$-axis}
+\uput[l](-2.35,0.15){$Y$-axis}
+\end{pspicture}
+\end{center}
+
+As far as coordinates go, points on $\ell$ will have single coordinates, while others will have pairs of coordinates.  The first method goes as follows:
+\begin{enumerate}
+\item Label points on $\iota$, so that the label for $O$ is $0$ and $I$ is $1$.  Call this set of labels $\mathcal{R}$.
+\item If a point on $\iota$ but not on $\ell$ has label $p$, then let $(p,p)$ be its coordinates.  In particular, $O$ and $I$ have coordinates $(0,0)$ and $(1,1)$ respectively.
+\item For any point $P$ not on $\ell$, if the coordinates of $YP \cap \iota$ and $XP \cap \iota$ are $(p,p)$ and $(q,q)$ respectively, then let $(p,q)$ be the coordinates of $P$.  In particular, points on the $X$-axis have coordinates of the form $(p,0)$ and those on the $Y$-axis have the form $(0,q)$.  
+\begin{center}
+\begin{pspicture}(-4,-3)(4,3)
+%\psset{unit=2pt}
+\psline{<->}(-4,-3)(-1,3)
+\psline{<->}(-4.5,-2.5)(3.5,-2.5)
+\psline{<->}(3,-3)(-1.5,3)
+\psline{<->}(-4.5,-2.835)(2.5,0)
+\psdots[linecolor=black,dotsize=5pt](-2.5,-2.025)
+\psdots[linecolor=black,dotsize=5pt](-3.75,-2.5)
+\psdots[linecolor=black,dotsize=5pt](-1.2,2.6)
+\psdots[linecolor=black,dotsize=5pt](2.625,-2.5)
+\uput[u](-2.5,-2){$(1,1)$}
+\uput[l](-3.7,-2.25){$(0,0)$}
+\uput[r](-1,2.55){$Y$}
+\uput[r](2.5,-2.1){$X$}
+\psline{<->}(-1.2,3)(-1.5,-3)
+\psline{<->}(3.25,-2.85)(-3.5,1)
+\psdots[linecolor=black,dotsize=5pt](-1.361,-0.22)
+\psdots[linecolor=black,dotsize=5pt](-1.4296,-1.5915)
+\psdots[linecolor=black,dotsize=5pt](0.0166,-1.0058)
+\uput[r](-1.361,0){$P(p,q)$}
+\uput[r](-1.45,-1.85){$(p,p)$}
+\uput[d](0.0166,-1.0058){$(q,q)$}
+\end{pspicture}
+\end{center}
+
+So far, we have coordinatized all points on the plane, except those on $\ell$.
+\item Let $\mu:=YI$.  Then any point on $\mu$, except $Y$ itself, has coordinates of the form $(1,m)$ for some label $m$.
+\item Now, for any point $Q\ne Y$ on $\ell$, if $OQ\cap \mu$ has coordinates $(1,m)$, then let $(m)$ be the coordinate of $Q$.  In particular, $X$ has coordinate $(0)$, and $\iota \cap \ell$ has coordinate $(1)$.
+\item Finally, the only point without a coordinate is $Y$.  We let $(\infty)$ be its coordinate, where $\infty$ is a symbol not in $\mathcal{R}$.
+\begin{center}
+\begin{pspicture}(-4,-3)(4,3)
+%\psset{unit=2pt}
+\psline{<->}(-4,-3)(-1,3)
+\psline{<->}(-4.5,-2.5)(3.5,-2.5)
+\psline{<->}(3,-3)(-1.5,3)
+\psline{<->}(-4.5,-2.835)(2.5,0)
+\psdots[linecolor=black,dotsize=5pt](-2.5,-2.025)
+\psdots[linecolor=black,dotsize=5pt](-3.75,-2.5)
+\psdots[linecolor=black,dotsize=5pt](-1.2,2.6)
+\psdots[linecolor=black,dotsize=5pt](2.625,-2.5)
+\uput[r](-2.5,-2.15){$(1,1)$}
+\uput[l](-3.7,-2.25){$(0,0)$}
+\uput[r](-1,2.55){$(\infty)$}
+\uput[r](2.5,-2.1){$(0)$}
+\psline{<->}(-2.7741,-3)(-1.0876,3)
+\uput[r](-1.8,0.8){$\mu$}
+\psline{<->}(-4.3382,-3)(1.25,1.75)
+\psdots[linecolor=black,dotsize=5pt](-2.2831,-1.2531)
+\uput[r](-2.2831,-1.2531){$(1,m)$}
+\psdots[linecolor=black,dotsize=5pt](0.1431,0.8092)
+\uput[r](0.2,0.8092){$(m)$}
+\psdots[linecolor=black,dotsize=5pt](1.1577,-0.5436)
+\uput[r](1.25,-0.65){$(1)$}
+\end{pspicture}
+\end{center}
+
+\end{enumerate}
+
+Where as the first method points on the identity line get coordinatized first, points on the axes get coordinatized first in the second method, modifying only steps 2 and 3 of method 1:
+\begin{itemize}
+\item[2'] A point $P$ on the $X$ axis not on $\ell$ has coordinates $(p,0)$ if $p$ is the label of the point $PY\cap \iota$.  A point $Q$ on the $Y$ axis not on $\ell$ has coordinates $(0,q)$ if $q$ is the label of the point $QX \cap \iota$.
+\item[3'] Any point $A$ not on $\ell$ has coordinates $(p,q)$ if $(p,0)$ are the coordinates of $AY\cap X$-axis, and $(0,q)$ are the coordinates of the $AX\cap Y$-axis.
+\end{itemize}
+
+The two methods produce the same coordinate system.  In other words, if a point has coordinate $x$ using the first method, then it has coordinate $x$ using the second method, and vice versa.  Here $x$ could be $\infty$, a single coordinate, or a pair of coordinates.
+
+With this coordinatization, we may identify points of the projective plain with their coordinates.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item The reason why we call $\ell$ ($=XY$) the ``line at infinity'' is this: imagine if we stretch points $X$ and $Y$ to infinity, then we basically have an affine plane!  More precisely, call points on $\ell$ ``points at infinity'', and any two lines that are not $\ell$ ``parallel'' if they meet at a point at infinity.  Then, by removing $\ell$, along with all the points on it, it is not hard to see that the remaining points, lines, and the inherited incidence relation form an affine plane.
+\item Moreover, the coordinates of points at infinity can be thought of as slopes, in the following sense: if two (projective) lines meet at $(m)$, then they are parallel (as affine lines), both having the same slope ($m$).  This is the reason why a point at infinity is also called a \emph{slope point}.  So let us formally define the \emph{slope} of a line not equal to $\ell$ as $m$, where $(m)$ is its intersection with $\ell$.  From this, we see that the $X$-axis has slope $0$, the identity line $\iota$ has slope $1$, and the $Y$-axis has slope $\infty$.
+\item Another concept borrowed from Euclidean geometry is that of a $Y$-intercept: a line other than the $Y$-axis has \emph{$Y$-intercept} $b$ if it intersects the $Y$-axis at $(0,b)$.  Note that two lines with the same slope and $Y$-intercept are identical.
+\item Lines can be coordinatized too.  There are three cases:
+\begin{enumerate}
+\item Any line not through $(\infty)$ (the point $Y$) is given coordinates $[\,m,b\,]$ where $m$ and $b$ are its slope and $Y$-intercept respectively.  So the $X$-axis becomes $[\,0,0\,]$ and $\iota$ the identity line becomes $[\,1,0\,]$.  
+\item Any line through $(\infty)$, other than $\ell$, gets coordinate $[\,a\,]$ if it meets the $X$-axis at $(a,0)$.  So the $Y$-axis becomes $[\,0\,]$.  
+\item Finally, $\ell$ is given the coordinate $[\,\infty\,]$.
+\end{enumerate}
+\begin{center}
+\begin{pspicture}(-4,-3)(4,3)
+%\psset{unit=2pt}
+\psline{<->}(-4,-3)(-1,3)
+\psline{<->}(-4.5,-2.5)(3.5,-2.5)
+\psline{<->}(3,-3)(-1.5,3)
+\psline{<->}(-4,-1.35)(2.5,0)
+\psdots[linecolor=black,dotsize=5pt](-3.75,-2.5)
+\psdots[linecolor=black,dotsize=5pt](-1.2,2.6)
+\psdots[linecolor=black,dotsize=5pt](2.625,-2.5)
+\uput[l](-3.7,-2.25){$(0,0)$}
+\uput[r](-1,2.55){$(\infty)$}
+\uput[r](2.5,-2.1){$(0)$}
+\uput[r](0.05,1.155){$[\,\infty\,]$}
+\uput[d](-0.6,-2.5){$[\,0,0\,]$}
+\uput[l](-2,1.155){$[\,0\,]$}
+\psdots[linecolor=black,dotsize=5pt](-3.0794,-1.1588)
+\psdots[linecolor=black,dotsize=5pt](0.9859,-0.3145)
+\uput[u](-3.5,-1.1588){$(0,b)$}
+\uput[r](1.25,-0.5){$(m)$}
+\uput[d](-1.0468,-0.7366){$[\,m,b\,]$}
+\end{pspicture}
+\end{center}
+
+Notice that Lines through $Y$ can not be given coordinates of the form $[\,m,b\,]$, lest they will all receive the same coordinates $[\,\infty,\infty\,]$. 
+\end{itemize}
+
+We will answer the second question in another entry.
+
+\begin{thebibliography}{7}
+\bibitem{MH} M. Hall, Jr., {\it The Theory of Groups}, Macmillan (1959)
+\bibitem{RA} R. Artzy, {\it Linear Geometry}, Addison-Wesley (1965)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

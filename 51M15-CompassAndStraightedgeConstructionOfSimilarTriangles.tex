@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompassAndStraightedgeConstructionOfSimilarTriangles}
+\pmcreated{2013-03-22 17:16:02}
+\pmmodified{2013-03-22 17:16:02}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{compass and straightedge construction of similar triangles}
+\pmrecord{7}{39606}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51F99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{label}
+\PMlinkescapeword{perpendicular}
+
+Let $a>0$ and $b>0$.  If line segments of lengths $a$ and $b$ are constructible, one can construct a line segment of length $ab$ using compass and straightedge as follows:
+
+\begin{enumerate}
+\item Draw a line segment of length $a$.  Label its endpoints as $C$ and $D$.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(6,1)
+\rput[a](0,0.08){.}
+\psline[linecolor=blue](0,0)(4,0)
+\psdots(0,0)(4,0)
+\rput[a](-0.4,-0.3){$C$}
+\rput[a](4,-0.3){$D$}
+\end{pspicture}
+\end{center}
+
+\item Extend the line segment past both $C$ and $D$
+
+\begin{center}
+\begin{pspicture}(-1,-1)(6,1)
+\rput[a](0,0.08){.}
+\rput[l](-1,0){.}
+\rput[r](6,0){.}
+\psline[linecolor=blue]{<->}(-1,0)(6,0)
+\psline(0,0)(4,0)
+\psdots(0,0)(4,0)
+\rput[a](-0.4,-0.3){$C$}
+\rput[a](4,-0.3){$D$}
+\end{pspicture}
+\end{center}
+
+\item Erect the perpendicular to $\overleftrightarrow{CD}$ at $C$.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(6,3)
+\rput[l](-1,0){.}
+\rput[r](6,0){.}
+\rput[a](0,3){.}
+\rput[b](0,-1){.}
+\psline{<->}(-1,0)(6,0)
+\psarc[linecolor=blue](-0.5,0){0.6}{-50}{50}
+\psarc[linecolor=blue](0.5,0){0.6}{130}{230}
+\psline[linecolor=blue]{<->}(0,-1)(0,3)
+\psdots(0,0)(4,0)
+\rput[a](-0.4,-0.3){$C$}
+\rput[a](4,-0.3){$D$}
+\end{pspicture}
+\end{center}
+
+\item Use the compass to determine a point $E$ on the erected perpendicular such that $CE=1$.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(6,3)
+\rput[l](-1,0){.}
+\rput[r](6,0){.}
+\rput[a](0,3){.}
+\rput[b](0,-1){.}
+\psline{<->}(-1,0)(6,0)
+\psarc(-0.5,0){0.6}{-50}{50}
+\psarc(0.5,0){0.6}{130}{230}
+\psline{<->}(0,-1)(0,3)
+\psarc[linecolor=blue](0,0){2}{80}{100}
+\psline[linecolor=blue](0,0)(0,2)
+\psdots(0,0)(4,0)(0,2)
+\rput[a](-0.4,-0.3){$C$}
+\rput[a](4,-0.3){$D$}
+\rput[r](-0.4,1.8){$E$}
+\end{pspicture}
+\end{center}
+
+\item Use the compass to determine a point $F$ on $\overrightarrow{CE}$ such that $CF=b$.
+
+Note that the pictures indicate that $b>1$, but the exact same procedure works if $0<b\le 1$.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(6,3)
+\rput[l](-1,0){.}
+\rput[r](6,0){.}
+\rput[a](0,3){.}
+\rput[b](0,-1){.}
+\psline{<->}(-1,0)(6,0)
+\psarc(-0.5,0){0.6}{-50}{50}
+\psarc(0.5,0){0.6}{130}{230}
+\psline{<->}(0,-1)(0,3)
+\psarc(0,0){2}{80}{100}
+\psarc[linecolor=blue](0,0){2.5}{85}{95}
+\psline[linecolor=blue](0,0)(0,2.5)
+\psdots(0,0)(4,0)(0,2)(0,2.5)
+\rput[a](-0.4,-0.3){$C$}
+\rput[a](4,-0.3){$D$}
+\rput[r](-0.4,1.8){$E$}
+\rput[r](-0.4,2.3){$F$}
+\end{pspicture}
+\end{center}
+
+\item Connect the points $D$ and $E$.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(6,3)
+\rput[l](-1,0){.}
+\rput[r](6,0){.}
+\rput[a](0,3){.}
+\rput[b](0,-1){.}
+\psline{<->}(-1,0)(6,0)
+\psarc(-0.5,0){0.6}{-50}{50}
+\psarc(0.5,0){0.6}{130}{230}
+\psline{<->}(0,-1)(0,3)
+\psarc(0,0){2}{80}{100}
+\psarc(0,0){2.5}{85}{95}
+\psline[linecolor=blue](0,2)(4,0)
+\psdots(0,0)(4,0)(0,2)(0,2.5)
+\rput[a](-0.4,-0.3){$C$}
+\rput[a](4,-0.3){$D$}
+\rput[r](-0.4,1.8){$E$}
+\rput[r](-0.4,2.3){$F$}
+\end{pspicture}
+\end{center}
+
+\item Copy the angle $\angle CDE$ at $F$ to form similar triangles.  Label the intersection of the constructed ray and $\overleftrightarrow{CD}$ as $G$.
+
+Note that, if $0<b<1$, then $F$ will be between $C$ and $E$, and $G$ will be between $C$ and $D$.  Also, if $b=1$, then $F=E$ and $G=D$.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(6,3)
+\rput[l](-1,0){.}
+\rput[r](6,0){.}
+\rput[a](0,3){.}
+\rput[b](0,-1){.}
+\psline{<->}(-1,0)(6,0)
+\psarc(-0.5,0){0.6}{-50}{50}
+\psarc(0.5,0){0.6}{130}{230}
+\psline{<->}(0,-1)(0,3)
+\psarc(0,0){2}{80}{100}
+\psarc(0,0){2.5}{85}{95}
+\psline(0,2)(4,0)
+\psarc[linecolor=blue](0,2){0.4}{250}{350}
+\psarc[linecolor=blue](0,2.5){0.4}{250}{350}
+\psarc[linecolor=blue](0,2.1){0.4}{0}{60}
+\psline[linecolor=blue]{->}(0,2.5)(6,-0.5)
+\psdots(0,0)(4,0)(0,2)(0,2.5)(5,0)
+\rput[a](-0.4,-0.3){$C$}
+\rput[a](4,-0.3){$D$}
+\rput[r](-0.4,1.8){$E$}
+\rput[r](-0.4,2.3){$F$}
+\rput[a](5,-0.3){$G$}
+\end{pspicture}
+\end{center}
+\end{enumerate}
+
+This construction is justified by the following:
+
+\begin{itemize}
+\item Since the angle $\angle CFG$ was copied from the angle $\angle CED$ and the two triangles share the angle $\angle DCE$, then the two triangles $\triangle CED$ and $\triangle CFG$ are similar;
+\item Since $\triangle CED \sim \triangle CFG$, we have that $\displaystyle \frac{CE}{CF}=\frac{CD}{CG}$;
+\item Plugging in $CD=a$, $CE=1$, and $CF=b$ yields that $CG=ab$.
+\end{itemize}
+
+If you are interested in seeing the rules for compass and straightedge constructions, click on the \PMlinkescapetext{link} provided.
+%%%%%
+%%%%%
+\end{document}

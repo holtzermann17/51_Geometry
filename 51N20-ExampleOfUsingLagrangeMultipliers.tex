@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfUsingLagrangeMultipliers}
+\pmcreated{2013-03-22 18:48:12}
+\pmmodified{2013-03-22 18:48:12}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of using Lagrange multipliers}
+\pmrecord{7}{41604}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{26B10}
+\pmsynonym{example of Lagrange multipliers}{ExampleOfUsingLagrangeMultipliers}
+%\pmkeywords{Lagrange multiplier}
+\pmrelated{ParallelismOfTwoPlanes}
+\pmrelated{ExampleNeedingTwoLagrangeMultipliers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+One \PMlinkescapetext{way} to determine the perpendicular distance of the parallel planes
+$$Ax+By+Cz+D \;=\; 0 \quad \mbox{and} \quad Ax+By+Cz+E \;=\; 0$$
+is to use the Lagrange multiplier method.\, In this case we may to minimise the Euclidean distance of a point 
+\,$(x,\,y,\,z)$\, of the former plane to a (fixed) point \,$(x_0,\,y_0,\,z_0)$\, of the latter plane.\\
+
+Thus we have the equation \,$Ax_0+By_0+Cz_0+E \,=\, 0$\, which we can subtract from the first plane equation, getting
+\begin{align}
+g \;:=\; A(x-x_0)+B(y-y_0)+C(z-x_0)+D-E \;=\; 0.
+\end{align}
+This is the (only) constraint equation for minimising the \PMlinkname{square}{SquareOfANumber}
+\begin{align}
+f \;:=\; (x-x_0)^2+(y-y_0)^2+(z-x_0)^2
+\end{align}
+of the distance of the points.
+
+The polynomial functions $f$ and $g$ satisfy the differentiability requirements.\, Accordingly, we can find the minimising point\, $(x,\,y,\,z)$\, by considering the system of equations formed by (1) and
+\begin{align}
+\begin{cases}
+\frac{\partial f}{\partial x}+\lambda\frac{\partial g}{\partial x} 
+\;\equiv\; 2(x-x_0)+\lambda A \;=\; 0,\\
+\frac{\partial f}{\partial y}+\lambda\frac{\partial g}{\partial y} 
+\;\equiv\; 2(y-y_0)+\lambda B \;=\; 0,\\
+\frac{\partial f}{\partial z}+\lambda\frac{\partial g}{\partial z} 
+\;\equiv\; 2(z-z_0)+\lambda C \;=\; 0.
+\end{cases}
+\end{align}
+We solve from (3) the differences
+$$x-x_0 \;=\; -\frac{A\lambda}{2}, \quad y-y_0 \;=\; -\frac{B\lambda}{2}, \quad z-z_0 \;=\; -\frac{C\lambda}{2}$$
+and set them into (1).\, It then yields the value 
+$$\lambda \;=\; \frac{2(D-E)}{A^2+B^2+C^2}$$
+of the Lagrange multiplier, which we substitute into the preceding three equations obtaining
+$$x-x_0 \;=\; \frac{A(D-E)}{A^2+B^2+C^2}, \quad y-y_0 \;=\; \frac{B(D-E)}{A^2+B^2+C^2}, 
+\quad z-z_0 \;=\; \frac{C(D-E)}{A^2+B^2+C^2}.$$
+These values give the minimal distance when put into the expression of $\sqrt{f}$:
+$$d \;=\; \sqrt{\frac{(D-E)^2(A^2+B^2+C^2)}{(A^2+B^2+C^2)^2}}.$$
+Hence we have gotten the distance \PMlinkescapetext{formula}
+$$d \;=\; \frac{|D-E|}{\sqrt{A^2+B^2+C^2}}.$$
+
+
+%%%%%
+%%%%%
+\end{document}

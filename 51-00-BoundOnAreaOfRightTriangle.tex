@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundOnAreaOfRightTriangle}
+\pmcreated{2013-03-22 16:30:41}
+\pmmodified{2013-03-22 16:30:41}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{bound on area of right triangle}
+\pmrecord{17}{38688}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\begin{document}
+We may bound the area of a right triangle in terms of its perimeter.
+The derivation of this bound is a good exercise in constrained 
+optimization using Lagrange multipliers.
+
+\begin{theorem}
+If a right triangle has perimeter $P$, then its area is bounded as
+\[
+A \le \frac{3 - 2 \sqrt{2}}{4} P^2
+\]
+with equality when one has an isosceles right triangle.
+\end{theorem}
+
+\begin{proof}
+Suppose a triangle has legs of length $x$ and $y$.  Then its hypotenuse
+has length $\sqrt{x^2 + y^2}$, so the perimeter is given as
+ \[ P = x + y + \sqrt{x^2 + y^2} .\]
+The area, of course, is
+ \[ A = \frac{1}{2} x y .\]
+
+We want to maximize $A$ subject to the constraint that $P$ be constant.
+This means that the gradient of $A$ will be proportional to the gradient
+of $P$.  That is to say, for some constant $\lambda$, we will have
+\begin{eqnarray*}
+\frac{\partial A}{\partial x} &=& \lambda \frac{\partial P}{\partial x} \\
+\frac{\partial A}{\partial y} &=& \lambda \frac{\partial P}{\partial y}
+\end{eqnarray*}
+Together with the constraint, these form a system of three equations
+for the three quantities $x$, $y$, and $\lambda$.  Writing them out
+explicitly,
+\begin{eqnarray*}
+\frac{1}{2} y &=& \lambda \left( 1 + \frac{x}{\sqrt{x^2 + y^2}} \right) \\
+\frac{1}{2} x &=& \lambda \left( 1 + \frac{y}{\sqrt{x^2 + y^2}} \right) \\
+P &=& x + y + \sqrt{x^2 + y^2}
+\end{eqnarray*} 
+Not that we cannot have $\lambda = 0$ because that would mean that all
+sides of our triangle would have zero length.  Hence, we may eliminate 
+$\lambda$ between the first two equations to obtain
+\[
+x \left( 1 + \frac{x}{\sqrt{x^2 + y^2}} \right) =
+y \left( 1 + \frac{y}{\sqrt{x^2 + y^2}} \right),
+\]
+which may be manipulated to yield
+\[
+(x - y) \left( 1 + \frac{x+y}{\sqrt{x^2 + y^2}} \right) = 0.
+\]
+We have two case to consider --- either the first factor or the second
+factor may equal zero.  If the second factor equals zero,
+\[
+1 + \frac{x+y}{\sqrt{x^2 + y^2}} = 0,
+\]
+move the ``1'' to the other side of the equation and cross-multiply
+to obtain
+\[
+x + y = - \sqrt{x^2 + y^2}.
+\]
+Since we want $x \ge 0$ and $y \ge 0$ but the right-hand side is
+non-positive, the only option would be to have a trianagle of 
+zero area.
+%Squaring both sides and expanding,
+%\[
+%x^2 + 2 x y + y^2 = x^2 + y^2.
+%\]
+%Cancelling, we conclude that $x y = 0$ so either $x = 0$ or $y = 0$.
+%Either way, one leg of the triangle would equal zero, so the triangle
+%would have zero area.  This is the minimum, not the maximum, so we
+%move on the next case,
+The other possibility was to have the second factor equal zero,
+which would give
+\[
+x - y = 0.
+\]
+In this case, $x$ equals $y$.  Imposing this condition on the constraint,
+we see that
+\[
+P = (2 + \sqrt{2}) x,
+\]
+so we have the solution
+\begin{eqnarray*}
+x &=& \frac{P}{2 + \sqrt{2}} = \frac{2 - \sqrt{2}}{2} P \\
+y &=& \frac{P}{2 + \sqrt{2}} = \frac{2 - \sqrt{2}}{2} P .
+\end{eqnarray*}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

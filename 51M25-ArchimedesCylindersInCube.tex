@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArchimedesCylindersInCube}
+\pmcreated{2013-03-22 17:20:51}
+\pmmodified{2013-03-22 17:20:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Archimedes' cylinders in cube}
+\pmrecord{7}{39704}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M25}
+\pmclassification{msc}{51-00}
+\pmsynonym{perpendicular cylinders}{ArchimedesCylindersInCube}
+\pmsynonym{cylinders inscribed in cube}{ArchimedesCylindersInCube}
+%\pmkeywords{Archimedes' cylinder}
+\pmrelated{SubstitutionNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+\PMlinkescapeword{cut}
+The following problem has been solved by \textbf{Archimedes}:
+
+Two distinct circular cylinders are inscribed in a cube; the axes thus intersect each other perpendicularly.\, Determine the volume common to both cylinders, when the radius of the base of the cylinders is $r$.
+
+If the solid common to both cylinders is cut with a plane parallel to the axes of both cylinders, the figure of intersection is a square.\, Denote the distance of the plane from the center of the cube be $x$.\, By the Pythagorean theorem, half of the side of the square is $\sqrt{r^2\!-\!x^2}$ and the area of the square is 
+$4(\sqrt{r^2\!-\!x^2})^2$.  Accordingly, we have the function 
+$$A(x) \;:=\; 4(r^2\!-\!x^2)$$
+for the area of the intersection square.\, If we let $x$ here to grow from $0$ to $r$, then half of the given solid is got.\, By the volume \PMlinkescapetext{formula} of the \PMlinkname{parent entry}{VolumeAsIntegral}, the half volume of the solid is
+$$\frac{1}{2}V \;=\; \int_0^r\!4(r^2\!-\!x^2)\,dx \;=\; 4\!\sijoitus{x=0}{\quad r}\!\left(r^2x-\frac{x^3}{3}\right) \;=\; \frac{8}{3}r^3.$$
+So the volume in the question is $\frac{16}{3}r^3$.\, It is $\displaystyle\frac{2}{3}$ of the volume of the cube.
+
+%%%%%
+%%%%%
+\end{document}

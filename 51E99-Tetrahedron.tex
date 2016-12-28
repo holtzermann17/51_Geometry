@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Tetrahedron}
+\pmcreated{2013-03-22 14:26:32}
+\pmmodified{2013-03-22 14:26:32}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{tetrahedron}
+\pmrecord{15}{35956}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51E99}
+%\pmkeywords{Polyhedron}
+\pmrelated{StateOnTheTetrahedron}
+\pmrelated{RegularTetrahedron3}
+\pmrelated{Grafix}
+\pmrelated{Triangle}
+\pmdefines{regular tetrahedron}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\section{Definition}
+
+A \emph{tetrahedron} is a polyhedron with four faces, which are
+triangles.  A tetrahedron is called non-degenerate if the four
+vertices do not lie in the same plane.  For the remainder of this
+entry, we shall assume that all tetrahedra are non-degenerate.
+
+If all six edges of a tetrahedron are equal, it is called a
+\emph{regular tetrahedron}.  The faces of a regular tetrahedron are
+equilateral triangles.
+
+\section{Basic properties}
+
+A tetrahedron has four vertices and six edges.  These six edges can be
+arranged in three pairs such that the edges of a pair do not
+intersect.  A tetrahedron is always convex.
+
+In many ways, the geometry of a tetrahedron is the three-dimensional
+analogue of the geometry of the triangle in two dimensions.  In
+particular, the special points associated to a triangle have their
+three-dimensional analogues.
+
+Just as a triangle always can be inscribed in a unique circle, so too
+a tetrahedron can be inscribed in a unique sphere.  To find the centre
+of this sphere, we may construct the perpendicular bisectors of the
+edges of the tetrahedron.  These six planes will meet in the centre of
+the sphere which passes through the vertices of the tetrahedron.
+
+The six planes which connect an edge with the midpoint of the opposite
+edge (see what was said about edges coming in pairs above) meet in the
+barycentre (a.k.a. centroid, centre of mass, centre of gravity) of the
+tetrahedron.
+
+\section{Mensuration}
+
+Formulas for volumes, areas and lengths associated to a terahedron are
+best obtained and expressed using the method of determinants.  If the
+vertices of the tetrahedron are located at the points $(a_x, a_y,
+a_z)$, $(b_x, b_y, b_z)$, $(c_x, c_y, c_z)$, and $(d_x, d_y, d_z)$,
+then the volume of the tetrahedron is given by the following
+determinant:
+
+\[ \pm\frac{1}{6} \left| \begin{matrix} a_x & a_y & a_z & 1 \\ b_x & b_y
+& b_z & 1 \\ c_x & c_y & c_z & 1 \\ d_x & d_y & d_z & 1 \\
+\end{matrix} \right|. \]
+
+\begin{figure}
+\begin{center}
+\includegraphics{tetrahedron.eps}
+\end{center}
+\caption{A regular tetrahedron}
+\end{figure}
+
+%%%%%
+%%%%%
+\end{document}

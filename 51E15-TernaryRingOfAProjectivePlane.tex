@@ -1,0 +1,169 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TernaryRingOfAProjectivePlane}
+\pmcreated{2013-03-22 19:14:26}
+\pmmodified{2013-03-22 19:14:26}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{ternary ring of a projective plane}
+\pmrecord{13}{42165}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51E15}
+\pmclassification{msc}{51N15}
+\pmclassification{msc}{05B25}
+\pmrelated{ProjectivePlaneOfATernaryRing}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tabls}
+\usepackage{multicol}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In the parent entry, we constructed a coordinate system in a projective plane.  We used a set $\mathcal{R}$ of labels for the points on the identity line as ``values'' for the coordinates.  In this entry, we will equip $\mathcal{R}$ with some operations based on properties of the projective plane, and turn $\mathcal{R}$ into an algebraic system.  In fact, we show that $\mathcal{R}$ with the operations is a ternary ring.
+
+Let $\pi$ be a projective plane, coordinatized by a set $\mathcal{R}$ of symbols, which includes $0$ and $1$.  Let $\ell$ be the designated line of infinity, and $Y$ the intersection of $\ell$ and the $Y$-axis.  Below is a table showing forms of coordinates that points and lines of $\pi$ may have:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+points & lines \\
+\hline\hline
+$(x,y)$ if they do not lie on $\ell$ & $[\,m,b\,]$ if they do not pass through $Y$ \\
+\hline
+$(m)$ if they lie $\ell$ but not $Y$ & $[\,x\,]$ if they pass through $Y$ but are not $\ell$ \\
+\hline
+$(\infty)$ if it is the point $Y$ & $[\,\infty\,]$ if it is $\ell$ \\
+\hline
+\end{tabular}
+\end{center}
+What are the relationships between the coordinates of lines and the coordinates of those points incident with the lines?  There are three cases:
+\begin{enumerate}
+\item If the line is $[\,\infty\,]$, the points on it have the form $(m)$, where $m\in \mathcal{R}\cup \lbrace \infty\rbrace$,  
+\item If the line is of the form $[\,x\,]$ where $x\ne \infty$, the points on it (other than $Y$ itself) have the form $(x,y)$,
+\item If the line is of the form $[\,m,b\,]$, then a point on it either has the form $(x,y)$ or is $(m)$.
+\end{enumerate}
+The last case is the most interesting.  In particular, what is the relationship among $m,b,x,y$?  The following four equations show us that any three of them determine the remaining one uniquely:
+\begin{multicols}{2}{
+\begin{enumerate}
+\item[S.] $(0,b)(x,y)\cap [\,\infty\,]=(m)$,
+\item[T.] $(m)(x,y)\cap [\,0\,]=(0,b)$,
+\item[U.] $(m)(0,b)\cap [\,x\,]=(x,y)$,
+\item[V.] $(m)(0,b) \cap [\,0,y\,]=(x,y)$.
+\end{enumerate}
+}\end{multicols}
+Equations $S,T$ may be illustrated by the following figure:
+\begin{center}
+\begin{pspicture}(-4,-2)(4,3)
+\psset{unit=25pt}
+\psline{<->}(-4,-3)(-1,3)
+\psline{<->}(-4.5,-2.5)(3.5,-2.5)
+\psline{<->}(3,-3)(-1.5,3)
+\psline{<->}(-4,-1.35)(2.5,0)
+\psdots[linecolor=black,dotsize=5pt](-3.75,-2.5)
+\psdots[linecolor=black,dotsize=5pt](-1.2,2.6)
+\psdots[linecolor=black,dotsize=5pt](2.625,-2.5)
+\uput[r](0.05,1.155){$[\,\infty\,]$}
+\uput[l](-2,1.155){$[\,0\,]$}
+\psdots[linecolor=black,dotsize=5pt](-3.0794,-1.1588)
+\psdots[linecolor=black,dotsize=5pt](0.9859,-0.3145)
+\uput[u](-3.5,-1.1588){$(0,b)$}
+\uput[r](1.25,-0.5){$(m)$}
+\psdots[linecolor=black,dotsize=5pt](-0.75,-0.675)
+\uput[d](-0.75,-0.75){$(x,y)$}
+\end{pspicture}
+\end{center}
+and equations $U,V$ are illustrated by the next two figures below:
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\psset{unit=25pt}
+\psline{<->}(-4,-3)(-1,3)
+\psline{<->}(-4.5,-2.5)(3.5,-2.5)
+\psline{<->}(3,-3)(-1.5,3)
+\psline{<->}(-4,-1.35)(2.5,0)
+\psdots[linecolor=black,dotsize=5pt](-3.75,-2.5)
+\psdots[linecolor=black,dotsize=5pt](-1.2,2.6)
+\psdots[linecolor=black,dotsize=5pt](2.625,-2.5)
+\psdots[linecolor=black,dotsize=5pt](-3.0794,-1.1588)
+\psdots[linecolor=black,dotsize=5pt](0.9859,-0.3145)
+\uput[u](-3.5,-1.1588){$(0,b)$}
+\uput[r](1.25,-0.5){$(m)$}
+\psdots[linecolor=black,dotsize=5pt](-0.75,-0.675)
+\uput[r](-0.75,-0.85){$(x,y)$}
+\uput[l](-0.85,0.5){$[\,x\,]$}
+\psline{<->}(-1.255,3)(-0.4305,-3)
+\end{pspicture}
+\hspace{2cm}
+\begin{pspicture}(-3,-3)(3,3)
+\psset{unit=25pt}
+\psline{<->}(-4,-3)(-1,3)
+\psline{<->}(-4.5,-2.5)(3.5,-2.5)
+\psline{<->}(3,-3)(-1.5,3)
+\psline{<->}(-4,-1.35)(2.5,0)
+\psdots[linecolor=black,dotsize=5pt](-3.75,-2.5)
+\psdots[linecolor=black,dotsize=5pt](-1.2,2.6)
+\psdots[linecolor=black,dotsize=5pt](2.625,-2.5)
+\psdots[linecolor=black,dotsize=5pt](-3.0794,-1.1588)
+\psdots[linecolor=black,dotsize=5pt](0.9859,-0.3145)
+\uput[u](-3.5,-1.1588){$(0,b)$}
+\uput[r](1.25,-0.5){$(m)$}
+\psdots[linecolor=black,dotsize=5pt](-0.75,-0.675)
+\uput[u](-0.75,-0.675){$(x,y)$}
+\uput[d](-0.15,-1.25){$[\,0,y\,]$}
+\psline{<->}(-3,0.5417)(3.5497,-3)
+\end{pspicture}
+\end{center}
+
+As a result, the four equations above define four partial functions $S,T,U,V: \mathcal{R}^3 \to \mathcal{R}$, where $$S(b,x,y)=m,\quad T(m,x,y)=b,\quad U(x,m,b)=y,\quad\mbox{and}\quad V(y,m,b)=x.$$
+Out of the four partial functions, $T,U,V$ are total.  $S$ is not, because $S(b,0,y)$ does not exist, as $(0,b)(0,y)\cap [\,\infty\,]=(\infty)$.  It is easy to see that all four partial functions are onto.
+
+In light of the discussion above, we see that $(\mathcal{R},0,1,F)$ is an algebraic system, where $F$ is any of the three total functions.  In the literature, $F=U$ is the choice.  For the remainder of the discussion, we write $y=x*m*b$ to denote $y=U(x,m,b)$.
+
+\begin{prop} $(\mathcal{R},0,1,*)$ is a ternary ring. \end{prop}
+\begin{proof}  There are five conditions to verify:
+\begin{enumerate}
+\item Since $(0)(0,b)\cap [\,x\,]=(x,b)$, we have $x*0*b=b$.  Since $(m)(0,b)\cap [\,0\,]=(0,b)$, we have $0*m*b=b$.  
+\item Next, since $(m)(0,0)\cap [\,1\,]=(1,m)$, we have $1*m*0=m$, and since $(1)(0,0)\cap [\,x\,]=(x,x)$, we have $x*1*0=x$.  
+\item Given $m_1\ne m_2$ and $b_1,b_2$, we have two distinct lines $[\,m_1,b_1\,]$ and $[\,m_2,b_2\,]$, which intersect at a unique point $(x,y)$, whence $x*m_1*b_1=y=x*m_2*b_2$.
+\item Given $m,x,y$, have two points $(m)$ and $(x,y)$, both incident with line $(m)(x,y)$.  This line is not $[\,\infty\,]$, which means that it intersects the $Y$-axis $[\,0\,]$ at $(0,b)$ for some unique $b$, whence $x*m*b=y$.
+\item Given $x_1\ne x_2$ and $y_1,y_2$, we have two distinct points $(x_1,y_1)$ and $(x_2,y_2)$.  The line $(x_1,y_1)(x_2,y_2)$ does not pass through $Y(=(\infty))$, or else it has coordinate $[\,x\,]$ for some $x$, forcing $x_1=x=x_2$.  As a result $(x_1,y_1)(x_2,y_2)$ intersects $[\,\infty\,]$ at $(m)$ for some $m\ne \infty$, and intersects $[\,0\,]$ at $(0,b)$ for some $b$.  In other words, $(x_1,y_1)(x_2,y_2)=[\,m,b\,]$, or, equivalently, $x_1*m*b=y_1$ and $x_2*m*b=y_2$.  The pair $(m,b)$ is clearly unique.
+\end{enumerate}
+This shows that $\mathcal{R}$, together with $0,1$ and the ternary operation $*$, is a ternary ring.
+\end{proof}
+
+It is easy to see that points $(x,y)$ on lines with coordinates of the form $[\,m,b\,]$ satisfy equations of the form $y=x*m*b$, and points $(x,y)$ (except the point $(\infty)$) on lines with coordinates of the form $[\,a\,]$, where $a\ne \infty$, satisfy equations of the form $x=a$.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item We call $\mathcal{R}$ the ternary ring of the projective plane $\pi$ determined by the quadrangle $O,I,X,Y$.  We also call $\mathcal{R}$ a coordinate ring of $\pi$.  If we are given a different quadrangle, we will end up with a different coordinate ring for $\pi$, and the two ternary rings may not be isomorphic.
+\item It can be shown that any ternary ring is a coordinate ring for some projective plane.  See \PMlinkname{this entry}{ProjectivePlaneOfATernaryRing} for more detail.
+\end{itemize}
+
+\begin{thebibliography}{7}
+\bibitem{MH} M. Hall, Jr., {\it The Theory of Groups}, Macmillan (1959)
+\bibitem{RA} R. Artzy, {\it Linear Geometry}, Addison-Wesley (1965)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquiangularTriangle}
+\pmcreated{2013-03-22 17:12:50}
+\pmmodified{2013-03-22 17:12:50}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{equiangular triangle}
+\pmrecord{8}{39537}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{Triangle}
+\pmrelated{IsoscelesTriangle}
+\pmrelated{EquilateralTriangle}
+\pmrelated{RegularTriangle}
+\pmrelated{EquivalentConditionsForTriangles}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+An \emph{equiangular triangle} is one for which all three interior angles are congruent.
+
+\begin{center}
+\begin{pspicture}(-0.2,-0.2)(5.2,5.2)
+\pspolygon(0,0)(5,0)(2.5,4.33)
+\rput[b](2.5,4.5){$A$}
+\rput[a](0,-0.2){$B$}
+\rput[a](5,-0.2){$C$}
+\psarc(0,0){0.5}{0}{60}
+\psarc(5,0){0.5}{120}{180}
+\psarc(2.5,4.33){0.5}{240}{300}
+\end{pspicture}
+\end{center}
+
+By the theorem at determining from angles that a triangle is isosceles, we can conclude that, in any geometry in which ASA holds, an equilateral triangle is \PMlinkname{regular}{RegularTriangle}.  In any geometry in which ASA, SAS, SSS, and AAS all hold, the isosceles triangle theorem yields that the bisector of any angle of an equiangular triangle coincides with the height, the median and the perpendicular bisector of the opposite side.
+
+The following statements hold in Euclidean geometry for an equiangular triangle.
+
+\begin{itemize}
+\item The triangle is determined by specifying one side.
+\item If $r$ is the length of the side, then the height is equal to $\displaystyle \frac{r\sqrt{3}}{2}$.
+\item If $r$ is the length of the side, then the area is equal to $\displaystyle \frac{r^2\sqrt{3}}{4}$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

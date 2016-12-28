@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParallelAndPerpendicularPlanes}
+\pmcreated{2013-04-19 15:18:51}
+\pmmodified{2013-04-19 15:18:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{parallel and perpendicular planes}
+\pmrecord{10}{41600}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmrelated{PlaneNormal}
+\pmrelated{NormalOfPlane}
+\pmrelated{ParallelismOfTwoPlanes}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem 1.}\, If a plane ($\pi$) intersects two parallel planes ($\varrho$, $\sigma$), the intersection lines are parallel.
+
+{\em Proof.}\, The intersection lines cannot have common points, because $\varrho$ and $\sigma$ have no such ones.\, Since the lines are in a same plane $\pi$, they are parallel.\\
+
+
+\textbf{Theorem 2.}\, If a plane ($\pi$) contains the \PMlinkname{normal}{PlaneNormal} ($n$) of another plane ($\varrho$), the planes are \PMlinkname{perpendicular}{DihedralAngle} to each other.
+
+{\em Proof.}\, Draw in the plane $\varrho$ the line $l$ cutting the intersection line perpendicularly and cutting also $n$.\, Then $l$ must be perpendicular to $n$ and thus to the whole plane $\pi$ (see the Theorem in the entry normal of plane).\, Consequently, the right angle formed by the lines $n$ and $l$ is the normal section of the dihedral angle formed by the planes $\pi$ and $\varrho$.\, Therefore,\, $\pi \bot \varrho$.
+%%%%%
+%%%%%
+\end{document}

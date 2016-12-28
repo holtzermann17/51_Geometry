@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPythagoreanTheorem}
+\pmcreated{2013-03-22 11:56:36}
+\pmmodified{2013-03-22 11:56:36}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of Pythagorean theorem}
+\pmrecord{8}{30696}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+%\pmkeywords{Pythagorean theorem}
+\pmrelated{PythagorasTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+\begin{document}
+This is a geometrical proof of Pythagorean theorem.  We begin with our
+triangle:
+
+\[
+\begin{xy}
+,(0,0)
+;(20,0)**@{-}
+;(20,10)**@{-}
+;(0,0)**@{-}
+,(10,-2)*{a}
+,(23,6)*{b}
+,(10,7)*{c}
+\end{xy}
+\]
+
+Now we use the hypotenuse as one side of a square:
+\[
+\begin{xy}
+,(0,0)
+;(20,0)**@{-}
+;(20,10)**@{-}
+;(0,0)**@{-}
+;(-10,20)**@{-}
+;(10,30)**@{-}
+;(20,10)**@{-}
+,(10,-2)*{a}
+,(23,6)*{b}
+,(10,7)*{c}
+\end{xy}
+\]
+and draw in four more identical triangles
+\[
+\begin{xy}
+,(0,0)
+;(20,0)**@{-}
+;(20,10)**@{-}
+;(0,0)**@{-}
+;(-10,20)**@{-}
+;(10,30)**@{-}
+;(20,10)**@{-}
+;(20,30)**@{-}
+;(-10,30)**@{-}
+;(-10,0)**@{-}
+;(0,0)**@{-}
+,(10,-2)*{a}
+,(23,6)*{b}
+,(10,7)*{c}
+\end{xy}
+\]
+
+Now for the proof.  We have a large square, with each side of length
+$a+b$, which is subdivided into one smaller square and four
+triangles.  The area of the large square must be equal to the combined
+area of the shapes it is made out of, so we have
+\begin{eqnarray}
+\left(a+b\right)^2 & = & c^2 + 4\left(\frac{1}{2}ab\right)\nonumber\\
+a^2 + b^2 + 2ab & = & c^2 + 2ab \nonumber\\
+a^2 + b^2 & = & c^2
+\end{eqnarray}
+%%%%%
+%%%%%
+%%%%%
+\end{document}

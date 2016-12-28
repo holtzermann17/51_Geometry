@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TernaryRing}
+\pmcreated{2013-03-22 18:30:52}
+\pmmodified{2013-03-22 18:30:52}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{ternary ring}
+\pmrecord{6}{41200}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A35}
+\pmclassification{msc}{51E15}
+\pmclassification{msc}{51A25}
+\pmsynonym{planar ternary ring}{TernaryRing}
+\pmsynonym{Hall ternary ring}{TernaryRing}
+\pmdefines{linear ternary ring}
+\pmdefines{left distributive}
+\pmdefines{right distributive}
+\pmdefines{distributive}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $R$ be a set containing at least two distinct elements $0$ and $1$, and $*$ a ternary operation on $R$.  Write $a*b*c$ the image of $(a,b,c)$ under $*$.  We call $(R,*,0,1)$, or simply just $R$, a \emph{ternary ring} if
+\begin{enumerate}
+\item $a*0*b=0*a*b=b$ for any $a,b\in R$, 
+\item $1*a*0=a*1*0=a$ for any $a\in R$,
+\item given $a,b,c,d\in R$ with $a\ne c$, the equation $x*a*b=x*c*d$ has a unique solution for $x$,
+\item given $a,b,c\in R$, the equation $a*b*x=c$ has a unique solution for $x$,
+\item given $a,b,c,d\in R$, with $a\ne c$, the system of equations
+\begin{displaymath}
+\left\{
+\begin{array}{ll}
+a * x * y = b \\
+c * x * y = d
+\end{array}
+\right.
+\end{displaymath}
+has a unique solution for $(x,y)$.
+\end{enumerate}
+
+Given a ternary ring $R$, we may form two binary operations on $R$, one called the \emph{addition} $+$, and the other the \emph{multiplication} $\cdot$ on $R$:
+\begin{eqnarray*}
+a+b &:=& a*1*b, \\
+a\cdot b &:=& a*b*0.
+\end{eqnarray*}
+
+\begin{prop} $(R,+,0)$ and $(R-\lbrace 0\rbrace,\cdot,1)$ are loops, and $0$ is the zero element in $R$ under the multiplication $\cdot$.\end{prop}
+\begin{proof}
+We first show that $(R,+,0)$ is a loop.  Given $a,b\in R$, there is a unique $c\in R$ such that $a*1*c = b$, but this is exactly $a+c=b$.  In addition, there is a unique $d\in R$ such that $d*1*a = b = d*0*b$.  But $d*1*a=b$ means $d+a=b$.  This shows that $(R,+)$ is a quasigroup.  Now, $a+0=a*1*0=a$ and $0+a=0*1*a=a$, so $0$ is the identity with respect to $+$.  Therefore, $(R,+,0)$ is a loop.
+
+Next we show that $(S,\cdot,1)$ is a loop, where $S=R-\lbrace 0\rbrace$.  Given $a,b\in S$, there is a unique $c\in R$ such that $c*a*0=b=c*0*b=b$, since $a\ne 0$.  From $c*a*0=b$, we get $c\cdot a=b$.  Furthermore, $c\ne 0$, for otherwise $b=c*a*0=0*a*0=0$, contradicting the fact that $b\in S$.  In addition, there is a unique $d\in R$ such that we have a system of equations $a*d*0=b$ and $0*d*0=0$.  From $a*d*0=b$ we get $a\cdot d=b$.  Furthermore $d\ne 0$, for otherwise $b=a*d*0=a*0*0=0$, contradicting the fact that $b\in S$.  Thus, $(S,\cdot,1)$ is a quasigroup.  Now, $a\cdot 1 = a*1*0=a$ and $1\cdot a=1*a*0=a$, showing that $(S,\cdot,1)$ is a loop.
+
+Finally, for any $a\in R$, $a\cdot 0 = a*0*0=0$ and $0\cdot a= 0*a*0=0$.
+\end{proof}
+
+Another property of a ternary ring is that, if the ternary ring is finite, then conditions 4 and 5 are equivalent in the presence of the first three.
+
+Let $R$ be a ternary ring, and $a,b,c$ are arbitrary elements of $R$.  $R$ is said to be \emph{linear} if $a*b*c = a\cdot b+c$ for all $a,b,c\in R$, \emph{left distributive} if $a\cdot (b+c)=a\cdot b+a\cdot c$, \emph{right distributive} if $(a+b)\cdot c = a\cdot c +b\cdot c$, and \emph{distributive} if it is both left and right distributive.
+
+For example, any division ring $D$, associative or not, is a linear ternary ring if we define the ternary operation $*$ on $D$ by $a*b*c:=a\cdot b+c$.  Any associative division ring $D$ is a distributive ternary ring.  This easy verification is left to the reader.  Semifields, near fields are also examples of ternary rings.
+
+\textbf{Remark}.  Ternary rings were invented by Marshall Hall in his studies of axiomatic projective and affine planes.  Therefore, a ternary ring is also called a \emph{Hall ternary ring}, or a \emph{planar ternary ring}.  It can be shown that in every affine plane, one can set up a coordinate system, and from this coordinate system, one can construct a ternary ring.  Conversely, given any ternary ring, one can define an affine plane so that its coordinate system corresponds to this ternary ring.
+
+\begin{thebibliography}{7}
+\bibitem{RA} R. Artzy, {\it Linear Geometry}, Addison-Wesley (1965)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

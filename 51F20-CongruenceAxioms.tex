@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CongruenceAxioms}
+\pmcreated{2013-03-22 15:31:59}
+\pmmodified{2013-03-22 15:31:59}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{congruence axioms}
+\pmrecord{16}{37426}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Axiom}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51F20}
+\pmsynonym{axioms of congruence}{CongruenceAxioms}
+\pmdefines{congruence relation}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\renewcommand{\line}[1]{\overleftrightarrow{#1}}
+\newcommand{\ray}[1]{\overrightarrow{#1}}
+\begin{document}
+\PMlinkescapeword{congruence}
+
+\textbf{General Congruence Relations}.  Let $A$ be a set and
+$X=A\times A$. A relation on $X$ is said to be a \emph{congruence
+relation} on $X$, denoted $\cong$, if the following three conditions
+are satisfied:
+\begin{enumerate}
+\item $(a,b)\cong (b,a)$, for all $a,b\in A$,
+\item if $(a,a)\cong (b,c)$, then $b=c$, where $a,b,c\in A$,
+\item if $(a,b)\cong (c,d)$ and $(a,b)\cong (e,f)$, then $(c,d)\cong
+(e,f)$, for any $a,b,c,d,e,f\in A$.
+\end{enumerate}
+By applying $(b,a)\cong (a,b)$ twice, we see that $\cong$ is reflexive according to the third condition.  From this, it is easy to that $\cong$ is symmetric, since $(a,b)\cong (c,d)$ and $(a,b)\cong (a,b)$ imply $(c,d)\cong (a,b)$.  Finally, $\cong$ is transitive, for if $(a,b)\cong (c,d)$ and $(c,d)\cong
+(e,f)$, then $(c,d)\cong (a,b)$ because $\cong$ is symmetric and so
+$(a,b)\cong (e,f)$ by the third condition.  Therefore, the
+congruence relation is an equivalence relation on pairs of elements
+of $A$.
+\\\\
+\textbf{Congruence Axioms in Ordered Geometry}. Let $(A,B)$ be an
+ ordered geometry with strict betweenness relation $B$.
+We say that the ordered geometry $(A,B)$ satisfies the \emph{congruence
+axioms} if
+\begin{enumerate}
+\item there is a congruence relation $\cong$ on $A\times A$;
+\item if $(a,b,c)\in B$ and $(d,e,f)\in B$ with
+\begin{itemize}
+\item $(a,b)\cong (d,e)$, and
+\item $(b,c)\cong (e,f),$
+\end{itemize}
+then $(a,c)\cong (d,f)$;
+\item given $(a,b)$ and a ray $\rho$ emanating from $p$,
+there exists a unique point $q$ lying on $\rho$ such that
+$(p,q)\cong (a,b)$;
+\item given the following:
+\begin{itemize}
+\item three rays emanating from $p_1$ such that they intersect with a
+line $\ell_1$ at $a_1,b_1,c_1$ with $(a_1,b_1,c_1)\in B$, and
+\item three rays emanating from $p_2$ such that they intersect with a
+line $\ell_2$ at $a_2,b_2,c_2$ with $(a_2,b_2,c_2)\in B$,
+\item $(a_1,b_1)\cong (a_2,b_2)$ and $(b_1,c_1)\cong (b_2,c_2)$,
+\item $(p_1,a_1)\cong (p_2,a_2)$ and $(p_1,b_1)\cong (p_2,b_2)$,
+\end{itemize}
+then $(p_1,c_1)\cong (p_2,c_2)$;
+\item given three distinct points $a,b,c$ and two distinct points $p,q$ such that $(a,b)\cong (p,q)$.  Let $H$ be a closed half plane with boundary
+$\line{pq}$.  Then there exists a unique point $r$ lying on $H$ such
+that $(a,c)\cong (p,r)$ and $(b,c)\cong (q,r)$.
+\end{enumerate}
+\textbf{Congruence Relations on line segments, triangles, and
+angles}. With the above five congruence axioms, one may define a
+congruence relation (also denoted by $\cong$ by abuse of notation)
+on the set $S$ of closed line segments of $A$ by
+$$\overline{ab}\cong\overline{cd}\qquad \mbox{ iff }\qquad (a,b)\cong (c,d),$$
+where $\overline{ab}$ (in this entry) denotes the closed line
+segment with endpoints $a$ and $b$.
+
+It is obvious that the congruence relation defined on line segments
+of $A$ is an equivalence relation.  Next, one defines a congruence
+relation on triangles in $A$: $\triangle abc\cong \triangle pqr$ if
+their sides are congruent:
+\begin{enumerate}
+\item $\overline{ab}\cong\overline{pq}$,
+\item $\overline{bc}\cong\overline{qr}$, and
+\item $\overline{ca}\cong\overline{rp}$.
+\end{enumerate}
+With this definition, Axiom 5 above can be restated as: given a
+triangle $\triangle abc$, such that $\overline{ab}$ is congruent to
+a given line segment $\overline{pq}$.  Then there is exactly one
+point $r$ on a chosen side of the line $\line{pq}$ such that
+$\triangle abc\cong\triangle pqr$.  Not surprisingly, the congruence
+relation on triangles is also an equivalence relation.
+\\\\
+The last major congruence relation in an ordered geometry to be
+defined is on angles: $\angle abc$ is \emph{congruent to} $\angle
+pqr$ if there are
+\begin{enumerate}
+\item a point $a_1$ on $\ray{ba}$,
+\item a point $c_1$ on $\ray{bc}$,
+\item a point $p_1$ on $\ray{qp}$, and
+\item a point $r_1$ on $\ray{qr}$
+\end{enumerate}
+such that $\triangle a_1bc_1\cong \triangle p_1qr_1$.
+\\\\
+It is customary to also write $\angle abc\cong \angle pqr$ to mean
+that $\angle abc$ is congruent to $\angle pqr$.  Clearly for any
+points $x\in\ray{ba}$ and $y\in\ray{bc}$, we have $\angle xby\cong
+\angle abc$, so that $\cong$ is reflexive.  $\cong$ is also
+symmetric and transitive (as the properties are inherited from the
+congruence relation on triangles).  Therefore, the congruence
+relation on angles also defines an equivalence relation.
+
+\begin{thebibliography}{6}
+\bibitem{dh} D. Hilbert, {\it Foundations of Geometry}, Open Court Publishing Co. (1971)
+\bibitem{bs} K. Borsuk and W. Szmielew, {\it Foundations of Geometry}, North-Holland Publishing Co. Amsterdam (1960)
+\bibitem{mg} M. J. Greenberg, {\it Euclidean and Non-Euclidean Geometries, Development and History}, W. H. Freeman and Company, San Francisco (1974)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

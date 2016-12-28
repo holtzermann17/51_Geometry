@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfStewartsTheorem}
+\pmcreated{2013-03-22 12:38:37}
+\pmmodified{2013-03-22 12:38:37}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof of Stewart's theorem}
+\pmrecord{7}{32908}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{StewartsTheorem}
+\pmrelated{ApolloniusTheorem}
+\pmrelated{CosinesLaw}
+\pmrelated{ProofOfApolloniusTheorem2}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Let $\theta$ be the angle $\angle AXB$.
+\figura{stewart}
+
+Cosines law on $\triangle AXB$ says 
+$c^2=m^2 + p^2-2pm\cos \theta$ and thus
+$$\cos \theta =\frac{m^2+p^2-c^2}{2pm}$$
+
+Using cosines law on $\triangle AXC$ and noting that $\psi=\angle AXC=180^\circ-\theta$ and thus $\cos \theta=-\cos\psi$ we get
+$$\cos \theta =\frac{b^2-n^2-p^2}{2pn}.$$
+
+From the expressions above we obtain
+$$2pn(m^2+p^2-c^2)=2pm(b^2-n^2-p^2).$$
+By cancelling $2p$ on both sides and collecting we are led to
+$$m^2n +mn^2 +p^2n +p^2m = b^2m + c^2 n$$
+and from there
+$mn(m+n)+p^2(m+n)=b^2m+c^2n$. Finally, we note that $a=m+n$ so we conclude that
+$$a(mn+p^2)=b^2m+c^2n.$$
+QED
+%%%%%
+%%%%%
+\end{document}

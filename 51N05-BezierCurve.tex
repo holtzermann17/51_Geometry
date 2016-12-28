@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BezierCurve}
+\pmcreated{2015-01-23 16:33:51}
+\pmmodified{2015-01-23 16:33:51}
+\pmowner{yota}{10184}
+\pmmodifier{yota}{10184}
+\pmtitle{B\'ezier curve}
+\pmrecord{29}{37272}
+\pmprivacy{1}
+\pmauthor{yota}{10184}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N05}
+\pmsynonym{Bezier curve}{BezierCurve}
+\pmrelated{NURBS}
+\pmrelated{BSpline}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\providecommand{\PP}{\mathbf{P}}
+\providecommand{\PB}{\mathbf{B}}
+\providecommand{\PQ}{\mathbf{Q}}
+\begin{document}
+\section{Introduction}
+B\'ezier curves are a particular family of curves in $\mathbb{R}^m$
+that parameterize a smooth path \PMlinkescapetext{between} given points.
+They are often used to model or approximate general curved shapes 
+because of their algebraic simplicity.
+
+B\'ezier curves were originally developed by Paul de Casteljau in 1959. But it became a famous shape only when Pierre B\'ezier, a French engineer at Renault, used it to \PMlinkescapetext{design} automobiles in the 1970's. 
+They are now widely used in many \PMlinkescapetext{fields} such as industrial and computer-aided \PMlinkescapetext{design}, 
+vector-based drawing, font design, and 3D modeling.
+
+\section{Definition}
+Given $n+1$ points $\boldsymbol{P}_i$ in $\mathbb{R}^m$,
+the \emph{B\'ezier curve} for these \emph{control points} is the curve $\boldsymbol{B} \colon [0,1] \to \mathbb{R}^m$
+defined by
+\[
+\boldsymbol{B}(t) = \sum_{i=0}^{n} \binom{n}{i} (1-t)^{n-i} \, t^i \: \boldsymbol{P}_i\,.
+\]
+The coefficients in this expression:
+\[
+b_{i,n}(t) = \binom{n}{i} (1-t)^{n-i} \, t^i \,, \quad  i=0,\ldots, n\,.
+\]
+are the Bernstein basis polynomials.
+
+\section{Special cases}
+A B\'ezier curve between two control points is simply the line segment
+between the two points:
+\[
+\boldsymbol{B}(t) = (1-t) \, \boldsymbol{P}_0  +  t \, \boldsymbol{P}_1\,.
+\]
+
+For three control points, we have the quadratic B\'ezier curve:
+\[
+\boldsymbol{B}(t) = (1-t)^2 \, \boldsymbol{P}_0  +  2 t (1-t) \, \boldsymbol{P}_1 +  t^2 \, \boldsymbol{P}_2\,.
+\]
+
+For four control points, we have the cubic B\'ezier curve:
+\[
+\boldsymbol{B}(t) =  (1-t)^3 \, \boldsymbol{P}_0 +  3 t (1-t)^2 \, \boldsymbol{P}_1 + 3 t^2 (1-t) \, \boldsymbol{P}_2 + t^3\,  \boldsymbol{P}_3\,.
+\]
+
+These are the most commonly employed versions of B\'ezier curves.
+
+
+\section{Properties}
+
+\begin{itemize}
+\item Except for the first and the last points, where the curve starts and ends, the B\'ezier curve should not pass through any of the control points. i.e. all the controls points lie on the curve if and only if the curve is a straight line.
+
+\item The curve is tangent to the segment of line $\overline{\boldsymbol{P}_0 \, \boldsymbol{P}_1}$ at the start and $\overline{\boldsymbol{P}_{n-1} \, \boldsymbol{P}_n}$ at the end.
+
+\item It is easy to keep until the first order continuity when chaining curves. Moreover, every B\'ezier curve can be cut at any point into two new B\'ezier curves. In fact, the \PMlinkescapetext{design} industry uses series of B\'ezier curves with only 4 control points (a bicubic version of the equations) to draw complex shapes.
+
+\item The curves never do fancy stuff and always remain within the convex hull of the control points.
+
+\item For one and two points the definition is still valid and the result became a point and a segment of line, respectively.
+
+\item But it is impossible to draw circles or arcs of circle.
+
+\item It is also impossible to draw two parallel curves (except in trivial cases: straight line B\'eziers and coincident B\'eziers curves)
+
+\item If the first and the last point are the same, the curve is closed. And if $\boldsymbol{P}_1$ and $\boldsymbol{P}_{n-1}$ are aligned with $\boldsymbol{P}_0$ then the curve is closed with a first order continuity.
+
+\end{itemize}
+
+\section{Curve Cut}
+
+Let $\boldsymbol{B}_p(t)$ be a Bezier curve, defined by its control points $\boldsymbol{P}_0$ to $\boldsymbol{P}_{n}$ for $t \in [0,1]$.
+
+Let $a, b$ be such as $[a,b] \subset [0,1]$
+Let $u = {{t - a} \over {b - a}}$ be such as $\forall u \in [0,1], t \in [a,b]$
+
+
+$\boldsymbol{B}_q(u)$ is a part of the initial bezier curve with new control points $\boldsymbol{Q}_{0}$
+to $\boldsymbol{Q}_{n}$ whose \PMlinkescapetext{coordinates} will be determined.
+
+For $n$ control points $\boldsymbol{B}(t)$ is a $n-1$-order polynom.
+
+$\boldsymbol{B}_p(a) = \boldsymbol{B}_q(0)$
+
+$\boldsymbol{B}_p(b) = \boldsymbol{B}_q(1)$
+
+Let take $n-2$ more points, evenly spaced in [a,b]
+$u_i = k / {n-1} \forall k \in [1 .. n-1]$
+
+$\boldsymbol{B}_p(u (b - a) + a) = \boldsymbol{B}_q(u_i)$ for each $u_i$
+
+For a 4 control points bezier curve
+If we take $u$ in $(0, {1 \over 3}, {2 \over 3}, 1)$, hence $t_0$, $t_1$, $t_2$, $t_3$ respectively equal to  $a$, $\frac{b - 2 a}{3}$, $\frac{2b - a}{3}$, $b$
+
+$ \boldsymbol{Q}_0 = \boldsymbol{B}_p(t_0) $
+
+$ \boldsymbol{Q}_1 = {-15 \boldsymbol{B}_p(t_0) + 54 \boldsymbol{B}_p(t_1) -27 \boldsymbol{B}_p(t_2) + 6 \boldsymbol{B}_p(t_3)} / 18 $
+
+$ \boldsymbol{Q}_2 = {6 \boldsymbol{B}_p(t_0) -27 \boldsymbol{B}_p(t_1) + 54 \boldsymbol{B}_p(t_2) -15 \boldsymbol{B}_p(t_3)} / 18 $
+
+$ \boldsymbol{Q}_3 = \boldsymbol{B}_p(b) $
+
+\PMlinkexternal{Wiki}{http://en.wikipedia.org/wiki/Bezier_curve}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PerpendicularBisector}
+\pmcreated{2013-03-22 16:29:03}
+\pmmodified{2013-03-22 16:29:03}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{perpendicular bisector}
+\pmrecord{18}{38652}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51N05}
+\pmsynonym{center normal}{PerpendicularBisector}
+\pmrelated{Circumcircle}
+\pmdefines{bisector}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+%\usepackage{pst-plot}
+%\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $\overline{AB}$ be a line segment in a plane (we are assuming the Euclidean plane).  A \emph{bisector} of $\overline{AB}$ is any line that passes through the midpoint of $\overline{AB}$.  A \emph{perpendicular bisector} of $\overline{AB}$ is a bisector that is perpendicular to $\overline{AB}$.
+
+It is an easy exercise to show that a line $\ell$ is a perpendicular bisector of $\overline{AB}$ iff every point lying on $\ell$ is equidistant from $A$ and $B$.  From this, one concludes that \emph{the} perpendicular bisector of a line segment is always unique.
+
+A basic way to construct the perpendicular bisector $\ell$ given a line segment $\overline{AB}$ using the standard ruler and compass construction is as follows:
+
+
+\begin{enumerate}
+\item use a compass to draw the circle $C_1$ centered at point $A$ with radius the length of $\overline{AB}$, by fixing one end of the compass at $A$ and the movable end at $B$,
+\item similarly, draw the circle $C_2$ centered at $B$ with the same radius as above, with the compass fixed at $B$ and movable at $A$,
+\item $C_1$ and $C_2$ intersect at two points, say $P,Q$ (why?)
+\item with a ruler, draw the line $\overleftrightarrow{PQ}=\ell$,
+\item then $\ell$ is the perpendicular bisector of $\overline{AB}$.
+\end{enumerate}
+
+\begin{center}
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{construct.1.eps}
+\caption{The construction of a perpendicular bisector}
+\end{center}
+\end{figure}
+\end{center}
+
+(Note: we assume that there is always an ample supply of compasses and rulers of varying sizes, so that given any positive real number $r$, we can find a compass that opens wider than $r$ and a ruler that is longer than $r$).
+
+One of the most common use of perpendicular bisectors is to find the center of a circle constructed from three points in a Euclidean plane:
+\begin{quote}
+Given three non collinear points $X,Y,Z$ in a Euclidean plane, let $C$ be the unique circle determined by $X,Y,Z$.  Then the center of $C$ is located at the intersection of the perpendicular bisectors of $\overline{XY}$ and $\overline{YZ}$.
+\end{quote}
+%%%%%
+%%%%%
+\end{document}

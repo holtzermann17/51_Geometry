@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTrigonometricVersionOfCevasTheorem}
+\pmcreated{2013-03-22 14:49:20}
+\pmmodified{2013-03-22 14:49:20}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of trigonometric version of Ceva's theorem}
+\pmrecord{7}{36484}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\usepackage{amsmath}
+\begin{document}
+The proof goes by proving the condition imposed on the sines, is equivalent to the  one imposed on the sides on the normal version of Ceva's theorem.
+\figuraex{ceva}{scale=0.75}
+
+We want to prove
+\[
+\frac{\sin ACZ}{\sin ZCB}\cdot\frac{\sin BAX}{\sin XAC}\cdot\frac{\sin CBY}{\sin YBA}=1
+\]
+if and only if
+\[
+\frac{AZ}{ZB}\cdot\frac{BX}{XC}\cdot\frac{CY}{YA}=1.
+\]
+
+Now, the generalization of bisectors theorem states that
+\begin{align*}
+\frac{AZ}{ZB} &= \frac{CA \sin ACZ}{BC \sin ZCB},\\
+\frac{BX}{XC} &= \frac{AB \sin BAX}{CA \sin XAC},\\
+\frac{CY}{YA} &= \frac{BC \sin CBY}{AB \sin YBA}.
+\end{align*}
+
+Multiplying the three equations, and cancelling all segments on the right side gives the desired equivalence.
+%%%%%
+%%%%%
+\end{document}

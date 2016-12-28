@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AngleBetweenLineAndPlane}
+\pmcreated{2013-03-22 17:30:14}
+\pmmodified{2013-03-22 17:30:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{angle between line and plane}
+\pmrecord{13}{39893}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmsynonym{slant}{AngleBetweenLineAndPlane}
+\pmsynonym{inclination}{AngleBetweenLineAndPlane}
+\pmrelated{AngleBetweenTwoLines}
+\pmrelated{DotProduct}
+\pmrelated{EquationOfPlane}
+\pmrelated{AngleBetweenTwoPlanes}
+\pmrelated{NormalOfPlane}
+\pmrelated{ProjectionOfRightAngle}
+\pmdefines{angle between plane and line}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\em angle between a line $l$ and a plane $\tau$} is defined as the \textbf{least possible} angle $\omega$ between $l$ and a line contained by $\tau$.
+
+It is apparent that $\omega$ satisfies always\, $0 \leqq \omega \leqq 90^\circ$.
+
+Let the plane $\tau$ be given by the \PMlinkname{equation}{EquationOfPlane} \,$Ax\!+\!By\!+\!Cz\!+\!D = 0$,\, i.e. its normal vector has the components $A,\,B,\,C$.  Let a direction vector of the line $l$ have the components $a,\,b,\,c$.  Then the angle $\omega$ between $l$ and $\tau$ is obtained from the equation
+    $$\sin\omega = \frac{|Aa\!+\!Bb\!+\!Cc|}{\sqrt{A^2\!+\!B^2\!+\!C^2}\sqrt{a^2\!+\!b^2\!+\!c^2}}.$$
+In fact, the \PMlinkname{right hand side}{Equation} is the cosine of the angle $\alpha$ between $l$ and the surface normal of $\tau$ (see angle between two lines), and $\omega$ is the complementary angle of $\alpha$.\\
+\begin{center}
+\begin{pspicture}(-1,-0.5)(8,5)
+\psline(2,3)(0,0)(5,0)(7,3)
+\psline(2,3)(3.44,3)
+\psline(3.73,3)(7,3)
+\psline[linecolor=blue](1,1.5)(4.7,1.5)
+\psline(4.7,1.5)(6,1.5)
+\psline[linecolor=blue](4.7,1.5)(2.5,4.5)
+\rput[a](4.2,1.7){$\omega$}
+\rput[a](1.7,0.7){$\tau$}
+\rput[a](3,4.2){$l$}
+\psline(0,-0.032)(5.023,-0.032)(7.023,3)
+\psarc(4.7,1.5){0.25}{130}{180}
+\rput(-1,-0.5){.}
+\rput(8,5){.}
+\end{pspicture}
+\end{center}
+
+\textbf{Example.}\, Consider the $xy$-plane and the line $l$ through the origin and the point \,$(1,\,1,\,1)$.  We can use the components $1,\,1,\,1$ for the direction vector of $l$ and the components $0,\,0,\,1$ for the normal vector of the plane.  We have
+$$\omega \;=\; \arcsin\frac{1\!\cdot\!0\!+\!1\!\cdot\!0\!+\!1\!\cdot\!1}{\sqrt{1^2\!+\!1^2\!+\!1^2}\sqrt{0^2\!+\!0^2\!+\!1^2}} 
+\;=\; \arcsin\frac{1}{\sqrt{3}} \approx 35.26^\circ.$$
+
+
+%%%%%
+%%%%%
+\end{document}

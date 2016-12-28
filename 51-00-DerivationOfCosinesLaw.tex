@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfCosinesLaw}
+\pmcreated{2013-03-22 11:57:02}
+\pmmodified{2013-03-22 11:57:02}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{derivation of cosines law}
+\pmrecord{6}{30713}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{CosinesLaw}
+\pmrelated{ProofOfCosinesLaw}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+\begin{document}
+The idea is to prove the cosines law:
+\[
+a^2 = b^2 + c^2 - 2bc\cos\theta
+\]
+where the variables are defined by the triangle:
+\[
+\begin{xy}
+,(0,0)
+;(40,0)**@{-}
+;(60,30)**@{-}
+;(0,0)**@{-}
+,(20,-3)*{c}
+,(7,2)*{\theta}
+,(50,12)*{a}
+,(30,17)*{b}
+\end{xy}
+\]
+
+Let's add a couple of lines and two variables, to get
+\[
+\begin{xy}
+,(0,0)
+;(40,0)**@{-}
+;(60,30)**@{-}
+;(0,0)**@{-}
+,(20,-3)*{c}
+,(7,2)*{\theta}
+,(50,12)*{a}
+,(30,17)*{b}
+,(40,0)
+;(60,0)**@{--}
+;(60,30)**@{--}
+,(50,-3)*{x}
+,(63,15)*{y}
+\end{xy}
+\]
+
+This is all we need.  We can use Pythagoras' theorem to show that
+\[
+a^2 = x^2 + y^2
+\]
+and
+\[
+b^2 = y^2 + \left(c+x\right)^2
+\]
+
+So, combining these two we get
+\begin{eqnarray*}
+a^2 & = & x^2 + b^2 - \left(c+x\right)^2\\
+a^2 & = & x^2 + b^2 - c^2 - 2cx - x^2\\
+a^2 & = & b^2 - c^2 - 2cx
+\end{eqnarray*}
+
+So, all we need now is an expression for $x$.  Well, we can use the
+definition of the cosine function to show that
+\begin{eqnarray*}
+c + x & = & b \cos\theta\\
+x & = & b\cos\theta - c
+\end{eqnarray*}
+
+With this result in hand, we find that
+\begin{eqnarray}
+a^2 & = & b^2 - c^2 - 2cx\nonumber\\
+a^2 & = & b^2 - c^2 - 2c\left( b\cos\theta - c\right)\nonumber\\
+a^2 & = & b^2 - c^2 -2bc\cos\theta + 2c^2\nonumber\\
+a^2 & = & b^2 + c^2 - 2bc\cos\theta
+\end{eqnarray}
+%%%%%
+%%%%%
+%%%%%
+\end{document}

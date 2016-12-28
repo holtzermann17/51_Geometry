@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProvingThalesTheoremWithVectors}
+\pmcreated{2013-03-22 17:47:45}
+\pmmodified{2013-03-22 17:47:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{proving Thales' theorem with vectors}
+\pmrecord{5}{40257}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51F20}
+\pmclassification{msc}{51F20}
+\pmsynonym{vector proof of Thales' theorem}{ProvingThalesTheoremWithVectors}
+\pmrelated{ThalesTheorem}
+\pmrelated{SumOfVectors}
+\pmrelated{DifferenceOfVectors}
+\pmrelated{ScalarSquare}
+\pmrelated{ParallelogramPrinciple}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\begin{center}
+\begin{pspicture}(-2.5,-0.5)(2.5,2.5)
+\psdot[linecolor=black](0,0)
+\rput[a](0,-0.3){$O$}
+\rput[a](-2.2,-0.1){$B$}
+\rput[a](2.15,-0.1){$A$}
+\rput[a](1.33,1.8){$P$}
+\psarc[linecolor=blue](0,0){2}{0}{180}
+\psline[linecolor=blue](-2,0)(0,0)
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](1.2,1.6)(0,0)
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](1.2,1.6)(-2,0)
+\psline[arrows=->,arrowsize=5pt,linecolor=blue](1.2,1.6)(2,0)
+\psline[arrows=->,arrowsize=5pt,linecolor=red](0,0)(2,0)
+\rput[a](-1,-0.2){$r$}
+\rput[a](+1,-0.2){$r$}
+\rput[a](0.75,0.7){$r$}
+\end{pspicture}
+\end{center}
+Let the radius of the circle be $r$ and $AB$ a diameter of the circle.  We make the dot product calculation
+$$\overrightarrow{PA}\cdot\overrightarrow{PB} = (\overrightarrow{PO}+\overrightarrow{OA})\cdot(\overrightarrow{PO}+\overrightarrow{OB}) =
+(\overrightarrow{PO}+\overrightarrow{OA})\cdot(\overrightarrow{PO}-\overrightarrow{OA}) =
+\overrightarrow{PO}\cdot\overrightarrow{PO}-\overrightarrow{OA}\cdot\overrightarrow{OA} =
+r^2-r^2 = 0.$$
+The result shows that\, $\overrightarrow{PA} \perp \overrightarrow{PB}$, i.e. the circumferential angle $APB$ of the half-circle is a right angle.
+
+%%%%%
+%%%%%
+\end{document}

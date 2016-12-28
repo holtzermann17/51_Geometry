@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CorrespondingAnglesInTransversalCutting}
+\pmcreated{2013-03-22 17:15:12}
+\pmmodified{2013-03-22 17:15:12}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{corresponding angles in transversal cutting}
+\pmrecord{12}{39588}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51-01}
+%\pmkeywords{corresponding angles}
+\pmrelated{EuclideanAxiomByHilbert}
+\pmrelated{HarmonicMeanInTrapezoid}
+\pmdefines{transversal}
+\pmdefines{vertical angle}
+\pmdefines{alternate interior angle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rem*}{Remark}
+
+\begin{document}
+\PMlinkescapeword{cut}
+\PMlinkescapeword{right}
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\rput[b](5,-2){.}
+\psline(-3,-3)(3,3)
+\psline(-1,-3)(5,2)
+\psline(-2,2)(5,-2)
+\rput[r](1.12,0.65){$\alpha$}
+\rput[r](2.68,-0.3){$\beta$}
+\rput[r](1.9,-0.35){$\beta_1$}
+\rput[l](3.1,3){$\ell$}
+\rput[l](5.2,2){$m$}
+\rput[r](-2.2,2){$t$}
+\end{pspicture}
+\end{center}
+
+The following theorem is valid in Euclidean geometry:
+
+\begin{thm}
+If two lines ($\ell$ and $m$) are cut by a third line, called a \emph{transversal} ($t$), and one pair of corresponding angles (\PMlinkname{e.g.}{Eg} $\alpha$ and $\beta$) are congruent, then the cut lines are parallel.
+\end{thm}
+
+Its converse theorem is also valid in Euclidean geometry:
+
+\begin{thm}
+If two parallel lines ($\ell$ and $m$) are cut by a transversal ($t$), then each pair of corresponding angles (e.g. $\alpha$ and $\beta$) are congruent.
+\end{thm}
+
+\begin{rem*}
+The angle $\beta$ in both theorems may be replaced with its \emph{vertical angle} $\beta_1$.\, The angles $\alpha$ and $\beta_1$ are called \emph{alternate interior angles} of each other.
+\end{rem*}
+
+\begin{cor}
+Two lines that are perpendicular to the same line are parallel to each other.
+\end{cor}
+
+\begin{cor}
+If a line is perpendicular to one of two parallel lines, then it is also perpendicular to the other.
+\end{cor}
+
+\begin{cor}
+If the left sides of two convex angles are parallel (or alternatively perpendicular) as well as their right sides, then the angles are congruent.
+\end{cor}
+
+\begin{thebibliography}{9}
+\bibitem{VG}{\sc K. V\"ais\"al\"a:} {\em Geometria}. Kolmas painos. Werner S\"oderstr\"om Osakeyhti\"o, Porvoo ja Helsinki (1971).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

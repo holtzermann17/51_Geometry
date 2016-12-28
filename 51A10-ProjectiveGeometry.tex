@@ -1,0 +1,238 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectiveGeometry}
+\pmcreated{2013-03-22 15:51:25}
+\pmmodified{2013-03-22 15:51:25}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{projective geometry}
+\pmrecord{26}{37843}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{51A30}
+\pmclassification{msc}{51A05}
+\pmclassification{msc}{51D25}
+%\pmkeywords{projective geometry}
+%\pmkeywords{projective point}
+%\pmkeywords{projective line}
+%\pmkeywords{projective plane}
+\pmrelated{PolaritiesAndForms}
+\pmrelated{SesquilinearFormsOverGeneralFields}
+\pmrelated{Perspectivity}
+\pmdefines{projective geometry}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\section{Subspace geometries}
+
+Given a vector space $V$, $\dim V>0$, the \emph{projective geometry} of $V$ is the set of all subspaces of $V$ ordered by set inclusion.  It is typically denoted $PG(V)$ or $P(V)$.  The vector space may be over a field or a division ring.  
+
+The partially ordered set (poset) of all subspaces of a vector space is a geometric lattice.  So next to a boolean lattice, it is one of the best lattices one could expect.  However, an alternative to viewing projective geometry $PG(V)$ as a lattice is one of viewing $PG(V)$ as a geometry.  For this we assign the \PMlinkescapetext{points, lines, planes, and hyperplanes} to $PG(V)$.
+\begin{description}
+\item[Points]  Points in projective geometry are the 1-dimensional subspaces.  These are often denoted $PG(V)_0$ and are the atoms of the lattice.  $PG(V)_0$ is often referred to as the \emph{projective space} of $V$ and denoted $kP^n$ where $V=k^{n+1}$, especially in  topological settings.  Common examples include $\mathbb{R}P^n$, $\mathbb{C}P^n$.
+(\PMlinkname{More on projective spaces}{ProjectiveSpace}.)  
+
+\item[Lines]
+As in the usual Euclidean geometry two distinct points should determine a unique line in the geometry.  As two linearly independent vectors span a plane in $V$, in \PMlinkescapetext{order} to make two points in the geometry $PG(V)$ determine a line, we must define a line in projective space to \PMlinkescapetext{mean} a 2-dimensional subspace.
+
+\begin{remark}
+There is a conflict of terminology at this stage.  Often it is useful to define a projective space as the set of all lines through the origin in a vector space $V$.  But if we elect to view a projective space as a projective geometry then the lines in this definition correspond to points in the geometry, and lines are now the planes of the vector space containing the origin.  Sometimes for clarity the phrase ``projective point'' and ``projective line'' can be used to resolve ambiguity.
+\end{remark}
+\item[Planes]
+A \emph{projective plane} for a vector space $V$ is a 3-dimensional subspace.  
+The study of projective planes extends beyond the consideration of the poset of vector spaces however, and is the beginning of many interesting combinatorial problems.  See the following section on non-Desarguesian planes for further details.  
+\item[Hyperplanes]
+Hyperplanes are \PMlinkescapetext{maximal} subspaces of $V$, sometimes called codimension 1 subspaces.  If $V$ is finite dimensional then points and hyperplanes are in a 1-1 correspondence.  This correspondence leads to many situations where an exchange of a point with a hyperplane is considered.  The simplest of these exchanges occurs through  the notion of a perpendicular subspace, i.e.: one may say a point is perpendicular to an entire hyperplane, and a hyperplane is perpendicular to just one point.
+
+When $\dim V=2$ then every point is a hyperplane which leads to many degenerate properties causing $\dim V\neq 2$ conditions in many theorems of projective geometry.
+\end{description}
+
+\section{Dual Geometries}
+
+Given a finite dimensional vector space $V$, the dual space $V^*$ of all linear functionals is isomorphic as a vector space but it is also possible to \PMlinkescapetext{associate} $PG(V)$ to $PG(V^*)$ in a dual manner.
+
+For every subspace $W$ of $V$ define
+\[W^\bullet =\{f\in V^*:(W)f=0\}.\]
+That is, $W^\bullet$ is the set of all functionals which contain $W$ in their kernel (nullspace).  It follows $\dim W^\bullet=\dim V-\dim W$ and the map
+from $PG(V)$ to $PG(V^*)$ determined by
+\[W\mapsto W^\bullet\]
+is order-reversing.  It is also evident that under the natural isomorphism of
+$V\cong V^{**}$ we can further take $W=W^{\bullet\bullet}$.
+
+\section{Morphisms of Projective Geometry}
+
+Morphisms from one projective geometry to another are defined as order-preserving maps, also called \emph{projectivities}.  In some context order-reversing maps may also be included which leads to the study of dualities and polarities.  
+
+Given an order-reversing map $PG(V)\rightarrow PG(W)$, the map $PG(V)\rightarrow PG(W^*)$ determines a canonical order-preserving map so that one can indeed consider simply the order-preserving maps between projective geometries.
+
+A \emph{collineation} is a function which maps any three collinear points (i.e.: three 1 dimensional subspaces which all lie in a single 2-dimensional subspace) to three collinear points.  These determine a unique order-preserving map between the two projective geometries.  Thus the morphisms of projective geometry are often identified with collineations.  This \PMlinkescapetext{term} is preferable when authoring theorems in the \PMlinkescapetext{language} of geometry.
+
+\begin{remark}
+Some authors prefer collineations to \PMlinkescapetext{mean} any projectivity $PG(V)\rightarrow PG(V)$.  Although there is no uniformity in these definitions, each takes collinear triples to collinear triples thus preserving the geometries under consideration.
+\end{remark}
+
+\section{Notations for projective geometries}
+
+When the dimension $d$ of $V$ is finite we may write $PG(d-1,k)$ where $k$ is the field (or division ring) of the vector space.  Notice that the $d-1$ indicates the dimension of the geometry, not the dimension of the vector space, though one can be attained from the other.
+
+When $k$ is real, or complex, $PG(1,k)$ is often denoted $\mathbb{R}P^1$ and $\mathbb{C}P^1$ instead.  Once again the $1$ denotes the dimensions of the geometry, and in this case also the manifold, not the vector space from which it is derived.
+
+When $|k|=q$ we may further write $PG(d,q)$.
+
+\section{$PG(1,k)$}
+
+The 1 dimensional vector spaces have points and hyperplanes, but every point is a hyperplane.  Every permutation of points is a collineation.  So the projective line is exceptional in many ways.  Including in the fundamental theorem of projective geometry.
+
+
+\subsection{Abstract Projective Geometry}
+
+Projective geometry in general can be axiomatized as achieved by Hilbert.
+The axioms precisely characterize the subspace lattice of a finite dimensional
+vector space, but the converse is not generally true.  Indeed, already for 1-dimensional geometries, so called \emph{projective lines}, i.e.: a set of points, it is clear that not all such geometries can be captured as the subspaces of a vector space.  For example, there is no vector space with exactly 2  one dimensional subspaces. Such geometries however are of little interest as a geometry to themselves (though they are pivotal as sub-geometries) for they have no \PMlinkescapetext{structure}.
+
+When an abstract geometry is infinite dimensional or 2-dimensional, it is possible that it is not isomorphic to the geometry of subspaces of any vector space.   These geometries are termed ``non-Desarguesian'' as they do not carry with them a version of Desargues' theorem.  These geometries are a rich area of study, especially so called \emph{projective planes} -- geometries of dimension 2.  Despite not having the structure of a subspace geometry, so far every non-Desarguesian projective plane has still had order $p^k$ for some prime $p$.
+This has lead to the following unsolved problem:
+\begin{quote}
+Are their any projective planes of order not a power of a prime?
+\end{quote}
+
+\bibliographystyle{amsplain}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+\href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+
+\bibitem{GW}
+Gruenberg, K. W. and Weir, A.J.
+\emph{Linear Geometry 2nd Ed.} (English)
+[B] Graduate Texts in Mathematics. 49. New York - Heidelberg - Berlin: Springer-Verlag. (1977), pp. x-198.
+
+\bibitem{Ka}
+Kantor, W. M.
+\emph{Lectures notes on Classical Groups}.
+
+\bibitem{Taylor}
+Taylor, Donald E.
+\emph{The geometry of the classical groups}
+Sigma Series in Pure Mathematics. 9.
+Heldermann Verlag, Berlin, xii+229, (1992), ISBN 3-88538-009-9.
+
+
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

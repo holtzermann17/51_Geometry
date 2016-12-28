@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfIsogonalTrajectory}
+\pmcreated{2013-03-22 18:59:23}
+\pmmodified{2013-03-22 18:59:23}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of isogonal trajectory}
+\pmrecord{10}{41856}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{34A26}
+\pmclassification{msc}{34A09}
+\pmsynonym{isogonal trajectories of concentric circles}{ExampleOfIsogonalTrajectory}
+%\pmkeywords{logarithmic spiral}
+\pmrelated{IsogonalTrajectory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Determine the curves which intersect the origin-centered circles at an angle of $45^\circ$.\\
+
+
+The differential equation of the circles \,$x^2\!+\!y^2 = R^2$\, is\, $2x\,dx+2y\,dy = 0$,\, i.e.
+$$\frac{x}{y}+\frac{dy}{dx} \;=\; 0.$$
+Thus, by the model (2) of the \PMlinkname{parent entry}{IsogonalTrajectory}, the differential equation of the isogonal trajectory reads
+\begin{align}
+\frac{x}{y}+\frac{y'-\tan\frac{\pi}{4}}{1+y'\tan\frac{\pi}{4}} \;=\; 0,
+\end{align}
+which can be rewritten as
+$$y' \;=\; \frac{y\!-\!x}{y\!+\!x} \;=\, \frac{\frac{y}{x}\!-\!1}{\frac{y}{x}\!+\!1}.$$
+Here, one may take\, $\frac{y}{x} := t$\, as a new variable (see ODE types reductible to the variables separable case), when
+$$y \;=\; xt, \quad y' \;=\; \frac{dy}{dx} \;=\; t+x\frac{dt}{dx},$$
+and in the resulting equation
+$$t+x\frac{dt}{dx} \;=\; \frac{t\!-\!1}{t\!+\!1}$$
+one can \PMlinkname{separate the variables}{SeparationOfVariables}:
+$$\frac{1\!+\!t}{1\!+\!t^2}\,dt \;=\; -\frac{dx}{x}$$
+Multiplying here by 2 and integrating then give
+$$2\arctan{t}+\ln(1\!+\!t^2) \;=\; -2\ln{x}+\ln{C^2} \;\equiv\; -\ln\frac{x^2}{C^2},$$
+or equivalently
+$$\ln\frac{x^2\!+\!x^2t^2\!}{C^2} \;=\; -2\arctan{t}.$$
+This is
+$$\ln\frac{\sqrt{x^2\!+\!y^2}}{C} \;=\; -\arctan\frac{y}{x},$$
+i.e.
+$$\sqrt{x^2\!+\!y^2} \;=\; Ce^{-\arctan\frac{y}{x}}.$$
+Expressing this in the polar coordinates $r,\,\varphi$ gives the family of the integral curves of the equation (1) in the form
+$$r \;=\; Ce^{-\varphi}.$$
+Consequently, the family of the isogonal trajectories consists of logarithmic spirals.
+
+
+
+%%%%%
+%%%%%
+\end{document}

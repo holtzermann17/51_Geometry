@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectionOfRightAngle}
+\pmcreated{2013-03-22 19:20:51}
+\pmmodified{2013-03-22 19:20:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{projection of right angle}
+\pmrecord{6}{42297}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N99}
+\pmclassification{msc}{51N20}
+\pmrelated{AngleBetweenLineAndPlane}
+\pmrelated{AngleOfView}
+\pmrelated{AngleOfViewOfALineSegment}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{onto} \PMlinkescapeword{projection} \PMlinkescapeword{order}
+
+\textbf{Theorem.}\, The \PMlinkname{projection}{ProjectionOfPoint} of a right angle in $\mathbb{R}^3$ onto a plane is a right angle if and only if at least one of its sides is parallel to the plane.\\
+
+\emph{Proof.}\, Consider the projection of an angle $\alpha$ with \PMlinkname{vertex}{Angle} $P$ onto the plane $\pi$.\, Let $P'$ be the projection of $P$ onto $\pi$.\, If neither of the sides of $\alpha$ is parallel to $\pi$, then the lines of the sides intersect the plane in two distinct points $A$ and $B$.\, In order to that the angle of view of the segment $AB$ seen from the point $P$ would be a right angle, $P$ must be on a sphere with diameter $AB$ centered at a point $O$.\, In order to that the projection angle $AP'B$ would be a right angle, the point $P'$ must be on a circle of the plane $\pi$ having $AB$  as diameter.\, But $OP'$ is as the projection of the segment $OP$ shorter than $OP$.\, It follows that the angle $AP'B$ is obtuse and hence cannot be right.\\
+On the other hand, it's not hard to see that the projection of a right angle is a right angle always when one or both of its sides are parallel to the projection plane.
+
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc E. J. Nystr\"om}: {\em Korkeamman geometrian alkeet sovellutuksineen}.\, Kustannusosakeyhti\"o Otava, Helsinki (1948).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

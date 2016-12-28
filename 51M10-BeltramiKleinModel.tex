@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BeltramiKleinModel}
+\pmcreated{2013-03-22 17:06:37}
+\pmmodified{2013-03-22 17:06:37}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{Beltrami-Klein model}
+\pmrecord{18}{39409}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M10}
+\pmclassification{msc}{51-00}
+\pmsynonym{Klein-Beltrami model}{BeltramiKleinModel}
+\pmsynonym{Klein model}{BeltramiKleinModel}
+\pmrelated{ConvertingBetweenTheBeltramiKleinModelAndThePoincareDiscModel}
+\pmdefines{pole}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{amsthm}
+\begin{document}
+The \emph{Beltrami-Klein model} for $\mathbb{H}^2$ is the disc $\{(x,y) \in \mathbb{R}^2 : x^2+y^2<1 \}$ in which a point is similar to the Euclidean point and a line is defined to be a chord (excluding its endpoints) of the (circular) boundary.
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{o-o}(-2,0)(1.414,1.414)
+\end{pspicture}
+\end{center}
+
+The Beltrami-Klein model has the advantage that lines in the model resemble Euclidean lines; however, it has the drawback that it is not angle preserving.  That is, the Euclidean \PMlinkescapetext{measure} of an angle within the model is not necessarily the angle measure in hyperbolic geometry.
+
+Some points outside of the Beltrami-Klein model are important for constructions within the model.  The following is an example of such:
+
+Let $\ell$ be a line in the Beltrami-Klein model that is not a diameter of the circle.  The \emph{pole} of $\ell$ is the intersection of the Euclidean lines that are \PMlinkname{tangent}{TangentLine} to the circle at the endpoints of $\ell$.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,5)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{<->}(-2,-2)(-2,5)
+\psline{<->}(-2.7172,5)(2.828,0.18)
+\psline{o-o}(-2,0)(1.414,1.414)
+\rput[a](0,0.7){$\ell$}
+\psdots(-2,4.4)
+\rput[l](-1.9,4.4){$P(\ell)$}
+\rput[b](-2,-2){.}
+\rput[b](-2.7172,5){.}
+\rput[b](2.828,0.18){.}
+\end{pspicture}
+\end{center}
+
+Poles are important for the following reason:  Given a line $\ell$ that is not a diameter of the Beltrami-Klein model, one constructs a line perpendicular to $\ell$ by considering Euclidean lines passing through $P(\ell)$.  Thus, given two disjointly parallel lines $\ell$ and $m$ that are not diameters of the Beltrami-Klein model, one constructs their common perpendicular by connecting their poles.
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,5.1)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{<->}(-2,-3)(-2,5)
+\psline{<->}(-2.7172,5)(2.828,0.18)
+\psline{<->}(-2.4,-0.7)(0.4,-2.8)
+\psline{<->}(-0.4,-2.8)(2.4,-0.7)
+\psline{o-o}(-2,0)(1.414,1.414)
+\rput[a](0,0.7){$\ell$}
+\psline{o-o}(-1.2,-1.6)(1.2,-1.6)
+\rput[b](0.8,-1.6){$m$}
+\psdots(-2,4.4)(0,-2.5)
+\rput[l](-1.9,4.4){$P(\ell)$}
+\rput[l](0.2,-2.5){$P(m)$}
+\rput[b](-2,-3){.}
+\rput[b](-2.7172,5){.}
+\rput[b](2.828,0.18){.}
+\psline{<->}(-2.2,5.09)(0.1,-2.845)
+\rput[b](-1,1.4){$n$}
+\end{pspicture}
+\end{center}
+
+In the above picture, $n$ is the common perpendicular of $\ell$ and $m$.
+%%%%%
+%%%%%
+\end{document}

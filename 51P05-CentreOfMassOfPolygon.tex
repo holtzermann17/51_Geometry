@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CentreOfMassOfPolygon}
+\pmcreated{2013-03-22 17:33:13}
+\pmmodified{2013-03-22 17:33:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{centre of mass of polygon}
+\pmrecord{11}{39959}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51P05}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{26B15}
+\pmclassification{msc}{15A72}
+\pmsynonym{centroid of polygon}{CentreOfMassOfPolygon}
+\pmrelated{ArithmeticMean}
+\pmrelated{AreaOfPolygon}
+\pmrelated{CentreOfMassOfHalfDisc}
+\pmrelated{BarycentricSubdivision}
+\pmrelated{CoordinatesOfMidpoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $A_1A_2{\ldots}A_n$ be an \PMlinkname{$n$-gon}{Polygon} which is supposed to have a \PMlinkescapetext{constant} surface-density in all of its points, $M$ the centre of mass of the polygon and $O$ the origin.  Then the position vector of $M$ with respect to $O$ is
+\begin{align}
+\overrightarrow{OM} = \frac{1}{n}\sum_{i=1}^n\overrightarrow{OA_i}.
+\end{align}
+We can of course take especially\, $O = A_1$,\, and thus
+$$\overrightarrow{A_1M} = \frac{1}{n}\sum_{i=1}^n\overrightarrow{A_1A_i} =  
+\frac{1}{n}\sum_{i=2}^n\overrightarrow{A_1A_i}.$$
+
+In the special case of the triangle $ABC$ we have
+\begin{align}
+\overrightarrow{AM} = \frac{1}{3}(\overrightarrow{AB}+\overrightarrow{AC}).
+\end{align}
+The centre of mass of a triangle is the common point of its medians.\\
+
+\textbf{Remark.}  An analogical result with (2) concerns also the \PMlinkescapetext{homogeneous} tetrahedron $ABCD$,
+$$\overrightarrow{AM} = \frac{1}{4}(\overrightarrow{AB}+\overrightarrow{AC}+\overrightarrow{AD}),$$
+and any $n$-dimensional simplex (cf. the \PMlinkname{midpoint}{Midpoint} of line segment:\, $\overrightarrow{AM} = \frac{1}{2}\overrightarrow{AB}$).
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AntipodalMapOnSnIsHomotopicToTheIdentityIfAndOnlyIfNIsOdd}
+\pmcreated{2013-03-22 15:47:33}
+\pmmodified{2013-03-22 15:47:33}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{antipodal map on $S^n$ is homotopic to the identity if and only if $n$ is odd}
+\pmrecord{5}{37753}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition*}{Proposition}
+\begin{document}
+\begin{lemma*}
+If $X\colon S^n\to S^n$ is a unit vector field, then
+there is a homotopy between the antipodal map on $S^{n}$
+and the identity map.
+\end{lemma*}
+
+\begin{proof}
+Regard $S^n$ as a subspace of $R^{n+1}$ and define
+$H\colon S^n\times[0,1]\to R^{n+1}$ by 
+$H(v,t)=(\cos\pi t)v+(\sin\pi t)X(v)$.  Since $X$ is a unit
+vector field, $X(v)\perp v$ for any $v\in S^n$.  Hence
+$\|H(v,t)\|=1$, so $H$ is into $S^n$.  Finally observe that
+$H(v,0)=v$ and $H(v,1)=-v$.  Thus $H$ is a homotopy between
+the antipodal map and the identity map.
+\end{proof}
+
+\begin{proposition*}
+The antipodal map $A\colon S^n\to S^n$ is homotopic
+to the identity if and only if $n$ is odd.
+\end{proposition*}
+
+\begin{proof}
+If $n$ is even, then the antipodal map $A$ is the composition 
+of an odd \PMlinkescapetext{number} of reflections.  It 
+therefore has degree $-1$.  Since the degree of the identity
+map is $+1$, the two maps are not homotopic.
+
+Now suppose $n$ is odd, say $n=2k-1$.  Regard $S^n$ has a 
+subspace of $\mathbb{R}^{2k}$.  So each point of $S^n$ has
+coordinates $(x_1,\dots,x_{2k})$ with $\sum_i x_i^2=1$.  Define
+a map $X\colon\mathbb{R}^{2k}\to\mathbb{R}^{2k}$ by
+$X(x_1,x_2,\dots,x_{2k-1},x_{2k})=(-x_2,x_1,\dots,-x_{2k},x_{2k-1})$,
+pairwise swapping coordinates and negating the even coordinates.
+By construction, for any $v\in S^n$, we have that $\|X(v)\|=1$
+and $X(v)\perp v$.  Hence $X$ is a unit vector field.  Applying the
+lemma, we conclude that the antipodal map is homotopic to the identity.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{H}
+Hatcher, A. {\em Algebraic topology}, Cambridge University Press, 2002.
+\bibitem{M}
+Munkres, J. {\em Elements of algebraic topology}, Addison-Wesley, 1984.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

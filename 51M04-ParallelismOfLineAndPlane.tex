@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParallelismOfLineAndPlane}
+\pmcreated{2013-03-22 18:47:58}
+\pmmodified{2013-03-22 18:47:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{parallelism of line and plane}
+\pmrecord{6}{41599}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmrelated{ParallelismOfTwoPlanes}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Parallelity of a line and a plane means that the angle between line and plane is 0, i.e. the line and the plane have either no or infinitely many common points.\\
+
+
+\textbf{Theorem 1.}\, If a line ($l$) is parallel to a line ($m$) contained in a plane ($\pi$), then it is parallel to the plane or is contained in the plane.
+
+{\em Proof.}\, 
+So,\, $l \,||\, m \subset \pi$.\, If\, $l \not\subset \pi$,\, we can set a set along the parallel lines $l$ and $m$ another plane $\varrho$.\, The common points of $\pi$ and $\varrho$ are on the intersection line $m$ of the planes.\, If $l$ would intersect the plane $\pi$, then it would intersect also the line $m$, contrary to the assumption.\, Thus\, $l \,||\, \pi$.\\
+
+
+\textbf{Theorem 2.}\, If a plane is set along a line ($l$) which is parallel to another plane ($\pi$), then the intersection line ($m$) of the planes is parallel to the first-mentioned line.
+
+{\em Proof.}\, The lines $l$ and $m$ are in a same plane, and they cannot intersect each other since otherwise $l$ would intersect the plane $\pi$ which would contradict the assumption.\, Accordingly,\, $m \,||\, l$.
+%%%%%
+%%%%%
+\end{document}

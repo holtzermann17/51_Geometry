@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfRegularTetrahedron}
+\pmcreated{2013-03-22 18:29:39}
+\pmmodified{2013-03-22 18:29:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{properties of regular tetrahedron}
+\pmrecord{15}{41178}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51E99}
+\pmsynonym{regular tetrahedron}{PropertiesOfRegularTetrahedron}
+%\pmkeywords{carbon atom}
+\pmrelated{Grafix}
+\pmrelated{DehnsTheorem}
+\pmrelated{Tetrahedron}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{base}
+
+A regular tetrahedron may be formed such that each of its edges is a diagonal of a face of a cube; then the tetrahedron has been inscribed in the cube.
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\psdots(-2,0)(2,0)(3.5,1)
+\psline[linecolor=blue,linestyle=dashed](3.5,3)(-0.5,-1)
+\pspolygon[linecolor=cyan](-2,-2)(2,-2)(3.5,-1)(3.5,3)(-0.5,3)(-2,2)
+\psline[linecolor=cyan](2,2)(3.5,3)
+\psline[linecolor=cyan](-2,2)(2,2)(2,-2)
+\psline[linecolor=cyan,linestyle=dotted](-2,-2)(-0.5,-1)(3.5,-1)
+\psline[linecolor=cyan,linestyle=dotted](-0.5,-1)(-0.5,3)
+\pspolygon[linecolor=blue,linewidth=0.04](2,-2)(3.5,3)(-2,2)
+\psline[linecolor=blue](-2,2)(-0.5,-1)(2,-2)
+\end{pspicture}
+\end{center}
+
+It's apparent that a plane passing through the midpoints of three parallel edges of the cube cuts the regular tetrahedron into two congruent pentahedrons and that the intersection figure is a square, the midpoint $M$ of which is the centroid of the tetrahedron.\\
+
+
+The angles between the four half-lines from the centroid $M$ of the regular tetrahedron to the \PMlinkname{vertices}{Polyhedron} are $2\arctan\!{\sqrt{2}}$ ($\approx 109^\circ$), which is equal the angle between the four covalent bonds of a carbon \PMlinkescapetext{atom}.\, A half of this angle, $\alpha$, can be found from the right triangle in the below figure, where the catheti are $\frac{s}{\sqrt{2}}$ and 
+$\frac{s}{2}$.
+
+\begin{center}
+\begin{pspicture}(-3,-3.5)(3.9,3)
+\psdot(2.75,0.5)
+\psdot[linecolor=red](0.75,0.5)
+\psline[linecolor=red](3.5,3)(0.75,0.5)(2.75,0.5)
+\psline(2.8,0.68)(2.6,0.68)(2.53,0.5)
+\psline[linecolor=blue,linestyle=dashed](0.98,0.47)(-0.5,-1)
+\pspolygon[linecolor=cyan](-2,-2)(2,-2)(3.5,-1)(3.5,3)(-0.5,3)(-2,2)
+\psline[linecolor=cyan,linewidth=0.05](2,2)(3.5,3)
+\psline[linecolor=cyan,linewidth=0.05](-2,2)(2,2)(2,-2)
+\psline[linecolor=cyan,linestyle=dotted](-2,-2)(-0.5,-1)(3.5,-1)
+\psline[linecolor=cyan,linestyle=dotted](-0.5,-1)(-0.5,3)
+\pspolygon[linecolor=blue,linewidth=0.04](2,-2)(3.5,3)(-2,2)
+\psline[linecolor=blue](-2,2)(-0.5,-1)(2,-2)
+\rput(0.47,0.56){$M$}
+\rput(1.2,0.63){$\alpha$}
+\rput(-0.2,-2.2){$s$}
+\rput(2.9,-1.6){$s$}
+\rput(3.7,0.8){$s$}
+\rput(2.8,1.55){$\frac{s}{\sqrt{2}}$}
+\rput(-3,-3.5){.}
+\rput(3.9,3){.}
+\end{pspicture}
+\end{center}
+
+
+One can consider the regular tetrahedron as a cone.\, Let its edge be $a$ and its height $h$.\, Because of symmetry, a height line intersects the corresponding base triangle in the centroid of this equilateral triangle.\, Thus we have (see the below \PMlinkescapetext{diagram}) the rectangular triangle with hypotenuse $a$, one cathetus $h$ and the other \PMlinkname{cathetus}{Cathetus} \,$\frac{2}{3}\!\cdot\!\frac{a\sqrt{3}}{2} = \frac{a}{\sqrt{3}}$\, (i.e. $\frac{2}{3}$ of the \PMlinkname{median}{Median} $\frac{a\sqrt{3}}{2}$ of the equilateral triangle --- see the common point of triangle medians).\, The Pythagorean theorem then gives
+$$h \;=\; \sqrt{a^2-\left(\frac{a}{\sqrt{3}}\right)^2} \;=\; \frac{a\sqrt{6}}{3}.$$
+
+\begin{center}
+\begin{pspicture}(-3,-1.5)(3,4)
+\pspolygon[linecolor=blue](-2,1)(-1,-1)(3,0.5)(0,3.5)
+\psline[linecolor=blue,linestyle=dotted](-2,1)(3,0.5)
+\psline[linestyle=dashed](-2,1)(1,-0.25)
+\psline[linestyle=dashed](0,0.15)(0,3.5)
+\psline[linecolor=blue](-1,-1)(0,3.5)
+\psline(0,0.32)(-0.15,0.37)(-0.15,0.2)
+\rput(0.2,1.5){$h$}
+\rput(-1.2,2.3){$a$}
+\rput(0,-1){$\frac{a}{2}$}
+\rput(2.2,-0.2){$\frac{a}{2}$}
+\rput(-3,-1.5){.}
+\rput(3,4){.}
+\end{pspicture}
+\end{center}
+
+Consequently, the height of the regular tetrahedron is $\displaystyle\frac{a\sqrt{6}}{3}$.
+
+Since the area of the \PMlinkname{base triangle}{EquilateralTriangle} is $\frac{a^2\sqrt{3}}{4}$, the volume (one third of the product of the base and the height) of the regular tetrahedron is $\displaystyle\frac{a^3\sqrt{2}}{12}$.\\
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AngleSumIdentity}
+\pmcreated{2013-03-22 12:50:36}
+\pmmodified{2013-03-22 12:50:36}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{angle sum identity}
+\pmrecord{14}{33170}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{ProofOfDeMoivreIdentity}
+\pmrelated{DoubleAngleIdentity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% definitions 
+
+%delete-creep work-around.........................
+\begin{document}
+It is desired to prove the identities
+\[ \sin(\theta+\phi) = \sin\theta\cos\phi + \cos\theta\sin\phi \]
+and
+\[ \cos(\theta+\phi) = \cos\theta\cos\phi - \sin\theta\sin\phi \]
+
+Consider the figure
+
+\begin{center}
+\includegraphics[width = 5.3cm, height = 5.0cm]{sclaw1.eps}
+\end{center}
+
+where we have
+\begin{list}{$\circ$}{}
+\item $\triangle Aad \equiv \triangle Ccb$
+\item $\triangle Bba \equiv \triangle Ddc$
+\item $ad = dc = 1$.
+\end{list}
+
+Also, everything is Euclidean, and in particular, the interior angles of any triangle sum to $\pi$.
+
+Call $\angle Aad = \theta$ and $\angle baB = \phi$.
+From the triangle \PMlinkescapetext{sum rule}, we have $\angle Ada = \frac{\pi}{2}-\theta$ and $\angle Ddc = \frac{\pi}{2} - \phi$, while the degenerate
+angle $\angle AdD = \pi$, so that
+\[ \angle adc = \theta + \phi\]
+We have, therefore, that the area of the pink parallelogram is $\sin(\theta + \phi)$.  On the other hand, we can rearrange things thus:
+
+\begin{center}
+\includegraphics[width = 5.6cm, height=5.1cm]{sclaw2.eps}
+\end{center}
+
+In this figure we see an equal pink area, but it is composed of two pieces, of areas $\sin \phi \cos\theta$ and $\cos\phi \sin\theta$.  Adding, 
+we have 
+$$ \sin(\theta + \phi) = \sin\phi\cos\theta + \cos\phi\sin\theta$$
+which gives us the first.
+From definitions, it then also follows that $\sin(\theta + \pi/2) = \cos(\theta)$, and $\sin(\theta+\pi) = - \sin(\theta)$.
+Writing
+\[ \begin{array}{rcl}
+\cos(\theta + \phi)&=& \sin(\theta+\phi+\pi/2) \\
+&=& \sin(\theta)\cos(\phi+\pi/2) + \cos(\theta) \sin(\phi + \pi/2)\\
+&=& \sin(\theta)\sin(\phi + \pi) + \cos(\theta) \cos(\phi) \\
+&=& \cos\theta\cos\phi - \sin\theta\sin\phi
+\end{array} \]
+%delete-creep work-around.................................................
+%%%%%
+%%%%%
+\end{document}

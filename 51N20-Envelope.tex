@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Envelope}
+\pmcreated{2013-03-22 17:10:19}
+\pmmodified{2013-03-22 17:10:19}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{envelope}
+\pmrecord{23}{39484}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+%\pmkeywords{family of curves}
+\pmrelated{DistanceFromPointToALine}
+\pmdefines{envelope}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{pstricks}
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Two plane curves are said to {\em touch each other} or {\em have a tangency} at a point if they have a common tangent line at that point.
+
+The {\em envelope} of a family of plane curves is a curve which touches in each of its points one of the curves of the family.\\
+
+For example, the envelope of the family\, $y = mx-\sqrt{1+m^2}$,\, with $m$ the parameter, may be justified geometrically.\, It is the \PMlinkname{open}{OpenSet} lower semicircle of the unit circle.\, Indeed, the distance of any line
+$$mx-y-\sqrt{1+m^2} = 0$$
+of the family from the center of the unit circle is
+$$\frac{|m\cdot0-1\cdot0-\sqrt{1+m^2}|}{\sqrt{m^2+(-1)^2}} = 1,$$
+whence the line is the tangent to the circle.
+
+Below, the red curve is the lower semicircle of the unit circle, the black lines belong to the family\, $y=mx-\sqrt{1+m^2}$,\, and the equation of each line is given.
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,0)
+\psarc[linecolor=red]{o-o}(0,0){2}{180}{360}
+\psline{-}(-0.1716,-3)(3,0.1716)
+\rput[l](2.9,-0.1716){$y=x+\sqrt{2}$}
+\psline{-}(-3,-2)(3,-2)
+\rput[a](-2.3,-2.3){$y=-1$}
+\psline{-}(-2.3094,0)(-0.577,-3)
+\rput[r](-2.3094,-0.1716){$y=-x\sqrt{3}-2$}
+\rput[b](-0.577,-3){.}
+\end{pspicture}
+\end{center}
+
+
+%%%%%
+%%%%%
+\end{document}

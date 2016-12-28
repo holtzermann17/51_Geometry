@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfApolloniusTheorem}
+\pmcreated{2013-03-22 12:41:16}
+\pmmodified{2013-03-22 12:41:16}
+\pmowner{quincynoodles}{312}
+\pmmodifier{quincynoodles}{312}
+\pmtitle{proof of Apollonius theorem}
+\pmrecord{4}{32967}
+\pmprivacy{1}
+\pmauthor{quincynoodles}{312}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{ProofOfApolloniusTheorem2}
+\pmrelated{LengthsOfTriangleMedians}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $b = \overline{CA}$, $a = \overline{BC}$, $c = \overline{AB}$, and $m = \overline{AM}$.  Let $\angle CMA = \theta$, so that $\angle BMA = \pi - \theta$.
+
+By the law of cosines, $b^2 = m^2 + \frac{a^2}{4} - am \cos\theta$ and $c^2 = m^2 + \frac{a^2}{4} - am \cos (\pi - \theta) = m^2 + \frac{a^2}{4} + am \cos \theta $, and adding gives
+\[ b^2 + c^2 = 2m^2 + \frac{a^2}{2}.\]
+QED
+%%%%%
+%%%%%
+\end{document}

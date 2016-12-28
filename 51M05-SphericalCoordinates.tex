@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SphericalCoordinates}
+\pmcreated{2013-05-08 10:16:57}
+\pmmodified{2013-05-08 10:16:57}
+\pmowner{yark}{2760}
+\pmmodifier{unlord}{1}
+\pmtitle{spherical coordinates}
+\pmrecord{17}{34491}
+\pmprivacy{1}
+\pmauthor{yark}{1}
+\pmtype{Definition}
+\pmcomment{try to get sidebars to show up}
+\pmclassification{msc}{51M05}
+%\pmkeywords{sphere}
+\pmrelated{Sphere}
+\pmrelated{CylindricalCoordinates}
+\pmdefines{hyperspherical coordinates}
+\pmdefines{azimuthal angle}
+\pmdefines{polar angle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+\PMlinkescapeword{bottom}
+\PMlinkescapeword{polar}
+\PMlinkescapeword{top}
+
+\emph{Spherical coordinates} are a system of coordinates for $\R^3$,
+or more generally $\R^n$.
+One coordinate is the distance from the origin,
+which can be thought of as
+the radius of the sphere centred at the origin on which the point lies.
+The other coordinates are angles that specify the position of the point on this sphere.
+
+In $\R^3$ the coordinates are given by
+\begin{align*}
+\left(
+\begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right) &=
+\left(
+\begin{array}{c}
+r\sin\phi\cos\theta\\
+r\sin\phi\sin\theta\\
+r\cos\phi
+\end{array}
+\right),
+\end{align*}
+where $r$ is the distance from the origin,
+$\theta$ is the \emph{azimuthal angle} defined for $\theta\in[0,2\pi)$,
+and $\phi\in[0,\pi]$ is the \emph{polar angle}.
+Note that $\phi=0$ corresponds to the top of the sphere and $\phi=\pi$ corresponds to the bottom of the sphere.
+There is a clash between the mathematicians' and the physicists' definition of spherical coordinates, interchanging both the direction of $\phi$ and the choice of names for the two angles (physicists often use $\theta$ as the azimuthal angle and $\phi$ as the polar one).
+
+Spherical coordinates are a generalization of polar coordinates,
+and can be further generalized to $\R^n$,
+with $n-2$ polar angles $\phi_1,\ldots,\phi_{n-2}$ and one azimuthal angle $\theta$:
+\begin{align*}
+\left(
+\begin{array}{c}
+x_1\\
+x_2\\
+\vdots\\
+x_k\\
+\vdots\\
+x_{n-1}\\
+x_n
+\end{array}\right)&=
+\left(
+\begin{array}{c}
+r\cos\phi_1\\
+r\sin\phi_1\cos\phi_2\\
+\vdots\\
+r\left(\prod_{i=1}^{k-1}\sin\phi_i\right)\cos\phi_k\\
+\vdots\\
+r\sin\phi_1\sin\phi_2\cdots\cos\theta\\
+r\sin\phi_1\sin\phi_2\cdots\sin\phi_{n-2}\sin\theta.
+\end{array}
+\right).
+\end{align*}
+
+These are sometimes called \emph{hyperspherical coordinates} if $n>3$.
+\end{document}

@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedPythagoreanTheorem}
+\pmcreated{2013-03-22 17:13:58}
+\pmmodified{2013-03-22 17:13:58}
+\pmowner{yogis}{15158}
+\pmmodifier{yogis}{15158}
+\pmtitle{generalized Pythagorean theorem}
+\pmrecord{12}{39561}
+\pmprivacy{1}
+\pmauthor{yogis}{15158}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmsynonym{Pythagorean theorem}{GeneralizedPythagoreanTheorem}
+%\pmkeywords{right triangle}
+%\pmkeywords{polygons}
+%\pmkeywords{hypothenuse}
+%\pmkeywords{generalized theorem}
+%\pmkeywords{Pythagora}
+\pmrelated{RightTriangle}
+\pmrelated{Polygon}
+\pmrelated{PythagorasTheorem}
+\pmrelated{ProofOfPythagoreanTheorem2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem} 
+\begin{document}
+% Beginning graphics and declaring dimensions of drawing window
+\begin{thm} If three similar polygons are constructed on the sides
+of a right triangle, then the area of the polygon constructed on the hypotenuse is 
+equal to the sum of the areas of the polygons constructed on the legs.
+\end{thm}
+
+
+\begin{center}
+\begin{pspicture}(-1,-2)(6,5)
+
+% Drawing similar triangles in colors
+\pspolygon[linecolor=blue](0,0)(0,4)(3,4)
+\pspolygon[linecolor=red](3,4)(4.92,2.56)(3,0)
+\pspolygon[linecolor=green](0,0)(3,0)(1.92,-1.44)
+
+% Drawing height of original triangle in cyan
+\psline[linecolor=cyan](1.08,1.44)(3,0)
+
+% Drawing original triangle in black
+\pspolygon(0,0)(3,0)(3,4)
+
+% Marking critical points
+\psdots(0,0)(0,4)(1.08,1.44)(1.92,-1.44)(3,0)(3,4)(4.92,2.56)
+
+% Ending the picture
+\end{pspicture}
+\end{center}
+We when say that the polygon is constructed on a side of the right triangle, we mean
+that the polygon shares an entire side with the polygon.
+
+Beginning of proof.
+First, it suffices to prove the theorem for polygons of only one shape.
+Suppose that the areas of two polygons $P$ and $P'$ of different shapes
+constructed on some side of the triangle have a ratio $k$. Then the areas
+of polygons similar to them (say $R$ and $R'$) and constructed on another side
+which is $m$ times longer, will be $m^2$ times larger for both shapes. Therefore,
+they will have the same ratio, $k$. Hence if the areas of $P', Q', R'$ satisfy
+the property that the first two add up to the third one, then the same
+will hold true for the areas of $P,Q$ and $R$ where are $k$ times greater.
+
+So instead of constructing a square on each side, as Euclid did, we use a right
+triangle that is similar to the original right triangle. And instead of constructing
+the triangle on the outside, we use the inside of the triangle.
+
+Drop an altitude of the right triangle to its hypotenuse. This altitude divides the 
+triangle into two triangles and each is similar to the original triangle. 
+We now have three similar right triangles constructed on the sides of the original 
+right triangle, and two of them add up to the third one.
+
+End of proof. 
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBrahmaguptasFormula}
+\pmcreated{2013-03-22 13:09:14}
+\pmmodified{2013-03-22 13:09:14}
+\pmowner{giri}{919}
+\pmmodifier{giri}{919}
+\pmtitle{proof of Brahmagupta's formula}
+\pmrecord{6}{33594}
+\pmprivacy{1}
+\pmauthor{giri}{919}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We shall prove that the area of a cyclic quadrilateral with sides $p,q,r,s$  is given by $$\sqrt{(T-p)(T-q)(T-r)(T-s)}$$where $T = \frac{p+q+r+s}{2}.$
+
+\begin{center}
+\includegraphics{quadcyclic.eps}
+\end{center}
+
+Area of the cyclic quadrilateral = Area of $\triangle ADB +$ Area of $\triangle BDC.$ $$ = \frac{1}{2}pq\sin A  + \frac{1}{2}rs\sin C$$
+But since $ABCD$ is a cyclic quadrilateral, $\angle DAB = 180^\circ - \angle DCB.$
+Hence $\sin A = \sin C.$ Therefore area now is
+$$ Area = \frac{1}{2}pq\sin A + \frac{1}{2}rs\sin A$$
+$$ (Area)^2 = \frac{1}{4}\sin^2 A (pq + rs)^2$$
+$$ 4(Area)^2 = (1 - \cos^2 A)(pq + rs)^2$$
+$$ 4(Area)^2 = (pq + rs)^2 - cos^2 A (pq + rs)^2$$
+Applying cosines law for $\triangle ADB$ and $\triangle BDC$ and equating the expressions for side $DB,$ we have
+$$p^2 + q^2 - 2pq\cos A = r^2 + s^2 - 2rs\cos C$$
+Substituting $\cos C = -\cos A$ (since angles $A$ and $C$ are suppplementary) and rearranging, we have
+$$2\cos A (pq + rs) = p^2 + q^2 - r^2 - s^2$$
+substituting this in the equation for area,
+$$ 4(Area)^2 = (pq + rs)^2 - \frac{1}{4}(p^2 + q^2 - r^2 - s^2)^2$$
+$$ 16(Area)^2 = 4(pq + rs)^2 - (p^2 + q^2 - r^2 - s^2)^2$$
+which is of the form $a^2-b^2$ and hence can be written in the form $(a+b)(a-b)$ as
+$$(2(pq + rs) + p^2 + q^2 -r^2 - s^2)(2(pq + rs) - p^2 - q^2 + r^2 +s^2)$$
+$$ = ( (p+q)^2 - (r-s)^2 )( (r+s)^2 - (p-q)^2 )        $$
+$$ = (p+q+r-s)(p+q+s-r)(p+r+s-q)(q+r+s-p)$$
+Introducing $T = \frac{p+q+r+s}{2},$
+$$ 16(Area)^2 = 16(T-p)(T-q)(T-r)(T-s)$$
+Taking square root, we get
+$$ Area = \sqrt{(T-p)(T-q)(T-r)(T-s)}$$
+%%%%%
+%%%%%
+\end{document}

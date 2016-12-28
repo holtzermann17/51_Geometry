@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeometryAsTheStudyOfInvariantsUnderCertainTransformations}
+\pmcreated{2013-03-22 18:00:29}
+\pmmodified{2013-03-22 18:00:29}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{geometry as the study of invariants under certain transformations}
+\pmrecord{6}{40522}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-01}
+\pmclassification{msc}{51-00}
+%\pmkeywords{geometric algebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+An approach to geometry first formulated by Felix Klein in his
+Erlangen lectures is to describe it as the study of invariants under
+certain allowed transformations. This involves taking our space as a
+set $S$, and considering a subgroup $G$ of the group $Bij(S)$, the set
+of bijections of $S$.  Objects are subsets of $S$, and we consider two
+objects $A,B \subset S$ to be equivalent if there is an $f \in G$ such
+that $f(A) = B$.
+
+A property $P$ of subsets of $S$ is said to be a \emph{geometric
+property} if it is invariant under the action of the group $G$, which
+is to say that $P(S)$ is true (or false) if and only if $P(g(S))$ is
+true (or false) for every transformation $g \in G$.  For example, the
+property of being a straight line is a geometric property in Euclidean
+geometry.  Note that the question whether or not a certin property is
+geometric depends on the choice of group.  For instance, in the case
+of Euclidean geometry, the property of orthogonality is geometric
+because, given two lines $L_1$ and $L_2$ and any transformation $g$
+which belongs to the Euclidean group, the lines $g(L_1)$ and $g(L_2)$
+are orthogonal if and only if $L_1$ and $L_2$ are orthogonal.
+However, if we consider affine geometry, orthogonality is no longer a
+geometric property because, given two orthogonal lines $L_1$ and
+$L_2$, one can find a transformation $f$ which belongs to the affine
+group such that $f(L_1)$ is not orthogonal to $f(L_2)$.
+
+Invariants can also be numbers.  A real-valued function $f$ whose
+domain consists of subsets of $S$ is an invariant, or a
+\emph{geometrical quantity} if the domain of $X$ is invariant under
+the action of $G$ and $f(X) = f(g(X))$ for all subsets $X$ in the
+domain of $f$ and all transformations $g \in G$.  Familiar examples
+from Euclidean geometry are the length of line segments, areas of
+triangles, and angles.  An important feature of the group-theoretic
+approach to geometry is that one one can use the techniques of
+invariant theory to systematically find and classify the invariants of
+a geometrical system.  Using this approach, one can start with the
+description of a geometrical system in terms of a set and a group and
+rediscover geometric quantities which were originally found by trial
+and error.
+
+One is not always interested in considering all possible subsets of
+$S$.  For instance, in algebraic geometry, one only cares about
+subsets which can be defined by sytems of algebraic equations.  To
+accommodate this desire, one may revise Klein's definition by
+replacing the set $S$ with a suitable category (such as the category
+of algebraic subsets) to obtain the definition ``geometry is the study
+of the invariants of a category $C$ under the action of a group $G$
+which acts upon this category.''  Not only is such an approach popular
+in contemporary algebraic geometry, it is also useful when discussing
+such phenomena as duality transforms which map a point in one space to
+a line in another space and vice-versa.  Such a phenomenon is not
+easily accomodated in a set-theoretic framework, but in terms of
+category theory, the duality transform can be described as a
+contravariant functor.
+
+Klein's definition provides an organizing principle for classifying
+geometries.  Ever since the discovery of non-Euclidean geometry,
+geometers have been defined and studied many different geometries.
+Without an organizing principle, the discussion and comparison of
+these geometries could become confusing.  In the next section, we
+shall describe several familiar geometric systems from the standpoint
+of Klein's definition.
+
+\subsection{Basic examples}
+\subsubsection{Euclidean geometry}
+Euclidean geometry deals with $\mathbb{R}^n$ as a vector space along with a metric $d$. The allowed transformations are 
+bijections $f\colon \mathbb{R}^n \to \mathbb{R}^n$ that preserve the metric, that is, $d(\boldsymbol{x},\boldsymbol{y}) 
+= d(f(\boldsymbol{x}),f(\boldsymbol{y}))$ for all $\boldsymbol{x},\boldsymbol{y} \in \mathbb{R}^n$. Such maps are called 
+\emph{isometries}, and the group is often denoted by $\operatorname{Iso}(\mathbb{R}^n)$. Defining a norm by $|x| = 
+d(\boldsymbol{x},\boldsymbol{0})$, for $\boldsymbol{x} \in \mathbb{R}^n$, we obtain a notion of length or distance.
+We can also define an inner product $\langle \boldsymbol{x},\boldsymbol{y}\rangle = \boldsymbol{x} \cdot \boldsymbol{y}$ on $\mathbb{R}^n$ using the standard dot
+product (this induces the same norm which can now be defined as
+$|x| = \sqrt{\langle \boldsymbol{x},\boldsymbol{x}\rangle}$).
+An inner product leads to a definition of
+the angle between two vectors $\boldsymbol{x},\boldsymbol{y} \in \mathbb{R}^n$ to be 
+$\displaystyle \angle{\boldsymbol{x}}{\boldsymbol{y}} = \cos^{-1}\left(\frac{\langle \boldsymbol{x},\boldsymbol{y}\rangle}
+{|\boldsymbol{x}| \cdot |\boldsymbol{y}|}\right).$  It is clear that since isometries preserve the metric, they preserve distance and angle. As an example, it can be shown 
+that the group $\operatorname{Iso}(\mathbb{R}^2)$ consists of translations, reflections, glides, and rotations.  In 
+general, a member $f$ of $\operatorname{Iso}(\mathbb{R}^n)$ has the form $f(\boldsymbol{x})=\boldsymbol{Ux}+
+\boldsymbol{c}$, where $\boldsymbol{U}$ is an orthogonal $n\times n$ matrix and $\boldsymbol{c}\in\mathbb{R}^n$.
+
+\subsubsection{Affine geometry} 
+ Unlike Euclidean geometry, we are no longer bound to ``rigid motion''
+transformations in affine geometry.  Here, we are interested in what
+happens to geometric objects when they undergo a finite series of
+``parallel projections''.  For example, imagine two Euclidean planes
+($\mathbb{R}^2$) in $\mathbb{R}^3$.  Loosely speaking, Euclidean
+geometry deals with transformations that take objects from one plane
+to the other, when the planes are \emph{parallel} to each other.  In
+affine geometry, the transformation is between two copies of
+$\mathbb{R}^2$, but they are no longer required to be parallel to each
+other anymore.  Objects from one plane will appear to be ``stretched''
+in the other.  A circle will turn into an ellipse, etc...
+
+For $\mathbb{R}^2$, in terms of the Kleinian view of geometry, affine
+geometry consists of the ordinary Euclidean plane, together with a
+group of transformations that
+\begin{enumerate}
+\item map straight lines to straight lines,
+\item map parallel lines to parallel lines, and
+\item preserve ratios of lengths of line segments along a given
+straight line.  
+\end{enumerate}
+Of course, the properties can be generalized to $\mathbb{R}^n$ and
+$n-1$ dimensional hyperplanes.  A typical tranformation in an affine
+geometry is called an \PMlinkname{affine
+transformation}{AffineTransformation}:
+$T(\boldsymbol{x})=\boldsymbol{Ax}+\boldsymbol{b}$, where
+$x\in\mathbb{R}^n$ and $\boldsymbol{A}$ is an invertible $n\times n$
+real matrix.
+
+\subsubsection{Projective geometry}
+Projective geometry was motivated by how we see objects in everyday
+life. For example, parallel train tracks appear to meet at a point far
+away, even though they are always the same distance apart. In
+projective geometry, the primary invariant is that of incidence. The
+notion of parallelism and distance is not present as with Euclidean
+geometry. There are different ways of approaching projective
+geometry. One way is to add points of infinity to Euclidean space. For
+example, we may form the projective line by adding a point of infinity
+$\infty$, called the ideal point, to $\mathbb{R}$. We can then create
+the projective plane where for each line $l \in \mathbb{R}^2$, we
+attach an ideal point, and two ordinary lines have the same ideal
+point if and only if they are parallel. The projective plane then
+consists of the regular plane $\mathbb{R}^2$ along with the ideal
+line, which consists of all ideal points of all ordinary lines. The
+idea here is to make central projections from a point sending a line
+to another a bijective map.
+
+Another approach is more algebraic, where we form $P(V)$ where V is a
+vector space. When $V = \mathbb{R}^n$, we take the quotient of $
+\mathbb{R}^{n+1} - \{0\}$ where $v \sim \lambda \cdot v$ for $v \in
+\mathbb{R}^n, \lambda \in \mathbb{R}$.  The allowed transformations is
+the group $PGL(\mathbb{R}^{n+1})$, which is the general linear group
+modulo the subgroup of scalar matrices.
+
+\subsubsection{Spherical geometry}
+Spherical geometry deals with restricting our attention in Euclidean
+space to the unit sphere $S^n$. The role of straight lines is taken by
+great circles. Notions of distance and angles can be easily developed,
+as well as spherical laws of cosines, the law of sines, and spherical
+triangles.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TrigonometricVersionOfCevasTheorem}
+\pmcreated{2013-03-22 14:49:17}
+\pmmodified{2013-03-22 14:49:17}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{trigonometric version of Ceva's theorem}
+\pmrecord{6}{36483}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+%\pmkeywords{Concurrence}
+%\pmkeywords{Menelaus Theorem}
+\pmrelated{Triangle}
+\pmrelated{Median}
+\pmrelated{Centroid}
+\pmrelated{Orthocenter}
+\pmrelated{OrthicTriangle}
+\pmrelated{Cevian}
+\pmrelated{Incenter}
+\pmrelated{GergonnePoint}
+\pmrelated{MenelausTheorem}
+\pmrelated{ProofOfVanAubelTheorem}
+\pmrelated{VanAubelTheorem}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+Let $ABC$ be a given triangle and $P$ any point of the plane. If $X$ is the intersection point of $AP$ with $BC$, $Y$ the intersection point of $BP$ with $CA$ and $Z$ is the intersection point of $CP$ with $AB$, then
+$$\frac{\sin ACZ}{\sin ZCB}\cdot\frac{\sin BAX}{\sin XAC}\cdot\frac{\sin CBY}{\sin YBA}=1.$$
+
+Conversely, if $X,Y,Z$ are points on $BC,CA,AB$ respectively, and if 
+\[
+\frac{\sin ACZ}{\sin ZCB}\cdot\frac{\sin BAX}{\sin XAC}\cdot\frac{\sin CBY}{\sin YBA}=1
+\]
+then $AD,BE,CF$ are concurrent.
+
+Remarks: All the angles are directed angles (counterclockwise is positive), and the intersection points may lie in the prolongation of the segments.
+\figuraex{ceva}{scale=0.75}
+%%%%%
+%%%%%
+\end{document}

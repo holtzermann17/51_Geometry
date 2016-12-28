@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RectifiableCurve}
+\pmcreated{2013-03-22 12:53:23}
+\pmmodified{2013-03-22 12:53:23}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{rectifiable curve}
+\pmrecord{22}{33235}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N05}
+\pmrelated{ArcLength}
+\pmrelated{PiecewiseSmooth}
+\pmrelated{StraightLineIsShortestCurveBetweenTwoPoints}
+\pmrelated{IntegralRepresentationOfLengthOfSmoothCurve}
+\pmdefines{rectifiable}
+\pmdefines{length}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+\PMlinkescapeword{distance}
+\PMlinkescapeword{information}
+\PMlinkescapeword{measure}
+\PMlinkescapeword{independent}
+\PMlinkescapeword{inscribed}
+\PMlinkescapeword{property}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{vertices}
+
+\section*{Definitions}
+
+Let $f\colon [a,b] \rightarrow \mathbb{R}^k$ be a simple curve in $\mathbb{R}^{k}$ and let $P = (s_{0}, ..., s_{n})$ with $a \le s_0 < s_1 < \cdots < s_n \le b$ be a partition of the interval $[a, b]$; then the points in the set
+\[\{ f(s_{0}), f(s_{1}), ..., f(s_{n}) \}\]
+are called the \emph{vertices of the inscribed polygonal path} $\Pi(P)$ determined by $P$.
+The \emph{length} of the inscribed polygonal path
+is defined to be $\sum_{m=1}^n | f(s_{m}) - f(s_{m-1}) |$.
+The simple curve is said to be \emph{rectifiable} if there exists a positive number $M$ such that the length of the inscribed polygonal path $\Pi(P)$ is less than $M$ for all possible partitions $P$ of $[a, b]$.
+If the simple curve is rectifiable then its \emph{length}
+is defined as the least upper bound of the lengths of inscribed polygonal paths taken over all possible partitions.
+
+\section*{Notes}
+
+The intuition underlying this definition is that, to measure the length of a curve, one could approximate the curve by an inscribed polygonal path.  As one increases the number of vertices of the polygonal path, one expects to obtain better approximations to the curve, and hence one would expect the length of the curve to be the limit of the length of these polygonal paths.  Since the length of a polygonal path increases as one adds vertices, this means we are dealing with the limit of an increasing quantity, which will equal its supremum.
+
+If one does not demand the curve to be simple (that is, that $f$ be injective), then one may still proceed as above, taking the supremum of the lengths of all possible inscribed polygonal paths.  However, what one will obtain is not necessarily the length of the curve, but the total distance travelled along the curve.  For instance, if a portion of the curve is traced more than once, then the length of that portion of the curve will be counted more than once.
+
+Although this definition mentions a parameterization of the (simple) curve, what is being defined actually is independent of the choice of parameterization.  In fact, all the information that is used is the ordering of points along the curve, which is invariant under reparameterization.  Also, because the length of a line segment does not depend on how one might choose to orient the line segment, what is being defined here is invariant under reversing the parameterization of the curve.  Hence, this is a geometrical property of the curve.
+%%%%%
+%%%%%
+\end{document}

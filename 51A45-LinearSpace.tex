@@ -1,0 +1,214 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearSpace}
+\pmcreated{2013-03-22 19:14:57}
+\pmmodified{2013-03-22 19:14:57}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{linear space}
+\pmrecord{8}{42174}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A45}
+\pmclassification{msc}{51A05}
+\pmclassification{msc}{05C65}
+\pmrelated{FinitePlane}
+\pmrelated{ProjectivePlane2}
+\pmrelated{DeBruijnErdHosTheorem}
+\pmdefines{near-pencil}
+\pmdefines{star}
+\pmdefines{cross}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A {\em \PMlinkescapetext{linear space}} is a near-linear space $\mathscr{S}=(\mathcal{P},\mathcal{L})$ in which every pair of distinct points are on exactly one line. 
+
+Note: The usage of the term has little relation to its occasional appearance in linear algebra as a synonym for a vector space.
+
+Note: The convention for drawing finite linear spaces is to ignore two-point lines.  Thus, a linear space with three points and three lines is drawn
+\begin{center}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\end{pspicture}
+\hspace{1cm}
+\begin{pspicture}(-1,0)(1,1)
+\rput(0,0.5){rather than}
+\end{pspicture}
+\hspace{1cm}
+\begin{pspicture}(-1,0)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psline(-1,0)(1,0)
+\psline(0,1)(1,0)
+\psline(0,1)(-1,0)
+\end{pspicture}
+\end{center}
+
+\paragraph{Examples:}
+\begin{enumerate}
+\item We have seen in the parent entry that a graph can be thought of as a near-linear space in which every line contains two points.  A complete graph is then a linear space.
+
+\item Let $\mathbb{F}$ be a finite field. Let $\mathcal{P}$ be the elements in the Cartesian product $\mathbb{F}\times \mathbb{F}$.  The solutions to a linear equation
+\[
+  \{ (x,y)\in\mathcal{P} \mid ax+by =c\}
+\]
+for some $a, b, c\in \mathbb{F}$, where $a$ and $b$ are not both zero, form a line in $\mathcal{L}$. Since any two points determine a unique line,
+$\mathscr{A} = (\mathcal{P},\mathcal{L})$ is a linear space,
+called the affine plane over $\mathbb{F}$.
+
+\item Any projective plane is a linear space.  Conversely, any linear space in which every two lines meet, and there exists a quadrangle is a projective plane.
+
+\item A \emph{near-pencil} is a finite linear space with the following diagram:
+\begin{center}
+\begin{pspicture}(-3,-1)(3,1.5)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](0,1.5)
+\psdots[linecolor=blue,dotsize=5pt](-3,0)
+\psdots[linecolor=blue,dotsize=5pt](-1.5,0)
+\psdots[linecolor=blue,dotsize=5pt](1.5,0)
+\psdots[linecolor=blue,dotsize=5pt](3,0)
+\psline(-3,0)(3,0)
+\uput[d](-3,0){$P_1$}
+\uput[d](-1.5,0){$P_2$}
+\uput[d](0,0){$\cdots$}
+\uput[d](1.5,0){$P_{n-1}$}
+\uput[d](3,0){$P_n$}
+\rput[l](0.25,1.5){$P$}
+\rput[l](3.5,0){$\ell$}
+\end{pspicture}
+\end{center}
+In other words, a near-pencil consists of $n+1$ points and $n+1$ lines, where $n\ge 2$, such that $n$ points lie on one line $\ell$, and the remaining point $P$ lies on $n$ 2-point lines.  Of course, on any 2-point line, the point other than $P$ must be on $\ell$.
+
+A fundamental fact concerning finite linear space is the De Bruijn Erd\H{o}s theorem, which states that given a finite linear space $\mathscr{S}=(\mathcal{P},\mathcal{L})$ with at least two lines, then $|\mathcal{P}|\le |\mathcal{L}|$, and if the equality occurs, then $\mathscr{S}$ is either a projective plane or a near-pencil.
+
+\item
+Let $k_1,\ldots,k_n$ be positive integers greater than 2.  A \emph{$(k_1,\ldots,k_n)$-star} is a linear space such that there are $n$ lines of sizes $k_1,\ldots, k_n$ respectively, which are concurrent, and all other lines are 2-point lines.  By convention, we order the integers so that $k_1\le \cdots \le k_n$.  When $n=2$, we call the space a $(k_1,k_2)$-cross.  Below are diagrams of a $(3,3,3,3)$-star and a $(4,5)$-cross:
+\begin{center}
+\begin{pspicture}(-1,-1)(1,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,-1)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](-0.7,-0.7)
+\psdots[linecolor=blue,dotsize=5pt](0.7,0.7)
+\psdots[linecolor=blue,dotsize=5pt](-0.7,0.7)
+\psdots[linecolor=blue,dotsize=5pt](0.7,-0.7)
+\psline(-1,0)(1,0)
+\psline(0,-1)(0,1)
+\psline(-0.7,-0.7)(0.7,0.7)
+\psline(-0.7,0.7)(0.7,-0.7)
+\end{pspicture}
+\hspace{2cm}
+\begin{pspicture}(-2,-1)(2,1)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-2,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psdots[linecolor=blue,dotsize=5pt](2,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,-0.5)
+\psdots[linecolor=blue,dotsize=5pt](1,0.5)
+\psdots[linecolor=blue,dotsize=5pt](2,1)
+\psline(-2,0)(2,0)
+\psline(-1,-0.5)(2,1)
+\end{pspicture}
+\end{center}
+
+\item There are five non-isomorphic five-point linear spaces:
+\begin{center}
+\begin{pspicture}(-2,-1)(2,1.5)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-2,0)
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psdots[linecolor=blue,dotsize=5pt](2,0)
+\psline(-2,0)(2,0)
+\end{pspicture}
+\begin{pspicture}(-1.25,-1)(1.25,1.5)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1.5,0)
+\psdots[linecolor=blue,dotsize=5pt](-0.5,0)
+\psdots[linecolor=blue,dotsize=5pt](0,1)
+\psdots[linecolor=blue,dotsize=5pt](0.5,0)
+\psdots[linecolor=blue,dotsize=5pt](1.5,0)
+\psline(-1.5,0)(1.5,0)
+\end{pspicture}
+\begin{pspicture}(-1.5,-1)(1.5,1.5)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0.5)
+\psdots[linecolor=blue,dotsize=5pt](1,1)
+\psline(-1,0)(1,0)
+\psline(-1,0)(1,1)
+\end{pspicture}
+\begin{pspicture}(-1,-1)(1,1.5)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-1,0)
+\psdots[linecolor=blue,dotsize=5pt](0,0)
+\psdots[linecolor=blue,dotsize=5pt](1,0)
+\psdots[linecolor=blue,dotsize=5pt](-0.5,1)
+\psdots[linecolor=blue,dotsize=5pt](0.5,1)
+\psline(-1,0)(1,0)
+\end{pspicture}
+\begin{pspicture}(-1.25,-1)(1.25,1.5)
+\psset{unit=20pt}
+\psdots[linecolor=blue,dotsize=5pt](-0.6,0)
+\psdots[linecolor=blue,dotsize=5pt](0.6,0)
+\psdots[linecolor=blue,dotsize=5pt](-1.15,0.8)
+\psdots[linecolor=blue,dotsize=5pt](1.15,0.8)
+\psdots[linecolor=blue,dotsize=5pt](0,1.5)
+\end{pspicture}
+\end{center}
+Corresponding to the diagrams above, the spaces have respectively 1, 5, 6, 8, and 10 lines.  Of these, the second is a near-pencil, the third is a $(3,3)$-cross, and the last is a complete graph.
+\end{enumerate}
+
+\paragraph{Some properties:}
+\begin{enumerate}
+\item In a linear space $\mathscr{S}=(\mathcal{P},\mathcal{L})$, 
+$$\sum_{\ell \in \mathcal{L}} \binom{|\ell|}{2} = \binom{|\mathcal{P}|}{2}.$$
+
+\item Let $p$ be an arbitrary point in a linear space, 
+\[\sum_{\ell \ni p} (|\ell| - 1) = |\mathcal{P}| - 1\]
+where the sum is taken over all lines containing $p$. This holds because given any point, this point forms exactly one line with every other point, so $|\ell| - 1$ counts the number of points $p$ shares in line $\ell$. Summing over all lines gives all the points except $p$.
+\end{enumerate}
+
+\begin{thebibliography}{7}
+\bibitem{BB} L. M. Batten, A. Beutelspacher {\it The Theory of Finite Linear Spaces}, Cambridge University Press (2009)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

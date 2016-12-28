@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CoordinatesOfMidpoint}
+\pmcreated{2013-03-22 17:31:07}
+\pmmodified{2013-03-22 17:31:07}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{coordinates of midpoint}
+\pmrecord{5}{39910}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51-00}
+\pmrelated{ConjugateDiametersOfEllipse}
+\pmrelated{CentreOfMassOfPolygon}
+\pmrelated{Midpoint4}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The coordinates of the midpoint of a line segment are the arithmetic means of the coordinates of the endpoints of the segment.  Thus, if the endpoints are\, $(x_1,\,y_1)$\, and\, $(x_2,\,y_2)$,\, then the midpoint is
+   $$\left(\frac{x_1\!+\!x_2}{2},\, \frac{y_1\!+\!y_2}{2}\right)\!.$$
+
+For justifying the above coordinates of the midpoint, we know that its abscissa $x_0$ halves on the $x$-axis the line segment between $x_1$ and $x_2$.  Since the lengths of the half-segments are $x_0\!-\!x_1$ and $x_2\!-\!x_0$, if\, 
+$x_1 < x_2$,\, and their opposite numbers, if\, $x_2 < x_1$,\, in any case we can write
+$$x_0-x_1 = x_2-x_0.$$
+Solving this equation for $x_0$ yields:\, $\displaystyle x_0 = \frac{x_1\!+\!x_2}{2}$.\, \PMlinkescapetext{Similar} result is gotten for the ordinate of the midpoint.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ThreeTheoremsOnParabolas}
+\pmcreated{2013-03-22 12:40:51}
+\pmmodified{2013-03-22 12:40:51}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{three theorems on parabolas}
+\pmrecord{19}{32958}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{PropertiesOfParabola}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcounter{tnum}
+\setcounter{tnum}{1}
+\newcounter{lblfoo}
+\setcounter{lblfoo}{1}
+
+\newcommand{\theorem}[1]{\paragraph{Theorem \arabic{tnum} #1:} \addtocounter{tnum}{1}}
+\newcommand{\proof}{\paragraph{Proof:}}
+\begin{document}
+In the Cartesian plane, pick a point with coordinates $(0,2f)$ (subtle hint!) and construct (1) the set $S$ of segments $s$ joining $F = (0,2f)$ with the 
+points $(x,0)$, and (2) the set $B$ of right-bisectors $b$ of the segments $s\in S$.  
+\theorem{}
+The {\em envelope} described by the lines of the set $B$ is a parabola with $x$-axis as directrix and focal length $\vert f\vert$.
+\proof
+\begin{figure}
+\begin{center}
+\includegraphics*[width = 6.5 cm, height = 4.5 cm]{const.eps}
+\end{center}
+\end{figure}
+We're lucky in that we don't need a fancy definition of envelope; considering a line to be a set of points it's just the boundary of the set 
+$C=\cup_{b\in B} b$.  Strategy:  fix an $x$ coordinate and find the max/minimum of possible $y$'s in C with that $x$.  But first we'll pick an $s$ from 
+$S$ by picking a point $p = (w,0)$ on the $x$ axis.  The midpoint of the segment $s\in S$ through $p$ is $M = (\frac{w}{2},f)$.  Also, the slope of this 
+$s$ is $-\frac{2f}{w}$.  The corresponding right-bisector will also pass through $(\frac{w}{2},f)$ and will have slope $\frac{w}{2f}$.  Its equation is therefore
+\[ \frac{2y-2f}{2x-w} = \frac{w}{2f}.\]
+Equivalently,
+\[ y = f + \frac{wx}{2f} - \frac{w^2}{4f}.\]
+By any of many very famous theorems (Euclid book II theorem twenty-something, Cauchy-Schwarz-Bunyakovski (overkill), differential calculus, what 
+you will) for fixed $x$, $y$ is an extremum for $w = x$ only, and therefore the envelope has equation
+\[ y = f + \frac{x^2}{4f}.\]
+I could say I'm done right now because we ``know'' that this is a parabola, with focal length $f$ and $x$-axis as directrix.  I don't want to, though.  The 
+most popular definition of parabola I know of is ``set of points equidistant from some line $d$ and some point $f$."  The line responsible for the point on 
+the envelope with given ordinate $x$ was found to bisect the segment $s\in S$ through $H = (x,0)$.  So pick an extra point $Q\in b\in B$ where $b$ is 
+the perpendicular bisector of $s$.  We then have $\angle FMQ = \angle QMH$ because they're both right angles, lengths $FM = MH$, and $QM$ is 
+common to both triangles $FMQ$ and $HMQ$.  Therefore two sides and the angles they contain are respectively equal in the triangles $FMQ$ and 
+$HMQ$, and so respective angles and respective sides are all equal.  In particular, $FQ = QH$.  Also, since $Q$ and $H$ have the same $x$ 
+coordinate, the line $QH$ is the perpendicular to the $x$-axis, and so $Q$, a general point on the envelope, is equidistant from $F$ and the $x$-axis.  
+Therefore etc.
+
+QED.
+
+Because of this construction, it is clear that the lines of $B$ are all tangent to the parabola in question.
+
+We're not done yet.  Pick a random point $P$ outside $C$ (``inside" the parabola), and call the parabola $\pi$ (just to be nasty). Here's a nice quicky:
+\theorem{The Reflector Law}
+For $R \in \pi$, the length of the path $PRF$ is minimal when $PR$ produced is perpendicular to the $x$-axis.
+\proof
+\begin{figure}
+\begin{center}
+\includegraphics*[width = 4.9cm, height = 6.9 cm]{refl.eps}
+\end{center}
+\end{figure}
+Quite simply, assume $PR$ produced is not necessarily perpendicular to the $x$-axis.  Because $\pi$ {\em is} a parabola, the segment from $R$ 
+perpendicular to the $x$-axis has the same length as $RF$.  So let this perpendicular hit the $x$-axis at $H$.  We then have that the length of $PRH$ 
+equals that of $PRF$.  But $PRH$ (and hence $PRF$) is minimal when it's a straight line; that is, when $PR$ produced is perpendicular to the $x$-axis.
+
+QED
+
+Hey! I called that theorem the ``reflector law''.  Perhaps it didn't look like one.  (It {\em is} in the Lagrangian formulation), but it's fairly easy to show (it's a 
+similar argument) that the shortest path from a point to a line to a point makes \PMlinkescapetext{``incident"} and ``reflected" angles equal.
+
+One last marvelous tidbit.  This will take more time, though.  Let $b$ be tangent to $\pi$ at $R$, and let $n$ be perpendicular to $b$ at $R$.  We will call 
+$n$ the {\em \PMlinkescapetext{normal} to $\pi$ at $R$}.  Let $n$ meet the $x$-axis at $G$.
+\theorem{}
+The radius of the ``best-fit circle'' to $\pi$ at $R$ is twice the length $RG$.
+\proof 
+\begin{figure}
+\begin{center}
+\includegraphics*[width = 6.4cm, height = 7.3cm]{curve.eps}
+\end{center}
+\end{figure}
+(Note: the $\approx$'s need to be phrased in terms of upper and lower bounds, so I can use the sandwich theorem, but the proof schema is exactly what is 
+required).
+
+Take two points $R,R'$ on $\pi$ some small distance $\epsilon$ from each other (we don't actually use $\epsilon$, it's just a psychological trick).  
+Construct the tangent $t$ and normal $n$ at R, normal $n'$ at $R'$.  Let $n,n'$ intersect at $O$, and $t$ intersect the $x$-axis at $G$.  \PMlinkescapetext{Join} $RF,R'F$.  
+Erect perpendiculars $g,g'$ to the $x$-axis through $R,R'$ respectively.  \PMlinkescapetext{Join} $RR'$.  Let $g$ intersect the $x$-axis at $H$. Let $P,P'$ be points on 
+$g,g'$ not in $C$.  Construct $RE$ perpendicular to $RF$ with $E$ in $R'F$. We now have 
+\begin{list}{\roman{lblfoo}) \addtocounter{lblfoo}{1} }{}
+\item $\angle PRO = \angle ORF = \angle GRH \approx \angle P'R'O = \angle OR'F$
+\item $ ER \approx FR \cdot \angle EFR $
+\item $ \angle R'RE + \angle ERO \approx \frac{\pi}{2} $ (That's the number $\pi$, not the parabola)
+\item $ \angle ERO + \angle ORF = \frac{\pi}{2} $ 
+\item $ \angle R'ER \approx \frac{\pi}{2} $
+\item $ \angle R'OR = \frac{1}{2} \angle R'FR $
+\item $ R'R \approx OR \cdot \angle R'OR $
+\item $ FR = RH $
+\end{list}
+From (iii),(iv) and (i) we have $\angle R'RE \approx \angle GRH$, and since $R'$ is close to $R$, and if we let $R'$ approach $R$, the approximations 
+approach equality.  Therefore, we have that triangle $R'RE$ approaches similarity with $GRH$.  Therefore we have $RR':ER \approx RG:RH$.  
+Combining this with (ii),(vi),(vii), and (viii) it follows that $RO \approx 2 RG$, and in the limit $R'\rightarrow R$, $RO = 2RG$.
+
+QED
+
+This last theorem is a very nice way of short-cutting all the messy calculus needed to derive the Schwarzschild ``Black-Hole" solution to Einstein's \PMlinkescapetext{field} equations, and that's why I enjoy it so.
+%%%%%
+%%%%%
+\end{document}

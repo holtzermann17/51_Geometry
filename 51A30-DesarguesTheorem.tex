@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DesarguesTheorem}
+\pmcreated{2013-03-22 11:51:32}
+\pmmodified{2013-03-22 11:51:32}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{Desargues' theorem}
+\pmrecord{19}{30424}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A30}
+\pmclassification{msc}{46L05}
+\pmdefines{Desarguesian}
+\pmdefines{dual Desarguesian}
+\pmdefines{Desarguesian property}
+\pmdefines{affine Desarguesian}
+\pmdefines{minor Desarguesian}
+\pmdefines{Desarguesian configuration}
+\pmdefines{minor affine Desarguesian}
+
+\usepackage{graphicx}
+%%%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Let $ABC$ and $XYZ$ be two triangles.  They are said to be \emph{perspective from a point} if $AX,BY$ and $CZ$ are either concurrent or parallel, and are said to be \emph{perspective from a line} if either the points of intersections $AB \cap XY, BC\cap YZ$ and $CA \cap ZX$ all exist and are collinear, or do not exist at all (three pairs of parallel lines).
+
+Given two triangles such that no vertex of one triangle is the vertex of another:
+\begin{itemize}
+\item The \emph{Desarguesian property} states: if they are perspective from a point, they are perspective from a line.
+\item The \emph{dual Desarguesian property} states: if they are perspective from a line, they are perspective from a point.
+\end{itemize}
+
+A related concept is that of a \emph{Desarguesian configuration}, which consists of two triangles which are both perspective from a point and perspective from a line.  We say that the two triangles form a Desarguesian configuration.  The point and the line are called the \emph{vertex} and \emph{axis} of the configuration.  Note that the point may be a point at infinity, and the line may be a line at infinity.  Below is a diagram of a Desarguesian configuration.
+
+%If $ABC$ and $XYZ$ are two triangles in perspective (that is, $AX,BY$ and $CZ$ are concurrent or parallel) then the points of intersection of the three pairs of lines
+%$(BC,YZ), (CA,ZX), (AB,XY)$ are collinear.
+
+%Also, if $ABC$ and $XYZ$ are triangles with distinct vertices and the intersection of $BC$ with $YZ$, the intersection of $CA$ with $ZX$ and the intersection of $AB$ with $XY$ are three collinear points, then the triangles are in perspective.
+
+\figuraex{desargues}{scale=0.75}
+{\footnotesize(XEukleides \PMlinktofile{source code}{desargues.euk} for the drawing)}
+
+A geometry with points, lines and an incidence relation between them is said to be \emph{Desarguesian} if, given any two triangles such that no vertex of one is the vertex of another, then both the Desarguesian property and its dual are true.  Equivalently, a geometry is Desarguesian if whenever two triangles are in perspective from either a point or a line, then they form a Desarguesian configuration.
+
+\textbf{Desargues' theorem}.  The Euclidean space is Desarguesian.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item In general, affine spaces and projective spaces are Desarguesian, provided that the space in question is at least dimension 3.  If the dimension is 2, it can be shown that the space (affine or projective) is Desarguesian iff it can be embedded in a 3 dimensional space (affine or projective).
+\item In order to show that a projective space is Desarguesian, one only needs to show one of the two Desarguesian properties, since the other one may be automatically deduced according to the principal of duality.  In addition, one may drop the case where two lines are parallel, as they always intersect at a point.  In proving Desargues' theorem, one generally ``complete'' the affine space into a projective one first, and use homogeneous coordinates to prove the theorem.
+\item A special type of Desarguesian configuration where its vertex lies on its axis is called a \emph{minor Desarguesian configuration}.  The \emph{minor Desarguesian property} states that if two triangles are perspective from a point, then they form a minor Desarguesian configuration.  Interchanging points and lines, we may form the dual minor Desarguesian property.
+\item Another special type of Desarguesian configuration occurs when the geometry is affine.  A Desarguesian configuration is said to be \emph{affine} if its axis is a line at infinity.  In other words, given two triangles perspective from a point, they form a Desarguesian configuration in which their corresponding sides are parallel.  An affine Desarguesian configuration is minor if its vertex is a point at infinity.  In other words, the two triangles are such that not only are their corresponding sides parallel, the lines joining the corresponding vertices are parallel as well.  These statements may also be dualized.
+\end{itemize}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

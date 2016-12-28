@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CriterionForConstructibilityOfRegularPolygon}
+\pmcreated{2013-03-22 17:18:40}
+\pmmodified{2013-03-22 17:18:40}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{criterion for constructibility of regular polygon}
+\pmrecord{6}{39660}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{12D15}
+\pmrelated{RegularPolygon}
+\pmrelated{RootOfUnity}
+\pmrelated{TheoremOnConstructibleAngles}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{adjacent}
+\PMlinkescapeword{constructible}
+\PMlinkescapeword{regular}
+
+\begin{thm*}
+Let $n$ be an integer with $n \ge 3$.  Then a \PMlinkname{regular $n$-gon}{RegularPolygon} is \PMlinkname{constructible}{Constructible2} if and only if a \PMlinkname{primitive $n$th root of unity}{PrimitiveRootOfUnity} is a constructible number.
+\end{thm*}
+
+\begin{proof}
+First of all, note that a \PMlinkescapetext{primitive $n$th root of unity} is a constructible number if and only if $\displaystyle \cos\left(\frac{2\pi}{n}\right)+i\sin\left(\frac{2\pi}{n}\right)$ is a constructible number.  See the entry on roots of unity for more details.  Therefore, without loss of generality, only the constructibility of the number $\displaystyle \cos\left(\frac{2\pi}{n}\right)+i\sin\left(\frac{2\pi}{n}\right)$ will be considered.
+
+Sufficiency:  If a regular $n$-gon is constructible, then so is the angle whose \PMlinkname{vertex}{Vertex5} is the \PMlinkname{center}{Center9} of the polygon and whose rays pass through adjacent vertices of the polygon.  The \PMlinkname{measure}{AngleMeasure} of this angle is $\displaystyle \frac{2\pi}{n}$.
+
+By the theorem on constructible angles, $\displaystyle \sin\left(\frac{2\pi}{n}\right)$ and $\displaystyle \cos\left(\frac{2\pi}{n}\right)$ are constructible numbers.  Note that $i$ is also a constructible number.  Thus, $\displaystyle \cos\left(\frac{2\pi}{n}\right)+i\sin\left(\frac{2\pi}{n}\right)$ is a constructible number.
+
+Necessity:  If $\displaystyle \omega=\cos\left(\frac{2\pi}{n}\right)+i\sin\left(\frac{2\pi}{n}\right)$ is a constructible number, then so is $\omega^m$ for any integer $m$.
+
+On the complex plane, for every integer $m$ with $0\le m<n$, construct the point corresponding to $\omega^m$.  Use line segments to connect the points corresponding to $\omega^m$ and $\omega^{m+1}$ for every integer $m$ with $0\le m<n$.  (Note that $\omega^0=1=\omega^n$.)  This forms a regular $n$-gon.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

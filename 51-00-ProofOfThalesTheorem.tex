@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfThalesTheorem}
+\pmcreated{2013-03-22 12:45:27}
+\pmmodified{2013-03-22 12:45:27}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of Thales' theorem}
+\pmrecord{6}{33064}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $M$ be the center of the circle through $A$, $B$ and $C$.
+
+\begin{center}
+\includegraphics{thales.eps}
+\end{center}
+
+Then $AM=BM=CM$ and thus the triangles $AMC$ and $BMC$ are isosceles. If $\angle BMC=:\alpha$ then $\angle MCB=90^\circ-\frac{\alpha}{2}$ and $\angle CMA=180^\circ-\alpha$. Therefore $\angle ACM=\frac{\alpha}{2}$ and
+$$\angle ACB=\angle MCB+\angle ACM=90^\circ.$$
+QED.
+%%%%%
+%%%%%
+\end{document}

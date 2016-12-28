@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SomeTheoremsOnStrictBetweennessRelations}
+\pmcreated{2013-03-22 17:18:59}
+\pmmodified{2013-03-22 17:18:59}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{some theorems on strict betweenness relations}
+\pmrecord{6}{39666}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51G05}
+\pmrelated{StrictBetweennessRelation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+Let $B$ be a strict betweenness relation. In the following the sets $B_{*pq}, B_{p*q}, B_{pq*}, B_{pq}, B(p,q)$
+are defined in the  entry about   some theorems on the axioms of order.
+
+\begin{thm}
+Three elements are
+in a strict betweenness relation only if they are pairwise distinct.
+\end{thm}
+\begin{thm}
+If $B$ is strict, then $B_{*pq}$, $B_{p*q}$ and $B_{pq*}$ are pairwise disjoint.  
+Furthermore, if $p=q$ then all three sets are empty.
+\end{thm}
+\begin{thm} 
+If $B$ is strict, then $B_{pq}\cap B_{qp}=B_{p*q}$ and $B_{pq}\cup B_{qp}=B(p,q)$.
+\end{thm}
+\begin{thm} 
+If $B$ is strict, then for any $p,q\in A$, $p\ne q$, $B_{*pq}$, $B_{p*q}$ and $B_{pq*}$ are infinite.
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

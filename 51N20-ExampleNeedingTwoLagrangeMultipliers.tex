@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleNeedingTwoLagrangeMultipliers}
+\pmcreated{2013-03-22 18:48:18}
+\pmmodified{2013-03-22 18:48:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example needing two Lagrange multipliers}
+\pmrecord{7}{41606}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{26B10}
+\pmsynonym{using Lagrange multipliers to find semi-axes}{ExampleNeedingTwoLagrangeMultipliers}
+%\pmkeywords{Lagrange multiplier}
+\pmrelated{ExampleOfLagrangeMultipliers}
+\pmrelated{ExampleOfUsingLagrangeMultipliers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Find the semi-axes of the ellipse of intersection, formed when the plane \,$z = x\!+\!y$\, intersects the ellipsoid 
+$$\frac{x^2}{4}+\frac{y^2}{5}+\frac{z^2}{25} = 1.$$\\
+
+Let \,$(x,\,y,\,z)$\, be any point of the ellipsoid.\, The \PMlinkname{square}{SquareOfNumber} $x^2\!+\!y^2\!+\!z^2$ of the distance of this point from the \PMlinkname{midpoint}{Midpoint3} \,$(0,\,0,\,0)$\, has under the constraints
+\begin{align}
+\begin{cases}
+g \;:=\; \frac{x^2}{4}+\frac{y^2}{5}+\frac{z^2}{25}-1 \;=\;0,\\
+h \;:=\; x+y-z \;=\; 0
+\end{cases}
+\end{align}
+the minimum and maximum values at the end points of the semi-axes of the ellipse.\, Since we have two constraints, we must take equally many Lagrange multipliers, $\lambda$ and $\mu$.\, A necessary condition of the extremums of
+$$f \;:=\, x^2\!+\!y^2\!+\!z^2$$
+is that in \PMlinkescapetext{addition} to (1), also the equations
+\begin{align}
+\begin{cases}
+\frac{\partial f}{\partial x}+\lambda\frac{\partial g}{\partial x}+\mu\frac{\partial h}{\partial x}
+\;=\; 2x+\frac{1}{2}x\lambda+\mu \;=\; 0,\\
+\frac{\partial f}{\partial y}+\lambda\frac{\partial g}{\partial y}+\mu\frac{\partial h}{\partial y}
+\;=\; 2y+\frac{2}{5}y\lambda+\mu \;=\; 0,\\
+\frac{\partial f}{\partial z}+\lambda\frac{\partial g}{\partial z}+\mu\frac{\partial h}{\partial z}
+\;=\; 2z+\frac{2}{25}z\lambda-\mu \;=\; 0,
+\end{cases}
+\end{align}
+are satisfied.\, I.e., we have five equations (1), (2) and five unknowns $\lambda$, $\mu$, $x$, $y$, $z$.
+
+The equations (2) give
+$$x \;=\; -\frac{2\mu}{\lambda\!+\!4}, \quad y \;=\; -\frac{5\mu}{2\lambda\!+\!10}, 
+\quad z \;=\; \frac{25\mu}{2\lambda\!+\!50},$$
+which expressions may be put into the equation\, $h = 0$, and so on.\, One obtains the values 
+$$\lambda_1 = -10, \quad \lambda_2 = -\frac{75}{17}, \quad \mu_1 = \pm6\sqrt{\frac{5}{19}}, 
+\quad \mu_2 = \pm\frac{140}{17\sqrt{646}}$$
+with which the extremum points \,$(x,\,y,\,z)$ can be evaluated.\, The corresponding values of $f$are 10 and $\frac{75}{17}$, whence the major semi-axis is $\sqrt{10}$ and the minor semi-axis $\frac{5\sqrt{255}}{17}$.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitingTriangle}
+\pmcreated{2013-03-22 17:06:35}
+\pmmodified{2013-03-22 17:06:35}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{limiting triangle}
+\pmrecord{15}{39408}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M10}
+\pmrelated{AreaOfASphericalTriangle}
+\pmrelated{IdealTriangle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapeword{connected}
+\PMlinkescapeword{entire}
+\PMlinkescapeword{equivalent}
+
+In spherical geometry, a \emph{limiting triangle} is a great circle of the sphere that is serving as the model for the geometry.
+
+The motivation for this definition is as follows:  In Euclidean geometry and hyperbolic geometry, if three collinear points are connected, the result is \emph{always} a line segment, which does not contain any area.  In spherical geometry, if the three points are close to each other, this procedure will produce a great arc (the equivalent to a line segment in this geometry).  On the other hand, if the three points are sufficiently spaced from each other, this procedure will yield an entire great circle (the equivalent to a line in this geometry).  For example, imagine that the circle shown below is a great circle of a sphere.  Then connecting the three plotted points yields the entire great circle.
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle(0,0){2}
+\psdots(0,2)(-1.732,-1)(1.732,-1)
+\end{pspicture}
+\end{center}
+
+Thus, limiting triangles are geodesic triangles determined by three collinear points that are sufficiently spaced from each other.
+
+\PMlinkescapetext{Strictly} speaking, the resulting figure is not a triangle in spherical geometry; however, it is useful for demonstrating the following facts in spherical geometry:
+
+\begin{itemize}
+\item $540^{\circ}$ is the least upper bound of the angle sum of a triangle;
+\item $2\pi$ is the least upper bound of the area of a \PMlinkescapetext{triangle}.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

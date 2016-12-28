@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Symmetry}
+\pmcreated{2013-03-22 17:12:29}
+\pmmodified{2013-03-22 17:12:29}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{symmetry}
+\pmrecord{18}{39530}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{15A04}
+\pmclassification{msc}{51A15}
+\pmrelated{DihedralGroup}
+\pmrelated{DeterminingRotationsAndReflectionsInMathbbR2}
+\pmdefines{symmetry about}
+\pmdefines{symmetric}
+\pmdefines{symmetric about}
+\pmdefines{rotational symmetry}
+\pmdefines{point symmetry}
+\pmdefines{symmetry about a point}
+\pmdefines{symmetric about a point}
+\pmdefines{reflectional symmetry}
+\pmdefines{line symmetry}
+\pmdefines{symmetry about a line}
+\pmdefines{symmetric about a line}
+
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{center}
+\PMlinkescapeword{conjugate}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{terms}
+
+Let $V$ be a Euclidean vector space, $F \subseteq V$, and $E \colon V \to V$ be a Euclidean transformation that is not the identity map.
+
+The following terms are used to indicate that $E(F)=F$ if $E$ is a rotation:
+
+\begin{itemize}
+\item $F$ has \emph{rotational symmetry};
+\item $F$ has \emph{point symmetry};
+\item $F$ has \emph{symmetry about a point};
+\item $F$ is \emph{symmetric about a point}.
+\end{itemize}
+
+If $V=\mathbb{R}^2$, then the last two terms may be used to indicate the specific case in which $E$ is conjugate to $\displaystyle \left( \begin{array}{rr}
+-1 & 0 \\
+0 & -1 \end{array} \right)$, \PMlinkname{i.e.}{Ie} the angle of rotation is $180^{\circ}$.
+
+The following are classic examples of rotational symmetry in $\mathbb{R}^2$:
+
+\begin{itemize}
+\item Regular polygons: A regular $n$-gon is symmetric about its \PMlinkname{center}{Center9} with valid angles of rotation $\displaystyle \theta=\left( \frac{360k}{n} \right)^{\circ}$ for any positive integer $k<n$.
+\item Circles: A circle is symmetric about its \PMlinkname{center}{Center8} with uncountably many valid angles of rotation.
+\end{itemize}
+
+As another example, let $\displaystyle F=\bigcup_{k=1}^4 P_k$, where each $P_k$ is defined thus:
+\begin{eqnarray*}
+\displaystyle P_1&=&\left\{ (x,y) : 0 \le x \le \frac{4}{1+\sqrt{3}} \text{ and } (2-\sqrt{3})x \le y \le x \right\},\\ \displaystyle P_2&=&\left\{ (x,y) : \frac{4}{1+\sqrt{3}} \le x \le 2 \text{ and } x \le y \le (2+\sqrt{3})x-4 \right\},\\
+\displaystyle P_3&=&\left\{ (x,y) : 2 \le x \le \frac{4 \sqrt{3}}{1+\sqrt{3}} \text{ and } (-2+\sqrt{3})x+8-4\sqrt{3} \le y \le (-2-\sqrt{3})x+4+4\sqrt{3} \right\},\\
+\displaystyle P_4&=&\left\{ (x,y) : \frac{4 \sqrt{3}}{1+\sqrt{3}} \le x \le 4 \text{ and } (-2+\sqrt{3})x+8-4\sqrt{3} \le y \le -x+4 \right\}. 
+\end{eqnarray*}
+Then $F$ has point symmetry with respect to the point $\displaystyle \left( 2, \frac{2}{\sqrt{3}} \right)$.  The valid angles of rotation for $F$ are $120^{\circ}$ and $240^{\circ}$.  The boundary of $F$ and the point $\displaystyle \left( 2, \frac{2}{\sqrt{3}} \right)$ are shown in the following picture.
+
+\begin{center}
+\begin{pspicture}(0,0)(4,3.5)
+\pspolygon(0,0)(2,0.536)(4,0)(2.5359,1.4641)(2,3.4641)(1.4641,1.4641)
+\psdot(2,1.1547)
+\end{pspicture}
+\end{center}
+
+As a final example, the figure
+
+\noindent $\{ (x,y) : -3 \le x \le -1 \text{ and } (x+1)^2+y^2 \le 4 \} \cup \big( [-1,1] \times [-2,2] \big) \cup \{ (x,y) : 1 \le x \le 3 \text{ and } (x-1)^2+y^2 \le 4 \}$ is symmetric about the origin.  The boundary of this figure and the point $(0,0)$ are shown in the following picture.
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,2)
+\psarc(-1,0){2}{180}{270}
+\psline(-1,-2)(1,-2)(1,0)(3,0)
+\psarc(1,0){2}{0}{90}
+\psline(1,2)(-1,2)(-1,0)(-3,0)
+\psdot(0,0)
+\end{pspicture}
+\end{center}
+
+If $E(F)=F$ and $E$ is a reflection, then $F$ has \emph{reflectional symmetry}.  In the special case that $V=\mathbb{R}^2$, the following terms are used:
+
+\begin{itemize}
+\item $F$ has \emph{line symmetry};
+\item $F$ has \emph{symmetry about a line};
+\item $F$ is \emph{symmetric about a line}.
+\end{itemize}
+
+The following are classic examples of line symmetry in $\mathbb{R}^2$:
+
+\begin{itemize}
+\item Regular polygons: There are $n$ lines of symmetry of a regular $n$-gon.  Each of these pass through its center and at least one of its vertices.
+\item Circles: A circle is symmetric about any line passing through its center.
+\end{itemize}
+
+As another example, the isosceles trapezoid defined by $$T=\{ (x,y) : 0 \le x \le 6 \text{ and } 0 \le y \le \min\{x,2,-x+6\} \}$$ is symmetric about $x=3$.
+
+\begin{center}
+\begin{pspicture}(0,-1)(6,3)
+\pspolygon(0,0)(6,0)(4,2)(2,2)
+\psline[linecolor=cyan]{<->}(3,-0.5)(3,2.5)
+\end{pspicture}
+\end{center}
+
+In the picture above, the boundary of $T$ is drawn in black, and the line $x=3$ is drawn in cyan.
+%%%%%
+%%%%%
+\end{document}

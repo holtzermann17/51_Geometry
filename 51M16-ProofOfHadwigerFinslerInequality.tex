@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHadwigerFinslerInequality}
+\pmcreated{2013-03-22 12:45:21}
+\pmmodified{2013-03-22 12:45:21}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of Hadwiger-Finsler inequality}
+\pmrecord{5}{33062}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M16}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+From the cosines law we get:
+$$a^2=b^2+c^2-2bc\cos\alpha,$$
+$\alpha$ being the angle between $b$ and $c$. This can be transformed into:
+$$a^2=(b-c)^2+2bc(1-\cos\alpha).$$
+Since $A=\frac{1}{2}bc\sin\alpha$ we have:
+$$a^2=(b-c)^2+4A\frac{1-\cos\alpha}{\sin\alpha}.$$
+Now remember that
+$$1-\cos\alpha=2\sin^2\frac{\alpha}{2}$$
+and
+$$\sin\alpha=2\sin\frac{\alpha}{2}\cos\frac{\alpha}{2}.$$
+Using this we get:
+$$a^2=(b-c)^2+4A\tan\frac{\alpha}{2}.$$
+Doing this for all sides of the triangle and adding up we get:
+$$a^2+b^2+c^2=(a-b)^2+(b-c)^2+(c-a)^2+4A\left(\tan\frac{\alpha}{2} +\tan\frac{\beta}{2}+\tan\frac{\gamma}{2}\right).$$
+$\beta$ and $\gamma$ being the other angles of the triangle. Now since the halves of the triangle's angles are less than $\frac{\pi}{2}$ the function $\tan$ is convex we have:
+$$\tan\frac{\alpha}{2}+\tan\frac{\beta}{2}+\tan\frac{\gamma}{2} \geq 3\tan\frac{\alpha+\beta+\gamma}{6} =3\tan\frac{\pi}{6}=\sqrt{3}.$$
+Using this we get:
+$$a^2+b^2+c^2\geq (a-b)^2+(b-c)^2+(c-a)^2+4A\sqrt{3}.$$
+This is the Hadwiger-Finsler inequality. $\Box$
+%%%%%
+%%%%%
+\end{document}

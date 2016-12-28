@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AsymptotesOfGraphOfRationalFunction}
+\pmcreated{2013-03-22 15:09:34}
+\pmmodified{2013-03-22 15:09:34}
+\pmowner{eshyvari}{13396}
+\pmmodifier{eshyvari}{13396}
+\pmtitle{asymptotes of graph of rational function}
+\pmrecord{10}{36908}
+\pmprivacy{1}
+\pmauthor{eshyvari}{13396}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N99}
+\pmclassification{msc}{26C15}
+\pmclassification{msc}{26A09}
+\pmrelated{Polytrope}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let \,$f(x) \,=\, \frac{P(x)}{Q(x)}$\, be a fractional expression where $P(x)$ and $Q(x)$ are polynomials with real coefficients such that their quotient can not be \PMlinkname{reduced}{Division} to a polynomial. \,We suppose that $P(x)$ and $Q(x)$ have no common zeros.
+
+If the division of the polynomials is performed, then a result of the form
+               $$f(x) \;=\; H(x)+\frac{R(x)}{Q(x)}$$
+is gotten, where $H(x)$ and $R(x)$ are polynomials such that 
+                 $$\deg{R(x)} < \deg{Q(x)}$$
+
+The graph of the rational function $f$ may have asymptotes:
+\begin{enumerate}
+\item Every zero $a$ of the denominator $Q(x)$ gives a vertical asymptote 
+ \,$x = a$.
+\item If \,$\deg{H(x)} < 1$\, (i.e. $0$\, or\, $-\infty$) then the graph has the horizontal asymptote 
+ \,$y = H(x)$.
+\item If \,$\deg{H(x)} = 1$\, then the graph has the skew asymptote \,$y = H(x)$.
+\end{enumerate}
+
+{\em Proof of 2 and 3.} \,We have
+ \,$\displaystyle f(x)\!-\!H(x) = \frac{R(x)}{Q(x)}\,\to 0$\;\, as \;\,$|x|\to\infty$.
+
+\textbf{Remark.} \,Here we use the convention that the degree of the zero polynomial is \,$-\infty$.
+%%%%%
+%%%%%
+\end{document}

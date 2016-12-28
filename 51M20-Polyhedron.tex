@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Polyhedron}
+\pmcreated{2013-03-22 12:14:43}
+\pmmodified{2013-03-22 12:14:43}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{polyhedron}
+\pmrecord{24}{31627}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M20}
+\pmclassification{msc}{57Q05}
+\pmrelated{RegularPolygon}
+\pmrelated{Polytope}
+\pmrelated{Diagonal}
+\pmrelated{CubicallyThinHomotopy}
+\pmdefines{vertex}
+\pmdefines{corner point}
+\pmdefines{finite polyhedron}
+\pmdefines{locally finite}
+\pmdefines{polyhedra}
+\pmdefines{bounded polyhedron}
+\pmdefines{normal polyhedron}
+\pmdefines{regular polyhedron}
+\pmdefines{Euler polyhedron}
+\pmdefines{convex polyhedron}
+\pmdefines{simple polyhedron}
+
+%\usepackage{graphicx}
+%%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\begin{document}
+At least four  definitions of a polyhedron are used. 
+\subsection*{Combinatorics}
+In combinatorics a \emph{polyhedron} is the solution set of a finite system
+of linear inequalities. The solution set is in ${\mathbb{R}}^n$ for integer
+$n$. Hence, it is a convex set. Each extreme point of such a polyhedron is also called a \emph{vertex} (or \emph{corner point}) of the polyhedron. A solution 
+set could be empty. If the solution set is bounded (that is, is contained in
+some sphere) the polyhedron is said to be \emph{bounded}.
+
+
+\subsection*{Elementary Geometry}
+
+In elementary geometry a polyhedron is a  solid bounded by a finite number of plane faces, 
+each of which is a polygon.  This of course is not a precise definition as it
+relies on the undefined term ``solid''. Also, this definition allows a polyhedron
+to be non-convex.
+
+\subsection*{Careful Treatments of Geometry}
+In treatments of geometry that are carefully done a definition due to Lennes is 
+sometimes used \cite{LE}. The intent is to rule out certain objects that one does not want
+to consider and to simplify the theory of dissection.
+A polyhedron is a set of points consisting of a finite set of
+triangles $T$, not all coplanar,   and their interiors such that
+\begin{itemize}
+\item[(i)] every side of a triangle is common to an even number of triangles of the
+set, and
+\item[(ii)] there is no subset $T'$ of $T$ such that (i) is true of a proper subset
+of $T'$. 
+\end{itemize}
+Notice that condition (ii) excludes, for example, two cubes that are disjoint. But two
+tetrahedra having a common edge are allowed. The faces of the polyhedron are the insides
+of the triangles. Note that the condition that the faces be triangles 
+is not important, since a polygon an be dissected into triangles. 
+Also note since a triangle meets an \emph{even} number of other triangles,
+it is possible to meet 4,6 or any other even number of triangles. So for example,
+a configuration of 6 tetrahedra all sharing a common edge is allowed. 
+
+By dissections of the triangles one can create a set of triangles in which
+no face intersects another face, edge or vertex. If this done the
+polyhedron is said to be \emph{\PMlinkescapetext{normal}}.
+ 
+A \emph{convex polyhedron} is one such that all its inside points lie on one side of
+each of the planes of its faces. 
+
+An \emph{Euler polyhedron}  $P$ is a set of points consisting of a finite set
+of \emph{polygons}, not all coplanar, and their insides such that
+\begin{itemize}
+\item[(i)] each edge is common to just \emph{two} polygons, 
+\item[(ii)] there is a way using edges of $P$ from a given vertex to each vertex, and
+\item[(iii)] any simple polygon $p$ made up of edges of $P$, divides the polygons
+of $P$ into two sets  $A$ and $B$ such that any way, whose points are on $P$
+from any point inside a polygon of $A$ to a point inside a polygon of $B$,
+meets $p$. 
+\end{itemize}
+
+A \emph{regular polyhedron} is a convex Euler polyhedron whose faces are congruent 
+regular polygons and whose dihedral angles are congruent.
+
+It is a theorem, proved \PMlinkname{here}{ClassificationOfPlatonicSolids}, that for a regular polyhedron, the number of polygons with the same
+vertex is the same for each vertex and that there are 5 types of regular polyhedra.
+
+
+Notice that a cone, and a cylinder are not polyhedra since they have ``faces'' that are not polygons.
+
+A \emph{simple polyhedron} is one that is homeomorphic to a sphere. For such a polyhedron
+one has $V-E+F = 2$, where $V$ is the number of vertices, $E$ is the number of edges
+and $F$ is the number of faces. This is called Euler's formula. 
+
+\subsection*{Algebraic Topology}
+In algebraic topology another definition is used:
+
+If $K$ is a simplicial complex in ${\mathbb{R}}^n$, then $|K|$ denotes the union of the elements of 
+$K$, with the subspace topology induced by the topology of ${\mathbb{R}}^n$.
+$|K|$ is called a \emph{polyhedron}. If $K$ is a finite complex, then
+$|K|$ is called a \emph{finite polyhedron}.
+
+It should be noted that we allow the complex to have an infinite number of
+simplexes. As a result, spaces such as $\mathbb{R}$ and
+${\mathbb{R}}^n$ are polyhedra.
+
+Some authors require the simplicial complex to be \emph{locally finite}.
+That is, given $x \in \sigma \in K$ there is a neighborhood of $x$ that meets only finitely many $\tau \in K$.
+
+\begin{thebibliography}{99}
+\bibitem{FO}
+Henry George Forder, \emph{The Foundations of Euclidean Geometry}, Dover Publications, New York , 1958.
+\bibitem{LE} N.J. Lennes, \emph{On the simple finite polygon and polyhedron}, Amer. J. Math. \textbf{33}, (1911), p. 37
+\end{thebibliography}
+
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminingRotationsAndReflectionsInmathbbR2}
+\pmcreated{2013-03-22 17:14:34}
+\pmmodified{2013-03-22 17:14:34}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{determining rotations and reflections in $\mathbb{R}^2$}
+\pmrecord{4}{39572}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A15}
+\pmclassification{msc}{51A10}
+\pmclassification{msc}{15A04}
+\pmrelated{Symmetry2}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{formula}
+
+Let $E \colon \mathbb{R}^2 \to \mathbb{R}^2$ be a rotation about some point $(x_0,y_0)$, and let $\theta$ the angle of rotation for $E$.  A formula for $E$ can be determined as follows.
+
+First, translate the point $(x_0,y_0)$ to $(0,0)$.  The map of this translation is $T(x,y)=(x-x_0,y-y_0)$.
+
+Next, rotate by $\theta$ about the origin.  The map of this rotation is $R(x,y)=(x\cos\theta-y\sin\theta,x\sin\theta+y\cos\theta)$.
+
+Finally, translate the point $(0,0)$ back to $(x_0,y_0)$.  The map of this translation is $T^{-1}(x,y)=(x+x_0,y+y_0)$.
+
+The fact that $E=T^{-1} \circ R \circ T$ can be used to obtain a formula for $E$:
+
+\begin{center}
+$\begin{array}{rl}
+E(x,y) & =(T^{-1} \circ R \circ T)(x,y) \\
+& =(T^{-1} \circ R)(x-x_1,y-y_0) \\
+& =T^{-1}((x-x_0)\cos\theta-(y-y_0)\sin\theta,(x-x_0)\sin\theta+(y-y_0)\cos\theta) \\
+& =((x-x_0)\cos\theta-(y-y_0)\sin\theta+x_0,(x-x_0)\sin\theta+(y-y_0)\cos\theta+y_0). \end{array}$
+\end{center}
+
+Let $E \colon \mathbb{R}^2 \to \mathbb{R}^2$ be a reflection about some line $y=mx+b$.  Let $\theta=2\arctan m$.  A formula for $E$ can be determined as follows.
+
+First, translate the $y$ intercept $(0,b)$ to $(0,0)$.  The map of this translation is $B(x,y)=(x,y-b)$.
+
+Next, reflect about the line $y=mx$.  The map of this reflection is $F(x,y)=(x\cos\theta+y\sin\theta,x\sin\theta-y\cos\theta)$.
+
+Finally, translate the point $(0,0)$ back to $(0,b)$.  The map of this translation is $B^{-1}(x,y)=(x,y+b)$.
+
+The fact that $E=B^{-1} \circ F \circ B$ can be used to obtain a formula for $E$:
+
+\begin{center}
+$\begin{array}{rl}
+E(x,y) & =(B^{-1} \circ F \circ B)(x,y) \\
+& =(B^{-1} \circ F)(x,y-b) \\
+& =B^{-1}(x\cos\theta+(y-b)\sin\theta,x\sin\theta-(y-b)\cos\theta) \\
+& =(x\cos\theta+(y-b)\sin\theta,x\sin\theta-(y-b)\cos\theta+b). \end{array}$
+\end{center}
+
+Let $E \colon \mathbb{R}^2 \to \mathbb{R}^2$ be a reflection about some line $x=c$.  A formula for $E$ can be determined as follows.
+
+First, translate the $x$ intercept $(c,0)$ to $(0,0)$.  The map of this translation is $C(x,y)=(x-c,y)$.
+
+Next, reflect about the line $x=0$.  The map of this reflection is $M(x,y)=(-x,y)$.
+
+Finally, translate the point $(0,0)$ back to $(c,0)$.  The map of this translation is $C^{-1}(x,y)=(x+c,y)$.
+
+The fact that $E=C^{-1} \circ M \circ C$ can be used to obtain a formula for $E$:
+
+\begin{center}
+$\begin{array}{rl}
+E(x,y) & =(C^{-1} \circ M \circ C)(x,y) \\
+& =(C^{-1} \circ M)(x-c,y) \\
+& =C^{-1}(c-x,y) \\
+& =(2c-x,y). \end{array}$
+\end{center}
+%%%%%
+%%%%%
+\end{document}

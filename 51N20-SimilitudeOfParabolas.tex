@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimilitudeOfParabolas}
+\pmcreated{2013-03-22 18:51:04}
+\pmmodified{2013-03-22 18:51:04}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{similitude of parabolas}
+\pmrecord{8}{41660}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51N10}
+\pmsynonym{similarity of parabolas}{SimilitudeOfParabolas}
+\pmrelated{Homothety}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Two parabolas need not be congruent, but they are always similar.\, Without the definition of parabola by focus and directrix, the fact turns out of the simplest equation \,$y = ax^2$\, of parabola.
+
+Let us take two parabolas
+$$y \;=\; ax^2 \quad \mbox{and} \quad y \;=\; bx^2$$
+which have the origin as common vertex and the $y$-axis as common axis.\, Cut the parabolas with the line \,$y = mx$\, through the vertex.\, The first parabola gives
+$$ax^2 = mx,$$
+whence the abscissa of the other point of intersection is $\frac{m}{a}$; the corresponding ordinate is thus
+$\frac{m^2}{a}$.\, So, this point has the position vector
+$$\vec{u} \;=\; \left(\!\begin{array}{c}\frac{m}{a}\\\frac{m^2}{a}\end{array}\!\right)
+\;=\; \frac{m}{a}\left(\!\begin{array}{c}1\\m\end{array}\!\right)$$
+Similarly, the cutting point of the line and the second parabola has the position vector
+$$\vec{v} \;=\; \left(\!\begin{array}{c}\frac{m}{b}\\\frac{m^2}{b}\end{array}\!\right)
+\;=\; \frac{m}{b}\left(\!\begin{array}{c}1\\m\end{array}\!\right)$$
+Accordingly, those position vectors have the \PMlinkid{linear depencence}{848}
+$$a\vec{u} \;=\; b\vec{v}$$
+for all values of the slope $m$ of the cutting line.\, This means that both parabolas are homothetic with respect to the origin and therefore also similar. 
+
+
+%%%%%
+%%%%%
+\end{document}

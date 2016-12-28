@@ -1,0 +1,192 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SlopeOfALineIsWelldefinedProofThatThe}
+\pmcreated{2013-03-22 15:32:43}
+\pmmodified{2013-03-22 15:32:43}
+\pmowner{Dr_Absentius}{537}
+\pmmodifier{Dr_Absentius}{537}
+\pmtitle{slope of a line is well-defined, proof that the}
+\pmrecord{8}{37442}
+\pmprivacy{1}
+\pmauthor{Dr_Absentius}{537}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+%\usepackage[all,poly,knot,dvips]{xy}
+\usepackage{pstricks,pst-poly,pst-node}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ %\numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+
+\def\co{\colon\thinspace}
+\begin{document}
+The purpose of this article is to prove that for a non-vertical line $l$
+in a the Cartesian plane its slope $m$  is a well-defined  real number.
+Let $P_i=(x_i,y_i)$, $i=1,2$ be two points in the Cartesian plane
+with the property that $x_2 \neq x_1$; denote by $m(P_1,P_2)$ the
+following ratio 
+ $$m(P_1,P_2) := \frac{y_2 - y_1}{x_2 - x_1}\,.$$  
+
+\begin{thm}
+  Let $l$ be a a non-vertical line in the Cartesian plane.
+  Then for any two pairs of distinct points $P_1,P_2$  and
+  $P_1',P_2'$ in $l$ we have 
+       $$m(P_1,P_2) = m(P_1',P_2')\,.$$
+\end{thm}
+
+\begin{proof}
+  Let $P_1 = (x_1,y_1)$, $P_2 = (x_2,y_2)$ and $P_1' = (x_1',y_1')$,
+  $P_2' = (x_2',y_2')$ be two arbitrary pairs of points in $l$.
+  Draw a vertical line $v$ (respectively $v'$) from $P_2$ (resp.
+  $P_2'$) and a horizontal line $h$ (resp. $h'$) from $P_1$ (resp.
+  $P_1'$) and let $Q$ (resp. $Q'$) denote the point where these two
+  lines meet. If we temporally assume that $l$ is also not
+  horizontal we have two nondegenerate right triangles $QP_1P_2$
+  and $Q'P_1'P_2'$ (see Figure~\ref{fig:slopewelldefnd}).
+
+  \begin{figure}[htbp]
+    \centering
+    \begin{pspicture}(-5,-5)(5.5,5.5)
+      \psline[linewidth=.5pt]{->}(-5,0)(5,0)
+      \psline[linewidth=.5pt]{->}(0,-5)(0,5)
+\rput(5.3,0){$\mathbf{x}$}
+\rput(0,5.3){$\mathbf{y}$}
+      \psline[linecolor=blue](-4,-5)(3,5)
+\psdots(-3,-3.571)(-1,-0.714)(1,2.143)(2,3.571)(2,2.143)(-1,-3.571)
+\psline[linestyle=dotted,linecolor=green](-1,-5)(-1,5)
+\psline[linestyle=dotted,linecolor=green](2,-5)(2,5)
+\psline[linestyle=dotted,linecolor=red](-5,-3.571)(5,-3.571)
+\psline[linestyle=dotted,linecolor=red](-5,2.143)(5,2.143)
+ \psline[linecolor=green](-1,-0.714)(-1,-3.571)
+ \psline[linecolor=green](2,3.571)(2,2.143)
+ \psline[linecolor=red](-3,-3.571)(-1,-3.571)
+ \psline[linecolor=red](1,2.143)(2,2.143)
+\rput(-1.3,-0.514){$P_2$}
+\rput(-3.3,-3.371){$P_1$}
+\rput(-.7,-3.871){$Q$}
+\rput(1.7,3.871){$P_2'$}
+\rput(.7,2.443){$P_1'$}
+\rput(2.3,1.943){$Q'$}
+\rput(3.3,5){ $l$}
+\rput(5,2.443){ $v'$}
+\rput(5,-3.271){ $v$}
+\rput(1.7,5){ $h'$}
+\rput(-1.3,5){ $h$}
+    \end{pspicture}
+    \caption{The slope is well defined.}
+    \label{fig:slopewelldefnd}
+  \end{figure}
+
+These two triangles are similar and therefore we have that 
+$$\frac{QP_2}{QP_1} = \frac{Q'P_2'}{Q'P_1'} $$
+or equivalently since $Q$ (resp. $Q'$) has coordinates $(x_2,y_1)$ 
+(resp. $(x_2',y_1')$)
+$$  \frac{\vert y_2-y_1 \vert }{\vert x_2-x_1 \vert} = \frac{\vert y_2'-y_1'\vert }{\vert x_2'-x_1'\vert}\,.$$
+To conclude that 
+\begin{equation}
+  \label{eq:slopewelldfnd}
+  \frac{y_2-y_1}{x_2-x_1} = \frac{y_2'-y_1'}{x_2'-x_1'}
+\end{equation}
+we argue as follows.  First notice that $m(P_1,P_2)$ is symmetric
+with respect to $P_1$ and $P_2$ and therefore without loss of
+generality (exchanging the roles of $P_1$ and $P_2$ if necessary) we
+may assume that both denominators in~\eqref{eq:slopewelldfnd} are
+positive, that is $Q$ (resp. $Q'$) is to the right of $P_1$ (resp.
+$P_1'$).  We will show that then $P_2$ is above $Q$ exactly when
+$P_2'$ is above $Q'$.  To see this notice that by the fifth
+postulate of Euclid $P_2$ is above $Q$ exactly when the angle
+$QP_1P_2$ is acute, but this happens exactly when $Q'P_1'P_2'$ is
+acute, that is, exactly when $P_2'$ is above $Q'$.  Thus the numerators
+of the two fractions in~\eqref{eq:slopewelldfnd} have the same sign.
+Thus Equation~\eqref{eq:slopewelldfnd} holds.
+
+We derived Equation~\eqref{eq:slopewelldfnd} by assuming that the
+line $l$ is not horizontal (and therefore $P_1$ and $Q$ are
+distinct).  However when $l$ is horizontal then the numerators of
+both fractions in Equation~\eqref{eq:slopewelldfnd} are $0$ and the
+equation still holds.  Thus the theorem is true for any non-vertical
+line.
+\end{proof}
+
+We can dispense with the assumption that $l$ is not vertical by
+letting the slope to take values not in an affine line but in a
+\emph{projective} line.  In other words, we may extend the real line 
+by adjoining one point at infinity: 
+$$\hat{ \mathbb{R} } = \mathbb{R}\cup \{ \infty \}$$
+and define the slope to take values in $\hat{\mathbb{R}}$, so that
+the slope of a vertical line is $\infty$.
+%%%%%
+%%%%%
+\end{document}

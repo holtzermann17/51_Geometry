@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfParallelogramTheorems}
+\pmcreated{2013-03-22 17:15:48}
+\pmmodified{2013-03-22 17:15:48}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of parallelogram theorems}
+\pmrecord{9}{39601}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51-01}
+\pmrelated{Parallelogram}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\ol}{\overline}
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{addition}
+\begin{thm} \label{thm:one}The opposite sides of a parallelogram are congruent.
+\end{thm}
+\begin{proof} This was proved in the \PMlinkname{parent}{ParallelogramTheorems} article.
+\end{proof}
+
+\begin{thm} \label{thm:two}If both pairs of opposite sides of a quadrilateral are congruent, the quadrilateral is a parallelogram.
+\end{thm}
+\begin{proof}
+Suppose $ABCD$ is the given parallelogram, and draw $\ol{AC}$. 
+\begin{center}\includegraphics{Parallelogram2}\end{center}
+Then $\triangle ABC\cong\triangle ADC$ by SSS, since by assumption $AB=CD$ and $AD=BC$, and the two triangles share a third side.
+
+By CPCTC, it follows that $\angle BAC\cong\angle DCA$ and that $\angle BCA\cong \angle DAC$. But the theorems about corresponding angles in transversal cutting then imply that $\ol{AB}$ and $\ol{CD}$ are parallel, and that $\ol{AD}$ and $\ol{BC}$ are parallel. Thus $ABCD$ is a parallelogram.
+\end{proof}
+
+\begin{thm} \label{thm:three}If one pair of opposite sides of a quadrilateral are both parallel and congruent, the quadrilateral is a parallelogram.
+\end{thm}
+\begin{proof}
+Again let $ABCD$ be the given parallelogram. Assume $AB=CD$ and that $\ol{AB}$ and $\ol{CD}$ are parallel, and draw $\ol{AC}$. 
+\begin{center}\includegraphics{Parallelogram3}\end{center}
+Since $\ol{AB}$ and $\ol{CD}$ are parallel, it follows that the alternate interior angles are equal: $\angle BAC\cong \angle DCA$. Then by SAS, $\triangle ABC\cong \triangle ADC$ since they share a side.
+
+Again by CPCTC we have that $BC=AD$, so both pairs of sides of the quadrilateral are congruent, so by Theorem \ref{thm:two}, the quadrilateral is a parallelogram.
+\end{proof}
+
+\begin{thm} \label{thm:four}The diagonals of a parallelogram bisect each other.
+\end{thm}
+\begin{proof}
+Let $ABCD$ be the given parallelogram, and draw the diagonals $\ol{AC}$ and $\ol{BD}$, intersecting at $E$. 
+\begin{center}\includegraphics{Parallelogram4}\end{center}
+Since $ABCD$ is a parallelogram, we have that $AB=CD$. In addition, $\ol{AB}$ and $\ol{CD}$ are parallel, so the alternate interior angles are equal: $\angle ABD\cong \angle BDC$ and $\angle BAC\cong \angle ACD$. Then by ASA, $\triangle ABE\cong \triangle CDE$.
+
+By CPCTC we see that $AE=CE$ and $BE=DE$, proving the theorem.
+\end{proof}
+
+\begin{thm} \label{thm:five}If the diagonals of a quadrilateral bisect each other, the quadrilateral is a parallelogram.
+\end{thm}
+\begin{proof}
+Let $ABCD$ be the given quadrilateral, and let its diagonals intersect in $E$. 
+\begin{center}\includegraphics{Parallelogram5}\end{center}
+Then by assumption, $AE=EC$ and $DE=EB$. But also vertical angles are equal, so $\angle AED\cong \angle AEB$ and $\angle CED\cong \angle AEB$. Thus, by SAS we have that $\triangle AED\cong \triangle CEB$ and $\triangle CED\cong \triangle AEB$.
+
+By CPCTC it follows that $AB=CD$ and that $AD=BC$. By Theorem \ref{thm:one}, $ABCD$ is a parallelogram.
+
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AffineGeometry}
+\pmcreated{2013-03-22 15:58:20}
+\pmmodified{2013-03-22 15:58:20}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{affine geometry}
+\pmrecord{21}{37988}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A45}
+\pmclassification{msc}{51A15}
+\pmsynonym{associated subspace}{AffineGeometry}
+\pmrelated{AffineCombination}
+\pmrelated{AffineTransformation}
+\pmdefines{affine space}
+\pmdefines{flat}
+\pmdefines{associated linear subspace}
+\pmdefines{affine subspace}
+\pmdefines{dimension of an affine space}
+\pmdefines{affine transformation}
+\pmdefines{affine hyperplane}
+\pmdefines{affine line}
+\pmdefines{affine point}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\begin{document}
+\subsection*{Affine Spaces}
+Let $V$ be a left (right) vector space over a division ring $D$.  An \emph{affine space associated with $V$} is a set $A$, together with a function $f: A\times A\to V$, with the following conditions:
+\begin{enumerate}
+\item for every $P\in A$, the function $f(P,-):A\to V$ is onto.
+\item $f$ is non-degenerate in the sense that $f(P,Q)=0$ implies $P=Q$.
+\item $f(P,Q)+f(Q,R)=f(P,R)$.
+\end{enumerate}
+An \emph{affine space} is an affine space associated with some vector space.  Elements of $A$ are called \emph{points} of $A$.  The \emph{dimension} of an affine space is just the dimension of its associated vector space.  The function $f$ is called a \emph{direction}.  We sometimes write $\stackrel{\longrightarrow}{PQ}$ for $f(P,Q)$.
+
+For example, $V$ itself is an affine space associated with $V$, with $f$ given by $f(v,w)=w-v$.
+
+Below are some properties of $f$:
+\begin{enumerate}
+\item $f(P,P)=0$, because $f(P,P)+f(P,P)=f(P,P)$ by condition 3, hence the result.
+\item $f(P,-)$ is one-to-one, and therefore a bijection, for if $f(P,Q)=f(P,R)$, then $f(P,Q)+f(Q,R)=f(P,R)=f(P,Q)$, so $f(Q,R)=0$, or $Q=R$, by condition 2.
+\item $f(P,Q)=-f(Q,P)$, because $f(P,Q)+f(Q,P)=f(P,P)=0$.
+\item $f(-,Q)$ is also a bijection as a result.
+\end{enumerate}
+
+\subsection*{Vector Spaces Induced by an Affine Space}
+
+An affine space is often called a ``vector space without the origin''.  In other words, singling out a point in an affine space gives us a vector space, in the following sense: fix a point $P$ in an affine space $A$, define a vector space $A_P$ as follows: 
+\begin{enumerate}
+\item vectors of $A_P$ are points of $A$,
+\item define $+_P:A_P\times A_P \to A_P$ by $Q +_P R:=S$, where $S$ is the point determined by $f(P,Q)+f(P,R)=f(P,S)$.  Because of property 2 above, $S$ is uniquely determined.
+\item define $\cdot_P: D\times A_P \to A_P$ by $d \cdot_P Q:=T$, where $T$ is the point determined by $df(P,Q)=f(P,T)$.  Again, $T$ is unique.
+\end{enumerate}
+
+Both $+_P$ and $\cdot_P$ are well-defined, because $f(P,-)$ is a bijection.  When there is no confusion, we may drop the subscript $P$.  It is also easy to verify that $A_P$, together with $+$ and $\cdot$, is indeed a left vector space over $D$, with $P$ as the origin, written $0_P$.  Furthermore, $A_P$ is isomorphic to $V$.  Hence, $A_P\cong A_Q$ for any two points $P,Q\in A$; there is nothing special about $P$, and any point of $A$ can be used as the origin of a vector space.
+
+\subsection*{Affine Subspaces}
+Continue to assume that $V$ is a left vector space over a division ring $D$, and $(A,f)$ an affine space associated with $V$.  An \emph{affine subspace} of $A$ is the collection $B$ of points of $A$ that is mapped to a vector subspace $S$ of $V$ by the induced function $f(P,-)$ for some point $P\in A$.  In other words, $B$ is the inverse image of $S$ under the function $f(P,-)$: $$B = \lbrace Q \in A\mid f(P,Q)\in S\rbrace.$$  If $f$ is restricted to $B\times B$, then $B$ is an affine space associated with $W$, since $f(Q,R)=f(P,R)-f(P,Q)\in W$, given that $Q,R\in B$.
+
+For example, if $V$ is considered as an affine space associated with $V$ with the map $f(v,w)=w-v$, then an affine subspace $B$ of $V$ is just a coset of a subspace of $V$.  In other words, $B=S+v$, where $S$ is a subspace of $V$ and $v\in V$ is a vector.  It is evident that $B$ is uniquely determined by $S$, and $v$ up to translation by a vector in $S$.  In other words, any two cosets of $S$ are affinely isomorphic.
+
+In an affine space $A$, an \emph{affine point}, \emph{affine line}, or \emph{affine plane} is a $0,1$, or $2$ dimensional affine subspace.  Thus, an affine point is just the inverse image of the origin $0\in V$.  The codimension of an affine subspace is the codimension of the associated vector subspace.  An \emph{affine hyperplane} is an affine subspace with codimension 1.  When there is no confusion, we may drop the word ``affine'' in affine point, affine line, etc... Affine subspaces are also called \emph{flats}.
+
+\subsection*{Affine Geometry}
+
+Affine geometry is, generally speaking, the study the geometric properties of affine subspaces.  In particular, it is the study of the incidence structure on affine subspaces.  Operationally, we may define an \emph{affine geometry} $\mathcal{A}(V)$ of a vector space $V$ to be the poset of all affine subspaces of $V$, orderd by set theoretic inclusion.  Points in $\mathcal{A}(V)$ are commonly written without the set theoretic brackets, so that $v\in\mathcal{A}(V)$ means $\lbrace v\rbrace \in\mathcal{A}(V)$.
+
+Next, we can define an incidence relation $I$ on $\mathcal{A}(V)$ so that $(A,B)\in I$ iff $A\subseteq B$ or $B\subseteq A$.  Together with $I$, $\mathcal{A}(V)$ becomes an incidence geometry.  Two flats $A$ and $B$ are said to be \emph{parallel} if they have the same associated subspace.  As a result, two parallel flats are never incident unless they are equal.  Also, given a point $v\in \mathcal{A}(V)$ not incident with $A$, we can always find a flat $B$ incident with $v$ and parallel to $A$.  If $A=S+w$ with $w\neq v$, simply take $B=S+v$.  This makes $\mathcal{A}(V)$ an affine incidence geometry.
+
+In addition, we define $A\vee B$ to be the smallest flat in $\mathcal{A}(V)$ that contains both $A$ and $B$.  By Zorn's lemma, $A\vee B$ exists.  Since $A\vee B$ is also unique, $\vee$ is well-defined.  This turns $\mathcal{A}(V)$ into an upper semilattice.  If $S_1$ is the associated subspace of $A$ and $S_2$ is the associated subspace of $B$, then $\operatorname{span}(S_1\cup S_2)$ is the associated subspace of $A\vee B$.  The definition of $\vee$ can be extended to an arbitrary set of flats, so that $\bigvee \mathcal{S}$ is the smallest flat that contains all flats in $\mathcal{S}\subseteq\mathcal{A}$.  In fact, it is not hard to see that $\mathcal{A}(V)$ is complete semilattice.
+
+However, since $A\cap B$ may be empty, $\mathcal{A}(V)$ is not a lattice in general via the ``meet'' ($=\cap$) operation.  But when $A\cap B\neq \varnothing$, $A\cap B\in \mathcal{A}(V)$.  So $\cap$ is a partially defined operator on $\mathcal{A}(V)$.  If one adjoins the empty set $\varnothing$ to $\mathcal{A}(V)$, then $\mathcal{A}(V)$ becomes a lattice.  $\varnothing$ is called the null subspace and its dimension is defined to be $-1$.  One can show that $\mathcal{A}(V)$ is a geometric lattice.
+
+Although $0\in \mathcal{A}(V)$, it is not special, since all points are treated equally; there is no notion of an origin in $\mathcal{A}(V)$.  The notion of a metric is also absent, since the underlying vector space is not assumed to have an inner product.  In fact, perpendicularity is not defined in $\mathcal{A}(V)$.  In contrast, both notions are important in Euclidean geometry, where an inner product has been defined, so that $0$ is the unique vector with $0$ length.
+
+\subsection*{Affine versus Projective}
+
+Affine geometry and projective geometry are intimately related.  Given an affine geometry $\mathcal{A}(V)$ one can construct projective geometries.  One easy way is to identify flats that are parallel to each other.  Because the parallel relation $\parallel$ is an equivalence relation, we can partition $\mathcal{A}(V)$ into equivalence classes.  Since each equivalence class is represented by exactly one subspace $S$ of $V$, so $\mathcal{A}(V)/\parallel$ can be identified with $PG(V)$.  Of course, $PG(V)$ can also be viewed as a sub-poset of $\mathcal{A}(V)$ (simply by taking all the subspaces of $V$ in $\mathcal{A}(V)$).  More generally, if we fix any point $v\in \mathcal{A}(V)$, and take all flats that are incident with $v$, the resulting subset $PG_v(V)$ forms a modular complemented geometric lattice that is isomorphic to $PG(V)$.  In fact, $PG_v(V)$ has the structure of a projective geometry.
+
+Another way to construct a projective geometry from an affine one is to adjoin extra elements to $\mathcal{A}(V)$.  Remember that $\mathcal{A}(V)$ itself is not a lattice, but simply adjoining $\varnothing$ to $\mathcal{A}(V)$ won't give us a projective geometry either, because the resulting lattice is not modular (take two parallel lines $\ell_1,\ell_2$ and a point $P$ lying on $\ell_1$; then $P\vee (\ell_2\wedge \ell_1)=P$, while $(P\vee\ell_2)\wedge \ell_1=\ell_1$).  We start by taking a vector space $U$ such that $V$ is a subspace of $U$ of codimension 1 (This can be done by linear algebra).  Our objective is to show that $\mathcal{A}(V)$ is embeddable in $PG(U)$.
+
+Let $u\in U$ be a non-zero vector and look at the affine hyperplane $V+u$.  Each affine subspace of the form $S+v$ in $V$ has the form $S+v+u$ in $V+u$, where $S$ is a subspace of $V$ and $v\in V$.  Let $\mathcal{A}_u(V)$ the collection of all affine subspaces $S+v+u$ (affine subspaces of $U$ that are incident with $V+u$).  There is an obvious one-to-one order preserving correspondence between $\mathcal{A}(V)$ and $\mathcal{A}_u(V)$.  
+
+Next, every affine subspace $S+v+u$ is the intersection of $V+u$ and a subspace $W$ of $U$ such that $S+v+u\subseteq W$ and $\operatorname{dim}(W)= \operatorname{S}+1$.  Just take $W=\operatorname{span}(S,v+u)$.  Clearly $S+v+u\subseteq W\cap V+u$.  In addition, $v+u\notin S\subseteq V$, or else $u\in V$ gives us a contradiction.  So $\operatorname{dim}(W)= \operatorname{S}+1$.  Finally, if $x\in V+u\cap W$, then $x=y+u=s+k(v+u)$, where $y\in V$, $s\in S$, and $k\in D$.  So $x\equiv u\equiv ku \pmod V$.  This implies $(1-k)u\in V$.  But $u\notin V$, $k=1$.  Therefore $x=s+u+v\in S+v+u$.  This means that $W\cap V+u=S+v+u$.
+
+The above paragraph shows there is a one-to-one order preserving map from $\mathcal{A}(V)$ to $PG(U)$.  If we delete all subspaces of $V$ from $PG(U)$, and call $$PG(U)/PG(V)=\lbrace W\in PG(U)\mid W\mbox{ is not a subspace of }V\rbrace,$$ then we actually get an order-preserving bijection between $\mathcal{A}(V)$ and $PG(U)/PG(V)$.
+%%%%%
+%%%%%
+\end{document}

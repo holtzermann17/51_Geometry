@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Circumscribe}
+\pmcreated{2013-03-22 16:24:32}
+\pmmodified{2013-03-22 16:24:32}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{circumscribe}
+\pmrecord{11}{38557}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51D20}
+\pmsynonym{circumscribed}{Circumscribe}
+\pmsynonym{circumscription}{Circumscribe}
+\pmrelated{RegularPolygonAndCircles}
+\pmrelated{Inscription}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{pstricks}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+To \emph{circumscribe} a regular polygon (such as a triangle, square, pentagon, etc.) or a cyclic quadrilateral, is to enclose it in a circle so that the vertices  of the polygon are on the circumference of the circle.
+
+For example, a circumscribed square:
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\pscircle(0,0){2.13}
+\pspolygon(1.5,1.5)(-1.5,1.5)(-1.5,-1.5)(1.5,-1.5)
+\end{pspicture}
+\end{center}
+
+One more example, a circumscribed pentagon.
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle(0,0){1.702}
+\pspolygon(0,1.702)(-1.619,0.526)(-1,-1.377)(1,-1.377)(1.619,0.526)
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

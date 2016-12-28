@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PaschsTheorem}
+\pmcreated{2013-03-22 15:32:09}
+\pmmodified{2013-03-22 15:32:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Pasch's theorem}
+\pmrecord{13}{37429}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51G05}
+\pmrelated{Angle}
+\pmrelated{OrderedGeometry}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newtheorem*{thm}{Theorem}
+\begin{document}
+\begin{thm}{(Pasch)}  Let $\triangle abc$ be a triangle with
+non-collinear vertices $a,b,c$ in a {linear} ordered geometry.
+Suppose a line $\ell$ intersects one side, say open line segment $\overline{ab}$, at a
+point strictly between $a$ and $b$, then $\ell$ also intersects exactly one of the following:
+$$\overline{bc}\mbox{, }\qquad\qquad\overline{ac}\mbox{, }\qquad\qquad c.$$
+\end{thm}
+\begin{proof}
+First, note that vertices $a$ and $b$ are on opposite sides of line $\ell$.  Then either $c$ lies on $\ell$, or $c$ does not. if $c$ does not, then it must lie on either side (half plane) of $\ell$.  In other words, $c$ and $a$ must be on the opposite sides of $\ell$, or $c$ and $b$ must be on the opposite sides of $\ell$.
+If $c$ and $a$ are on the opposite sides, $\ell$ has a non-empty intersection with $\overline{ac}$.  But if $c$ and $a$ are on the opposite sides, then $c$ and $b$ are on the same side, which means that $\overline{bc}$ does not intersect $\ell$.
+\end{proof}
+\textbf{Remark}
+ A companion property states that if line $\ell$ passes through one vertex $a$ of a triangle $\triangle abc$ and at least one other point on $\triangle abc$, then it must intersect exactly one of the following:
+$$b\mbox{, }\qquad\qquad c\mbox{, }\qquad\qquad\overline{bc}.$$
+Of course, if $\ell$ passes through $b$, $\overline{ab}$ must lie on $\ell$.  Similarly, $\overline{ac}$ lies on $\ell$ if $\ell$ passes through $c$.
+%%%%%
+%%%%%
+\end{document}

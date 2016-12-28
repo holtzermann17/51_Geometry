@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SineOfAngleOfTriangle}
+\pmcreated{2013-03-22 18:27:16}
+\pmmodified{2013-03-22 18:27:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{sine of angle of triangle}
+\pmrecord{5}{41117}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmrelated{DifferenceOfSquares}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The cosines law allows to express the cosine of an angle of triangle through the sides:
+\begin{align}
+\cos\alpha = \frac{b^2+c^2-a^2}{2bc}.
+\end{align}
+Substituting this to the ``fundamental formula of trigonometry'',
+$$\sin^2\alpha+\cos^2\alpha \;=\;1,$$
+we can calculate as follows:
+\begin{align*}
+\sin\alpha & \;=\; +\sqrt{1-\left(\frac{b^2+c^2-a^2}{2bc}\right)^2}\\
+& \;=\; \sqrt{\frac{(2bc)^2-(b^2+c^2-a^2)^2}{(2bc)^2}}\\
+& \;=\; \frac{\sqrt{(2bc+b^2+c^2-a^2)(2bc-b^2-c^2+a^2)}}{2bc}\\
+& \;=\; \frac{\sqrt{[(b+c)^2-a^2][a^2-(b-c)^2]}}{2bc}\\
+& \;=\; \frac{\sqrt{(b+c+a)(b+c-a)(a+b-c)(a-b+c)}}{2bc}\\
+\end{align*}
+Thus we have the beautiful formula
+$$\sin\alpha\;=\; \frac{\sqrt{(-a\!+\!b\!+\!c)(a\!-\!b\!+\!c)(a\!+\!b\!-\!c)(a\!+\!b\!+\!c)}}{2bc}.$$\\
+
+Substituting (1) similarly to the general formula for the sine of \PMlinkname{half-angle}{GoniometricFormulae}
+$$\sin\frac{\alpha}{2} = \pm\sqrt{\frac{1-\cos\alpha}{2}},$$
+one can obtain the formula
+$$\sin\frac{\alpha}{2} \;=\; \sqrt{\frac{(a\!-\!b\!+\!c)(a\!+\!b\!-\!c)}{4bc}}.$$
+
+%%%%%
+%%%%%
+\end{document}

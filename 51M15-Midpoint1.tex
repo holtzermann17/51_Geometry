@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Midpoint1}
+\pmcreated{2015-04-25 17:39:00}
+\pmmodified{2015-04-25 17:39:00}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{midpoint}
+\pmrecord{9}{41235}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51-00}
+\pmsynonym{centre}{Midpoint1}
+\pmsynonym{center}{Midpoint1}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{degree}
+The concept of \PMlinkname{midpoint of line segment}{Midpoint} is a special case of the midpoint of a curve or arbitrary figure in $\mathbb{R}^2$ or $\mathbb{R}^3$.
+
+A point $T$ is a {\em midpoint} of the figure $f$, if for each point $A$ of $f$ there is a point $B$ of $f$ such that $T$ is the midpoint of the line segment $AB$.\, One says also that $f$ is symmetric about the point $T$.\\
+
+
+Given the equation of a curve in $\mathbb{R}^2$ or of a surface $f$ in $\mathbb{R}^3$, one can, if \PMlinkescapetext{necessary}, take a new point $T$ for the origin by using the linear substitutions of the form
+$$x \;:=\; x'\!+\!a, \qquad y \;:=\; y'\!+\!b \quad \mbox{etc.}$$
+Thus one may test whether the origin is the midpoint of $f$ by checking whether $f$ always contains along with any point\, $(x,\,y,\,z)$\, also the point\, $(-x,\,-y,\,-z)$.\\
+
+It is easily verified the
+
+\textbf{Theorem.}\, If the origin is the midpoint of a quadratic curve or a quadratic surface, then its equation has no \PMlinkname{terms of degree}{BasicPolynomial} 1.\\
+
+Similarly one can verify the generalisation, that if the origin is the midpoint of an algebraic curve or surface of degree $n$, the equation has no terms of degree $n\!-\!1$,\, $n\!-\!3$\, and so on.\\
+
+\textbf{Note.}\, Some curves and surfaces have infinitely many midpoints (see \PMlinkname{quadratic surfaces}{QuadraticSurfaces}).
+
+\begin{thebibliography}{8}
+\bibitem{IF}{\sc Felix Iversen}: {\em Analyyttisen geometrian oppikirja}. Tiedekirjasto Nr. 19.\, Second edition.\, Kustannusosakeyhti\"o Otava, Helsinki (1963).
+\end{thebibliography}
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

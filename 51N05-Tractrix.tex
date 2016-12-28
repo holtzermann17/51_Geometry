@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Tractrix}
+\pmcreated{2013-03-22 15:18:32}
+\pmmodified{2013-03-22 15:18:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{tractrix}
+\pmrecord{26}{37109}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N05}
+\pmrelated{SubstitutionNotation}
+\pmrelated{Catenary}
+\pmrelated{EulersSubstitutionsForIntegration}
+\pmdefines{tractrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+{\em Tractrix} (from the Latin verb {\em trahere} `pull, drag') is the curve along which a small object ({\em tractens}) moves when pulled on a horizontal plane with  a piece of thread by a puller ({\em tractendus}) which moves rectilinearly.
+\begin{center}
+\includegraphics{tractrix}
+\end{center}
+
+Let the object initially be in the $xy$-plane on the $x$-axis in the point \,$(a,\,0)$\, and the puller in the origin; $a$ is the \PMlinkescapetext{length} of the pulling thread. \,Then the puller begins to move along the $y$-axis in the positive direction. \,The object follows drawing the path curve \,$y = y(x)$\, so that the line determined by the thread is at every \PMlinkescapetext{moment} the tangent of the curve. \,This condition gives in the point \,$(x,\,y)$\, the \PMlinkescapetext{simple} differential equation
+   $$\frac{dy}{dx} = -\frac{\sqrt{a^2-x^2}}{x}$$
+with the initial condition \,$y(a) = 0$. \,The solution is
+   $$y = \int_x^a\frac{\sqrt{a^2-x^2}}{x}\,dx$$
+or
+  $$y = \pm(a\ln{\frac{a+\sqrt{a^2-x^2}}{x}}-\sqrt{a^2-x^2}).$$
+Here the minus alternative is for the case that the puller moves in the negative direction from the origin. \,In fact, both branches, corresponding to both signs, belong to the tractrix. \,The branches meet in the cusp point\, $(a,\,0)$.
+
+The substitution \,$x := a\cos{t}$\, gives for the tractrix the parametric \PMlinkescapetext{presentation}
+  $$x = a\cos{t}, \quad y = \pm a(\ln\frac{1+\sin{t}}{\cos{t}}-\sin{t}).$$
+Another one is 
+  $$x = \frac{a}{\cosh{u}}, \quad y = \pm a(u-\tanh{u}),$$
+where $\cosh$ and $\tanh$ are the hyperbolic functions {\em cosinus hyperbolicus} and {\em tangens hyperbolica}.
+
+\textbf{Remarks}
+\begin{enumerate}
+\item It is obvious that the line, on which the puller goes, is the asymptote of the tractrix. \,The curve thus has the property that its tangent, between the asymptote and the point of tangency, has the \PMlinkescapetext{constant length} ($= a$). 
+\item The differential equation of the orthogonal curves of the tractrix is
+$$\frac{dy}{dx} = \frac{x}{\sqrt{a^2-x^2}},$$
+whence they are the circles \,$x^2+(y-C)^2 = a^2$.
+\item The arc length of one branch on the interval \,$[b,\,a]$ is simply
+  $$\int_b^a\sqrt{1+\left(\frac{dy}{dx}\right)^2}\,dx = a\int_b^a\frac{dx}{x} = 
+ a\ln\frac{a}{b}.$$
+\item The area $A$ between the tractrix and its asymptote is $\frac{\pi a^2}{2}$. \, This may be calculated ordinarily as
+$$A = 2\int_0^a(a\ln{\frac{a+\sqrt{a^2-x^2}}{x}}-\sqrt{a^2-x^2})\,dx;$$
+integrating by parts and using the area of a quarter-circle yield
+$$A = 2\left[a\sijoitus{x=0}{\quad a}x\ln\frac{a+\sqrt{a^2-x^2}}{x}
+-a\int_0^ax\frac{d}{dx}\left(\ln\frac{a+\sqrt{a^2-x^2}}{x}\right)\,dx-\frac{\pi a^2}{4}\right]$$
+and moreover   
+$$A = 2a\sijoitus{x=0}{\quad a}
+\left[x\ln(a+\sqrt{a^2-x^2})-x\ln{x}+a\arcsin\frac{x}{a}\right]-
+\frac{\pi a^2}{2}
+ = 2a\left(0-0+a\cdot \frac{\pi}{2}\right)-\frac{\pi a^2}{2} = \frac{\pi a^2}{2}$$
+(see \PMlinkname{this entry}{GrowthOfExponentialFunction} for\, $\lim_{x\to 0+}x\ln{x} = 0$).\, Another way to determine $A$ is differential-geometric:\, as the object draws the \PMlinkescapetext{entire} tractrix from above to down, the thread turns $180^{\mathrm{o}}$ and thus sweeps an area equal to a half-circle.
+\item The envelope of the normal lines of the tractrix, i.e. the {\em evolute} of the tractrix is the catenary (or ``chain curve'')\, $x = a\cosh{\frac{y}{a}}$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,219 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolaritiesAndForms}
+\pmcreated{2013-03-22 15:58:13}
+\pmmodified{2013-03-22 15:58:13}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{polarities and forms}
+\pmrecord{7}{37986}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+\pmrelated{polarity}
+\pmrelated{Projectivity}
+\pmrelated{ProjectiveGeometry}
+\pmrelated{Isometry2}
+\pmrelated{ProjectiveGeometry3}
+\pmrelated{ClassicalGroups}
+\pmrelated{Polarity2}
+\pmrelated{DualityWithRespectToANonDegenerateBilinearForm}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Through out this article we assume $\dim V\neq 2$.  This is not a true constraint as there are only trivial dualities for $\dim V\leq 2$.
+
+\begin{prop}
+Every duality gives rise to a non-degenerate sesquilinear form,
+and visa-versa.
+\end{prop}
+\begin{proof}
+To see this, let $d:PG(V)\rightarrow PG(V)$ be a duality.  We may express this as an order preserving map $d:PG(V)\rightarrow PG(V^*)$.  Then by the fundamental theorem of projective geometry it follows $d$
+is induced by a bijective semi-linear transformation $\hat{d}:V\rightarrow V^*$. 
+
+An semi-linear isomorphism of $V$ to $V^*$ is equivalent to specifying a non-degenerate sesquilinear form. In particular, define the form $b:V\times V\rightarrow k$ by $b(v,w)=(v)(w\hat{d})$ (notice $w\hat{d}\in V^*$ so $w\hat{d}:V\rightarrow k$).
+
+Now, if $b:V\times V\rightarrow k$ is a non-degenerate sesquilinear form.  Then
+define
+\[\hat{b}:V\rightarrow V^*:v\mapsto b(-,v):V\rightarrow k\]
+which is semi-linear, as $b$ is sesquilinear, and bijective, since $b$ is
+non-degenerate.   Therefore $\hat{b}$ induces an order preserving bijection $PG(V)\rightarrow PG(V^*)$, that is, a duality.
+\end{proof}
+
+We write $W^\perp$ for the image of the induced duality of a non-degenerate
+sesquilinear form $b$.  Notice that $W^\perp=\{w\in V:b(v,W)=0\}$.  (Although the form may not be reflexive, we still use the $\perp$ notation, but we now demonstrate that we can indeed specialize to the reflexive case.)
+Notice then that
+\[\dim W^\perp=\dim V-\dim W.\]
+
+\begin{coro}
+Every polarity gives rise to a reflexive non-degenerate sesquilinear form,
+and visa-versa.
+\end{coro}
+\begin{proof}
+Let $b$ be the sesquilinear form induced by the polarity $p$.  Then suppose we
+have $v,w\in V$ such that $0=b(v,w)=(v)(w\hat{p})$.  So 
+$\langle v\rangle \leq \langle w\rangle^\perp=\langle w\rangle p$.  But $p$ has order 2 so $\langle v\rangle^\perp=\langle v\rangle p\geq \langle w\rangle$.  But this implies $b(w,v)=0$ so $b$ is reflexive.
+
+Likewise, given a reflexive non-degenerate sesquilinear form $b$ it gives rise
+do a duality $d$ induced by $\hat{b}$.  By the reflexivity, $b(W,W^\perp)=0$ implies $b(W^\perp, W)=0$ also.  As $(W^\perp)^\perp=\{v\in V:b(v,(W^\perp)^\perp)=0\}$ it follows $W\leq (W^\perp)^\perp$.  But by 
+dimension arguments: 
+\[\dim (W^\perp)^\perp =\dim V-\dim W^\perp=\dim V-(\dim V-\dim W)=\dim W\]
+we conclude $W=(W^\perp)^\perp$.  Thus $d$ is a polarity.
+\end{proof}
+
+From the fundamental theorem of projective geometry it follows if $\dim V\neq 2$ then every order preserving map is induced by a semi-linear transformation of $V$.  In similar fashion we have
+
+\begin{prop}
+$P\Gamma L^*(V)=P\Gamma L(V)\rtimes \mathbb{Z}_2$, meaning that every order
+reversing map $f:PG(V)\rightarrow PG(V)$ can be decomposed as a $f=sr$ where
+$s$ is induced from a semi-linear transformation and $r$ is a polarity.
+\end{prop}
+\begin{proof}
+Let $d$ be any duality of $PG(V)$.  Then $d^2$ is order preserving.  Thus
+$d^2$ is a projectivity so by the fundamental theorem of projective geometry
+$d^2$ is induced by a semi-linear transformation $s$.  Therefore
+$P\Gamma L(V)$ has index 2 in $P\Gamma L^*(V)$.  Finally it suffices to 
+provide any polarity of $PG(V)$ to prove $P\Gamma L^*(V)=P\Gamma L(V)\rtimes \mathbb{Z}_2$.
+For this use any reflexive non-degenerate sesquilinear form.
+\end{proof}
+
+\begin{remark}
+The group $P\Gamma L^*(V)$ is the automorphism group of $PSL(V)$.
+In particular, the polarities account for the graph automorphisms of the 
+Dynkin diagram of $A_{d-1}$, $d=\dim V$.  When $\dim V=2$ there is no
+graph automorphism, just as there are no dualities (points are hyperplanes 
+when $\dim V=2$.)
+\end{remark}
+
+
+\bibliographystyle{amsplain}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+\href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+
+\bibitem{HP}
+Gruenberg, K. W. and Weir, A.J.
+\emph{Linear Geometry 2nd Ed.} (English)
+[B] Graduate Texts in Mathematics. 49. New York - Heidelberg - Berlin: Springer-Verlag. X, 198 p. DM 29.10; \$ 12.80 (1977).
+
+\bibitem{Ka}
+Kantor, W. M.
+\emph{Lectures notes on Classical Groups}.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

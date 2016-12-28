@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TransitionToSkewangledCoordinates}
+\pmcreated{2013-03-22 17:09:39}
+\pmmodified{2013-03-22 17:09:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{transition to skew-angled coordinates}
+\pmrecord{15}{39472}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{RotationMatrix}
+\pmrelated{Hyperbola2}
+\pmrelated{ConjugateDiametersOfEllipse}
+\pmdefines{skew-angled coordinate}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let the Euclidean plane $\mathbb{R}$ be equipped with the rectangular coordinate system with the $x$ and $y$ coordinate axes.\, We choose new coordinate axes through the old origin and \PMlinkname{project}{Projection} the new coordinates $\xi$, $\eta$ of a point orthogonally on the $x$ and $y$ axes getting the old coordinates expressed as
+\begin{align}
+\begin{cases}
+  x = \xi\cos\alpha+\eta\cos\beta,\\
+  y = \xi\sin\alpha+\eta\sin\beta,
+\end{cases}
+\end{align}
+where $\alpha$ and $\beta$ are the angles which the $\xi$-axis and $\eta$-axis, respectively, form with the $x$-axis (positive if $x$-axis may be rotated anticlocwise to $\xi$-axis, else negative; similarly for rotating the $x$-axis to the $\eta$-axis).
+
+The \PMlinkescapetext{inverse formulas} of (1) are got by solving from it for $\xi$ and $\eta$, getting
+$$\xi = \frac{x\sin\beta-y\cos\beta}{\sin(\beta\!-\!\alpha)},\quad
+ \eta = \frac{-x\sin\alpha+y\cos\alpha}{\sin(\beta\!-\!\alpha)}.$$
+
+\textbf{Example.}\; Let us consider the \PMlinkname{hyperbola}{Hyperbola2}
+\begin{align}
+   \frac{x^2}{a^2}-\frac{y^2}{b^2} = 1
+\end{align}
+and take its asymptote \,$y = -\frac{b}{a}x$\, for the $\xi$-axis and the asymptote\, $y = +\frac{b}{a}c$\, for the $\eta$-axis.\, If $\omega$ is the angle formed by the latter asymptote with the $x$-axis, then\, $\alpha = -\omega$,\, $\beta = \omega$.\, By (1) we get first
+\begin{align*}
+\begin{cases}
+  x = \xi\cos\omega+\eta\cos\omega = (\eta\!+\!\xi)\cos\omega,\\
+  y = -\xi\sin\omega+\eta\sin\omega = (\eta\!-\!\xi)\sin\omega.
+\end{cases}
+\end{align*}
+Since\, $\displaystyle\tan\omega = \frac{b}{a}$,\, we see that\, $\displaystyle\cos\omega = \frac{a}{c}$,\, $\displaystyle\sin\omega = \frac{b}{c}$,\, where\, $c^2 = a^2+c^2$,\, 
+and accordingly
+$$\frac{x}{a} = (\eta\!+\!\xi)\frac{a}{c}:a = \frac{\eta\!+\!\xi}{c},\quad
+  \frac{y}{b} = (\eta\!-\!\xi)\frac{b}{c}:b = \frac{\eta\!-\!\xi}{c}.$$
+Substituting these quotients in the equation of the hyperbola we obtain
+           $$(\eta\!+\!\xi)^2-(\eta\!-\!\xi)^2 = c^2,$$
+and after simplifying,
+\begin{align}
+      \xi\eta = \frac{c^2}{4}.
+\end{align}
+This is the equation of the hyperbola (2) in the coordinate system of its asymptotes.\, Here, $c$ is the distance of the \PMlinkname{focus}{Hyperbola2} from the nearer \PMlinkname{apex}{Hyperbola2} of the hyperbola.\\
+
+If we, conversely, have in the rectangular coordinate system ($x,\,y$) an equation of the form (3), e.g.
+\begin{align}           
+       xy = \mbox{\,constant},
+\end{align}
+we can infer that it \PMlinkescapetext{represents} a hyperbola with asymptotes the coordinate axes.  Since these are perpendicular to each other, it's clear that the hyperbola (4) is a \PMlinkname{rectangular}{Hyperbola2} one.
+
+\begin{thebibliography}{8}
+\bibitem{LL}{\sc L. Lindel\"of}: {\em Analyyttisen geometrian oppikirja}.\, Kolmas painos.\, Suomalaisen Kirjallisuuden Seura, Helsinki (1924).
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

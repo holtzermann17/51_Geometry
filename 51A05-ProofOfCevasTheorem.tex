@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCevasTheorem}
+\pmcreated{2013-03-22 12:38:54}
+\pmmodified{2013-03-22 12:38:54}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{proof of Ceva's theorem}
+\pmrecord{11}{32914}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+
+\usepackage{graphicx}
+
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+\PMlinkescapeword{meet}
+\PMlinkescapeword{intersect}
+\PMlinkescapeword{intersection}
+\PMlinkescapeword{intersects}
+\PMlinkescapeword{opposite}
+\PMlinkescapeword{sign}
+\PMlinkescapephrase{sign of}
+\PMlinkescapeword{similar}
+
+As in the article on Ceva's Theorem, we will consider directed line segments.
+
+Let $X$, $Y$ and $Z$ be points on $BC$, $CA$ and $AB$, respectively, such that $AX$, $BY$ and $CZ$ are concurrent, and let $P$ be the point where $AX$, $BY$ and $CZ$ meet.
+Draw a parallel to $AB$ through the point $C$. Extend $AX$ until it intersects the parallel at a point $A'$. Construct $B'$ in a similar way extending $BY$. \figura{ceva-proof}
+The triangles $\triangle ABX$ and $\triangle A'CX$ are similar, and so are $\triangle ABY$ and $\triangle CB'Y$. Then  the following equalities hold:
+$$\frac{BX}{XC}=\frac{AB}{CA'},\qquad\frac{CY}{YA}=\frac{CB'}{BA}$$
+and thus 
+\begin{equation}\label{ec1}
+\frac{BX}{XC}\cdot\frac{CY}{YA}=\frac{AB}{CA'}\cdot\frac{CB'}{BA}=\frac{CB'}{A'C}.
+\end{equation}
+Notice that if directed segments are being used then $AB$ and $BA$ have opposite signs, and therefore when cancelled change the sign of the expression. That's why we changed $CA'$ to $A'C$.
+
+Now we turn to consider the following similarities: $\triangle AZP\sim\triangle A'CP$ and $\triangle BZP\sim\triangle B'CP$. From them we get the equalities
+$$\frac{CP}{ZP}=\frac{A'C}{AZ},\qquad\frac{CP}{ZP}=\frac{CB'}{ZB}$$
+which lead to $$\frac{AZ}{ZB}=\frac{A'C}{CB'}.$$
+Multiplying the last expression with (\ref{ec1}) gives
+$$\frac{AZ}{ZB}\cdot\frac{BX}{XC}\cdot\frac{CY}{YA}=1$$
+and we conclude the proof.
+
+To prove the converse, suppose that $X,Y,Z$ are points on $BC,CA,AB$ respectively and satisfying 
+$$\frac{AZ}{ZB}\cdot\frac{BX}{XC}\cdot\frac{CY}{YA}=1.$$
+
+Let $Q$ be the intersection point of $AX$ with $BY$, and let $Z'$ be the intersection of $CQ$ with $AB$. Since then $AX,BY,CZ'$ are concurrent, we have 
+$$\frac{AZ'}{Z'B}\cdot\frac{BX}{XC}\cdot\frac{CY}{YA}=1$$
+and thus
+$$\frac{AZ'}{Z'B}=\frac{AZ}{ZB}$$
+which implies $Z=Z'$, and therefore $AX,BY,CZ$ are concurrent.
+%%%%%
+%%%%%
+\end{document}

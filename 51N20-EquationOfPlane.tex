@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquationOfPlane}
+\pmcreated{2013-03-22 17:28:48}
+\pmmodified{2013-03-22 17:28:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{equation of plane}
+\pmrecord{13}{39866}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{DirectionCosines}
+\pmrelated{SurfaceNormal}
+\pmrelated{RuledSurface}
+\pmrelated{AnalyticGeometry}
+\pmrelated{AngleBetweenLineAndPlane}
+\pmrelated{IntersectionOfQuadraticSurfaceAndPlane}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{projection} \PMlinkescapeword{represents}
+The position of a plane $\tau$ can be fixed by giving the position vector $\overrightarrow{OQ}$ of the projection point $Q$ of the origin on the plane.
+
+Let the length of the position vector be $r$ and the angles formed by the vector with the positive coordinate axes $\alpha$, $\beta$, $\gamma$.  Let\, $P = (x,\,y,\,z)$\, be an arbitrary point.  Then $P$ is in the plane $\tau$ iff its projection on the line $OQ$ coincides with $Q$, i.e. \PMlinkname{iff}{Iff} the projection of the coordinate way of $P$ is $r$.  This may be expressed as the equation \,$x\cos\alpha+y\cos\beta+z\cos\gamma = r$\, or
+\begin{align}
+     x\cos\alpha+y\cos\beta+z\cos\gamma-r = 0,
+\end{align}
+which thus is the equation of the plane.\\
+
+Conversely, we may show that a first-degree equation
+\begin{align}
+             Ax+By+Cz+D = 0
+\end{align}
+between the variables $x$, $y$, $z$ represents always a plane.  In fact, we may without hurting generality suppose that\, $D \leqq 0$. Now\, $R := \sqrt{A^2+B^2+C^2} > 0$.\, Thus the length of the \PMlinkname{radius vector}{PositionVector} of the point\, $(A,\,B,\,C)$\, is $R$.  Let the angles formed by the radius vector with the positive coordinate axes be $\alpha$, $\beta$, $\gamma$.  Then we can write
+$$A = R\cos\alpha, \quad B = R\cos\beta, \quad C = R\cos\gamma$$
+(cf. direction cosines).  Dividing (2) termwise by $R$ gives us
+$$x\cos\alpha+y\cos\beta+z\cos\gamma+\frac{D}{R} = 0,$$
+where\, $\frac{D}{R} \leqq 0$.  The last equation represents a plane whose distance from the origin is $-\frac{D}{R}$ and whose normal line forms the angles  $\alpha$, $\beta$, $\gamma$ with the coordinate axes.
+
+Since the coefficients $A,\,B,\,C$ are proportional to the direction cosines of the normal vector of this plane, they are direction numbers of the normal line of the plane.\\
+
+\textbf{Examples.}  The equations of the coordinate planes are\\
+$x = 0$ ($yz$-plane),\; $y = 0$ ($zx$-plane),\; $z = 0$ ($xy$-plane);\\ 
+the equation of the plane through the points\, $(1,\,0,\,0)$,\, $(0,\,1,\,0)$\, and\, $(0,\,0,\,1)$\, is\\
+$x+y+z = 1$.\\
+
+The plane can be represented also in a vectoral form, by using the position vector $\vec{r}_0$ of a point of the plane and two linearly independent vectors $\vec{u}$ and $\vec{v}$ parallel to the plane:
+\begin{align}
+\vec{r} = \vec{r}_0+s\vec{u}+t\vec{v}.
+\end{align}
+Here, $\vec{r}$ means the position vector of arbitrary point of the plane, $s$ and $t$ are \PMlinkescapetext{independent} real parameters.  In the coordinate form, (3) may be e.g.
+\begin{align*}
+\begin{cases}
+                x = x_0+sa+td,\\  
+                y = y_0+sb+te,\\
+                z = z_0+sc+tf.
+\end{cases}
+\end{align*}
+
+
+
+%%%%%
+%%%%%
+\end{document}

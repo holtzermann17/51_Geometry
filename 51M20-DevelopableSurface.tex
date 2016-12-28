@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DevelopableSurface}
+\pmcreated{2013-03-22 15:29:29}
+\pmmodified{2013-03-22 15:29:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{developable surface}
+\pmrecord{8}{37348}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M20}
+\pmclassification{msc}{51M04}
+\pmsynonym{torsal surface}{DevelopableSurface}
+\pmrelated{Area2}
+\pmrelated{RiemannMultipleIntegral}
+\pmdefines{developable}
+\pmdefines{torsal generatrix}
+\pmdefines{torsal}
+\pmdefines{tangential surface}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+A generatrix of a ruled surface is {\em torsal}, if in each of its points there is one and the same tangent plane of the surface.
+
+A ruled surface is {\em torsal} iff it only has torsal generatrices.
+
+A surface is {\em developable}, if one can spread it out on a plane without any stretching or tearing.
+
+K. F. Gauss has proved that a surface is developable if and only if it is a torsal  ruled surface.
+
+One may divide the developable surfaces into three \PMlinkescapetext{types}:
+\begin{enumerate}
+ \item Cylindrical surfaces
+ \item Conical surfaces
+ \item {\em Tangential surfaces} of a space curve; they can be expressed by
+$$\vec{r} = \vec{\gamma}(t)+ s\,\frac{d\vec{\gamma}(t)}{dt}$$
+where\, $\vec{r} = \vec{\gamma}(t)$\, is the equation of the space curve, $s$ and $t$ are parameters.
+\end{enumerate}
+
+\begin{figure}
+\begin{center}
+\includegraphics{developable.eps}
+\end{center}
+\caption{Tangential surface of a circular helix}
+\end{figure}
+
+%%%%%
+%%%%%
+\end{document}

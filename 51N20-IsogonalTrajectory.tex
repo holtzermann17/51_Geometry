@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsogonalTrajectory}
+\pmcreated{2013-03-22 18:59:20}
+\pmmodified{2013-03-22 18:59:20}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{isogonal trajectory}
+\pmrecord{7}{41855}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{34A26}
+\pmclassification{msc}{34A09}
+%\pmkeywords{family of curves}
+\pmrelated{AngleBetweenTwoCurves}
+\pmrelated{OrthogonalCurves}
+\pmrelated{ExampleOfIsogonalTrajectory}
+\pmrelated{AngleBetweenTwoLines}
+\pmdefines{isogonal trajectory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let a one-parametric family of plane curves \,$\gamma$\, have the differential equation
+\begin{align}
+F(x,\,y,\,\frac{dy}{dx}) \;=\; 0.
+\end{align}
+We want to determine the \emph{isogonal trajectories} of this family, i.e. the curves \,$\iota$\, intersecting all members of the family under a given angle, which is denoted by $\omega$.
+For this purpose, we denote the slope angle of any curve $\gamma$ at such an intersection point by $\alpha$ and the slope angle of $\iota$ at the same point by $\beta$.\, Then
+$$\beta-\alpha \;=\; \omega  \quad(\mbox{or alternatively\;\;} -\omega),$$
+and accordingly
+$$\frac{dy}{dx} \;=\; \tan\alpha \;=\; \frac{\tan\beta-\tan\omega}{1+\tan\beta\tan\omega} 
+\;=\; \frac{y'-\tan\omega}{1+y'\tan\omega},$$
+where $y'$ means the slope of $\iota$.\, Thus the equation
+\begin{align}
+F(x,\,y,\,\frac{y'-\tan\omega}{1+y'\tan\omega}) \;=\; 0
+\end{align}
+is satisfied by the derivative $y'$ of the ordinate of $\iota$.\, In other \PMlinkescapetext{words}, (2) is the differential equation of all isogonal trajectories of the given family of curves.\\
+
+\textbf{Note.}\, In the special case \,$\omega = \frac{\pi}{2}$,\, it's a question of orthogonal trajectories.
+
+%%%%%
+%%%%%
+\end{document}

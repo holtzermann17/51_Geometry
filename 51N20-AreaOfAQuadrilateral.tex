@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaOfAQuadrilateral}
+\pmcreated{2013-03-22 16:58:22}
+\pmmodified{2013-03-22 16:58:22}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{area of a quadrilateral}
+\pmrecord{7}{39248}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $a,b,c,d$ be the lengths of the sides of a quadrilateral and $K$ be its area.
+Let $s$ be the semiperimeter. 
+Then
+$$
+K^2 = (s-a)(s-b)(s-c)(s-d) - abcd \cos^2 \left(\frac{\theta+\phi}{2}\right )
+$$
+where $\theta$ and $\phi$ are \PMlinkescapetext{opposite angles} of the quadrilateral.
+Letting $d \to 0$ we obtain Heron's formula for the area of a triangle.
+
+\begin{thebibliography}{99}
+\bibitem{CAB}
+C.A. Bretschneider,  \emph{Untersuchung der trigonometrischen Relationen des geradlinigen 
+Viereckes}. Archiv der Math. 2, (1842), 225-261.
+\bibitem{FS}
+F. Strehlke,  \emph{Zwei neue S\"atze vom ebenen und shp\"arischen Viereck und 
+Umkehrung des Ptolemaischen Lehrsatzes.} Archiv der Math. 2, (1842) 323-326.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

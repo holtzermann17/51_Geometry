@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SteinerSystem}
+\pmcreated{2013-03-22 13:05:37}
+\pmmodified{2013-03-22 13:05:37}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Steiner system}
+\pmrecord{9}{33511}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51E10}
+\pmclassification{msc}{05C65}
+\pmrelated{Hypergraph}
+\pmrelated{IncidenceStructures}
+\pmdefines{Steiner triple system}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+\textbf{Definition}.  An $S(\tau,\kappa,\nu)$ {\bf Steiner system} is a $\tau$-$(\nu,\kappa,1)$ design (i.e.\ $\lambda=1$).  The values $\tau,\kappa,\nu$ are the parameters of the Steiner system.
+
+Since $\lambda=1$, a Steiner system is a simple design, and therefore we may interpret a block to {\em be\/} a set of points ($B=\mathcal{P}_B$), which we will do from now on.
+
+Given parameters $\tau,\kappa,\nu$, there may be several non-isomorphic systems, or no systems at all.
+
+Let $\mathcal{S}$ be an $S(\tau,\kappa,\nu)$ system with point set $\mathcal{P}$ and block set $\mathcal{B}$, and choose a point $P\in \mathcal{P}$ (often, the system is so symmetric that it makes no difference which point you choose).  The choice uniquely induces an $S(\tau-1,\kappa-1,\nu-1)$ system $\mathcal{S}_1$ with point set $\mathcal{P}_1 = \mathcal{P}\setminus \{P\}$ and block set $\mathcal{B}_1$ consisting of $B\setminus\{P\}$ for only those $B\in\mathcal{B}$ that contained $P$.  This works because for any $T_1\subseteq\mathcal{P}_1$ with $|T_1|=\tau-1$ there was a unique $B\in\mathcal{B}$ that contained $T=T_1\cup\{P \}$.
+
+This recurses down all the way to $\tau=1$ (a partition of $\nu-\tau+1$ into blocks of $\kappa-\tau+1$) and finally to $\tau=0$ (one arbitrary block of $\kappa-\tau$). If any of the divisibility conditions (see the entry \PMlinkname{design}{Design} for more detail) on the way there do not hold, there cannot exist a Steiner system with the original parameters either.
+
+For instance, {\bf Steiner triple systems} $S(2,3,\nu)$ (the first Steiner systems studied, by Kirkman, before Steiner) exist for $\nu=0$ and all $\nu\equiv1$ or $3\pmod6$, and no other $\nu$.
+
+The reverse construction, turning an $S(\tau,\kappa,\nu)$ into an $S(\tau+1, \kappa+1, \nu+1)$, need not be unique and may be impossible. Famously an $S(4,5,11)$ and a $S(5,6,12)$ have the Mathieu groups $M_{11}$ and $M_{12}$ as their automorphism groups, while $M_{22}$, $M_{23}$ and $M_{24}$ are those of an $S(3,6,22)$, $S(4,7,23)$ and $S(5,8,24)$,
+with connexions to the binary Golay code and the Leech lattice.
+
+\textbf{Remark}.  A \emph{Steiner system} $S(t,k,n)$ can be equivalently characterized as a $k$-uniform hypergraph on $n$ vertices such that every set of $t$ vertices is contained in exactly one edge.  Notice that any $S(2,k,n)$ is just a $k$-uniform linear space.
+%%%%%
+%%%%%
+\end{document}

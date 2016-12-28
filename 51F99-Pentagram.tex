@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Pentagram}
+\pmcreated{2013-03-22 17:08:52}
+\pmmodified{2013-03-22 17:08:52}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{pentagram}
+\pmrecord{11}{39456}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51F99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{regular}
+
+A {\em pentagram} is the figure formed by the five diagonals of a \PMlinkname{regular}{RegularPolygon} pentagon.\, The name comes from the Greek $\pi\varepsilon\nu\tau\alpha\gamma\varrho\alpha\mu\mu o\nu$.  Its \PMlinkescapetext{roots} are $\pi\varepsilon\nu\tau\varepsilon$ `five' and $\gamma\varrho\alpha\mu\mu o\varsigma$ `stoke, \PMlinkescapetext{line}'.\,  These Greek \PMlinkescapetext{words} are transliterated as {\em pentagrammon}, {\em pente}, and {\em grammos}, respectively.
+
+In the picture below, a regular pentagon is drawn dashed in black, the pentagram is drawn in blue, and the regular pentagon in the middle of the pentagram is shaded in cyan.
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\pspolygon[linestyle=dashed](0,3)(-2.853,0.927)(-1.763,-2.427)(1.763,-2.427)(2.853,0.927)
+\pspolygon[linecolor=blue](0,3)(-1.763,-2.427)(2.853,0.927)(-2.853,0.927)(1.763,-2.427)
+\psset{fillstyle=solid}
+\pspolygon[linecolor=blue,fillcolor=cyan](0.67354,0.927)(-0.67354,0.927)(-1.09,-0.354)(0,-1.146)(1.09,-0.354)
+\psdots(0,3)(-2.853,0.927)(-1.763,-2.427)(1.763,-2.427)(2.853,0.927)
+\end{pspicture}
+\end{center}
+
+All pentagrams are similar.\, If the length of the pentagon diagonal is $d$, then each side of the small pentagon in the middle of the pentagram is of length\, $(\sqrt{5}-2)d$.
+%%%%%
+%%%%%
+\end{document}

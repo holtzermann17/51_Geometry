@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PlanetMathGraphicsSandbox}
+\pmcreated{2013-03-22 16:39:06}
+\pmmodified{2013-03-22 16:39:06}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{PlanetMath graphics sandbox}
+\pmrecord{27}{38856}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+
+\usepackage{graphicx}
+
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+% define commands here
+\newcommand{\trefoil}{\xygraph{
+ !{0;/r2.0pc/:}
+ !P3"a"{~>{}}
+ !P9"b"{~:{(1.3288,0):}~>{}}
+ !P3"c"{~:{(2.5,0):}~>{}}
+ !{\vunder~{"b2"}{"b1"}{"a1"}{"a3"}}
+ !{\vcap~{"c1"}{"c1"}{"b4"}{"b2"}}
+ !{\vunder~{"b5"}{"b4"}{"a2"}{"a1"}}
+ !{\vcap~{"c2"}{"c2"}{"b7"}{"b5"}}
+ !{\vunder~{"b8"}{"b7"}{"a3"}{"a2"}}
+ !{\vcap~{"c3"}{"c3"}{"b1"}{"b8"}}
+}}
+
+\newcommand{\quatrefoil}{\xygraph{
+ !{0;/r2.0pc/:}
+ !P3"a"{~>{}}
+ !P9"b"{~:{(1.3288,0):}~>{}}
+ !P3"c"{~:{(2.5,0):}~>{}} [rrrr]
+ !P3"d"{~>{}}
+ !P9"e"{~:{(1.3288,0):}~>{}}
+ !P3"f"{~:{(2.5,0):}~>{}} [rr]
+ !{\vunder~{"b2"}{"b1"}{"a1"}{"a3"}}
+ !{\vcap~{"c1"}{"c1"}{"b4"}{"b2"}}
+ !{\vunder~{"b5"}{"b4"}{"a2"}{"a1"}}
+ !{\vcap~{"c2"}{"c2"}{"b7"}{"b5"}}
+ !{\vunder~{"b8"}{"b7"}{"a3"}{"a2"}}
+ !{\huntwist~{"b8"}{"e7"}{"b1"}{"e5"}}
+ !{\vover~{"e7"}{"e8"}{"d2"}{"d3"}}
+ !{\vcap~{"f3"}{"f3"}{"e8"}{"e1"}}
+ !{\vover~{"e1"}{"e2"}{"d3"}{"d1"}}
+ !{\vcap~{"f1"}{"f1"}{"e2"}{"e4"}}
+ !{\vover~{"e4"}{"e5"}{"d1"}{"d2"}}
+}}
+
+
+% suggested by user mps
+\usepackage{pstricks}
+\newcommand{\smallbox}{\psframe*(0,0)(0.9,0.9)}
+\begin{document}
+$$
+\xymatrix{
+1 & 2 \ar@{-}[d] & 3 \ar@{-}[r] \ar@{-}[d] \ar@{-}[dr] & 4 & 5 \ar@{-}[r] & 6 \ar@{-}[d] \\
+& 7 & 8 & 9 & 10 \ar@{-}[r] & 12
+}
+$$
+
+Some text, yada, yada, yada. $10\spadesuit~A\clubsuit~J\heartsuit$
+% Then $x = y + 1$ holds.
+
+Silver rectangle with a horizontal line plopped down somewhere.
+
+\begin{pspicture*}(-1,-1)(15.142135623730950488,11)
+\psset{unit=0.5cm}
+\pspolygon(0,0)(14.142135623730950488,0)(14.142135623730950488,10)(0,10)
+\psline[linestyle=dotted](10,0)(10,10)
+\psline[linestyle=dotted](0,5)(15,5)
+\end{pspicture*}
+
+A Collatz tree of height 12.
+\[\xymatrix{
+96\ar[d] & 17\ar[dr] & 104\ar[d] & 106\ar[d] & 640\ar[d] & 672\ar[d] & 113\ar[dr] & 680\ar[d] & 682\ar[d] & 4096\ar[d] \\
+48\ar[d] & & 52\ar[d] & 53\ar[dr] & 320\ar[d] & 336\ar[d] & & 340\ar[d] & 341\ar[dr] & 2048\ar[d] \\
+24\ar[d] & & 26\ar[d] & & 160\ar[d] & 168\ar[d] & & 170\ar[d] & & 1024\ar[d] \\
+12\ar[d] & & 13\ar[drr] & & 80\ar[d] & 84\ar[d] & & 85\ar[drr] & & 512\ar[d] \\
+6\ar[d] & & & & 40\ar[d] & 42\ar[d] & & & & 256\ar[d] \\
+3\ar[drrrr] & & & & 20\ar[d] & 21\ar[drrrr] & & & & 128\ar[d] \\
+& & & & 10\ar[d] & & & & & 64\ar[d] \\
+& & & & 5\ar[drrrrr] & & & & & 32\ar[d] \\
+& & & & & & & & & 16\ar[d] \\
+& & & & & & & & & 8\ar[d] \\
+& & & & & & & & & 4\ar[d] \\
+& & & & & & & & & 2\ar[d] \\
+& & & & & & & & & 1
+}\]
+
+
+Suppose $K$ and $J$ are both the trefoil knot.
+
+By one choice of segment deletion and reattachment, $K\#J$ is the quatrefoil knot.
+%\quatrefoil source in quatrefoil.tex (also defined in header of this file)
+\begin{center}
+\begin{figure}[here]
+\includegraphics{quatrefoil.epsi}
+\caption{$K\#J$ is the quatrefoil knot}
+\end{figure}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

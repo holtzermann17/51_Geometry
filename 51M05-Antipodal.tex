@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Antipodal}
+\pmcreated{2013-03-22 13:57:45}
+\pmmodified{2013-03-22 13:57:45}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{antipodal}
+\pmrecord{6}{34731}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmclassification{msc}{15-00}
+\pmrelated{DiametralPoints}
+\pmdefines{antipodal points}
+\pmdefines{antipodal map}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+{\bf Definition}
+Suppose $x$ and $y$ are points on the 
+\PMlinkname{$n$-sphere}{Sphere} $S^n$. 
+If $x=-y$ then $x$ and 
+$y$ are called {\bf antipodal points}. The
+{\bf antipodal map} is the map $A: S^n\to S^n$ defined as
+$A(x)=-x$.
+
+\textbf{Properties}
+\begin{enumerate}
+\item
+The antipodal map$A:S^n\to S^n$ is 
+\PMlinkname{homotopic}{HomotopyOfMaps}
+to the identity map if $n$ is odd \cite{guillemin}.
+\item The \PMlinkname{degree}{DegreeMapOfSpheres} of the 
+antipodal map is $(-1)^{n+1}$.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+ \bibitem{guillemin} V. Guillemin, A. Pollack,
+\emph{Differential topology}, Prentice-Hall Inc., 1974.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

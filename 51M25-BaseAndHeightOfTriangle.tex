@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BaseAndHeightOfTriangle}
+\pmcreated{2013-03-22 18:50:15}
+\pmmodified{2013-03-22 18:50:15}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{base and height of triangle}
+\pmrecord{14}{41642}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M25}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51-01}
+\pmsynonym{base of triangle}{BaseAndHeightOfTriangle}
+\pmsynonym{height of triangle}{BaseAndHeightOfTriangle}
+%\pmkeywords{triangle}
+\pmrelated{AreaOfAPolygonalRegion}
+\pmrelated{HeightOfATriangle}
+\pmrelated{Area2}
+\pmrelated{ProjectionFormula}
+\pmrelated{OrthicTriangle}
+\pmdefines{base}
+\pmdefines{height}
+\pmdefines{foot of height}
+\pmdefines{foot of altitude}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\begin{center}
+\begin{pspicture}(-5,-0.5)(5,2.8)
+\rput(-5,-0.5){.}
+\rput(5,2.8){.}
+\pspolygon(-4,0)(-1,0)(-2,2.5)
+\psline[linestyle=dotted](-2,0)(-2,2.5)
+\rput(-2,-0.3){base}
+\rput(-2.25,1.1){$h_1$}
+\pspolygon(2,0)(4,0)(1,2.2)
+\psline[linestyle=dotted](1,0)(1,2.2)
+\psline[linestyle=dashed](1,0)(2,0)
+\rput(3,-0.3){base}
+\rput(0.75,0.9){$h_2$}
+\end{pspicture}
+\end{center}
+
+
+Considering the area of a triangle, one usually names a side of the triangle to be its \emph{base}.\, For expressing the calculation way of the area of the triangle, one then uses the \emph{height} (a.k.a. \emph{altitude}), which means the perpendicular distance of the vertex, \PMlinkescapetext{opposite} to the base side, from the line determined by the base.\, In the above two triangles, the heights $h_1$ and $h_2$ correspond the horizontal \PMlinkescapetext{bases}.  One calls \emph{foot of the height} the projection of the vertex onto the line of the base.
+
+The rule for the calculation reads
+$$\mbox{area \;=\; base times height divided by 2}$$\\
+
+
+
+In the below figure, there is the illustration of the rule.\, The parallelogram $ABCD$ has been divided by the diagonal $BD$ into two triangles, which are congruent by the ASA criterion (see the alternate interior angles).\, Thus the both triangles have the areas half of the area of the parallelogram, which in turn has the common base $AB$ and the common height $h$ with the triangle $ABD$.
+\begin{center}
+\begin{pspicture}(-3,-0.5)(4.5,2.8)
+\rput(-3,-0.5){.}
+\rput(4.5,2.8){.}
+\psline[linecolor=blue](2,0)(-0.5,2.5)
+\psline(-0.5,2.5)(-2,0)(2,0)
+\psline[linestyle=dashed](2,0)(3.5,2.5)(-0.5,2.5)
+\rput(-2.2,-0.2){$A$}
+\rput(2.2,-0.2){$B$}
+\rput(3.8,2.6){$C$}
+\rput(-0.8,2.6){$D$}
+\psarc(2,0){0.33}{135}{180}
+\psarc(2,0){0.25}{55}{180}
+\psarc(-0.5,2.5){0.25}{-125}{0}
+\psarc(-0.5,2.5){0.33}{-45}{0}
+\psline[linestyle=dotted](-0.5,2.3)(-0.5,0)
+\rput(-0.3,1.1){$h$}
+\end{pspicture}
+\end{center}
+
+\textbf{Note.}\, In an isosceles triangle, one sometimes calls the two equal sides the \emph{legs} and the third side the \emph{base}.
+
+%%%%%
+%%%%%
+\end{document}

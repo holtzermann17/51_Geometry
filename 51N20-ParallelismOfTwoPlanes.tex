@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParallelismOfTwoPlanes}
+\pmcreated{2013-03-22 18:48:10}
+\pmmodified{2013-03-22 18:48:10}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{parallelism of two planes}
+\pmrecord{15}{41603}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51A05}
+\pmsynonym{parallelism of planes}{ParallelismOfTwoPlanes}
+\pmsynonym{parallel planes}{ParallelismOfTwoPlanes}
+%\pmkeywords{parallel plane}
+\pmrelated{PlaneNormal}
+\pmrelated{ParallelAndPerpendicularPlanes}
+\pmrelated{ParallelityOfLineAndPlane}
+\pmrelated{ExampleOfUsingLagrangeMultipliers}
+\pmrelated{NormalOfPlane}
+\pmdefines{parallel}
+\pmdefines{parallelism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Two planes $\pi$ and $\varrho$ in the 3-dimensional Euclidean space are {\em parallel}\, iff they either have no common points or coincide, i.e. iff
+\begin{align}
+\pi\cap\varrho \;=\; \varnothing \quad \mbox{or} \quad \pi\cap\varrho\;=\; \pi.
+\end{align}
+An \PMlinkname{equivalent}{Equivalent3} condition of the parallelism is that the normal vectors of $\pi$ and $\varrho$ are parallel.\\
+The parallelism of planes is an equivalence relation in any set of planes of the space.\\
+
+If the planes have the equations
+\begin{align}
+A_1x\!+\!B_1y\!+\!C_1z\!+\!D_1 \;=\; 0 \quad \mbox{and} \quad A_2x\!+\!B_2y\!+\!C_2z\!+\!D_2 \;=\; 0,
+\end{align}
+the parallelism means the \PMlinkname{proportionality}{Variation} of the coefficients of the variables:\, there exists a \PMlinkescapetext{constant} $k$ such that
+\begin{align}
+A_1 \;=\; kA_2, \quad B_1 \;=\; kB_2, \quad C_1 \;=\; kC_2.
+\end{align}
+In this case, if also\, $D_1 \,=\, kD_2$,\, then the planes coincide.
+
+Using vectors, the condition (3) may be written
+\begin{align}
+       \left(\!\begin{array}{c}A_1\\ B_1\\ C_1\end{array}\!\right) 
+\;=\; k\left(\!\begin{array}{c}A_2\\ B_2\\ C_2\end{array}\!\right)
+\end{align}
+which equation utters the \PMlinkname{parallelism}{MutualPositionsOfVectors} of the normal vectors.\\
+
+
+\textbf{Remark.}\, The shortest distance of the parallel planes 
+$$Ax\!+\!By\!+\!Cz\!+\!D \;=\; 0 \quad \mbox{and} \quad Ax\!+\!By\!+\!Cz\!+\!E \;=\; 0$$
+is obtained from the \PMlinkescapetext{formula}
+\begin{align}
+d \;=\; \frac{|D\!-\!E|}{\sqrt{A^2\!+\!B^2\!+\!C^2}},
+\end{align}
+as is easily shown by using \PMlinkname{Lagrange multipliers}{LagrangeMultiplierMethod} (see \PMlinkid{this entry}{11604}).
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTangentsLaw}
+\pmcreated{2013-03-22 13:11:04}
+\pmmodified{2013-03-22 13:11:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{proof of tangents law}
+\pmrecord{6}{33632}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To prove that $$\frac{a-b}{a+b} = \frac{\tan(\frac{A-B}{2})}{\tan(\frac{A+B}{2})}$$
+we start with the sines law, which says that $$\frac{a}{\sin(A)} = \frac{b}{\sin(B)}.$$
+This implies that $$a \sin(B) = b \sin(A)$$
+We can write $\sin(A)$ as $$\sin(A) = \sin(\frac{A+B}{2})\cos(\frac{A-B}{2}) + \cos(\frac{A+B}{2})\sin(\frac{A-B}{2}).$$
+and $\sin(B)$ as $$\sin(B) = \sin(\frac{A+B}{2})\cos(\frac{A-B}{2}) - \cos(\frac{A+B}{2})\sin(\frac{A-B}{2}).$$
+Therefore, we have 
+$$a (\sin(\frac{A+B}{2})\cos(\frac{A-B}{2}) - \cos(\frac{A+B}{2})\sin(\frac{A-B}{2})) = b (\sin(\frac{A+B}{2})\cos(\frac{A-B}{2}) + \cos(\frac{A+B}{2})\sin(\frac{A-B}{2}))$$
+Dividing both sides by $\cos(\frac{A-B}{2})\cos(\frac{A+B}{2}),$ we have,
+$$a (\tan(\frac{A+B}{2}) - \tan(\frac{A-B}{2}) )  =  b (\tan(\frac{A+B}{2}) + \tan(\frac{A-B}{2}) )$$
+This gives us
+$$ \frac{a}{b} = \frac{\tan(\frac{A+B}{2}) + \tan(\frac{A-B}{2})}{\tan(\frac{A+B}{2}) - \tan(\frac{A-B}{2})}$$
+Hence we find that
+$$
+\frac{a-b}{a+b} =  \frac{\displaystyle{\frac{a}{b}}-1}{\displaystyle{\frac{a}{b}}+1} =
+\frac{\tan(\frac{A-B}{2})}{\tan(\frac{A+B}{2})}.
+$$
+%%%%%
+%%%%%
+\end{document}

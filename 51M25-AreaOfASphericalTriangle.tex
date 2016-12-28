@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaOfASphericalTriangle}
+\pmcreated{2013-03-22 14:21:38}
+\pmmodified{2013-03-22 14:21:38}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{area of a spherical triangle}
+\pmrecord{9}{35841}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M25}
+\pmclassification{msc}{51M04}
+\pmrelated{AreaOfTheNSphere}
+\pmrelated{Defect}
+\pmrelated{SolidAngle}
+\pmrelated{LimitingTriangle}
+\pmrelated{SphericalTrigonometry}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\newtheorem*{thm}{Theorem}
+\begin{document}
+A spherical triangle is formed by connecting three points on the surface
+of a sphere with great arcs; these three points do not lie on a great circle of the sphere. The measurement of an angle of a spherical
+triangle is intuitively obvious, since on a small scale the surface of
+a sphere looks flat. More precisely, the angle at each vertex is measured as the
+angle between the tangents to the incident sides in the vertex tangent plane.
+
+Theorem.
+The area of a spherical triangle $ABC$ on a sphere of radius $R$ is
+\begin{equation}\label{sph-tri-area}
+  S_{ABC} = (\angle A + \angle B + \angle C - \pi) R^2.
+\end{equation}
+
+Incidentally, this formula shows that the sum of the angles of a spherical
+triangle must be greater than or equal to $\pi$, with equality holding
+in case the triangle has zero area.
+
+Since the sphere is compact, there might be some ambiguity as to whether
+the area of the triangle or its complement is being considered. For
+the purposes of the above formula, we only consider triangles with
+each angle smaller than $\pi$.
+
+An illustration of a spherical triangle
+formed by points $A$, $B$, and $C$ is shown below.
+\begin{center}
+  \includegraphics{sph-tri.1}
+\end{center}
+Note that by continuing the sides of the original triangle into full
+great circles, another spherical triangle is formed. The triangle $A'B'C'$
+is antipodal to $ABC$ since it can be obtained by reflecting the original
+one through the center of the sphere. By symmetry, both triangles must
+have the same area.
+
+\begin{proof}
+For the proof of the above formula, the notion of a \emph{spherical diangle}
+is helpful. As its name suggests, a diangle is formed by two great arcs
+that intersect in two points, which must lie on a diameter. Two diangles
+with vertices on the diameter $AA'$ are shown below.
+\begin{center}
+  \includegraphics{sph-tri.2}
+\end{center}
+At each vertex, these diangles form an angle of $\angle A$. Similarly,
+we can form diangles with vertices on the diameters $BB'$ and $CC'$
+respectively.
+\begin{center}
+  \includegraphics{sph-tri.3}
+  \includegraphics{sph-tri.4}
+\end{center}
+Note that these diangles cover the entire sphere while overlapping
+only on the triangles $ABC$ and $A'B'C'$. Hence, the total area of
+the sphere can be written as
+\begin{equation}\label{sph-cover}
+  S_{\mathrm{sphere}} = 2S_{AA'} + 2S_{BB'} + 2S_{CC'} - 4S_{ABC}.
+\end{equation}
+
+Clearly, a diangle occupies an area that is proportional to the angle
+it forms. Since the \PMlinkname{area of the sphere}{AreaOfTheNSphere}
+is $4\pi R^2$, the area of a diangle of angle $\alpha$ must be $2\alpha R^2$.
+
+Hence, we can rewrite equation \eqref{sph-cover} as
+\begin{gather*}
+  4\pi R^2 = 2 R^2 (2\angle A + 2\angle B + 2\angle C) - 4S_{ABC}, \\
+  \therefore ~ S_{ABC} = (\angle A + \angle B + \angle C - \pi) R^2,
+\end{gather*}
+which is the same as equation \eqref{sph-tri-area}.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPappussTheorem}
+\pmcreated{2013-03-22 13:47:40}
+\pmmodified{2013-03-22 13:47:40}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Pappus's theorem}
+\pmrecord{6}{34509}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\begin{document}
+\PMlinkescapeword{vertices}
+\PMlinkescapeword{opposite}
+\PMlinkescapeword{intersection}
+\PMlinkescapeword{order}
+\PMlinkescapeword{contain}
+Pappus's theorem says that if the six vertices of a hexagon lie
+alternately on two lines, then
+the three points of intersection of opposite sides are collinear.
+In the figure, the given lines are $A_{11}A_{13}$ and $A_{31}A_{33}$,
+but we have omitted the letter $A$.
+
+\includegraphics{pappus}
+
+The appearance of the diagram will depend on the order in which the
+given points appear on the two lines; two possibilities are shown.
+
+Pappus's theorem is true in the affine plane over any (commutative) field.
+A tidy proof is available with the aid of homogeneous coordinates.
+
+No three of the four points $A_{11}$, $A_{21}$, $A_{31}$, and $A_{13}$ are
+collinear, and therefore we can choose homogeneous coordinates such that
+$$A_{11}=(1,0,0)\qquad A_{21}=(0,1,0)$$
+$$A_{31}=(0,0,1)\qquad A_{13}=(1,1,1)$$
+That gives us equations for three of the lines in the figure:
+$$A_{13}A_{11}:y=z\qquad A_{13}A_{21}:z=x\qquad A_{13}A_{31}:x=y\;.$$
+These lines contain $A_{12}$, $A_{32}$, and $A_{22}$ respectively, so
+$$A_{12}=(p,1,1)\qquad A_{32}=(1,q,1)\qquad A_{22}=(1,1,r)$$
+for some scalars $p,q,r$. So, we get equations for six more lines:
+\begin{equation} \label{I1}
+A_{31}A_{32}:y=qx\qquad A_{11}A_{22}:z=ry\qquad A_{12}A_{21}:x=pz
+\end{equation}
+\begin{equation} \label{I2}
+A_{31}A_{12}:x=py\qquad A_{11}A_{32}:y=qz\qquad A_{21}A_{22}:z=rx
+\end{equation}
+By hypothesis, the three lines (\ref{I1}) are concurrent, and therefore
+$prq=1$. But that implies $pqr=1$, and therefore the three lines
+(\ref{I2}) are concurrent, QED.
+%%%%%
+%%%%%
+\end{document}

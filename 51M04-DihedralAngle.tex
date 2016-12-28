@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DihedralAngle}
+\pmcreated{2013-03-22 18:48:07}
+\pmmodified{2013-03-22 18:48:07}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{dihedral angle}
+\pmrecord{9}{41602}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmrelated{NormalSection}
+\pmrelated{PerpendicularityInEuclideanPlane}
+\pmrelated{TrihedralAngle}
+\pmrelated{SolidAngle}
+\pmdefines{edge}
+\pmdefines{side}
+\pmdefines{normal section}
+\pmdefines{concave}
+\pmdefines{perpendicular}
+\pmdefines{perpendicular planes}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Two distinct half-planes, emanating from a same line $l$, \PMlinkescapetext{divide} the space ($\mathbb{R}^3$) into two regions called {\em dihedral angles}.\, The line $l$ is the {\em edge} of the dihedral angle and the bounding half-planes are its {\em sides}.
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,3)
+\psline[linewidth=0.05](-2.5,-1)(1.5,-1)(2.5,0)(2,2)(-2,2)
+\psline(-2,2)(-1.5,0)(-2.5,-1)
+\psline(-2.1,0)(3,0)
+\rput(0,0.2){$l$}
+\rput(-3,-1){.}
+\rput(3,3){.}
+\end{pspicture}
+\end{center}
+
+
+The angle, which the sides of a dihedral planes separate from a normal plane of the edge, is the {\em normal section} of the dihedral angle.\, Apparently, all normal sections are equal.\, According to the \PMlinkescapetext{size} of the normal section, the dihedral angle may be called acute, right, obtuse, straight, \PMlinkname{skew}{ConvexAngle}, convex and concave.\, Unlike the angle between two planes, a dihedral angle may be over 90 \PMlinkescapetext{degrees}.
+
+If two planes intersect each other and if one of the four dihedral angles formed is right, then also the others are right.\, Then we say that the planes are {\em perpendicular} to each other.
+
+
+
+%%%%%
+%%%%%
+\end{document}

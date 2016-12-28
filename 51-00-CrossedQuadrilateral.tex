@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CrossedQuadrilateral}
+\pmcreated{2013-03-22 17:11:34}
+\pmmodified{2013-03-22 17:11:34}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{crossed quadrilateral}
+\pmrecord{25}{39511}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{PtolemysTheorem}
+\pmdefines{complete crossed quadrilateral}
+\pmdefines{antiparallelogram}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{pstricks}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{inner}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{opposite}
+\PMlinkescapeword{opposite sides}
+
+A {\em complete crossed quadrilateral} is formed by four distinct lines $AC$, $AD$, $CF$ and $DE$ in the Euclidean plane, each of which intersects the other three.  The intersection of $CF$ and $DE$ is labelled as $B$.  A complete crossed quadrilateral has six vertices, of which $A$ and $B$,\, $C$ and $D$,\, $E$ and $F$ are opposite.
+
+\begin{center}
+\begin{pspicture}(-3,-2.2)(3,2.1)
+\psline(-3,-2)(0,-2)
+\psline(-3,-2)(-1,0)
+\pspolygon[linecolor=cyan](0,-2)(2,-2)(-1,0)(1,2)
+\psdots(-3,-2)(2,-2)(1,2)(0,-2)(-1,0)(0.2857143,-0.857143)
+\rput[a](-3,-2.2){$A$}
+\rput[a](0,-2.2){$E$}
+\rput[a](2,-2.2){$C$}
+\rput[r](-1.1,0){$F$}
+\rput[b](1,2.1){$D$}
+\rput[l](0.4,-0.657143){$B$}
+\end{pspicture}
+\end{center}
+
+The complete crossed quadrilateral is often \PMlinkescapetext{reduced} to the {\em crossed quadrilateral} $CEDF$ (cyan in the diagram), consisting of the four line segments $CE$, $CF$, $DE$ and $DF$.  Its diagonals $CD$ and $EF$ are outside of the crossed quadrilateral.  In the picture below, the same quadrilateral as above is still in cyan, and its diagonals are drawn in blue.
+
+\begin{center}
+\begin{pspicture}(-1,-2.2)(3,2.1)
+\pspolygon[linecolor=cyan](0,-2)(2,-2)(-1,0)(1,2)
+\psline[linecolor=blue](0,-2)(-1,0)
+\psline[linecolor=blue](2,-2)(1,2)
+\psdots(2,-2)(1,2)(0,-2)(-1,0)
+\rput[a](0,-2.2){$E$}
+\rput[a](2,-2.2){$C$}
+\rput[r](-1.1,0){$F$}
+\rput[b](1,2.1){$D$}
+\end{pspicture}
+\end{center}
+
+The sum of the inner angles of $CEDF$ is $720^{\mathrm{o}}$.  Its area is obtained \PMlinkname{e.g.}{Eg} by \PMlinkescapetext{means} of the Bretschneider's formula (cf. area of a quadrilateral).
+
+A special case of the crossed quadrilateral is the {\em antiparallelogram}, in which the lengths of the opposite sides $CE$ and $DF$ are equal; similarly, the lengths of the opposite sides $CF$ and $DE$ are equal.  Below, an antiparallelogram $CEDF$ is drawn in red.  The antiparallelogram is \PMlinkescapetext{symmetric} with respect to the perpendicular bisector of the diagonal $CD$ (which is also the perpendicular bisector of the diagonal $EF$).  When the lengths of the sides $CE$, $CF$, $DE$, and $DF$ are fixed, the product of the both diagonals $CD$ and $EF$ (yellow in the diagram) has a \PMlinkescapetext{constant} value, \PMlinkescapetext{independent} of the inner angles (e.g. on $\alpha$).
+
+\begin{center}
+\begin{pspicture}(0,-1)(6,3)
+\pspolygon[linecolor=red](0,0)(5,2.5)(6,0)(1,2.5)
+\rput[a](-0.1,-0.3){$C$}
+\rput[a](6.15,-0.3){$D$}
+\rput[b](5.0,2.6){$F$}
+\rput[b](1.0,2.6){$E$}
+\rput[b](3.4,1.39){$\alpha$}
+\psline[linecolor=yellow](0,0)(6,0)
+\psline[linecolor=yellow](1,2.5)(5,2.5)
+\psdots(0,0)(6,0)(1,2.5)(5,2.5)
+\end{pspicture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

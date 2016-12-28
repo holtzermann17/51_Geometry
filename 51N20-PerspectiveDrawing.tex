@@ -1,0 +1,293 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PerspectiveDrawing}
+\pmcreated{2013-03-22 15:41:10}
+\pmmodified{2013-03-22 15:41:10}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{perspective drawing}
+\pmrecord{12}{37628}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{15A90}
+%\pmkeywords{orthographic projection}
+%\pmkeywords{perspective}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{amsthm}
+%\usepackage{enumerate}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\providecommand{\pe}{\mathbf{e}}
+\providecommand{\vg}{\mathbf{g}}
+\providecommand{\vu}{\mathbf{u}}
+\providecommand{\vv}{\mathbf{v}}
+\providecommand{\po}{\mathbf{o}}
+\providecommand{\pp}{\mathbf{p}}
+\providecommand{\pq}{\mathbf{q}}
+\providecommand{\transpose}[1]{#1^{\mathrm{t}}}
+\begin{document}
+\tableofcontents
+
+\section{Introduction}
+
+Perspective drawing refers to a particular technique 
+of projecting a three-dimensional scene ---
+mathemetically, some subset of $\real^3$ --- onto a subset of $\real^2$.
+The aim is to make the scene look ``natural''.
+
+The most common model for perspective drawing consists of an ideal eye 
+or focus at a point $\pe \in \real^3$,
+located behind a planar screen that is perpendicular 
+to the unit vector $\vg \in \real^3$,
+representing the direction of gaze.
+
+
+To project a point $\pp \in \real^3$ in front of the screen
+onto a point $\pq \in \real^3$ on 
+the screen, we find the intersection, with the screen,
+of the light ray emitted from the point $\pp$ towards the eye $\pe$:
+
+\begin{center}
+\includegraphics{model.1.eps}
+\end{center}
+
+\section{Basic equation for the projection}
+Let $\po \in \real^3$ be a point on the screen.
+Without loss of generality, assume that $\pe - \po$ is anti-parallel to
+$\vg$, as in the previous picture.  
+(We can always move the point $\po$ on the screen.)
+This means that $\po$ will be the origin of the perspective drawing.
+
+To calculate the projected point $\pq$ explicitly, 
+we can solve these equations for $t \in [0,1]$:
+\begin{align*}
+\pq &= (1-t) \pp + t\pe & \text{($\pq$ is on the ray from $\pp$ to $\pe$)} \\
+0 &= \langle \pq - \po , \vg \rangle & 
+\text{($\pq$ is on plane centered at $\po$ perpendicular to $\vg$)}
+\end{align*}
+(The notation $\langle, \rangle$ denotes the dot product in $\real^3$.)
+The solution is readily found to be:
+\[
+t = \frac{\langle \pp - \po, \vg \rangle}{\langle \pp - \pe, \vg \rangle}
+= \frac{\text{horiz. distance of $\pp$ to the screen}}{\text{horiz. distance of $\pp$ to the eye}}\,.
+\]
+This $t$ satisfies $0 \leq t < 1$, because the 
+horizontal distance of the point $\pp$ to the screen is 
+less than its horizontal distance to the eye.
+
+From the expression for $t$, we can determine $\pq$:
+\begin{equation}
+\label{eq:projection}
+\pq = \frac{
+\langle \pp - \po, \vg \rangle \pe
+-\langle \pe - \po, \vg \rangle \pp  
+}
+{\langle \pp - \pe, \vg \rangle}\,.
+\end{equation}
+
+\section{Isomorphism of the planar screen to $\real^2$}
+
+Of course, we are interested in displaying or drawing the projected point $\pq$
+on a flat screen, so we need to assign coordinates to the screen.
+In mathematical terms, we seek an (affine) isomorphism to $\real^2$,
+of the plane centered at $\po$ and perpendicular to $\vg$.
+
+The isomorphism is, obviously, not unique in general.
+But it is uniquely determined if we impose these reasonable conditions:
+\begin{itemize}
+\item
+Firstly, Euclidean distances on the screen should be preserved
+when it is transformed into $\real^2$.
+\item
+And secondly, if we assign an ``up direction'' $\vv \in \real^3$,
+then this direction should correspond with the 
+unit vector $(0, 1)$ on $\real^2$.
+\item
+Similarly, if $\vu \in \real^3$ is a ``right''-pointing vector,
+satisfying
+$\vu \times \vv = -\vg$,
+then $\vu$ should map to $(1, 0)$ on $\real^2$.
+(The minus sign is there to preserve the right-hand rule:
+the vector $\vu \times \vv$ should point towards the viewer,
+which is exactly the opposite of the viewer's gaze direction.)
+\end{itemize}
+
+Let $\gamma$ be the right-handed orthonormal basis for $\real^3$
+consisting of
+the vectors $\vu$, $\vv$ and $-\vg$,
+where $\vg$ is the gaze direction as before and $\vv$ is a given 
+``up'' vector.  The vector $\vu$ can be determined by
+\[
+\vu = \vv \times -\vg = \vg \times \vv\,.
+\]
+\begin{center}
+\includegraphics{basis.1.eps}
+\end{center}
+
+Then any point $\pq$ on the planar screen is to be mapped to the 
+point $\pq' \in \real^2$, where
+\begin{equation}
+\label{eq:isomorphism}
+(\pq', 0) = [\pq - \po]_\gamma\,,
+\end{equation}
+and $[\pq - \po]_\gamma$ is the representation of $(\pq - \po)$ 
+in the basis $\gamma$.
+
+\section{The perspective transform in eye coordinates}
+
+The perspective projection 
+\eqref{eq:projection}
+takes a simple form in eye coordinates (coordinates 
+with respect to the basis $\gamma$).
+We derive it now.
+
+Let $\pp_o = \pp - \po$, and $\pe_o = \pe - \po$.
+Then equation \eqref{eq:projection} can be rewritten:
+\begin{align*}
+\pq &= 
+\frac{
+-\langle \pp_o, -\vg \rangle \pe
++\langle \pe_o, -\vg \rangle \pp  
+}
+{\langle \pe_o - \pp_o, -\vg \rangle}\,, \\
+\pq - \po &=  
+\frac{
+-\langle \pp_o, -\vg \rangle \pe_o
++\langle \pe_o, -\vg \rangle \pp_o  
+}
+{\langle \pe_o - \pp_o, -\vg \rangle}\,.
+\end{align*}
+
+We can write out the last vector equation in $\gamma$ coordinates.
+Let $[\pp_o]_\gamma = (x, y, z)$ and $[\pe_o]_\gamma = (0, 0, a)$ for some $a > 0$ (the distance of the eye from the screen).
+Then
+\begin{align*}
+[\pq - \po]_\gamma &= \frac{-z(0, 0, a) + a(x,y,z)}{a - z} =
+\frac{(ax, ay, 0)}{a -z} 
+\\ &= 
+\left( \frac{x}{1-z/a}, \, \frac{y}{1-z/a}, \, 0 \right)\,.
+\end{align*}
+
+Thus, according to equation \eqref{eq:isomorphism},
+the perspective transform of $\pp$ onto $\real^2$
+is given by
+\begin{equation}
+\label{eq:perspective-gamma}
+\pq' = \left( \frac{x}{1-z/a}, \, \frac{y}{1-z/a}\right)\,.
+\end{equation}
+
+\section{Computing the perspective transform in arbitrary coordinates}
+
+Finally, we want explicit expressions for the perspective transform
+in terms of coordinates of an arbitrarily given orthonormal basis
+$\beta$ for $\real^3$.  (For example, $\beta$ might be the standard basis.)
+
+The matrix that changes
+from $\gamma$ coordinates to $\beta$ coordinates
+this matrix composed of three column vectors:
+\[
+[I]^\beta_\gamma = \begin{pmatrix}
+[\vu]_\beta &
+[\vv]_\beta &
+[-\vg]_\beta
+\end{pmatrix}\,.
+\]
+The matrix $[I]^\gamma_\beta$ that changes 
+from $\beta$ coordinates to $\gamma$ coordinates
+is the inverse to $[I]_\gamma^\beta$;
+but both matrices are orthogonal,
+so the inverse simplifies to the transpose:
+\[
+[I]_\beta^\gamma = 
+\Bigl( [I]^\beta_\gamma \Bigr)^{-1} =
+\transpose{\Bigl( [I]^\beta_\gamma \Bigr)}
+= 
+\begin{pmatrix}
+\transpose{[\vu]_\beta} \\
+\transpose{[\vv]_\beta} \\
+\transpose{[-\vg]_\beta}
+\end{pmatrix}\,.
+\]
+
+Therefore, to obtain the perspective transform of a given point $\pp$
+given in $\beta$ coordinates, we are to compute the matrix product
+\begin{equation}
+\label{eq:perspective-beta}
+\begin{pmatrix}
+x \\
+y \\
+z 
+\end{pmatrix} = [I]^\gamma_\beta  \cdot [\pp - \po]_\beta\,,
+\end{equation}
+and apply formula \eqref{eq:perspective-gamma} right afterwards.
+
+\section{Example}
+
+This figure was created using the MetaPost programming language.
+MetaPost by itself has no facilities to produce three-dimensional graphics,
+so the \PMlinktofile{source code for this drawing}{cube.mp} implements formulae \eqref{eq:perspective-gamma} and \eqref{eq:perspective-beta} directly.
+
+\begin{center}
+\includegraphics[scale=0.8]{cube.1.eps}
+\end{center}
+
+\section{The perspective transform in homogeneous coordinates}
+
+The operation described by formula \eqref{eq:perspective-gamma} 
+is not linear in $\pp$
+or $\pp - \po$, so it cannot be represented by a $3\times 3$ matrix.
+But using homogeneous coordinates, the perspective transform
+can be represented by the following $4 \times 4$ matrix
+(with respect to eye coordinates):
+\begin{align*}
+\begin{pmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & -a^{-1} & 1
+\end{pmatrix}
+\text{ or }
+\begin{pmatrix}
+a & 0 & 0 & 0 \\
+0 & a & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & -1 & a
+\end{pmatrix}\,.
+\end{align*}
+
+\section{Properties of the perspective transform}
+
+(To be written. Talk about the fact that lines are mapped to lines
+by the perspective transform, and vanishing points.)
+
+\section{Other models for three-dimensional drawing}
+
+(To be written. Talk about orthographic projection (and relate it to
+the special case where $a \to \infty$).  Could also mention 
+the pin-hole camera model, or even more complicated models with non-infinitesimal lens.)
+%%%%%
+%%%%%
+\end{document}

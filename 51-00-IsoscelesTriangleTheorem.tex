@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsoscelesTriangleTheorem}
+\pmcreated{2013-03-22 17:12:12}
+\pmmodified{2013-03-22 17:12:12}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{isosceles triangle theorem}
+\pmrecord{7}{39523}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M04}
+\pmrelated{ConverseOfIsoscelesTriangleTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{reflexive}
+\PMlinkescapeword{property}
+
+The following theorem holds in geometries in which isosceles triangle can be defined and in which SSS, AAS, and SAS are all valid.  Specifically, it holds in Euclidean geometry and hyperbolic geometry (and therefore in neutral geometry).
+
+\begin{thm*}[\PMlinkescapetext{Isosceles Triangle Theorem}]
+Let $\triangle ABC$ be an isosceles triangle such that $\overline{AB} \cong \overline{AC}$.  Let $D \in \overline{BC}$.  Then the following are equivalent:
+
+\begin{enumerate}
+\item $\overline{AD}$ is a median
+\item $\overline{AD}$ is an altitude
+\item $\overline{AD}$ is the angle bisector of $\angle BAC$
+\end{enumerate}
+\end{thm*}
+
+\begin{center}
+\begin{pspicture}(-3,-2)(3,3)
+\pspolygon(-2,-2)(0,2)(2,-2)
+\psline(-1.2,0.1)(-0.8,-0.1)
+\psline(0.8,-0.1)(1.2,0.1)
+\psline(0,-2)(0,2)
+\rput[b](0,2.2){$A$}
+\rput[r](-2.2,-2){$B$}
+\rput[a](0,-2.3){$D$}
+\rput[l](2.2,-2){$C$}
+\end{pspicture}
+\end{center}
+
+\begin{proof}
+$1 \Rightarrow 2$: Since $\overline{AD}$ is a median, $\overline{BD} \cong \overline{CD}$.  Since we have
+
+\begin{itemize}
+\item $\overline{AB} \cong \overline{AC}$
+\item $\overline{BD} \cong \overline{CD}$
+\item $\overline{AD} \cong \overline{AD}$ by the \PMlinkname{reflexive property}{Reflexive} of $\cong$
+\end{itemize}
+
+we can use SSS to conclude that $\triangle ABD \cong \triangle ACD$.  By CPCTC, $\angle ADB \cong \angle ADC$.  Thus, $\angle ADB$ and $\angle ADC$ are \PMlinkname{supplementary}{SupplementaryAngle} congruent angles.  Hence, $\overline{AD}$ and $\overline{BC}$ are perpendicular.  It follows that $\overline{AD}$ is an altitude.
+
+$2 \Rightarrow 3$:  Since $\overline{AD}$ is an altitude, $\overline{AD}$ and $\overline{BC}$ are perpendicular.  Thus, $\angle ADB$ and $\angle ADC$ are right angles and therefore congruent.  Since we have
+
+\begin{itemize}
+\item $\angle B \cong \angle C$ by the theorem on angles of an isosceles triangle
+\item $\angle ADB \cong \angle ADC$
+\item $\overline{AD} \cong \overline{AD}$ by the reflexive property of $\cong$
+\end{itemize}
+
+we can use AAS to conclude that $\triangle ABD \cong \triangle ACD$.  By CPCTC, $\angle BAD \cong \angle CAD$.  It follows that $\overline{AC}$ is the angle bisector of $\angle BAC$.
+
+$3 \Rightarrow 1$:  Since $\overline{AD}$ is an angle bisector, $\angle BAD \cong \angle CAD$.  Since we have
+
+\begin{itemize}
+\item $\overline{AB} \cong \overline{AC}$
+\item $\angle BAD \cong \angle CAD$
+\item $\overline{AD} \cong \overline{AD}$ by the reflexive property of $\cong$
+\end{itemize}
+
+we can use SAS to conclude that $\triangle ABD \cong \triangle ACD$.  By CPCTC, $\overline{BD} \cong \overline{CD}$.  It follows that $\overline{AD}$ is a median.
+\end{proof}
+
+\textbf{Remark}: Another \PMlinkname{equivalent}{Equivalent3} condition for $\overline{AD}$ is that it is the perpendicular bisector of $\overline{BC}$; however, this fact is usually not included in the statement of the Isosceles Triangle Theorem.
+%%%%%
+%%%%%
+\end{document}

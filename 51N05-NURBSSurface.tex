@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NURBSSurface}
+\pmcreated{2013-03-22 17:23:51}
+\pmmodified{2013-03-22 17:23:51}
+\pmowner{stitch}{17269}
+\pmmodifier{stitch}{17269}
+\pmtitle{NURBS surface}
+\pmrecord{6}{39766}
+\pmprivacy{1}
+\pmauthor{stitch}{17269}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N05}
+\pmsynonym{nonuniform rational B-spline surface}{NURBSSurface}
+\pmrelated{NURBS}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section{Introduction}
+A \emph{NURBS surface}, which is an acronym for \emph{Non-Uniform Rational B-Spline surface}, is a generalization of both \PMlinkname{B\'ezier}{BezierCurve} and B-splines surfaces. NURBS are commonly used in computer graphics, computer-aided design (CAD), engineering (CAE), and manufacturing (CAM).
+
+\section{Definition}
+A NURBS surface is parametric surface defined by its \PMlinkescapetext{degree}, an array of $n+1$ rows and $m+1$ columns weighted control points and a knot vector in each direction. It is defined as
+
+\[
+c(u,v) = \frac { \sum_{i=0}^{n}\sum_{j=0}^{m} N_{i,p}(u)N_{j,q}(v) w_{i,j} P_{i,j}} { \sum_{i=0}^{n}\sum_{j=0}^{m} N_{i,p}(u)N_{j,q}(v) w_{i,j}} \quad \quad 0 \leq u \leq 1, \quad 0 \leq v \leq 1
+\]
+
+where $u$ and $v$ are the parameters in each direction, $p$ is the \PMlinkescapetext{degree} in the $u$-direction, $q$ is the \PMlinkescapetext{degree} in the $v$-direction, $N_{i,p}$ and $N_{j,q}$ are the B-spline basis functions, $P_{i,j}$ are the control points and $w_{i,j}$ are the weights.
+%%%%%
+%%%%%
+\end{document}

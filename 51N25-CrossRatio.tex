@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CrossRatio}
+\pmcreated{2013-03-22 15:23:31}
+\pmmodified{2013-03-22 15:23:31}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{cross ratio}
+\pmrecord{8}{37223}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N25}
+\pmclassification{msc}{30C20}
+\pmclassification{msc}{30F40}
+\pmsynonym{cross-ratio}{CrossRatio}
+\pmrelated{MobiusTransformationCrossRatioPreservationTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem{example}{Example}
+\begin{document}
+The \emph{cross ratio} of the points $a$, $b$, $c$, and $d$ in $\mathbb{C}\cup\{\infty\}$ is denoted by $[a, b, c, d\,]$ and is defined by
+\[
+  [a, b, c, d\,] = \frac{a-c}{a-d}\cdot\frac{b-d}{b-c}.
+\]
+Some authors denote the cross ratio by $(a, b, c, d)$.
+
+\section*{Examples}
+
+\begin{example}
+The cross ratio of $1$, $i$, $-1$, and $-i$ is
+\[
+\frac{1-(-1)}{1-(-i)}\cdot\frac{i-(-i)}{i-(-1)}
+=\frac{4i}{(1+i)^2}=2.
+\]
+\end{example}
+
+\begin{example}
+The cross ratio of $1$, $2i$, $3$, and $4i$ is
+\[
+\frac{1-3}{1-4i}\cdot\frac{2i-4i}{2i-3}
+=\frac{4i}{5+14i}
+=\frac{56+20i}{221}.
+\]
+\end{example}
+
+\section*{Properties}
+
+\begin{enumerate}
+\item
+The cross ratio is invariant under M\"obius transformations and projective transformations.  This fact can be used to determine distances between objects in a photograph when the distance between certain reference points is known.
+
+\item
+The cross ratio $[a, b, c, d\,]$ is real if and only if $a$, $b$, $c$, and $d$ lie on a single circle on the Riemann sphere.
+
+\item
+The function $T:\mathbb{C}\cup\lbrace \infty \rbrace \to\mathbb{C}\cup\lbrace \infty\rbrace$ defined by
+\[
+T(z) = [z, b, c, d\,]
+\]
+is the unique M\"obius transformation which sends $b$ to $1$, $c$ to $0$, and $d$ to $\infty$.
+\end{enumerate}
+
+\begin{thebibliography}{1}
+\bibitem{cite:A}
+Ahlfors, L., \emph{Complex Analysis}.  McGraw-Hill, 1966. 
+\bibitem{cite:B}
+Beardon, A. F., \emph{The Geometry of Discrete Groups}.  Springer-Verlag, 1983.
+\bibitem{cite:H}
+Henle, M., \emph{Modern Geometries: Non-Euclidean, Projective, and Discrete}.  Prentice-Hall, 1997 [2001].
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

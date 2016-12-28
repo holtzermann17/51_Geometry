@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructionOfCentralProportional}
+\pmcreated{2013-03-22 17:34:14}
+\pmmodified{2013-03-22 17:34:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{construction of central proportional}
+\pmrecord{14}{39981}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmrelated{GoldenRatio}
+\pmrelated{CompassAndStraightedgeConstructionOfGeometricMean}
+\pmrelated{ConstructionOfFourthProportional}
+\pmdefines{cathetus}
+\pmdefines{catheti}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{solution}
+\textbf{Task.}  Given two line segments $p$ and $q$.  Using compass and straightedge, construct the central proportional (the geometric mean) of the line segments.
+
+{\em Solution.}  Set the line segments\, $AD = p$\, and\, $DB = q$\, on a line so that $D$ is between $A$ and $B$.  Draw a half-circle with diameter $AB$ (for finding the centre, see the entry midpoint).  Let $C$ be the point where the normal line of $AB$ passing through $D$ intersects the arc of the half-circle.  The line segment $CD$ is the required central proportional.  Below is a picture that illustrates this solution:
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,3)
+\rput[r](3,0){.}
+\rput[a](0,2.5){.}
+\psline(-3,0)(3,0)
+\psarc(0,0){2.5}{0}{180}
+\psline[linecolor=blue](-0.5,0)(-0.5,2.45)
+\psline[linestyle=dashed](-2.5,0)(-0.5,2.45)
+\psline[linestyle=dashed](2.5,0)(-0.5,2.45)
+\psdots(-2.5,0)(-0.5,0)(2.5,0)(-0.5,2.45)
+\rput[a](-2.5,-0.3){$A$}
+\rput[a](-0.5,-0.3){$D$}
+\rput[a](2.5,-0.3){$B$}
+\rput[b](-0.5,2.63){$C$}
+\rput[b](-1.4,0.11){$p$}
+\rput[b](0.8,0.11){$q$}
+\end{pspicture}
+\end{center}
+
+(For more details on the procedure to create this picture, see compass and straightedge construction of geometric mean.)
+
+{\em Proof.}  By Thales' theorem, the triangle $ABC$ is a right triangle.  Its height $CD$ \PMlinkescapetext{divides} this triangle into two smaller right triangles which have equal angles with the triangle $ABC$ and thus are \PMlinkname{similar}{SimilarityInGeometry}.  Accordingly, we can write the proportion equation concerning the catheti of the smaller triangles
+$$p:CD\, = \,CD:q.$$
+The equation shows that $CD$ is the central proportional of $p$ and $q$.
+
+\textbf{Note.} The word {\em catheti} (in sing. {\em cathetus}) \PMlinkescapetext{means} the two shorter sides of a right triangle.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfUniquenessOfCenterOfACircle}
+\pmcreated{2013-03-22 17:17:02}
+\pmmodified{2013-03-22 17:17:02}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{proof of uniqueness of center of a circle}
+\pmrecord{32}{39625}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M10}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51G05}
+\pmrelated{Midpoint4}
+\pmdefines{midpoint}
+\pmdefines{circle}
+\pmdefines{interior point}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\ray}[1]{\overrightarrow{#1}}
+\begin{document}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{forces}
+\PMlinkescapeword{midpoint}
+\PMlinkescapeword{simple}
+
+In this entry, we prove the uniqueness of center of a circle in a slightly more general setting than the parent entry.  
+
+In this more general setting, let $\mathfrak{G}$ be an ordered geometry satisfying the congruence axioms. 
+We  write $a:b:c$ to mean $b$ is between $a$ and $c$. Recall that the closed line segment
+with endpoints $p$ and $q$ is denoted by $[p,q]$.
+
+Before proving the property that a circle in $\mathfrak{G}$ has a unique center, 
+let us review some definitions.
+
+Let $o$ and $a$ be points in $\mathfrak{G}$, a geometry in which the congruence axioms are defined. 
+Let $\mathscr{C}(o,a)$ be the set of all points $p$ in $\mathfrak{G}$ such that the 
+closed line segments are congruent: $[o,a]\cong [o,p]$.  
+The set $\mathscr{C}(o,a)$ is called a \emph{circle}.  When $a=o$, then $\mathscr{C}(o,a)$ is said to be \emph{degenerate}.  \\
+Let $\mathscr{C}$ be a circle in $\mathfrak{G}$.  A \emph{center} of $\mathscr{C}$ is a point $o$ such that for every pair of points $p,q$ in $\mathscr{C}$, $[o,p] \cong [o,q]$.  
+We say that $m$ is a \emph{midpoint} of two points $p$ and $q$
+if $[p,m] \cong [m,q]$ and $m,p,q$ are collinear. \\
+We say that $p$ is an \emph{interior point} of 
+$\mathscr{C}(o,a)$ if $[o,p] < [o,a]$. 
+
+We collect some simple facts below.
+
+\begin{itemize}
+\item In the circle $\mathscr{C}(o,a)$, $o$ is a center of $\mathscr{C}(o,a)$ (by definition).
+\item Let $\mathscr{C}$ be a circle.  If $o$ is a center of $\mathscr{C}$ and $a$ is any point
+ in $\mathscr{C}$, then $\mathscr{C}=\mathscr{C}(o,a)$, again by definition.
+\item A circle is degenerate if and only if  it is a singleton.  
+
+If $p$ is in $\mathscr{C}(o,o)$, then $[o,p]\cong [o,o]$, so that $p=o$, and 
+$\mathscr{C}(o,o)=\lbrace o\rbrace$.  Conversely, if $\mathscr{C}(o,a)=\lbrace b\rbrace$, then $b=a$.  Let $L$ be any line passing through $o$.  Choose a ray $\rho$ on $L$ emanating from $o$.  Then there is a point $d$ on $\rho$ such that $[o,d]\cong [o,a]$.  So $d=a$ since $\mathscr{C}(o,a)$ is a singleton containing $a$. 
+ Similarly, there is a unique $e$ on $-\rho$, the opposite ray of $\rho$, with $[o,e]\cong [o,a]$. 
+ So $e=a$.  Since $d:o:e$, we have that $a=d=o$.  Therefore $\mathscr{C}(o,a)=\mathscr{C}(o,o)$.
+\item Suppose $\mathscr{C}$ is a non-degenerate circle.  Then every line passing through a center $o$ of $\mathscr{C}$ is incident with at least two points $a,a'$ in $\mathscr{C}$.  Furthermore, $o$ is the midpoint of $[a,a']$.
+
+If on $L$ through $o$ lies only one point $a \in \mathscr{C}$, let $a'$ be the point on the opposite ray of $\ray{oa}$ such that $a'\in \mathscr{C}$.  Then $a'=a$, which means that $o=a=a'$, implying that $\mathscr{C}$ is degenerate.  Since $[o,a]\cong [o,a']$, and $o,a,a'$ lie on the same line, $o$ is the midpoint of $[a,a']$.
+\end{itemize}
+
+Now, on to the main fact.
+
+\begin{thm} Every circle in $\mathfrak{G}$ has a unique center. 
+\end{thm}
+\begin{proof}  Let $\mathscr{C}=\mathscr{C}(o,a)$ be a circle in $\mathfrak{G}$. 
+ Suppose $o'$ is another center of $\mathscr{C}$ and $o\ne o'$.  Let $L$ be the line passing 
+through $o$ and $o'$.  Consider the (open) ray $\rho = \ray{oo'}$.  By one of the congruence 
+axioms, there is a unique point $b$ on $\rho$ such that $[o,a] \cong [o,b]$.   
+ So $b\in \mathscr{C}(o,a)$.
+\begin{itemize}
+\item Case 1.  Suppose $o'=b$.  Consider the (open) opposite ray $-\rho$ of $\rho$.  
+There is a unique point $d$ on $-\rho$ such that $[o,d]\cong [o,a]$.  So $d\in\mathscr{C}(o,a)$.  Since $d,o,o'$ all lie on $L$, one must be between the other two.
+\begin{itemize}
+\item
+Subcase 1. If $o:d:o'$, then $[o,d] < [o,o'] = [o,b] \cong [o,a]$, contradiction.  
+\item
+Subcase 2. If $d:o':o$, then $[o,a] \cong [o,b] = [o,o'] < [o,d]$, contradiction again.  
+\item
+Subcase 3. So suppose $o$ is between $d$ and $o'$. Now, since $o'$ is also a center 
+of $\mathscr{C}(o,a)$, we have that $[b,b] = [o',b] \cong [o',d]$, which implies that 
+$o'=d$ by another one of the congruence axioms. But $d:o:o'$, which forces $o'=o$, contradicting the assumption that $o'$ is not $o$ in the beginning.
+\end{itemize}
+\item
+Case 2.  If $o'$ is not $b$, then since $o,o',b$ lie on the same line $L$, one must be between the other two.  Since $b$ also lies on the ray $\rho$ with $o$ as the source, $o$ cannot be between $o'$ and $b$.  So we have only two subcases to deal with: either $o:o':b$, or $o:b:o'$.  In either subcase, we need to again consider the opposite ray $-\rho$ of $\rho$ with $d$ on $-\rho$ such that $[o,d]\cong [o,a] \cong [o,b]$.  
+From the properties of opposite rays, we also have the following two facts:
+\begin{enumerate}
+\item $d:o:o'$, implying $[o,d] < [o',d]$.
+\item $d:o:b$.
+\end{enumerate}
+\begin{itemize}
+\item
+Subcase 1.  $o:o':b$.  Then $[o',b] < [o,b] \cong [o,d] < [o',d]$, contradiction.
+\item
+Subcase 2.  $o:b:o'$.  Let us look at the betweenness relations among the points $b, d, o'$.
+\begin{enumerate}
+\item If $b:o':d$, then $d:o':o$ by one of the conditions of the betweenness relations.  But this forces $o'$ to be on $-\rho$.  Since $o'$ is on $\rho$, this is a contradiction.
+\item If $b:d:o'$, then $d$ would be on $\rho$.  Since $d$ is on $-\rho$, we have another 
+contradiction.
+\item If $d:b:o'$, then $[o',b] < [o',d]$.  But $o'$ is a center of $\mathscr{C}(o,a)$, yet another contradiction.
+\end{enumerate}
+Therefore, Subcase 2 is impossible also.  
+\end{itemize} 
+This means that Case 2 is impossible.  
+\end{itemize}
+Since both Case 1 and Case 2 are impossible, $o'=o$, and the proof is complete. \end{proof}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+The assumption that $\mathfrak{G}$ is ordered cannot be dropped.  Here is a simple counterexample.  Consider an incidence geometry defined on a circle $C$ in the Euclidean plane.  
+
+\begin{center}
+\begin{pspicture}(-4,-2.5)(4,2.5)
+\rput[a](0,2){.}
+\rput[a](0,-2){.}
+\pscircle(0,0){2}
+\psdots(-2,0)(2,0)(-1.732,1)(-1.732,-1)
+\rput[r](-2.2,0){$o$}
+\rput[l](2.2,0){$o'$}
+\rput[r](-1.9,1){$a$}
+\rput[r](-1.9,-1){$a'$}
+\end{pspicture}
+\end{center}
+
+It is not possible to define a betweenness relation on $C$.  However, it is still possible to define a congruence relation on $C$: $[x,y]\cong [z,t]$ if $[x,y]$ and $[z,t]$ have the same arc length.  Given any points $o,a$ on $C$, the circle $\mathscr{C}(o,a)$ consists of exactly two points $a$ and $a'$ (see figure above).  In addition, $\mathscr{C}(o,a)$ has two centers: $o$ and $o'$.
+\item
+There is another definition of a circle, which is based on the concept of a metric.  In this definition, examples can also be found where the uniqueness of center of a circle fails.  The most commonly quoted example is found in the metric space of $p$-adic numbers.  The metric defined is non-Archimedean, so every triangle is isosceles (see the note in ultrametric triangle inequality).  From this it is not hard to see that every interior point of a circle is its center.
+\end{itemize}
+
+\begin{thebibliography}{6}
+\bibitem{mg} M. J. Greenberg, {\it Euclidean and Non-Euclidean Geometries, Development and History}, W. H. Freeman and Company, San Francisco (1974)
+\bibitem{nk} N. Koblitz, {\it p-adic Numbers, p-adic Analysis, and Zeta-Functions}, Springer-Verlag, New York (1977)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

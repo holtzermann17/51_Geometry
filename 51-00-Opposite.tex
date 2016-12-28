@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Opposite}
+\pmcreated{2013-03-22 15:59:28}
+\pmmodified{2013-03-22 15:59:28}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{opposite}
+\pmrecord{13}{38012}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51-01}
+\pmsynonym{opposite side}{Opposite}
+\pmrelated{Sohcahtoa}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{amsthm}
+\usepackage{pstricks}
+
+\begin{document}
+Given a right triangle with an acute angle $\theta$, the side of the triangle that is {\sl opposite} of $\theta$ is the side of the triangle that is not a \PMlinkname{side}{Angle} of $\theta$.
+
+\begin{center}
+\begin{pspicture}(0,-2)(8,4)
+\pspolygon(0,0)(4,4)(4,0)
+\rput[l](4.1,2.1){opposite}
+\psline(3.8,0)(3.8,0.2)
+\psline(3.8,0.2)(4,0.2)
+\psarc(0,0){0.3}{0}{45}
+\rput[b](0.5,0.15){$\theta$}
+\rput[l](0,0){.}
+\rput[a](4,0){.}
+\rput[b](4,4){.}
+\end{pspicture}
+\end{center}
+
+This definition can be generalized to any triangle and any angle $\theta$:  The side of the triangle that is \emph{opposite} of $\theta$ is the side of the triangle that is not a side of $\theta$.  This more general definition is not used as commonly as the definition for right triangles.
+%%%%%
+%%%%%
+\end{document}

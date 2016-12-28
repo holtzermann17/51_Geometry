@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AxiomaticGeometry}
+\pmcreated{2013-03-22 18:00:27}
+\pmmodified{2013-03-22 18:00:27}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{axiomatic geometry}
+\pmrecord{6}{40521}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-01}
+\pmclassification{msc}{51-00}
+\pmrelated{EuclideanAxiomByHilbert}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Axiomatic geometry can be traced back to the time of Euclid.  In his book
+\emph{Elements}, written back in the 300's B.C., Euclid gave five rules, or postulates, describing how
+points, lines, line segments, etc behave as they are ordinarily
+perceived.  Based on these postulates, he set out to prove hundreds of 
+properties.  Today, these properties are under the field of study known as 
+\emph{plane Euclidean geometry}, more popularly known as high school geometry.  
+The systematic and axiomatic approach to proving geometric facts is what makes his \emph{Elements} one of the most important contributions to mathematics.
+
+One key feature of Euclid's axioms is the abundance of what are known today as 
+the \emph{undefined terms}.  Geometric notions such as points, lines, and 
+circles are mentioned in his axioms but never clearly defined.  For example, Euclid 
+called a ``point'' as ``that which has no part''.  But what the meaning of ``part'' was 
+never clarified.  It is because of this abundance of undefined terms, Euclid's postulates by 
+today's mathematical standards lack rigor.  While some undefined terms give no serious 
+problems, others create holes in proofs which are unacceptable.  In the late 19th century, 
+David Hilbert published his classic \emph{Foundations of Geometry}, putting Euclid's postulates 
+on a more solid ground.  In the book, he broke down Euclid's postulates into five
+groups of axioms:
+\begin{enumerate}
+\item incidence axioms
+\item order axioms
+\item congruence axioms
+\item continuity axiom
+\item \PMlinkname{parallel axiom}{ParallelPostulate}
+\end{enumerate}
+These axioms have been shown to be independent of each other, in the sense that no one axiom can be 
+proved from the rest, and consistent, in the sense that no contradictions can be derived from them.  These 
+axioms today serve as the foundation of plane Euclidean geometry.
+
+Since Hilbert's work, the natural next step is to look at geometries that are not Euclidean.  In other words, 
+geometric models that lack one or several of the ``Euclidean axioms'' above.  The result has been the many 
+exotic geometries that, surprisingly, have found applications in other places.
+%%%%%
+%%%%%
+\end{document}

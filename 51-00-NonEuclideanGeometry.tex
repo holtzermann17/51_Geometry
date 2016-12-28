@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonEuclideanGeometry}
+\pmcreated{2013-03-22 13:54:51}
+\pmmodified{2013-03-22 13:54:51}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{non-Euclidean geometry}
+\pmrecord{22}{34669}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M10}
+\pmrelated{Sphere}
+\pmrelated{ComparisonOfCommonGeometries}
+\pmdefines{hyperbolic geometry}
+\pmdefines{Bolyai-Lobachevski geometry}
+\pmdefines{elliptic geometry}
+\pmdefines{spherical geometry}
+\pmdefines{semi-Euclidean geometry}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{similar}
+
+A \emph{non-Euclidean geometry} is a \PMlinkescapetext{geometry} in which at least one of the axioms from Euclidean geometry fails.  Within this entry, only geometries that are considered to be two-dimensional will be considered.
+
+The most common non-Euclidean geometries are those in which the parallel postulate fails; \PMlinkname{i.e.}{Ie}, there is not a unique line that does not intersect a given line through a point not on the given line.  Note that this is equivalent to saying that the sum of the angles of a triangle is not equal to $\pi$ radians.
+
+If there is more than one such parallel line, the \PMlinkescapetext{geometry} is called \emph{hyperbolic} (or \emph{Bolyai-Lobachevski}).  In these \PMlinkescapetext{types} of \PMlinkescapetext{geometries}, the sum of the angles of a triangle is strictly in \PMlinkescapetext{between} $0$ and $\pi$ radians.  (This sum is not constant as in Euclidean geometry; it depends on the area of the triangle.  See the entry regarding defect for more details.)
+
+As an example, consider the disc $\{(x,y) \in \mathbb{R}^2 : x^2+y^2<1 \}$ in which a point is similar to the Euclidean point and a line is defined to be a chord (excluding its endpoints) of the (\PMlinkname{circular}{Circle}) boundary.  This is the Beltrami-Klein model for $\mathbb{H}^2$.  It is relatively easy to see that, in this \PMlinkescapetext{geometry}, given a line and a point not on the line, there are infinitely many lines passing through the point that are parallel to the given line.
+
+If there is no parallel line, the \PMlinkescapetext{geometry} is called \emph{spherical} (or \emph{elliptic}).  In these \PMlinkescapetext{types} of \PMlinkescapetext{geometries}, the sum of the angles of a triangle is strictly in \PMlinkescapetext{between} $\pi$ and $3\pi$ radians.  (This sum is not constant as in Euclidean geometry; it depends on the area of the triangle.  See the entries regarding \PMlinkname{defect}{Defect} and area of a spherical triangle for more details.)
+
+As an example, consider the surface of the \PMlinkname{unit sphere}{Sphere} $\{(x,y,z) \in \mathbb{R}^3 : x^2+y^2+z^2=1 \}$ in which a point is similar to the Euclidean point and a line is defined to be a great circle.  (Note that, when a sphere serves as a model of spherical geometry, its radius is typically assumed to be 1.)  It is relatively easy to see that, in this \PMlinkescapetext{geometry}, given a line and a point not on the line, it is impossible to find a line passing through the point that does not intersect the given line.
+
+Note also that, in spherical geometry, two distinct points do not necessarily determine a unique line; however, two distinct points that are not antipodal always determine a unique line.
+
+One final example of a non-Euclidean \PMlinkescapetext{geometry} is \emph{semi-Euclidean geometry}, in which the axiom of Archimedes fails.
+%%%%%
+%%%%%
+\end{document}

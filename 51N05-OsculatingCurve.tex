@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OsculatingCurve}
+\pmcreated{2013-03-22 17:57:17}
+\pmmodified{2013-03-22 17:57:17}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{osculating curve}
+\pmrecord{7}{40454}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N05}
+\pmclassification{msc}{53A04}
+\pmrelated{OrderOfVanishing}
+\pmrelated{CircleOfCurvature}
+\pmrelated{Cosine}
+\pmrelated{QuadraticCurves}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Definition.}\, From a family of plane curves, the {\em osculating curve} of the curve \,$y = f(x)$\, in a certain point is the curve of the family which has the highest order contact with the curve \,$y = f(x)$\, in that point.\\
+
+\textbf{Example 1.}\, From the family of the graphs of the polynomial functions
+$$P_n(x) := c_0+c_1(x-x_0)+\ldots+c_n(x-x_0)^n,$$
+the osculating curve of\, $y = f(x)$\, in\, $(x_0,\,f(x_0))$\, is the Taylor polynomial of degree $n$ of the function $f$.\\
+
+\textbf{Example 2.}\, Determine the osculating hyperbola with axes parallel to the coordinate axes for the curve \,$y = \cos{x}$\, in the point \,$(0,\,1)$.\, What is the order of contact?
+
+We may seek the osculating hyperbola from the three-parametric family
+\begin{align}
+\frac{x^2}{a^2}-\frac{(y-y_0)^2}{b^2} = -1.
+\end{align}
+
+Removing the denominators and differentiating six times successively yield the equations
+\begin{align}
+\begin{cases}
+b^2x^2-a^2(y-y_0)^2+ a^2b^2 = 0,\\
+b^2x-a^2(y-y_0)y' = 0,\\
+b^2-a^2y'^2-a^2(y-y_0)y'' = 0,\\
+3y'y''+(y-y_0)y''' = 0,\\
+3y''^2+4y'y'''+(y-y_0)y'''' = 0,\\
+10y''y'''+5y'y''''+(y-y_0)y^{(5)} = 0,\\
+10y'''^2+15y''y''''+6y'y^{(5)}+(y-y_0)y^{(6)} = 0.
+\end{cases}
+\end{align}
+Into these equations we can substitute the coordinates \,$x = 0,\, y = 1$\, of the contact point and the values of the derivatives 
+$$y' = -\sin{x},\;y'' = -\cos{x},\;y''' = \sin{x},\;y'''' = \cos{x},\;y^{(5)} = -\sin{x},\;y^{(6)} = -\cos{x}$$ 
+of cosine in that point; the values are\; $0,\;-1,\;0,\;1,\,0,\;-1$.\; The first, third and fifth of the equations (2) give the result\, $y_0 = 4,\;\, b^2 = 9,\;\, a^2 = 3$, whence the osculating hyperbola is
+$$\frac{x^2}{3}-\frac{(y-4)^2}{9} = -1.$$
+When we substitute the pertinent values of the cosine derivatives into the two last equations (2), we see that only the former of them is satisfied.\, It means that the order of contact between the cosine curve and the hyperbola is 5.\\
+
+\textbf{Example 3.}\, The osculating parabola of the \PMlinkname{exponential curve}{ExponentialFunction}\, $y = e^x$\, in the point $(0,\,1)$\, is
+$$4x^2+y^2+4xy+14x-20y+19 = 0.$$
+The order of contact is only 3.
+%%%%%
+%%%%%
+\end{document}

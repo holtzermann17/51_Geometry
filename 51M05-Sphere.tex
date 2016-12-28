@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Sphere}
+\pmcreated{2013-03-22 11:44:49}
+\pmmodified{2013-03-22 11:44:49}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{sphere}
+\pmrecord{29}{30186}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmclassification{msc}{00A05}
+\pmrelated{SphericalCoordinates}
+\pmrelated{GeometryOfTheSphere}
+\pmrelated{Ellipsoid}
+\pmrelated{SphericalGeometry}
+\pmdefines{center}
+\pmdefines{radius}
+\pmdefines{unit sphere}
+\pmdefines{hypersphere}
+\pmdefines{n-sphere}
+\pmdefines{$n$-sphere}
+
+\usepackage{amssymb, amsmath, amsthm, alltt, setspace, pstricks, pst-plot}
+\newtheorem{thm}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{definition}
+\newtheorem*{rem}{Remark}
+
+\theoremstyle{definition}
+\newtheorem*{nott}{Notation}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem*{eg}{Example}
+\newtheorem*{ex}{Exercise}
+\newtheorem*{prop}{Proposition}
+
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\leftbb}{[ \! [}
+\newcommand{\rightbb}{] \! ]}
+\newcommand{\bt}{\begin{thm}}
+\newcommand{\et}{\end{thm}}
+\newcommand{\Rel}{\mathbf{R}}
+\newcommand{\er}{\thicksim}
+\newcommand{\sqle}{\sqsubseteq}
+\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+
+\begin{document}
+\section{Sphere}
+
+A \emph{sphere} is defined as the locus of the points in three dimensions that are equidistant from a particular point called the \emph{center}.  Note that the center of a sphere is unique.
+
+It is generally assumed that the sphere is embedded in real-valued space ($\mathbb{R}^3$) unless otherwise stated.
+
+The equation for a sphere centered at the origin is 
+
+\[ x^2+y^2+z^2=r^2 \]
+
+where $r$ is the length of the \PMlinkescapetext{\emph{radius}}.
+
+A \emph{unit sphere} is a sphere with radius 1.
+
+The formula for the volume of a sphere with radius $r$ is
+
+\[ V = \frac{4}{3} \pi r^3. \]
+
+The formula for the surface area of a sphere with radius $r$ is
+
+\[ A = 4 \pi r^2. \]
+
+\section{Generalization}
+
+A sphere can be generalized to $n$ dimensions.  For $n > 3$, a generalized sphere is called a \emph{hypersphere} (when no value of $n$ is given, one can generally assume that ``hypersphere'' means $n = 4$).  In the same manner, the definitions of center, radius, and unit sphere can also be generalized to $n$ dimensions.
+
+The formula for an $n$-dimensional sphere is
+
+\[ {x_1}^2 + {x_2}^2 + \dots + {x_n}^2 = r^2 \]
+
+where $r$ is the length of the radius.  Note that when $n=2$, the formula reduces to the formula for a circle, so a circle is a 2-dimensional ``sphere''.  A one dimensional sphere is a pair of points (filled-in, it would be a line)!
+
+The volume of an $n$-dimensional sphere with radius $r$ is
+
+\[ V(n,r) = \frac{\pi^{\frac{n}{2}}r^n}{\Gamma(\frac{n}{2}+1)} \]
+
+where $\Gamma(n)$ is the gamma function. Curiously, for any fixed $r$, the volume of the $n$-d sphere approaches zero as $n$ approaches infinity.    Contrast this to the volume of an $n$-d box, which always has a volume in proportion to $s^n$ (with $s$ the side length of the box) which increases without bound when $s \ge 1$. Note that, for any positive integer $n$ and for any radius $r$, $V(n,r)=V(n,1)r^n$. Also note that the volume of the $n$-d unit sphere $V(n,1)$ has a maximum precisely at $n=5$.
+
+To illustrate how to use the formula for $V(n,r)$ and to provide some evidence of the claims made about $V(n,r)$, the values $V(4,1)$, $V(5,1)$, and $V(6,1)$ will be calculated here.
+
+\begin{center}
+$\begin{array}{lll|lll|ll}
+V(4,1) & = \displaystyle \frac{\pi^{\frac{4}{2}}1^4}{\Gamma(\frac{4}{2}+1)} & & V(5,1) & = \displaystyle \frac{\pi^{\frac{5}{2}}1^5}{\Gamma(\frac{5}{2}+1)} & & V(6,1) & = \displaystyle \frac{\pi^{\frac{6}{2}}1^6}{\Gamma(\frac{6}{2}+1)} \\
+& & & & & & & \\
+& = \displaystyle \frac{\pi^2}{\Gamma(3)} & & & = \displaystyle \frac{\pi^2 \sqrt{\pi}}{\Gamma(\frac{7}{2})} & & & = \displaystyle \frac{\pi^3}{\Gamma(4)} \\
+& & & & & & & \\
+& = \displaystyle \frac{\pi^2}{2} & & & = \displaystyle \frac{\pi^2 \sqrt{\pi}}{\frac{15}{8} \sqrt{\pi}} & & & = \displaystyle \frac{\pi^3}{6} \\
+& & & & & & & \\
+& \approx 4.9348 & & & = \displaystyle \frac{8\pi^2}{15} & & & \approx 5.1677 \\
+& & & & & & & \\
+& & & & \approx 5.2638 & & & \end{array}$
+\end{center}
+
+\section{Topological Treatment}
+
+In topology and other contexts, spheres are treated slightly differently.  Let the $n$-\emph{sphere} be the set
+
+\[ S^n = \{ x \in \RR^{n+1} : ||x|| = 1 \} \]
+
+where $|| \cdot ||$ can be any norm, usually the Euclidean norm.  Notice that $S^n$ is defined here as a subset of $\RR^{n+1}$.
+
+Thus, $S^0$ is two points on the real line:
+
+\begin{center}
+\begin{pspicture}(-1.5,-0.8)(1.5,0.5)
+\psline{<->}(-1.21,0)(1.21,0)
+\psdots(-1,0)(1,0)
+\rput[t](-1,0){$-1$}
+\rput[t](1,0){$1$}
+\end{pspicture}
+\end{center}
+
+$S^1$ is the unit circle:
+
+\begin{center}
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+\psaxes{<->}(0,0)(-1.2,-1.2)(1.2,1.2)
+\rput[b](1.2,0){$x$}
+\rput[l](0,1.2){$y$}
+\pscircle(0,0){1}
+\end{pspicture}
+\end{center}
+
+$S^2$ is the unit sphere in the everyday sense of the \PMlinkescapetext{word}.  It might seem like a strange naming convention to say, for instance, that the $2$-sphere is in three-dimensional space.  The explanation is that $2$ refers to the sphere's ``intrinsic'' dimension as a manifold, not the dimension to whatever space in which it happens to be immersed.
+
+Sometimes this definition is generalized \PMlinkescapetext{even} more.  In topology we usually fail to distinguish homeomorphic spaces, so all homeomorphic images of $S^n$ into any topological space are also called $S^n$.  It is usually clear from context whether $S^n$ denotes the specific unit sphere in $\RR^{n+1}$ or some arbitrary homeomorphic image.
+
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

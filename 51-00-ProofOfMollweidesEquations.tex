@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMollweidesEquations}
+\pmcreated{2013-03-22 12:50:10}
+\pmmodified{2013-03-22 12:50:10}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of Mollweide's equations}
+\pmrecord{5}{33161}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We transform the equation
+$$(a+b)\sin\frac{\gamma}{2}=c\cos\left(\frac{\alpha -\beta}{2}\right)$$
+to
+$$a\cos\left(\frac{\alpha}{2}+\frac{\beta}{2}\right) +b\cos\left(\frac{\alpha}{2}+\frac{\beta}{2}\right)= c\cos\frac{\alpha}{2}\cos\frac{\beta}{2} +c\sin\frac{\alpha}{2}\sin\frac{\beta}{2} ,$$
+using the fact that $\gamma=\pi-\alpha-\beta$. The left hand side can be further expanded, so that we get:
+$$a\left(\cos\frac{\alpha}{2}\cos\frac{\beta}{2}- \sin\frac{\alpha}{2}\sin\frac{\beta}{2}\right)+ b\left(\cos\frac{\alpha}{2}\cos\frac{\beta}{2}- \sin\frac{\alpha}{2}\sin\frac{\beta}{2}\right)= c\cos\frac{\alpha}{2}\cos\frac{\beta}{2} +c\sin\frac{\alpha}{2}\sin\frac{\beta}{2}.$$
+Collecting terms we get:
+$$(a+b-c)\cos\frac{\alpha}{2}\cos\frac{\beta}{2}- (a+b+c)\sin\frac{\alpha}{2}\sin\frac{\beta}{2}=0.$$
+Using $s:=\frac{a+b+c}{2}$ and using the equations
+\begin{eqnarray*}
+\sin\frac{\alpha}{2}&=&\sqrt{\frac{(s-b)(s-c)}{bc}}\\
+\cos\frac{\beta}{2}&=&\sqrt{\frac{s(s-a)}{bc}}
+\end{eqnarray*}
+we get:
+$$2\frac{s(s-c)}{c}\sqrt{\frac{(s-a)(s-b)}{ab}}- 2\frac{s(s-c)}{c}\sqrt{\frac{(s-a)(s-b))}{ab}}=0,$$
+which is obviously true. So we can prove the first equation by going backwards. The second equation can be proved in quite the same way.
+%%%%%
+%%%%%
+\end{document}

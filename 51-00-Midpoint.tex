@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Midpoint}
+\pmcreated{2013-03-22 11:55:30}
+\pmmodified{2013-03-22 11:55:30}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{midpoint}
+\pmrecord{21}{30627}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M15}
+%\pmkeywords{Geometry}
+\pmrelated{EulerLine}
+\pmrelated{DirectedSegment}
+\pmrelated{Midpoint4}
+
+\usepackage{pstricks}
+\usepackage{pst-eucl}
+\begin{document}
+If $AB$ is a segment, then its \emph{midpoint} is the point $P$ of the segment whose distances from $B$ and $C$ are equal. That is, $AP = PB$.
+
+The midpoint of segment $AB$ can be found with ruler and compass as follows: Draw two circles with radius $AB$ and centers $A,B$ respectively. Let $P,Q$ the intersection points of the circles. Then the intersection $T$ of $PQ$ wih $AB$ is the midpoint of $AB$.
+
+\begin{center}
+\framebox{
+\begin{pspicture*}(-5,-4)(5,4)
+\pstGeonode[PosAngle={270,270}](-2,-2){A}(2,2){B}
+\pstLineAB{A}{B}
+\psset{arcsepA=-1,arcsepB=-1}
+\pstInterCC[PosAngleA=100]{A}{B}{B}{A}{P}{Q}
+\pstArcOAB[linecolor=blue,linestyle=dashed]{A}{Q}{P}
+\pstArcOAB[linecolor=blue,linestyle=dashed]{B}{P}{Q}
+\pstLineAB[linecolor=red]{P}{Q}
+\pstInterLL{A}{B}{P}{Q}{T}
+\pstRightAngle[linecolor=red]{P}{T}{A}
+\pstSegmentMark[SegmentSymbol=MarkHash]{A}{T}
+\pstSegmentMark[SegmentSymbol=MarkHash]{B}{T}
+\end{pspicture*}
+}\end{center}
+
+There are several arguments to see why $T$ is indeed the midpoint of $AB$. Because of the circles having the same radius, $AP=AQ=BP=BQ$. It follows that $\triangle PAQ\cong\triangle PBQ$ and $\triangle  BAQ\cong \triangle BAQ$ and that they all are isosceles. Then $\angle APT =\angle TPB$ and so $PT$ is the angle bisector of an isosceles triangle and thus also a median. We conclude that $T$ is the midpoint. 
+
+An alternative (yet essentially equivalent) argument is  that since $AP=AQ=BP=BQ$, then $ABCD$ is a parallelogram (in fact, a rhombus) and therefore
+the intersection $T$ of its diagonals is the midpoint of each one.
+
+With the notation of directed segments, the midpoint is the point on the line that contains $AB$ such that the ratio $\frac{\overrightarrow{AP}}{\overrightarrow{PB}}=1$.
+
+\textbf{Generalization}.  The notion of a midpoint can be generalized.  In a geometry with the congruence axioms (such as a neutral geometry), $P$ is a \emph{midpoint} of points $B$ and $C$ if $P,A,B$ are collinear and line segment $AP$ is congruent to line segment $BP$. 
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

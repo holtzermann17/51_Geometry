@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfParallelogramLaw}
+\pmcreated{2013-03-22 12:41:29}
+\pmmodified{2013-03-22 12:41:29}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof of parallelogram law}
+\pmrecord{5}{32971}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{ApolloniusTheorem}
+\pmrelated{Median}
+\pmrelated{ProofOfParallelogramLaw2}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+The proof follows directly from Apollonius theorem noticing that each diagonal 
+is a median for the triangles in which parallelogram is split by the other diagonal.
+ Also, the diagonals bisect each other.
+\figura{parallelogramlaw}
+
+Therefore, Apollonius theorem implies
+$$2\left(\frac{d_1}{2}\right)^2 +\left(\frac{d_2}{2}\right)^2=u^2+v^2.$$
+Multiplying both sides by $2$ and simplification leads to the desired expression.
+%%%%%
+%%%%%
+\end{document}

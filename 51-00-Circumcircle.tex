@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Circumcircle}
+\pmcreated{2013-03-22 15:00:32}
+\pmmodified{2013-03-22 15:00:32}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{circumcircle}
+\pmrecord{8}{36714}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+%\pmkeywords{circle}
+%\pmkeywords{triangle}
+%\pmkeywords{center}
+%\pmkeywords{radius}
+\pmrelated{Triangle}
+\pmrelated{CyclicQuadrilateral}
+\pmrelated{SimsonsLine}
+\pmdefines{circumcenter}
+\pmdefines{circumcentre}
+\pmdefines{circumradius}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+For any triangle $ABC$ there is always
+a circle passing through its three vertices.
+\begin{center}
+\includegraphics{circumcircle}
+\end{center}
+
+Such circle is called a \emph{circumcircle}.
+Its radius is the \emph{circumradius},
+and its center is the \emph{circumcenter}.
+The circumcenter lies at the intersection
+of the perpendicular bisectors of the sides of the triangle.
+
+{\small
+Since the perpendicular bisector of a segment
+is the locus of points at the same distance from the segment endpoints,
+the points on the perpendicular bisector of $AB$ are equidistant to $A$ and $B$.
+The points in the perpendicular bisector of $BC$ are equidistant to $B$ and $C$,
+and thus the intersection point $O$ is at the same distance from $A,B$ and $C$.}
+\bigskip
+
+In a more general setting, if $P$ is any polygon,
+its circumcircle would be a circle passing through all vertices,
+and circumradius and circumcenter are defined similarly.
+However, unlike triangles, circumcircles need not to exist for any polygon.
+For instance, a non-rectangular parallelogram has no circumcircle,
+for no circle passes through the four vertices.
+A quadrilateral that does possess a circumcircle
+is called a cyclic quadrilateral.
+%%%%%
+%%%%%
+\end{document}

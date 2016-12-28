@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfButterflyTheorem}
+\pmcreated{2013-03-22 13:10:09}
+\pmmodified{2013-03-22 13:10:09}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of butterfly theorem}
+\pmrecord{6}{33613}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{cut}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{obviously}
+Given that $M$ is the midpoint of a chord $PQ$ of a circle and $AB$ and $CD$ are two other chords passing through $M$, we will prove that $M$ is the midpoint of $XY,$ where $X$ and $Y$ are the points where $AD$ and $BC$ cut $PQ$ respectively.
+
+\begin{center}
+\includegraphics{but1.eps}
+\end{center}
+
+Let $O$ be the center of the circle. Since $OM$ is perpendicular to $XY$ (the line from the center of the circle to the midpoint of a chord is perpendicular to the chord), to show that $XM = MY,$ we have to prove that $\angle XOM = \angle YOM.$
+Drop perpendiculars $OK$ and $ON$ from $O$ onto $AD$ and $BC$, respectively.
+Obviously, $K$ is the midpoint of $AD$ and $N$ is the midpoint of $BC$. Further,
+$$\angle DAB = \angle DCB$$ and $$\angle ADC = \angle ABC$$ as angles subtending equal arcs.
+Hence triangles $ADM$ and $CBM$ are similar and hence
+$$\frac{AD}{AM} = \frac{BC}{CM}$$   or   $$\frac{AK}{KM} = \frac{CN}{NM}$$
+In other words, in triangles $AKM$ and $CNM, $ two pairs of sides are proportional. Also the angles between the corresponding sides are equal. We infer that the triangles $AKM$ and $CNM$ are similar.
+Hence $\angle AKM = \angle CNM.$
+
+Now we find that quadrilaterals $OKXM$ and $ONYM$ both have a pair of opposite straight angles.
+This implies that they are both cyclic quadrilaterals.
+
+In $OKXM,$ we have $\angle AKM = \angle XOM$ and in $ONYM,$ we have $\angle CNM = \angle YOM.$
+From these two, we get $$\angle XOM = \angle YOM.$$
+Therefore $M$ is the midpoint of $XY.$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearFunction}
+\pmcreated{2013-03-22 19:14:46}
+\pmmodified{2013-03-22 19:14:46}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{linear function}
+\pmrecord{12}{42171}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A45}
+\pmclassification{msc}{51A05}
+\pmclassification{msc}{05C65}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $\mathscr{S}_1=(\mathcal{P}_1,\mathcal{L}_1)$ and $\mathscr{S}_2=(\mathcal{P}_2,\mathcal{L}_2)$ be two near-linear spaces.  
+
+\textbf{Definition}.  A \emph{linear function} from $\mathscr{S}_1$ to $\mathscr{S}_2$ is a mapping on the points that sends lines of $\mathscr{S}_1$ to lines of $\mathscr{S}_2$.  In other words, a linear function is a function $\sigma: \mathcal{P}_1 \to \mathcal{P}_2$ such that $$\sigma(\ell)\in \mathcal{L}_2\mbox{ for every }\ell \in \mathcal{L}_1.$$  Here, $\sigma(\ell)$ is the set $\lbrace \sigma(P)\mid P\in \ell \rbrace$.  A linear function is also called a homomorphism.
+
+When both $\mathscr{S}_1$ and $\mathscr{S}_2$ are linear spaces, then $\sigma$ being a linear function is equvalent to saying that $P,Q$ are collinear iff $\sigma(P),\sigma(Q)$ are collinear.
+
+If $\mathscr{S}_1$ is a linear space, then so is $(\sigma(\mathcal{P}_1),\sigma(\mathcal{L}_1))$.  This shows that if $\sigma: \mathscr{S}_1\to \mathscr{S}_1$ is onto, $\mathscr{S}_2$ is a linear space if $\mathscr{S}_1$ is.
+
+Let $\sigma: \mathscr{S}_1\to \mathscr{S}_2$ be a one-to-one linear function.  If points $P_1\ne P_2$ lie on line $\ell$, then $\sigma(P_1)\ne \sigma(P_2)$ lie on $\sigma(\ell)$.  This also shows that three collinear points in $\mathscr{S}_1$ are mapped to three collinear points in $\mathscr{S}_2$.  In addition, we have 
+\begin{center}
+$|\ell|=|\sigma(\ell)|$ for any line $\ell$ in $\mathscr{S}_1$.
+\end{center}
+
+\textbf{Definition}.  When $\sigma:\mathscr{S}_1\to \mathscr{S}_2$ is a bijection whose inverse $\sigma^{-1}$ is also linear, we say that $\sigma$ is an isomorphism.  When $\mathscr{S}_1=\mathscr{S}_2=\mathscr{S}$, we call $\sigma$ an automorphism, or more commonly among geometers, a \emph{collineation}, of the space $\mathscr{S}$.
+
+Suppose $\sigma:\mathscr{S}_1\to \mathscr{S}_2$ is an isomorphism.  For every point $P$, let $P^*$ be the set of all lines passing through $P$.  Then
+\begin{center}
+$|P^*|=|\sigma(P)^*|$ for any point $P$ in $\mathscr{S}_1$.
+\end{center}
+
+It is possible to have a bijective linear function whose inverse is not linear.  For example, let $\mathscr{S}_1$ be the space with two points $P,Q$ with no lines, and $\mathscr{S}_2$ the space with the same two points with line $\lbrace P,Q\rbrace$.  Then the identity function on $\lbrace P,Q\rbrace$ is a bijective linear function whose inverse is not linear.  On the other hand, if the both spaces are linear, then the inverse is always linear.
+
+\textbf{Remark}.  The usage of the term ``linear function'' differs from its more usual meaning as a linear transformation between vector spaces in the study of linear algebra.
+
+\begin{thebibliography}{7}
+\bibitem{LB} L. M. Batten, {\it Combinatorics of Finite Geometries}, 2nd edition, Cambridge University Press (1997)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBisectorsTheorem1}
+\pmcreated{2013-03-22 14:49:28}
+\pmmodified{2013-03-22 14:49:28}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of bisectors theorem}
+\pmrecord{5}{36488}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A05}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+Consider sines law in triangles $\triangle APB$ and $\triangle APC$. 
+\figuraex{genbisector}{scale=0.75}
+
+On $\triangle APB$ we have
+\[
+\frac{BP}{\sin BAP } = \frac{AB}{\sin APB}
+\]
+and on $\triangle APC$ we have
+\[
+\frac{PC}{\sin PAC} = \frac{AC}{\sin CPA}.
+\]
+
+Combining the two relation gives
+\[
+\frac{BP}{PC} = \frac{ AB\sin BAP / \sin APB}{AC\sin PAC / \sin CPA}.
+\]
+However, $\angle APB + \angle CPA = 180^\circ$, and so $\sin APB = \sin CPA$. Cancelling gives
+\[\frac{BP}{PC} = \frac{ AB\sin BAP}{AC\sin PAC },\]
+which is the generalization of the theorem. When $AP$ is a bisector, $\angle BAP = \angle PAC$ and we can cancel further to obtain the bisector theorem.
+%%%%%
+%%%%%
+\end{document}

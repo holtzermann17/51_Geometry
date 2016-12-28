@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DistanceFromPointToALine}
+\pmcreated{2013-03-22 15:24:30}
+\pmmodified{2013-03-22 15:24:30}
+\pmowner{acastaldo}{8031}
+\pmmodifier{acastaldo}{8031}
+\pmtitle{distance from point to a line}
+\pmrecord{7}{37248}
+\pmprivacy{1}
+\pmauthor{acastaldo}{8031}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{DistanceOfNonParallelLines}
+\pmrelated{DistanceBetweenTwoLinesInR3}
+\pmrelated{Envelope}
+\pmrelated{AngleBisectorAsLocus}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The distance from a point P with coordinates $(x_p, y_p) \in \mathbb{R}^2$ to the line with equation $ax + by + c = 0$ is given by $|ax_p + by_p+c|/\sqrt{a^2+b^2}$.
+
+\textbf{Proof}  Every point $x,y$ on the line is at some distance $\sqrt{(x-x_p)^2+(y-y_p)^2}$ from P.  What we need to find is the minimum such distance.  Our problem is
+$$
+\min (x-x_p)^2+(y-y_p)^2
+$$
+subject to
+$$
+ax + by +c = 0
+$$
+This problem is solvable using the Lagrange multiplier method.  We minimize
+$$
+(x-x_p)^2+(y-y_p)^2 + \lambda(ax + by +c)
+$$
+Calculating the derivatives with respect to $x,y$ and $\lambda$ and setting them to zero we get three equations:
+\begin{eqnarray}
+2x - 2x_p + \lambda a = 0\\
+2y - 2y_p + \lambda b = 0\\
+2ax + 2by +2c =0
+\end{eqnarray}
+Solving these leads to 
+$x_p-x = a\frac{ax_p + by_p+c}{a^2+b^2}$ and $y_p-y = b\frac{ax_p + by_p+c}{a^2+b^2}$.
+We can now substitute these expressions into $\sqrt{(x-x_p)^2+(y-y_p)^2}$ and we get (after some simplification) the desired result.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompassAndStraightedgeConstructionOfRegularTriangle}
+\pmcreated{2013-03-22 17:19:10}
+\pmmodified{2013-03-22 17:19:10}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{compass and straightedge construction of regular triangle}
+\pmrecord{10}{39670}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{51-00}
+\pmsynonym{compass and straightedge construction of equilateral triangle}{CompassAndStraightedgeConstructionOfRegularTriangle}
+\pmsynonym{compass and straightedge construction of equiangular triangle}{CompassAndStraightedgeConstructionOfRegularTriangle}
+\pmdefines{compass and straightedge construction of $60^{\circ}$ angle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{label}
+\PMlinkescapeword{proposition}
+
+One can construct a regular triangle with sides of a given length $s$ using compass and straightedge as follows:
+
+\begin{enumerate}
+
+\item Draw a line segment of length $s$.  Label its endpoints $P$ and $Q$.
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,1)
+\rput[a](-2,0.04){.}
+\psline[linecolor=blue](-2,0)(2,0)
+\psdots(-2,0)(2,0)
+\rput[a](-2.2,-0.2){$P$}
+\rput[a](2.2,-0.2){$Q$}
+\end{pspicture}
+\end{center}
+
+\item Draw an arc of the circle with center $P$ and radius $\overline{PQ}$.
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,4)
+\rput[l](-0.63192,3.75877){.}
+\psline(-2,0)(2,0)
+\psarc[linecolor=blue](-2,0){4}{-10}{70}
+\psdots(-2,0)(2,0)
+\rput[a](-2.2,-0.2){$P$}
+\rput[a](2.2,-0.2){$Q$}
+\end{pspicture}
+\end{center}
+
+\item Draw an arc of the circle with center $Q$ and radius $\overline{PQ}$ to find a point $R$ where it intersects the arc from the previous step.
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,4)
+\psline(-2,0)(2,0)
+\psarc(-2,0){4}{-10}{70}
+\psarc[linecolor=blue](2,0){4}{110}{190}
+\psdots(-2,0)(2,0)(0,3.4641)
+\rput[a](-2.2,-0.2){$P$}
+\rput[a](2.2,-0.2){$Q$}
+\rput[b](0,3.7){$R$}
+\end{pspicture}
+\end{center}
+
+\item Draw the regular triangle $\triangle PQR$.
+
+\begin{center}
+\begin{pspicture}(-3,-1)(3,4)
+\psarc(-2,0){4}{-10}{70}
+\psarc(2,0){4}{110}{190}
+\pspolygon[linecolor=blue](-2,0)(2,0)(0,3.4641)
+\psdots(-2,0)(2,0)(0,3.4641)
+\rput[a](-2.2,-0.2){$P$}
+\rput[a](2.2,-0.2){$Q$}
+\rput[b](0,3.7){$R$}
+\end{pspicture}
+\end{center}
+
+\end{enumerate}
+
+This construction is justified by the following:
+
+\begin{itemize}
+\item $\overline{PQ}\cong\overline{PR}$ since they are both radii of the circle from step 2;
+\item $\overline{PQ}\cong\overline{QR}$ since they are both radii of the circle from step 3;
+\item Thus, $\triangle PQR$ is an equilateral triangle;
+\item In Euclidean geometry, any equilateral triangle is automatically a regular triangle.  Therefore, $\triangle PQR$ is a regular triangle.
+\end{itemize}
+
+This construction is based off of the one that Euclid provides in \emph{The Elements} as the first proposition of the first book.  Please see \PMlinkexternal{this post}{http://planetmath.org/?op=getmsg;id=15600} for more details.
+
+This construction also yields a method for constructing a $60^{\circ}$ angle using compass and straightedge.
+
+Note that, with the exception of actually drawing the sides of the triangle, only the compass was used in this construction.  Since regular triangles tessellate, repeated use of this construction provides a way to find infinitely many points on a line given two points on a line using just a compass.
+
+If you are interested in seeing the rules for compass and straightedge constructions, click on the \PMlinkescapetext{link} provided.
+%%%%%
+%%%%%
+\end{document}

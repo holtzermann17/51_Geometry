@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExactTrigonometryTables}
+\pmcreated{2013-03-22 15:31:26}
+\pmmodified{2013-03-22 15:31:26}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{exact trigonometry tables}
+\pmrecord{11}{37395}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{33B10}
+\pmrelated{ConstructibleAnglesWithIntegerValuesInDegrees}
+\pmrelated{Cotangent2}
+\pmrelated{Trigonometry}
+\pmrelated{TheoremOnConstructibleAngles}
+\pmrelated{GraphOfEquationXyConstant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\subsection{Basic angles}
+
+Since the trigonometric ratios for most angles cannot be
+calculated exactly in closed algebraic form,
+a few well-known angles 
+that can be calculated
+often comprise the bulk of textbook
+exercises involving trigonometry.  
+
+The basic angles are given in Table~\ref{table: basic angles}.
+
+\begin{table}
+\caption{Basic angles encountered in trigonometry}
+\label{table: basic angles}
+\begin{tabular}{| c | c | c | c |}
+\hline
+$\theta$ &$\sin \theta $ &$\cos \theta$ &$\tan \theta $\\
+\hline
+$0^\circ$ &0 &1 &0 \\
+$30^\circ$ &1/2 &$\sqrt{3}/2$ &$1/\sqrt{3}$ \\
+$45^\circ$ &$\sqrt{2}/2$ &$\sqrt{2}/2$ &1 \\
+$60^\circ$ &$\sqrt{3}/2$ &1/2 &$\sqrt{3}$ \\
+$90^\circ$ &1 &0 & $\infty$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Other angles by addition and halving}
+
+These basic angles can be easily extended to obtain more angles of interest.  Adding multiples of $90^\circ$ merely rotates these angles into other quadrants; the appropriate values of $\sin$ and $\cos$ can be obtained through symmetry.
+
+The values for $15^\circ$ can be obtained by using the \PMlinkname{formula for the difference of angles}{AngleSumIdentity}:
+\begin{align*}
+\sin 15^\circ &=\sin(45^\circ-30^\circ)\\
+  &=\sin 45^\circ \cos 30^\circ -\cos 45^\circ \sin 30^\circ  \\
+  &=\frac{\sqrt{2}}{2} \cdot \frac{\sqrt{3}}{2} - \frac{\sqrt{2}}{2} \cdot \frac{1}{2} \\
+  &=\frac{\sqrt{6}-\sqrt{2}}{4}\,.
+\end{align*}
+Likewise, we can find that 
+\begin{align*}
+\cos(15^\circ) &=\frac{\sqrt{6}+\sqrt{2}}{4} \\
+\sin(75^\circ) &= \sin(45^\circ+30^\circ)=\frac{\sqrt{6}+\sqrt{2}}{4} \\
+\cos(75^\circ) &= \frac{\sqrt{6}-\sqrt{2}}{4}\,.
+\end{align*}
+
+More exact angles can be obtained by solving the double angle identity:
+\[
+\sin \frac{\theta}{2} =\pm\sqrt{\frac{1-\cos \theta}{2}}\,, \quad 
+\cos \frac{\theta}{2} =\pm\sqrt{\frac{1+\cos \theta}{2}}\,.
+\]
+So for example, $\sin{7.5^\circ}=\sqrt{(4-\sqrt{6}-\sqrt{2})/8}$.  These angles can be further added and subdivided to obtain a dense subset of exactly known angles.  However, such effort is not generally useful.  Computers and calculators use a combination of lookup-tables and numeric iteration to obtain their values.
+
+\subsection{The angles $18^\circ$, $36^\circ$, $54^\circ$, $72^\circ$}
+
+The $18^\circ$-$36^\circ$-$54^\circ$-$72^\circ$ series of angles cannot be obtained
+by halving, doubling, adding or subtracting the previous angles.  Nevertheless, they are constructible, and their exact values can be derived by the following elementary procedure:
+
+Consider an isosceles triangle with the angles $72^\circ$, $54^\circ$ and $54^\circ$.  
+From the triangle we derive the relation:
+\[
+\sin \frac{72^\circ}{2} = \cos 54^\circ
+\]
+Notice that $72=4 \times 18$ and $54 = 3\times 18$, so if $x = 18^\circ$,
+then
+\begin{align*}
+\sin 2x &= \cos 3x \\
+2 \sin x \cos x &= 4 \cos^3 x - 3 \cos x \\
+2 \sin x &= 4 \cos^2 x - 3 \\
+2 \sin x &= 4 (1-\sin^2 x) -3 
+\end{align*}
+The last equation is a quadratic equation that can be solved for $\sin 18^\circ$.  Carrying out the calculations, we obtain the values in Table~\ref{table: eighteen degrees}.
+
+\begin{table}
+\caption{Other constructible angles in trigonometry}
+\label{table: eighteen degrees}
+\begin{tabular}{| c | c | c |}
+\hline
+$\theta$ &$\sin \theta $ &$\cos \theta $ \\
+\hline
+$18^\circ$ & $\dfrac{\sqrt{5}-1}{4}$ & $\dfrac{\sqrt{5 + \sqrt{5}}}{2\sqrt{2}}$  \\
+$36^\circ$ & $\dfrac{\sqrt{5-\sqrt{5}}}{2\sqrt{2}}$ & $\dfrac{\sqrt{5}+1}{4}$ \\
+$54^\circ$ & $\dfrac{\sqrt{5}+1}{4}$ & $\dfrac{\sqrt{5-\sqrt{5}}}{2\sqrt{2}}$  \\
+$72^\circ$ & $\dfrac{\sqrt{5+\sqrt{5}}}{2\sqrt{2}}$ & $\dfrac{\sqrt{5}-1}{4}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+%%%%%
+%%%%%
+\end{document}

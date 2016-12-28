@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MoufangPlane}
+\pmcreated{2013-03-22 19:15:27}
+\pmmodified{2013-03-22 19:15:27}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Moufang plane}
+\pmrecord{15}{42184}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A40}
+\pmclassification{msc}{51A35}
+\pmrelated{TranslationPlane}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A projective plane is called a \emph{Moufang plane} if each of its lines is a translation line (it is a translation plane with respect to any line in the plane).  In other words, a Moufang plane is a projective plane such that the minor Desarguesian property holds everywhere.
+
+It can be shown that a projective plane is Moufang iff it can be coordinatized by an alternative division ring, which is a non-associative division ring satisfying the left and right alternative laws:
+$$(aa)b=a(ab)\qquad \mbox{and} \qquad a(bb)=(ab)b,$$
+or, equivalently, a Veblen-Wedderburn system where the two alternative laws hold.
+
+For example, any field plane (a projective plane coordinatized by a field) is Moufang, and more generally any skew field plane (such as the quaternion plane $P(2,\mathbb{H})$, as the quaternions form a division ring).  However, all of these examples are Desarguesian.  An example of a non-Desarguesian Moufang plane that is the octonion plane, $P(2,\mathbb{O})$ (where the coordinates are octonions), for the multiplication on the octonions are alternative and not associative.  It is interesting to note that, while one can construct higher dimensional projective spaces over any division ring, no such construction is possible if the division ring is non-associative, as any coordinatization of a projective space of dimension greater than $2$ is always a division ring.  An example of a translation plane that is not Moufang is the Hall plane.
+
+According to the definition above, a Moufang plane is a translation plane in which every line is a translation line.  So are there any planes intermediate between a translation plane and a Moufang plane, in the sense that a translation plane with exactly two, three, more more translation lines?  It turns out that, if a translation plane has two distinct translation lines, say $\ell_1, \ell_2$, then every line passing through $\ell_1\cap \ell_2$ is also a translation line, and, as a result, every line of the plane is a translation line, which means the plane itself is Moufang.
+
+Again, by the definition, it is not hard to see that any ternary ring coordinatizing a Moufang plane $\pi$ is an alternative division ring.  In fact, it can be shown that any two alternative division rings coordinatizing $\pi$ are isomorphic.  This is the result of an interesting algebraic fact by Bruck and Kleinfeld: any alternative division ring is either an associative division ring or a Cayley algebra over its center (which at the same time is a field).  
+
+Another algebraic result that has an interesting geometric consequence is the Artin-Zorn's theorem, which asserts that a finite alternative division ring is a field.  This implies that a finite Moufang plane is a field plane!
+
+\begin{thebibliography}{7}
+\bibitem{MH} M. Hall, Jr., {\it The Theory of Groups}, Macmillan (1959)
+\bibitem{RA} R. Artzy, {\it Linear Geometry}, Addison-Wesley (1965)
+\bibitem{BK} R. H. Bruck, E. Kleinfeld, {\it The Structure of Alternative Division Rings}, Proc. Amer. Math. Soc. 78, pp.464-481 (1955)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

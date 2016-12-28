@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPtolemysInequality}
+\pmcreated{2013-03-22 12:46:09}
+\pmmodified{2013-03-22 12:46:09}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of Ptolemy's inequality}
+\pmrecord{5}{33079}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Looking at the quadrilateral $ABCD$ we construct a point $E$, such that the triangles $ACD$ and $AEB$ are similar ($\angle ABE=\angle CDA$ and $\angle BAE=\angle CAD$).
+\begin{center}
+\includegraphics{ptolomaeus.eps}
+\end{center}
+This means that:
+$$\frac{AE}{AC}=\frac{AB}{AD}=\frac{BE}{DC},$$
+from which follows that
+$$BE=\frac{AB\cdot DC}{AD}.$$
+Also because $\angle EAC=\angle BAD$ and 
+$$\frac{AD}{AC}=\frac{AB}{AE}$$
+the triangles $EAC$ and $BAD$ are similar. So we get:
+$$EC=\frac{AC\cdot DB}{AD}.$$
+Now if $ABCD$ is cyclic we get
+$$\angle ABE+\angle CBA=\angle ADC+\angle CBA=180^\circ.$$
+This means that the points $C$, $B$ and $E$ are on one line and thus:
+$$EC=EB+BC$$
+Now we can use the formulas we already found to get:
+$$\frac{AC\cdot DB}{AD}=\frac{AB\cdot DC}{AD}+BC.$$
+Multiplication with $AD$ gives:
+$$AC\cdot DB=AB\cdot DC+BC\cdot AD.$$
+
+Now we look at the case that $ABCD$ is not cyclic. Then
+$$\angle ABE+\angle CBA=\angle ADC+\angle CBA\neq 180^\circ,$$
+so the points $E$, $B$ and $C$ form a triangle and from the triangle inequality we know:
+$$EC<EB+BC.$$
+Again we use our formulas to get:
+$$\frac{AC\cdot DB}{AD}<\frac{AB\cdot DC}{AD}+BC.$$
+From this we get:
+$$AC\cdot DB<AB\cdot DC+BC\cdot AD.$$
+Putting this together we get Ptolomy's inequality:
+$$AC\cdot DB\leq AB\cdot DC+BC\cdot AD,$$
+with equality iff $ABCD$ is cyclic.
+%%%%%
+%%%%%
+\end{document}

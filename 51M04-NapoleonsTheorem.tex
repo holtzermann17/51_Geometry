@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NapoleonsTheorem}
+\pmcreated{2013-03-22 13:48:50}
+\pmmodified{2013-03-22 13:48:50}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{Napoleon's theorem}
+\pmrecord{7}{34538}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M04}
+
+% this is the default PlanetMath preamble.  as your 
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphics}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\ind}{\operatorname{ind}}
+\begin{document}
+%51M04
+\PMlinkescapeword{relation}
+\PMlinkescapeword{vertices}
+
+\begin{thm} 
+If equilateral triangles
+are erected externally on the three sides of any given triangle, then
+their centres are the vertices of an equilateral triangle.
+\end{thm}
+\begin{center}
+\includegraphics{napoleon}
+\end{center}
+If we embed the statement in the complex plane, the proof
+is a mere calculation. In the notation
+of the figure, we can assume that $A=0$, $B=1$, and
+$C$ is in the upper half plane. The hypotheses are
+\begin{equation} \label{eq:hyp}
+\frac{1-0}{Z-0}=\frac{C-1}{X-1}=\frac{0-C}{Y-C}=\alpha
+\end{equation}
+where $\alpha=\exp{\pi i/3}$, and the conclusion we want is
+\begin{equation} \label{eq:conc}
+\frac{N-L}{M-L}=\alpha
+\end{equation}
+where
+$$L=\frac{1+X+C}{3}\qquad M=\frac{C+Y+0}{3}\qquad N=\frac{0+1+Z}{3}\;.$$
+From (\ref{eq:hyp}) and the relation $\alpha^2=\alpha-1$, we get $X,Y,Z$:
+$$X=\frac{C-1}{\alpha}+1=(1-\alpha)C+\alpha$$
+$$Y=-\frac{C}{\alpha}+C=\alpha C$$
+$$Z=1/{\alpha}=1-\alpha$$
+and so
+\begin{eqnarray*}
+3(M-L)&=&Y-1-X\\
+&=&(2\alpha-1)C-1-\alpha\\
+3(N-L)&=&Z-X-C\\
+&=&(\alpha-2)C+1-2\alpha\\
+&=&(2\alpha-2-\alpha)C-\alpha+1-\alpha\\
+&=&(2\alpha^2-\alpha)C-\alpha-\alpha^2\\
+&=&3(M-L)\alpha
+\end{eqnarray*}
+proving (\ref{eq:conc}).
+
+\textbf{Remarks:} The attribution to Napol\'eon Bonaparte (1769-1821) is
+traditional, but dubious. For more on the story, see
+\PMlinkexternal{MathPages}{http://www.mathpages.com/home/kmath270/kmath270.htm}.
+%%%%%
+%%%%%
+\end{document}

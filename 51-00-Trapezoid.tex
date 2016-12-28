@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Trapezoid}
+\pmcreated{2013-03-22 17:11:52}
+\pmmodified{2013-03-22 17:11:52}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{trapezoid}
+\pmrecord{10}{39517}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmdefines{trapezium}
+\pmdefines{base}
+\pmdefines{leg}
+\pmdefines{height}
+\pmdefines{median}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{bases}
+\PMlinkescapeword{legs}
+\PMlinkescapeword{sources}
+\PMlinkescapeword{word}
+
+A \emph{trapezoid} is a quadrilateral with at least one pair of \PMlinkescapetext{opposite} sides parallel.  Some \PMlinkescapetext{sources} insist that trapezoids have exactly one pair of \PMlinkescapetext{opposite} sides parallel, in which case parallelograms are not trapezoids.  Other sources do not restrict the definition in this manner, in which case parallelograms are trapezoids.  The convention in PlanetMath is to use the unrestricted definition.
+
+In some dialects of English (\PMlinkname{e.g.}{Eg} British English), a trapezoid is referred to as a \emph{trapezium}.  Unfortunately, some confusion arises when this word is used, since in other dialects of English (e.g. American English), a \emph{trapezium} is a quadrilateral without any parallel sides.
+
+Below is a picture of a trapezoid.
+
+\begin{center}
+\begin{pspicture}(0,0)(4,2)
+\pspolygon(0,0)(1,2)(2.5,2)(4,0)
+\end{pspicture}
+\end{center}
+
+The \emph{bases} of a trapezoid are its two parallel sides.  (If the trapezoid is a parallelogram, either pair of parallel sides can be declared to be its bases.)  The \emph{legs} of a trapezoid are the two sides that are not bases.  A \emph{height} of a trapezoid is a line segment that is perpendicular to the bases of the trapezoid and whose endpoints lie on the two lines formed by extending the two bases.  Typically, heights are drawn so that they intersect at least one base of the trapezoid.  (For some trapezoids, it is impossible to draw a height that intersects both bases.)  Below is a picture of a trapezoid with its bases labelled $b_1$ and $b_2$ and a height drawn in blue.
+
+\begin{center}
+\begin{pspicture}(0,-1)(6,4)
+\psline[linecolor=blue](5,0)(5,3)
+\rput[l](0,0){.}
+\rput[r](6,3){.}
+\pspolygon(0,0)(4,3)(6,3)(3,0)
+\rput[a](1.5,-0.3){$b_1$}
+\rput[b](4.5,3.2){$b_2$}
+\psline[linestyle=dashed]{->}(3,0)(6,0)
+\end{pspicture}
+\end{center}
+
+The \emph{median} of a trapezoid is the line segment whose endpoints are the midpoints of the legs of the trapezoid.  Below is a picture of a trapezoid with its median drawn in red.
+
+\begin{center}
+\begin{pspicture}(0,0)(4,2)
+\psline[linecolor=red](0.5,1)(4,1)
+\pspolygon(0,0)(1,2)(4,2)(4,0)
+\end{pspicture}
+\end{center}
+
+In the \PMlinkescapetext{remainder} of this entry, only Euclidean geometry is considered.
+
+If a trapezoid has bases of lengths $b_1$ and $b_2$ and a height of length $h$, then the area of the trapezoid is
+
+$$A=\frac{1}{2}(b_1+b_2)h.$$
+
+Note that the length $m$ of the median of a trapezoid is the arithmetic mean of the lengths of its bases; \PMlinkname{i.e.}{Ie},
+
+$$m=\frac{1}{2}(b_1+b_2).$$
+
+Thus, the area of a trapezoid can also be determined by
+
+$$A=mh.$$
+%%%%%
+%%%%%
+\end{document}

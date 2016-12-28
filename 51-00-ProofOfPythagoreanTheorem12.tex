@@ -1,0 +1,227 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPythagoreanTheorem12}
+\pmcreated{2013-03-22 17:09:35}
+\pmmodified{2013-03-22 17:09:35}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of Pythagorean theorem}
+\pmrecord{22}{39471}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{GeneralizedPythagoreanTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $a$ and $b$ be two lengths and let $c$ denote the length of the
+hypotenuse of a right triangle whose legs have lengths $a$ and $b$.
+\[
+\begin{xy}
+,(0,0)
+;(0,40)**@{-}
+;(30,0)**@{-}
+;(0,0)**@{-}
+,(-2,15)*{a}
+,(20,-2)*{b}
+,(21,16)*{c}
+\end{xy}
+\]
+Behold the following two ways of dissecting a square of length $a+b$:
+\[
+\begin{xy}
+,(0,30)
+;(0,0)**@{-}
+;(70,0)**@{-}
+;(70,70)**@{-}
+;(0,70)**@{-}
+;(0,30)**@{-}
+;(40,0)**@{-}
+;(70,40)**@{-}
+;(30,70)**@{-}
+;(0,30)**@{-}
+,(-2,15)*{a}
+,(-2,50)*{b}
+,(72,20)*{b}
+,(72,55)*{a}
+,(20,-2)*{b}
+,(55,-2)*{a}
+,(15,72)*{a}
+,(50,72)*{b}
+,(21,16)*{c}
+,(54,21)*{c}
+,(49,54)*{c}
+,(16,49)*{c}
+,(-2,72)*{A}
+,(-2,-2)*{B}
+,(72,-2)*{C}
+,(72,72)*{D}
+,(30,72)*{H}
+,(72,40)*{G}
+,(40,-2)*{F}
+,(-2,30)*{E}
+\end{xy}
+\]
+\centerline{Figure 1}
+\[
+\begin{xy}
+,(0,0)
+;(0,70)**@{-}
+;(70,70)**@{-}
+;(70,0)**@{-}
+;(0,0)**@{-}
+,(0,40)
+;(70,40)**@{-}
+,(30,0)
+;(30,70)**@{-}
+,(0,40)
+;(30,0)**@{-}
+,(30,70)
+;(70,40)**@{-}
+,(15,72)*{a}
+,(50,72)*{b}
+,(15,-2)*{a}
+,(50,-2)*{b}
+,(-2,20)*{b}
+,(-2,55)*{a}
+,(72,20)*{b}
+,(72,55)*{a}
+,(28,55)*{a}
+,(32,20)*{b}
+,(15,42)*{a}
+,(50,38)*{b}
+,(14,19)*{c}
+,(51,56)*{c}
+,(-2,72)*{A'}
+,(-2,-2)*{B'}
+,(72,-2)*{C'}
+,(72,72)*{D'}
+,(30,72)*{K}
+,(72,40)*{L}
+,(30,-2)*{M}
+,(-2,40)*{N}
+,(32,38)*{O}
+\end{xy}
+\]
+\centerline{Figure 2}
+We now discuss the construction of these diagrams and note some facts about them,
+starting with the first one.  To construct figure 1, we proceed as follows:
+\begin{itemize}
+\item Construct a square $ABCD$ whose sides have length $a+b$.
+\item Lay point $E$ on the line segment $AB$ at a distance $a$ from $B$.
+Likewise, lay the point $F$ on the line segment $BC$ at a distance $a$
+from $C$, lay the point $G$ on the line segment $CD$ at a distance $a$
+from $D$, and lay the point $H$ on the line segment $DA$ at a distance
+$a$ from $A$.
+\item  Connect the line segments $EF$, $FG$, $GH$, and $HE$.
+\end{itemize}
+We now note the following facts about figure 1:
+\begin{itemize}
+\item  Since the lengths of the four sides of the square $ABCD$ all equal $a+b$
+and the line segments $EB$, $FC$, $GD$, and $HA$ were constructed to have length
+$a$, it follows that the lengths of the line segments $AE$, $BF$, $CG$, $HD$ all
+equal $b$, as indicated upon the figure.
+\item  Since $ABCD$ is a square, the angles $ABC$, $BCD$, $CDA$, and $DAB$ are all
+right angles, and hence equal each other.
+\item  By the side-angle-side theorem, the triangles $HAE$, $EBF$, $FCG$, and
+$GDH$ are all congruent to each other.
+\item  By definition of $c$ as the length of a hypotenuse, it follows that the
+line segments $EF$, $FG$, $GH$, and $HE$ all have length $c$, as indicated in the
+figure.
+\item  Because the sum of the angles of a triangle equals two right angles and
+the angle $EAH$ is a right angle, it follows that the sum of the angles $AEH$ and
+$AHE$ equals a right angle.  Since the triangle $AEH$ is congruent to the triangle
+$BFE$, the angles $AHE$ and $BEF$ are equal.  Hence the sum of the angles $AEH$
+and $BEF$ equals a right angle.  Thus, we may conclude that $HEF$ is a right angle.
+By similar reasoning, we conclude that $EFG$, $FGH$, and $GHE$ are also right angles.
+\item  Since its sides are of equal length and its angles are all right angles, the
+quadrilateral $EFGH$ is a square.
+\end{itemize}
+To construct figure 2, we proceed as follows:
+\begin{itemize}
+\item Construct a square $A'B'C'D'$ whose sides have length $a+b$.
+\item Lay point $N$ on the line segment $A'B'$ at a distance $a$ from $A'$.
+Likewise, lay the point $M$ on the line segment $B'C'$ at a distance $a$
+from $B'$, lay the point $L$ on the line segment $C'D'$ at a distance $a$
+from $D'$, and lay the point $K$ on the line segment $D'A'$ at a distance
+$a$ from $A'$.
+\item  Connect the line segments $KM$, $NL$, $MN$, and $KL$.
+\end{itemize}
+We now note the following facts about figure 2:
+\begin{itemize}
+\item  Since the lengths of the four sides of the square $A'B'C'D'$ all equal $a+b$
+and the line segments $A'N$, $A'K$, $B'M$, and $D'L$ were constructed to have length
+$a$, it follows that the lengths of the line segments $B'N$, $C'L$, $C'M$, $D'K$ all
+equal $b$, as indicated upon the figure.
+\item  Since $A'B'C'D'$ is a square, the angles $A'B'C'$, $'B'C'D'$, $C'D'A'$, and 
+$D'A'B'$ are all right angles, and hence equal each other.
+\item Since $A'B'$ and $C'D'$, as opposite sides of a square, are parallel and their
+subsegments $A'N$ and $D'L$ have equal length, it follows that $NL$ is parallel to
+$A'D'$ and $B'C'$.  Likewise, since $A'D'$ and $B'C'$, as opposite sides of the
+same square, are parallel and their subsegments $A'K$ and $B'M$ have equal length,
+it follows that $KM$ is parallel to $A'B'$ and $C'D'$.
+\item Since $NL$ is parallel to $B'C'$ and $A'B'C'$ is a right angle, it follows
+that $A'NL$ is a right angle; moreover, since $A'D'C'$ is a right angle, $C'LN$ is
+also a right angle.  Likewise, since $MK$ is parallel to $C'D'$ and $A'D'C'$ is a 
+right angle, it follows that $A'KM$ is a right angle; moreover, since $A'B'C'$ is 
+a right angle, $C'MK$ is also a right angle.  Since $A'B'$ is parallel to $KM$ and
+$A'NL$ is a right angle, it follows that $KOL$, $LOM$, $MON$, and $NOK$ are all
+right angles.
+\item  Since all the angles of the quadrilateral $A'KON$ are right angles and two
+of its adjacent sides, $A'K$ and $A'N$, have the same length $a$, this figure is a
+square, hence the remaining sides, $OK$ and $ON$, also have length $a$.  Likewise,
+Since all the angles of the quadrilateral $C'LOM$ are right angles and two
+of its adjacent sides, $C'L$ and $C'M$, have the same length $b$, this figure is a
+square, hence the remaining sides, $OL$ and $OM$, also have length $b$.
+\item By the side-angle-side theorem, the traingles $KOL$, $LD'K$, $MB'N$, and
+$NOM$ are congruent to each other and to the triangles $HAE$, $EBF$, $FCG$, and
+$GDH$.
+\end{itemize}
+
+Hence, we have shown that a square with sides of length $a+b$ may be dissected into
+either
+\begin{itemize}
+\item a square $A'KON$ with sides of length $a$,
+\item a square $C'LOM$ with sides of length $b$,
+\item four right triangles, $KOL$, $LD'K$, $MB'N$, and
+$NOM$ with sides of length $a$, $b$, $c$
+\end{itemize}
+or
+\begin{itemize}
+\item a square $EFGH$ with sides of length $c$,
+\item four right triangles, $HAE$, $EBF$, $FCG$, and
+$GDH$,  with sides of length $a$, $b$, $c$.
+\end{itemize}
+Since the area of the whole equals the sum of the areas of the parts and the squares
+$ABCD$ and $A'B'C'D'$ are congruent, hence have equal areas, it follows that the
+sum of the areas of the figures comprising the former dissection equals the sum of the
+areas of the figures comprising the latter dissection.  Since the triangles involved in
+these dissections all are congruent, hence have equal areas, we may cancel their areas
+to conclude that the area of $EFGH$ equals the sum of the areas of $A'KON$ and $C'LOM$,
+or $a^2 + b^2 = c^2$.
+%%%%%
+%%%%%
+\end{document}

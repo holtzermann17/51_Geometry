@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CylindricalCoordinates}
+\pmcreated{2013-03-22 17:01:54}
+\pmmodified{2013-03-22 17:01:54}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{cylindrical coordinates}
+\pmrecord{6}{39317}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M05}
+\pmrelated{PolarCoordinates}
+\pmrelated{SphericalCoordinates}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\emph{Cylindrical coordinates} are a system of coordinates for $\mathbb{R}^3$.  Two of the coordinates correspond to the polar coordinates of $\mathbb{R}^2$, and the third coordinate corresponds with the $z$ axis.  Thus, the coordinates are given by
+
+$$\left( \begin{array}{c}
+x \\
+y \\
+z \end{array} \right)=\left( \begin{array}{c}
+r \cos \theta \\
+r \sin \theta \\
+z \end{array} \right),$$
+
+where $r$ is the distance from $(0,0,0)$ to $(x,y,0)$ and $\theta$ is the azimuthal angle defined for $\theta \in [0,2\pi )$.
+
+Just as with polar coordinates, one can convert from Cartesian coordinates to cylindrical coordinates for any point not lying on the $z$ axis via
+
+\begin{eqnarray*}
+r(x,y) &=& \sqrt{x^2+ y^2}, \\
+\theta(x,y) &=& \arctan (x,y),
+\end{eqnarray*}
+
+where $\arctan$ is defined \PMlinkname{here}{OperatornamearcTanWithTwoArguments}.
+%%%%%
+%%%%%
+\end{document}

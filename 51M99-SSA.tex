@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SSA}
+\pmcreated{2013-03-22 12:28:53}
+\pmmodified{2013-03-22 12:28:53}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{SSA}
+\pmrecord{6}{32696}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{meet}
+\emph{SSA} is a method for determining whether two triangles are congruent by comparing two sides and a non-inclusive angle.  However, unlike SAS, SSS, ASA, and SAA, this does not prove congruence in all cases.
+
+Suppose we have two triangles, $\triangle ABC$ and $\triangle PQR$.  $\triangle ABC \cong? \triangle PQR$ if $\overline{AB} \cong \overline{PQ}$, $\overline{BC} \cong \overline{QR}$, and either $\angle BAC \cong \angle QPR$ or $\angle BCA \cong \angle QRP$.
+
+Since this method does not prove congruence, it is more useful for disproving it.  If the SSA method is attempted between $\triangle ABC$ and $\triangle PQR$ and fails for every $ABC$,$BCA$, and $CBA$ against every $PQR$,$QRP$, and $RPQ$, then $\triangle ABC \not\cong \triangle PQR$.
+
+Suppose $\triangle ABC$ and $\triangle PQR$ \PMlinkescapetext{meet} the SSA test.  The specific case where SSA fails, known as the ambiguous case, occurs if the congruent angles, $\angle BAC$ and  $\angle QPR$, are acute.  Let us illustrate this.
+
+Suppose we have a right triangle, $\triangle XYZ$, with right angle $\angle XZY$.  Let $P$ and $Q$ be two points on $\overleftrightarrow{XZ}$ equidistant from $Z$ such that $P$ is between $X$ and $Z$ and $Q$ is not.  Since $\angle XZY$ is right, this makes $\angle PZY$ right, and $P$,$Q$ are equidistant from $Z$, thus $\overleftrightarrow {YZ}$ bisects $P$ and $Q$, and as such, every point on that line is equidistant from $P$ and $Q$.  From this, we know $Y$ is equidistant from $P$ and $Q$, thus $\overline{YP} \cong \overline{YQ}$.  Further, $\angle YXP$ is in fact the same angle as $\angle YXQ$, thus $\angle YXP \cong \angle YXQ$.  Since $\overline{XY} \cong \overline{XY}$, $\triangle XYP$ and $\triangle XYQ$ clearly meet the SSA test, and yet, just as clearly, are not congruent.  This results from $\angle YXZ$ being acute.  This example also reveals the exception to the ambiguous case, namely $\triangle XYZ$.  If $R$ is a point on $\overleftrightarrow{XZ}$ such that $\overline{YR} \cong \overline{YZ}$, then $R \cong Z$.  Proving this exception amounts to determining that $\angle XZY$ is right, in which case the congruency could be proven instead with SAA.
+
+However, if the congruent angles are not acute, i.e., they are either right or obtuse, then SSA is definitive.
+%%%%%
+%%%%%
+\end{document}

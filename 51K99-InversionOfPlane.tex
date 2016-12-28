@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InversionOfPlane}
+\pmcreated{2015-06-14 18:40:35}
+\pmmodified{2015-06-14 18:40:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{inversion of plane}
+\pmrecord{24}{39542}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51K99}
+\pmclassification{msc}{53A30}
+\pmclassification{msc}{30E20}
+\pmsynonym{mirroring in circle}{InversionOfPlane}
+\pmsynonym{circle inversion}{InversionOfPlane}
+\pmrelated{MobiusTransformation}
+\pmrelated{PowerOfPoint}
+\pmdefines{inverse point}
+\pmdefines{inversion}
+\pmdefines{inversion formulae}
+\pmdefines{involutory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{pstricks}
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{base} \PMlinkescapeword{fixed}
+
+Let $c$ be a fixed circle in the Euclidean plane with center $O$ and radius $r$.  Set for any point $P \neq O$ of the plane a corresponding point $P'$, called the \emph{inverse point} of $P$ with respect to $c$, on the closed ray from $O$ through $P$ such that the product
+$$P'O \cdot PO$$
+has the \PMlinkescapetext{constant} value $r^2$.  This mapping \;$P \mapsto P'$\; of the plane interchanges the inside and outside of the base circle $c$.  The point $O'$ is the ``infinitely distant point'' of the plane.
+
+The following is an illustration of how to obtain $P'$ for a given circle $c$ and point $P$ outside of $c$.  The restricted tangent from $P$ to $c$ is drawn in blue, the line segment that determines $P'$ (perpendicular to $\overline{OP}$, having an endpoint on $\overline{OP}$, and having its other endpoint at the point of tangency $T$ of the circle and the tangent line) is drawn in red, and the radius $\overline{OT}$ is drawn in green.
+
+\begin{center}
+\begin{pspicture}(-2,-2)(4,2)
+\psline[linecolor=blue](1,1.732)(4,0)
+\psline[linecolor=red](1,1.732)(1,0)
+\psline[linecolor=green](0,0)(1,1.732)
+\psline(0,0)(4,0)
+\pscircle(0,0){2}
+\psdots(0,0)(1,0)(1,1.732)(4,0)
+\rput[a](0,-0.3){$O$}
+\rput[a](4,-0.3){$P$}
+\rput[l](1.12,1.83){$T$}
+\rput[a](1.0,-0.3){$P'$}
+\rput(0.38,0.84){$r$}
+\rput(-1.55,1.6){$c$}
+\rput[b](0,-2){.}
+\rput[l](-2,0){.}
+\rput[a](0,2){.}
+\end{pspicture}
+\end{center}
+The picture justifies the correctness of $P'$, since the triangles 
+$\triangle OPT$ and $\triangle OTP'$ are similar, implying the 
+proportion \,$PO:TO = TO:P'O$\, whence\, $P'O \cdot PO = (TO)^2 = r^2$.\, Note that this same \PMlinkescapetext{argument} holds if $P$ and $P'$ were swapped in the picture.
+
+\textbf{Inversion formulae.}\, If $O$ is chosen as the origin of 
+$\mathbb{R}^2$ and\, $P = (x,\,y)$\, and\, $P' = (x',\,y')$,\, 
+then
+$$x' = \frac{rx}{x^2+y^2}, \qquad y' = \frac{ry}{x^2+y^2}; 
+\qquad x = \frac{rx'}{x'^{\,2}+y'^{\,2}}, \qquad y = 
+\frac{ry'}{x'^{\,2}+y'^{\,2}}.$$
+
+
+\textbf{Note.}\, Determining inverse points can also be done in the 
+complex plane.\, Moreover, the mapping $P \mapsto P'$ is always a 
+M\"{o}bius transformation.\, For example, if\, 
+$c = \{z\in\mathbb{Z}\,\vdots\;\, |z|=1 \}$,\, \PMlinkname{i.e.}{Ie}\, 
+$O=0$\, and\, $r=1$, then the mapping\, $P \mapsto P'$\, is given by $f\colon \mathbb{C} \cup \{ \infty \} \to \mathbb{C} \cup \{\infty\}$\, defined by\, $\displaystyle f(z)=\frac{1}{z}$.\\
+
+\textbf{Properties of inversion}
+\begin{itemize}
+\item The inversion is {\em involutory}, i.e. if\, $P\mapsto P'$,\, then\, $P'\mapsto P$.
+\item The inversion is inversely conformal, i.e. the intersection angle of two curves is preserved (check the \PMlinkname{Cauchy--Riemann equations}{CauchyRiemannEquations}!).
+\item A line through the center $O$ is mapped onto itself.
+\item Any other line is mapped onto a circle that passes through the center $O$.
+\item Any circle through the center $O$ is mapped onto a line; if the circle intersects the base circle $c$, then the line passes through both intersection points.
+\item Any other circle is mapped onto its homothetic circle with $O$ as the homothety center.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc E. J. Nystr\"om}: {\em Korkeamman geometrian alkeet sovellutuksineen}.\, Kustannusosakeyhti\"o Otava, Helsinki (1948).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSteinersTheorem}
+\pmcreated{2013-03-22 13:48:06}
+\pmmodified{2013-03-22 13:48:06}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Steiner's theorem}
+\pmrecord{5}{34520}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\begin{document}
+\includegraphics{steiner}
+
+Using $\alpha,\beta,\gamma,\delta$ to denote angles as in the diagram
+at left, the sines law yields
+\begin{eqnarray}
+\frac{AB}{\sin(\gamma)}&=&\frac{AC}{\sin(\beta)} \\
+\frac{NB}{\sin(\alpha+\delta)}&=&\frac{NA}{\sin(\beta)} \\
+\frac{MC}{\sin(\alpha+\delta)}&=&\frac{MA}{\sin(\gamma)} \\
+\frac{MB}{\sin(\alpha)}&=&\frac{MA}{\sin(\beta)} \\
+\frac{NC}{\sin(\alpha)}&=&\frac{NA}{\sin(\gamma)}
+\end{eqnarray}
+Dividing (2) and (3), and (4) by (5):
+$$\frac{MA}{NA}\frac{NB}{MC}=\frac{\sin(\gamma)}{\sin(\beta)}=\frac{NA}{MA}\frac{MB}{NC}$$
+and therefore
+$$\frac{NB\cdot MB}{MC\cdot NC}=\frac{\sin^2(\gamma)}{\sin^2(\beta)}
+=\frac{AB^2}{AC^2}
+$$
+by (1).
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StraightLineIsShortestCurveBetweenTwoPoints}
+\pmcreated{2013-03-22 15:39:43}
+\pmmodified{2013-03-22 15:39:43}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{straight line is shortest curve between two points}
+\pmrecord{11}{37595}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N05}
+\pmrelated{ArcLength}
+\pmrelated{Rectifiable}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\begin{document}
+\PMlinkescapeword{length}
+
+Suppose $p$ and $q$ are two distinct points in $\real^n$, 
+and $\gamma$ is a rectifiable curve from $p$ to $q$.
+Then every curve other than the straight line segment from $p$ to $q$
+has a length greater than the Euclidean distance $\norm{p -q}$.
+
+\begin{proof}
+Let $\gamma\colon [0,1] \to  \real^n$
+be the curve with length $L$.
+If it is not straight\footnote{If $\gamma$ is a straight line segment but is not injective, that is, it moves \PMlinkescapetext{back and forth between} $p$ and $q$, then it is obvious that $L > \norm{p-q}$.}, then there exists a point $x = \gamma(t)$ that does not lie on the line segment from $p$ to $q$.
+We have
+\[
+L \geq \norm{q - x} + \norm{x - p} > \norm{p -q }\,.
+\]
+The first inequality comes from the definition of $L$ as the least upper bound of the length of \emph{any} broken-line approximation to the curve $\gamma$.
+The second inequality is the usual triangle inequality,
+but it is a strict inequality since $x$ lies outside the line segment between $p$ and $q$,
+as shown in the following diagram.
+\end{proof}
+
+\begin{figure}
+\includegraphics{curve-triangle.eps}
+\end{figure}
+
+%%%%%
+%%%%%
+\end{document}

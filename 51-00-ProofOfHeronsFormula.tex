@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHeronsFormula}
+\pmcreated{2013-03-22 12:41:38}
+\pmmodified{2013-03-22 12:41:38}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of Heron's formula}
+\pmrecord{5}{32974}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\alpha$ be the angle between the sides $b$ and $c$, then we get from the cosines law:
+$$\cos\alpha =\frac{b^2+c^2-a^2}{2bc}.$$
+Using the equation
+$$\sin\alpha=\sqrt{1-\cos^2\alpha}$$
+we get:
+$$\sin\alpha=\frac{\sqrt{-a^4-b^4-c^4+2b^2c^2+2a^2b^2+2a^2c^2}}{2bc}.$$
+Now we know:
+$$\Delta=\frac{1}{2}bc\sin\alpha.$$
+So we get:
+\begin{eqnarray*}
+\Delta & = & \frac{1}{4}\sqrt{-a^4-b^4-c^4+2b^2c^2+2a^2b^2+2a^2c^2}\\
+& = & \frac{1}{4}\sqrt{(a+b+c)(b+c-a)(a+c-b)(a+b-c)}\\
+& = & \sqrt{s(s-a)(s-b)(s-c)}.
+\end{eqnarray*}
+This is Heron's formula. $\Box$
+%%%%%
+%%%%%
+\end{document}

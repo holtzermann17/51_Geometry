@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Hexagon}
+\pmcreated{2013-03-22 12:10:47}
+\pmmodified{2013-03-22 12:10:47}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{hexagon}
+\pmrecord{16}{31441}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{Polygon}
+\pmrelated{Pentagon}
+
+\usepackage{pstricks}
+\begin{document}
+\PMlinkescapeword{regular}
+
+An \emph{hexagon} is a $6$-sided polygon.  The most commonly quoted hexagon is a \PMlinkname{regular}{RegularPolygon} hexagon, having congruent sides and congruent interior angles.  Below is an example of a regular hexagon:
+
+\begin{center}
+\begin{pspicture}(0,0)(6,5.2)
+\pspolygon(0,2.598)(1.5,0)(4.5,0)(6,2.598)(4.5,5.196)(1.5,5.196)
+\psdots(0,2.598)(1.5,0)(4.5,0)(6,2.598)(4.5,5.196)(1.5,5.196)
+\end{pspicture}
+\end{center}
+
+Below are some properties of regular hexagons in Euclidean geometry:
+\begin{itemize}
+\item The \PMlinkname{measure}{AngleMeasure} of any interior angle of a regular hexagon is $120^{\circ}$.
+\item The smallest $n$ for which a regular $n$-gon has diagonals which are not congruent is $n=6$.  For example, in the regular hexagon below, the diagonal drawn in blue and the one drawn in red are not congruent.
+\begin{center}
+\begin{pspicture}(0,0)(6,5.2)
+\psline[linecolor=blue](1.5,0)(1.5,5.196)
+\psline[linecolor=red](4.5,0)(1.5,5.196)
+\pspolygon(0,2.598)(1.5,0)(4.5,0)(6,2.598)(4.5,5.196)(1.5,5.196)
+\psdots(0,2.598)(1.5,0)(4.5,0)(6,2.598)(4.5,5.196)(1.5,5.196)
+\end{pspicture}
+\end{center}
+\item The side of a regular hexagon has the same length as the radius of the circle circumscribing it.  This fact is illustrated below.
+\begin{center}
+\begin{pspicture}(0,-0.2)(6,5.2)
+\pscircle[linecolor=cyan](3,2.598){3}
+\psline[linecolor=cyan](3,2.598)(1.5,5.196)
+\pspolygon(0,2.598)(1.5,0)(4.5,0)(6,2.598)(4.5,5.196)(1.5,5.196)
+\psdots(3,2.598)(0,2.598)(1.5,0)(4.5,0)(6,2.598)(4.5,5.196)(1.5,5.196)
+\end{pspicture}
+\end{center}
+\end{itemize}
+
+From the last remark, it is easy to see that a regular hexagon is constructible using compass and straightedge.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

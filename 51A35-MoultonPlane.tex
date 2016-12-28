@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MoultonPlane}
+\pmcreated{2013-03-22 19:14:42}
+\pmmodified{2013-03-22 19:14:42}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Moulton plane}
+\pmrecord{11}{42170}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51A35}
+\pmdefines{refraction index}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+The \emph{Moulton plane} $M$ is an incidence structure defined on the Euclidean plane $\mathbb{E}^2$ as follows:
+\begin{itemize}
+\item the points of $M$ are points of $\mathbb{E}^2$
+\item the lines of $M$ are the following three kinds:
+\begin{enumerate}
+\item vertical lines (with equations of the form $x=a$) of $\mathbb{E}^2$ are lines of $M$
+\item non-negative sloped lines (with equations of the form $y=mx+b$ with $m\ge 0$) of $\mathbb{E}^2$ are lines of $M$
+\item sets of pairs $(x,y)$ where, for some $m,b\in \mathbb{R}$, with $m<0$,
+\begin{displaymath}
+y = \left\{
+\begin{array}{ll}
+mx+b & \textrm{if } x<0, \\
+2mx+b & \textrm{otherwise,}
+\end{array}
+\right.
+\end{displaymath}
+are lines of $M$.  These lines are called the \emph{bent lines}, because they are bent at the $y$-axis.  We call $m$ and $b$ respectively the slope and the $y$-intercept of the (bent) line.
+\end{enumerate}
+\item incidence between points and lines of $M$ is $\in$, the usual set membership relation.
+\end{itemize}
+The following figure shows an example of a bent line:
+\begin{center}
+\begin{pspicture}(-4,-2.75)(4,2.75)
+\psset{unit=25pt}
+\psline{<->}(-1.5,-2.5)(-1.5,2.5)
+\uput[r](-1.5,2.4){$y$}
+\psline{<->}(-4,-1.5)(4,-1.5)
+\uput[r](4,-1.5){$x$}
+\psline{<-}(-4,2)(-1.5,1)
+\psline{->}(-1.5,1)(2.5,-2.5)
+\end{pspicture}
+\end{center}
+For convenience, let us write $y=x*m*b$ to represent the bent line whose slope is $m$ and whose $y$-intercept is $b$.
+
+\begin{prop} $M$ is an affine plane where the Desargues' theorem fails. \end{prop}
+\begin{proof}  Verifying that the plane is affine is straightforward:
+\begin{itemize}
+\item Axiom 1: any two distinct points are incident with exactly one line.
+
+Given two distinct points $(s,t),(u,v)$, if $s=u$, then $x=s$ is the line passing through them.  Otherwise, let $m=(t-v)/(s-u)$.  If $m\ge 0$, then $y=mx+b$ is a line passing through them, where $b=t-ms$.  If $m<0$, we have three subcases: (we may assume that $s<u$)
+\begin{itemize}
+\item $0\le s<u$.  Then the line passing through the points is given by the equation $y=x*(m/2)*b$.
+\item $s<u\le 0$.  Then the line passing through the points is given by the equation $y=x*m*b$.
+\item $s<0<u$.  Then, by setting $m'=(t-v)/(s-2u)$ and $b'=t-m's$, the line $y=x*m'*b'$ passes through the two points.
+\end{itemize}
+These lines are clearly uniquely determined by the two points.
+\item Axiom 2:  given a line and a point not on the line, there is exactly one line incident with the point that is parallel to the given line (Playfair axiom).
+
+Given a line $\ell$, and a point $(s,t)$ not on $\ell$.  If $\ell$ is of the form $x=a$, then $s\ne a$, and the line $x=s$ passes through $(s,t)$ and is parallel to $\ell$.  If $\ell$ is of the form $y=mx+b$ with $m\ge 0$, then $t\ne ms+b$.  By setting $c=t-ms \ne b$, the line $y=mx+c$ passes through $(s,t)$ and is parallel to $\ell$.  Finally, if $\ell$ is a bent line given by $y=x*m*b$.  There are two subcases:
+\begin{itemize}
+\item If $s\le 0$, then $t\ne ms+b$.  By setting $c=t-ms \ne b$, we get a bent line $y=x*m*c$ through $(s,t)$ parallel to $\ell$.  
+\item If $s>0$, then $t\ne 2ms+b$.  By setting $d=t-2ms\ne b$, we get a bent line $y=x*m*d$ through $(s,t)$ parallel to $\ell$.
+\end{itemize}
+Again, all of the lines determined are unique.
+\item Axiom 3: there are at least three non-collinear points.
+
+$(0,0),(1,0)$, and $(1,1)$ are three non-collinear points of $M$.
+\end{itemize}
+Lastly, to show that Desargues' theorem fails in $M$, we need to find a pair of triangles $ABC$ and $A'B'C'$, such that lines $AA', BB'$, and $CC'$ are concurrent, but points $X:=AB\cap A'B'$, $Y:=BC\cap B'C'$ and $Z:=CA\cap C'A'$ fail to be collinear.  Below is such an example.  Note that $X,Y$ are on the $x$-axis, but $Z$ is not.  The dotted line merely shows that if the line is ``unbent'', then the Desarguesian property is restored.
+\begin{center}
+\begin{pspicture}(-8,-4.5)(6,8)
+\psset{unit=25pt}
+\psline{<->}(0,-4.5)(0,5)
+\uput[r](0,4.9){$y$}
+\psline{<->}(-7,-1.5)(7,-1.5)
+\uput[r](7,-1.5){$x$}
+\psline{<->}(-6.5,-4.5)(-2.58824,5)
+\psline{<->}(-3,-4.5)(-3,5)
+\psline{<->}(-0.5,-4.5)(-3.29412,5)
+\psdots[linecolor=red,dotsize=5pt](-4.6,0.114286)
+\uput[l](-4.6,0.114286){$A$}
+\psdots[linecolor=blue,dotsize=5pt](-6.25,-3.89286)
+\uput[l](-6.25,-3.89286){$A'$}
+\psdots[linecolor=red,dotsize=5pt](-3,-2.5)
+\uput[l](-3,-2.75){$B$}
+\psdots[linecolor=blue,dotsize=5pt](-3,-0.75)
+\uput[r](-3,-0.5){$B'$}
+\psdots[linecolor=red,dotsize=5pt](-1.75,-0.25)
+\uput[r](-1.75,-0.05){$C$}
+\psdots[linecolor=blue,dotsize=5pt](-1,-2.8)
+\uput[r](-1,-3){$C'$}
+\psline[linecolor=red,linewidth=2pt](-4.6,0.114286)(-3,-2.5)
+\psline[linecolor=red,linewidth=2pt](-3,-2.5)(-1.75,-0.25)
+\psline[linecolor=red,linewidth=2pt](-1.75,-0.25)(-4.6,0.114286)
+\psline[linecolor=blue,linewidth=2pt](-6.25,-3.89286)(-3,-0.75)
+\psline[linecolor=blue,linewidth=2pt](-3,-0.75)(-1,-2.8)
+\psline[linecolor=blue,linewidth=2pt](-1,-2.8)(-6.25,-3.89286)
+\psdots[linecolor=green,dotsize=8pt](-3.67283,-1.45)
+\uput[l](-3.7,-1.25){$X$}
+\psdots[linecolor=green,dotsize=8pt](-2.38053,-1.45)
+\uput[r](-2.3,-1.25){$Y$}
+\psdots[dotsize=8pt](6.304334,-1.45)
+\psline[linestyle=dotted](-1.75,-0.25)(6.304334,-1.45)
+\psline(-1,-2.8)(6.304334,-1.45)
+\psline(-1.75,-0.25)(0,-0.51073)
+\psline(0,-0.51073)(4.089655,-1.85932)
+\psdots[linecolor=green,dotsize=8pt](4.089655,-1.85932)
+\uput[d](4.089655,-1.95){$Z$}
+\end{pspicture}
+\end{center}
+Using the above diagram as a guide, one may find the appropriate coordinates for the configuration that work.  We invite the reader to complete the proof by finding these coordinates.
+\end{proof}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item The $2$ in the definition of bent lines is sometimes called the \emph{refraction index}, borrowing from physics.
+\item Another curious fact about the Moulton plane is that there exists a triangle such that the sum of its interior angles is greater than $\pi$.  We invite the reader to find such a triangle.
+\item Variations of the Moulton plane exist.  Of course, one may replace $2$ by any other positive real number $r$ (non-positive $r$ is not allowed, or else the plane fails to be affine entirely) other than $1$, and the resulting plane is still non-Desarguesian affine.  Or, instead of the $y$-axis as the ``line of refraction'', one may choose a different line.  Another popular choice is the $x$-axis.
+\item Using the Moulton plane, one can then construct a non-Desarguesian projective plane using the usual method of completion by adding a line of infinity, such that each point on the line (point of infinity) is the equivalent class of parallel affine lines (two bent lines are parallel iff they have the same slope).
+\end{itemize}
+
+\begin{thebibliography}{7}
+\bibitem{RA} R. Artzy, {\it Linear Geometry}, Addison-Wesley (1965)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

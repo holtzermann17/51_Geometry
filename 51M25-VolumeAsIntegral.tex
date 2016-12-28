@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VolumeAsIntegral}
+\pmcreated{2013-03-22 17:20:44}
+\pmmodified{2013-03-22 17:20:44}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{volume as integral}
+\pmrecord{9}{39702}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51M25}
+\pmclassification{msc}{51-00}
+\pmrelated{Volume}
+\pmrelated{VolumeOfSolidOfRevolution}
+\pmrelated{RiemannMultipleIntegral}
+\pmrelated{ExampleOfRiemannTripleIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{formula} \PMlinkescapeword{cut}
+The \PMlinkname{volume of a solid of revolution}{VolumeOfSolidOfRevolution} can be obtained from
+                $$V \;=\; \int_a^b\pi[f(x)]^2\,dx,$$
+where the integrand is the area of the intersection disc of the solid of revolution and a plane perpendicular to the axis of revolution at a certain value of $x$.\, This volume formula may be generalized to an analogous formula containing instead of the area $\pi[f(x)]^2$ a more general intersection area $A(t)$ obtained from a given solid by cutting it with a set of parallel planes determined by the parameter $t$ on a certain axis.\, One must assume that the function \,$t \mapsto A(t)$\, is continuous on an interval \,$[a,\,b]$\, where $a$ and $b$ correspond to the ``ends'' of the solid.\, If the $t$-axis \PMlinkname{forms an angle}{AngleBetweenTwoLines} $\omega$ with the normal line of those planes, then we have the volume formula of the form
+      $$V \;=\; \int_a^b\!A(t)\,dt\,\cos\omega.$$
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularTriangle}
+\pmcreated{2013-03-22 17:12:52}
+\pmmodified{2013-03-22 17:12:52}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{regular triangle}
+\pmrecord{6}{39538}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmrelated{Triangle}
+\pmrelated{IsoscelesTriangle}
+\pmrelated{EquilateralTriangle}
+\pmrelated{EquiangularTriangle}
+\pmrelated{EquivalentConditionsForTriangles}
+\pmrelated{RegularPolygon}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+A \emph{regular triangle} is one for which all sides are congruent and all interior angles are congruent.
+
+\begin{center}
+\begin{pspicture}(-0.2,-0.2)(5.2,5.2)
+\pspolygon(0,0)(5,0)(2.5,4.33)
+\rput[b](2.5,4.5){$A$}
+\rput[a](0,-0.2){$B$}
+\rput[a](5,-0.2){$C$}
+\psline(2.5,-0.2)(2.5,0.2)
+\psline(1.15,2.2)(1.35,2.1)
+\psline(3.65,2.1)(3.85,2.2)
+\psarc(0,0){0.5}{0}{60}
+\psarc(5,0){0.5}{120}{180}
+\psarc(2.5,4.33){0.5}{240}{300}
+\end{pspicture}
+\end{center}
+
+All regular triangles are regular polygons.  Also, by the isosceles triangle theorem, the bisector of any angle coincides with the height, the median and the perpendicular bisector of the opposite side.
+
+The following statements hold in Euclidean geometry for a regular triangle.
+
+\begin{itemize}
+\item If $r$ is the length of the side, then the height is equal to $\displaystyle \frac{r\sqrt{3}}{2}$.
+\item If $r$ is the length of the side, then the area is equal to $\displaystyle \frac{r^2\sqrt{3}}{4}$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

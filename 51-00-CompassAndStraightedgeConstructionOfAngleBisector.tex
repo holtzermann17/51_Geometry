@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompassAndStraightedgeConstructionOfAngleBisector}
+\pmcreated{2013-03-22 17:11:09}
+\pmmodified{2013-03-22 17:11:09}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{compass and straightedge construction of angle bisector}
+\pmrecord{18}{39502}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M15}
+\pmsynonym{construction of angle bisector}{CompassAndStraightedgeConstructionOfAngleBisector}
+%\pmkeywords{Euclidean geometry}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{side}
+\PMlinkescapeword{sides}
+\PMlinkescapeword{interior}
+\PMlinkescapeword{open}
+
+One can construct the (interior) angle bisector of a given angle using compass and straightedge as follows:
+
+\begin{enumerate}
+\item With one point of the compass on the \PMlinkname{vertex}{Vertex5} of the angle, draw an arc that intersects both \PMlinkname{sides}{Side3} of the angle.
+
+\begin{center}
+\begin{pspicture}(0,-1)(3,3)
+\psarc[linecolor=blue](0,0){1}{-25}{80}
+\psline{o->}(0,0)(3,0)
+\psline{o->}(0,0)(2,3)
+\psdots(0,0)(1,0)(0.5547,0.832)
+\end{pspicture}
+\end{center}
+
+\item Draw an arc from each of these points of intersection so that the arcs intersect in the interior of the angle.  The compass needs to stay open the same amount throughout this step.
+
+\begin{center}
+\begin{pspicture}(0,-1)(3,3)
+\psarc(0,0){1}{-25}{80}
+\psline{o->}(0,0)(3,0)
+\psline{o->}(0,0)(2,3)
+\psarc[linecolor=blue](1,0){1}{20}{80}
+\psarc[linecolor=blue](0.5547,0.832){1}{-30}{30}
+\psdots(0,0)(1,0)(0.5547,0.832)(1.5548,0.832)
+\end{pspicture}
+\end{center}
+
+\item Draw the ray from the vertex of the angle to the intersection of the two arcs drawn during the previous step.
+
+\begin{center}
+\begin{pspicture}(0,-1)(3,3)
+\psarc(0,0){1}{-25}{80}
+\psline{o->}(0,0)(3,0)
+\psline{o->}(0,0)(2,3)
+\psarc(1,0){1}{20}{80}
+\psarc(0.5547,0.832){1}{-30}{30}
+\psline[linecolor=blue]{o->}(0,0)(3,1.605351)
+\psdots(0,0)(1,0)(0.5547,0.832)(1.5548,0.832)
+\end{pspicture}
+\end{center}
+\end{enumerate}
+
+This construction is justified because the point determined in the second step is equidistant from the two rays and thus must lie on the angle bisector.
+
+If you are interested in seeing the rules for compass and straightedge constructions, click on the \PMlinkescapetext{link} provided.
+%%%%%
+%%%%%
+\end{document}

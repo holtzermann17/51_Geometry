@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AngleBetweenTwoLines}
+\pmcreated{2013-03-22 17:10:22}
+\pmmodified{2013-03-22 17:10:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{angle between two lines}
+\pmrecord{24}{39485}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{AdditionFormulaForTangent}
+\pmrelated{ConditionOfOrthogonality}
+\pmrelated{ConformalMapping}
+\pmrelated{AngleBetweenTwoPlanes}
+\pmrelated{DistanceOfNonParallelLines}
+\pmrelated{MutualPositionsOfVectors}
+\pmrelated{LineInSpace}
+\pmrelated{PerpendicularityInEuclideanPlane}
+\pmrelated{AngleBetweenLineAndPlane}
+\pmrelated{InnerProductSpace}
+\pmrelated{IsogonalTraject}
+\pmdefines{angle between two curves}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\em angle between two lines} in a plane is defined to be
+\begin{itemize}
+\item 0, if the lines are parallel;
+\item the smaller angle having as sides the half-lines starting from the intersection point of the lines and lying on those two lines, if the lines are not parallel.
+\end{itemize}
+If $\theta$ denotes the angle between two lines, it always satisfies the inequalities 
+\begin{align}
+      0 \leqq \theta \leqq \frac{\pi}{2}.
+\end{align}
+If the slopes of the two lines are $m_1$ and $m_2$, the angle $\theta$ is obtained from
+\begin{align}
+      \tan\theta \;=\; \left|\frac{m_1\!-\!m_2}{1\!+\!m_1m_2}\right|.
+\end{align}
+This equation clicks in the case that\, $m_1m_2 = -1$,\, when the lines are perpendicular and $\theta$ equals to  $\displaystyle\frac{\pi}{2}$.\, Also, if one of the lines is parallel to $y$-axis, it has no slope; then the angle $\theta$ must be deduced using the slope of the other line.
+
+If one of the slopes is $0$, the angle between the two lines is just the angle between one of the lines and the $x$-axis.  Assume the other line has slope $m$, then formula (2) above becomes 
+\begin{align}
+      \tan\theta \;=\; \left|m\right|.
+\end{align}
+
+If, on the other hand, one of the slopes is infinite, meaning that the line is parallel to the $y$-axis, then the angle between two lines is the same as the angle between one line (with slope $m$) and the $y$-axis, which is
+\begin{align}
+      \tan\theta \;=\; \left|\frac{1}{m}\right|.
+\end{align}
+The above formula is consistent with formula (2) in the sense that if we let one of $m_1$ or $m_2$ approach $\infty$, we get formula (4).\\
+
+\textbf{Remark}.\, If both slopes are positive, then formula (2) above is really just a disguised form of the subtraction formula for tangent.
+
+\begin{center}
+\begin{pspicture}(-5,-1)(7,4)
+\psaxes[Dx=20,Dy=20]{->}(-1,0)(-3,-1)(6,4)
+\psline{-}(-2,-1)(5,3)
+\psline{-}(1,-1)(4,4)
+\psarc(-0.2,0){0.7}{0}{30}
+\psarc(1.2,0){0.9}{0}{35}
+\psarc(2.565,1.609){1}{30}{58}
+\rput(0.8,0.2){$\alpha$}
+\rput(2.35,0.2){$\beta$}
+\rput(5.75,-0.2){$x$}
+\rput(-0.8,3.8){$y$}
+\rput[tr]{40}(4.1,3.2){$\beta-\alpha$}
+\rput(3.6,3.8){$\l_2$}
+\rput(5.2,2.8){$\l_1$}
+\rput(-3,0){.}
+\rput(-1,-1){.}
+\end{pspicture}
+\end{center}
+
+In the diagram above, we see that the angle between the two lines is the algebraic difference of the two angles made between each of the lines and the $x$-axis.\\
+
+In the Euclidean space, the angle $\theta$ between two lines is most comfortably defined by using the direction vectors $\vec{u}$ and $\vec{v}$ of the lines:
+$$\cos\theta \;=\; \left|\frac{\vec{u}\cdot\vec{v}}{|\vec{u}||\vec{v}|}\right|$$
+Also this angle satisfies (1).\, The angle given by the cosine can be interpreted to be formed after translating the one line in the space, without to alter its direction, to such a location that it intersects the other line --- then both lines are in the same plane, and one may think that the angle is defined as in the beginning of this entry. \\
+
+\textbf{Remark.}\, The {\em angle between two curves} which intersect each other in a point $P$ means the angle between the tangent lines of the curves in $P$; such an angle may always be chosen acute or right.  For example, the exponential curves \,$y = a^x$\, and\, $y = b^x$\, intersect each other in the point \,$(0,\,1)$\, under the angle $\theta$ with\, $\tan\theta = 
+|\frac{\ln{a}-\ln{b}}{1+\ln{a}\cdot\ln{b}}|$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfVanAubelsTheorem}
+\pmcreated{2013-03-22 13:58:00}
+\pmmodified{2013-03-22 13:58:00}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Van Aubel's theorem}
+\pmrecord{8}{34736}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmrelated{VanAubelTheorem}
+\pmrelated{ProofOfVanAubelTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+\PMlinkescapeword{bases}
+\PMlinkescapeword{component}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{complete}
+\includegraphics{vanaubel}
+
+As in the figure, let us denote by $u,v,w,x,y,z$ the areas of the
+six component triangles.
+Given any two triangles of the same height, their areas are in the
+same proportion as their bases (Euclid VI.1). Therefore
+$$\frac{y+z}{x}=\frac{u+v}{w}
+\qquad\frac{w+x}{v}=\frac{y+z}{u}
+\qquad\frac{u+v}{z}=\frac{w+x}{y}$$
+and the conclusion we want is
+$$\frac{y+z+u}{v+w+x}+\frac{z+u+v}{w+x+y}=\frac{y+z}{x}\;.$$
+
+Clearing the denominators, the hypotheses are
+\begin{eqnarray}
+w(y+z)&=&x(u+v) \\
+y(u+v)&=&z(w+x) \\
+u(w+x)&=&v(y+z)
+\end{eqnarray}
+which imply
+\begin{equation}
+vxz=uwy
+\end{equation}
+and the conclusion says that
+$$x(\underline{wy}+\underline{wz}+uw
++\underline{xy}+\underline{xz}+ux+\underline{y^2}+\underline{yz}+uy$$
+$$+vz+uv+v^2+wz+uw+vw+xz+ux+vx)$$
+equals
+$$(y+z)(vw+vx+vy+w^2+wx+wy+\underline{wx}+\underline{x^2}+\underline{xy})$$
+or equivalently (after cancelling the underlined terms)
+$$x(uw+xz+ux+uy+vz+uv+v^2+wz+uw+vw+ux+vx)$$
+equals
+$$(y+z)(vw+vx+vy+w^2+wx+wy)=(y+z)(v+w)(w+x+y)\;.$$
+i.e.
+$$x(u+v)(v+w+x)+x(xz+ux+uy+vz+wz+uw)=$$
+$$(y+z)w(v+w+x)+(y+z)(vx+vy+wy)$$
+i.e. by (1)
+$$x(xz+ux+uy+vz+wz+uw)=(y+z)(vx+vy+wy)$$
+i.e. by (3)
+$$x(xz+uy+vz+wz)=(y+z)(vy+wy)\;.$$
+Using (4), we are down to
+$$x^2z+xuy+uwy+xwz=(y+z)y(v+w)$$
+i.e. by (3)
+$$x^2z+vy(y+z)+xwz=(y+z)y(v+w)$$
+i.e.
+$$xz(x+w)=(y+z)yw\;.$$
+But in view of (2), this is the same as (4), and
+the proof is complete.
+
+\textbf{Remarks: }
+Ceva's theorem is an easy consequence of (4).
+%%%%%
+%%%%%
+\end{document}

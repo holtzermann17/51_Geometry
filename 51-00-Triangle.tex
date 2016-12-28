@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Triangle}
+\pmcreated{2013-03-22 11:43:51}
+\pmmodified{2013-03-22 11:43:51}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{triangle}
+\pmrecord{54}{30139}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M05}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{51M10}
+\pmclassification{msc}{55-00}
+\pmclassification{msc}{55-01}
+%\pmkeywords{Geometry}
+%\pmkeywords{Polygon}
+%\pmkeywords{Angle}
+\pmrelated{SinesLaw}
+\pmrelated{EulerLine}
+\pmrelated{Median}
+\pmrelated{PythagorasTheorem}
+\pmrelated{Hypotenuse}
+\pmrelated{Orthocenter}
+\pmrelated{OrthicTriangle}
+\pmrelated{IsoscelesTriangle}
+\pmrelated{CevasTheorem}
+\pmrelated{Cevian}
+\pmrelated{SinesLawProof}
+\pmrelated{FundamentalTheoremOnIsogonalLines}
+\pmrelated{Incenter}
+\pmrelated{EquilateralTriangle}
+\pmrelated{TrigonometricVersionOfCevasTheorem}
+\pmrelated{HeronsFo}
+\pmdefines{acute triangle}
+\pmdefines{right triangle}
+\pmdefines{obtuse triangle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%%%%\usepackage{xypic}
+\begin{document}
+A \emph{triangle} is a \PMlinkescapetext{bounded} planar region delimited by three \PMlinkescapetext{straight} lines, i.e. it is a polygon with three angles.
+
+\begin{center}
+\includegraphics{triangulo}
+\end{center}
+
+In Euclidean geometry, the angle sum of a triangle is always equal to $180^\circ$. In the figure: $A+B+C=180^\circ$.
+
+In hyperbolic geometry, the angle sum of a triangle is always strictly positive and strictly less than $180^\circ$.  In the figure: $0^\circ<A+B+C<180^\circ$.
+
+In spherical geometry, the angle sum of a triangle is always strictly greater than $180^\circ$ and strictly less than $540^\circ$.  In the figure:  $180^\circ<A+B+C<540^\circ$.
+
+Also in spherical geometry, a triangle has these additional requirements:  It must be strictly contained in a hemisphere of the sphere that is serving as the model for spherical geometry, and all of its angles must have a measure strictly less that $180^{\circ}$.
+
+Triangles can be classified according to the number of their equal sides. So, a triangle with 3 equal sides is called \PMlinkname{\emph{equilateral}}{RegularTriangle}, a triangle with 2 equal sides is called \emph{isosceles}, and finally a triangle with no equal sides is called \emph{scalene}. Notice that an \PMlinkescapetext{equilateral triangle} is also isosceles, but there are isosceles triangles that are not equilateral.
+
+\begin{center}
+\includegraphics{trianglebyside}
+\end{center}
+
+In Euclidean geometry, triangles can also be classified according to the \PMlinkescapetext{size} of the greatest of its three (inner) angles. If the greatest of these is acute (and therefore all three are acute), the triangle is called an \emph{acute triangle}. If the triangle has a right angle, it is a \emph{right triangle}. If the triangle has an obtuse angle, it is an \emph{obtuse triangle}.
+
+\begin{center}
+\includegraphics{trianglebyangle}
+\end{center}
+
+\subsubsection*{Area of a triangle}
+There are several ways to \PMlinkescapetext{calculate} a triangle's area.
+
+In hyperbolic and spherical \PMlinkescapetext{geometry}, the area of a triangle is equal to its defect (measured in radians).
+
+For the rest of this entry, only Euclidean geometry will be 
+considered.
+
+Many \PMlinkescapetext{formulas} for the area of a triangle exist.  The most basic one is $\displaystyle A=\frac{1}{2}bh$, where $b$ is its base and $h$ is its height.  Following is a \PMlinkescapetext{derivation} of another \PMlinkescapetext{formula} for the area of a triangle.
+ 
+Let $a,b,c$ be the sides and $A,B,C$ the interior angles \PMlinkescapetext{opposite} to them. Let $h_a,h_b,h_c $ be the heights drawn upon $a,b,c$ respectively, $r$ the inradius and $R$ the circumradius. Finally, let $\displaystyle s=\frac{a+b+c}{2}$ be the semiperimeter. Then
+
+\begin{eqnarray*}
+\text{Area} &=& \frac{a h_a}{2}=\frac{b h_b}{2}=\frac{c h_c}{2}\\
+&=& \frac{ab\sin C}{2}=\frac{bc\sin A}{2}=\frac{ca\sin B}{2}\\
+&=& \frac{abc}{4R}\\
+&=& sr\\
+&=& \sqrt{s(s-a)(s-b)(s-c)}
+\end{eqnarray*}
+The last \PMlinkescapetext{formula} is known as Heron's formula.
+
+With the coordinates of the vertices \,$(x_1,\,y_1)$,\, $(x_2,\,y_2)$,\, $(x_3,\,y_3)$\, of the triangle, the area may be expressed as
+$$ 
+\pm\frac{1}{2}\left|\begin{matrix}
+x_1 & y_1 & 1\\
+x_2 & y_2 & 1\\
+x_3 & y_3 & 1
+\end{matrix}\right|
+$$
+(cf. the volume of \PMlinkname{tetrahedron}{Tetrahedron}).
+
+Inequalities for the area are Weizenbock's inequality and the Hadwiger-Finsler inequality.
+
+\subsubsection*{Angles in a triangle}
+\begin{enumerate}
+\item the sum of the angles in a triangle is $\pi$ radians ($180^\circ$)
+\item sines law 
+\item cosines law 
+\item Mollweide's equations 
+\end{enumerate}
+
+\subsubsection*{Special geometric objects for a triangle}
+\begin{enumerate}
+\item incenter 
+\item inscribed circle
+\item circumcenter
+\item circumscribed circle 
+\item centroid
+\item orthocenter
+\item Lemoine point, Lemoine circle  
+\item Gergonne point, Gergonne triangle 
+\item orthic triangle 
+\item pedal triangle 
+\item medial triangle 
+\item Euler Line 
+\end{enumerate}
+%%%%% 1
+% 12
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

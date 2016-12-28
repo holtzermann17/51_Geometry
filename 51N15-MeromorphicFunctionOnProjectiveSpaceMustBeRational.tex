@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeromorphicFunctionOnProjectiveSpaceMustBeRational}
+\pmcreated{2013-03-22 17:52:13}
+\pmmodified{2013-03-22 17:52:13}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{meromorphic function on projective space must be rational}
+\pmrecord{5}{40349}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N15}
+\pmclassification{msc}{32A20}
+\pmrelated{ChowsTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+To define a rational function on complex projective space ${\mathbb{P}}^n$, we just take
+two homogeneous polynomials of the same degree $p$ and $q$ on ${\mathbb{C}}^{n+1},$ and we 
+note that $p/q$ induces a meromorphic function on ${\mathbb{P}}^n.$  In fact, every
+meromorphic function on ${\mathbb{P}}^n$ is rational.
+
+\begin{thm}
+Let $f$ be a meromorphic function on ${\mathbb{P}}^n$.
+Then $f$ is rational.
+\end{thm}
+
+\begin{proof}
+Note that the zero set of $f$ and the pole set are analytic subvarieties of ${\mathbb{P}}^n$
+and hence algebraic by Chow's theorem.  $f$ induces a meromorphic function $\tilde{f}$ on
+${\mathbb{C}}^{n+1} \setminus \{ 0 \}$.  Let $p$ and $q$ be two homogeneous polynomials
+such that $q = 0$ are the poles and $p=0$ are the zeros of $\tilde{f}.$  We can assume we can take $p$ and $q$ such that if we multiply $\tilde{f}$
+by $q/p$ we have a holomorphic function outside the origin.  Hence $(q/p)\tilde{f}$ extends through the origin
+by Hartogs' theorem.   Further since $\tilde{f}$ was 
+constant on complex lines through the origin, it is not hard to see that $(q/p)\tilde{f}$ is homogeneous
+and hence a homogeneous polynomial, by the same argument as in the proof of Chow's theorem.
+Since it is not zero outside the origin, it can't be zero at the origin, and hence $(q/p)\tilde{f}$
+must be a constant, and the proof is finished.
+\end{proof}
+
+%FIXME: decide on the best easily accessible reference that includes this theorem
+%%%%%
+%%%%%
+\end{document}

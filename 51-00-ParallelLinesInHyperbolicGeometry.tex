@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParallelLinesInHyperbolicGeometry}
+\pmcreated{2013-03-22 17:06:43}
+\pmmodified{2013-03-22 17:06:43}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{parallel lines in hyperbolic geometry}
+\pmrecord{11}{39411}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{51M10}
+\pmdefines{asymptotically parallel}
+\pmdefines{asymptotically parallel lines}
+\pmdefines{hyperparallel}
+\pmdefines{hyperparallel lines}
+\pmdefines{disjointly parallel}
+\pmdefines{disjointly parallel lines}
+\pmdefines{ultraparallel}
+\pmdefines{ultraparallel lines}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+In hyperbolic geometry, there are two kinds of parallel lines.  If two lines do not intersect within a model of hyperbolic geometry but they do intersect on its boundary, then the lines are called \emph{asymptotically parallel} or \emph{hyperparallel}.  (Note that, in the upper half plane model, any two vertical rays are asymptotically parallel.  Thus, for consistency, $\infty$ is considered to be part of the boundary.)  Any other set of parallel lines is called \emph{disjointly parallel} or \emph{ultraparallel}.
+
+Below is an example of asymptotically parallel lines in the Beltrami-Klein model:
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{o-o}(-2,0)(2,0)
+\psline{o-o}(-1.6,1.2)(2,0)
+\end{pspicture}
+\end{center}
+
+Below are some examples of asymptotically parallel lines in the Poincar\'e disc model:
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{o-o}(-2,0)(2,0)
+\psarc{o-o}(2,4.667){4.667}{223.92}{270}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psarc{o-o}(0,2.5){1.5}{216.87}{323.13}
+\psarc{o-o}(-3.333,0){2.667}{-36.87}{36.87}
+\end{pspicture}
+\end{center}
+
+Below are some examples of asymptotically parallel lines in the upper half plane model:
+
+\begin{center}
+\begin{pspicture}(-3,-0.1)(3,3)
+\psline[linestyle=dashed]{<->}(-3,0)(3,0)
+\psline{o->}(-2,0)(-2,3)
+\psarc{o-o}(0,0){2}{0}{180}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{pspicture}(-3,-0.1)(3,3)
+\psline[linestyle=dashed]{<->}(-3,0)(3,0)
+\psarc{o-o}(0,0){2.5}{0}{180}
+\psarc{o-o}(-0.9,0){1.6}{0}{180}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{pspicture}(-3,-0.1)(3,3)
+\psline[linestyle=dashed]{<->}(-3,0)(3,0)
+\psline{o->}(-2.25,0)(-2.25,3)
+\psline{o->}(2.25,0)(2.25,3)
+\end{pspicture}
+\end{center}
+
+Below is an example of disjointly parallel lines in the Beltrami-Klein model:
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psline{o-o}(-2,0)(1.414,1.414)
+\psline{o-o}(-1.2,-1.6)(1.2,-1.6)
+\end{pspicture}
+\end{center}
+
+Below is an example of disjointly parallel lines in the Poincar\'e disc model:
+
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+\pscircle[linestyle=dashed](0,0){2}
+\psarc{o-o}(-2,4.828){4.828}{270}{315}
+\psarc{o-o}(0,-2.5){1.5}{36.87}{143.13}
+\end{pspicture}
+\end{center}
+
+Below are some examples of disjointly parallel lines in the upper half plane model:
+
+\begin{center}
+\begin{pspicture}(-3,-0.1)(3,3)
+\psline[linestyle=dashed]{<->}(-3,0)(3,0)
+\psarc{o-o}(-1.3,0){1.2}{0}{180}
+\psarc{o-o}(1.3,0){1.2}{0}{180}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{pspicture}(-3,-0.1)(3,3)
+\psline[linestyle=dashed]{<->}(-3,0)(3,0)
+\psarc{o-o}(0,0){2.5}{0}{180}
+\psarc{o-o}(-1,0){1}{0}{180}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{pspicture}(-3,-0.1)(3,3)
+\psline[linestyle=dashed]{<->}(-3,0)(3,0)
+\psline{o->}(-2,0)(-2,3)
+\psarc{o-o}(0.5,0){2}{0}{180}
+\end{pspicture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

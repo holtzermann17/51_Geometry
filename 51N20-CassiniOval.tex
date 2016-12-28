@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CassiniOval}
+\pmcreated{2013-03-22 17:44:45}
+\pmmodified{2013-03-22 17:44:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Cassini oval}
+\pmrecord{29}{40196}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51-00}
+\pmsynonym{cassinoid}{CassiniOval}
+\pmsynonym{oval of Cassini}{CassiniOval}
+\pmsynonym{Cassini curve}{CassiniOval}
+\pmrelated{EuclideanDistance}
+\pmrelated{PolarCurve}
+\pmdefines{lemniscate of Bernoulli}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+{\em Cassini oval}\; is the locus of the point $P$ in the plane having a constant product of the distances $PF_1$ and $PF_2$ measured from two \PMlinkescapetext{fixed points} $F_1$ and $F_2$ of the plane.
+
+One obtains the simplest equation for the Cassini oval by choosing $F_1$ and $F_2$ on the other coordinate axis and equidistant ($= c > 0$) from the origin.\, Let\, $F_1 = (-c,\,0)$,\; $F_2 = (c,\,0)$\, and the locus condition
+$$PF_1 \cdot PF_2 \;=\; a^2 \quad (a > 0).$$
+This reads in the Cartesian coordinates
+\begin{align}
+\sqrt{(x+c)^2+y^2}\sqrt{(x-c)^2+y^2} \;=\; a^2,
+\end{align}
+which after squaring may be written
+$$a^4 \;=\; (x^2\!+\!y^2\!+\!c^2\!+\!2cx)(x^2\!+\!y^2\!+\!c^2\!-\!2cx) \;\equiv\; (x^2\!+\!y^2\!+\!c^2)^2-(2cx)^2,$$
+i.e.
+\begin{align}
+(x^2\!+\!y^2\!+\!c^2)^2-4c^2x^2 \;=\; a^4.
+\end{align}
+One sees that the curve is symmetric both in regard to $x$-axis and in regard to $y$-axis, whence it suffices to examine it in the first quadrant ($x \geqq 0$,\, $y \geqq 0$).\, If (2) is written as
+\begin{align}
+y^2 \;=\; \sqrt{a^4\!+\!4c^2x^2}-(x^2\!+\!c^2),
+\end{align}
+it appears that $y$ is real only for\, $\sqrt{a^4\!+\!4c^2x^2} \geqq x^2\!+\!c^2$,\, which condition can be simplified to
+\begin{align}
+|x^2\!-\!c^2| \;\leqq\; a^2.
+\end{align}
+In \PMlinkescapetext{order} to $y$ being real, (4) gives the three cases:\\
+$1^{\underline{o}}$.\, $a < c$.\; We have\, $\sqrt{c^2\!-\!a^2} \leqq x \leqq \sqrt{c^2\!+\!a^2}$;\, thus the curve consists of two separate loops.\\
+$2^{\underline{o}}$.\, $a = c$.\; Now\, $0 \leqq x \leqq c\sqrt{2}$;\, the two loops meet in the origin (the {\em lemniscate of Bernoulli}).\\
+$3^{\underline{o}}$.\, $a > c$.\; Then\, $0 \leqq x \leqq \sqrt{c^2\!+\!a^2}$;\, there is one loop surrounding the origin.
+
+\begin{center}
+\begin{pspicture}(-3,-2.2)(3,2.5)
+\psset{unit=2cm}
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-2.7,-1.5)(2.7,1.6)
+\psplot[linecolor=blue]{-1.414}{1.414}{4 x mul x mul 1 add sqrt x x mul sub 1 sub sqrt}
+\psplot[linecolor=blue]{-1.414}{1.414}{0 4 x mul x mul 1 add sqrt x x mul sub 1 sub sqrt sub}
+\psplot[linecolor=blue]{-1.4865}{1.4865}{4 x mul x mul 1.4641 add sqrt x x mul sub 1 sub sqrt}
+\psplot[linecolor=blue]{-1.4865}{1.4865}{0 4 x mul x mul 1.4641 add sqrt x x mul sub 1 sub sqrt sub}
+\psplot[linecolor=blue]{-1.732}{1.732}{4 x mul x mul 4 add sqrt x x mul sub 1 sub sqrt}
+\psplot[linecolor=blue]{-1.732}{1.732}{0 4 x mul x mul 4 add sqrt x x mul sub 1 sub sqrt sub}
+\psplot[linecolor=blue]{-2}{2}{4 x mul x mul 9 add sqrt x x mul sub 1 sub sqrt}
+\psplot[linecolor=blue]{-2}{2}{0 4 x mul x mul 9 add sqrt x x mul sub 1 sub sqrt sub}
+\psplot[linecolor=blue]{-1.3063}{-0.5415}{4 x mul x mul 0.5 add sqrt x x mul sub 1 sub sqrt}
+\psplot[linecolor=blue]{-1.3063}{-0.5415}{0 4 x mul x mul 0.5 add sqrt x x mul sub 1 sub sqrt sub}
+\psplot[linecolor=blue]{0.5415}{1.3063}{4 x mul x mul 0.5 add sqrt x x mul sub 1 sub sqrt}
+\psplot[linecolor=blue]{0.5415}{1.3063}{0 4 x mul x mul 0.5 add sqrt x x mul sub 1 sub sqrt sub}
+\pscircle[linecolor=green](0,0){1}
+\psdot[linecolor=red](-1,0)
+\psdot[linecolor=red](+1,0)
+\psdot[linecolor=blue](0,0)
+\rput(-3,-2.2){.}
+\rput(3,2.2){.}
+\rput(0,-1.7){Cassinoids with\, $c = 1$ (blue)}
+\end{pspicture}
+\end{center}
+
+When $a$ gets different values (the parametre $c$ being unchanged), (2) \PMlinkescapetext{represents} a family of curves.\, For any point $P$ of the plane (except\, $(\pm c,\,0)$), there is one representant of the family passing through $P$, corresponding the value\, $a = \sqrt{PF_1 \cdot PF_2}$.
+
+As a matter of fact, the common name for all members of the family is {\em Cassini curve}, and only the special case, where\, $a = c\sqrt{2}$,\, is the {\em Cassini oval} proper; it and the other members with\, $a \geqq c\sqrt{2}$\, have the property of having only one highest point\, $(0,\,\sqrt{a^2\!-\!c^2})$.\, All other members (with\, 
+$a < c\sqrt{2}$) have two distinct highest points.
+
+The locus of the highest and lowest points of any member with\, $a \leqq c\sqrt{2}$\, is obtained by solving (2) with respect to $x^2$,
+$$x^2 \;=\; c^2\!-\!y^2\pm\sqrt{a^4\!-\!4c^2y^2},$$
+whence\, $y^2 \leqq \frac{a^4}{4c^2}$.\, When the radicand vanishes, $|y|$ gets its maximum value and then we have\, $x^2 = c^2\!-\!y^2$,\, which means a circle centered in the origin (green in the picture).\\
+
+\textbf{Note 1.}\, Each Cassini oval is the intersection curve of a torus of revolution by a plane parallel to the axis of revolution.
+
+\textbf{Note 2.}\, The astronomer Domenico Cassini found in 1680 the curve named after him; he thought that the \PMlinkescapetext{orbit} of Earth relative to the Sun was a cassinoid with the Sun in the other ``focus''.
+
+\begin{thebibliography}{8}
+\bibitem{FI}{\sc F. Iversen}: {\em Analyyttisen geometrian oppikirja}.  Second edition.\, Kustannusosakeyhti\"o Otava, Helsinki (1963).
+\end{thebibliography} 
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

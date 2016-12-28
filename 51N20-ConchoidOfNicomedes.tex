@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConchoidOfNicomedes}
+\pmcreated{2016-03-23 16:24:23}
+\pmmodified{2016-03-23 16:24:23}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{conchoid of Nicomedes}
+\pmrecord{19}{39940}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{51-00}
+\pmsynonym{conchoid of line}{ConchoidOfNicomedes}
+\pmsynonym{conchoid}{ConchoidOfNicomedes}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\em conchoid of Nicomedes} is the locus of the endpoints of a line segment (\PMlinkescapetext{length} = $2b$), the midpoint of which is on a given line ($l$) and which lies on a line through a given point ($O$, with distance $a$ from $l$).
+
+The curve was invented by the Greek matematician Nicomedes in about 200 BCE.  With his conchoid he solved two classical problems of constructibility, viz. doubling the cube and trisecting the angle.  The name of the curve is derived from Greek $\varkappa\acute{o}\gamma\chi\eta$  `mussel', $\varepsilon\iota\delta{o}\varsigma$ `form, kind, \PMlinkescapetext{type}'.\\
+
+\begin{center}
+\begin{pspicture}(-5.5,-4.5)(5.5,4)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-1.2,-5)(4.8,5)
+\rput(5,-0.13){$x$}
+\rput(0.2,4.8){$y$}
+\rput(2.2,-4.51){$l$}
+\rput(-0.18,+0.2){$O$}
+\rput(2.13,-0.2){$a$}
+\rput(1.45,2.3){$b$}
+\rput(2.45,3.6){$b$}
+\rput(2.65,2.65){$(a,\,h)$}
+\psline(2,-5)(2,5)
+\psline[linestyle=dashed](-0.9,-1.2)(1,1.333)
+\psline[linestyle=dashed](3,4)(3.6,4.8)
+\psline[linecolor=red](1,1.333)(3,4)
+\psdots[linecolor=blue](1,1.337)(3,4.005)
+\psdot[linecolor=red](2,2.667)
+\end{pspicture}
+\end{center}
+
+Choosing for $O$ the origin and $l$ vertical, we have in the polar coordinates $r,\, \varphi$ for the conchoid of Nicomedes the expression
+\begin{align}
+r \;=\; \frac{a}{\cos\varphi}\pm{b}
+\end{align}
+or 
+$$\left(r-\frac{a}{\cos\varphi}\right)^{\!2} \;=\; b^2.$$
+Her we may substitute\, $\cos\varphi = \frac{x}{r}$\, and then\, $r^2 = x^2\!+\!y^2$,\, when the equation of the curve can be simplified to
+\begin{align}
+(x^2\!+\!y^2)(x\!-\!a)^2 \;=\; b^2x^2.
+\end{align}
+Hence, the conchoid is an algebraic curve.\, The form
+\begin{align}
+y \;=\; \pm\frac{x}{x\!-\!a}\sqrt{b^2\!-\!(x\!-\!a)^2}
+\end{align}
+of the equation tells that the curve has as an asymptote the line\, $x = a$.
+
+It's not hard to derive the following parametric presentation of the conchoid of Nicomedes:
+\begin{align}
+x \;=\; a\pm\frac{ab}{\sqrt{a^2\!+\!h^2}},\quad y \;=\; h\pm\frac{bh}{\sqrt{a^2\!+\!h^2}}
+\end{align}
+
+The shape of the conchoid depends on the ratio $a\!:\!b$.  Below in the picture there are three cases where\, $a = 2$\, and $b$ has the values $1.5$ (green), $2$ (blue) and $2.5$ (cyan).\\ \\ \\
+
+\begin{center}
+\begin{pspicture}(-4,-6)(9,6.3)
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-0.9,-5.9)(5,6)
+\rput(5.1,-0.22){$x$}
+\rput(0.2,6.1){$y$}
+\psline(2,-6)(2,6)
+\psplot[linecolor=green]{0.5}{1.6}{x 1 mul x 2 sub div  0 x x mul sub 4 x mul add 1.75 sub sqrt mul}
+\psplot[linecolor=green]{0.5}{1.6}{x 1 mul 2 x sub div  0 x x mul sub 4 x mul add 1.75 sub sqrt mul}
+\psplot[linecolor=green]{2.5}{3.5}{x 1 mul x 2 sub div  0 x x mul sub 4 x mul add 1.75 sub sqrt mul}
+\psplot[linecolor=green]{2.5}{3.5}{x 1 mul 2 x sub div  0 x x mul sub 4 x mul add 1.75 sub sqrt mul}
+
+\psplot[linecolor=cyan]{-0.5}{1.3}{x 1 mul x 2 sub div  0 x x mul sub 4 x mul add 2.25 add sqrt mul}
+\psplot[linecolor=cyan]{-0.5}{1.3}{x 1 mul 2 x sub div  0 x x mul sub 4 x mul add 2.25 add sqrt mul}
+\psplot[linecolor=cyan]{2.8}{4.5}{x 1 mul x 2 sub div  0 x x mul sub 4 x mul add 2.25 add sqrt mul}
+\psplot[linecolor=cyan]{2.8}{4.5}{x 1 mul 2 x sub div  0 x x mul sub 4 x mul add 2.25 add sqrt mul}
+
+\psplot[linecolor=blue]{0}{1.45}{x 1 mul x 2 sub div  0 x x mul sub 4 x mul add sqrt mul}
+\psplot[linecolor=blue]{0}{1.45}{x 1 mul 2 x sub div  0 x x mul sub 4 x mul add sqrt mul}
+\psplot[linecolor=blue]{2.7}{4}{x 1 mul x 2 sub div  0 x x mul sub 4 x mul add sqrt mul}
+\psplot[linecolor=blue]{2.7}{4}{x 1 mul 2 x sub div  0 x x mul sub 4 x mul add sqrt mul}
+
+\rput(7,3){Three conchoids}
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

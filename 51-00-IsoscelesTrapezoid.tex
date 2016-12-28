@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsoscelesTrapezoid}
+\pmcreated{2013-03-22 17:11:59}
+\pmmodified{2013-03-22 17:11:59}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{isosceles trapezoid}
+\pmrecord{25}{39519}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmsynonym{isosceles trapezium}{IsoscelesTrapezoid}
+\pmrelated{SaccheriQuadrilateral}
+\pmdefines{3-sides-equal trapezoid}
+\pmdefines{3 sides equal trapezoid}
+\pmdefines{3-sides-equal trapezium}
+\pmdefines{3 sides equal trapezium}
+\pmdefines{trisosceles trapezoid}
+\pmdefines{trisosceles trapezium}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{legs}
+
+An \emph{isosceles trapezoid} is a trapezoid whose \PMlinkname{legs}{Leg} are congruent and that has two congruent angles such that their common \PMlinkname{side}{Side3} is a base of the trapezoid.  Thus, in an isosceles trapezoid, \emph{any} two angles whose common \PMlinkescapetext{side} is a base of the trapezoid are congruent.
+
+In Euclidean geometry, the convention is to state the definition of an isosceles trapezoid without the condition that the legs are congruent, as this fact can be proven in Euclidean geometry from the other requirements.  For other geometries, such as hyperbolic geometry and spherical geometry, the condition that the legs are congruent is \PMlinkescapetext{essential} for the definition of an isosceles trapezoid, as the other requirements do not imply that the legs are congruent.
+
+The common perpendicular bisector to the bases of an isosceles trapezoid always \PMlinkescapetext{divides} the quadrilateral into two congruent right trapezoids.  In other \PMlinkescapetext{words}, every isosceles trapezoid is symmetric about the common perpendicular to its bases.
+
+Below is a picture of an isosceles trapezoid.  The common perpendicular to its bases is drawn in cyan.
+
+\begin{center}
+\begin{pspicture}(0,0)(4,2)
+\psline[linecolor=cyan](2,0)(2,2)
+\pspolygon(0,0)(1,2)(3,2)(4,0)
+\end{pspicture}
+\end{center}
+
+In some dialects of English (\PMlinkname{e.g.}{Eg} British English), this figure is referred to as an \emph{isosceles trapezium}.  Because of the modifier ``isosceles'', no confusion should arise with this usage.
+
+All rectangles are isosceles trapezoids (unless the \PMlinkescapetext{restricted} definition of trapezoid is used, see the entry on \PMlinkname{trapezoid}{Trapezoid} for more details).  Note that, in Euclidean geometry, if a parallelogram is an isosceles trapezoid, then it must be a rectangle.
+
+In Euclidean geometry, in a circle, the endpoints of two parallel chords are the vertices of an isosceles trapezoid.  Conversely, one may use four suitable points on a circle for obtaining parallel chords (and thus parallel lines).
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\pscircle(0,0){3}
+\pspolygon(-2.828427,-1)(-2,2.236068)(2,2.236068)(2.828427,-1)
+\psdots(-2.828427,-1)(-2,2.236068)(2,2.236068)(2.828427,-1)
+\end{pspicture}
+\end{center}
+
+A \PMlinkescapetext{right isosceles trapezoid} is a trapezoid that is simultaneously a right trapezoid and an isosceles trapezoid.  In Euclidean geometry, such trapezoids are automatically rectangles. In hyperbolic geometry, such trapezoids are automatically Saccheri quadrilaterals.  Thus, the phrase ``right isosceles trapezoid'' occurs rarely.
+
+A \emph{3-sides-equal trapezoid} is an isosceles trapezoid having at least three congruent sides.  Below is a picture of a 3-sides-equal trapezoid.
+
+\begin{center}
+\begin{pspicture}(0,0)(5.5,2)
+\pspolygon(0,0)(1.5,2)(4,2)(5.5,0)
+\end{pspicture}
+\end{center}
+
+In some dialects of English (e.g. British English), this figure is referred to as a \emph{3-sides-equal trapezium}.  Because of the modifier ``3-sides-equal'', no confusion should arise with this usage.
+
+A rare but convenient alternative name for a 3-sides-equal trapezoid is a \emph{trisosceles trapezoid}; the corresponding name \emph{trisosceles trapezium} does not seem to be in \PMlinkescapetext{current} usage.
+%%%%%
+%%%%%
+\end{document}

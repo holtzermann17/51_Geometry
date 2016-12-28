@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnitDisc}
+\pmcreated{2013-03-22 15:47:01}
+\pmmodified{2013-03-22 15:47:01}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{unit disc}
+\pmrecord{7}{37741}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{54-00}
+\pmsynonym{unit ball}{UnitDisc}
+\pmrelated{UnitDisk}
+\pmrelated{OpenBall}
+\pmrelated{Ball}
+\pmdefines{closed unit disk}
+\pmdefines{open unit disk}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+The \emph{open  unit disc} around $P$ (where $P$ is a given point on the plane), is the set of points whose distance from $P$ is less than one:
+\[D_1(P) = \{ Q : \vert P-Q\vert<1\}.\]
+
+A \emph{closed unit  disc} is the set of points whose distance from $P$ is less than or equal to one:
+\[\overline D_1(P)=\{Q:|P-Q| \leq 1\}\]
+
+Unit discs are a special case of unit ball. Without further specifications, the term ''unit disc'' is used for the open unit disc about the origin, $D_1(0)$.
+
+The specific set of points in the unit disc, and hence, its visual appearance, depends on the metric being used.
+\figuraex{unitdisc}{scale=0.75}
+
+With the standard metric, unit discs look like circles of radius one, but changing the metric changes also the corresponding set of points and therefore the shape of the discs.  	 
+ 		 
+For instance, with the taxicab metric discs look like squares, while on the Chebyshev metric a disc is shaped like a rhombus (even though the underlying topologies are the same as the Euclidean one).
+%%%%%
+%%%%%
+\end{document}

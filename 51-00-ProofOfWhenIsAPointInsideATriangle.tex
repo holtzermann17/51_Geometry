@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfWhenIsAPointInsideATriangle}
+\pmcreated{2013-03-22 17:57:08}
+\pmmodified{2013-03-22 17:57:08}
+\pmowner{joen235}{18354}
+\pmmodifier{joen235}{18354}
+\pmtitle{proof of when is a point inside a triangle}
+\pmrecord{4}{40451}
+\pmprivacy{1}
+\pmauthor{joen235}{18354}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathbf{u}\in\mathbb{R}^{2}$, $\mathbf{v}\in\mathbb{R}^{2}$
+and $\mathbf{0}\in\mathbb{R}^{2}$. Let's consider the convex hull
+of the set $T=\left\{ \mathbf{u},\mathbf{v},\mathbf{0}\right\} $.
+By definition, the convex hull of $T$, noted $coT$, is the smallest
+convex set that contains $T$. Now, the triangle $\Delta_{T}$ spanned
+by $T$ is convex and contains $T$. Then $coT\subseteq\Delta_{T}$.
+Now, every convex $C$ set containing $T$ must satisfy that $t\mathbf{u}+\left(1-t\right)\mathbf{v}\in C$,
+$t\mathbf{u}\in C$ and $t\mathbf{v}\in C$ for $0\leq t\leq1$ (at
+least the convex combination of the points of $T$ are contained in
+$C$). This means that the boundary of $\Delta_{T}$ is contained
+in $C$. But then every convex combination of points of $\partial\Delta_{T}$
+must also be contained in $C$, meaning that $\Delta_{T}\subseteq C$
+for every convex set containing $T$. In particular, $\Delta_{T}\subseteq coT$.
+
+Since the convex hull is exactly the set containing all convex combinations
+of points of $T$,\[
+\Delta_{T}=coT=\left\{ \mathbf{x}\in\mathbb{R}^{2}:\mathbf{x}=\lambda\mathbf{u}+\mu\mathbf{v}+\left(1-\lambda-\mu\right)\mathbf{0},0\leq\lambda,\mu,\leq1,0\leq1-\lambda-\mu\leq1\right\} \]
+we conclude that $\mathbf{x}\in\mathbb{R}^{2}$ is in the triangle
+spanned by $T$ if and only if $\mathbf{x}=\lambda\mathbf{u}+\mu\mathbf{v}$
+with $0\leq\lambda,\mu,\leq1$ and $0\leq\lambda+\mu\leq1$.
+%%%%%
+%%%%%
+\end{document}

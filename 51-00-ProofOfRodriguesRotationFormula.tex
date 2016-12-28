@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRodriguesRotationFormula}
+\pmcreated{2013-03-22 15:23:25}
+\pmmodified{2013-03-22 15:23:25}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{proof of Rodrigues' rotation formula}
+\pmrecord{14}{37221}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{15-00}
+\pmrelated{DimensionOfTheSpecialOrthogonalGroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{enumerate}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\bv}{\mathbf{v}}
+
+\providecommand{\transpose}[1]{{#1}^{\textrm{t}}}
+\DeclareMathOperator{\trace}{tr}
+\begin{document}
+Let $[ \bx, \by, \bz]$ be a frame of right-handed orthonormal vectors in $\real^3$,
+and let $\bv = a\bx + b\by + c\bz$ (with $a, b, c \in \real$) be any vector to be rotated on the $\bz$ axis,
+by an angle $\theta$ counter-clockwise.
+
+\begin{center}
+\includegraphics{rodrigues.eps}
+\end{center}
+
+The image vector $\bv'$ is the vector $\bv$ with its component
+in the $\bx,\by$ plane rotated, so we can write
+\[
+\bv' = a\bx' + b\by' + c\bz\,,\\
+\]
+where $\bx'$ and $\by'$ are the rotations by angle $\theta$ of the $\bx$ and $\by$ vectors in the $\bx,\by$ plane. By the rotation formula in two dimensions, we have
+\begin{align*}
+\bx' &= \cos \theta \, \bx + \sin \theta \, \by\,, \\
+\by' &= -\sin \theta \, \bx + \cos \theta \, \by\,.
+\end{align*}
+So
+\[
+\bv' = \cos \theta (a\bx + b\by) + \sin \theta (a \by - b\bx) + c\bz\,.
+\]
+The vector $a \bx + b\by$ is the projection of $\bv$
+onto the $\bx,\by$ plane, and $a \by - b\bx$ is its rotation by $90^\circ$.
+So these two vectors form an orthogonal frame in the $\bx,\by$ plane,
+although they are not necessarily unit vectors.
+Alternate expressions for these vectors are easily derived --- especially with the help of the picture:
+\begin{align*}
+\bv - (\bv \cdot \bz) \bz &= \bv - c\bz = a\bx + b\by\,, \\
+\bz \times \bv &= a (\bz\times \bx) + b (\bz \times \by) + c (\bz \times \bz) = a\by - b\bx \,.
+\end{align*}
+Substituting these into the expression for $\bv'$:
+\[
+\bv' = \cos \theta (\bv - (\bv \cdot \bz) \bz) + \sin\theta (\bz \times \bv) + c\bz\,,
+\]
+which could also have been derived directly 
+if we had first considered the frame $[\bv - (\bv \cdot \bz), \bz \times \bv]$ instead of $[\bx, \by]$.
+
+We attempt to simplify further:
+\[
+\bv' = \bv + \sin\theta (\bz \times \bv) + (\cos \theta - 1)(\bv - (\bv \cdot \bz)\bz )\,.
+\]
+Since $\bz \times \bv$ is linear in $\bv$, this transformation is represented by
+a linear operator $A$. Under a right-handed orthonormal basis,
+the matrix representation of $A$ is directly computed to be
+\[
+A\bv = \bz \times \bv
+= \begin{bmatrix} 
+0 & -z_3 & z_2 \\ 
+z_3 & 0 & -z_1 \\
+-z_2 & z_1 & 0
+\end{bmatrix}
+\,
+\begin{bmatrix}
+v_1 \\
+v_2 \\
+v_3
+\end{bmatrix}
+\,.
+\]
+We also have
+\begin{align*}
+-(\bv - (\bv \cdot \bz) \bz) &= -a\bx - b\by &
+\text{(rotate $a\bx + b\by$ by $180^\circ$)} \\
+&= \bz \times (a\by - b\bx) &
+\text{(rotate $a\by - b\bx$ by $90^\circ$)} 
+\\
+&= \bz \times (\bz \times (a\bx + b\by +c\bz)) \\ 
+&= A^2 \, \bv\,.
+\end{align*}
+So
+\[
+\bv' = I\bv + \sin \theta \, A\bv + (1- \cos\theta) A^2 \, \bv\,,
+\]
+proving Rodrigues' rotation formula.
+
+\section*{Relation with the matrix exponential}
+Here is a curious fact. Notice that the matrix\footnote{If we want to use coordinate-free \PMlinkescapetext{language}, then in this section, ``matrix'' should be replaced by ``linear operator'' and transposes should be replaced by the adjoint operation.} $A$ is skew-symmetric.
+This is not a coincidence --- for any skew-symmetric matrix $B$, we have 
+$\transpose{(e^B)} = e^{\transpose{B}} = e^{-B} = (e^B)^{-1}$, 
+and $\det e^B = e^{\trace B} = e^0 = 1$,
+so $e^B$ is always a rotation.  It is in fact the case that:
+\begin{align*}
+I + \sin \theta \, A + (1- \cos\theta) A^2 = e^{\theta A}
+\end{align*}
+for the matrix $A$ we had above! To prove this, observe that powers of $A$ cycle like so:
+\begin{align*}
+I, A, A^2, -A, -A^2, A, A^2, -A, -A^2, \dotsc
+\end{align*}
+Then 
+\begin{align*}
+\sin \theta \, A &= \sum_{k=0}^\infty \frac{(-1)^k \theta^{2k+1} A}{(2k+1)!} 
+= \sum_{k=0}^\infty \frac{\theta^{2k+1} A^{2k+1}}{(2k+1)!} = \sum_{k \textrm{ odd}} \frac{(\theta A)^k}{k!}
+\\
+(1 - \cos \theta) \, A^2 &= \sum_{k=1}^\infty \frac{(-1)^{k-1} \theta^{2k} A^2}{(2k)!}
+= \sum_{k=1}^\infty \frac{\theta^{2k} A^{2k}}{(2k)!} = \sum_{k\geq 2 \textrm{ even}} 
+\frac{(\theta A)^k}{k!}\,.
+\end{align*}
+Adding $\sin \theta \, A$, $(1-\cos \theta) A^2$ and $I$ together, we obtain the power series
+for $e^{\theta A}$.
+
+\emph{Second proof:}
+If we regard $\theta$ as time, and differentiate the equation 
+$\bv' = a\bx' + b\by' + c\bz$ with respect to $\theta$, we obtain
+$d\bv'/d\theta = a\by' - b\bx' = \bz \times \bv' = A \bv'$, whence the solution (to this linear ODE)
+is $\bv' = e^{\theta A} \bv$. 
+
+\emph{Remark:} The operator $e^{\theta A}$, as $\theta$ ranges over $\real$,
+is a one-parameter subgroup of $\mathrm{SO}(3)$.
+In higher dimensions $n$, every rotation in $\mathrm{SO}(n)$ is of the form
+$e^A$ for a skew-symmetric $A$, and the second proof above
+can be modified to prove this more general fact.
+%%%%%
+%%%%%
+\end{document}
