@@ -1,0 +1,287 @@
+<!DOCTYPE html><html>
+<head>
+<title>Bézier curve</title>
+<!--Generated on Fri Feb  9 22:09:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Bézier curve</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Bézier curves are a particular family of curves in <math id="S1.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{m}" display="inline"><msup><mi>ℝ</mi><mi>m</mi></msup></math>
+that parameterize a smooth path  given points.
+They are often used to model or approximate general curved shapes
+because of their algebraic simplicity.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Bézier curves were originally developed by Paul de Casteljau in 1959. But it became a famous shape only when Pierre Bézier, a French engineer at Renault, used it to  automobiles in the 1970’s.
+They are now widely used in many  such as industrial and computer-aided ,
+vector-based drawing, font design, and 3D modeling.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Definition</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Given <math id="S2.p1.m1" class="ltx_Math" alttext="n+1" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></math> points <math id="S2.p1.m2" class="ltx_Math" alttext="\boldsymbol{P}_{i}" display="inline"><msub><mi>𝑷</mi><mi>i</mi></msub></math> in <math id="S2.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{m}" display="inline"><msup><mi>ℝ</mi><mi>m</mi></msup></math>,
+the <em class="ltx_emph ltx_font_italic">Bézier curve</em> for these <em class="ltx_emph ltx_font_italic">control points</em> is the curve <math id="S2.p1.m4" class="ltx_Math" alttext="\boldsymbol{B}\colon[0,1]\to\mathbb{R}^{m}" display="inline"><mrow><mi>𝑩</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></mrow></math>
+defined by</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="\boldsymbol{B}(t)=\sum_{i=0}^{n}\binom{n}{i}(1-t)^{n-i}\,t^{i}\&gt;\boldsymbol{P}%
+_{i}\,." display="block"><mrow><mrow><mrow><mi>𝑩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><msup><mi>t</mi><mi>i</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>𝑷</mi><mi>i</mi></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The coefficients in this expression:</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="b_{i,n}(t)=\binom{n}{i}(1-t)^{n-i}\,t^{i}\,,\quad i=0,\ldots,n\,." display="block"><mrow><mrow><mrow><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo>,</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>t</mi><mi>i</mi></msup></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>i</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mpadded width="+1.7pt"><mi>n</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are the Bernstein basis polynomials.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Special cases</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">A Bézier curve between two control points is simply the line segment
+between the two points:</p>
+<table id="S3.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex3.m1" class="ltx_Math" alttext="\boldsymbol{B}(t)=(1-t)\,\boldsymbol{P}_{0}+t\,\boldsymbol{P}_{1}\,." display="block"><mrow><mrow><mrow><mi>𝑩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>𝑷</mi><mn>0</mn></msub></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>t</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>𝑷</mi><mn>1</mn></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">For three control points, we have the quadratic Bézier curve:</p>
+<table id="S3.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex4.m1" class="ltx_Math" alttext="\boldsymbol{B}(t)=(1-t)^{2}\,\boldsymbol{P}_{0}+2t(1-t)\,\boldsymbol{P}_{1}+t^%
+{2}\,\boldsymbol{P}_{2}\,." display="block"><mrow><mrow><mrow><mi>𝑩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><msub><mi>𝑷</mi><mn>0</mn></msub></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>𝑷</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msup><mi>t</mi><mn>2</mn></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>𝑷</mi><mn>2</mn></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">For four control points, we have the cubic Bézier curve:</p>
+<table id="S3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex5.m1" class="ltx_Math" alttext="\boldsymbol{B}(t)=(1-t)^{3}\,\boldsymbol{P}_{0}+3t(1-t)^{2}\,\boldsymbol{P}_{1%
+}+3t^{2}(1-t)\,\boldsymbol{P}_{2}+t^{3}\,\boldsymbol{P}_{3}\,." display="block"><mrow><mrow><mrow><mi>𝑩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mpadded><mo>⁢</mo><msub><mi>𝑷</mi><mn>0</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><msub><mi>𝑷</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>𝑷</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msup><mi>t</mi><mn>3</mn></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>𝑷</mi><mn>3</mn></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">These are the most commonly employed versions of Bézier curves.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Properties</h2>
+
+<div id="S4.p1" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Except for the first and the last points, where the curve starts and ends, the Bézier curve should not pass through any of the control points. i.e. all the controls points lie on the curve if and only if the curve is a straight line.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The curve is tangent to the segment of line <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\overline{\boldsymbol{P}_{0}\,\boldsymbol{P}_{1}}" display="inline"><mover accent="true"><mrow><mpadded width="+1.7pt"><msub><mi>𝑷</mi><mn>0</mn></msub></mpadded><mo>⁢</mo><msub><mi>𝑷</mi><mn>1</mn></msub></mrow><mo>¯</mo></mover></math> at the start and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\overline{\boldsymbol{P}_{n-1}\,\boldsymbol{P}_{n}}" display="inline"><mover accent="true"><mrow><mpadded width="+1.7pt"><msub><mi>𝑷</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mpadded><mo>⁢</mo><msub><mi>𝑷</mi><mi>n</mi></msub></mrow><mo>¯</mo></mover></math> at the end.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">It is easy to keep until the first order continuity when chaining curves. Moreover, every Bézier curve can be cut at any point into two new Bézier curves. In fact, the  industry uses series of Bézier curves with only 4 control points (a bicubic version of the equations) to draw complex shapes.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">The curves never do fancy stuff and always remain within the convex hull of the control points.
+</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">For one and two points the definition is still valid and the result became a point and a segment of line, respectively.</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">But it is impossible to draw circles or arcs of circle.</p>
+</div>
+</li>
+<li id="I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i7.p1" class="ltx_para">
+<p class="ltx_p">It is also impossible to draw two parallel curves (except in trivial cases: straight line Béziers and coincident Béziers curves)</p>
+</div>
+</li>
+<li id="I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i8.p1" class="ltx_para">
+<p class="ltx_p">If the first and the last point are the same, the curve is closed. And if <math id="I1.i8.p1.m1" class="ltx_Math" alttext="\boldsymbol{P}_{1}" display="inline"><msub><mi>𝑷</mi><mn>1</mn></msub></math> and <math id="I1.i8.p1.m2" class="ltx_Math" alttext="\boldsymbol{P}_{n-1}" display="inline"><msub><mi>𝑷</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></math> are aligned with <math id="I1.i8.p1.m3" class="ltx_Math" alttext="\boldsymbol{P}_{0}" display="inline"><msub><mi>𝑷</mi><mn>0</mn></msub></math> then the curve is closed with a first order continuity.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Curve Cut</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.p1.m1" class="ltx_Math" alttext="\boldsymbol{B}_{p}(t)" display="inline"><mrow><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a Bezier curve, defined by its control points <math id="S5.p1.m2" class="ltx_Math" alttext="\boldsymbol{P}_{0}" display="inline"><msub><mi>𝑷</mi><mn>0</mn></msub></math> to <math id="S5.p1.m3" class="ltx_Math" alttext="\boldsymbol{P}_{n}" display="inline"><msub><mi>𝑷</mi><mi>n</mi></msub></math> for <math id="S5.p1.m4" class="ltx_Math" alttext="t\in[0,1]" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.p2.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math> be such as <math id="S5.p2.m2" class="ltx_Math" alttext="[a,b]\subset[0,1]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>⊂</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math>
+Let <math id="S5.p2.m3" class="ltx_Math" alttext="u={{t-a}\over{b-a}}" display="inline"><mrow><mi>u</mi><mo>=</mo><mfrac><mrow><mi>t</mi><mo>-</mo><mi>a</mi></mrow><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow></mfrac></mrow></math> be such as <math id="S5.p2.m4" class="ltx_Math" alttext="\forall u\in[0,1],t\in[a,b]" display="inline"><mrow><mrow><mrow><mo>∀</mo><mi>u</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math></p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p"><math id="S5.p3.m1" class="ltx_Math" alttext="\boldsymbol{B}_{q}(u)" display="inline"><mrow><msub><mi>𝑩</mi><mi>q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a part of the initial bezier curve with new control points <math id="S5.p3.m2" class="ltx_Math" alttext="\boldsymbol{Q}_{0}" display="inline"><msub><mi>𝑸</mi><mn>0</mn></msub></math>
+to <math id="S5.p3.m3" class="ltx_Math" alttext="\boldsymbol{Q}_{n}" display="inline"><msub><mi>𝑸</mi><mi>n</mi></msub></math> whose  will be determined.</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">For <math id="S5.p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> control points <math id="S5.p4.m2" class="ltx_Math" alttext="\boldsymbol{B}(t)" display="inline"><mrow><mi>𝑩</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a <math id="S5.p4.m3" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>-order polynom.</p>
+</div>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p"><math id="S5.p5.m1" class="ltx_Math" alttext="\boldsymbol{B}_{p}(a)=\boldsymbol{B}_{q}(0)" display="inline"><mrow><mrow><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>𝑩</mi><mi>q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+</p>
+</div>
+<div id="S5.p6" class="ltx_para">
+<p class="ltx_p"><math id="S5.p6.m1" class="ltx_Math" alttext="\boldsymbol{B}_{p}(b)=\boldsymbol{B}_{q}(1)" display="inline"><mrow><mrow><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>𝑩</mi><mi>q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+<div id="S5.p7" class="ltx_para">
+<p class="ltx_p">Let take <math id="S5.p7.m1" class="ltx_Math" alttext="n-2" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></math> more points, evenly spaced in [a,b]
+<math id="S5.p7.m2" class="ltx_Math" alttext="u_{i}=k/{n-1}\forall k\in[1..n-1]" display="inline"><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>=</mo><mi>k</mi><mo>/</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo>∀</mo><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>.</mo><mo>.</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math></p>
+</div>
+<div id="S5.p8" class="ltx_para">
+<p class="ltx_p"><math id="S5.p8.m1" class="ltx_Math" alttext="\boldsymbol{B}_{p}(u(b-a)+a)=\boldsymbol{B}_{q}(u_{i})" display="inline"><mrow><mrow><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>𝑩</mi><mi>q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for each <math id="S5.p8.m2" class="ltx_Math" alttext="u_{i}" display="inline"><msub><mi>u</mi><mi>i</mi></msub></math></p>
+</div>
+<div id="S5.p9" class="ltx_para">
+<p class="ltx_p">For a 4 control points bezier curve
+If we take <math id="S5.p9.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> in <math id="S5.p9.m2" class="ltx_Math" alttext="(0,{1\over 3},{2\over 3},1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>,</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>, hence <math id="S5.p9.m3" class="ltx_Math" alttext="t_{0}" display="inline"><msub><mi>t</mi><mn>0</mn></msub></math>, <math id="S5.p9.m4" class="ltx_Math" alttext="t_{1}" display="inline"><msub><mi>t</mi><mn>1</mn></msub></math>, <math id="S5.p9.m5" class="ltx_Math" alttext="t_{2}" display="inline"><msub><mi>t</mi><mn>2</mn></msub></math>, <math id="S5.p9.m6" class="ltx_Math" alttext="t_{3}" display="inline"><msub><mi>t</mi><mn>3</mn></msub></math> respectively equal to <math id="S5.p9.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, <math id="S5.p9.m8" class="ltx_Math" alttext="\frac{b-2a}{3}" display="inline"><mfrac><mrow><mi>b</mi><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow></mrow><mn>3</mn></mfrac></math>, <math id="S5.p9.m9" class="ltx_Math" alttext="\frac{2b-a}{3}" display="inline"><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow><mo>-</mo><mi>a</mi></mrow><mn>3</mn></mfrac></math>, <math id="S5.p9.m10" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math></p>
+</div>
+<div id="S5.p10" class="ltx_para">
+<p class="ltx_p"><math id="S5.p10.m1" class="ltx_Math" alttext="\boldsymbol{Q}_{0}=\boldsymbol{B}_{p}(t_{0})" display="inline"><mrow><msub><mi>𝑸</mi><mn>0</mn></msub><mo>=</mo><mrow><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+<div id="S5.p11" class="ltx_para">
+<p class="ltx_p"><math id="S5.p11.m1" class="ltx_Math" alttext="\boldsymbol{Q}_{1}={-15\boldsymbol{B}_{p}(t_{0})+54\boldsymbol{B}_{p}(t_{1})-2%
+7\boldsymbol{B}_{p}(t_{2})+6\boldsymbol{B}_{p}(t_{3})}/18" display="inline"><mrow><msub><mi>𝑸</mi><mn>1</mn></msub><mo>=</mo><mrow><mrow><mrow><mrow><mo>-</mo><mrow><mn>15</mn><mo>⁢</mo><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mn>54</mn><mo>⁢</mo><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mn>27</mn><mo>⁢</mo><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mn>6</mn><mo>⁢</mo><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>18</mn></mrow></mrow></mrow></math></p>
+</div>
+<div id="S5.p12" class="ltx_para">
+<p class="ltx_p"><math id="S5.p12.m1" class="ltx_Math" alttext="\boldsymbol{Q}_{2}={6\boldsymbol{B}_{p}(t_{0})-27\boldsymbol{B}_{p}(t_{1})+54%
+\boldsymbol{B}_{p}(t_{2})-15\boldsymbol{B}_{p}(t_{3})}/18" display="inline"><mrow><msub><mi>𝑸</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><mrow><mrow><mn>6</mn><mo>⁢</mo><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mn>27</mn><mo>⁢</mo><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mn>54</mn><mo>⁢</mo><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mrow><mn>15</mn><mo>⁢</mo><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>18</mn></mrow></mrow></mrow></math></p>
+</div>
+<div id="S5.p13" class="ltx_para">
+<p class="ltx_p"><math id="S5.p13.m1" class="ltx_Math" alttext="\boldsymbol{Q}_{3}=\boldsymbol{B}_{p}(b)" display="inline"><mrow><msub><mi>𝑸</mi><mn>3</mn></msub><mo>=</mo><mrow><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+<div id="S5.p14" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">http://en.wikipedia.org/wiki/Bezier_curve</span>Wiki
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Bézier curve</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BezierCurve</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2015-01-23 16:33:51</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2015-01-23 16:33:51</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">yota (10184)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">yota (10184)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">yota (10184)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51N05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Bezier curve</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">NURBS</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">BSpline</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:09:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

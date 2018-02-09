@@ -1,0 +1,305 @@
+<!DOCTYPE html><html>
+<head>
+<title>neutral geometry</title>
+<!--Generated on Fri Feb  9 22:01:30 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">neutral geometry</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Dedekind Cuts.</span> Let <math id="p1.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> be a line in a linear ordered
+geometry <math id="p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and let <math id="p1.m3" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> be two subsets on <math id="p1.m4" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>. A point <math id="p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is
+said to be between <math id="p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> if for any pair of points <math id="p1.m8" class="ltx_Math" alttext="q\in A" display="inline"><mrow><mi>q</mi><mo>∈</mo><mi>A</mi></mrow></math>
+and <math id="p1.m9" class="ltx_Math" alttext="r\in B" display="inline"><mrow><mi>r</mi><mo>∈</mo><mi>B</mi></mrow></math>, <math id="p1.m10" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is between <math id="p1.m11" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> and <math id="p1.m12" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>. Note that <math id="p1.m13" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> necessarily
+lies on <math id="p1.m14" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>.
+
+<br class="ltx_break">
+<br class="ltx_break">For example, given a ray <math id="p1.m15" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> on a line <math id="p1.m16" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>. If <math id="p1.m17" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is the
+source of <math id="p1.m18" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>, then <math id="p1.m19" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a point between <math id="p1.m20" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> and its
+opposite ray <math id="p1.m21" class="ltx_Math" alttext="-\rho" display="inline"><mrow><mo>-</mo><mi>ρ</mi></mrow></math>, regardless whether the ray is defined to be
+open or closed. It is easy to see that <math id="p1.m22" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is the unique point
+between <math id="p1.m23" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> and <math id="p1.m24" class="ltx_Math" alttext="-\rho" display="inline"><mrow><mo>-</mo><mi>ρ</mi></mrow></math>.
+
+<br class="ltx_break">
+<br class="ltx_break">Given a line <math id="p1.m25" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, a Dedekind cut on <math id="p1.m26" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> is a pair of subsets
+<math id="p1.m27" class="ltx_Math" alttext="A,B\subseteq\ell" display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>⊆</mo><mi mathvariant="normal">ℓ</mi></mrow></math> such that <math id="p1.m28" class="ltx_Math" alttext="A\cup B=\ell" display="inline"><mrow><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><mo>=</mo><mi mathvariant="normal">ℓ</mi></mrow></math> and there is a unique
+point <math id="p1.m29" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> between <math id="p1.m30" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p1.m31" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. A ray <math id="p1.m32" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> on a line <math id="p1.m33" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> and
+its compliment <math id="p1.m34" class="ltx_Math" alttext="\overline{\rho}" display="inline"><mover accent="true"><mi>ρ</mi><mo>¯</mo></mover></math> constitute a Dedekind cut on
+<math id="p1.m35" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>.
+
+<br class="ltx_break">
+<br class="ltx_break">If <math id="p1.m36" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> form a Dedekind cut on <math id="p1.m37" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, then <math id="p1.m38" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p1.m39" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> have two additional properties:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">no point on <math id="I1.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is strictly between two points on <math id="I1.i1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, and</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">no point on <math id="I1.i2.p1.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is strictly between two points on <math id="I1.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Conversely, if <math id="p2.m1" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> satisfy the above two conditions, can we say that <math id="p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p2.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> constitute a Dedekind cut? In a neutral geometry, the answer is yes.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Neutral Geometry.</span> A neutral geometry is a linear ordered
+geometry satisfying</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">the congruence axioms, and</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">the continuity axiom:
+given any line <math id="I2.i2.p1.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> with <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\ell=A\cup B" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow></mrow></math> such that
+</p>
+<ol id="I2.I1" class="ltx_enumerate">
+<li id="I2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">no point on <math id="I2.I1.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is (strictly) between two points on <math id="I2.I1.i1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, and</p>
+</div>
+</li>
+<li id="I2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">no point on <math id="I2.I1.i2.p1.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is (strictly) between two points on <math id="I2.I1.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">then <math id="I2.i2.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I2.i2.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> constitute a Dedekind cut on <math id="I2.i2.p1.m5" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>. In other
+words, there is a unique point <math id="I2.i2.p1.m6" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> between <math id="I2.i2.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I2.i2.p1.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Clearly,
+<math id="p3.m1" class="ltx_Math" alttext="A\cap B" display="inline"><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></math> contains at most one point. The continuity axiom is also known as Dedekind’s Axiom.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Properties.</span></p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I3.i1.p1.m1" class="ltx_Math" alttext="\ell=A\cup B" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow></mrow></math> be a line, satisfying (a) and (b)
+above and let <math id="I3.i1.p1.m2" class="ltx_Math" alttext="p\in A" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>A</mi></mrow></math>. Suppose <math id="I3.i1.p1.m3" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> lying on <math id="I3.i1.p1.m4" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> is a ray
+emanating from <math id="I3.i1.p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Then either <math id="I3.i1.p1.m6" class="ltx_Math" alttext="\rho\subseteq A" display="inline"><mrow><mi>ρ</mi><mo>⊆</mo><mi>A</mi></mrow></math> or <math id="I3.i1.p1.m7" class="ltx_Math" alttext="B\subseteq\rho" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>ρ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I3.i2.p1.m1" class="ltx_Math" alttext="\ell=A\cup B" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow></mrow></math> be a line, satisfying (a) and (b)
+above and let <math id="I3.i2.p1.m2" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> be the unique point as mentioned above. Then a
+closed ray emanating from <math id="I3.i2.p1.m3" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> is either <math id="I3.i2.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> or <math id="I3.i2.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.
+This implies that every Dedekind cut on a line
+<math id="I3.i2.p1.m6" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> consists of at least one ray.</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">We can similarly propose a continuity axiom on a ray as follows: given any ray <math id="I3.i3.p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> with <math id="I3.i3.p1.m2" class="ltx_Math" alttext="\rho=A\cup B" display="inline"><mrow><mi>ρ</mi><mo>=</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow></mrow></math> such that</p>
+<ul id="I3.I1" class="ltx_itemize">
+<li id="I3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">no point on <math id="I3.I1.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is strictly between two points on <math id="I3.I1.i1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, and</p>
+</div>
+</li>
+<li id="I3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">no point on <math id="I3.I1.i2.p1.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is strictly between two points on <math id="I3.I1.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">then there is a unique point <math id="I3.i3.p1.m3" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> on <math id="I3.i3.p1.m4" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> between <math id="I3.i3.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I3.i3.p1.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.
+It turns out that the two continuity axioms are equivalent.</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Archimedean Property</span> Given two line segments <math id="I3.i4.p1.m1" class="ltx_Math" alttext="\overline{pq}" display="inline"><mover accent="true"><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>¯</mo></mover></math> and <math id="I3.i4.p1.m2" class="ltx_Math" alttext="\overline{rs}" display="inline"><mover accent="true"><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow><mo>¯</mo></mover></math>, then there is a unique natural number <math id="I3.i4.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and a unique point <math id="I3.i4.p1.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, such that</p>
+<ol id="I3.I2" class="ltx_enumerate">
+<li id="I3.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I3.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.I2.i1.p1.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> lies on the line segment <math id="I3.I2.i1.p1.m2" class="ltx_Math" alttext="n\cdot\overline{rs}\subseteq\overrightarrow{rs}" display="inline"><mrow><mrow><mi>n</mi><mo>⋅</mo><mover accent="true"><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow><mo>¯</mo></mover></mrow><mo>⊆</mo><mover accent="true"><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow><mo>→</mo></mover></mrow></math>,</p>
+</div>
+</li>
+<li id="I3.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I3.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.I2.i2.p1.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> does not lie on the line segment
+<math id="I3.I2.i2.p1.m2" class="ltx_Math" alttext="(n-1)\cdot\overline{rs}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mover accent="true"><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow><mo>¯</mo></mover></mrow></math>, and</p>
+</div>
+</li>
+<li id="I3.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(c)</span> 
+<div id="I3.I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.I2.i3.p1.m1" class="ltx_Math" alttext="\overline{pq}\cong\overline{rt}" display="inline"><mrow><mover accent="true"><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>¯</mo></mover><mo>≅</mo><mover accent="true"><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow><mo>¯</mo></mover></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">This property usually appears in the study of ordered fields.</p>
+</div>
+</li>
+<li id="I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I3.i5.p1" class="ltx_para">
+<p class="ltx_p">For any given line <math id="I3.i5.p1.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> and any point <math id="I3.i5.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, there exists a line <math id="I3.i5.p1.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> passing through <math id="I3.i5.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> that is perpendicular to <math id="I3.i5.p1.m5" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>.</p>
+</div>
+</li>
+<li id="I3.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I3.i6.p1" class="ltx_para">
+<p class="ltx_p">Consequently, for any given line <math id="I3.i6.p1.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> and any point <math id="I3.i6.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> not lying on <math id="I3.i6.p1.m3" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, there exists at leaast one line passing through <math id="I3.i6.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> that is parallel to <math id="I3.i6.p1.m5" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>. If there is more than one line passing through <math id="I3.i6.p1.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> parallel to <math id="I3.i6.p1.m7" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, then there are infinitely many of these lines.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples</span>.</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">A Euclidean geometry is a neutral geometry satisfying the Euclid’s
+parallel axiom: for any given line and any given point not lying on
+the line, there is a unique line passing through the point and
+parallel to the given line.</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">A hyperbolic geometry (or Bolyai-Lobachevsky geometry) is a neutral
+geometry satisfying the hyperbolic axiom: for any given line and any
+given point not lying on the line, there are at least two distinct (hence infinitely many)
+lines passing through the point and parallel to the given line.</p>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<p class="ltx_p">In fact, one can replace the <em class="ltx_emph ltx_font_italic">indefinite article</em> “a” in the
+first letter of each of the above examples by the <em class="ltx_emph ltx_font_italic">definite
+article</em> “the”. It can be shown that any two Euclidean geometries
+are geometrically isomorphic (preserving incidence, order,
+congruence, and continuity). Similarly, any two hyperbolic
+geometries are isomorphic. Such geometries are said to be
+<em class="ltx_emph ltx_font_italic">categorical</em>.</p>
+</div>
+</li>
+<li id="I4.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i4.p1" class="ltx_para">
+<p class="ltx_p">An elliptic geometry is not a neutral geometry, because pairwise distinct parallel lines do not exist.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">neutral geometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NeutralGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:33:49</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:33:49</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51F10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51F05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">absolute geometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Dedekind axiom</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">hyperbolic axiom</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Bolyai-Lobachevsky geometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">continuity axiom</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">categorical</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:01:30 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

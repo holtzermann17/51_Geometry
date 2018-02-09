@@ -1,0 +1,227 @@
+<!DOCTYPE html><html>
+<head>
+<title>polygon</title>
+<!--Generated on Fri Feb  9 21:52:41 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">polygon</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">polygon</em> is a simple (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SimpleCurve</span>), closed path that lies on a plane and is composed entirely of line segments. In other words, if someone were to walk on a polygon, then the person would end up back where he started; moreover, if a person walks on a polygon so that he travels exactly once around the polygon, then the path (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Path</span>) never crosses itself, and the person is either walking along a line or turning.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Below are some examples of polygons:</p>
+</div>
+<div id="p4" class="ltx_para ltx_centering">
+<svg version="1.1" height="142.3pt" width="313.0pt" fragid="p4.pic1" viewBox="0 0.0400000000000205 312.98 142.3" overflow="visible"><g transform="translate(0,142.3)"><g transform="scale(1 -1)"><g><path d="M 0,0 85.36,0 56.91,142.26 z" stroke="black" stroke-width="0.8" fill="none"></path><path d="M 113.81,0 199.17,0 170.72,56.91 199.17,85.36 142.26,142.26 z" stroke="black" stroke-width="0.8" fill="none"></path><path d="M 227.62,0 239,142.26 270.3,113.81 312.98,56.91 284.53,28.45 z" stroke="black" stroke-width="0.8" fill="none"></path></g></g></g></svg>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">side</em> of a polygon is a line segment on the polygon that is of maximal length. In other words, any line segment that contains a side of a polygon and has a greater length than that side is not entirely on that polygon. A <em class="ltx_emph ltx_font_italic">vertex</em> of a polygon is an endpoint of a side of the polygon. Note that each vertex of a polygon is simultaneously the endpoint of exactly two adjacent sides of the polygon.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">A polygon with <math id="p6.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> sides is called an <em class="ltx_emph ltx_font_italic"><math id="p6.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-gon</em>. For small <math id="p6.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, there are more traditional names:</p>
+</div>
+<div id="p7" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_ll ltx_border_r ltx_border_t">number of sides</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_rr ltx_border_t">name of polygon</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r ltx_border_tt">3</th>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_tt">triangle</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r ltx_border_t">4</th>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">quadrilateral</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r ltx_border_t">5</th>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">pentagon</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r ltx_border_t">6</th>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">hexagon</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r ltx_border_t">7</th>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">heptagon</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r ltx_border_t">8</th>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">octagon</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_b ltx_border_ll ltx_border_r ltx_border_t">10</th>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_rr ltx_border_t">decagon</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">In spherical geometry, polygons with only two sides exist. They are called biangles.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">perimeter</em> of a polygon is the sum of the lengths of its sides.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">An <em class="ltx_emph ltx_font_italic">interior angle</em> of a polygon is the measure of an angle formed by two adjacent sides such that the angle is measured with respect to the interior of the polygon. For each polygon in the picture below, the interior angles are marked in blue:</p>
+</div>
+<div id="p11" class="ltx_para ltx_centering">
+<svg version="1.1" height="142.3pt" width="284.53" fragid="p11.pic1" viewBox="0 0.0400000000000205 284.53 142.3" overflow="visible"><g transform="translate(0,142.3)"><g transform="scale(1 -1)"><g><path d="M 0,0 128.04,0 51.21,113.81 z" stroke="black" stroke-width="0.8" fill="none"></path><g><path d="M 14.23 0 A 14.23 14.23 0 0 1 5.84 12.98" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><g><path d="M 120.08 11.79 A 14.23 14.23 0 0 1 113.81 0" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><g><path d="M 45.37 100.83 A 14.23 14.23 0 0 1 59.17 102.02" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><path d="M 142.26,142.26 213.4,0 284.53,142.26 213.4,85.36 z" stroke="black" stroke-width="0.8" fill="none"></path><g><path d="M 148.62 129.53 A 14.23 14.23 0 0 1 153.37 133.37" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><g><path d="M 219.76 12.73 A 14.23 14.23 0 0 1 207.04 12.73" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><g><path d="M 273.42 133.37 A 14.23 14.23 0 0 1 278.17 129.53" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><g><path d="M 202.29 94.25 A 14.23 14.23 0 1 1 224.51 94.25" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g></g></g></g></svg>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Note that the measure (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/AngleMeasure</span>) of any interior angle of a polygon is strictly between <math id="p12.m1" class="ltx_Math" alttext="0^{\circ}" display="inline"><msup><mn>0</mn><mo>∘</mo></msup></math> and <math id="p12.m2" class="ltx_Math" alttext="360^{\circ}" display="inline"><msup><mn>360</mn><mo>∘</mo></msup></math> and is not equal to <math id="p12.m3" class="ltx_Math" alttext="180^{\circ}" display="inline"><msup><mn>180</mn><mo>∘</mo></msup></math>.</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">We have the following criterion for a polygon to be convex:</p>
+</div>
+<div id="Thmthmx1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmthmx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A polygon is convex if and only if each of its interior angles has a measure that is strictly less than <math id="Thmthmx1.p1.m1" class="ltx_Math" alttext="180^{\circ}" display="inline"><msup><mn mathvariant="normal">180</mn><mo mathvariant="normal">∘</mo></msup></math>.</span></p>
+</div>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">angle sum</em> of a polygon is the sum of the measures of its interior angles. In Euclidean geometry, the angle sum of an <math id="p14.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-gon is exactly <math id="p14.m2" class="ltx_Math" alttext="180(n-2)^{\circ}" display="inline"><mrow><mn>180</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow></math>.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">An <em class="ltx_emph ltx_font_italic">exterior angle</em> of a polygon is any angle that forms a linear pair with an interior angle of a polygon. In the picture below, all exterior angles of the triangle are marked in blue:</p>
+</div>
+<div id="p16" class="ltx_para ltx_centering">
+<svg version="1.1" height="170.72" width="142.3pt" fragid="p16.pic1" viewBox="0 -0.0200000000000102 142.26 170.7" overflow="visible"><g transform="translate(0,170.7)"><g transform="scale(1 -1)"><g><path d="M 0,28.45 142.26,28.45" stroke="black" stroke-width="0.8" fill="none"></path><path d="M 0,0 85.36,170.72" stroke="black" stroke-width="0.8" fill="none"></path><path d="M 0,170.72 142.26,0" stroke="black" stroke-width="0.8" fill="none"></path><g><path d="M 18.05 36.09 A 8.54 8.54 0 0 1 5.69 28.45" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><g><path d="M 10.41 20.81 A 8.54 8.54 0 0 1 22.77 28.45" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><g><path d="M 127.1 28.45 A 8.54 8.54 0 0 1 113.09 35.01" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><g><path d="M 110.02 28.45 A 8.54 8.54 0 0 1 124.03 21.89" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><g><path d="M 47.88 113.26 A 8.54 8.54 0 0 1 49.53 99.06" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g><g><path d="M 58.82 100.14 A 8.54 8.54 0 0 1 57.17 114.34" fill="none" stroke="#0000FF" stroke-width="0.8"></path></g></g></g></g></svg>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">For a more rigorous treatment of polygons, see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Polygon</span>).
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">polygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Polygon1</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:35:35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:35:35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Polygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BasicLength</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Diagonal</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RegularPolygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Semiperimeter</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EquilateralPolygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EquiangularPolygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">side</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">vertex</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="p17.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-gon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">n-gon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">perimeter</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">interior angle</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">angle sum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">exterior angle</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:52:41 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Pick’s theorem</title>
+<!--Generated on Fri Feb  9 21:59:39 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Pick’s theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Pick’s theorem:</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="P\subset\mathbb{R}^{2}" display="inline"><mrow><mi>P</mi><mo>⊂</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> be a polygon with all vertices on lattice points on the grid <math id="p2.m2" class="ltx_Math" alttext="\mathbb{Z}^{2}" display="inline"><msup><mi>ℤ</mi><mn>2</mn></msup></math>. Let <math id="p2.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> be the number of lattice points that lie <em class="ltx_emph ltx_font_italic">inside</em> <math id="p2.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, and let
+<math id="p2.m5" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> be the number of lattice points that lie on the boundary of <math id="p2.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. Then the area of <math id="p2.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="A(P)=I+\frac{1}{2}O-1." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>I</mi><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>O</mi></mrow></mrow><mo>-</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<img src="pick.eps" id="p2.g1" class="ltx_graphics ltx_centering" alt="">
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">To prove, we shall first show that Pick’s theorem has an additive character. Suppose our polygon has more than 3 vertices. Then we can divide the polygon <math id="p3.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> into 2 polygons <math id="p3.m2" class="ltx_Math" alttext="P_{1}" display="inline"><msub><mi>P</mi><mn>1</mn></msub></math> and <math id="p3.m3" class="ltx_Math" alttext="P_{2}" display="inline"><msub><mi>P</mi><mn>2</mn></msub></math> such that their interiors do not meet. Both have fewer vertices than <math id="p3.m4" class="ltx_Math" alttext="P." display="inline"><mrow><mi>P</mi><mo>.</mo></mrow></math>
+We claim that the validity of Pick’s theorem for <math id="p3.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is equivalent to the validity of Pick’s theorem for <math id="p3.m6" class="ltx_Math" alttext="P_{1}" display="inline"><msub><mi>P</mi><mn>1</mn></msub></math> and <math id="p3.m7" class="ltx_Math" alttext="P_{2}." display="inline"><mrow><msub><mi>P</mi><mn>2</mn></msub><mo>.</mo></mrow></math></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Denote the area, number of interior lattice points and number of boundary lattice points for <math id="p4.m1" class="ltx_Math" alttext="P_{k}" display="inline"><msub><mi>P</mi><mi>k</mi></msub></math> by <math id="p4.m2" class="ltx_Math" alttext="A_{k},I_{k}" display="inline"><mrow><msub><mi>A</mi><mi>k</mi></msub><mo>,</mo><msub><mi>I</mi><mi>k</mi></msub></mrow></math> and <math id="p4.m3" class="ltx_Math" alttext="O_{k}," display="inline"><mrow><msub><mi>O</mi><mi>k</mi></msub><mo>,</mo></mrow></math> respectively, for <math id="p4.m4" class="ltx_Math" alttext="k=1,2." display="inline"><mrow><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Clearly <math id="p5.m1" class="ltx_Math" alttext="A=A_{1}+A_{2}." display="inline"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>+</mo><msub><mi>A</mi><mn>2</mn></msub></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Also, if we denote the number of lattice points on the edges common to <math id="p6.m1" class="ltx_Math" alttext="P_{1}" display="inline"><msub><mi>P</mi><mn>1</mn></msub></math> and <math id="p6.m2" class="ltx_Math" alttext="P_{2}" display="inline"><msub><mi>P</mi><mn>2</mn></msub></math> by <math id="p6.m3" class="ltx_Math" alttext="L," display="inline"><mrow><mi>L</mi><mo>,</mo></mrow></math> then</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="I=I_{1}+I_{2}+L-2" display="block"><mrow><mi>I</mi><mo>=</mo><mrow><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>+</mo><msub><mi>I</mi><mn>2</mn></msub><mo>+</mo><mi>L</mi></mrow><mo>-</mo><mn>2</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="O=O_{1}+O_{2}-2L+2" display="block"><mrow><mi>O</mi><mo>=</mo><mrow><mrow><mrow><msub><mi>O</mi><mn>1</mn></msub><mo>+</mo><msub><mi>O</mi><mn>2</mn></msub></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>L</mi></mrow></mrow><mo>+</mo><mn>2</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Hence</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="I+\frac{1}{2}O-1=I_{1}+I_{2}+L-2+\frac{1}{2}O_{1}+\frac{1}{2}O_{2}-L+1-1" display="block"><mrow><mrow><mrow><mi>I</mi><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>O</mi></mrow></mrow><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>+</mo><msub><mi>I</mi><mn>2</mn></msub><mo>+</mo><mi>L</mi></mrow><mo>-</mo><mn>2</mn></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>O</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>O</mi><mn>2</mn></msub></mrow></mrow><mo>-</mo><mi>L</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="=I_{1}+\frac{1}{2}O_{1}-1+I_{2}+\frac{1}{2}O_{2}-1" display="block"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>O</mi><mn>1</mn></msub></mrow></mrow><mo>-</mo><mn>1</mn></mrow><mo>+</mo><msub><mi>I</mi><mn>2</mn></msub><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>O</mi><mn>2</mn></msub></mrow></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">This proves the claim. Therefore we can triangulate <math id="p8.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and it suffices to prove Pick’s theorem for triangles. Moreover by further triangulations
+we may assume that there are no lattice points on the boundary of the triangle other than the vertices.
+To prove pick’s theorem for such triangles, embed them into rectangles.
+</p>
+</div>
+<div id="p9" class="ltx_para ltx_centering">
+<img src="pick1.eps" id="p9.g1" class="ltx_graphics" alt="">
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Again by additivity, it suffices to prove Pick’s theorem for rectangles and rectangular triangles which have no lattice points on the
+hypotenuse and whose other two sides are parallel to the coordinate axes.
+If these two sides have lengths <math id="p10.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p10.m2" class="ltx_Math" alttext="b," display="inline"><mrow><mi>b</mi><mo>,</mo></mrow></math> respectively, we have</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="A=\frac{1}{2}ab" display="block"><mrow><mi>A</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="O=a+b+1." display="block"><mrow><mrow><mi>O</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Furthermore, by thinking of the triangle as half of a rectangle, we get</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="I=\frac{1}{2}(a-1)(b-1)." display="block"><mrow><mrow><mi>I</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(Note that here it is essential that no lattice points are on the hypotenuse)
+From these equations for <math id="p10.m3" class="ltx_Math" alttext="A,I" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>I</mi></mrow></math> and <math id="p10.m4" class="ltx_Math" alttext="O," display="inline"><mrow><mi>O</mi><mo>,</mo></mrow></math> Pick’s theorem is satisfied for these triangles.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Finally for a rectangle, whose sides have lengths <math id="p11.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p11.m2" class="ltx_Math" alttext="b," display="inline"><mrow><mi>b</mi><mo>,</mo></mrow></math> we find that</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="A=ab" display="block"><mrow><mi>A</mi><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="I=(a-1)(b-1)" display="block"><mrow><mi>I</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="O=2a+2b." display="block"><mrow><mrow><mi>O</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From these Pick’s theorem follows for rectangles too.
+This completes our proof.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Pick’s theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfPicksTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:09:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:09:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">giri (919)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">giri (919)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">giri (919)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51A99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05B99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 68U05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:59:39 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of when is a point inside a triangle</title>
+<!--Generated on Fri Feb  9 21:53:32 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of when is a point inside a triangle</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\mathbf{u}\in\mathbb{R}^{2}" display="inline"><mrow><mi>𝐮</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>, <math id="p1.m2" class="ltx_Math" alttext="\mathbf{v}\in\mathbb{R}^{2}" display="inline"><mrow><mi>𝐯</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>
+and <math id="p1.m3" class="ltx_Math" alttext="\mathbf{0}\in\mathbb{R}^{2}" display="inline"><mrow><mn>𝟎</mn><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>. Let’s consider the convex hull
+of the set <math id="p1.m4" class="ltx_Math" alttext="T=\left\{\mathbf{u},\mathbf{v},\mathbf{0}\right\}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mo>{</mo><mi>𝐮</mi><mo>,</mo><mi>𝐯</mi><mo>,</mo><mn>𝟎</mn><mo>}</mo></mrow></mrow></math>.
+By definition, the convex hull of <math id="p1.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, noted <math id="p1.m6" class="ltx_Math" alttext="coT" display="inline"><mrow><mi>c</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>T</mi></mrow></math>, is the smallest
+convex set that contains <math id="p1.m7" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. Now, the triangle <math id="p1.m8" class="ltx_Math" alttext="\Delta_{T}" display="inline"><msub><mi mathvariant="normal">Δ</mi><mi>T</mi></msub></math> spanned
+by <math id="p1.m9" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is convex and contains <math id="p1.m10" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. Then <math id="p1.m11" class="ltx_Math" alttext="coT\subseteq\Delta_{T}" display="inline"><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>T</mi></mrow><mo>⊆</mo><msub><mi mathvariant="normal">Δ</mi><mi>T</mi></msub></mrow></math>.
+Now, every convex <math id="p1.m12" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> set containing <math id="p1.m13" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> must satisfy that <math id="p1.m14" class="ltx_Math" alttext="t\mathbf{u}+\left(1-t\right)\mathbf{v}\in C" display="inline"><mrow><mrow><mrow><mi>t</mi><mo>⁢</mo><mi>𝐮</mi></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>𝐯</mi></mrow></mrow><mo>∈</mo><mi>C</mi></mrow></math>,
+<math id="p1.m15" class="ltx_Math" alttext="t\mathbf{u}\in C" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mi>𝐮</mi></mrow><mo>∈</mo><mi>C</mi></mrow></math> and <math id="p1.m16" class="ltx_Math" alttext="t\mathbf{v}\in C" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mi>𝐯</mi></mrow><mo>∈</mo><mi>C</mi></mrow></math> for <math id="p1.m17" class="ltx_Math" alttext="0\leq t\leq 1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>1</mn></mrow></math> (at
+least the convex combination of the points of <math id="p1.m18" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> are contained in
+<math id="p1.m19" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>). This means that the boundary of <math id="p1.m20" class="ltx_Math" alttext="\Delta_{T}" display="inline"><msub><mi mathvariant="normal">Δ</mi><mi>T</mi></msub></math> is contained
+in <math id="p1.m21" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>. But then every convex combination of points of <math id="p1.m22" class="ltx_Math" alttext="\partial\Delta_{T}" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><msub><mi mathvariant="normal">Δ</mi><mi>T</mi></msub></mrow></math>
+must also be contained in <math id="p1.m23" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, meaning that <math id="p1.m24" class="ltx_Math" alttext="\Delta_{T}\subseteq C" display="inline"><mrow><msub><mi mathvariant="normal">Δ</mi><mi>T</mi></msub><mo>⊆</mo><mi>C</mi></mrow></math>
+for every convex set containing <math id="p1.m25" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. In particular, <math id="p1.m26" class="ltx_Math" alttext="\Delta_{T}\subseteq coT" display="inline"><mrow><msub><mi mathvariant="normal">Δ</mi><mi>T</mi></msub><mo>⊆</mo><mrow><mi>c</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>T</mi></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Since the convex hull is exactly the set containing all convex combinations
+of points of <math id="p2.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\Delta_{T}=coT=\left\{\mathbf{x}\in\mathbb{R}^{2}:\mathbf{x}=\lambda\mathbf{u}%
++\mu\mathbf{v}+\left(1-\lambda-\mu\right)\mathbf{0},0\leq\lambda,\mu,\leq 1,0%
+\leq 1-\lambda-\mu\leq 1\right\}" display="block"><mrow><msub><mi mathvariant="normal">Δ</mi><mi>T</mi></msub><mo>=</mo><mi>c</mi><mi>o</mi><mi>T</mi><mo>=</mo><mrow><mo>{</mo><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mo>:</mo><mi>𝐱</mi><mo>=</mo><mi>λ</mi><mi>𝐮</mi><mo>+</mo><mi>μ</mi><mi>𝐯</mi><mo>+</mo><mrow><mo>(</mo><mn>1</mn><mo>-</mo><mi>λ</mi><mo>-</mo><mi>μ</mi><mo>)</mo></mrow><mn>𝟎</mn><mo>,</mo><mn>0</mn><mo>≤</mo><mi>λ</mi><mo>,</mo><mi>μ</mi><mo>,</mo><mo>≤</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>≤</mo><mn>1</mn><mo>-</mo><mi>λ</mi><mo>-</mo><mi>μ</mi><mo>≤</mo><mn>1</mn><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we conclude that <math id="p2.m2" class="ltx_Math" alttext="\mathbf{x}\in\mathbb{R}^{2}" display="inline"><mrow><mi>𝐱</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> is in the triangle
+spanned by <math id="p2.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> if and only if <math id="p2.m4" class="ltx_Math" alttext="\mathbf{x}=\lambda\mathbf{u}+\mu\mathbf{v}" display="inline"><mrow><mi>𝐱</mi><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>𝐮</mi></mrow><mo>+</mo><mrow><mi>μ</mi><mo>⁢</mo><mi>𝐯</mi></mrow></mrow></mrow></math>
+with <math id="p2.m5" class="ltx_Math" alttext="0\leq\lambda,\mu,\leq 1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>λ</mi><mo>,</mo><mi>μ</mi><mo>,</mo><mo>≤</mo><mn>1</mn></mrow></math> and <math id="p2.m6" class="ltx_Math" alttext="0\leq\lambda+\mu\leq 1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mrow><mi>λ</mi><mo>+</mo><mi>μ</mi></mrow><mo>≤</mo><mn>1</mn></mrow></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of when is a point inside a triangle</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfWhenIsAPointInsideATriangle</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:57:08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:57:08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">joen235 (18354)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">joen235 (18354)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">joen235 (18354)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 51-00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:53:32 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html><html>
+<head>
+<title>differential geometry</title>
+<!--Generated on Fri Feb  9 21:50:47 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">differential geometry</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Classical differential geometry</h3>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">Differential geometry studies geometrical objects using techniques of
+calculus. In fact, its early history is indistiguishable from that of
+calculus — it is a matter of personal taste whether one chooses to
+regard Fermat’s method of drawing tangents and finding extrema as a
+contribution to calculus or differential geometry; the pioneering work
+of Barrow and Newton on calculus was presented in a geometrical
+language; Halley’s 1696 paper in which he announces his discovery that
+<math id="S0.SS1.p1.m1" class="ltx_Math" alttext="\displaystyle\int\frac{dx}{x}=\log x+C" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mi>x</mi></mfrac></mrow></mstyle><mo>=</mo><mrow><mrow><mi>log</mi><mo>⁡</mo><mi>x</mi></mrow><mo>+</mo><mi>C</mi></mrow></mrow></math> is entitled quadrature of the hyperbola.</p>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p">It is only later on, when calculus became more algebraic in outlook
+that one can begin to make a meaningful separation between the
+subjects of calculus and differential geometry. Early differential
+geometers studied such properties of curves and surfaces such as:
+computing their lengths and areas, finding tangents, constructing
+evolute, involute, and pedal curves, studying curvature and osculating
+circles, and finding envelopes and orthogonal curves to a given family
+of curves. Of the various objects they studied, the cycloid deserves
+special mention. Originally discovered by Galileo, it seems to have
+been studied by just about every seventeenth century mathematician,
+much more than any other curve. Also, it is worth mentioning that the
+deep connections between differential geometry and mechanics which
+play a prominent role in contemporary theoretical physics also have
+their origin at this time — for instance, the fact that the problem
+of geodesics on surfaces is related to the acceleration of particles
+was already to known to the Bernoullis, even though the significance
+of this similarity was not fully appreciated until Einstein.</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Intrinsic geometry</h3>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">A major turning point in differential geometry is marked by the
+appearance of Gauss’ memoir “Disquisitiones generales circa
+superficies curvas”. In this memoir, Gauss first proposes the
+intrinsic point of view in geometry. Since his idea of has intrinsic
+geometry has completely changed the outlook of geometry, it might not
+be inappropriate to spend some time discussing it.</p>
+</div>
+<div id="S0.SS2.p2" class="ltx_para">
+<p class="ltx_p">Ordinarily, when we think of a surface such as a cylinder or a sphere,
+we concieve of a locus in space (<math id="S0.SS2.p2.m1" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>). However, imagine
+that, like blind ants crawling on a sheet, we were confined to a
+surface and had no direct knowledge of the space in which the surface
+was situated. What could we conclude about the surface on which we
+live? Obviously, such constructions as normals to the surface or
+osculating spheres which are situated in the ambient space would be
+meaningless to us. However, we would be still able to speak of the
+lengths of curves drawn on the surface, the angle between curves, and
+areas of portions of our surface since these can be defined in terms
+of measurements which are made on the surface without recourse to the
+ambient space.</p>
+</div>
+<div id="S0.SS2.p3" class="ltx_para">
+<p class="ltx_p">Considering differential geometry from this point of view, one comes
+to several interesting conclusions. One is that certain surfaces,
+such as a portion of a plane and a portion of a cylinder are
+indistinguishable from the intrinsic point of view. This result can
+be something of a surprise because one is usually accostomed to
+thinking of planes and cylinders as rather different sorts of objects
+— planes are flat while cylinders are curved.</p>
+</div>
+<div id="S0.SS2.p4" class="ltx_para">
+<p class="ltx_p">By itself this discovery is interesting, but perhaps not enough to
+fire a revolution in geometry. Hearing of it, one might come to the
+conclusion that intrinsic measurements alone are not sufficient to
+describe the geometry of a surface and, hence, the subject of
+intrinsic geometry is uninteresting. Further study shows that this is
+not the case. While one may not be able to distinguish a plane from a
+cylinder on the basis of intrinsic measurements alone, it is possible
+to distinguish a portion of plane from a portion of sphere solely on
+the basis of intrinsic measurements. Even more, it is possible to
+distinguish portions of spheres of different radii intrinsically.
+This, of course, is of interest not only because it shows that the
+study of intrinsic geometry is non-trivial, but because a quantity
+such as the radius of a sphere which is defined as the distance from a
+point on the sphere to a point not on the surface (namely, the centre
+of the sphere) can, in fact, be deduced solely from measurements on
+the surface of the sphere.</p>
+</div>
+<div id="S0.SS2.p5" class="ltx_para">
+<p class="ltx_p">To prove such results, Gauss used the concept of curvature. Since the
+idea of curvature, in one from or another, plays an important role in
+differential geometry to this day, let us say a few words about this
+key concept. The concept of curvature was developed in the eighteenth
+century as a measure how much a given curve or a surface deviates from
+being a straight line or a plane. In the case of a curve, the
+curvature may be defined as the second derivative of the normal angle
+with respect to arclength. In the case of a surface, the situation is
+a little more complicated — to describe the direction of the normal
+vector, one needs two angles instead of one and one can choose to
+compute their directional derivatives along any direction tangent to
+the surface. Because of this, one obtains a <math id="S0.SS2.p5.m1" class="ltx_Math" alttext="2\times 2" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></math> matrix of
+partial derivatives instead of a single number. If one changes the
+coordinates used to describe the ambient space, then the components of
+this matrix will undergo a linear transformation. To obtain a
+quantity which does not depend on an arbitrary choice of coordinates
+and hence can be seen as describing geometric properties of the
+surface, one should consider the eigenvalues of this matrix. These
+eigenvalues are known as the principal curvatures of the surface.</p>
+</div>
+<div id="S0.SS2.p6" class="ltx_para">
+<p class="ltx_p">The remarkable theorem which Gauss proved was that, whilst the
+principal curvatures cannot be determined from intrinsic measurements
+alone, their product can. This result, for instance, can be used to
+explain the facts we mentioned about planes, cylinders, and spheres.
+For a plane, the two principal curvatures equal zero. For a cylinder,
+one principal curvature is zero and the other is positive. For a
+sphere, both principal curvatures are equal and positive. Since the
+product equals zero for both the plane and the cylinder it is
+plausible that they are indistinguishable intrinsically. Since it is
+not zero for the sphere, it follows from Gauss’ theorem that the
+intrinsic geometry of the sphere could not possibly be the same as
+that of the plane and cylinder.</p>
+</div>
+</section>
+<section id="S0.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>The concept of a manifold</h3>
+
+<div id="S0.SS3.p1" class="ltx_para">
+<p class="ltx_p">The discovery of intrinsic geometry led thoughtful geometers such as
+Riemann (who was a student of Gauss), Clifford, and Mach to the
+conclusion that a “right and natural” approach to geometry should
+regard surfaces as geometrical spaces in their own right on a par with
+Euclidean and projective space. In the terminology of the mediaeval
+scholastic philosophers, one may say that they regarded the intrinsic
+properties of surfaces as “essential” and extrinsic properties as
+“accidental”. To properly develop geometry from such a viewpoint,
+they needed to start with a definition of surface which made no
+reference to any sort of ambient space. Their quest for such a
+definition led to the concept of a manifold.</p>
+</div>
+<div id="S0.SS3.p2" class="ltx_para">
+<p class="ltx_p">The genesis of this concept can be seen as a diasappearing act akin to
+that of the Chesire cat — just as the grin is all that remains of
+the cat when the cat disappears, so too a manifold is what remains
+when one starts with a parameterized surface and the space in which
+the surface is situated disappears.</p>
+</div>
+<div id="S0.SS3.p3" class="ltx_para">
+<p class="ltx_p">A parameterized surface may be decribed as a suitable subset <math id="S0.SS3.p3.m1" class="ltx_Math" alttext="S\in\mathbb{R}^{3}" display="inline"><mrow><mi>S</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow></math> together with a smooth bijective map from an open subset
+of <math id="S0.SS3.p3.m2" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math> to <math id="S0.SS3.p3.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> (which is called a parameterization of the
+surface). Moreover, (pay careful attention because this will turn out
+to be the key fact that makes the concept of a manifold possible) one
+can describe the same surface using many different parameterizations.
+Given two parameterizations <math id="S0.SS3.p3.m4" class="ltx_Math" alttext="\phi\colon D_{1}\subset\mathbb{R}^{2}\to S" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⊂</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><mi>S</mi></mrow></mrow></math> and <math id="S0.SS3.p3.m5" class="ltx_Math" alttext="\psi\colon D_{2}\subset\mathbb{R}^{2}\to S" display="inline"><mrow><mi>ψ</mi><mo>:</mo><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>⊂</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><mi>S</mi></mrow></mrow></math> of the same
+portion of surface, the two will be related by reparametrization; that
+is to say there exists a smooth bijection <math id="S0.SS3.p3.m6" class="ltx_Math" alttext="g_{\phi\psi}\colon D_{2}\to D_{1}" display="inline"><mrow><msub><mi>g</mi><mrow><mi>ϕ</mi><mo>⁢</mo><mi>ψ</mi></mrow></msub><mo>:</mo><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>→</mo><msub><mi>D</mi><mn>1</mn></msub></mrow></mrow></math> such that <math id="S0.SS3.p3.m7" class="ltx_Math" alttext="\psi=\phi\circ g_{\phi\psi}" display="inline"><mrow><mi>ψ</mi><mo>=</mo><mrow><mi>ϕ</mi><mo>∘</mo><msub><mi>g</mi><mrow><mi>ϕ</mi><mo>⁢</mo><mi>ψ</mi></mrow></msub></mrow></mrow></math>.</p>
+</div>
+<div id="S0.SS3.p4" class="ltx_para">
+<p class="ltx_p">By contrast, a manifold may be understood as a “parameterized set”.
+That is to say, a <math id="S0.SS3.p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional manifold <math id="S0.SS3.p4.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is a set together with
+a set of bijective maps from open sets of <math id="S0.SS3.p4.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> to <math id="S0.SS3.p4.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> (which
+are called coordiante maps). As in the case of parameterized
+surfaces, a coordinate map need not have the whole of <math id="S0.SS3.p4.m5" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> as its
+range. Moreover, we require that if two coordinate maps <math id="S0.SS3.p4.m6" class="ltx_Math" alttext="\phi\colon D_{1}\subset\mathbb{R}^{2}\to M" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⊂</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><mi>M</mi></mrow></mrow></math> and <math id="S0.SS3.p4.m7" class="ltx_Math" alttext="\psi\colon D_{2}\subset\mathbb{R}^{2}\to M" display="inline"><mrow><mi>ψ</mi><mo>:</mo><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>⊂</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><mi>M</mi></mrow></mrow></math> describe the same subset of the manifold, then
+there exists a smooth bijective map <math id="S0.SS3.p4.m8" class="ltx_Math" alttext="g_{\phi\psi}\colon D_{2}\to D_{1}" display="inline"><mrow><msub><mi>g</mi><mrow><mi>ϕ</mi><mo>⁢</mo><mi>ψ</mi></mrow></msub><mo>:</mo><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>→</mo><msub><mi>D</mi><mn>1</mn></msub></mrow></mrow></math>
+such that <math id="S0.SS3.p4.m9" class="ltx_Math" alttext="\psi=\phi\circ g_{\phi\psi}" display="inline"><mrow><mi>ψ</mi><mo>=</mo><mrow><mi>ϕ</mi><mo>∘</mo><msub><mi>g</mi><mrow><mi>ϕ</mi><mo>⁢</mo><mi>ψ</mi></mrow></msub></mrow></mrow></math>. (Such a map is known as
+a coordinate transformation map or a transition function.) To make
+this definition completely correct, we require a few more technical
+assumptions but, in keeping with the spirit of this expsition, we
+shall not discuss them here and instead refer the reader to the entry
+notes on the classical definition of a manifold for a careful
+definition which takes technicalities into account.</p>
+</div>
+<div id="S0.SS3.p5" class="ltx_para">
+<p class="ltx_p">As is obvious from the definition, if we make the further assumption
+that the objects of our set be points of Euclidean space and that the
+correspondence between points and pairs of numbers be continuous, we
+recover the definition of parameterized surface. However, we choose
+to refrain from making any asumption about the nature of the elements
+of our set. This freedom is exactly what allows us to regard two
+surfaces with the same intrinsic geometry as the same manifold — to
+obtain one surface, we specify one mapping of our set into Euclidean
+space one way and to obtain the other surface we specify a different
+mapping.</p>
+</div>
+<div id="S0.SS3.p6" class="ltx_para">
+<p class="ltx_p">Objects other than surfaces can be manifolds. Most obviously, the
+Euclidean plane itself is a manifold since its points can be described
+by pairs of real numbers according to various coordiante systems
+(Cartesian coordinates, polar coordinates, etc.) Thus, the concept of
+manifold fulfills the desire of its inventors that Euclidean space and
+surfaces be of the same ontological status.</p>
+</div>
+<div id="S0.SS3.p7" class="ltx_para">
+<p class="ltx_p">Less obviously and more curiously, the set of functions which satisfy
+the differential equation</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="f^{\prime\prime}(t)+2f^{\prime}(t)+3f(t)=0" display="block"><mrow><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is also a two-dimensional manifold! The reason is that we can specify
+a solution of this equation uniquely by giving the values of <math id="S0.SS3.p7.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and
+<math id="S0.SS3.p7.m2" class="ltx_Math" alttext="f^{\prime}" display="inline"><msup><mi>f</mi><mo>′</mo></msup></math> at a particular value of <math id="S0.SS3.p7.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> and, by the theorem on continuous
+dependence on initial conditions, <math id="S0.SS3.p7.m4" class="ltx_Math" alttext="f(t_{1})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S0.SS3.p7.m5" class="ltx_Math" alttext="f^{\prime}(t_{1})" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> can be
+expressed as a continuous functions of <math id="S0.SS3.p7.m6" class="ltx_Math" alttext="f(t_{2})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S0.SS3.p7.m7" class="ltx_Math" alttext="f^{\prime}(t_{2})" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> for any
+two numbers <math id="S0.SS3.p7.m8" class="ltx_Math" alttext="t_{1},t_{2}\in\mathbb{R}" display="inline"><mrow><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><msub><mi>t</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+<div id="S0.SS3.p8" class="ltx_para">
+<p class="ltx_p">Another example of a manifold is the group of affine transforms of the
+line. Recall (or look back at the section on affine geometry above!)
+that an affine transformation is of the form <math id="S0.SS3.p8.m1" class="ltx_Math" alttext="x\mapsto ax+b" display="inline"><mrow><mi>x</mi><mo>↦</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>b</mi></mrow></mrow></math>.
+Hence, such a transform is specified by giving the two real numbers
+<math id="S0.SS3.p8.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S0.SS3.p8.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. A group like this one which also happens to be a
+manifold is called a Lie group. The study of Lie groups forms an
+important branch of group theory and is of relevance to other branches
+of mathematics.</p>
+</div>
+<div id="S0.SS3.p9" class="ltx_para">
+<p class="ltx_p">Because of examples like the two just exhibited, it has been possible
+to apply the techniques of differential geometry in some rather
+unlikely settings. Once geometric notions like tangent spaces and
+curvature have been defined for manifolds (we shall indicate how this
+is done in the next section) then one can speak of such things as the
+tangent space to the set of solutions of a differential equation or
+the curvature of a group. While this may sound like a parlor stunt to
+demonstrate the generality of our definitions, it is more than that.
+By applying the techniques of differential geometry in such unlikely
+settings, mathematicians have been able to win insights and prove
+results about differential equations, groups and other mathematical
+objects which otherwise seemed intractable.</p>
+</div>
+<div id="S0.SS3.p10" class="ltx_para">
+<p class="ltx_p">Before moving on to the next section, it might be worth pointing out
+that, when speaking of manifolds, it is customary to refer to the
+elements of the set as points and the real numbers which label them as
+points. The reader should keep in mind that this is merely customary
+terminology which derives from thinking of manifolds as a
+generalization of parameterized surfaces and should no way be
+understood as suggesting that the elements of the set which comprise
+our manifold resemble points of a surface. As the examples show, they
+may be functions, transformations, or other mathematical objects.</p>
+</div>
+</section>
+<section id="S0.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.4 </span>Structures on manifolds</h3>
+
+<div id="S0.SS4.p1" class="ltx_para">
+<p class="ltx_p">In order to discuss such geometric notions as angles and lengths and
+perform interesting geometric constructions, one needs to equip one’s
+manifold with suitable structures. In classical differential
+geometry, these structures were provided by the ambient space, but now
+that the ambient space has disappeared, they must put in by hand.</p>
+</div>
+<div id="S0.SS4.p2" class="ltx_para">
+<p class="ltx_p">In placing structures on a manifold, the notion of reparameterization
+or change of coordinates which was built into the definition of
+manifold plays a crucial role. To explain how the process of imposing
+structures proceeds, let us start with a simple example — tangent
+vectors on a manifold. In classical differential geometry, a tangent
+vector <math id="S0.SS4.p2.m1" class="ltx_Math" alttext="{\bf v}" display="inline"><mi>𝐯</mi></math> to a surface <math id="S0.SS4.p2.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> at a point <math id="S0.SS4.p2.m3" class="ltx_Math" alttext="{\bf p}\in S" display="inline"><mrow><mi>𝐩</mi><mo>∈</mo><mi>S</mi></mrow></math> is simply
+a vector in Euclidean space whose direction happens to be tangent to
+the surface at the point <math id="S0.SS4.p2.m4" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>. We could represent it graphically
+an arrow with its tail at <math id="S0.SS4.p2.m5" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> which points along a tangent to
+the surface.</p>
+</div>
+<div id="S0.SS4.p3" class="ltx_para">
+<p class="ltx_p">Of course, this description won’t do if we don’t have an ambient space
+in which to draw our arrow. Therefore, we need to look for a
+different description of our tangent vector. One possibility is to
+consider a description of the vector in terms of its components.
+However, to define the components of a vector, one needs a basis. If
+our surface is specified parametrically, there is a natural choice of
+basis vectors, namely</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\begin{pmatrix}\displaystyle\frac{\partial x}{\partial s}&amp;\displaystyle\frac{%
+\partial y}{\partial s}&amp;\displaystyle\frac{\partial z}{\partial s}\end{pmatrix}" display="block"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>s</mi></mrow></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>s</mi></mrow></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>s</mi></mrow></mfrac></mtd></mtr></mtable><mo>)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\begin{pmatrix}\displaystyle\frac{\partial x}{\partial t}&amp;\displaystyle\frac{%
+\partial y}{\partial t}&amp;\displaystyle\frac{\partial z}{\partial t}\end{pmatrix}." display="block"><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mtd></mtr></mtable><mo>)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS4.p4" class="ltx_para">
+<p class="ltx_p">Of course, if we choose a different parameterization, we obtain a
+different pair of basis vectors. However, we can express one pair in
+terms of the other pair using the chain rule. Thus, if a tangent
+vector <math id="S0.SS4.p4.m1" class="ltx_Math" alttext="{\bf v}" display="inline"><mi>𝐯</mi></math> has components <math id="S0.SS4.p4.m2" class="ltx_Math" alttext="\begin{pmatrix}v_{1}&amp;v_{2}\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable columnspacing="5pt"><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></math> with respect to the basis corresponding to the
+parameterization in terms of parameters <math id="S0.SS4.p4.m3" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> and <math id="S0.SS4.p4.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, it will have
+components <math id="S0.SS4.p4.m5" class="ltx_Math" alttext="\begin{pmatrix}{v^{\prime}}_{1}&{v^{\prime}}_{2}\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable columnspacing="5pt"><mtr><mtd columnalign="center"><mmultiscripts><mi>v</mi><none></none><mo>′</mo><mn>1</mn><none></none></mmultiscripts></mtd><mtd columnalign="center"><mmultiscripts><mi>v</mi><none></none><mo>′</mo><mn>2</mn><none></none></mmultiscripts></mtd></mtr></mtable><mo>)</mo></mrow></math> with
+respect to the basis corresponding to the parameterization in terms
+of parameters <math id="S0.SS4.p4.m6" class="ltx_Math" alttext="s^{\prime}" display="inline"><msup><mi>s</mi><mo>′</mo></msup></math> and <math id="S0.SS4.p4.m7" class="ltx_Math" alttext="t^{\prime}" display="inline"><msup><mi>t</mi><mo>′</mo></msup></math>, where</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\begin{pmatrix}{v^{\prime}}_{1}&{v^{\prime}}_{2}\end{pmatrix}=\begin{pmatrix}v%
+_{1}&amp;v_{2}\end{pmatrix}\begin{pmatrix}\displaystyle\frac{\partial s}{\partial s%
+^{\prime}}&amp;\displaystyle\frac{\partial s}{\partial t^{\prime}}\\
+&amp;\\
+\displaystyle\frac{\partial t}{\partial s^{\prime}}&amp;\displaystyle\frac{%
+\partial t}{\partial t^{\prime}}\end{pmatrix}." display="block"><mrow><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><mmultiscripts><mi>v</mi><none></none><mo>′</mo><mn>1</mn><none></none></mmultiscripts></mtd><mtd columnalign="center"><mmultiscripts><mi>v</mi><none></none><mo>′</mo><mn>2</mn><none></none></mmultiscripts></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>s</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>s</mi><mo>′</mo></msup></mrow></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>s</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mo>′</mo></msup></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>s</mi><mo>′</mo></msup></mrow></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mo>′</mo></msup></mrow></mfrac></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS4.p5" class="ltx_para">
+<p class="ltx_p">These observations form the foundation of the definition of a tangent
+vector to a manifold. To define a tangent vector <math id="S0.SS4.p5.m1" class="ltx_Math" alttext="{\bf v}" display="inline"><mi>𝐯</mi></math> to a
+two-dimensional manifold <math id="S0.SS4.p5.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> at a point <math id="S0.SS4.p5.m3" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>, we shall associate
+a pair of numbers <math id="S0.SS4.p5.m4" class="ltx_Math" alttext="\begin{pmatrix}v_{1}&amp;v_{2}\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable columnspacing="5pt"><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></math> to every
+coordinate system which describes <math id="S0.SS4.p5.m5" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>. The only restriction we
+impose is that, given two coordinate systems, the pairs of numbers to
+be associated to these systems be related by the transform</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\begin{pmatrix}{v^{\prime}}_{1}&{v^{\prime}}_{2}\end{pmatrix}=\begin{pmatrix}v%
+_{1}&amp;v_{2}\end{pmatrix}\begin{pmatrix}\displaystyle\frac{\partial s}{\partial s%
+^{\prime}}&amp;\displaystyle\frac{\partial s}{\partial t^{\prime}}\\
+&amp;\\
+\displaystyle\frac{\partial t}{\partial s^{\prime}}&amp;\displaystyle\frac{%
+\partial t}{\partial t^{\prime}}\end{pmatrix}." display="block"><mrow><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><mmultiscripts><mi>v</mi><none></none><mo>′</mo><mn>1</mn><none></none></mmultiscripts></mtd><mtd columnalign="center"><mmultiscripts><mi>v</mi><none></none><mo>′</mo><mn>2</mn><none></none></mmultiscripts></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>s</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>s</mi><mo>′</mo></msup></mrow></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>s</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mo>′</mo></msup></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>s</mi><mo>′</mo></msup></mrow></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mo>′</mo></msup></mrow></mfrac></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS4.p6" class="ltx_para">
+<p class="ltx_p">To define other structures on the manifold, we can follow a similar recipe:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Identify what sort of mathematical object will represent the
+structure in a coordinate system. In the case of a tangent vector,
+this was an <math id="I1.i1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-tuplet of real numbers.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Identify how the this object is to transform under changes of
+coordinate system.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Define the structure as an assignment of mathematical objects
+of the type identified in item (1) to coordinate systems in such a
+way that the objects assigned to two coordinate systems are related by
+the transform identified in item (2).</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SS4.p7" class="ltx_para">
+<p class="ltx_p">Using this procedure, one can define all sorts of structures on
+manifolds, of which we shall consider only two more examples here.
+One example is the vector field. A vector field may be defined as the
+assignment of a vector to every point in the manifold. Given a
+coordinate system, we may specify such an entity by assigning an
+<math id="S0.SS4.p7.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-tuple of numbers to every point. In other words, in a coordinate
+system our vector field is represented by an <math id="S0.SS4.p7.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-tuple of functions.
+Upon making a change of coordinates, these <math id="S0.SS4.p7.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-tuples change according
+to the law presented earlier.</p>
+</div>
+<div id="S0.SS4.p8" class="ltx_para">
+<p class="ltx_p">The second example is the metric field. Recall that in our discussion
+of intrinsic geometry, we considered measuring lengths and angles
+along the surface. Now, in Euclidean geometry, we may define the
+notions of length and angle in terms of an inner product. A metric
+field may be described as the assignment of an inner product for
+tangent vectors to every point of the manifold. Given a basis, an
+inner product can be described by a symmetric, positive-definite
+matrix. Hence, to define the notion of metric field, we will consider
+the assignment of a symmetric, positive definite matrix of functions
+to every coordinate system in such a way that the matrices assigned to
+two coordinate systems are related according to the transformation law
+for inner products under a change of basis.</p>
+</div>
+<div id="S0.SS4.p9" class="ltx_para">
+<p class="ltx_p">Once we choose a metric field on a two-dimensional manifold, it
+becomes possible to study its intrinsic geometry as defined in the
+last section.</p>
+</div>
+</section>
+<section id="S0.SS5" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.5 </span>Sheaves and bundles</h3>
+
+<div id="S0.SS5.p1" class="ltx_para">
+<p class="ltx_p">In order to understand the toatality of all possible tangents vectors,
+metrics, etc. one typically collects them into larger structures
+called sheaves and bundles. To understand how such constructions
+proceed, we will start by examining the fundamental example of the
+tangent bundle.</p>
+</div>
+<div id="S0.SS5.p2" class="ltx_para">
+<p class="ltx_p">Last section, we desribed how a tangent vector is described in an
+intrinsic manner. Suppose we now want to consider the totality of all
+tangent vectors to a manifold. We could start by picking a point of
+the manifold and considering all tangent vectors based at that point.
+Since it is meaningful to make linear combinations of tangent vectors
+with the same basepoint, the set of all tangent vectors with a common
+basepoint forms a vector space called the tangent space to the
+manifold at that point. As we saw earlier, vector spaces are
+manifolds because one can impose coordinates on a vector space by
+choosing a basis.</p>
+</div>
+<div id="S0.SS5.p3" class="ltx_para">
+<p class="ltx_p">So our problem of describing the toality of all tangent vectors
+reduces to the problem of describing the totality of all tangent
+spaces. We claim that they form a manifold. Basically, the reason
+for this is that, to specify a tangent vector, we could give the
+coordinates of its basepoint with respect to a coordinate system on
+the manifold and specify which vector by its coordnates with respect
+to a basis for the tangent space at that point. This manifold whose
+points are tangent vectors to a certain manifold is known as the
+tangent bundle of the orginal manifold.</p>
+</div>
+</section>
+<section id="S0.SS6" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.6 </span>Back to Erlangen</h3>
+
+<div id="S0.SS6.p1" class="ltx_para">
+<p class="ltx_p">When written, this entry will show how differential geometry may be
+understood as the study of invariants of structures on manifolds under
+the group of diffeomorphisms. In terms of this definition, we shall
+introduce such geometries as Riemannian geometry, conformal geometry,
+Kahler geometry, symplectic geoemtry, contact geometry, teleparallel
+geometry, gauge geometry, etc. much as Euclidean, affine, and
+projective geometry were introduced above.</p>
+</div>
+</section>
+<section id="S0.SS7" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.7 </span>Differential invariants and local differential geometry</h3>
+
+<div id="S0.SS7.p1" class="ltx_para">
+<p class="ltx_p">When written, this section will give the reader the flavor of the nuts and bolts of constructing the invariants which are supposed to describe geometrical objects according to the Klein’s principles. We shall mention such topics as Christoffel’s theorem and the Bianchi identitites and give some idea of the sort of topics which one considers in local differential geometry.</p>
+</div>
+</section>
+<section id="S0.SS8" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.8 </span>Global differential geometry</h3>
+
+<div id="S0.SS8.p1" class="ltx_para">
+<p class="ltx_p">When written, this section will describe the Gauss-Bonnet theorem and some of its modern descendants such as characteristic classes and index theorems.</p>
+</div>
+</section>
+<section id="S0.SS9" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.9 </span>The algebraic viewpoint</h3>
+
+<div id="S0.SS9.p1" class="ltx_para">
+<p class="ltx_p">When written, this entry outline how one may take the algebra of functions of a manifold as a starting point and see that differential geometric notions correspond to algebraic constructions. In fact, one may reformulate differential geometry as the study of invariants of an algebra under the action of a group of automorphisms. Using this even more general definition, one arrives at such novel topics as the differential geometry of finite-dimensional algebras and non-commutative geometry.</p>
+</div>
+</section>
+<section id="S0.SS10" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.10 </span>Infinite-Dimensional Differential Geometry</h3>
+
+</section>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Differential geometry on PlanetMath</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">When written, this section will include links to entries on differential geometry on PlanetMath.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">differential geometry</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DifferentialGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:13:50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:13:50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51-01</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ClassicalDifferentialGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">DifferentialPropositionalCalculus</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:50:47 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

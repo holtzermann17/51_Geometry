@@ -1,0 +1,209 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Brahmagupta’s formula</title>
+<!--Generated on Fri Feb  9 21:52:52 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Brahmagupta’s formula</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We shall prove that the area of a cyclic quadrilateral with sides <math id="p1.m1" class="ltx_Math" alttext="p,q,r,s" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi><mo>,</mo><mi>r</mi><mo>,</mo><mi>s</mi></mrow></math> is given by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\sqrt{(T-p)(T-q)(T-r)(T-s)}" display="block"><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m2" class="ltx_Math" alttext="T=\frac{p+q+r+s}{2}." display="inline"><mrow><mrow><mi>T</mi><mo>=</mo><mfrac><mrow><mi>p</mi><mo>+</mo><mi>q</mi><mo>+</mo><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mn>2</mn></mfrac></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="p2" class="ltx_para ltx_centering">
+<img src="quadcyclic.eps" id="p2.g1" class="ltx_graphics" alt="">
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Area of the cyclic quadrilateral = Area of <math id="p3.m1" class="ltx_Math" alttext="\triangle ADB+" display="inline"><mrow><mrow><mi mathvariant="normal">△</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>B</mi></mrow><mo>+</mo></mrow></math> Area of <math id="p3.m2" class="ltx_Math" alttext="\triangle BDC." display="inline"><mrow><mrow><mi mathvariant="normal">△</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>C</mi></mrow><mo>.</mo></mrow></math></p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="=\frac{1}{2}pq\sin A+\frac{1}{2}rs\sin C" display="block"><mrow><mi></mi><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>A</mi></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>C</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But since <math id="p3.m3" class="ltx_Math" alttext="ABCD" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mi>D</mi></mrow></math> is a cyclic quadrilateral, <math id="p3.m4" class="ltx_Math" alttext="\angle DAB=180^{\circ}-\angle DCB." display="inline"><mrow><mrow><mrow><mi mathvariant="normal">∠</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow><mo>=</mo><mrow><msup><mn>180</mn><mo>∘</mo></msup><mo>-</mo><mrow><mi mathvariant="normal">∠</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mi>B</mi></mrow></mrow></mrow><mo>.</mo></mrow></math>
+Hence <math id="p3.m5" class="ltx_Math" alttext="\sin A=\sin C." display="inline"><mrow><mrow><mrow><mi>sin</mi><mo>⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math> Therefore area now is</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="Area=\frac{1}{2}pq\sin A+\frac{1}{2}rs\sin A" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>A</mi></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>A</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="(Area)^{2}=\frac{1}{4}\sin^{2}A(pq+rs)^{2}" display="block"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mi>A</mi></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="4(Area)^{2}=(1-\cos^{2}A)(pq+rs)^{2}" display="block"><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mi>A</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="4(Area)^{2}=(pq+rs)^{2}-cos^{2}A(pq+rs)^{2}" display="block"><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Applying cosines law for <math id="p3.m6" class="ltx_Math" alttext="\triangle ADB" display="inline"><mrow><mi mathvariant="normal">△</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>B</mi></mrow></math> and <math id="p3.m7" class="ltx_Math" alttext="\triangle BDC" display="inline"><mrow><mi mathvariant="normal">△</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>C</mi></mrow></math> and equating the expressions for side <math id="p3.m8" class="ltx_Math" alttext="DB," display="inline"><mrow><mrow><mi>D</mi><mo>⁢</mo><mi>B</mi></mrow><mo>,</mo></mrow></math> we have</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="p^{2}+q^{2}-2pq\cos A=r^{2}+s^{2}-2rs\cos C" display="block"><mrow><mrow><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>+</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>A</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>+</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>C</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Substituting <math id="p3.m9" class="ltx_Math" alttext="\cos C=-\cos A" display="inline"><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>C</mi></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>A</mi></mrow></mrow></mrow></math> (since angles <math id="p3.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p3.m11" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> are suppplementary) and rearranging, we have</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="2\cos A(pq+rs)=p^{2}+q^{2}-r^{2}-s^{2}" display="block"><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>A</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>+</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>-</mo><msup><mi>r</mi><mn>2</mn></msup><mo>-</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">substituting this in the equation for area,</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="4(Area)^{2}=(pq+rs)^{2}-\frac{1}{4}(p^{2}+q^{2}-r^{2}-s^{2})^{2}" display="block"><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>-</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>+</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>-</mo><msup><mi>r</mi><mn>2</mn></msup><mo>-</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="16(Area)^{2}=4(pq+rs)^{2}-(p^{2}+q^{2}-r^{2}-s^{2})^{2}" display="block"><mrow><mrow><mn>16</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>+</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>-</mo><msup><mi>r</mi><mn>2</mn></msup><mo>-</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is of the form <math id="p3.m12" class="ltx_Math" alttext="a^{2}-b^{2}" display="inline"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>-</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></math> and hence can be written in the form <math id="p3.m13" class="ltx_Math" alttext="(a+b)(a-b)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>-</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> as</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="(2(pq+rs)+p^{2}+q^{2}-r^{2}-s^{2})(2(pq+rs)-p^{2}-q^{2}+r^{2}+s^{2})" display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><msup><mi>p</mi><mn>2</mn></msup><mo>+</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>-</mo><msup><mi>r</mi><mn>2</mn></msup><mo>-</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msup><mi>p</mi><mn>2</mn></msup><mo>-</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>r</mi><mn>2</mn></msup><mo>+</mo><msup><mi>s</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="=((p+q)^{2}-(r-s)^{2})((r+s)^{2}-(p-q)^{2})" display="block"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="=(p+q+r-s)(p+q+s-r)(p+r+s-q)(q+r+s-p)" display="block"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>+</mo><mi>q</mi><mo>+</mo><mi>r</mi></mrow><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>+</mo><mi>q</mi><mo>+</mo><mi>s</mi></mrow><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>+</mo><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>q</mi><mo>+</mo><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Introducing <math id="p3.m14" class="ltx_Math" alttext="T=\frac{p+q+r+s}{2}," display="inline"><mrow><mrow><mi>T</mi><mo>=</mo><mfrac><mrow><mi>p</mi><mo>+</mo><mi>q</mi><mo>+</mo><mi>r</mi><mo>+</mo><mi>s</mi></mrow><mn>2</mn></mfrac></mrow><mo>,</mo></mrow></math></p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="16(Area)^{2}=16(T-p)(T-q)(T-r)(T-s)" display="block"><mrow><mrow><mn>16</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><mn>16</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Taking square root, we get</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="Area=\sqrt{(T-p)(T-q)(T-r)(T-s)}" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi></mrow><mo>=</mo><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Brahmagupta’s formula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfBrahmaguptasFormula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:09:14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:09:14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">giri (919)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">giri (919)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">giri (919)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 51-00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:52:52 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html><html>
+<head>
+<title>polygon</title>
+<!--Generated on Fri Feb  9 21:52:38 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">polygon</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Definitions</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">We follow Forder <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite> for most of this entry.
+The term polygon can be defined if one has a definition of an interval. For this
+entry we use betweenness geometry. A betweenness geometry
+is just one for which there is a set of points and a betweenness relation <math id="S1.p1.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> defined.
+Rather than write <math id="S1.p1.m2" class="ltx_Math" alttext="(a,b,c)\in B" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>B</mi></mrow></math> we write <math id="S1.p1.m3" class="ltx_Math" alttext="a*b*c" display="inline"><mrow><mi>a</mi><mo>*</mo><mi>b</mi><mo>*</mo><mi>c</mi></mrow></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are distinct points, the <em class="ltx_emph ltx_font_italic">line <math id="I1.i1.p1.m3" class="ltx_Math" alttext="ab" display="inline"><mrow><mi>a</mi><mo mathvariant="italic">⁢</mo><mi>b</mi></mrow></math></em> is the set of
+all points <math id="I1.i1.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> such that <math id="I1.i1.p1.m5" class="ltx_Math" alttext="p*a*b" display="inline"><mrow><mi>p</mi><mo>*</mo><mi>a</mi><mo>*</mo><mi>b</mi></mrow></math> or <math id="I1.i1.p1.m6" class="ltx_Math" alttext="a*p*b" display="inline"><mrow><mi>a</mi><mo>*</mo><mi>p</mi><mo>*</mo><mi>b</mi></mrow></math> or <math id="I1.i1.p1.m7" class="ltx_Math" alttext="a*b*p" display="inline"><mrow><mi>a</mi><mo>*</mo><mi>b</mi><mo>*</mo><mi>p</mi></mrow></math>. It can be shown
+that the line <math id="I1.i1.p1.m8" class="ltx_Math" alttext="ab" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></math> and the line <math id="I1.i1.p1.m9" class="ltx_Math" alttext="ba" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi></mrow></math> are the same set of points.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i2.p1.m1" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> are distinct points, a <em class="ltx_emph ltx_font_italic">ray <math id="I1.i2.p1.m3" class="ltx_Math" alttext="[oa" display="inline"><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>o</mi><mi>a</mi></mrow></math></em> is the set of all points <math id="I1.i2.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> such that
+<math id="I1.i2.p1.m5" class="ltx_Math" alttext="p=o" display="inline"><mrow><mi>p</mi><mo>=</mo><mi>o</mi></mrow></math> or <math id="I1.i2.p1.m6" class="ltx_Math" alttext="o*p*a" display="inline"><mrow><mi>o</mi><mo>*</mo><mi>p</mi><mo>*</mo><mi>a</mi></mrow></math> or <math id="I1.i2.p1.m7" class="ltx_Math" alttext="o*a*p" display="inline"><mrow><mi>o</mi><mo>*</mo><mi>a</mi><mo>*</mo><mi>p</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i3.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I1.i3.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are distinct points, the <em class="ltx_emph ltx_font_italic">open interval</em> is the set of points
+<math id="I1.i3.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> such that <math id="I1.i3.p1.m4" class="ltx_Math" alttext="a*p*b" display="inline"><mrow><mi>a</mi><mo>*</mo><mi>p</mi><mo>*</mo><mi>b</mi></mrow></math>. It is denoted by <math id="I1.i3.p1.m5" class="ltx_Math" alttext="(a,b)." display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math>
+</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i4.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I1.i4.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are distinct points, the <em class="ltx_emph ltx_font_italic">closed interval</em> is
+<math id="I1.i4.p1.m3" class="ltx_Math" alttext="(a,b)\cup\{a\}\cup\{b\}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo stretchy="false">}</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math>, and denoted by <math id="I1.i4.p1.m4" class="ltx_Math" alttext="[a,b]." display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>.</mo></mrow></math></p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">way <math id="I1.i5.p1.m1" class="ltx_Math" alttext="a_{1}a_{2}\ldots a_{n}" display="inline"><mrow><msub><mi>a</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="italic">⁢</mo><msub><mi>a</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">…</mi><mo mathvariant="italic">⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math></em> is the finite set of points <math id="I1.i5.p1.m2" class="ltx_Math" alttext="\{a_{1},\ldots,a_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math>
+along with the open intervals <math id="I1.i5.p1.m3" class="ltx_Math" alttext="(a_{1},a_{2}),(a_{2},a_{3}),\ldots,(a_{n-1},a_{n})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><msub><mi>a</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>.
+The points <math id="I1.i5.p1.m4" class="ltx_Math" alttext="a_{1},\ldots,a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math> are called the <em class="ltx_emph ltx_font_italic">vertices</em> of the way, and the
+open intervals are called the <em class="ltx_emph ltx_font_italic">sides</em> of the way.
+A way is also called a <em class="ltx_emph ltx_font_italic">broken line</em>.
+The closed intervals <math id="I1.i5.p1.m5" class="ltx_Math" alttext="[a_{1},a_{2}],\ldots,[a_{n-1},a_{n}]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">[</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math> are called the <em class="ltx_emph ltx_font_italic">side-intervals</em> of
+the way. The lines <math id="I1.i5.p1.m6" class="ltx_Math" alttext="a_{1}a_{2},\ldots,a_{n-1}a_{n}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow></math> are called the <em class="ltx_emph ltx_font_italic">side-lines</em>
+of the way.
+The way <math id="I1.i5.p1.m7" class="ltx_Math" alttext="a_{1}a_{2}\ldots a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math> is said to <em class="ltx_emph ltx_font_italic">join</em> <math id="I1.i5.p1.m8" class="ltx_Math" alttext="a_{1}" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math> to <math id="I1.i5.p1.m9" class="ltx_Math" alttext="a_{n}" display="inline"><msub><mi>a</mi><mi>n</mi></msub></math>.
+It is assumed that <math id="I1.i5.p1.m10" class="ltx_Math" alttext="a_{i-1},a_{i},a_{i+1}" display="inline"><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>a</mi><mi>i</mi></msub><mo>,</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math> are not collinear.</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">A way is said to be <em class="ltx_emph ltx_font_italic">simple</em> if it does not meet itself. To be precise,
+(i) no two side-intervals meet in any point which is not a vertex, and (ii) no three side-intervals
+meet in any point.</p>
+</div>
+</li>
+<li id="I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">7.</span> 
+<div id="I1.i7.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">polygon</em> is a way <math id="I1.i7.p1.m1" class="ltx_Math" alttext="a_{1}a_{2}\ldots a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math> for which <math id="I1.i7.p1.m2" class="ltx_Math" alttext="a_{1}=a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math>. Notice that there is
+no assumption that the points are coplanar.</p>
+</div>
+</li>
+<li id="I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">8.</span> 
+<div id="I1.i8.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">simple polygon</em> is polygon for which the way is simple.</p>
+</div>
+</li>
+<li id="I1.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">9.</span> 
+<div id="I1.i9.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">region</em> is a set of points not all collinear, any two of which can be joined by points of a way using
+only points of the region.</p>
+</div>
+</li>
+<li id="I1.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">10.</span> 
+<div id="I1.i10.p1" class="ltx_para">
+<p class="ltx_p">A region <math id="I1.i10.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is <em class="ltx_emph ltx_font_italic">convex</em> if for each pair of points <math id="I1.i10.p1.m2" class="ltx_Math" alttext="a,b\in R" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>R</mi></mrow></math> the open interval <math id="I1.i10.p1.m3" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> is
+contained in <math id="I1.i10.p1.m4" class="ltx_Math" alttext="R." display="inline"><mrow><mi>R</mi><mo>.</mo></mrow></math></p>
+</div>
+</li>
+<li id="I1.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">11.</span> 
+<div id="I1.i11.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i11.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="I1.i11.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> be two sets of points. If there is a set of points <math id="I1.i11.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> such that every way
+joining a point of <math id="I1.i11.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to a point of <math id="I1.i11.p1.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> meets <math id="I1.i11.p1.m6" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> then <math id="I1.i11.p1.m7" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is said to <em class="ltx_emph ltx_font_italic">separate</em>
+<math id="I1.i11.p1.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> from <math id="I1.i11.p1.m9" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>.
+</p>
+</div>
+</li>
+<li id="I1.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">12.</span> 
+<div id="I1.i12.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i12.p1.m1" class="ltx_Math" alttext="a_{1}a_{2}\ldots a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math> is a polygon, then the <em class="ltx_emph ltx_font_italic">angles of the polygon</em> are
+<math id="I1.i12.p1.m2" class="ltx_Math" alttext="\angle a_{n}a_{1}a_{2},\angle a_{1}a_{2}a_{3}" display="inline"><mrow><mrow><mi mathvariant="normal">∠</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><mi mathvariant="normal">∠</mi><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>3</mn></msub></mrow></mrow></math>, and so on.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Now assume that all points of the geometry are in one plane. Let <math id="S1.p3.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> be a polygon. (<math id="S1.p3.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is called
+a <em class="ltx_emph ltx_font_italic">plane polygon</em>.)</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">A ray or line which does not go through a vertex of <math id="I2.i1.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> will be called <em class="ltx_emph ltx_font_italic">suitable</em>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">An <em class="ltx_emph ltx_font_italic">inside point</em> <math id="I2.i2.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> of <math id="I2.i2.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is one for which a suitable ray from <math id="I2.i2.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>
+meets <math id="I2.i2.p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> an odd number of times. Points that are not on or inside <math id="I2.i2.p1.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> are said to be <em class="ltx_emph ltx_font_italic">outside</em>
+<math id="I2.i2.p1.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I2.i3.p1.m1" class="ltx_Math" alttext="\{P_{i}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>P</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></math> be a set of polygons. We say that <math id="I2.i3.p1.m2" class="ltx_Math" alttext="\{P_{i}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>P</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></math> <em class="ltx_emph ltx_font_italic">dissect</em> <math id="I2.i3.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> if the following
+three conditions are satisfied: (i) <math id="I2.i3.p1.m4" class="ltx_Math" alttext="P_{i}" display="inline"><msub><mi>P</mi><mi>i</mi></msub></math> and <math id="I2.i3.p1.m5" class="ltx_Math" alttext="P_{j}" display="inline"><msub><mi>P</mi><mi>j</mi></msub></math> do not have a common inside point for <math id="I2.i3.p1.m6" class="ltx_Math" alttext="i\not=j" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></math>,
+(ii) each inside point of <math id="I2.i3.p1.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is inside or on some <math id="I2.i3.p1.m8" class="ltx_Math" alttext="P_{i}" display="inline"><msub><mi>P</mi><mi>i</mi></msub></math> and (iii) each inside point of <math id="I2.i3.p1.m9" class="ltx_Math" alttext="P_{i}" display="inline"><msub><mi>P</mi><mi>i</mi></msub></math> is
+inside <math id="I2.i3.p1.m10" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">convex polygon</em> is one whose inside points are all on the same side of any side-line
+of the polygon.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Theorems</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Assume that all points are in one plane. Let <math id="S2.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> be a polygon.</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">It can be shown that <math id="I3.i1.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> separates the other points of the plane into at least two regions and that
+if <math id="I3.i1.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is simple there are exactly two regions. Moise proves this directly in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>, pp. 16-18.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">It can be shown that <math id="I3.i2.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> can be dissected into triangles <math id="I3.i2.p1.m2" class="ltx_Math" alttext="\{T_{i}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>T</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></math> such that
+every vertex of a <math id="I3.i2.p1.m3" class="ltx_Math" alttext="T_{i}" display="inline"><msub><mi>T</mi><mi>i</mi></msub></math> is a vertex of <math id="I3.i2.p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">The following theorem of Euler can be shown: Suppose <math id="I3.i3.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is dissected into <math id="I3.i3.p1.m2" class="ltx_Math" alttext="f&gt;1" display="inline"><mrow><mi>f</mi><mo>&gt;</mo><mn>1</mn></mrow></math> polygons
+and that the total number of vertices of these polygons is <math id="I3.i3.p1.m3" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, and the number of open intervals
+which are sides is <math id="I3.i3.p1.m4" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>. Then</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="v-e+f=1" display="block"><mrow><mrow><mrow><mi>v</mi><mo>-</mo><mi>e</mi></mrow><mo>+</mo><mi>f</mi></mrow><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">A plane simple polygon with <math id="S2.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> sides is called an <math id="S2.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-gon, although for small <math id="S2.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+there are more traditional names:</p>
+</div>
+<div id="S2.p3" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_ll ltx_border_r ltx_border_t">Number of sides</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_rr ltx_border_t">Name of the polygon</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r ltx_border_t">3</th>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">triangle</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r">4</th>
+<td class="ltx_td ltx_align_center ltx_border_rr">quadrilateral</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r">5</th>
+<td class="ltx_td ltx_align_center ltx_border_rr">pentagon</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r">6</th>
+<td class="ltx_td ltx_align_center ltx_border_rr">hexagon</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r">7</th>
+<td class="ltx_td ltx_align_center ltx_border_rr">heptagon</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_ll ltx_border_r">8</th>
+<td class="ltx_td ltx_align_center ltx_border_rr">octagon</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_b ltx_border_ll ltx_border_r">10</th>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_rr">decagon</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">A plane simple polygon is also called a <em class="ltx_emph ltx_font_italic">Jordan polygon</em>.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+K. Borsuk and W. Szmielew, <em class="ltx_emph ltx_font_italic">Foundations of Geometry</em>,
+North-Holland Publishing Company, 1960.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+H.G. Forder, <em class="ltx_emph ltx_font_italic">The Foundations of Euclidean Geometry</em>,
+Dover Publications, 1958.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+E.E. Moise, <em class="ltx_emph ltx_font_italic">Geometric Topology in Dimensions 2 and 3</em>,
+Springer-Verlag, 1977.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">polygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Polygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:10:15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:10:15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">43</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51G05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RegularPolygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Semiperimeter</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EquilateralPolygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EquiangularPolygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Pentagon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BasicPolygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Hexagon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GeneralizedPythagoreanTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">side</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">vertex</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">vertices</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">simple polygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">side-lines</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ray</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">simple way</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">way</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">region</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">convex region</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Jordan polygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">angles of a polygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">plane polygon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">broken line</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:52:38 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

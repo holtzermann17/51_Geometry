@@ -1,0 +1,341 @@
+<!DOCTYPE html><html>
+<head>
+<title>combinatorial uniqueness of Hesse Configuration</title>
+<!--Generated on Fri Feb  9 22:00:43 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">combinatorial uniqueness of Hesse Configuration</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">In this article, we will show that a collection
+of objects which has the incidence structure of
+a Hesse configuration is unique up to relabeling.</p>
+</div>
+<div id="Thmdef1" class="ltx_theorem ltx_theorem_def">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmdef1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">An <em class="ltx_emph ltx_font_upright">abstract Hesse configuration</em> is a pair of
+sets <math id="Thmdef1.p1.m1" class="ltx_Math" alttext="(P,L)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>P</mi><mo mathvariant="normal">,</mo><mi>L</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> which satisfies the following conditions:
+</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">1.</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math><span class="ltx_text ltx_font_italic"> has nine elements</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">2.</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Every element of </span><math id="I1.i2.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math><span class="ltx_text ltx_font_italic"> is a subset of </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math><span class="ltx_text ltx_font_italic"> with three elements.</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">3.</span></span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For any two distinct elements </span><math id="I1.i3.p1.m1" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math><span class="ltx_text ltx_font_italic"> of </span><math id="I1.i3.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math><span class="ltx_text ltx_font_italic">, there
+exists exactly one element of </span><math id="I1.i3.p1.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math><span class="ltx_text ltx_font_italic"> which contains both </span><math id="I1.i3.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math><span class="ltx_text ltx_font_italic"> and </span><math id="I1.i3.p1.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="(P,L)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>P</mi><mo mathvariant="normal">,</mo><mi>L</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is an abstract Hesse configuration,
+then <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> has 12 elements.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> be the set of all two-element subsets of <math id="p2.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.
+Then <math id="p2.m3" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> has <math id="p2.m4" class="ltx_Math" alttext="{9\choose 2}=36" display="inline"><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>9</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mo>=</mo><mn>36</mn></mrow></math> elements. Each
+element of <math id="p2.m5" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a subset of <math id="p2.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> with three elements,
+hence has <math id="p2.m7" class="ltx_Math" alttext="{3\choose 2}=3" display="inline"><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>3</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mo>=</mo><mn>3</mn></mrow></math> subsets of cardinality 2.
+By the definition above, every element of <math id="p2.m8" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> must
+be a subset of exactly one element of <math id="p2.m9" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. For this
+to be possible, <math id="p2.m10" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> must have cardinality <math id="p2.m11" class="ltx_Math" alttext="36/3=12" display="inline"><mrow><mrow><mn>36</mn><mo>/</mo><mn>3</mn></mrow><mo>=</mo><mn>12</mn></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="(P,L)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>P</mi><mo mathvariant="normal">,</mo><mi>L</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is an abstract Hesse configuration then, for
+every <math id="Thmthm2.p1.m2" class="ltx_Math" alttext="p\in P" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">∈</mo><mi>P</mi></mrow></math>, there exist exactly four elements
+<math id="Thmthm2.p1.m3" class="ltx_Math" alttext="\ell\in L" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo mathvariant="normal">∈</mo><mi>L</mi></mrow></math> such that <math id="Thmthm2.p1.m4" class="ltx_Math" alttext="p\in\ell" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">To every <math id="p3.m1" class="ltx_Math" alttext="q\in P" display="inline"><mrow><mi>q</mi><mo>∈</mo><mi>P</mi></mrow></math> such that <math id="p3.m2" class="ltx_Math" alttext="q\neq p" display="inline"><mrow><mi>q</mi><mo>≠</mo><mi>p</mi></mrow></math>, there exists
+exactly one <math id="p3.m3" class="ltx_Math" alttext="\ell\in L" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>∈</mo><mi>L</mi></mrow></math> such that <math id="p3.m4" class="ltx_Math" alttext="p\in\ell" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math> and
+<math id="p3.m5" class="ltx_Math" alttext="q\in\ell" display="inline"><mrow><mi>q</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>. Furthermore, for every <math id="p3.m6" class="ltx_Math" alttext="\ell\in L" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>∈</mo><mi>L</mi></mrow></math> such
+that <math id="p3.m7" class="ltx_Math" alttext="p\in\ell" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>, there will be exactly two elements
+of <math id="p3.m8" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> other than <math id="p3.m9" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Hence, there exist <math id="p3.m10" class="ltx_Math" alttext="(9-1)/2=4" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>9</mn><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>2</mn></mrow><mo>=</mo><mn>4</mn></mrow></math>
+elements <math id="p3.m11" class="ltx_Math" alttext="\ell\in L" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>∈</mo><mi>L</mi></mrow></math> such that <math id="p3.m12" class="ltx_Math" alttext="p\in\ell" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmthm3" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 3</span>.</h6>
+<div id="Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm3.p1.m1" class="ltx_Math" alttext="(P,L)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>P</mi><mo mathvariant="normal">,</mo><mi>L</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is an abstract Hesse configuration and <math id="Thmthm3.p1.m2" class="ltx_Math" alttext="\ell\in L" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo mathvariant="normal">∈</mo><mi>L</mi></mrow></math>,
+then there exist <math id="Thmthm3.p1.m3" class="ltx_Math" alttext="m,n\in L" display="inline"><mrow><mrow><mi>m</mi><mo mathvariant="normal">,</mo><mi>n</mi></mrow><mo mathvariant="normal">∈</mo><mi>L</mi></mrow></math> such that <math id="Thmthm3.p1.m4" class="ltx_Math" alttext="\ell\cap m=\ell\cap n=m\cap n=\emptyset" display="inline"><mrow><mrow><mi mathvariant="normal">ℓ</mi><mo mathvariant="normal">∩</mo><mi>m</mi></mrow><mo mathvariant="normal">=</mo><mrow><mi mathvariant="normal">ℓ</mi><mo mathvariant="normal">∩</mo><mi>n</mi></mrow><mo mathvariant="normal">=</mo><mrow><mi>m</mi><mo mathvariant="normal">∩</mo><mi>n</mi></mrow><mo mathvariant="normal">=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">By the foregoing result, given <math id="p4.m1" class="ltx_Math" alttext="p\in\ell" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>, there are four
+elements of <math id="p4.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> to which <math id="p4.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> belongs. One of these, of course,
+is <math id="p4.m4" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> itself, and the other three are distinct from <math id="p4.m5" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>.
+Since <math id="p4.m6" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> has three elements, this means that there are at
+most <math id="p4.m7" class="ltx_Math" alttext="3\cdot 3+1=10" display="inline"><mrow><mrow><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mn>10</mn></mrow></math> elements <math id="p4.m8" class="ltx_Math" alttext="k\in L" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>L</mi></mrow></math> such that
+<math id="p4.m9" class="ltx_Math" alttext="P\cap L\neq\emptyset" display="inline"><mrow><mrow><mi>P</mi><mo>∩</mo><mi>L</mi></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>. Because <math id="p4.m10" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> has 12 elements. there
+must exist <math id="p4.m11" class="ltx_Math" alttext="m,n\in L" display="inline"><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>∈</mo><mi>L</mi></mrow></math> such that <math id="p4.m12" class="ltx_Math" alttext="\ell\cap m=\ell\cap n=\emptyset" display="inline"><mrow><mrow><mi mathvariant="normal">ℓ</mi><mo>∩</mo><mi>m</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>∩</mo><mi>n</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">It remains to show that <math id="p5.m1" class="ltx_Math" alttext="m\cap n=\emptyset" display="inline"><mrow><mrow><mi>m</mi><mo>∩</mo><mi>n</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. Suppose to the
+contrary that there exists a <math id="p5.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> such that <math id="p5.m3" class="ltx_Math" alttext="p\in m" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>m</mi></mrow></math> and
+<math id="p5.m4" class="ltx_Math" alttext="p\in n" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>n</mi></mrow></math>. Since <math id="p5.m5" class="ltx_Math" alttext="m\cap\ell=\emptyset" display="inline"><mrow><mrow><mi>m</mi><mo>∩</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>, it follows that
+<math id="p5.m6" class="ltx_Math" alttext="p\notin\ell" display="inline"><mrow><mi>p</mi><mo>∉</mo><mi mathvariant="normal">ℓ</mi></mrow></math>, hence there will exist three distinct elements
+of <math id="p5.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> containing <math id="p5.m8" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and an element of <math id="p5.m9" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>. Because
+<math id="p5.m10" class="ltx_Math" alttext="\ell\cap m=\ell\cap n=\emptyset" display="inline"><mrow><mrow><mi mathvariant="normal">ℓ</mi><mo>∩</mo><mi>m</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>∩</mo><mi>n</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>, these three elements
+are distinct from <math id="p5.m11" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="p5.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. That makes for a total of
+five distinct elements of <math id="p5.m13" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> containing <math id="p5.m14" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, which
+contradicts the previous theorem, hence <math id="p5.m15" class="ltx_Math" alttext="m\cap n=\emptyset" display="inline"><mrow><mrow><mi>m</mi><mo>∩</mo><mi>n</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmthm4" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 4</span>.</h6>
+<div id="Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm4.p1.m1" class="ltx_Math" alttext="m,n,k" display="inline"><mrow><mi>m</mi><mo mathvariant="normal">,</mo><mi>n</mi><mo mathvariant="normal">,</mo><mi>k</mi></mrow></math> are elements of <math id="Thmthm4.p1.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> such that <math id="Thmthm4.p1.m3" class="ltx_Math" alttext="m\cap n=n\cap k=k\cap m=\emptyset" display="inline"><mrow><mrow><mi>m</mi><mo mathvariant="normal">∩</mo><mi>n</mi></mrow><mo mathvariant="normal">=</mo><mrow><mi>n</mi><mo mathvariant="normal">∩</mo><mi>k</mi></mrow><mo mathvariant="normal">=</mo><mrow><mi>k</mi><mo mathvariant="normal">∩</mo><mi>m</mi></mrow><mo mathvariant="normal">=</mo><mi mathvariant="normal">∅</mi></mrow></math> and <math id="Thmthm4.p1.m4" class="ltx_Math" alttext="\ell\in L\setminus\{m,n,k\}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo mathvariant="normal">∈</mo><mrow><mi>L</mi><mo mathvariant="normal">∖</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mi>m</mi><mo mathvariant="normal">,</mo><mi>n</mi><mo mathvariant="normal">,</mo><mi>k</mi><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></mrow></math>,
+then <math id="Thmthm4.p1.m5" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> has exactly one element in common with each of <math id="Thmthm4.p1.m6" class="ltx_Math" alttext="m,n,k" display="inline"><mrow><mi>m</mi><mo mathvariant="normal">,</mo><mi>n</mi><mo mathvariant="normal">,</mo><mi>k</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Since each element of <math id="p6.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a subset of <math id="p6.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> with three elements
+and <math id="p6.m3" class="ltx_Math" alttext="m,n,k" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi><mo>,</mo><mi>k</mi></mrow></math> are pairwise disjoint but <math id="p6.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> only has nine
+elements, it follows that every element of <math id="p6.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> must belong
+to exactly one of <math id="p6.m6" class="ltx_Math" alttext="m,n,k" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi><mo>,</mo><mi>k</mi></mrow></math>. In particular, this means that
+every element of <math id="p6.m7" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> must belong to one of <math id="p6.m8" class="ltx_Math" alttext="m,n,k" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>n</mi><mo>,</mo><mi>k</mi></mrow></math>. Were
+two elements of <math id="p6.m9" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> to belong to the same element of
+<math id="p6.m10" class="ltx_Math" alttext="\{m,n,k\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="false">}</mo></mrow></math> then, by the third defining property, that element
+would have to equal <math id="p6.m11" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, contrary to its definition. Hence,
+each element of <math id="p6.m12" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> must belong to a distinct element of
+<math id="p6.m13" class="ltx_Math" alttext="\{m,n,k\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo>,</mo><mi>k</mi><mo stretchy="false">}</mo></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmthm5" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 5</span>.</h6>
+<div id="Thmthm5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm5.p1.m1" class="ltx_Math" alttext="(P,L)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>P</mi><mo mathvariant="normal">,</mo><mi>L</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is an abstract Hesse configuration, then we can
+label the elements of <math id="Thmthm5.p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> as A,B,C,D,E,F,G,H,I in such a way
+that the elements of <math id="Thmthm5.p1.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> are</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\{A,B,C\},\{D,E,F\},\{G,H,I\}," display="block"><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>D</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>F</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mi>H</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\{A,D,G\},\{B,E,H\},\{C,F,I\}," display="block"><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>B</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>H</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>C</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\{D,H,C\},\{A,E,I\},\{B,F,G\}," display="block"><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>D</mi><mo>,</mo><mi>H</mi><mo>,</mo><mi>C</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>B</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\{B,D,I\},\{C,E,G\},\{A,F,H\}." display="block"><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>B</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>C</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>H</mi><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">By theorem 3, there exist <math id="p7.m1" class="ltx_Math" alttext="a,b,c\in L" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>L</mi></mrow></math> such that
+<math id="p7.m2" class="ltx_Math" alttext="a\cap b=b\cap c=c\cap a=\emptyset" display="inline"><mrow><mrow><mi>a</mi><mo>∩</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>b</mi><mo>∩</mo><mi>c</mi></mrow><mo>=</mo><mrow><mi>c</mi><mo>∩</mo><mi>a</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. Since <math id="p7.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> has
+twelve elements, there must exist an a elemetn of <math id="p7.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> distinct
+from <math id="p7.m5" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math>. Pick such an element and call it <math id="p7.m6" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>. By
+another application of theorem 3, there must exist <math id="p7.m7" class="ltx_Math" alttext="e,f\in L" display="inline"><mrow><mrow><mi>e</mi><mo>,</mo><mi>f</mi></mrow><mo>∈</mo><mi>L</mi></mrow></math>
+such that <math id="p7.m8" class="ltx_Math" alttext="d\cap e=e\cap f=f\cap d=\emptyset" display="inline"><mrow><mrow><mi>d</mi><mo>∩</mo><mi>e</mi></mrow><mo>=</mo><mrow><mi>e</mi><mo>∩</mo><mi>f</mi></mrow><mo>=</mo><mrow><mi>f</mi><mo>∩</mo><mi>d</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">By theorem 4, <math id="p8.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> must have exactly one element in common with
+each of <math id="p8.m2" class="ltx_Math" alttext="d,e,f" display="inline"><mrow><mi>d</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>f</mi></mrow></math>; let <math id="p8.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> the element it has in common with <math id="p8.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>,
+<math id="p8.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be the element it has in common with <math id="p8.m6" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> and <math id="p8.m7" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> be the
+element it has in common with <math id="p8.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. Likewise, <math id="p8.m9" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> must have
+exactly one element in common with each of <math id="p8.m10" class="ltx_Math" alttext="d,e,f" display="inline"><mrow><mi>d</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>f</mi></mrow></math>, as must <math id="p8.m11" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.
+Let <math id="p8.m12" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> be the element <math id="p8.m13" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> has in common with <math id="p8.m14" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>, <math id="p8.m15" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> be the
+element <math id="p8.m16" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> has in common with <math id="p8.m17" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>, <math id="p8.m18" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> be the element <math id="p8.m19" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>
+has in common with <math id="p8.m20" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, <math id="p8.m21" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be the element <math id="p8.m22" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> has in common
+with <math id="p8.m23" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>, <math id="p8.m24" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> be the element <math id="p8.m25" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> has in common with <math id="p8.m26" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> and <math id="p8.m27" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>
+be the element <math id="p8.m28" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> has in common with <math id="p8.m29" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Summarizing what we just said another way, we have assigned
+labels <math id="p9.m1" class="ltx_Math" alttext="A,B,C,D,E,F,G,H,I" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo>,</mo><mi>H</mi><mo>,</mo><mi>I</mi></mrow></math> to the elements of <math id="p9.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> in such
+a way that</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="a=\{A,B,C\},~{}b=\{D,E,F\},~{}c=\{G,H,I\}," display="block"><mrow><mrow><mrow><mi>a</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo stretchy="false">}</mo></mrow></mrow><mo rspace="5.8pt">,</mo><mrow><mrow><mi>b</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>D</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>F</mi><mo stretchy="false">}</mo></mrow></mrow><mo rspace="5.8pt">,</mo><mrow><mi>c</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>G</mi><mo>,</mo><mi>H</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="d=\{A,D,G\},~{}e=\{B,E,H\},~{}f=\{C,F,I\}." display="block"><mrow><mrow><mrow><mi>d</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo></mrow></mrow><mo rspace="5.8pt">,</mo><mrow><mrow><mi>e</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>B</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>H</mi><mo stretchy="false">}</mo></mrow></mrow><mo rspace="5.8pt">,</mo><mrow><mi>f</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>C</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">That is half of what we set out to do; we must still label
+the remaining six elements of <math id="p9.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">By theorem 4, if <math id="p10.m1" class="ltx_Math" alttext="\ell\in L\setminus\{a,b,c,d,e,f\}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>∈</mo><mrow><mi>L</mi><mo>∖</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>f</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, then
+<math id="p10.m2" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> must have exactly one element in common with each of
+<math id="p10.m3" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math> and exactly one element in common with each of <math id="p10.m4" class="ltx_Math" alttext="d,e,f" display="inline"><mrow><mi>d</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>f</mi></mrow></math>.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="p11.m1" class="ltx_Math" alttext="A\in\ell" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>. It could not be the case that
+<math id="p11.m2" class="ltx_Math" alttext="D\in\ell" display="inline"><mrow><mi>D</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math> because then <math id="p11.m3" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> would have two elements in
+common with <math id="p11.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>. Since <math id="p11.m5" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> must have one element in common
+with <math id="p11.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, that means that either <math id="p11.m7" class="ltx_Math" alttext="E\in\ell" display="inline"><mrow><mi>E</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math> or <math id="p11.m8" class="ltx_Math" alttext="F\in\ell" display="inline"><mrow><mi>F</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>.
+If <math id="p11.m9" class="ltx_Math" alttext="A,E\in\ell" display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>E</mi></mrow><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>, then the element <math id="p11.m10" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> has in common with
+<math id="p11.m11" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> cannot be <math id="p11.m12" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> because <math id="p11.m13" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> would have both <math id="p11.m14" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p11.m15" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
+in common with <math id="p11.m16" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> and it cannot be <math id="p11.m17" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> because <math id="p11.m18" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> and
+<math id="p11.m19" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> would have both <math id="p11.m20" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and <math id="p11.m21" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> in common, hence the only
+possibility is to have <math id="p11.m22" class="ltx_Math" alttext="I\in\ell" display="inline"><mrow><mi>I</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>, i.e. <math id="p11.m23" class="ltx_Math" alttext="\ell=\{A,E,I\}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow></mrow></math>.
+Likewise, if <math id="p11.m24" class="ltx_Math" alttext="A,F\in\ell" display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>F</mi></mrow><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>, it follows that <math id="p11.m25" class="ltx_Math" alttext="H\in\ell" display="inline"><mrow><mi>H</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Summarrizing the last few sentences, if <math id="p12.m1" class="ltx_Math" alttext="A\in\ell" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>, then
+either <math id="p12.m2" class="ltx_Math" alttext="\ell=\{A,E,I\}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow></mrow></math> or <math id="p12.m3" class="ltx_Math" alttext="\ell=\{A,F,H\}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>H</mi><mo stretchy="false">}</mo></mrow></mrow></math>. By a similar
+line of reasoning, if <math id="p12.m4" class="ltx_Math" alttext="B\in\ell" display="inline"><mrow><mi>B</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>, then either <math id="p12.m5" class="ltx_Math" alttext="\ell=\{B,D,I\}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>B</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow></mrow></math> or <math id="p12.m6" class="ltx_Math" alttext="\ell=\{B,F,G\}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>B</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo></mrow></mrow></math> and, if <math id="p12.m7" class="ltx_Math" alttext="B\in\ell" display="inline"><mrow><mi>B</mi><mo>∈</mo><mi mathvariant="normal">ℓ</mi></mrow></math>, then
+either <math id="p12.m8" class="ltx_Math" alttext="\ell=\{C,D,H\}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>H</mi><mo stretchy="false">}</mo></mrow></mrow></math> or <math id="p12.m9" class="ltx_Math" alttext="\ell=\{C,E,G\}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>C</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo></mrow></mrow></math>. Since <math id="p12.m10" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>
+must contain one of <math id="p12.m11" class="ltx_Math" alttext="A,B,C" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow></math>, it follows that there are omnly
+the following six possibilities for <math id="p12.m12" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\{D,H,C\},\{A,E,I\},\{B,F,G\}," display="block"><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>D</mi><mo>,</mo><mi>H</mi><mo>,</mo><mi>C</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>B</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\{B,D,I\},\{C,E,G\},\{A,F,H\}." display="block"><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>B</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>I</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>C</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>G</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>A</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>H</mi><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">However, since <math id="p12.m13" class="ltx_Math" alttext="L\setminus\{a,b,c,d,e,f\}" display="inline"><mrow><mi>L</mi><mo>∖</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>f</mi><mo stretchy="false">}</mo></mrow></mrow></math> has cardinality
+six, all these possibilities must be actual members of the set.
+∎</p>
+</div>
+</div>
+<div id="p13" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">combinatorial uniqueness of Hesse Configuration</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CombinatorialUniquenessOfHesseConfiguration</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-02-28 16:18:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-02-28 16:18:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51E20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 51A45</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:00:43 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html><html>
+<head>
+<title>osculating curve</title>
+<!--Generated on Fri Feb  9 22:10:19 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">osculating curve</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition.</span>  From a family of plane curves, the <span class="ltx_text ltx_font_italic">osculating curve</span> of the curve  <math id="p1.m1" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>  in a certain point is the curve of the family which has the highest order contact with the curve  <math id="p1.m2" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>  in that point.
+<br class="ltx_break"></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 1.</span>  From the family of the graphs of the polynomial functions</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="P_{n}(x):=c_{0}+c_{1}(x-x_{0})+\ldots+c_{n}(x-x_{0})^{n}," display="block"><mrow><mrow><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the osculating curve of  <math id="p2.m1" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>  in  <math id="p2.m2" class="ltx_Math" alttext="(x_{0},\,f(x_{0}))" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo rspace="4.2pt">,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>  is the Taylor polynomial of degree <math id="p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> of the function <math id="p2.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 2.</span>  Determine the osculating hyperbola with axes parallel to the coordinate axes for the curve  <math id="p3.m1" class="ltx_Math" alttext="y=\cos{x}" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></math>  in the point  <math id="p3.m2" class="ltx_Math" alttext="(0,\,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn> 1</mn><mo stretchy="false">)</mo></mrow></math>.  What is the order of contact?</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">We may seek the osculating hyperbola from the three-parametric family</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\frac{x^{2}}{a^{2}}-\frac{(y-y_{0})^{2}}{b^{2}}=-1." display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mi>x</mi><mn>2</mn></msup><msup><mi>a</mi><mn>2</mn></msup></mfrac></mstyle><mo>-</mo><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><msup><mi>b</mi><mn>2</mn></msup></mfrac></mstyle></mrow><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Removing the denominators and differentiating six times successively yield the equations</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\begin{cases}b^{2}x^{2}-a^{2}(y-y_{0})^{2}+a^{2}b^{2}=0,\\
+b^{2}x-a^{2}(y-y_{0})y^{\prime}=0,\\
+b^{2}-a^{2}y^{\prime 2}-a^{2}(y-y_{0})y^{\prime\prime}=0,\\
+3y^{\prime}y^{\prime\prime}+(y-y_{0})y^{\prime\prime\prime}=0,\\
+3y^{\prime\prime 2}+4y^{\prime}y^{\prime\prime\prime}+(y-y_{0})y^{\prime\prime%
+\prime\prime}=0,\\
+10y^{\prime\prime}y^{\prime\prime\prime}+5y^{\prime}y^{\prime\prime\prime%
+\prime}+(y-y_{0})y^{(5)}=0,\\
+10y^{\prime\prime\prime 2}+15y^{\prime\prime}y^{\prime\prime\prime\prime}+6y^{%
+\prime}y^{(5)}+(y-y_{0})y^{(6)}=0.\end{cases}" display="inline"><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mrow><mrow><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>-</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>-</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>y</mi><mrow><mo mathsize="142%" stretchy="false">′</mo><mo>⁣</mo><mn>2</mn></mrow></msup></mrow><mo>-</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>y</mi><mo>′′</mo></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>y</mi><mo>′′</mo></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>y</mi><mo>′′′</mo></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>y</mi><mrow><mo mathsize="142%" stretchy="false">′′</mo><mo>⁣</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>y</mi><mo>′′′</mo></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>y</mi><mo>′′′′</mo></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mrow><mn>10</mn><mo>⁢</mo><msup><mi>y</mi><mo>′′</mo></msup><mo>⁢</mo><msup><mi>y</mi><mo>′′′</mo></msup></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>y</mi><mo>′′′′</mo></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mrow><mn>10</mn><mo>⁢</mo><msup><mi>y</mi><mrow><mo mathsize="142%" stretchy="false">′′′</mo><mo>⁣</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mrow><mn>15</mn><mo>⁢</mo><msup><mi>y</mi><mo>′′</mo></msup><mo>⁢</mo><msup><mi>y</mi><mo>′′′′</mo></msup></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msup><mi>y</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Into these equations we can substitute the coordinates  <math id="p5.m1" class="ltx_Math" alttext="x=0,\,y=1" display="inline"><mrow><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><mo rspace="4.2pt">,</mo><mrow><mi>y</mi><mo>=</mo><mn>1</mn></mrow></mrow></math>  of the contact point and the values of the derivatives
+</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="y^{\prime}=-\sin{x},\;y^{\prime\prime}=-\cos{x},\;y^{\prime\prime\prime}=\sin{%
+x},\;y^{\prime\prime\prime\prime}=\cos{x},\;y^{(5)}=-\sin{x},\;y^{(6)}=-\cos{x}" display="block"><mrow><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mrow><mo>-</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><msup><mi>y</mi><mo>′′</mo></msup><mo>=</mo><mrow><mo>-</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><msup><mi>y</mi><mo>′′′</mo></msup><mo>=</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><msup><mi>y</mi><mo>′′′′</mo></msup><mo>=</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mrow><mo>-</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mrow><mo>-</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of cosine in that point; the values are  <math id="p5.m2" class="ltx_Math" alttext="0,\;-1,\;0,\;1,\,0,\;-1" display="inline"><mrow><mn>0</mn><mo rspace="5.3pt">,</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mn> 0</mn><mo>,</mo><mn> 1</mn><mo>,</mo><mn> 0</mn><mo rspace="5.3pt">,</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>.  The first, third and fifth of the equations (2) give the result  <math id="p5.m3" class="ltx_Math" alttext="y_{0}=4,\;\,b^{2}=9,\;\,a^{2}=3" display="inline"><mrow><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>=</mo><mn>4</mn></mrow><mo rspace="6.9pt">,</mo><mrow><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><mn>9</mn></mrow><mo rspace="6.9pt">,</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><mn>3</mn></mrow></mrow></mrow></math>, whence the osculating hyperbola is</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\frac{x^{2}}{3}-\frac{(y-4)^{2}}{9}=-1." display="block"><mrow><mrow><mrow><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>3</mn></mfrac><mo>-</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>9</mn></mfrac></mrow><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">When we substitute the pertinent values of the cosine derivatives into the two last equations (2), we see that only the former of them is satisfied.  It means that the order of contact between the cosine curve and the hyperbola is 5.
+<br class="ltx_break"></p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 3.</span>  The osculating parabola of the exponential curve (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ExponentialFunction</span>)  <math id="p6.m1" class="ltx_Math" alttext="y=e^{x}" display="inline"><mrow><mi>y</mi><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup></mrow></math>  in the point <math id="p6.m2" class="ltx_Math" alttext="(0,\,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn> 1</mn><mo stretchy="false">)</mo></mrow></math>  is</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="4x^{2}+y^{2}+4xy+14x-20y+19=0." display="block"><mrow><mrow><mrow><mrow><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mn>14</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mrow><mn>20</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mn>19</mn></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The order of contact is only 3.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">osculating curve</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">OsculatingCurve</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:57:17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:57:17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51N05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53A04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">OrderOfVanishing</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CircleOfCurvature</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Cosine</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">QuadraticCurves</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:10:19 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of uniqueness of center of a circle</title>
+<!--Generated on Fri Feb  9 22:06:45 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of uniqueness of center of a circle</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">In this entry, we prove the uniqueness of center of a circle in a slightly more general setting than the parent entry.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">In this more general setting, let <math id="p3.m1" class="ltx_Math" alttext="\mathfrak{G}" display="inline"><mi>𝔊</mi></math> be an ordered geometry satisfying the congruence axioms.
+We write <math id="p3.m2" class="ltx_Math" alttext="a:b:c" display="inline"><mrow><mi>a</mi><mo>:</mo><mi>b</mi><mo>:</mo><mi>c</mi></mrow></math> to mean <math id="p3.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is between <math id="p3.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p3.m5" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>. Recall that the closed line segment
+with endpoints <math id="p3.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="p3.m7" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is denoted by <math id="p3.m8" class="ltx_Math" alttext="[p,q]" display="inline"><mrow><mo stretchy="false">[</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Before proving the property that a circle in <math id="p4.m1" class="ltx_Math" alttext="\mathfrak{G}" display="inline"><mi>𝔊</mi></math> has a unique center,
+let us review some definitions.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Let <math id="p5.m1" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> and <math id="p5.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> be points in <math id="p5.m3" class="ltx_Math" alttext="\mathfrak{G}" display="inline"><mi>𝔊</mi></math>, a geometry in which the congruence axioms are defined.
+Let <math id="p5.m4" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the set of all points <math id="p5.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> in <math id="p5.m6" class="ltx_Math" alttext="\mathfrak{G}" display="inline"><mi>𝔊</mi></math> such that the
+closed line segments are congruent: <math id="p5.m7" class="ltx_Math" alttext="[o,a]\cong[o,p]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>p</mi><mo stretchy="false">]</mo></mrow></mrow></math>.
+The set <math id="p5.m8" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> is called a <em class="ltx_emph ltx_font_italic">circle</em>. When <math id="p5.m9" class="ltx_Math" alttext="a=o" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>o</mi></mrow></math>, then <math id="p5.m10" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> is said to be <em class="ltx_emph ltx_font_italic">degenerate</em>. 
+<br class="ltx_break">Let <math id="p5.m11" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math> be a circle in <math id="p5.m12" class="ltx_Math" alttext="\mathfrak{G}" display="inline"><mi>𝔊</mi></math>. A <em class="ltx_emph ltx_font_italic">center</em> of <math id="p5.m13" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math> is a point <math id="p5.m14" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> such that for every pair of points <math id="p5.m15" class="ltx_Math" alttext="p,q" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></math> in <math id="p5.m16" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math>, <math id="p5.m17" class="ltx_Math" alttext="[o,p]\cong[o,q]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>p</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>q</mi><mo stretchy="false">]</mo></mrow></mrow></math>.
+We say that <math id="p5.m18" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is a <em class="ltx_emph ltx_font_italic">midpoint</em> of two points <math id="p5.m19" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="p5.m20" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>
+if <math id="p5.m21" class="ltx_Math" alttext="[p,m]\cong[m,q]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>p</mi><mo>,</mo><mi>m</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>m</mi><mo>,</mo><mi>q</mi><mo stretchy="false">]</mo></mrow></mrow></math> and <math id="p5.m22" class="ltx_Math" alttext="m,p,q" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>q</mi></mrow></math> are collinear. 
+<br class="ltx_break">We say that <math id="p5.m23" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is an <em class="ltx_emph ltx_font_italic">interior point</em> of
+<math id="p5.m24" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> if <math id="p5.m25" class="ltx_Math" alttext="[o,p]&lt;[o,a]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>p</mi><mo stretchy="false">]</mo></mrow><mo>&lt;</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">We collect some simple facts below.</p>
+</div>
+<div id="p7" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">In the circle <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="I1.i1.p1.m2" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> is a center of <math id="I1.i1.p1.m3" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> (by definition).</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math> be a circle. If <math id="I1.i2.p1.m2" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> is a center of <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math> and <math id="I1.i2.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is any point
+in <math id="I1.i2.p1.m5" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math>, then <math id="I1.i2.p1.m6" class="ltx_Math" alttext="\mathscr{C}=\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>=</mo><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, again by definition.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">A circle is degenerate if and only if it is a singleton.</p>
+</div>
+<div id="I1.i3.p2" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i3.p2.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is in <math id="I1.i3.p2.m2" class="ltx_Math" alttext="\mathscr{C}(o,o)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>o</mi><mo stretchy="false">)</mo></mrow></mrow></math>, then <math id="I1.i3.p2.m3" class="ltx_Math" alttext="[o,p]\cong[o,o]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>p</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>o</mi><mo stretchy="false">]</mo></mrow></mrow></math>, so that <math id="I1.i3.p2.m4" class="ltx_Math" alttext="p=o" display="inline"><mrow><mi>p</mi><mo>=</mo><mi>o</mi></mrow></math>, and
+<math id="I1.i3.p2.m5" class="ltx_Math" alttext="\mathscr{C}(o,o)=\{o\}" display="inline"><mrow><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>o</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>o</mi><mo stretchy="false">}</mo></mrow></mrow></math>. Conversely, if <math id="I1.i3.p2.m6" class="ltx_Math" alttext="\mathscr{C}(o,a)=\{b\}" display="inline"><mrow><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math>, then <math id="I1.i3.p2.m7" class="ltx_Math" alttext="b=a" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>a</mi></mrow></math>. Let <math id="I1.i3.p2.m8" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> be any line passing through <math id="I1.i3.p2.m9" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math>. Choose a ray <math id="I1.i3.p2.m10" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> on <math id="I1.i3.p2.m11" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> emanating from <math id="I1.i3.p2.m12" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math>. Then there is a point <math id="I1.i3.p2.m13" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> on <math id="I1.i3.p2.m14" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> such that <math id="I1.i3.p2.m15" class="ltx_Math" alttext="[o,d]\cong[o,a]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math>. So <math id="I1.i3.p2.m16" class="ltx_Math" alttext="d=a" display="inline"><mrow><mi>d</mi><mo>=</mo><mi>a</mi></mrow></math> since <math id="I1.i3.p2.m17" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a singleton containing <math id="I1.i3.p2.m18" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.
+Similarly, there is a unique <math id="I1.i3.p2.m19" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> on <math id="I1.i3.p2.m20" class="ltx_Math" alttext="-\rho" display="inline"><mrow><mo>-</mo><mi>ρ</mi></mrow></math>, the opposite ray of <math id="I1.i3.p2.m21" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>, with <math id="I1.i3.p2.m22" class="ltx_Math" alttext="[o,e]\cong[o,a]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>e</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math>.
+So <math id="I1.i3.p2.m23" class="ltx_Math" alttext="e=a" display="inline"><mrow><mi>e</mi><mo>=</mo><mi>a</mi></mrow></math>. Since <math id="I1.i3.p2.m24" class="ltx_Math" alttext="d:o:e" display="inline"><mrow><mi>d</mi><mo>:</mo><mi>o</mi><mo>:</mo><mi>e</mi></mrow></math>, we have that <math id="I1.i3.p2.m25" class="ltx_Math" alttext="a=d=o" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>d</mi><mo>=</mo><mi>o</mi></mrow></math>. Therefore <math id="I1.i3.p2.m26" class="ltx_Math" alttext="\mathscr{C}(o,a)=\mathscr{C}(o,o)" display="inline"><mrow><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>o</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="I1.i4.p1.m1" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math> is a non-degenerate circle. Then every line passing through a center <math id="I1.i4.p1.m2" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> of <math id="I1.i4.p1.m3" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math> is incident with at least two points <math id="I1.i4.p1.m4" class="ltx_Math" alttext="a,a^{\prime}" display="inline"><mrow><mi>a</mi><mo>,</mo><msup><mi>a</mi><mo>′</mo></msup></mrow></math> in <math id="I1.i4.p1.m5" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math>. Furthermore, <math id="I1.i4.p1.m6" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> is the midpoint of <math id="I1.i4.p1.m7" class="ltx_Math" alttext="[a,a^{\prime}]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><msup><mi>a</mi><mo>′</mo></msup><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+<div id="I1.i4.p2" class="ltx_para">
+<p class="ltx_p">If on <math id="I1.i4.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> through <math id="I1.i4.p2.m2" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> lies only one point <math id="I1.i4.p2.m3" class="ltx_Math" alttext="a\in\mathscr{C}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi class="ltx_font_mathscript">𝒞</mi></mrow></math>, let <math id="I1.i4.p2.m4" class="ltx_Math" alttext="a^{\prime}" display="inline"><msup><mi>a</mi><mo>′</mo></msup></math> be the point on the opposite ray of <math id="I1.i4.p2.m5" class="ltx_Math" alttext="\overrightarrow{oa}" display="inline"><mover accent="true"><mrow><mi>o</mi><mo>⁢</mo><mi>a</mi></mrow><mo>→</mo></mover></math> such that <math id="I1.i4.p2.m6" class="ltx_Math" alttext="a^{\prime}\in\mathscr{C}" display="inline"><mrow><msup><mi>a</mi><mo>′</mo></msup><mo>∈</mo><mi class="ltx_font_mathscript">𝒞</mi></mrow></math>. Then <math id="I1.i4.p2.m7" class="ltx_Math" alttext="a^{\prime}=a" display="inline"><mrow><msup><mi>a</mi><mo>′</mo></msup><mo>=</mo><mi>a</mi></mrow></math>, which means that <math id="I1.i4.p2.m8" class="ltx_Math" alttext="o=a=a^{\prime}" display="inline"><mrow><mi>o</mi><mo>=</mo><mi>a</mi><mo>=</mo><msup><mi>a</mi><mo>′</mo></msup></mrow></math>, implying that <math id="I1.i4.p2.m9" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math> is degenerate. Since <math id="I1.i4.p2.m10" class="ltx_Math" alttext="[o,a]\cong[o,a^{\prime}]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><msup><mi>a</mi><mo>′</mo></msup><mo stretchy="false">]</mo></mrow></mrow></math>, and <math id="I1.i4.p2.m11" class="ltx_Math" alttext="o,a,a^{\prime}" display="inline"><mrow><mi>o</mi><mo>,</mo><mi>a</mi><mo>,</mo><msup><mi>a</mi><mo>′</mo></msup></mrow></math> lie on the same line, <math id="I1.i4.p2.m12" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> is the midpoint of <math id="I1.i4.p2.m13" class="ltx_Math" alttext="[a,a^{\prime}]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><msup><mi>a</mi><mo>′</mo></msup><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Now, on to the main fact.</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Every circle in <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="\mathfrak{G}" display="inline"><mi mathvariant="normal">G</mi></math> has a unique center.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Let <math id="p9.m1" class="ltx_Math" alttext="\mathscr{C}=\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>=</mo><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> be a circle in <math id="p9.m2" class="ltx_Math" alttext="\mathfrak{G}" display="inline"><mi>𝔊</mi></math>.
+Suppose <math id="p9.m3" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math> is another center of <math id="p9.m4" class="ltx_Math" alttext="\mathscr{C}" display="inline"><mi class="ltx_font_mathscript">𝒞</mi></math> and <math id="p9.m5" class="ltx_Math" alttext="o\neq o^{\prime}" display="inline"><mrow><mi>o</mi><mo>≠</mo><msup><mi>o</mi><mo>′</mo></msup></mrow></math>. Let <math id="p9.m6" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> be the line passing
+through <math id="p9.m7" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> and <math id="p9.m8" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math>. Consider the (open) ray <math id="p9.m9" class="ltx_Math" alttext="\rho=\overrightarrow{oo^{\prime}}" display="inline"><mrow><mi>ρ</mi><mo>=</mo><mover accent="true"><mrow><mi>o</mi><mo>⁢</mo><msup><mi>o</mi><mo>′</mo></msup></mrow><mo>→</mo></mover></mrow></math>. By one of the congruence
+axioms, there is a unique point <math id="p9.m10" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> on <math id="p9.m11" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> such that <math id="p9.m12" class="ltx_Math" alttext="[o,a]\cong[o,b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>.
+So <math id="p9.m13" class="ltx_Math" alttext="b\in\mathscr{C}(o,a)" display="inline"><mrow><mi>b</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Case 1. Suppose <math id="I2.i1.p1.m1" class="ltx_Math" alttext="o^{\prime}=b" display="inline"><mrow><msup><mi>o</mi><mo>′</mo></msup><mo>=</mo><mi>b</mi></mrow></math>. Consider the (open) opposite ray <math id="I2.i1.p1.m2" class="ltx_Math" alttext="-\rho" display="inline"><mrow><mo>-</mo><mi>ρ</mi></mrow></math> of <math id="I2.i1.p1.m3" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>.
+There is a unique point <math id="I2.i1.p1.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> on <math id="I2.i1.p1.m5" class="ltx_Math" alttext="-\rho" display="inline"><mrow><mo>-</mo><mi>ρ</mi></mrow></math> such that <math id="I2.i1.p1.m6" class="ltx_Math" alttext="[o,d]\cong[o,a]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math>. So <math id="I2.i1.p1.m7" class="ltx_Math" alttext="d\in\mathscr{C}(o,a)" display="inline"><mrow><mi>d</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Since <math id="I2.i1.p1.m8" class="ltx_Math" alttext="d,o,o^{\prime}" display="inline"><mrow><mi>d</mi><mo>,</mo><mi>o</mi><mo>,</mo><msup><mi>o</mi><mo>′</mo></msup></mrow></math> all lie on <math id="I2.i1.p1.m9" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, one must be between the other two.</p>
+<ul id="I2.I1" class="ltx_itemize">
+<li id="I2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Subcase 1. If <math id="I2.I1.i1.p1.m1" class="ltx_Math" alttext="o:d:o^{\prime}" display="inline"><mrow><mi>o</mi><mo>:</mo><mi>d</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup></mrow></math>, then <math id="I2.I1.i1.p1.m2" class="ltx_Math" alttext="[o,d]&lt;[o,o^{\prime}]=[o,b]\cong[o,a]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>&lt;</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><msup><mi>o</mi><mo>′</mo></msup><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow></mrow></math>, contradiction.</p>
+</div>
+</li>
+<li id="I2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Subcase 2. If <math id="I2.I1.i2.p1.m1" class="ltx_Math" alttext="d:o^{\prime}:o" display="inline"><mrow><mi>d</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup><mo>:</mo><mi>o</mi></mrow></math>, then <math id="I2.I1.i2.p1.m2" class="ltx_Math" alttext="[o,a]\cong[o,b]=[o,o^{\prime}]&lt;[o,d]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><msup><mi>o</mi><mo>′</mo></msup><mo stretchy="false">]</mo></mrow><mo>&lt;</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></math>, contradiction again.</p>
+</div>
+</li>
+<li id="I2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Subcase 3. So suppose <math id="I2.I1.i3.p1.m1" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> is between <math id="I2.I1.i3.p1.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> and <math id="I2.I1.i3.p1.m3" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math>. Now, since <math id="I2.I1.i3.p1.m4" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math> is also a center
+of <math id="I2.I1.i3.p1.m5" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we have that <math id="I2.I1.i3.p1.m6" class="ltx_Math" alttext="[b,b]=[o^{\prime},b]\cong[o^{\prime},d]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><msup><mi>o</mi><mo>′</mo></msup><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><msup><mi>o</mi><mo>′</mo></msup><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></math>, which implies that
+<math id="I2.I1.i3.p1.m7" class="ltx_Math" alttext="o^{\prime}=d" display="inline"><mrow><msup><mi>o</mi><mo>′</mo></msup><mo>=</mo><mi>d</mi></mrow></math> by another one of the congruence axioms. But <math id="I2.I1.i3.p1.m8" class="ltx_Math" alttext="d:o:o^{\prime}" display="inline"><mrow><mi>d</mi><mo>:</mo><mi>o</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup></mrow></math>, which forces <math id="I2.I1.i3.p1.m9" class="ltx_Math" alttext="o^{\prime}=o" display="inline"><mrow><msup><mi>o</mi><mo>′</mo></msup><mo>=</mo><mi>o</mi></mrow></math>, contradicting the assumption that <math id="I2.I1.i3.p1.m10" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math> is not <math id="I2.I1.i3.p1.m11" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> in the beginning.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Case 2. If <math id="I2.i2.p1.m1" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math> is not <math id="I2.i2.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, then since <math id="I2.i2.p1.m3" class="ltx_Math" alttext="o,o^{\prime},b" display="inline"><mrow><mi>o</mi><mo>,</mo><msup><mi>o</mi><mo>′</mo></msup><mo>,</mo><mi>b</mi></mrow></math> lie on the same line <math id="I2.i2.p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, one must be between the other two. Since <math id="I2.i2.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> also lies on the ray <math id="I2.i2.p1.m6" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> with <math id="I2.i2.p1.m7" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> as the source, <math id="I2.i2.p1.m8" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> cannot be between <math id="I2.i2.p1.m9" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math> and <math id="I2.i2.p1.m10" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. So we have only two subcases to deal with: either <math id="I2.i2.p1.m11" class="ltx_Math" alttext="o:o^{\prime}:b" display="inline"><mrow><mi>o</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup><mo>:</mo><mi>b</mi></mrow></math>, or <math id="I2.i2.p1.m12" class="ltx_Math" alttext="o:b:o^{\prime}" display="inline"><mrow><mi>o</mi><mo>:</mo><mi>b</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup></mrow></math>. In either subcase, we need to again consider the opposite ray <math id="I2.i2.p1.m13" class="ltx_Math" alttext="-\rho" display="inline"><mrow><mo>-</mo><mi>ρ</mi></mrow></math> of <math id="I2.i2.p1.m14" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> with <math id="I2.i2.p1.m15" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> on <math id="I2.i2.p1.m16" class="ltx_Math" alttext="-\rho" display="inline"><mrow><mo>-</mo><mi>ρ</mi></mrow></math> such that <math id="I2.i2.p1.m17" class="ltx_Math" alttext="[o,d]\cong[o,a]\cong[o,b]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>.
+From the properties of opposite rays, we also have the following two facts:</p>
+<ol id="I2.I2" class="ltx_enumerate">
+<li id="I2.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I2.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.I2.i1.p1.m1" class="ltx_Math" alttext="d:o:o^{\prime}" display="inline"><mrow><mi>d</mi><mo>:</mo><mi>o</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup></mrow></math>, implying <math id="I2.I2.i1.p1.m2" class="ltx_Math" alttext="[o,d]&lt;[o^{\prime},d]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>&lt;</mo><mrow><mo stretchy="false">[</mo><msup><mi>o</mi><mo>′</mo></msup><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I2.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.I2.i2.p1.m1" class="ltx_Math" alttext="d:o:b" display="inline"><mrow><mi>d</mi><mo>:</mo><mi>o</mi><mo>:</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<ul id="I2.I3" class="ltx_itemize">
+<li id="I2.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I2.I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Subcase 1. <math id="I2.I3.i1.p1.m1" class="ltx_Math" alttext="o:o^{\prime}:b" display="inline"><mrow><mi>o</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup><mo>:</mo><mi>b</mi></mrow></math>. Then <math id="I2.I3.i1.p1.m2" class="ltx_Math" alttext="[o^{\prime},b]&lt;[o,b]\cong[o,d]&lt;[o^{\prime},d]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><msup><mi>o</mi><mo>′</mo></msup><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>&lt;</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>o</mi><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow><mo>&lt;</mo><mrow><mo stretchy="false">[</mo><msup><mi>o</mi><mo>′</mo></msup><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></math>, contradiction.</p>
+</div>
+</li>
+<li id="I2.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="I2.I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Subcase 2. <math id="I2.I3.i2.p1.m1" class="ltx_Math" alttext="o:b:o^{\prime}" display="inline"><mrow><mi>o</mi><mo>:</mo><mi>b</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup></mrow></math>. Let us look at the betweenness relations among the points <math id="I2.I3.i2.p1.m2" class="ltx_Math" alttext="b,d,o^{\prime}" display="inline"><mrow><mi>b</mi><mo>,</mo><mi>d</mi><mo>,</mo><msup><mi>o</mi><mo>′</mo></msup></mrow></math>.</p>
+<ol id="I2.I3.I1" class="ltx_enumerate">
+<li id="I2.I3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">i.</span> 
+<div id="I2.I3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I2.I3.I1.i1.p1.m1" class="ltx_Math" alttext="b:o^{\prime}:d" display="inline"><mrow><mi>b</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup><mo>:</mo><mi>d</mi></mrow></math>, then <math id="I2.I3.I1.i1.p1.m2" class="ltx_Math" alttext="d:o^{\prime}:o" display="inline"><mrow><mi>d</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup><mo>:</mo><mi>o</mi></mrow></math> by one of the conditions of the betweenness relations. But this forces <math id="I2.I3.I1.i1.p1.m3" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math> to be on <math id="I2.I3.I1.i1.p1.m4" class="ltx_Math" alttext="-\rho" display="inline"><mrow><mo>-</mo><mi>ρ</mi></mrow></math>. Since <math id="I2.I3.I1.i1.p1.m5" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math> is on <math id="I2.I3.I1.i1.p1.m6" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>, this is a contradiction.</p>
+</div>
+</li>
+<li id="I2.I3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">ii.</span> 
+<div id="I2.I3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I2.I3.I1.i2.p1.m1" class="ltx_Math" alttext="b:d:o^{\prime}" display="inline"><mrow><mi>b</mi><mo>:</mo><mi>d</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup></mrow></math>, then <math id="I2.I3.I1.i2.p1.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> would be on <math id="I2.I3.I1.i2.p1.m3" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>. Since <math id="I2.I3.I1.i2.p1.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> is on <math id="I2.I3.I1.i2.p1.m5" class="ltx_Math" alttext="-\rho" display="inline"><mrow><mo>-</mo><mi>ρ</mi></mrow></math>, we have another
+contradiction.</p>
+</div>
+</li>
+<li id="I2.I3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">iii.</span> 
+<div id="I2.I3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I2.I3.I1.i3.p1.m1" class="ltx_Math" alttext="d:b:o^{\prime}" display="inline"><mrow><mi>d</mi><mo>:</mo><mi>b</mi><mo>:</mo><msup><mi>o</mi><mo>′</mo></msup></mrow></math>, then <math id="I2.I3.I1.i3.p1.m2" class="ltx_Math" alttext="[o^{\prime},b]&lt;[o^{\prime},d]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><msup><mi>o</mi><mo>′</mo></msup><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>&lt;</mo><mrow><mo stretchy="false">[</mo><msup><mi>o</mi><mo>′</mo></msup><mo>,</mo><mi>d</mi><mo stretchy="false">]</mo></mrow></mrow></math>. But <math id="I2.I3.I1.i3.p1.m3" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math> is a center of <math id="I2.I3.I1.i3.p1.m4" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>, yet another contradiction.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Therefore, Subcase 2 is impossible also.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">This means that Case 2 is impossible.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Since both Case 1 and Case 2 are impossible, <math id="p9.m14" class="ltx_Math" alttext="o^{\prime}=o" display="inline"><mrow><msup><mi>o</mi><mo>′</mo></msup><mo>=</mo><mi>o</mi></mrow></math>, and the proof is complete. ∎</p>
+</div>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">The assumption that <math id="I3.i1.p1.m1" class="ltx_Math" alttext="\mathfrak{G}" display="inline"><mi>𝔊</mi></math> is ordered cannot be dropped. Here is a simple counterexample. Consider an incidence geometry defined on a circle <math id="I3.i1.p1.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> in the Euclidean plane.</p>
+</div>
+<div id="I3.i1.p2" class="ltx_para ltx_centering">
+<svg version="1.1" height="142.3pt" width="227.6pt" fragid="I3.i1.p2.pic1" viewBox="0 0 0 0" overflow="visible"><g transform="translate(0,142.3)"><g transform="scale(1 -1)"><g transform="translate(113.81,71.13)"><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text></g></g></g></svg>
+</div>
+<div id="I3.i1.p3" class="ltx_para">
+<p class="ltx_p">It is not possible to define a betweenness relation on <math id="I3.i1.p3.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>. However, it is still possible to define a congruence relation on <math id="I3.i1.p3.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>: <math id="I3.i1.p3.m3" class="ltx_Math" alttext="[x,y]\cong[z,t]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">]</mo></mrow><mo>≅</mo><mrow><mo stretchy="false">[</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">]</mo></mrow></mrow></math> if <math id="I3.i1.p3.m4" class="ltx_Math" alttext="[x,y]" display="inline"><mrow><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></math> and <math id="I3.i1.p3.m5" class="ltx_Math" alttext="[z,t]" display="inline"><mrow><mo stretchy="false">[</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">]</mo></mrow></math> have the same arc length. Given any points <math id="I3.i1.p3.m6" class="ltx_Math" alttext="o,a" display="inline"><mrow><mi>o</mi><mo>,</mo><mi>a</mi></mrow></math> on <math id="I3.i1.p3.m7" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, the circle <math id="I3.i1.p3.m8" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> consists of exactly two points <math id="I3.i1.p3.m9" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I3.i1.p3.m10" class="ltx_Math" alttext="a^{\prime}" display="inline"><msup><mi>a</mi><mo>′</mo></msup></math> (see figure above). In addition, <math id="I3.i1.p3.m11" class="ltx_Math" alttext="\mathscr{C}(o,a)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>o</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> has two centers: <math id="I3.i1.p3.m12" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math> and <math id="I3.i1.p3.m13" class="ltx_Math" alttext="o^{\prime}" display="inline"><msup><mi>o</mi><mo>′</mo></msup></math>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">There is another definition of a circle, which is based on the concept of a metric. In this definition, examples can also be found where the uniqueness of center of a circle fails. The most commonly quoted example is found in the metric space of <math id="I3.i2.p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-adic numbers. The metric defined is non-Archimedean, so every triangle is isosceles (see the note in ultrametric triangle inequality). From this it is not hard to see that every interior point of a circle is its center.</p>
+</div>
+</li>
+</ul>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> M. J. Greenberg, <span class="ltx_text ltx_font_italic">Euclidean and Non-Euclidean Geometries, Development and History</span>, W. H. Freeman and Company, San Francisco (1974)
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> N. Koblitz, <span class="ltx_text ltx_font_italic">p-adic Numbers, p-adic Analysis, and Zeta-Functions</span>, Springer-Verlag, New York (1977)
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p11" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of uniqueness of center of a circle</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfUniquenessOfCenterOfACircle</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:17:02</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:17:02</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51M10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51M04</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51G05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Midpoint4</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">midpoint</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">circle</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">interior point</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:06:45 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

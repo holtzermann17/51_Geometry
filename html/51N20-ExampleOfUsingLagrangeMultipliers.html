@@ -1,0 +1,191 @@
+<!DOCTYPE html><html>
+<head>
+<title>example of using Lagrange multipliers</title>
+<!--Generated on Fri Feb  9 22:12:39 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">example of using Lagrange multipliers</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">One  to determine the perpendicular distance of the parallel planes
+</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="Ax+By+Cz+D\;=\;0\quad\mbox{and}\quad Ax+By+Cz+E\;=\;0" display="block"><mrow><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>C</mi><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mpadded width="+2.8pt"><mi>D</mi></mpadded></mrow><mo>=</mo><mrow><mn> 0</mn><mo mathvariant="italic" separator="true"> </mo><mtext>and</mtext></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>C</mi><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mpadded width="+2.8pt"><mi>E</mi></mpadded></mrow><mo>=</mo><mn> 0</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is to use the Lagrange multiplier method.  In this case we may to minimise the Euclidean distance of a point
+ <math id="p1.m1" class="ltx_Math" alttext="(x,\,y,\,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo rspace="4.2pt">,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math>  of the former plane to a (fixed) point  <math id="p1.m2" class="ltx_Math" alttext="(x_{0},\,y_{0},\,z_{0})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>y</mi><mn>0</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math>  of the latter plane.
+<br class="ltx_break"></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Thus we have the equation  <math id="p2.m1" class="ltx_Math" alttext="Ax_{0}+By_{0}+Cz_{0}+E\,=\,0" display="inline"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo>+</mo><mrow><mi>C</mi><mo>⁢</mo><msub><mi>z</mi><mn>0</mn></msub></mrow><mo>+</mo><mpadded width="+1.7pt"><mi>E</mi></mpadded></mrow><mo>=</mo><mn> 0</mn></mrow></math>  which we can subtract from the first plane equation, getting</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle g\;:=\;A(x-x_{0})+B(y-y_{0})+C(z-x_{0})+D-E\;=\;0." display="inline"><mrow><mrow><mpadded width="+2.8pt"><mi>g</mi></mpadded><mo rspace="5.3pt">:=</mo><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>D</mi></mrow><mo>-</mo><mpadded width="+2.8pt"><mi>E</mi></mpadded></mrow><mo>=</mo><mn> 0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This is the (only) constraint equation for minimising the square (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SquareOfANumber</span>)</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle f\;:=\;(x-x_{0})^{2}+(y-y_{0})^{2}+(z-x_{0})^{2}" display="inline"><mrow><mpadded width="+2.8pt"><mi>f</mi></mpadded><mo rspace="5.3pt">:=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">of the distance of the points.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The polynomial functions <math id="p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p3.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> satisfy the differentiability requirements.  Accordingly, we can find the minimising point  <math id="p3.m3" class="ltx_Math" alttext="(x,\,y,\,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo rspace="4.2pt">,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math>  by considering the system of equations formed by (1) and</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle\begin{cases}\frac{\partial f}{\partial x}+\lambda\frac{\partial g%
+}{\partial x}\;\equiv\;2(x-x_{0})+\lambda A\;=\;0,\\
+\frac{\partial f}{\partial y}+\lambda\frac{\partial g}{\partial y}\;\equiv\;2(%
+y-y_{0})+\lambda B\;=\;0,\\
+\frac{\partial f}{\partial z}+\lambda\frac{\partial g}{\partial z}\;\equiv\;2(%
+z-z_{0})+\lambda C\;=\;0.\end{cases}" display="inline"><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mpadded width="+2.8pt"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mpadded></mrow></mrow><mo>≡</mo><mrow><mrow><mn> 2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>A</mi></mpadded></mrow></mrow><mo>=</mo><mn> 0</mn></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mpadded width="+2.8pt"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mpadded></mrow></mrow><mo>≡</mo><mrow><mrow><mn> 2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>B</mi></mpadded></mrow></mrow><mo>=</mo><mn> 0</mn></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mpadded width="+2.8pt"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac></mpadded></mrow></mrow><mo>≡</mo><mrow><mrow><mn> 2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><msub><mi>z</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>C</mi></mpadded></mrow></mrow><mo>=</mo><mn> 0</mn></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We solve from (3) the differences</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="x-x_{0}\;=\;-\frac{A\lambda}{2},\quad y-y_{0}\;=\;-\frac{B\lambda}{2},\quad z-%
+z_{0}\;=\;-\frac{C\lambda}{2}" display="block"><mrow><mrow><mrow><mi>x</mi><mo>-</mo><mpadded width="+2.8pt"><msub><mi>x</mi><mn>0</mn></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mfrac><mrow><mi>A</mi><mo>⁢</mo><mi>λ</mi></mrow><mn>2</mn></mfrac></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mrow><mi>y</mi><mo>-</mo><mpadded width="+2.8pt"><msub><mi>y</mi><mn>0</mn></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mfrac><mrow><mi>B</mi><mo>⁢</mo><mi>λ</mi></mrow><mn>2</mn></mfrac></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>z</mi><mo>-</mo><mpadded width="+2.8pt"><msub><mi>z</mi><mn>0</mn></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mfrac><mrow><mi>C</mi><mo>⁢</mo><mi>λ</mi></mrow><mn>2</mn></mfrac></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and set them into (1).  It then yields the value</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\lambda\;=\;\frac{2(D-E)}{A^{2}+B^{2}+C^{2}}" display="block"><mrow><mpadded width="+2.8pt"><mi>λ</mi></mpadded><mo rspace="5.3pt">=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>-</mo><mi>E</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>+</mo><msup><mi>B</mi><mn>2</mn></msup><mo>+</mo><msup><mi>C</mi><mn>2</mn></msup></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of the Lagrange multiplier, which we substitute into the preceding three equations obtaining</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="x-x_{0}\;=\;\frac{A(D-E)}{A^{2}+B^{2}+C^{2}},\quad y-y_{0}\;=\;\frac{B(D-E)}{A%
+^{2}+B^{2}+C^{2}},\quad z-z_{0}\;=\;\frac{C(D-E)}{A^{2}+B^{2}+C^{2}}." display="block"><mrow><mrow><mrow><mrow><mi>x</mi><mo>-</mo><mpadded width="+2.8pt"><msub><mi>x</mi><mn>0</mn></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mfrac><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>-</mo><mi>E</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>+</mo><msup><mi>B</mi><mn>2</mn></msup><mo>+</mo><msup><mi>C</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mrow><mi>y</mi><mo>-</mo><mpadded width="+2.8pt"><msub><mi>y</mi><mn>0</mn></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mfrac><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>-</mo><mi>E</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>+</mo><msup><mi>B</mi><mn>2</mn></msup><mo>+</mo><msup><mi>C</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>z</mi><mo>-</mo><mpadded width="+2.8pt"><msub><mi>z</mi><mn>0</mn></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mfrac><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>-</mo><mi>E</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>+</mo><msup><mi>B</mi><mn>2</mn></msup><mo>+</mo><msup><mi>C</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These values give the minimal distance when put into the expression of <math id="p3.m4" class="ltx_Math" alttext="\sqrt{f}" display="inline"><msqrt><mi>f</mi></msqrt></math>:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="d\;=\;\sqrt{\frac{(D-E)^{2}(A^{2}+B^{2}+C^{2})}{(A^{2}+B^{2}+C^{2})^{2}}}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>d</mi></mpadded><mo rspace="5.3pt">=</mo><msqrt><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>-</mo><mi>E</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>+</mo><msup><mi>B</mi><mn>2</mn></msup><mo>+</mo><msup><mi>C</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>+</mo><msup><mi>B</mi><mn>2</mn></msup><mo>+</mo><msup><mi>C</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></msqrt></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence we have gotten the distance</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="d\;=\;\frac{|D-E|}{\sqrt{A^{2}+B^{2}+C^{2}}}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>d</mi></mpadded><mo rspace="5.3pt">=</mo><mfrac><mrow><mo stretchy="false">|</mo><mrow><mi>D</mi><mo>-</mo><mi>E</mi></mrow><mo stretchy="false">|</mo></mrow><msqrt><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>+</mo><msup><mi>B</mi><mn>2</mn></msup><mo>+</mo><msup><mi>C</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">example of using Lagrange multipliers</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfUsingLagrangeMultipliers</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:48:12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:48:12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51N20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26B10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">example of Lagrange multipliers</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ParallelismOfTwoPlanes</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ExampleNeedingTwoLagrangeMultipliers</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:12:39 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

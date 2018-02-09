@@ -1,0 +1,238 @@
+<!DOCTYPE html><html>
+<head>
+<title>Euclidean transformation</title>
+<!--Generated on Fri Feb  9 21:56:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Euclidean transformation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="p2.m2" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> be Euclidean vector spaces. A <em class="ltx_emph ltx_font_italic">Euclidean
+transformation</em> is an affine transformation <math id="p2.m3" class="ltx_Math" alttext="E:V\to W" display="inline"><mrow><mi>E</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>W</mi></mrow></mrow></math>, given by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="E(v)=L(v)+w" display="block"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>w</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">such that <math id="p2.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is an orthogonal linear
+transformation (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OrthogonalTransformation</span>).</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">As an affine transformation, all affine properties, such as
+incidence and parallelism are preserved by <math id="p3.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>. In addition, since
+<math id="p3.m2" class="ltx_Math" alttext="E(u-v)=L(u-v)" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="p3.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is an , <math id="p3.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+preserves lengths of line segments and angles between two line
+segments (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/AngleBetweenTwoLines</span>). Because of this, a Euclidean transformation is also called
+a <em class="ltx_emph ltx_font_italic">rigid motion</em>, which is a popular term used in mechanics.</p>
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Types of Euclidean transformations</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">There are three main
+types of Euclidean transformations:</p>
+</div>
+<div id="S0.SS0.SSSx1.p2" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">translation</span>. If <math id="I1.i1.p1.m1" class="ltx_Math" alttext="L=I" display="inline"><mrow><mi>L</mi><mo>=</mo><mi>I</mi></mrow></math>, then <math id="I1.i1.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is just a translation. Any
+Euclidean transformation can be decomposed into a product of an
+orthogonal transformation <math id="I1.i1.p1.m3" class="ltx_Math" alttext="L(v)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math>, followed by a
+translation <math id="I1.i1.p1.m4" class="ltx_Math" alttext="T(v)=v+w" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>v</mi><mo>+</mo><mi>w</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">rotation</span>. If <math id="I1.i2.p1.m1" class="ltx_Math" alttext="w=0" display="inline"><mrow><mi>w</mi><mo>=</mo><mn>0</mn></mrow></math>, then <math id="I1.i2.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is just an orthogonal transformation. If <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\operatorname{det}(E)=1" display="inline"><mrow><mrow><mi>det</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, then <math id="I1.i2.p1.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is called a <em class="ltx_emph ltx_font_italic">rotation</em>. The
+orientation of any basis (of <math id="I1.i2.p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>) is preserved under a rotation. In the
+case where <math id="I1.i2.p1.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is two-dimensional, a rotation is conjugate to a matrix of the form</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\begin{pmatrix}\cos\theta&amp;-\sin\theta\\
+\sin\theta&amp;\cos\theta\end{pmatrix}," display="inline"><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="I1.i2.p1.m7" class="ltx_Math" alttext="\theta\in\mathbb{R}" display="inline"><mrow><mi>θ</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Via this particular (unconjugated) map, any vector emanating from the origin is rotated
+in the counterclockwise direction by an angle of <math id="I1.i2.p1.m8" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> to another vector emanating from the origin. Thus, if <math id="I1.i2.p1.m9" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is conjugate to the matrix given above, then <math id="I1.i2.p1.m10" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is the <em class="ltx_emph ltx_font_italic">angle of rotation</em> for <math id="I1.i2.p1.m11" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">reflection</span>. If <math id="I1.i3.p1.m1" class="ltx_Math" alttext="w=0" display="inline"><mrow><mi>w</mi><mo>=</mo><mn>0</mn></mrow></math> but <math id="I1.i3.p1.m2" class="ltx_Math" alttext="\operatorname{det}(E)=-1" display="inline"><mrow><mrow><mi>det</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math> instead, then <math id="I1.i3.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is a called
+<em class="ltx_emph ltx_font_italic">reflection</em>. Again, in the two-dimensional case, a reflection is
+ to a matrix of the form</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\begin{pmatrix}\cos\theta&amp;\sin\theta\\
+\sin\theta&amp;-\cos\theta\end{pmatrix}," display="inline"><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="I1.i3.p1.m4" class="ltx_Math" alttext="\theta\in\mathbb{R}" display="inline"><mrow><mi>θ</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Any vector is reflected by this particular (unconjugated) map to another
+by a “mirror”, a line of the form <math id="I1.i3.p1.m5" class="ltx_Math" alttext="y=x\tan(\frac{\theta}{2})" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mi>tan</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mfrac><mi>θ</mi><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SS0.SSSx1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.
+</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">In general, an orthogonal transformation can be represented by a matrix of the
+form</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\begin{pmatrix}A_{1}&amp;O&amp;\cdots&amp;O\\
+O&amp;A_{2}&amp;\cdots&amp;O\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+O&amp;O&amp;\cdots&amp;A_{n}\end{pmatrix}," display="block"><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>A</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><mi>O</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><mi>O</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>O</mi></mtd><mtd columnalign="center"><msub><mi>A</mi><mn>2</mn></msub></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><mi>O</mi></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>O</mi></mtd><mtd columnalign="center"><mi>O</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><msub><mi>A</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where each <math id="I2.i1.p1.m1" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math> is either <math id="I2.i1.p1.m2" class="ltx_Math" alttext="\pm 1" display="inline"><mrow><mo>±</mo><mn>1</mn></mrow></math> or a rotation matrix (1) (or reflection
+matrix (2)) given above. When its determinant is -1 (a reflection), it has an invariant subspace of <math id="I2.i1.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> of codimension 1. One can think of this hyperplane as the mirror.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Another common rigid motion is the <em class="ltx_emph ltx_font_italic">glide reflection</em>. It is a Euclidean transformation that is expressible as a product of a reflection, followed by a translation.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S0.SS0.SSSx1.p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Euclidean transformation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EuclideanTransformation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:59:46</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:59:46</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51A10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A04</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51A15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rigid motion</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">translation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">translate</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rotation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rotate</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">reflection</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">reflect</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">reflexion</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">glide reflection</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">angle of rotation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:56:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

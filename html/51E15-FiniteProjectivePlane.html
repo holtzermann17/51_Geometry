@@ -1,0 +1,635 @@
+<!DOCTYPE html><html>
+<head>
+<title>finite projective plane</title>
+<!--Generated on Fri Feb  9 22:00:07 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">finite projective plane</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Finite projective planes from axioms</h2>
+
+<div id="S0.SSx1.p1" class="ltx_para">
+<p class="ltx_p">Let us start from the beginning and assume we are given a set of <math id="S0.SSx1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> things called <span class="ltx_text ltx_font_smallcaps">point</span>s and a set of <math id="S0.SSx1.p1.m2" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> things called <span class="ltx_text ltx_font_smallcaps">line</span>s, with an
+incidence relation between them (a <span class="ltx_text ltx_font_smallcaps">point</span> is incident with a <span class="ltx_text ltx_font_smallcaps">line</span> iff the <span class="ltx_text ltx_font_smallcaps">line</span> is incident with the <span class="ltx_text ltx_font_smallcaps">point</span>) that satisfies only two <span class="ltx_text ltx_font_bold">axioms</span>, the two unique incidence properties:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For any two distinct <span class="ltx_text ltx_font_smallcaps">point</span>s,
+there is exactly one <span class="ltx_text ltx_font_smallcaps">line</span> through both of them.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For any two distinct <span class="ltx_text ltx_font_smallcaps">line</span>s,
+there is exactly one <span class="ltx_text ltx_font_smallcaps">point</span> on both of them.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Given these <span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/6940</span>projective plane axioms we can apply the De Bruijn–Erdős theorem twice (once with the rôle of <span class="ltx_text ltx_font_smallcaps">point</span>s and <span class="ltx_text ltx_font_smallcaps">line</span>s swapped) which tells us we must have <math id="S0.SSx1.p1.m3" class="ltx_Math" alttext="n=\nu" display="inline"><mrow><mi>n</mi><mo>=</mo><mi>ν</mi></mrow></math>, and one of two possible configurations:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><math id="I2.ix1.m1" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math></span> 
+<div id="I2.ix1.p1" class="ltx_para">
+<p class="ltx_p">One “degenerate” solution has one special line
+<math id="I2.ix1.p1.m1" class="ltx_Math" alttext="\ell_{0}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mn>0</mn></msub></math> and <math id="I2.ix1.p1.m2" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> ordinary lines <math id="I2.ix1.p1.m3" class="ltx_Math" alttext="\ell_{i}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mi>i</mi></msub></math>, and a special point
+P<math id="I2.ix1.p1.m4" class="ltx_Math" alttext="{}_{0}" display="inline"><msub><mi></mi><mn>0</mn></msub></math> and <math id="I2.ix1.p1.m5" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> ordinary points P<math id="I2.ix1.p1.m6" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math>. Each P<math id="I2.ix1.p1.m7" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math> (<math id="I2.ix1.p1.m8" class="ltx_Math" alttext="i\neq 0" display="inline"><mrow><mi>i</mi><mo>≠</mo><mn>0</mn></mrow></math>) is
+incident with its own <math id="I2.ix1.p1.m9" class="ltx_Math" alttext="\ell_{i}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mi>i</mi></msub></math> and with <math id="I2.ix1.p1.m10" class="ltx_Math" alttext="\ell_{0}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mn>0</mn></msub></math>; each <math id="I2.ix1.p1.m11" class="ltx_Math" alttext="\ell_{i}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mi>i</mi></msub></math>
+(<math id="I2.ix1.p1.m12" class="ltx_Math" alttext="i\neq 0" display="inline"><mrow><mi>i</mi><mo>≠</mo><mn>0</mn></mrow></math>) with its own P<math id="I2.ix1.p1.m13" class="ltx_Math" alttext="{}_{i}" display="inline"><msub><mi></mi><mi>i</mi></msub></math> and with P<math id="I2.ix1.p1.m14" class="ltx_Math" alttext="{}_{0}" display="inline"><msub><mi></mi><mn>0</mn></msub></math>. Now <math id="I2.ix1.p1.m15" class="ltx_Math" alttext="\ell_{0}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mn>0</mn></msub></math> is
+incident with every point except <math id="I2.ix1.p1.m16" class="ltx_Math" alttext="\ell_{0}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mn>0</mn></msub></math> while P<math id="I2.ix1.p1.m17" class="ltx_Math" alttext="{}_{0}" display="inline"><msub><mi></mi><mn>0</mn></msub></math> is
+incident with every line except <math id="I2.ix1.p1.m18" class="ltx_Math" alttext="\ell_{0}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mn>0</mn></msub></math>.</p>
+</div>
+</li>
+<li id="I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><math id="I2.ix2.m1" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math></span> 
+<div id="I2.ix2.p1" class="ltx_para">
+<p class="ltx_p">The other solution is a projective plane:</p>
+</div>
+<div id="I2.ix2.p2" class="ltx_para">
+<ul id="I2.I1" class="ltx_itemize">
+<li id="I2.I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><math id="I2.I1.ix1.m1" class="ltx_Math" alttext="\bullet" display="inline"><mo>∙</mo></math></span> 
+<div id="I2.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">the number of <span class="ltx_text ltx_font_smallcaps">point</span>s and the number of
+<span class="ltx_text ltx_font_smallcaps">line</span>s are of the form <math id="I2.I1.ix1.p1.m1" class="ltx_Math" alttext="q^{2}+q+1" display="inline"><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math> for some integer <math id="I2.I1.ix1.p1.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>;
+</p>
+</div>
+</li>
+<li id="I2.I1.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><math id="I2.I1.ix2.m1" class="ltx_Math" alttext="\bullet" display="inline"><mo>∙</mo></math></span> 
+<div id="I2.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">each <span class="ltx_text ltx_font_smallcaps">point</span> is incident with <math id="I2.I1.ix2.p1.m1" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math>
+<span class="ltx_text ltx_font_smallcaps">line</span>s and each <span class="ltx_text ltx_font_smallcaps">line</span> with <math id="I2.I1.ix2.p1.m2" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math> <span class="ltx_text ltx_font_smallcaps">point</span>s.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<p class="ltx_p">One usually avoids the degenerate case by demanding there is a <span class="ltx_text ltx_font_bold">quadrangle</span>
+in the plane: four <span class="ltx_text ltx_font_smallcaps">point</span>s no three of which lie on the same <span class="ltx_text ltx_font_smallcaps">line</span>. This, or a
+similar non-triviality clause, can then be adopted as a third axiom.
+Unfortunately it also has the effect of excluding projective planes of orders <math id="S0.SSx1.p1.m4" class="ltx_Math" alttext="q=0" display="inline"><mrow><mi>q</mi><mo>=</mo><mn>0</mn></mrow></math> and <math id="S0.SSx1.p1.m5" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>. The
+De Bruijn–Erdös (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DeBruijnErdHosTheorem</span>)
+theorem actually makes an additional assumption: that
+no two lines are incident with the same set of points (and when applied dually
+that no two points are incident with the same set of lines). That is not a
+problem for a <span class="ltx_text ltx_font_smallcaps">line</span> incident with more than one <span class="ltx_text ltx_font_smallcaps">point</span> or vice versa, because
+then the axioms forbid it. We just get some more degenerate cases consisting
+of multiple lines intersecting one point or none, or vice versa; the insistence
+on a quadrangle catches these too.</p>
+</div>
+<div id="S0.SSx1.p2" class="ltx_para">
+<p class="ltx_p">I will not prove the whole theorem here, but under the assumption
+that a quadrangle exists it is not hard show the interesting part,
+that those numbers <math id="S0.SSx1.p2.m1" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math> and <math id="S0.SSx1.p2.m2" class="ltx_Math" alttext="q^{2}+q+1" display="inline"><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math> drop out by necessity.
+The same construction can also be used to give coordinates to the
+<span class="ltx_text ltx_font_smallcaps">point</span>s and <span class="ltx_text ltx_font_smallcaps">line</span>s of the plane (see below).</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S0.SSx2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Projective planes as bipartite graphs</h2>
+
+<div id="S0.SSx2.p1" class="ltx_para">
+<p class="ltx_p">Projective planes are, apart from anything else, also <span class="ltx_text ltx_font_bold">bipartite graphs</span>: let the
+<math id="S0.SSx2.p1.m1" class="ltx_Math" alttext="q^{2}+q+1" display="inline"><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math> <span class="ltx_text ltx_font_smallcaps">point</span>s be represented by “black” nodes (vertices) of the graph,
+and let the <math id="S0.SSx2.p1.m2" class="ltx_Math" alttext="q^{2}+q+1" display="inline"><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math> <span class="ltx_text ltx_font_smallcaps">line</span>s <span class="ltx_text ltx_font_italic">also</span> be nodes, “white” ones say.
+Edges will represent incidence between a “black” and a “white” node,
+so there are <math id="S0.SSx2.p1.m3" class="ltx_Math" alttext="(q^{2}+q+1)(q+1)=q^{3}+2q^{2}+2q+1" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>q</mi><mn>3</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math> edges in all.</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">In a bipartite graph, nodes of the same color have even distance.
+This is 0 for any node and itself and <span class="ltx_text ltx_font_bold">must be 2</span> for any two
+distinct nodes of the same color: for any two <span class="ltx_text ltx_font_smallcaps">point</span>s there is a path
+via the <span class="ltx_text ltx_font_smallcaps">line</span> they share, and for any two <span class="ltx_text ltx_font_smallcaps">line</span>s a path via the <span class="ltx_text ltx_font_smallcaps">point</span>
+they share. So distance 4 does not occur.</p>
+</div>
+<div id="I3.i1.p2" class="ltx_para">
+<p class="ltx_p">For nodes of opposite color we can have 1 (if the <span class="ltx_text ltx_font_smallcaps">point</span> lies on the
+<span class="ltx_text ltx_font_smallcaps">line</span>) or 3 (otherwise); we can’t have distance 5 which would imply
+4 for some nodes. So the graph has <span class="ltx_text ltx_font_bold">diameter</span> (maximum distance) 3.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">In a bipartite graph, all cycles (if any) have even length. We
+don’t have 2-cycles (this is not a multigraph) but no 4-cycles
+either, by the following argument: such a cycle P<math id="I3.i2.p1.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>Q<math id="I3.i2.p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>
+would mean two <span class="ltx_text ltx_font_smallcaps">line</span>s intersecting in two different <span class="ltx_text ltx_font_smallcaps">point</span>s, and
+vice versa. So the <span class="ltx_text ltx_font_bold">girth</span> (minimum cycle length) is 6
+(showing there indeed are 6-cycles for <math id="I3.i2.p1.m3" class="ltx_Math" alttext="q\geqslant 2" display="inline"><mrow><mi>q</mi><mo>⩾</mo><mn>2</mn></mrow></math> is left as
+exercise for the reader).</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">These two conditions, diameter 3 and girth 6, are not only necessary for
+the graph to represent a projective plane, they are also sufficient, and therefore form
+an alternative formulation of what it means to be a projective plane.</p>
+</div>
+<div id="S0.SSx2.p2" class="ltx_para">
+<p class="ltx_p">These graphs could be called the bipartite analogue of Moore graphs of
+diameter 2 and girth 5; many of the same arguments can be used <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx7" title="" class="ltx_ref">vG03</a>]</cite>.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S0.SSx3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Coördinates for finite projective planes</h2>
+
+<div id="S0.SSx3.p1" class="ltx_para">
+<p class="ltx_p">The details on how to impose coordinates on a projective plane can be found in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx3" title="" class="ltx_ref">Hal59</a>, <a href="#bib.bibx6" title="" class="ltx_ref">dRe96</a>]</cite>, or in this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/IntroducingCoordinatesInAProjectivePlane</span>). We summarize it for a finite projective plane below:</p>
+</div>
+<div id="S0.SSx3.p2" class="ltx_para">
+<p class="ltx_p">Setup: Use a set <math id="S0.SSx3.p2.m1" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> of <math id="S0.SSx3.p2.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> different symbols for coordinate values, two of which are 0 and 1. Start with four <span class="ltx_text ltx_font_smallcaps">point</span>s O, I, X, Y forming a quadrangle. XY is the “<span class="ltx_text ltx_font_smallcaps">line</span> at infinity” <math id="S0.SSx3.p2.m3" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>.</p>
+</div>
+<div id="S0.SSx3.p3" class="ltx_para">
+<p class="ltx_p">Construction: O and I are given coordinates <math id="S0.SSx3.p3.m1" class="ltx_Math" alttext="(0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> and <math id="S0.SSx3.p3.m2" class="ltx_Math" alttext="(1,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>, and the other <span class="ltx_text ltx_font_smallcaps">point</span>s on OI (except its intersection with <math id="S0.SSx3.p3.m3" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>) arbitrarily <math id="S0.SSx3.p3.m4" class="ltx_Math" alttext="(c,c)" display="inline"><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></math> with unique <math id="S0.SSx3.p3.m5" class="ltx_Math" alttext="c\in Q" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>Q</mi></mrow></math>. For any <span class="ltx_text ltx_font_smallcaps">point</span> P not on <math id="S0.SSx3.p3.m6" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, let YP
+intersect OI at <math id="S0.SSx3.p3.m7" class="ltx_Math" alttext="(a,a)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></math>, and let XP intersect OI at <math id="S0.SSx3.p3.m8" class="ltx_Math" alttext="(b,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>. Then P will be given <math id="S0.SSx3.p3.m9" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math>. For the coordinates of <span class="ltx_text ltx_font_smallcaps">point</span>s on <math id="S0.SSx3.p3.m10" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, intersect the <span class="ltx_text ltx_font_smallcaps">line</span>s joining <math id="S0.SSx3.p3.m11" class="ltx_Math" alttext="(0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> with <math id="S0.SSx3.p3.m12" class="ltx_Math" alttext="(1,m)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></math>, for all <math id="S0.SSx3.p3.m13" class="ltx_Math" alttext="m\in Q" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>Q</mi></mrow></math>, with <math id="S0.SSx3.p3.m14" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, calling the intersection <math id="S0.SSx3.p3.m15" class="ltx_Math" alttext="(m)" display="inline"><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></math>. Finally, Y gets coordinate <math id="S0.SSx3.p3.m16" class="ltx_Math" alttext="(\,)" display="inline"><mrow><mo rspace="4.2pt" stretchy="false">(</mo><mo stretchy="false">)</mo></mrow></math> (instead of <math id="S0.SSx3.p3.m17" class="ltx_Math" alttext="(\infty)" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></math> in the literature).</p>
+</div>
+<div id="S0.SSx3.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_smallcaps">Lines</span> not through Y are given coordinates <math id="S0.SSx3.p4.m1" class="ltx_Math" alttext="[\,m,k\,]" display="inline"><mrow><mo rspace="4.2pt" stretchy="false">[</mo><mi>m</mi><mo>,</mo><mpadded width="+1.7pt"><mi>k</mi></mpadded><mo stretchy="false">]</mo></mrow></math> where <math id="S0.SSx3.p4.m2" class="ltx_Math" alttext="(m)" display="inline"><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></math> and <math id="S0.SSx3.p4.m3" class="ltx_Math" alttext="(0,k)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></math> are their intersections with <math id="S0.SSx3.p4.m4" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> and with OY respectively; <span class="ltx_text ltx_font_smallcaps">line</span>s through Y (other than <math id="S0.SSx3.p4.m5" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>) get coordinates <math id="S0.SSx3.p4.m6" class="ltx_Math" alttext="[\,k\,]" display="inline"><mrow><mo rspace="4.2pt" stretchy="false">[</mo><mpadded width="+1.7pt"><mi>k</mi></mpadded><mo stretchy="false">]</mo></mrow></math> going by their
+intersection <math id="S0.SSx3.p4.m7" class="ltx_Math" alttext="(k,0)" display="inline"><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> with OX. The <span class="ltx_text ltx_font_smallcaps">line</span> <math id="S0.SSx3.p4.m8" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> gets <math id="S0.SSx3.p4.m9" class="ltx_Math" alttext="[\;]" display="inline"><mrow><mo rspace="5.3pt" stretchy="false">[</mo><mo stretchy="false">]</mo></mrow></math> (instead of <math id="S0.SSx3.p4.m10" class="ltx_Math" alttext="[\,\infty\,]" display="inline"><mrow><mo rspace="4.2pt" stretchy="false">[</mo><mpadded width="+1.7pt"><mi mathvariant="normal">∞</mi></mpadded><mo stretchy="false">]</mo></mrow></math> in the literature).</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S0.SSx4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Coordinates from bipartite graphs</h2>
+
+<div id="S0.SSx4.p1" class="ltx_para">
+<p class="ltx_p">The whole business with coordinates becomes a bit more transparent when we try
+to actually construct the thing as a bipartite graph, starting from one edge,
+Y<math id="S0.SSx4.p1.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> say.</p>
+</div>
+<div id="S0.SSx4.p2" class="ltx_para">
+<p class="ltx_p">There are <math id="S0.SSx4.p2.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> more <span class="ltx_text ltx_font_smallcaps">point</span>s (other than Y) incident to <math id="S0.SSx4.p2.m2" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, let’s call
+them Y<math id="S0.SSx4.p2.m3" class="ltx_Math" alttext="{}_{m}" display="inline"><msub><mi></mi><mi>m</mi></msub></math> where <math id="S0.SSx4.p2.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> ranges over the <math id="S0.SSx4.p2.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> different values of the set <math id="S0.SSx4.p2.m6" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>.
+Again, each Y<math id="S0.SSx4.p2.m7" class="ltx_Math" alttext="{}_{m}" display="inline"><msub><mi></mi><mi>m</mi></msub></math> is incident to <math id="S0.SSx4.p2.m8" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> more <span class="ltx_text ltx_font_smallcaps">line</span>s (apart from <math id="S0.SSx4.p2.m9" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>), let’s
+call those <math id="S0.SSx4.p2.m10" class="ltx_Math" alttext="\ell_{mb}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>b</mi></mrow></msub></math> where <math id="S0.SSx4.p2.m11" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is another subscript from <math id="S0.SSx4.p2.m12" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>.
+Likewise there are <math id="S0.SSx4.p2.m13" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> more <span class="ltx_text ltx_font_smallcaps">line</span>s (other than <math id="S0.SSx4.p2.m14" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>) incident to Y, let’s
+call them <math id="S0.SSx4.p2.m15" class="ltx_Math" alttext="\ell_{x}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mi>x</mi></msub></math> and to each of them are incident <math id="S0.SSx4.p2.m16" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> more <span class="ltx_text ltx_font_smallcaps">point</span>s (apart
+from Y) which we can label Y<math id="S0.SSx4.p2.m17" class="ltx_Math" alttext="{}_{xy}" display="inline"><msub><mi></mi><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub></math>.</p>
+</div>
+<div id="S0.SSx4.p3" class="ltx_para">
+<p class="ltx_p">This immediately produces the incidence list of the preceding section.
+Pictorially, for <math id="S0.SSx4.p3.m1" class="ltx_Math" alttext="q=2" display="inline"><mrow><mi>q</mi><mo>=</mo><mn>2</mn></mrow></math> (with the “to be assessed” portion filled in
+as thinner lines):</p>
+</div>
+<div id="S0.SSx4.p4" class="ltx_para ltx_centering">
+<svg version="1.1" fill="black" height="160" stroke="black" unitlength="1.0pt" width="155" fragid="S0.SSx4.p4.pic1" viewBox="-5 -10 150 150" overflow="visible"><g transform="translate(0,140.0)"><g transform="scale(1 -1)"><g transform="translate(50,70)"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(-40,-30)"><circle fill="none" r="2.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(0,-60)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="translate(20,-60)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="translate(20,-30)"><circle fill="none" r="2.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(30,-30)"><circle fill="none" r="2.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(40,-30)"><circle fill="none" r="2.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(50,-30)"><circle fill="none" r="2.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(20,30)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="translate(30,30)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="translate(40,30)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="translate(50,30)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="translate(20,60)"><circle fill="none" r="2.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(0,60)"><circle fill="none" r="2.2" stroke-width="0.4" cx="0" cy="0"></circle></g><g transform="translate(-40,30)"><circle r="2" stroke="none" cx="0" cy="0"></circle></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(55,30)"><g pos="l"><text dominant-baseline="middle" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black">Y<g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="S0.SSx4.p4.pic1.m1" class="ltx_Math" alttext="{}_{xy}" display="inline"><msub><mi></mi><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub></math></foreignObject></g></text></g></g><g transform="translate(10,70)"><g pos="b"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="S0.SSx4.p4.pic1.m2" class="ltx_Math" alttext="\ell_{x}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mi>x</mi></msub></math></foreignObject></g></g></g><g transform="translate(-50,30)"><g pos="r"><text dominant-baseline="middle" text-anchor="end" x="0" y="0" transform="scale(1 -1)" fill="black">Y</text></g></g><g transform="translate(-50,-30)"><g pos="r"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="S0.SSx4.p4.pic1.m3" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math></foreignObject></g></g></g><g transform="translate(10,-70)"><g pos="t"><text dominant-baseline="middle" baseline-shift="sub" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black">Y<g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="S0.SSx4.p4.pic1.m4" class="ltx_Math" alttext="{}_{m}" display="inline"><msub><mi></mi><mi>m</mi></msub></math></foreignObject></g></text></g></g><g transform="translate(55,-30)"><g pos="l"><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible"><math id="S0.SSx4.p4.pic1.m5" class="ltx_Math" alttext="\ell_{mb}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>b</mi></mrow></msub></math></foreignObject></g></g></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(-40,-30)"><path d="M 0,0 0,60" stroke-width="0.8"></path></g><g transform="translate(-40,30)"><path d="M 0,0 40,30" stroke-width="0.8"></path></g><g transform="translate(-40,30)"><path d="M 0,0 60,30" stroke-width="0.8"></path></g><g transform="translate(0,60)"><path d="M 0,0 20,-30" stroke-width="0.8"></path></g><g transform="translate(0,60)"><path d="M 0,0 40,-30" stroke-width="0.8"></path></g><g transform="translate(20,60)"><path d="M 0,0 10,-30" stroke-width="0.8"></path></g><g transform="translate(20,60)"><path d="M 0,0 30,-30" stroke-width="0.8"></path></g><g transform="translate(0,-60)"><path d="M 0,0 20,30" stroke-width="0.8"></path></g><g transform="translate(0,-60)"><path d="M 0,0 40,30" stroke-width="0.8"></path></g><g transform="translate(20,-60)"><path d="M 0,0 10,30" stroke-width="0.8"></path></g><g transform="translate(20,-60)"><path d="M 0,0 30,30" stroke-width="0.8"></path></g><g transform="translate(-40,-30)"><path d="M 0,0 60,-30" stroke-width="0.8"></path></g><g transform="translate(-40,-30)"><path d="M 0,0 40,-30" stroke-width="0.8"></path></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g><g transform="translate(20,-30)"><path d="M 0,0 0,60" stroke-width="0.4"></path></g><g transform="translate(30,-30)"><path d="M 0,0 0,60" stroke-width="0.4"></path></g><g transform="translate(40,-30)"><path d="M 0,0 0,60" stroke-width="0.4"></path></g><g transform="translate(50,-30)"><path d="M 0,0 0,60" stroke-width="0.4"></path></g><g transform="translate(20,-30)"><path d="M 0,0 10,60" stroke-width="0.4"></path></g><g transform="translate(30,-30)"><path d="M 0,0 10,60" stroke-width="0.4"></path></g><g transform="translate(40,-30)"><path d="M 0,0 10,60" stroke-width="0.4"></path></g><g transform="translate(50,-30)"><path d="M 0,0 -30,60" stroke-width="0.4"></path></g><g transform="scale(1 -1) translate(-5,-10)"><foreignObject width="50" height="20" overflow="visible">
+<br class="ltx_break"></foreignObject></g></g></g></g></svg>
+</div>
+<div id="S0.SSx4.p5" class="ltx_para">
+<p class="ltx_p">We already have <math id="S0.SSx4.p5.m1" class="ltx_Math" alttext="\ell_{0}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mn>0</mn></msub></math> containing all points Y<math id="S0.SSx4.p5.m2" class="ltx_Math" alttext="{}_{0y}" display="inline"><msub><mi></mi><mrow><mn>0</mn><mo>⁢</mo><mi>y</mi></mrow></msub></math>, and in addition if we
+wanted we could easily arrange for <math id="S0.SSx4.p5.m3" class="ltx_Math" alttext="\ell_{00}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mn>00</mn></msub></math> to be incident with all the
+Y<math id="S0.SSx4.p5.m4" class="ltx_Math" alttext="{}_{x0}" display="inline"><msub><mi></mi><mrow><mi>x</mi><mo>⁢</mo><mn>0</mn></mrow></msub></math> (just renumber the labels <math id="S0.SSx4.p5.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> in the sets Y<math id="S0.SSx4.p5.m6" class="ltx_Math" alttext="{}_{x0}" display="inline"><msub><mi></mi><mrow><mi>x</mi><mo>⁢</mo><mn>0</mn></mrow></msub></math> for every <math id="S0.SSx4.p5.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>),
+and for <math id="S0.SSx4.p5.m8" class="ltx_Math" alttext="\ell_{10}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mn>10</mn></msub></math> to be incident with all the Y<math id="S0.SSx4.p5.m9" class="ltx_Math" alttext="{}_{cc}" display="inline"><msub><mi></mi><mrow><mi>c</mi><mo>⁢</mo><mi>c</mi></mrow></msub></math> (just look at which
+Y<math id="S0.SSx4.p5.m10" class="ltx_Math" alttext="{}_{xy}" display="inline"><msub><mi></mi><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub></math> are incident with <math id="S0.SSx4.p5.m11" class="ltx_Math" alttext="\ell_{10}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mn>10</mn></msub></math>, then exercise the freedom we still have
+to relabel all the <math id="S0.SSx4.p5.m12" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, matching each time the corresponding <math id="S0.SSx4.p5.m13" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> there). This
+reproduces the entire coordinatisation.</p>
+</div>
+</section>
+<section id="S0.SSx5" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Projective planes as permutation systems</h2>
+
+<div id="S0.SSx5.p1" class="ltx_para">
+<p class="ltx_p">Five sides of the hexagon are self-evident. On the left we have the
+single edge Y<math id="S0.SSx5.p1.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, along the top we fan out in two stages to <math id="S0.SSx5.p1.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> and <math id="S0.SSx5.p1.m3" class="ltx_Math" alttext="q^{2}" display="inline"><msup><mi>q</mi><mn>2</mn></msup></math>
+items, along the bottom we also fan out in two stages to <math id="S0.SSx5.p1.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> and <math id="S0.SSx5.p1.m5" class="ltx_Math" alttext="q^{2}" display="inline"><msup><mi>q</mi><mn>2</mn></msup></math> items,
+and the hard part is the right. We have by now accounted for <math id="S0.SSx5.p1.m6" class="ltx_Math" alttext="2q^{2}+2q+1" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mn>1</mn></mrow></math> edges
+so we know there must be exactly <math id="S0.SSx5.p1.m7" class="ltx_Math" alttext="q^{3}" display="inline"><msup><mi>q</mi><mn>3</mn></msup></math> more edges, between <span class="ltx_text ltx_font_italic">some</span> of
+those <math id="S0.SSx5.p1.m8" class="ltx_Math" alttext="q^{2}" display="inline"><msup><mi>q</mi><mn>2</mn></msup></math> <span class="ltx_text ltx_font_smallcaps">point</span>s and <span class="ltx_text ltx_font_italic">some</span> of those <math id="S0.SSx5.p1.m9" class="ltx_Math" alttext="q^{2}" display="inline"><msup><mi>q</mi><mn>2</mn></msup></math> <span class="ltx_text ltx_font_smallcaps">line</span>s. But where?</p>
+</div>
+<div id="S0.SSx5.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S0.SSx5.p2.m1" class="ltx_Math" alttext="q=2" display="inline"><mrow><mi>q</mi><mo>=</mo><mn>2</mn></mrow></math> it is simple enough to avoid 4-cycle clashes (and the diagram shows
+what is, up to isomorphism, the only solution). In general, it is an open
+problem to find all possible solutions.</p>
+</div>
+<div id="S0.SSx5.p3" class="ltx_para">
+<p class="ltx_p">From the projective plane properties it is easy to see that any point Y<math id="S0.SSx5.p3.m1" class="ltx_Math" alttext="{}_{xy}" display="inline"><msub><mi></mi><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub></math> must, for
+every value of <math id="S0.SSx5.p3.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, be incident to no more than one of the <math id="S0.SSx5.p3.m3" class="ltx_Math" alttext="\ell_{mb}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>b</mi></mrow></msub></math> (because
+if it was incident to two they would intersect both in our Y<math id="S0.SSx5.p3.m4" class="ltx_Math" alttext="{}_{xy}" display="inline"><msub><mi></mi><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub></math> and in
+their shared Y<math id="S0.SSx5.p3.m5" class="ltx_Math" alttext="{}_{m}" display="inline"><msub><mi></mi><mi>m</mi></msub></math> at the bottom). On the other hand, Y<math id="S0.SSx5.p3.m6" class="ltx_Math" alttext="{}_{xy}" display="inline"><msub><mi></mi><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub></math> needs <math id="S0.SSx5.p3.m7" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> more
+mates so it needs to choose exactly one <math id="S0.SSx5.p3.m8" class="ltx_Math" alttext="\ell_{mb}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>b</mi></mrow></msub></math> for every value of <math id="S0.SSx5.p3.m9" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>.</p>
+</div>
+<div id="S0.SSx5.p4" class="ltx_para">
+<p class="ltx_p">By exactly the same reasoning, any <math id="S0.SSx5.p4.m1" class="ltx_Math" alttext="\ell_{mb}" display="inline"><msub><mi mathvariant="normal">ℓ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>b</mi></mrow></msub></math> needs to be incident with, for
+every value of <math id="S0.SSx5.p4.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, at most one and then exactly one Y<math id="S0.SSx5.p4.m3" class="ltx_Math" alttext="{}_{xy}" display="inline"><msub><mi></mi><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub></math>. In other words,
+the projective plane structure takes the form of, for each pair of values <math id="S0.SSx5.p4.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S0.SSx5.p4.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>,
+a <span class="ltx_text ltx_font_bold">bijection</span> <math id="S0.SSx5.p4.m6" class="ltx_Math" alttext="\psi_{xm}" display="inline"><msub><mi>ψ</mi><mrow><mi>x</mi><mo>⁢</mo><mi>m</mi></mrow></msub></math> between the <math id="S0.SSx5.p4.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> indices and the <math id="S0.SSx5.p4.m8" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> indices.</p>
+</div>
+<div id="S0.SSx5.p5" class="ltx_para">
+<p class="ltx_p">This is not yet the only constraint. A closer analysis <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx7" title="" class="ltx_ref">vG03</a>]</cite> shows
+that, in order to prevent any two <span class="ltx_text ltx_font_smallcaps">line</span>s meeting in more than one <span class="ltx_text ltx_font_smallcaps">point</span> or any
+two <span class="ltx_text ltx_font_smallcaps">point</span>s in more than two <span class="ltx_text ltx_font_smallcaps">line</span>s, all compound bijections of the form</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\psi_{xm}\psi_{x^{\prime}m}^{-1}\psi_{x^{\prime}m^{\prime}}\psi_{xm^{\prime}}^%
+{-1}" display="block"><mrow><msub><mi>ψ</mi><mrow><mi>x</mi><mo>⁢</mo><mi>m</mi></mrow></msub><mo>⁢</mo><msubsup><mi>ψ</mi><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mi>m</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><msub><mi>ψ</mi><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><msup><mi>m</mi><mo>′</mo></msup></mrow></msub><mo>⁢</mo><msubsup><mi>ψ</mi><mrow><mi>x</mi><mo>⁢</mo><msup><mi>m</mi><mo>′</mo></msup></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(for <math id="S0.SSx5.p5.m1" class="ltx_Math" alttext="m\neq m^{\prime}" display="inline"><mrow><mi>m</mi><mo>≠</mo><msup><mi>m</mi><mo>′</mo></msup></mrow></math> and <math id="S0.SSx5.p5.m2" class="ltx_Math" alttext="x\neq x^{\prime}" display="inline"><mrow><mi>x</mi><mo>≠</mo><msup><mi>x</mi><mo>′</mo></msup></mrow></math>) must be <span class="ltx_text ltx_font_bold">derangements</span>, i.e. permutations that do not leave any index in place. It is not hard to see
+this is just a device to prevent 4-cycles. And careful scrutiny of the graph
+shows that, after arranging 5 of 6 edges along trees fanning out as above, and
+after recognising there are those bijections along the sixth edge, these
+derangement shenanigans stop the only remaining gap for 4-cycles to lurk.</p>
+</div>
+<div id="S0.SSx5.p6" class="ltx_para">
+<p class="ltx_p">This could be called the permutation group interpretation of projective plane structure.
+The algebraic version appears in the next section.</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S0.SSx6" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Planar ternary rings</h2>
+
+<div id="S0.SSx6.p1" class="ltx_para">
+<p class="ltx_p">We’ve been giving our <span class="ltx_text ltx_font_smallcaps">point</span>s and <span class="ltx_text ltx_font_smallcaps">line</span>s cooordinates from a set <math id="S0.SSx6.p1.m1" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> of <math id="S0.SSx6.p1.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> different labels. We can give <math id="S0.SSx6.p1.m3" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> the structure of a <span class="ltx_text ltx_font_bold">ternary ring</span>, that is, a set with a ternary operation <math id="S0.SSx6.p1.m4" class="ltx_Math" alttext="p\bullet q\circ r" display="inline"><mrow><mrow><mi>p</mi><mo>∙</mo><mi>q</mi></mrow><mo>∘</mo><mi>r</mi></mrow></math>, by defining
+</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="y=x\bullet m\circ b\;\Longleftrightarrow\;(x,y)\;\hbox{is on}\;[\,m,b\,]" display="block"><mrow><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mi>x</mi><mo>∙</mo><mi>m</mi></mrow><mo>∘</mo><mpadded width="+2.8pt"><mi>b</mi></mpadded></mrow></mrow><mo rspace="5.3pt">⟺</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mtext>is on</mtext></mpadded><mo>⁢</mo><mrow><mo rspace="4.2pt" stretchy="false">[</mo><mi>m</mi><mo>,</mo><mpadded width="+1.7pt"><mi>b</mi></mpadded><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, geometric properties of a projective plane may not be analyzed algebraically. See this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TernaryRingOfAProjectivePlane</span>) for more detail. Conversely, every ternary ring determines a projective plane with coordinates as above, so that algebraic properties of the ring can be interpreted geometrically. For more detail on this, see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ProjectivePlaneOfATernaryRing</span>).</p>
+</div>
+<div id="S0.SSx6.p2" class="ltx_para">
+<p class="ltx_p">Fields and division rings are examples of ternary rings. But there are other classes of algebraic structures intermediate between fields and ternary rings. See <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx6" title="" class="ltx_ref">dRe96</a>]</cite> for a survey. There are four different projective planes known of order 9, many more of order 16, and so on.</p>
+</div>
+<div id="S0.SSx6.p3" class="ltx_para">
+<p class="ltx_p">Finding all PTRs in general remains of course just as hard as finding projective planes!</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S0.SSx7" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Finite projective planes as incidence structures</h2>
+
+<div id="S0.SSx7.p1" class="ltx_para">
+<p class="ltx_p">Finite projective planes can be defined as
+(<span class="ltx_text ltx_font_bold">simple square</span>) 2-<math id="S0.SSx7.p1.m1" class="ltx_Math" alttext="(q^{2}+q+1,\,\allowbreak q+1,\,\allowbreak 1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo rspace="4.2pt">,</mo><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mn> 1</mn><mo stretchy="false">)</mo></mrow></math> <span class="ltx_text ltx_font_bold">designs</span>,
+or what’s the same thing, <span class="ltx_text ltx_font_bold">Steiner systems</span> <math id="S0.SSx7.p1.m2" class="ltx_Math" alttext="S(2,\,\allowbreak q+1,\,\allowbreak q^{2}+q+1)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo rspace="4.2pt">,</mo><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo rspace="4.2pt">,</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.
+This way, we already <span class="ltx_text ltx_font_italic">assume</span> in the definition that each “block”
+(<span class="ltx_text ltx_font_smallcaps">line</span>) contains exactly <math id="S0.SSx7.p1.m3" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math> <span class="ltx_text ltx_font_smallcaps">point</span>s, from which it follows by calculation that
+the number of <span class="ltx_text ltx_font_smallcaps">line</span>s that contain a given <span class="ltx_text ltx_font_smallcaps">point</span> is also <math id="S0.SSx7.p1.m4" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math>, and that the
+total number of <span class="ltx_text ltx_font_smallcaps">line</span>s equals the total number of <span class="ltx_text ltx_font_smallcaps">point</span>s.</p>
+</div>
+<div id="S0.SSx7.p2" class="ltx_para">
+<p class="ltx_p">Also, the unique incidence property that every two <span class="ltx_text ltx_font_smallcaps">point</span>s lie together on
+exactly one <span class="ltx_text ltx_font_smallcaps">line</span> is given, and the dual one that every two <span class="ltx_text ltx_font_smallcaps">line</span>s meet in
+exactly one <span class="ltx_text ltx_font_smallcaps">point</span> then follows from the numbers and the properties that define
+a design or Steiner system.</p>
+</div>
+<div id="S0.SSx7.p3" class="ltx_para">
+<p class="ltx_p">We took a different route to projective planes above: we saw we only need to start with
+these two unique incidence properties, and can <span class="ltx_text ltx_font_italic">prove</span> from them that
+the number of <span class="ltx_text ltx_font_smallcaps">point</span>s on a <span class="ltx_text ltx_font_smallcaps">line</span> and the number of <span class="ltx_text ltx_font_smallcaps">line</span>s through a <span class="ltx_text ltx_font_smallcaps">point</span> are both
+fixed (i.e. that the projective plane and its dual are both designs).</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S0.SSx8" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Finite projective planes as incidence matrices</h2>
+
+<div id="S0.SSx8.p1" class="ltx_para">
+<p class="ltx_p">Consider an arbitrary projective plane of order <math id="S0.SSx8.p1.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>.
+We know there are <math id="S0.SSx8.p1.m2" class="ltx_Math" alttext="n=q^{2}+q+1" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow></mrow></math> points and the same number of lines. Let <math id="S0.SSx8.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+be an <math id="S0.SSx8.p1.m4" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix of which the rows and columns represent lines and
+points of the plane, and give the value 1 to entries at intersections where
+the point (represented by the column) lies on the line (represented by the
+row), and leave the other entries zeros. Such an <math id="S0.SSx8.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is known as the
+<span class="ltx_text ltx_font_bold">incidence matrix</span> of the plane.</p>
+</div>
+<div id="S0.SSx8.p2" class="ltx_para">
+<p class="ltx_p"><math id="S0.SSx8.p2.m1" class="ltx_Math" alttext="AA^{\top}" display="inline"><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>⊤</mo></msup></mrow></math> has rows and columns both representing lines, and the entries
+here are the dot products of any two rows of <math id="S0.SSx8.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, i.e. the number of points
+any two lines <math id="S0.SSx8.p2.m3" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math> and <math id="S0.SSx8.p2.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> have in common, which is <math id="S0.SSx8.p2.m5" class="ltx_Math" alttext="q+1" display="inline"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></math> when <math id="S0.SSx8.p2.m6" class="ltx_Math" alttext="l=m" display="inline"><mrow><mi>l</mi><mo>=</mo><mi>m</mi></mrow></math> and 1
+otherwise, by the projective plane properties.
+</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="AA^{\top}\;=\;\left\lgroup\begin{array}[]{cccc}q+1&amp;1&amp;1&amp;\cdots\\
+1&amp;q+1&amp;1&amp;\cdots\\
+1&amp;1&amp;q+1&amp;\cdots\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots\end{array}\right\rgroup\;=\;J+qI" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi>A</mi><mo>⊤</mo></msup></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd></mtr></mtable><mo rspace="5.3pt">)</mo></mrow><mo rspace="5.3pt">=</mo><mrow><mi>J</mi><mo>+</mo><mrow><mi>q</mi><mo>⁢</mo><mi>I</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SSx8.p2.m7" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is the identity matrix (ones along the diagonal, zeros everywhere
+else) and <math id="S0.SSx8.p2.m8" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> is the matrix filled with ones in every entry. Note <math id="S0.SSx8.p2.m9" class="ltx_Math" alttext="AA^{\top}" display="inline"><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>⊤</mo></msup></mrow></math>
+has this same value for <span class="ltx_text ltx_font_italic">every</span> projective plane with <math id="S0.SSx8.p2.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> points and <math id="S0.SSx8.p2.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> lines,
+while <math id="S0.SSx8.p2.m12" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> on its own of course varies if there is more than one plane of the
+same order, as the plane is fully determined by its incidence matrix. Also,
+<math id="S0.SSx8.p2.m13" class="ltx_Math" alttext="AA^{\top}" display="inline"><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>⊤</mo></msup></mrow></math> having this value is the <span class="ltx_text ltx_font_italic">only</span> thing needed to make the plane
+specified by <math id="S0.SSx8.p2.m14" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> satisfy the projective plane properties; it is a fully equivalent
+formulation of those properties.</p>
+</div>
+<div id="S0.SSx8.p3" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">determinant</span> of <math id="S0.SSx8.p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is best evaluated via that of <math id="S0.SSx8.p3.m2" class="ltx_Math" alttext="AA^{\top}" display="inline"><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>⊤</mo></msup></mrow></math>,
+because <math id="S0.SSx8.p3.m3" class="ltx_Math" alttext="(\det A)^{2}=(\det A)(\det A^{\top})=\det AA^{\top}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>det</mo><mo>⁡</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>det</mo><mo>⁡</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>det</mo><mo>⁡</mo><msup><mi>A</mi><mo>⊤</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>⊤</mo></msup></mrow></mrow></mrow></math>, and we know
+every entry of <math id="S0.SSx8.p3.m4" class="ltx_Math" alttext="AA^{\top}" display="inline"><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>⊤</mo></msup></mrow></math>. The <span class="ltx_text ltx_font_bold">eigenvalues</span> of any <math id="S0.SSx8.p3.m5" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix of
+the form <math id="S0.SSx8.p3.m6" class="ltx_Math" alttext="J+qI" display="inline"><mrow><mi>J</mi><mo>+</mo><mrow><mi>q</mi><mo>⁢</mo><mi>I</mi></mrow></mrow></math> are easily seen to be
+</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i1.p1.m1" class="ltx_Math" alttext="q+n" display="inline"><mrow><mi>q</mi><mo>+</mo><mi>n</mi></mrow></math> (once) with eigenvector <math id="I4.i1.p1.m2" class="ltx_Math" alttext="{\bf x}" display="inline"><mi>𝐱</mi></math> for which <math id="I4.i1.p1.m3" class="ltx_Math" alttext="x_{0}=x_{1}=x_{2}\dots" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i2.p1.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> (multiplicity <math id="I4.i2.p1.m2" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>) for the complementary eigenspace
+<math id="I4.i2.p1.m3" class="ltx_Math" alttext="x_{0}+x_{1}+x_{2}\cdots=0" display="inline"><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">by letting the matrix act on these eigenvectors. This gives</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\det AA^{\top}\;=\;q^{n-1}\,(q+n)" display="block"><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mi>A</mi><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi>A</mi><mo>⊤</mo></msup></mpadded></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="+1.7pt"><msup><mi>q</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>+</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which in our case (<math id="S0.SSx8.p3.m7" class="ltx_Math" alttext="n=q^{2}+q+1" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>) amounts to</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\det AA^{\top}\;=\;q^{q^{2}+q}\,(q^{2}+2q+1)" display="block"><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mi>A</mi><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi>A</mi><mo>⊤</mo></msup></mpadded></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="+1.7pt"><msup><mi>q</mi><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi></mrow></msup></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="S0.SSx8.p3.m8" class="ltx_Math" alttext="q^{2}+q" display="inline"><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi></mrow></math> is even and the other factor a square, we get an integer</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\det A\;=\;\pm\;q^{\textstyle{q^{2}+q\over 2}}\,(q+1)\;=\;\pm\;q^{\textstyle{q%
++1\choose 2}}\,(q+1)" display="block"><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mpadded width="+2.8pt"><mi>A</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo rspace="5.3pt">±</mo><mrow><mpadded width="+1.7pt"><msup><mi>q</mi><mstyle scriptlevel="-1"><mfrac><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi></mrow><mn>2</mn></mfrac></mstyle></msup></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mo rspace="5.3pt">±</mo><mrow><mpadded width="+1.7pt"><msup><mi>q</mi><mrow><mo>(</mo><mstyle scriptlevel="-1"><mfrac linethickness="0pt"><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow></msup></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the sign is moot, as <math id="S0.SSx8.p3.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has no correspondence between its columns and
+rows.
+</p>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+<section id="S0.SSx9" class="ltx_subsection">
+<h2 class="ltx_title ltx_align_left ltx_title_subsection">Existence</h2>
+
+<div id="S0.SSx9.p1" class="ltx_para ltx_align_left">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">Bruck–Ryser theorem</span> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx1" title="" class="ltx_ref">BR49</a>]</cite> states that</p>
+</div>
+<div id="S0.SSx9.p2" class="ltx_para ltx_align_left">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="S0.SSx9.p2.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is the order of a projective plane, and <math id="S0.SSx9.p2.m2" class="ltx_Math" alttext="q\equiv 1" display="inline"><mrow><mi>q</mi><mo mathvariant="normal">≡</mo><mn mathvariant="normal">1</mn></mrow></math> or <math id="S0.SSx9.p2.m3" class="ltx_Math" alttext="2\allowbreak\mskip 10.0mu ({\rm mod}\,\,4)" display="inline"><mrow><mpadded width="+5.6pt"><mn mathvariant="normal">2</mn></mpadded><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi mathvariant="normal">mod</mi><mo mathvariant="italic">⁢</mo><mn mathvariant="normal">  4</mn></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>, then <math id="S0.SSx9.p2.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is
+the sum of two integer squares (one of which can be <math id="S0.SSx9.p2.m5" class="ltx_Math" alttext="0^{2}" display="inline"><msup><mn mathvariant="normal">0</mn><mn mathvariant="normal">2</mn></msup></math>).</span></p>
+</div>
+<div id="S0.SSx9.p3" class="ltx_para ltx_align_left">
+<p class="ltx_p">It can be proven <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx1" title="" class="ltx_ref">BR49</a>, <a href="#bib.bibx4" title="" class="ltx_ref">Cam94</a>]</cite> using the incidence matrix <math id="S0.SSx9.p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, by a
+clever rearrangement of <math id="S0.SSx9.p3.m2" class="ltx_Math" alttext="{\bf x}AA^{\top}{\bf x}" display="inline"><mrow><mi>𝐱</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>⊤</mo></msup><mo>⁢</mo><mi>𝐱</mi></mrow></math> (plus one extra term) for an
+arbitrary vector <math id="S0.SSx9.p3.m3" class="ltx_Math" alttext="{\bf x}" display="inline"><mi>𝐱</mi></math>, on which gradually constraints are imposed four
+components at a time using the fact that each integer is a sum of four
+squares. The argument only works when <math id="S0.SSx9.p3.m4" class="ltx_Math" alttext="q^{2}+q+1=n\equiv-1\allowbreak\mskip 10.0mu ({\rm mod}\,\,4)" display="inline"><mrow><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mi>n</mi><mo>≡</mo><mrow><mo>-</mo><mrow><mpadded width="+5.6pt"><mn>1</mn></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>mod</mi><mo>⁢</mo><mn>  4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, hence the
+constraint on <math id="S0.SSx9.p3.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> (mod 4).</p>
+</div>
+<div id="S0.SSx9.p4" class="ltx_para ltx_align_left">
+<p class="ltx_p">Interestingly, there is a partial converse <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx2" title="" class="ltx_ref">HR54</a>]</cite>: whenever <math id="S0.SSx9.p4.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is
+allowed by the theorem (either congruent 0 or 3 (mod 4), or congruent 1
+or 2 (mod 4) and a sum of two squares), there always is a <span class="ltx_text ltx_font_bold">rational</span>
+<math id="S0.SSx9.p4.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix <math id="S0.SSx9.p4.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> (where <math id="S0.SSx9.p4.m4" class="ltx_Math" alttext="n=q^{2}+q+1" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>) such that <math id="S0.SSx9.p4.m5" class="ltx_Math" alttext="AA^{\top}=M" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mo>⊤</mo></msup></mrow><mo>=</mo><mi>M</mi></mrow></math>. Of course,
+the matrix is only a proper incidence matrix if that rational matrix only has
+entries 0 and 1.</p>
+</div>
+<div id="S0.SSx9.p5" class="ltx_para ltx_align_left">
+<p class="ltx_p">The theorem doesn’t rule out any potential projective plane orders <math id="S0.SSx9.p5.m1" class="ltx_Math" alttext="q\equiv 0" display="inline"><mrow><mi>q</mi><mo>≡</mo><mn>0</mn></mrow></math> or <math id="S0.SSx9.p5.m2" class="ltx_Math" alttext="3\allowbreak\mskip 10.0mu ({\rm mod}\,\,4)" display="inline"><mrow><mpadded width="+5.6pt"><mn>3</mn></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>mod</mi><mo>⁢</mo><mn>  4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>,
+but does rule out a large number of <math id="S0.SSx9.p5.m3" class="ltx_Math" alttext="q\equiv 1" display="inline"><mrow><mi>q</mi><mo>≡</mo><mn>1</mn></mrow></math> or <math id="S0.SSx9.p5.m4" class="ltx_Math" alttext="2\allowbreak\mskip 10.0mu ({\rm mod}\,\,4)" display="inline"><mrow><mpadded width="+5.6pt"><mn>2</mn></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>mod</mi><mo>⁢</mo><mn>  4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, starting with
+<math id="S0.SSx9.p5.m5" class="ltx_Math" alttext="n=6,14,21,22\dots" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>6</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>21</mn><mo>,</mo><mrow><mn>22</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></mrow></mrow></math>. Note in passing that it is easy to prove no prime
+power falls foul of Bruck–Ryser, which is just as well, as (classical)
+planes exist for all those orders.</p>
+</div>
+<div id="S0.SSx9.p6" class="ltx_para ltx_align_left">
+<p class="ltx_p">The only other order ruled out to date is 10, via an epic computer search
+by Lam, Swiercz and Thiel (read
+<span class="ltx_text ltx_font_typewriter">http://www.cecm.sfu.ca/organics/papers/lam/index.htmlhttp://www.cecm.sfu.ca/organics/papers/lam/index.html</span>
+for Lam’s account).</p>
+</div>
+<div id="S0.SSx9.p7" class="ltx_para ltx_align_left">
+<p class="ltx_p">All projective planes actually found to date, even the non-classical ones,
+have an order <math id="S0.SSx9.p7.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> that is the power of a prime. The <span class="ltx_text ltx_font_bold">prime power conjecture</span>
+says this is the case for all projective planes. It is still open.</p>
+</div>
+<div class="ltx_pagination ltx_align_left ltx_role_newpage"></div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+</span>
+      </li>
+      
+<li id="bib.bibx1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">BR49</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">R. H. Bruck</span> &amp; <span class="ltx_text ltx_font_smallcaps">H. J. Ryser</span>,
+“The non-existence of certain finite projective planes”
+<span class="ltx_text ltx_font_italic">Can. J. Math.</span>
+<span class="ltx_text ltx_font_bold">12</span> (1949) pp 189–203
+
+</span>
+      </li>
+      
+<li id="bib.bibx2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">HR54</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">M. Hall, Jr.</span> &amp; <span class="ltx_text ltx_font_smallcaps">H. J. Ryser</span>,
+“Normal completions of incidence matrices”
+<span class="ltx_text ltx_font_italic">Amer. J. Math.</span> <span class="ltx_text ltx_font_bold">76</span> (1954) pp 581–9
+
+</span>
+      </li>
+      
+<li id="bib.bibx3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">Hal59</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Marshall Hall, Jr.</span>, <span class="ltx_text ltx_font_slanted">The Theory of Groups</span>,
+Macmillan 1959
+
+</span>
+      </li>
+      
+<li id="bib.bibx4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">Cam94</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Peter J. Cameron</span>,
+<span class="ltx_text ltx_font_slanted">Combinatorics: topics, techniques, algorithms</span>,
+<br class="ltx_break">Camb. Univ. Pr. 1994, <span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  0 521 45761 0
+<br class="ltx_break"><span class="ltx_text" style="font-size:111%;">http://www.maths.qmul.ac.uk/ pjc/comb/http://www.maths.qmul.ac.uk/ pjc/comb/</span></span>
+(solutions, errata &amp;c.)
+
+</span>
+      </li>
+      
+<li id="bib.bibx5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">CD96</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Charles J. Colbourn</span> and <span class="ltx_text ltx_font_smallcaps">Jeffrey H. Dinitz</span>, eds.
+<br class="ltx_break"><span class="ltx_text ltx_font_slanted">The CRC Handbook of Combinatorial Designs</span>,
+<br class="ltx_break">CRC Press 1996, <span class="ltx_text ltx_font_typewriter" style="font-size:90%;">ISBN  0 8493 8948 8
+<br class="ltx_break"><span class="ltx_text" style="font-size:111%;">http://www.emba.uvm.edu/ dinitz/hcd.htmlhttp://www.emba.uvm.edu/ dinitz/hcd.html</span></span>
+(errata, new results)
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">the reference work on designs incl. Steiner systems,
+proj. planes</span>
+
+</span>
+      </li>
+      
+<li id="bib.bibx6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">dRe96</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Marialuisa J. de Resmini</span>,
+“Projective Planes, Nondesarguesian”,
+pp 708–718 in the previous reference
+
+</span>
+      </li>
+      
+<li id="bib.bibx7" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">vG03</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_smallcaps">Marijke van Gans</span>, M.Phil.(Qual.) thesis,
+Birmingham 2003
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">finite projective plane</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FiniteProjectivePlane</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:11:15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:11:15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51E15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 51A35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 05B25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ProjectivePlane2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">IncidenceStructures</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Geometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DeBruijnErdHosTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">prime power conjecture</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">planar ternary ring</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">PTR</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 22:00:07 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
