@@ -27,7 +27,7 @@
 <p class="ltx_p">Bézier curves are a particular family of curves in <math id="S1.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{m}" display="inline"><msup><mi>ℝ</mi><mi>m</mi></msup></math>
 that parameterize a smooth path  given points.
 They are often used to model or approximate general curved shapes
-because of their algebraic simplicity.</p>
+because of their algebraic <a class="nnexus_concept" href="http://mathworld.wolfram.com/Simplicity.html">simplicity</a>.</p>
 </div>
 <div id="S1.p2" class="ltx_para">
 <p class="ltx_p">Bézier curves were originally developed by Paul de Casteljau in 1959. But it became a famous shape only when Pierre Bézier, a French engineer at Renault, used it to  automobiles in the 1970’s.
@@ -41,7 +41,7 @@ vector-based drawing, font design, and 3D modeling.</p>
 
 <div id="S2.p1" class="ltx_para">
 <p class="ltx_p">Given <math id="S2.p1.m1" class="ltx_Math" alttext="n+1" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></math> points <math id="S2.p1.m2" class="ltx_Math" alttext="\boldsymbol{P}_{i}" display="inline"><msub><mi>𝑷</mi><mi>i</mi></msub></math> in <math id="S2.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{m}" display="inline"><msup><mi>ℝ</mi><mi>m</mi></msup></math>,
-the <em class="ltx_emph ltx_font_italic">Bézier curve</em> for these <em class="ltx_emph ltx_font_italic">control points</em> is the curve <math id="S2.p1.m4" class="ltx_Math" alttext="\boldsymbol{B}\colon[0,1]\to\mathbb{R}^{m}" display="inline"><mrow><mi>𝑩</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></mrow></math>
+the <em class="ltx_emph ltx_font_italic">Bézier curve</em> for these <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://planetmath.org/bspline">control points</a></em> is the curve <math id="S2.p1.m4" class="ltx_Math" alttext="\boldsymbol{B}\colon[0,1]\to\mathbb{R}^{m}" display="inline"><mrow><mi>𝑩</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></mrow></math>
 defined by</p>
 <table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
 
@@ -52,7 +52,7 @@ _{i}\,." display="block"><mrow><mrow><mrow><mi>𝑩</mi><mo>⁢</mo><mrow><mo st
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">The coefficients in this expression:</p>
+<p class="ltx_p">The coefficients in this <a class="nnexus_concept" href="http://planetmath.org/expression">expression</a>:</p>
 <table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -61,7 +61,7 @@ _{i}\,." display="block"><mrow><mrow><mrow><mi>𝑩</mi><mo>⁢</mo><mrow><mo st
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">are the Bernstein basis polynomials.</p>
+<p class="ltx_p">are the <a class="nnexus_concept" href="http://planetmath.org/bernsteinpolynomial">Bernstein basis polynomials</a>.</p>
 </div>
 </section>
 <section id="S3" class="ltx_section">
@@ -69,7 +69,7 @@ _{i}\,." display="block"><mrow><mrow><mrow><mi>𝑩</mi><mo>⁢</mo><mrow><mo st
 <span class="ltx_tag ltx_tag_section">3 </span>Special cases</h2>
 
 <div id="S3.p1" class="ltx_para">
-<p class="ltx_p">A Bézier curve between two control points is simply the line segment
+<p class="ltx_p">A Bézier curve between two control points is simply the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">line segment</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/LineSegment.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/linesegment"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>
 between the two points:</p>
 <table id="S3.Ex3" class="ltx_equation ltx_eqn_table">
 
@@ -117,19 +117,19 @@ between the two points:</p>
 <li id="I1.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I1.i1.p1" class="ltx_para">
-<p class="ltx_p">Except for the first and the last points, where the curve starts and ends, the Bézier curve should not pass through any of the control points. i.e. all the controls points lie on the curve if and only if the curve is a straight line.</p>
+<p class="ltx_p">Except for the first and the last points, where the curve starts and ends, the Bézier curve should not <a class="nnexus_concept" href="http://planetmath.org/incidencegeometry">pass through</a> any of the control points. i.e. all the controls points lie on the curve if and only if the curve is a <a class="nnexus_concept" href="http://mathworld.wolfram.com/StraightLine.html">straight line</a>.</p>
 </div>
 </li>
 <li id="I1.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I1.i2.p1" class="ltx_para">
-<p class="ltx_p">The curve is tangent to the segment of line <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\overline{\boldsymbol{P}_{0}\,\boldsymbol{P}_{1}}" display="inline"><mover accent="true"><mrow><mpadded width="+1.7pt"><msub><mi>𝑷</mi><mn>0</mn></msub></mpadded><mo>⁢</mo><msub><mi>𝑷</mi><mn>1</mn></msub></mrow><mo>¯</mo></mover></math> at the start and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\overline{\boldsymbol{P}_{n-1}\,\boldsymbol{P}_{n}}" display="inline"><mover accent="true"><mrow><mpadded width="+1.7pt"><msub><mi>𝑷</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mpadded><mo>⁢</mo><msub><mi>𝑷</mi><mi>n</mi></msub></mrow><mo>¯</mo></mover></math> at the end.</p>
+<p class="ltx_p">The curve is <a class="nnexus_concept" href="http://planetmath.org/trigonometry">tangent</a> to the segment of line <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\overline{\boldsymbol{P}_{0}\,\boldsymbol{P}_{1}}" display="inline"><mover accent="true"><mrow><mpadded width="+1.7pt"><msub><mi>𝑷</mi><mn>0</mn></msub></mpadded><mo>⁢</mo><msub><mi>𝑷</mi><mn>1</mn></msub></mrow><mo>¯</mo></mover></math> at the start and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\overline{\boldsymbol{P}_{n-1}\,\boldsymbol{P}_{n}}" display="inline"><mover accent="true"><mrow><mpadded width="+1.7pt"><msub><mi>𝑷</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mpadded><mo>⁢</mo><msub><mi>𝑷</mi><mi>n</mi></msub></mrow><mo>¯</mo></mover></math> at the end.</p>
 </div>
 </li>
 <li id="I1.i3" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I1.i3.p1" class="ltx_para">
-<p class="ltx_p">It is easy to keep until the first order continuity when chaining curves. Moreover, every Bézier curve can be cut at any point into two new Bézier curves. In fact, the  industry uses series of Bézier curves with only 4 control points (a bicubic version of the equations) to draw complex shapes.</p>
+<p class="ltx_p">It is easy to keep until the <a class="nnexus_concept" href="http://planetmath.org/recurrencerelation">first order</a> continuity when chaining curves. Moreover, every Bézier curve can be cut at any point into two new Bézier curves. In fact, the  industry uses series of Bézier curves with only 4 control points (a bicubic version of the equations) to draw complex shapes.</p>
 </div>
 </li>
 <li id="I1.i4" class="ltx_item" style="list-style-type:none;">
@@ -142,7 +142,7 @@ between the two points:</p>
 <li id="I1.i5" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I1.i5.p1" class="ltx_para">
-<p class="ltx_p">For one and two points the definition is still valid and the result became a point and a segment of line, respectively.</p>
+<p class="ltx_p">For one and two points the <a class="nnexus_concept" href="http://planetmath.org/definition">definition</a> is still valid and the result became a point and a segment of line, respectively.</p>
 </div>
 </li>
 <li id="I1.i6" class="ltx_item" style="list-style-type:none;">
@@ -154,7 +154,7 @@ between the two points:</p>
 <li id="I1.i7" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I1.i7.p1" class="ltx_para">
-<p class="ltx_p">It is also impossible to draw two parallel curves (except in trivial cases: straight line Béziers and coincident Béziers curves)</p>
+<p class="ltx_p">It is also impossible to draw two <a class="nnexus_concept" href="http://planetmath.org/parallelcurve">parallel curves</a> (except in <a class="nnexus_concept" href="http://mathworld.wolfram.com/Trivial.html">trivial</a> cases: straight line Béziers and <a class="nnexus_concept" href="http://mathworld.wolfram.com/Coincident.html">coincident</a> Béziers curves)</p>
 </div>
 </li>
 <li id="I1.i8" class="ltx_item" style="list-style-type:none;">
@@ -171,7 +171,7 @@ between the two points:</p>
 <span class="ltx_tag ltx_tag_section">5 </span>Curve Cut</h2>
 
 <div id="S5.p1" class="ltx_para">
-<p class="ltx_p">Let <math id="S5.p1.m1" class="ltx_Math" alttext="\boldsymbol{B}_{p}(t)" display="inline"><mrow><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a Bezier curve, defined by its control points <math id="S5.p1.m2" class="ltx_Math" alttext="\boldsymbol{P}_{0}" display="inline"><msub><mi>𝑷</mi><mn>0</mn></msub></math> to <math id="S5.p1.m3" class="ltx_Math" alttext="\boldsymbol{P}_{n}" display="inline"><msub><mi>𝑷</mi><mi>n</mi></msub></math> for <math id="S5.p1.m4" class="ltx_Math" alttext="t\in[0,1]" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+<p class="ltx_p">Let <math id="S5.p1.m1" class="ltx_Math" alttext="\boldsymbol{B}_{p}(t)" display="inline"><mrow><msub><mi>𝑩</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a <a class="nnexus_concept" href="http://planetmath.org/beziercurve">Bezier curve</a>, defined by its control points <math id="S5.p1.m2" class="ltx_Math" alttext="\boldsymbol{P}_{0}" display="inline"><msub><mi>𝑷</mi><mn>0</mn></msub></math> to <math id="S5.p1.m3" class="ltx_Math" alttext="\boldsymbol{P}_{n}" display="inline"><msub><mi>𝑷</mi><mi>n</mi></msub></math> for <math id="S5.p1.m4" class="ltx_Math" alttext="t\in[0,1]" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
 </div>
 <div id="S5.p2" class="ltx_para">
 <p class="ltx_p">Let <math id="S5.p2.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math> be such as <math id="S5.p2.m2" class="ltx_Math" alttext="[a,b]\subset[0,1]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>⊂</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math>
@@ -226,7 +226,7 @@ If we take <math id="S5.p9.m1" class="ltx_Math" alttext="u" display="inline"><mi
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Bézier curve</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</th>
 <td class="ltx_td ltx_align_left ltx_border_r">BezierCurve</td>
 </tr>
 <tr class="ltx_tr">
